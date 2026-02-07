@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SystemStatus from "./components/SystemStatus";
+import JsonLd from "./components/JsonLd";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -98,6 +99,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <JsonLd />
       </head>
       <body
         className={`${inter.variable} antialiased bg-[#f8f9fa] text-gray-900`}

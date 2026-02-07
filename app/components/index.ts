@@ -7,3 +7,4 @@ export { default as IDPSection } from "./IDPSection";
 export { default as TransformationTable } from "./TransformationTable";
 export { default as BenefitsSection } from "./BenefitsSection";
 export { default as SystemStatus } from "./SystemStatus";
+export { default as JsonLd } from "./JsonLd";
