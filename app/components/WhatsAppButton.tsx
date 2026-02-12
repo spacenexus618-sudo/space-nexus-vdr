@@ -1,33 +1,51 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const whatsappNumber = "+17652713686";
-  const queryMessage =
-    "Hello! I am interested in your mergers and acquisitions services.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    queryMessage
-  )}`;
+  const message = "Hi, I'm interested in Space Nexus services.";
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Show button after a small delay
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) return null;
 
   return (
-    <motion.div
-      className="fixed bottom-20 right-4 z-40"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300, damping: 15 }}
-    >
+    <div className="fixed bottom-8 right-8 z-50 flex items-center gap-3">
+      {/* Tooltip/Label */}
+      <div
+        className="hidden md:block bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 transform transition-all duration-300 origin-right opacity-0 hover:opacity-100 translate-x-4 hover:translate-x-0 group-hover:opacity-100 group-hover:translate-x-0"
+      >
+        <p className="text-sm font-medium text-gray-700 whitespace-nowrap">
+          Chat with us on WhatsApp
+        </p>
+      </div>
+
       <a
-        href={whatsappUrl}
+        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+          message,
+        )}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-md flex items-center justify-center"
-        title="Chat on WhatsApp"
+        className="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-green-500/30 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300"
+        aria-label="Chat on WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        {/* Pulse effect */}
+        <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping group-hover:animate-none"></span>
+        
+        {/* Icon */}
+        <MessageCircle className="w-7 h-7 text-white relative z-10" />
       </a>
-    </motion.div>
+    </div>
   );
 };
 
