@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const whatsappNumber = "+17652713686";
-  const message = "Hi, I'm interested in Space Nexus services.";
+  const message = "Hi, I'm interested in Space Nexus services.!";
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const WhatsAppButton = () => {
         className="hidden md:block bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 transform transition-all duration-300 origin-right opacity-0 hover:opacity-100 translate-x-4 hover:translate-x-0 group-hover:opacity-100 group-hover:translate-x-0"
       >
         <p className="text-sm font-medium text-gray-700 whitespace-nowrap">
-          Chat with us on WhatsApp
+          Chat with us on WhatsApp.
         </p>
       </div>
 
