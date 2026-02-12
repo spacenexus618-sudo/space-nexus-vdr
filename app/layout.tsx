@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SystemStatus from "./components/SystemStatus";
 import JsonLd from "./components/JsonLd";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -109,6 +110,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
         <SystemStatus />
       </body>
     </html>
