@@ -1,19 +1,19 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://spacenexus.com";
+  const baseUrl = "https://spacenexus.net";
   const currentDate = new Date();
 
-  // Static pages with their priorities and change frequencies
-  const staticPages = [
+  // VDR static pages
+  const vdrStaticPages = [
     { route: "", priority: 1.0, changeFrequency: "weekly" as const },
     { route: "/demo", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/features", priority: 0.9, changeFrequency: "weekly" as const },
     { route: "/industries", priority: 0.9, changeFrequency: "weekly" as const },
   ];
 
-  // Feature pages
-  const featurePages = [
+  // VDR feature pages
+  const vdrFeaturePages = [
     "data-room",
     "security-compliance",
     "users-permissions",
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  // Industry pages
+  // VDR industry pages
   const industryPages = [
     "investment-banking",
     "private-equity",
@@ -46,8 +46,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
+  // Kindora static pages
+  const kindoraStaticPages = [
+    { route: "/kindora", priority: 1.0, changeFrequency: "weekly" as const },
+    { route: "/kindora/features", priority: 0.9, changeFrequency: "weekly" as const },
+    { route: "/kindora/pricing", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/kindora/solutions", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/kindora/contact", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/kindora/demo", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/kindora/vs-competitors", priority: 0.9, changeFrequency: "monthly" as const },
+  ];
+
+  // Kindora feature pages
+  const kindoraFeaturePages = [
+    "donor-management",
+    "grant-management",
+    "client-management",
+    "financial-management",
+    "campaign-management",
+    "communications",
+    "dashboard-analytics",
+    "expense-management",
+    "file-management",
+    "people-management",
+    "reporting",
+    "settings",
+    "user-management",
+  ].map((feature) => ({
+    route: `/kindora/features/${feature}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
   // Combine all pages
-  const allPages = [...staticPages, ...featurePages, ...industryPages];
+  const allPages = [
+    ...vdrStaticPages,
+    ...vdrFeaturePages,
+    ...industryPages,
+    ...kindoraStaticPages,
+    ...kindoraFeaturePages,
+  ];
 
   return allPages.map((page) => ({
     url: `${baseUrl}${page.route}`,

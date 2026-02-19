@@ -374,11 +374,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_4px_30px_rgba(0,0,0,0.08)]"
-          : "bg-gradient-to-b from-white via-white to-white/95"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_4px_30px_rgba(0,0,0,0.08)]"
+        : "bg-gradient-to-b from-white via-white to-white/95"
+        }`}
       role="banner"
     >
       {/* Premium top accent line */}
@@ -739,6 +738,17 @@ export default function Header() {
                 />
               </svg>
             </Link>
+
+            <div className=" flex justify-center">
+              <a
+                href="https://cad.spaceaiapp.com/kindora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-5 py-2.5 text-sm font-semibold  text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
+              >
+                Try for Free
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

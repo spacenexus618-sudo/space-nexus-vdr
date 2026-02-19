@@ -264,11 +264,10 @@ export default function ContactPage() {
                         key={need}
                         type="button"
                         onClick={() => handleNeedToggle(need)}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${
-                          formData.needs.includes(need)
+                        className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${formData.needs.includes(need)
                             ? "bg-[#2563eb] text-white border-[#2563eb]"
                             : "bg-white text-gray-700 border-gray-300 hover:border-[#2563eb] hover:text-[#2563eb]"
-                        }`}
+                          }`}
                       >
                         {need}
                       </button>
@@ -371,10 +370,10 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm text-gray-500 mb-1">Email</p>
                       <a
-                        href="mailto:info@spaceaiapp.com"
+                        href="mailto:contact@spacenexus.net"
                         className="text-gray-900 font-medium hover:text-[#2563eb] transition-colors"
                       >
-                        info@spaceaiapp.com
+                        contact@spacenexus.net
                       </a>
                     </div>
                   </div>

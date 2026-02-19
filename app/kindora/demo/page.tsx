@@ -287,10 +287,10 @@ export default function KindoraDemoPage() {
                 <div className="text-left">
                   <p className="text-sm text-gray-500">Email us at</p>
                   <a
-                    href="mailto:info@spaceaiapp.com"
+                    href="mailto:contact@spacenexus.net"
                     className="text-[#2563eb] font-medium hover:underline"
                   >
-                    info@spaceaiapp.com
+                    contact@spacenexus.net
                   </a>
                 </div>
               </div>
