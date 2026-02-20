@@ -570,8 +570,130 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* ── Competitor Comparison ─────────────────────────────────────────── */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
+              How We Compare
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Kindora vs. the alternatives
+            </h2>
+            <p className="text-gray-600">
+              See how Kindora stacks up against other tools nonprofits commonly use.
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-100">
+                  <th className="text-left p-4 font-semibold text-gray-700 min-w-[220px]">Feature</th>
+                  <th className="p-4 font-bold text-[#2563eb] bg-blue-50 text-center min-w-[140px]">
+                    <span className="flex flex-col items-center gap-1">
+                      <span>Kindora</span>
+                      <span className="text-xs font-normal text-blue-400">All-in-one</span>
+                    </span>
+                  </th>
+                  <th className="p-4 font-semibold text-gray-500 text-center min-w-[130px]">Salesforce NP</th>
+                  <th className="p-4 font-semibold text-gray-500 text-center min-w-[120px]">Bloomerang</th>
+                  <th className="p-4 font-semibold text-gray-500 text-center min-w-[130px]">Spreadsheets</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: "Donor Management", kindora: true, salesforce: true, bloomerang: true, sheets: false },
+                  { feature: "Grant Lifecycle Management", kindora: true, salesforce: "add-on", bloomerang: false, sheets: false },
+                  { feature: "Client & Case Management", kindora: true, salesforce: "complex", bloomerang: false, sheets: false },
+                  { feature: "Cost Allocation & Compliance", kindora: true, salesforce: "add-on", bloomerang: false, sheets: false },
+                  { feature: "Volunteer Tracking", kindora: true, salesforce: "add-on", bloomerang: false, sheets: false },
+                  { feature: "Nonprofit-Specific Workflows", kindora: true, salesforce: false, bloomerang: "partial", sheets: false },
+                  { feature: "No Setup / IT Required", kindora: true, salesforce: false, bloomerang: true, sheets: true },
+                  { feature: "Nonprofit-Friendly Pricing", kindora: true, salesforce: false, bloomerang: "partial", sheets: true },
+                  { feature: "All Modules Included", kindora: true, salesforce: false, bloomerang: false, sheets: false },
+                ].map((row, i) => (
+                  <tr key={row.feature} className={`border-b border-gray-50 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
+                    <td className="p-4 font-medium text-gray-800">{row.feature}</td>
+                    {[row.kindora, row.salesforce, row.bloomerang, row.sheets].map((val, j) => (
+                      <td key={j} className={`p-4 text-center ${j === 0 ? "bg-blue-50/50" : ""}`}>
+                        {val === true ? (
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-600">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                          </span>
+                        ) : val === false ? (
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-red-50 text-red-400">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                          </span>
+                        ) : (
+                          <span className="text-xs text-amber-600 font-medium bg-amber-50 px-2 py-0.5 rounded-full">{val}</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Based on publicly available feature information. Last reviewed February 2025.
+          </p>
+        </div>
+      </section>
+
+      {/* ── FAQ ───────────────────────────────────────────────────────────── */}
+      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
+              FAQ
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900">
+              Frequently asked pricing questions
+            </h2>
+          </div>
+          <div className="space-y-5">
+            {[
+              {
+                q: "Is there really a free plan?",
+                a: "Yes. The Starter plan is completely free, forever. No credit card required. It covers the core modules for small nonprofits getting started — donor management, client tracking, and basic reporting.",
+              },
+              {
+                q: "How is Kindora's Professional plan priced?",
+                a: "Professional pricing is based on your organization's size and needs. We offer nonprofit-friendly rates and do not charge per-module — all features are included. Contact us for a custom quote.",
+              },
+              {
+                q: "Can I get a nonprofit discount?",
+                a: "Yes. Kindora is purpose-built for nonprofits and our pricing reflects that. We offer additional discounts for organizations serving high-need communities. Reach out to discuss your situation.",
+              },
+              {
+                q: "Do you offer data migration from our current tools?",
+                a: "Yes. Enterprise plan includes data migration assistance. For other plans, we offer import tools and documentation to help you move your existing donor, client, and grant data into Kindora.",
+              },
+              {
+                q: "Is there a long-term contract required?",
+                a: "No. Kindora does not require annual contracts. You can start month-to-month and upgrade, downgrade, or cancel at any time.",
+              },
+              {
+                q: "Can we try Kindora before committing to a paid plan?",
+                a: "Absolutely. The Starter plan is free forever and includes core modules. You can also request a personalized demo with our team before making any decision.",
+              },
+              {
+                q: "How does Kindora handle compliance for grant reporting?",
+                a: "Kindora includes built-in grant lifecycle management, cost allocation, and financial reporting tools designed for nonprofit compliance requirements. You can generate grantor reports directly from the platform.",
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
+                <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Bottom CTA ───────────────────────────────────────────────────── */}
       <section className="py-20 bg-gray-900">
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-4">
             Ready to get started?

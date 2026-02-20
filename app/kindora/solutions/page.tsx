@@ -227,7 +227,38 @@ export default function SolutionsPage() {
             </p>
           </div>
 
+          {/* SEO Solution Sub-Pages */}
+          <div className="mb-10">
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider text-center mb-6">
+              Solutions by Organization Type
+            </p>
+            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { href: "/kindora/solutions/small-nonprofits", label: "Small Nonprofits", bg: "bg-blue-50", text: "text-[#2563eb]", border: "border-blue-100", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
+                { href: "/kindora/solutions/social-services", label: "Social Services", bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-100", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" },
+                { href: "/kindora/solutions/community-organizations", label: "Community Orgs", bg: "bg-violet-50", text: "text-violet-600", border: "border-violet-100", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
+                { href: "/kindora/solutions/youth-nonprofits", label: "Youth Nonprofits", bg: "bg-orange-50", text: "text-orange-500", border: "border-orange-100", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" },
+                { href: "/kindora/solutions/housing-nonprofits", label: "Housing Nonprofits", bg: "bg-sky-50", text: "text-sky-600", border: "border-sky-100", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`group flex flex-col items-center gap-3 p-5 rounded-2xl bg-white border ${item.border} hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center`}
+                >
+                  <div className={`w-12 h-12 rounded-xl ${item.bg} flex items-center justify-center ${item.text} group-hover:scale-110 transition-transform`}>
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
+                    </svg>
+                  </div>
+                  <span className="font-semibold text-gray-900 text-sm leading-tight">{item.label}</span>
+                  <span className={`text-xs ${item.text} font-medium`}>Learn more →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Solutions Quick Nav */}
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {solutions.map((solution) => {
               const colors = colorClasses[solution.color];

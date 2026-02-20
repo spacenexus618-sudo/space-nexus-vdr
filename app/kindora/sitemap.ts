@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/pricing",
     "/contact",
     "/solutions",
+    "/solutions/small-nonprofits",
+    "/solutions/social-services",
+    "/solutions/community-organizations",
+    "/solutions/youth-nonprofits",
+    "/solutions/housing-nonprofits",
+    "/vs-competitors",
   ];
 
   return routes.map((route) => ({
