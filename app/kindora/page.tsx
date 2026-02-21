@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "grant tracking software for nonprofits",
   ],
 };
- 
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -458,9 +458,9 @@ export default function KindoraHomePage() {
           {/* Dashboard Preview Placeholder */}
           <div className="mt-16 lg:mt-24 relative">
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white/10 via-transparent to-transparent z-10 pointer-events-none" />
-            <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl lg:rounded-3xl shadow-2xl border border-gray-700 overflow-hidden mx-auto max-w-5xl">
+            <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl lg:rounded-3xl shadow-2xl border border-gray-700 overflow-hidden mx-auto max-w-7xl">
               {/* Browser Chrome */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+              <div className="flex items-center gap-2 px-4 py-3 bg-gray-200 border-b border-gray-700">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500/80" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
@@ -486,55 +486,20 @@ export default function KindoraHomePage() {
                 </div>
               </div>
 
-              {/* Dashboard Content Preview */}
-              <div className="p-4 lg:p-6">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-4">
-                  {[
-                    "Total Donations",
-                    "Active Donors",
-                    "Active Clients",
-                    "Net Income",
-                  ].map((label) => (
-                    <div
-                      key={label}
-                      className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50"
-                    >
-                      <p className="text-xs text-gray-400 mb-1">{label}</p>
-                      <div className="h-6 w-24 bg-gray-700/50 rounded animate-pulse" />
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4">
-                  <div className="lg:col-span-2 bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
-                    <p className="text-xs text-gray-400 mb-3">
-                      Monthly Donation Trends
-                    </p>
-                    <div className="flex items-end gap-2 h-32">
-                      {[40, 65, 45, 80, 55, 70, 60, 85, 75, 90, 70, 95].map(
-                        (h, i) => (
-                          <div
-                            key={i}
-                            className="flex-1 bg-gradient-to-t from-[#2563eb]/80 to-[#2563eb]/40 rounded-t"
-                            style={{ height: `${h}%` }}
-                          />
-                        ),
-                      )}
-                    </div>
-                  </div>
-                  <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
-                    <p className="text-xs text-gray-400 mb-3">
-                      Recent Activity
-                    </p>
-                    <div className="space-y-2">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-[#2563eb]/60" />
-                          <div className="h-3 flex-1 bg-gray-700/50 rounded" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+              {/* Dashboard Content Preview - Video */}
+              <div className="relative aspect-[16/10] bg-gray-900">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-contain"
+                >
+                  <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {/* Subtle overlay to match the high-end dashboard feel */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
