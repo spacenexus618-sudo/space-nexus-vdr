@@ -741,7 +741,7 @@ export default function Header() {
 
             <div className=" flex justify-center">
               <a
-                href="https://cad.spaceaiapp.com/kindora"
+                href={isKindora ? "https://cad.spaceaiapp.com/kindora" : "https://cad.spaceaiapp.com/vdr"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-5 py-2.5 text-sm font-semibold  text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
