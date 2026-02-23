@@ -20,6 +20,8 @@ const footerLinks = {
   company: [
     { name: "About SpaceAI", href: "/kindora/contact" },
     { name: "Contact", href: "/kindora/contact" },
+    { name: "Blog", href: "/kindora/blog" },
+    { name: "Vs Competitors", href: "/kindora/vs-competitors" },
   ],
 };
 
@@ -175,7 +177,7 @@ export default function KindoraFooter() {
                 contact@spacenexus.net
               </a>
               <div className="flex flex-col gap-2 mt-3">
-                 
+
                 <a
                   href="tel:+6586111900"
                   className="text-sm text-gray-400 hover:text-white transition-colors flex items-center"

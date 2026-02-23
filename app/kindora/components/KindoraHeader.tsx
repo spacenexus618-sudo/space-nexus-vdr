@@ -87,11 +87,10 @@ export default function KindoraHeader() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm"
-          : "bg-gradient-to-b from-white/90 to-white/70"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm"
+        : "bg-gradient-to-b from-white/90 to-white/70"
+        }`}
     >
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#2563eb] to-transparent opacity-80" />
@@ -213,6 +212,12 @@ export default function KindoraHeader() {
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
             >
               Pricing
+            </Link>
+            <Link
+              href="/kindora/blog"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
+            >
+              Blog
             </Link>
             <Link
               href="/kindora/contact"
@@ -352,6 +357,13 @@ export default function KindoraHeader() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Pricing
+            </Link>
+            <Link
+              href="/kindora/blog"
+              className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               href="/kindora/contact"

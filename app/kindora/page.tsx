@@ -455,52 +455,90 @@ export default function KindoraHomePage() {
             </div>
           </div>
 
-          {/* Dashboard Preview Placeholder */}
+          {/* Dashboard Preview — GIF Showcase */}
           <div className="mt-16 lg:mt-24 relative">
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white/10 via-transparent to-transparent z-10 pointer-events-none" />
-            <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl lg:rounded-3xl shadow-2xl border border-gray-700 overflow-hidden mx-auto max-w-7xl">
-              {/* Browser Chrome */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-gray-200 border-b border-gray-700">
+
+            {/* Warm glow backdrops */}
+            <div className="absolute -inset-6 bg-gradient-to-br from-blue-100/60 via-indigo-50/40 to-purple-100/40 rounded-[3rem] blur-2xl -z-10" />
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-blue-200/40 blur-2xl rounded-full -z-10" />
+
+            {/* Floating trust badge — top left */}
+            {/* <div className="absolute -top-5 left-6 z-20 hidden sm:flex items-center gap-2 bg-white rounded-2xl shadow-lg shadow-blue-100 border border-blue-100 px-4 py-2.5">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#2563eb] to-[#7c3aed] flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-900 leading-tight">Trusted by Nonprofits</p>
+                <p className="text-[10px] text-gray-500">Mission-ready platform</p>
+              </div>
+            </div> */}
+
+            {/* Floating live badge — top right */}
+            <div className="absolute -top-5 right-6 z-20 hidden sm:flex items-center gap-2 bg-white rounded-2xl shadow-lg shadow-emerald-100 border border-emerald-100 px-4 py-2.5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+              </span>
+              <span className="text-xs font-semibold text-gray-700">Live Platform Preview</span>
+            </div>
+
+            {/* Browser mockup wrapper */}
+            <div className="relative rounded-2xl lg:rounded-3xl shadow-[0_30px_80px_-15px_rgba(37,99,235,0.25)] border border-white/60 overflow-hidden mx-auto max-w-6xl ring-1 ring-blue-100">
+
+              {/* Browser chrome bar */}
+              <div className="flex items-center gap-3 px-5 py-3.5 bg-gradient-to-r from-gray-100 to-gray-50 border-b border-gray-200">
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-red-400 shadow-sm" />
+                  <div className="w-3 h-3 rounded-full bg-amber-400 shadow-sm" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-sm" />
                 </div>
                 <div className="flex-1 flex justify-center">
-                  <div className="flex items-center gap-2 px-4 py-1.5 bg-gray-700/50 rounded-lg text-xs text-gray-400">
-                    <svg
-                      className="w-3 h-3"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                      />
+                  <div className="flex items-center gap-2 px-5 py-1.5 bg-white rounded-lg text-xs text-gray-500 border border-gray-200 shadow-sm w-full max-w-xs">
+                    <svg className="w-3 h-3 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                    app.kindora.io/dashboard
+                    <span className="truncate">cad.spaceaiapp.com/kindora</span>
                   </div>
+                </div>
+                <div className="flex items-center gap-1.5 text-[10px] text-gray-400 hidden sm:flex">
+                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                  Secure
                 </div>
               </div>
 
-              {/* Dashboard Content Preview - Video */}
-              <div className="relative aspect-[16/10] bg-gray-900">
+              {/* Video preview */}
+              <div className="relative bg-[#f0f4ff]">
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto object-cover block"
                 >
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
+                  <source src="/videos/kindora-demo-video.webm" type="video/webm" />
                 </video>
-                {/* Subtle overlay to match the high-end dashboard feel */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 via-transparent to-transparent pointer-events-none" />
+                {/* Bottom fade */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />
               </div>
+            </div>
+
+            {/* Bottom caption strip */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
+              {[
+                { icon: "M5 13l4 4L19 7", label: "No credit card required" },
+                { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Set up in 30 minutes" },
+                { icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", label: "Built for nonprofits" },
+              ].map(({ icon, label }) => (
+                <span key={label} className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={icon} />
+                  </svg>
+                  {label}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -817,6 +855,97 @@ export default function KindoraHomePage() {
               className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-colors"
             >
               Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── From the Blog ──────────────────────────────────────────────── */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-2">Kindora Blog</p>
+              <h2 className="text-3xl font-bold text-gray-900">Resources for nonprofits</h2>
+              <p className="text-gray-500 mt-2 text-sm">Guides, tips, and insights to help your organization thrive.</p>
+            </div>
+            <Link
+              href="/kindora/blog"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-colors"
+            >
+              View all articles
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                slug: "complete-guide-nonprofit-management-software",
+                title: "The Complete Guide to Nonprofit Management Software in 2025",
+                excerpt: "Everything you need to know before choosing a nonprofit management platform — features, pricing, and what most vendors won't tell you.",
+                category: "Nonprofit Tips",
+                readingTime: 12,
+                gradient: "from-violet-500 to-purple-700",
+                icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+              },
+              {
+                slug: "how-to-choose-donor-management-software",
+                title: "How to Choose Donor Management Software: The Nonprofit's Buyer's Guide",
+                excerpt: "A step-by-step framework for evaluating donor management tools — from must-have features to questions to ask every vendor.",
+                category: "Donor Management",
+                readingTime: 8,
+                gradient: "from-rose-500 to-pink-700",
+                icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+              },
+              {
+                slug: "grant-management-101-track-win-more-grants",
+                title: "Grant Management 101: How to Track, Win, and Report More Grants",
+                excerpt: "A practical guide to grant lifecycle management — from prospect research to compliance reporting — built for nonprofit teams.",
+                category: "Grant Management",
+                readingTime: 10,
+                gradient: "from-blue-500 to-indigo-700",
+                icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+              },
+            ].map((post) => (
+              <Link
+                key={post.slug}
+                href={`/kindora/blog/${post.slug}`}
+                className="group flex flex-col rounded-2xl overflow-hidden border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className={`bg-gradient-to-br ${post.gradient} p-7 flex items-end justify-between`}>
+                  <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={post.icon} />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/70 font-medium">{post.readingTime} min read</span>
+                </div>
+                <div className="flex flex-col flex-1 p-6">
+                  <span className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">{post.category}</span>
+                  <h3 className="font-bold text-gray-900 text-base leading-snug mb-3 group-hover:text-[#2563eb] transition-colors flex-1">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 mb-4">{post.excerpt}</p>
+                  <span className="text-xs text-[#2563eb] font-semibold flex items-center gap-1 mt-auto">
+                    Read article
+                    <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-8 sm:hidden">
+            <Link
+              href="/kindora/blog"
+              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-colors"
+            >
+              View all articles →
             </Link>
           </div>
         </div>
