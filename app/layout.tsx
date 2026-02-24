@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://spacenexus.com"),
+  metadataBase: new URL("https://spacenexus.net"),
   title: {
     default:
       "Space Nexus | Enterprise Virtual Data Room for M&A & Due Diligence",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://spacenexus.com",
+    url: "https://spacenexus.net",
     siteName: "Space Nexus",
     title: "Space Nexus | Enterprise Virtual Data Room for M&A & Due Diligence",
     description:
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     creator: "@spacenexus",
   },
   alternates: {
-    canonical: "https://spacenexus.com",
+    canonical: "https://spacenexus.net",
   },
   category: "technology",
 };

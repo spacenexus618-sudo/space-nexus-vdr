@@ -6,8 +6,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const vdrNavLinks = [
-  { name: "Product", href: "/#product" },
   { name: "Features", href: "/features" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Security", href: "/security" },
+  { name: "Blog", href: "/blog" },
+  { name: "About", href: "/about" },
 ];
 
 const kindoraNavLinks = [

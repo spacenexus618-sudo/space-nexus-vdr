@@ -10,6 +10,10 @@ const vdrFooterLinks = {
     links: [
       { name: "Home", href: "/" },
       { name: "Features", href: "/features" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Security", href: "/security" },
+      { name: "Blog", href: "/blog" },
+      { name: "About", href: "/about" },
       { name: "Request Demo", href: "/demo" },
     ],
   },
