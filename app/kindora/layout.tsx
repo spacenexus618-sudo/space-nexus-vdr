@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import KindoraHeader from "./components/KindoraHeader";
+import KindoraFooter from "./components/KindoraFooter";
 
 export const metadata: Metadata = {
   title: {
@@ -52,6 +54,11 @@ export default function KindoraLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Uses main Header/Footer from root layout - navigation adapts based on /kindora route
-  return <>{children}</>;
+  return (
+    <>
+      <KindoraHeader />
+      {children}
+      <KindoraFooter />
+    </>
+  );
 }

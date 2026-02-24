@@ -10,7 +10,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/demo", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/features", priority: 0.9, changeFrequency: "weekly" as const },
     { route: "/industries", priority: 0.9, changeFrequency: "weekly" as const },
+    { route: "/pricing", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/security", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/about", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/blog", priority: 0.9, changeFrequency: "weekly" as const },
   ];
+
+  // VDR blog posts
+  const vdrBlogPosts = [
+    "what-is-a-virtual-data-room",
+    "ma-due-diligence-checklist-2025",
+    "virtual-data-room-for-private-equity",
+    "vdr-security-what-to-look-for",
+    "how-to-set-up-virtual-data-room-series-a",
+  ].map((slug) => ({
+    route: `/blog/${slug}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
 
   // VDR feature pages
   const vdrFeaturePages = [
@@ -81,6 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Combine all pages
   const allPages = [
     ...vdrStaticPages,
+    ...vdrBlogPosts,
     ...vdrFeaturePages,
     ...industryPages,
     ...kindoraStaticPages,

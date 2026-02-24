@@ -341,3 +341,165 @@ export function AnimatedFeatureGrid({ features }: {
         </StaggerContainer>
     );
 }
+
+// ─── Screenshot Gallery ───────────────────────────────────────────────────────
+import { useState } from "react";
+import Image from "next/image";
+
+export function AnimatedScreenshotGallery() {
+    const tabs = [
+        {
+            id: "donors",
+            label: "Donor Management",
+            icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+            color: "from-blue-500 to-blue-700",
+            image: "/kindora/screenshots/donor-profile.png",
+            caption: "Donor Profile — full giving history at a glance",
+            headline: "Know every donor inside and out",
+            description: "See total donated, average gift, last gift date, contact info, and donation history — all in a single, beautiful donor profile.",
+            features: ["Donation history timeline", "Send email directly from profile", "Log donations instantly", "Donor engagement stats"],
+            href: "/kindora/features/donor-management",
+        },
+        {
+            id: "reports",
+            label: "Reports & Analytics",
+            icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+            color: "from-violet-500 to-violet-700",
+            image: "/kindora/screenshots/reports.png",
+            caption: "Reports — financial + program analytics in one view",
+            headline: "Board-ready reports in one click",
+            description: "View total revenue, expenses, net income, and clients served. Export PDF or Excel reports for board meetings and grant compliance.",
+            features: ["Program enrollment charts", "Financial statements", "Donor analysis reports", "Export to PDF & Excel"],
+            href: "/kindora/features/reporting",
+        },
+        {
+            id: "grants",
+            label: "Grant Tracking",
+            icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+            color: "from-emerald-500 to-emerald-700",
+            image: "/kindora/screenshots/grants.png",
+            caption: "Grants & Receipts — track every dollar from award to receipt",
+            headline: "Never miss a grant deadline again",
+            description: "Track awarded grants, pending decisions, and prospects. Monitor funds received vs. pending, and maintain complete funder relationships.",
+            features: ["Award & receipt tracking", "Prospect pipeline", "Funds tracking dashboard", "Grant status summaries"],
+            href: "/kindora/features/grant-management",
+        },
+        {
+            id: "finance",
+            label: "Financial Management",
+            icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
+            color: "from-orange-500 to-orange-700",
+            image: "/kindora/screenshots/budget.png",
+            caption: "Budget Management — create and track budgets by program",
+            headline: "Full nonprofit accounting built in",
+            description: "Create program or organizational budgets, track spending, and manage your chart of accounts — no separate accounting software needed.",
+            features: ["Program budgets", "FY budget planning", "Expense tracking", "Cost allocation"],
+            href: "/kindora/features/financial-management",
+        },
+    ];
+
+    const [activeTab, setActiveTab] = useState(0);
+    const active = tabs[activeTab];
+
+    return (
+        <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8faff] to-white border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <FadeInUp className="text-center mb-12">
+                    <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Real Product Screenshots</p>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">See it in action</h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        No mock-ups. No stock photos. This is the real Kindora — built for nonprofits like yours.
+                    </p>
+                </FadeInUp>
+
+                {/* Tabs */}
+                <FadeInUp delay={0.1} className="flex flex-wrap justify-center gap-2 mb-10">
+                    {tabs.map((tab, i) => (
+                        <button
+                            key={tab.id}
+                            onClick={() => setActiveTab(i)}
+                            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeTab === i
+                                    ? "bg-[#2563eb] text-white shadow-lg shadow-blue-500/30 scale-105"
+                                    : "bg-white text-gray-600 border border-gray-200 hover:border-[#2563eb]/40 hover:text-[#2563eb]"
+                                }`}
+                        >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={tab.icon} />
+                            </svg>
+                            {tab.label}
+                        </button>
+                    ))}
+                </FadeInUp>
+
+                {/* Content */}
+                <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+                    {/* Left: info */}
+                    <ScaleIn key={active.id} className="lg:col-span-2 order-2 lg:order-1">
+                        <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r ${active.color} text-white text-xs font-semibold mb-4`}>
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={active.icon} />
+                            </svg>
+                            {active.label}
+                        </div>
+                        <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">{active.headline}</h3>
+                        <p className="text-gray-600 mb-6 leading-relaxed">{active.description}</p>
+                        <ul className="space-y-2.5 mb-8">
+                            {active.features.map((f) => (
+                                <li key={f} className="flex items-center gap-3 text-sm text-gray-700">
+                                    <span className="w-5 h-5 rounded-full bg-[#2563eb]/10 flex items-center justify-center shrink-0">
+                                        <svg className="w-3 h-3 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </span>
+                                    {f}
+                                </li>
+                            ))}
+                        </ul>
+                        <Link
+                            href={active.href}
+                            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-0.5"
+                        >
+                            Explore {active.label}
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                    </ScaleIn>
+
+                    {/* Right: screenshot */}
+                    <ScaleIn key={`img-${active.id}`} delay={0.05} className="lg:col-span-3 order-1 lg:order-2">
+                        <div className="relative">
+                            {/* Browser chrome frame */}
+                            <div className="bg-gray-100 rounded-t-xl border border-gray-200 border-b-0 px-4 py-3 flex items-center gap-2">
+                                <div className="w-3 h-3 rounded-full bg-red-400" />
+                                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                                <div className="w-3 h-3 rounded-full bg-green-400" />
+                                <div className="flex-1 bg-white rounded-md px-3 py-1 text-xs text-gray-400 ml-3 border border-gray-200">
+                                    cad.spaceaiapp.com/kindora
+                                </div>
+                            </div>
+                            {/* Screenshot */}
+                            <div className="relative border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                                <Image
+                                    src={active.image}
+                                    alt={active.caption}
+                                    width={1200}
+                                    height={720}
+                                    className="w-full h-auto object-cover object-top"
+                                    priority
+                                />
+                                {/* Caption overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 pb-3 pt-8">
+                                    <p className="text-xs text-white/90 font-medium">{active.caption}</p>
+                                </div>
+                            </div>
+                            {/* Glow effect */}
+                            <div className={`absolute -inset-4 bg-gradient-to-r ${active.color} opacity-10 blur-2xl rounded-3xl -z-10`} />
+                        </div>
+                    </ScaleIn>
+                </div>
+            </div>
+        </section>
+    );
+}
