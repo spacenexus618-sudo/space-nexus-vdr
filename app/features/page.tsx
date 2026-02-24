@@ -2,11 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features - Space Nexus",
+  title: "Virtual Data Room Features — M&A Due Diligence Software | Space Nexus",
   description:
-    "Explore the complete feature set of Space Nexus Virtual Data Room. From secure document management to AI-powered analytics, discover everything you need for successful M&A transactions.",
+    "Space Nexus is purpose-built VDR software for M&A due diligence, capital raises, and IPOs. Granular permissions, AI document processing, real-time buyer analytics, Q&A workflows, and SOC 2-certified security — all in one platform.",
   alternates: {
-    canonical: "/features",
+    canonical: "https://spacenexus.net/features",
+  },
+  openGraph: {
+    title: "Virtual Data Room Features | Space Nexus",
+    description: "The complete VDR feature set for M&A deal teams: secure data rooms, due diligence Q&A, buyer analytics, watermarking, and enterprise compliance.",
+    url: "https://spacenexus.net/features",
   },
 };
 
@@ -530,6 +535,43 @@ export default function FeaturesPage() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* From the Blog */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Guides</p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                title: "What Is a Virtual Data Room? The Complete Guide for 2025",
+                href: "/blog/what-is-a-virtual-data-room",
+                label: "Guide",
+              },
+              {
+                title: "M&A Due Diligence Checklist 2025 — The Complete Deal Room Guide",
+                href: "/blog/ma-due-diligence-checklist-2025",
+                label: "M&A",
+              },
+              {
+                title: "VDR Security: What to Look For Before You Sign Up",
+                href: "/blog/vdr-security-what-to-look-for",
+                label: "Security",
+              },
+            ].map((post) => (
+              <Link
+                key={post.href}
+                href={post.href}
+                className="group flex flex-col p-5 border border-gray-200 rounded-xl hover:border-[#2563eb]/30 hover:shadow-md transition-all duration-200"
+              >
+                <span className="text-xs font-semibold text-[#2563eb] mb-2">{post.label}</span>
+                <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">
+                  {post.title} →
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

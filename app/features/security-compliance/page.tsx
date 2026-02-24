@@ -2,11 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security & Compliance - Trust Foundation | Space Nexus",
+  title: "VDR Security & Compliance — SOC 2, AES-256, Zero Trust | Space Nexus",
   description:
-    "Enterprise security with encryption at rest and in transit, multi-factor authentication, data residency controls, and industry certifications.",
+    "Space Nexus is a SOC 2 Type II certified virtual data room with AES-256 encryption, Zero Trust architecture, MFA, data residency controls, and GDPR compliance. Enterprise security built for M&A due diligence.",
   alternates: {
-    canonical: "/features/security-compliance",
+    canonical: "https://spacenexus.net/features/security-compliance",
+  },
+  openGraph: {
+    title: "VDR Security & Compliance | Space Nexus",
+    description: "SOC 2 Type II certified. AES-256 encryption. Zero Trust architecture. The security foundation enterprise deal teams demand.",
+    url: "https://spacenexus.net/features/security-compliance",
   },
 };
 
@@ -323,6 +328,38 @@ export default function SecurityCompliancePage() {
                   <p className="text-gray-600 text-sm">{cert.description}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Guides */}
+      <section className="py-12 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Resources</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              {
+                title: "VDR Security: What to Look For Before You Sign Up",
+                href: "/blog/vdr-security-what-to-look-for",
+                label: "Security",
+              },
+              {
+                title: "What Is a Virtual Data Room? The Complete Guide for 2025",
+                href: "/blog/what-is-a-virtual-data-room",
+                label: "Guide",
+              },
+            ].map((post) => (
+              <Link
+                key={post.href}
+                href={post.href}
+                className="group flex flex-col p-5 bg-white border border-gray-200 rounded-xl hover:border-[#2563eb]/30 hover:shadow-md transition-all duration-200"
+              >
+                <span className="text-xs font-semibold text-[#2563eb] mb-2">{post.label}</span>
+                <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">
+                  {post.title} →
+                </p>
+              </Link>
             ))}
           </div>
         </div>

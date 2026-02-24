@@ -80,6 +80,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -87,10 +88,12 @@ body {
 }
 
 @keyframes pulse-subtle {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -100,6 +103,7 @@ body {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -107,21 +111,22 @@ body {
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+  will-change: opacity, transform;
 }
 
 .animate-pulse-subtle {
   animation: pulse-subtle 2s ease-in-out infinite;
+  will-change: opacity;
 }
 
 .animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(37, 99, 235, 0.05),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(37, 99, 235, 0.05),
+      transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
+  will-change: background-position;
 }
 
 /* Gradient backgrounds */
@@ -173,4 +178,43 @@ a:focus-visible {
 ::selection {
   background: var(--primary);
   color: white;
+}
+
+/* =============================================
+   Core Web Vitals & Performance
+   ============================================= */
+
+/* Promote card hover to compositor layer to avoid paint on hover */
+.card-hover {
+  will-change: transform;
+}
+
+/* Contain layout reflow on isolated sections */
+section {
+  contain: layout style;
+}
+
+/* Respect reduced-motion preferences (accessibility + CWV) */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-fade-in,
+  .animate-pulse-subtle,
+  .animate-shimmer {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  /* Disable Tailwind's animate-ping and animate-pulse */
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

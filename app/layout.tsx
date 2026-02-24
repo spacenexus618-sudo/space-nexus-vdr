@@ -34,17 +34,22 @@ export const metadata: Metadata = {
     "Virtual Data Room",
     "VDR",
     "M&A Due Diligence Software",
-    "Secure Document Sharing",
-    "Data Room",
+    "AI Due Diligence Software",
+    "Best Virtual Data Room",
+    "VDR Comparison",
+    "Secure Virtual Data Room",
+    "Data Room Software",
+    "Data Room Pricing",
     "Due Diligence Platform",
     "M&A Software",
     "Capital Raising",
     "Deal Room",
-    "Secure File Sharing",
-    "Enterprise Data Room",
-    "Document Management",
-    "Investment Banking Software",
-    "Private Equity Tools",
+    "IPO Data Room",
+    "Investment Banking Data Room",
+    "Private Equity Data Room",
+    "Virtual Data Room for Law Firms",
+    "SOC 2 Virtual Data Room",
+    "Zero Trust Data Room",
   ],
   authors: [{ name: "Space Nexus" }],
   creator: "Space Nexus",
@@ -101,6 +106,23 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Preload the logo — it's the first meaningful paint above the fold */}
+        <link
+          rel="preload"
+          href="/icononly_transparent_nobuffer.png"
+          as="image"
+          type="image/png"
+        />
+
+        {/* DNS prefetch + preconnect for third-party origins */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         <JsonLd />
       </head>
       <body
