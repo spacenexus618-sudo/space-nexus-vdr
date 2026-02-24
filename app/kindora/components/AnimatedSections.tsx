@@ -420,8 +420,8 @@ export function AnimatedScreenshotGallery() {
                             key={tab.id}
                             onClick={() => setActiveTab(i)}
                             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${activeTab === i
-                                    ? "bg-[#2563eb] text-white shadow-lg shadow-blue-500/30 scale-105"
-                                    : "bg-white text-gray-600 border border-gray-200 hover:border-[#2563eb]/40 hover:text-[#2563eb]"
+                                ? "bg-[#2563eb] text-white shadow-lg shadow-blue-500/30 scale-105"
+                                : "bg-white text-gray-600 border border-gray-200 hover:border-[#2563eb]/40 hover:text-[#2563eb]"
                                 }`}
                         >
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -487,6 +487,7 @@ export function AnimatedScreenshotGallery() {
                                     width={1200}
                                     height={720}
                                     className="w-full h-auto object-cover object-top"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 900px"
                                     priority
                                 />
                                 {/* Caption overlay */}

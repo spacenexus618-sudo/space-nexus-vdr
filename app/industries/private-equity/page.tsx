@@ -2,11 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Equity Solutions | Space Nexus",
+  title: "Virtual Data Room for Private Equity — Deal Sourcing, Due Diligence & Exits | Space Nexus",
   description:
-    "Accelerate portfolio management, fundraising, and exit transactions with Space Nexus - the secure virtual data room built for private equity workflows.",
+    "Space Nexus is the virtual data room built for private equity. Run buy-side due diligence, manage LP communications, track portfolio companies, and prepare sell-side exit rooms — all in a SOC 2-certified platform.",
   alternates: {
-    canonical: "/industries/private-equity",
+    canonical: "https://spacenexus.net/industries/private-equity",
+  },
+  openGraph: {
+    title: "Virtual Data Room for Private Equity | Space Nexus",
+    description: "The VDR built for PE workflows: deal sourcing, due diligence, LP reporting, and exit preparation. Purpose-built for the investment lifecycle.",
+    url: "https://spacenexus.net/industries/private-equity",
   },
 };
 
@@ -342,6 +347,38 @@ export default function PrivateEquityPage() {
               Every interaction is logged, creating a complete audit trail for
               compliance purposes.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Guides */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Resources</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              {
+                title: "Virtual Data Rooms for Private Equity: The Ultimate Guide",
+                href: "/blog/virtual-data-room-for-private-equity",
+                label: "Private Equity",
+              },
+              {
+                title: "M&A Due Diligence Checklist 2025 — The Complete Deal Room Guide",
+                href: "/blog/ma-due-diligence-checklist-2025",
+                label: "M&A",
+              },
+            ].map((post) => (
+              <Link
+                key={post.href}
+                href={post.href}
+                className="group flex flex-col p-5 border border-gray-200 rounded-xl hover:border-[#2563eb]/30 hover:shadow-md transition-all duration-200"
+              >
+                <span className="text-xs font-semibold text-[#2563eb] mb-2">{post.label}</span>
+                <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">
+                  {post.title} →
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
