@@ -346,6 +346,7 @@ export default function Header() {
   const pathname = usePathname();
   const isKindora = pathname?.startsWith("/kindora");
 
+  // All hooks must be declared before any early returns (React Rules of Hooks)
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
@@ -371,6 +372,9 @@ export default function Header() {
     setKindoraFeaturesOpen(false);
     setProductsOpen(false);
   }, [pathname]);
+
+  // Kindora has its own KindoraHeader rendered in kindora/layout.tsx
+  if (isKindora) return null;
 
   return (
     <header
@@ -500,6 +504,8 @@ export default function Header() {
                     </Link>
                     <Link
                       href="/kindora"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex items-start gap-3 p-3 rounded-xl transition-colors group ${isKindora ? "bg-blue-50" : "hover:bg-gray-50"}`}
                     >
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
@@ -843,6 +849,8 @@ export default function Header() {
                     </Link>
                     <Link
                       href="/kindora"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${isKindora ? "bg-blue-50 text-[#2563eb]" : "text-gray-600 hover:bg-gray-50"}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >

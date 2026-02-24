@@ -15,7 +15,9 @@ import {
   AnimatedHeroSubtext,
   AnimatedHeroCTA,
   AnimatedHeroDashboard,
+  AnimatedScreenshotGallery,
 } from "./components/AnimatedSections";
+
 
 export const metadata: Metadata = {
   title: "Kindora | All-in-One Nonprofit Management Software",
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     "grant tracking software for nonprofits",
   ],
 };
- 
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -859,6 +861,9 @@ export default function KindoraHomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── See It In Action (Screenshot Gallery) ────────────────────── */}
+      <AnimatedScreenshotGallery />
 
       {/* ── From the Blog ──────────────────────────────────────────────── */}
       <section className="py-20 bg-white border-t border-gray-100">
