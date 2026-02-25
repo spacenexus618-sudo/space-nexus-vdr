@@ -2,17 +2,26 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "VDR Security & Compliance — SOC 2, AES-256, Zero Trust | Space Nexus",
+  title: "VDR Security & Compliance — Tamper-Evident Audit Logs, Granular Access Control | Space Nexus",
   description:
-    "Space Nexus is a SOC 2 Type II certified virtual data room with AES-256 encryption, Zero Trust architecture, MFA, data residency controls, and GDPR compliance. Enterprise security built for M&A due diligence.",
+    "Space Nexus is a SOC 2 Type II certified VDR with AES-256 encryption at rest, tamper-evident audit logs, granular access control, dynamic watermarking, Zero Trust architecture, and GDPR compliance — purpose-built for M&A due diligence.",
   alternates: {
     canonical: "https://spacenexus.net/features/security-compliance",
   },
   openGraph: {
-    title: "VDR Security & Compliance | Space Nexus",
-    description: "SOC 2 Type II certified. AES-256 encryption. Zero Trust architecture. The security foundation enterprise deal teams demand.",
+    title: "VDR Security & Compliance — Audit Logs, Granular Access Control | Space Nexus",
+    description: "SOC 2 Type II certified. AES-256 encryption at rest. Tamper-evident audit logs. Granular access control. Dynamic watermarking. Zero Trust architecture.",
     url: "https://spacenexus.net/features/security-compliance",
   },
+  keywords: [
+    "tamper-evident audit logs",
+    "granular access control VDR",
+    "AES-256 encryption at rest",
+    "dynamic watermarking documents",
+    "SOC 2 Type II virtual data room",
+    "VDR security compliance",
+    "Zero Trust data room",
+  ],
 };
 
 const features = [

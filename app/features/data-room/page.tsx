@@ -2,12 +2,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Data Room - Secure Document Management | Space Nexus",
+  title: "Data Room — Automated Document Indexing & Full-Text Search | Space Nexus VDR",
   description:
-    "Enterprise-grade document management with structured folder indexes, bulk uploads, version control, redaction, watermarking, and full-text search.",
+    "Space Nexus Data Room delivers automated document indexing, full-text search across 100+ file types, bulk upload, AI auto-categorization, version control, and dynamic watermarking — all secured with AES-256 encryption at rest.",
   alternates: {
-    canonical: "/features/data-room",
+    canonical: "https://spacenexus.net/features/data-room",
   },
+  keywords: [
+    "automated document indexing",
+    "full-text search virtual data room",
+    "bulk document upload VDR",
+    "AI auto-categorization M&A",
+    "document version control",
+    "data room document management",
+  ],
 };
 
 const features = [
@@ -91,7 +99,7 @@ export default function DataRoomPage() {
                 Data Room
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Designed to handle high document volumes with strict access control. Upload, organize, 
+                Designed to handle high document volumes with strict access control. Upload, organize,
                 and share thousands of documents securely with enterprise-grade protection at every layer.
               </p>
               <Link

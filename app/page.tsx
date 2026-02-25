@@ -2,11 +2,13 @@ import Script from "next/script";
 import HeroSection from "./components/HeroSection";
 import TrustBar from "./components/TrustBar";
 import ProductEcosystem from "./components/ProductEcosystem";
+import VDRScreenshotGallery from "./components/VDRScreenshotGallery";
 import IDPSection from "./components/IDPSection";
 import TransformationTable from "./components/TransformationTable";
 import BenefitsSection from "./components/BenefitsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
+import KindoraCallout from "./components/KindoraCallout";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -73,6 +75,9 @@ export default function Home() {
       {/* Core Product Ecosystem - 12 Modules */}
       <ProductEcosystem />
 
+      {/* Real Product Screenshots - Interactive Gallery */}
+      <VDRScreenshotGallery />
+
       {/* Intelligent Document Processing Feature */}
       <IDPSection />
 
@@ -84,6 +89,9 @@ export default function Home() {
 
       {/* Testimonials / Social Proof */}
       <TestimonialsSection />
+
+      {/* Kindora — Nonprofit Management Platform (cross-product + link equity) */}
+      <KindoraCallout />
 
       {/* FAQ Section */}
       <FAQSection />

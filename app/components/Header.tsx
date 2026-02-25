@@ -7,10 +7,12 @@ import { usePathname } from "next/navigation";
 
 const vdrNavLinks = [
   { name: "Features", href: "/features" },
+  { name: "Solutions", href: "/solutions/mergers-and-acquisitions-vdr" },
   { name: "Pricing", href: "/pricing" },
   { name: "Security", href: "/security" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
+  { name: "Kindora → NGO OS", href: "/kindora" },
 ];
 
 const kindoraNavLinks = [
