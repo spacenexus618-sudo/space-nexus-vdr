@@ -12,6 +12,7 @@ const vdrNavLinks = [
   { name: "Security", href: "/security" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
+  { name: "Kindora → NGO OS", href: "/kindora" },
 ];
 
 const kindoraNavLinks = [

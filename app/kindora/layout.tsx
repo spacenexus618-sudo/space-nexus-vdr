@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import KindoraHeader from "./components/KindoraHeader";
 import KindoraFooter from "./components/KindoraFooter";
+import BreadcrumbSchema from "./components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +57,7 @@ export default function KindoraLayout({
 }) {
   return (
     <>
+      <BreadcrumbSchema />
       <KindoraHeader />
       {children}
       <KindoraFooter />

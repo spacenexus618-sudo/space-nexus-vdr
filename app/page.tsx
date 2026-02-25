@@ -8,6 +8,7 @@ import TransformationTable from "./components/TransformationTable";
 import BenefitsSection from "./components/BenefitsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
+import KindoraCallout from "./components/KindoraCallout";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -88,6 +89,9 @@ export default function Home() {
 
       {/* Testimonials / Social Proof */}
       <TestimonialsSection />
+
+      {/* Kindora — Nonprofit Management Platform (cross-product + link equity) */}
+      <KindoraCallout />
 
       {/* FAQ Section */}
       <FAQSection />
