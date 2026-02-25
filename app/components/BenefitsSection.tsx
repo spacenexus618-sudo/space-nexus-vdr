@@ -18,7 +18,7 @@ export default function BenefitsSection() {
       ),
       label: "Lightning Fast Setup",
       description:
-        "Get your data room up and running in minutes, not days. Our intuitive interface requires zero training.",
+        "Get your data room up and running in minutes, not days. Our intuitive interface requires zero training .",
     },
     {
       icon: (
