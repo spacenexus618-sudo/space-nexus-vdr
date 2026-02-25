@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     "grant tracking software for nonprofits",
   ],
 };
- 
+  
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
