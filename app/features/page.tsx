@@ -539,6 +539,73 @@ export default function FeaturesPage() {
         </div>
       </section>
 
+      {/* Screenshot Callout - Product Proof */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left: Copy */}
+            <div>
+              <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
+                Live Product
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
+                Your deal command center — on day one
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                The Space Nexus dashboard gives every deal team member a single view of active deals, document counts, open Q&amp;As, and buyer activity. AI Redaction and Auto-Categorization run silently in the background so your team can focus on the deal.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Active deals, docs, Q&As, and users in one view",
+                  "AI Redaction & Auto-Categorization — always on",
+                  "One-click to Data Room, Q&A, Reports, or Settings",
+                  "Real-time deal pipeline by stage",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-[#2563eb]/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/demo"
+                className="inline-flex items-center px-7 py-3.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+              >
+                See it in your deal
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Right: Dashboard Screenshot */}
+            <div className="relative">
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.spacenexus.net / dashboard
+                </div>
+              </div>
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/spacenexus/screenshots/vdr-dashboard.png"
+                  alt="Space Nexus VDR Dashboard — deal command center with AI features"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* From the Blog */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,6 +2,7 @@ import Script from "next/script";
 import HeroSection from "./components/HeroSection";
 import TrustBar from "./components/TrustBar";
 import ProductEcosystem from "./components/ProductEcosystem";
+import VDRScreenshotGallery from "./components/VDRScreenshotGallery";
 import IDPSection from "./components/IDPSection";
 import TransformationTable from "./components/TransformationTable";
 import BenefitsSection from "./components/BenefitsSection";
@@ -72,6 +73,9 @@ export default function Home() {
 
       {/* Core Product Ecosystem - 12 Modules */}
       <ProductEcosystem />
+
+      {/* Real Product Screenshots - Interactive Gallery */}
+      <VDRScreenshotGallery />
 
       {/* Intelligent Document Processing Feature */}
       <IDPSection />

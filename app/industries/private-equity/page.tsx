@@ -351,6 +351,72 @@ export default function PrivateEquityPage() {
         </div>
       </section>
 
+      {/* Screenshot Callout — Activity & Analytics */}
+      <section className="py-14 lg:py-20 bg-[#f8f9fa]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Copy */}
+            <div>
+              <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
+                Live Product
+              </p>
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                Know which LP is most engaged — before they call you
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Space Nexus tracks every document view, download, and time-on-page per investor. Engagement scores surface the hottest prospects so your deal team can prioritize follow-up calls at exactly the right moment.
+              </p>
+              <ul className="space-y-2.5 mb-8">
+                {[
+                  "Per-investor engagement scores (e.g. Acme Corp 85%)",
+                  "Most-viewed documents ranked by views",
+                  "Unique viewers, downloads, avg. time spent",
+                  "Export full analytics for LP reporting",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-[#2563eb]/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="/demo"
+                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20"
+              >
+                See buyer intelligence in action
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+            {/* Screenshot */}
+            <div className="relative">
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.spacenexus.net / analytics
+                </div>
+              </div>
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/spacenexus/screenshots/vdr-analytics.png"
+                  alt="Space Nexus Activity & Analytics — buyer engagement insights for private equity"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -inset-4 bg-emerald-500/10 blur-2xl rounded-3xl -z-10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Related Guides */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
