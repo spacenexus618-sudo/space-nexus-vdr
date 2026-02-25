@@ -30,6 +30,26 @@ const vdrFooterLinks = {
       { name: "Security & Compliance", href: "/features/security-compliance" },
     ],
   },
+  solutions: {
+    title: "Solutions",
+    links: [
+      { name: "M&A Virtual Data Room", href: "/solutions/mergers-and-acquisitions-vdr" },
+      { name: "Series A Data Room", href: "/solutions/series-a-fundraising-data-room" },
+      { name: "Legal Document Sharing", href: "/solutions/secure-document-sharing-for-legal" },
+      { name: "Investment Banking", href: "/industries/investment-banking" },
+      { name: "Private Equity", href: "/industries/private-equity" },
+      { name: "Law Firms", href: "/industries/law-firms" },
+    ],
+  },
+  resources: {
+    title: "Resources",
+    links: [
+      { name: "M&A Glossary", href: "/glossary" },
+      { name: "Free Due Diligence Checklists", href: "/checklists" },
+      { name: "Datasite Alternative", href: "/competitors/datasite-alternative" },
+      { name: "Intralinks Alternative", href: "/competitors/intralinks-alternative" },
+    ],
+  },
 };
 
 const kindoraFooterLinks = {
@@ -83,9 +103,9 @@ export default function Footer() {
     <footer className="bg-white border-t border-gray-200" role="contentinfo">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-12">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 md:col-span-2">
             {isKindora ? (
               <Link
                 href="/kindora"
@@ -247,6 +267,44 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {footerLinks.features.links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions Links */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">
+              {footerLinks.solutions.title}
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.solutions.links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources Links */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">
+              {footerLinks.resources.title}
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.resources.links.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

@@ -14,6 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/security", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/about", priority: 0.7, changeFrequency: "monthly" as const },
     { route: "/blog", priority: 0.9, changeFrequency: "weekly" as const },
+    // Phase 2: Content Strategy pages
+    { route: "/glossary", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/checklists", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/competitors/datasite-alternative", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/competitors/intralinks-alternative", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/mergers-and-acquisitions-vdr", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/series-a-fundraising-data-room", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/secure-document-sharing-for-legal", priority: 0.9, changeFrequency: "monthly" as const },
   ];
 
   // VDR blog posts
