@@ -206,7 +206,7 @@ export default function KindoraFooter() {
                 <div className="flex items-center space-x-3">
                   {/* YouTube */}
                   <a
-                    href="https://www.youtube.com/channel/UCjhQbX5ivCfH46ODlbrVoGw"
+                    href="https://www.youtube.com/@KindoraNGOOS"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-[#FF0000] transition-all duration-300"
@@ -218,7 +218,7 @@ export default function KindoraFooter() {
                   </a>
                   {/* Instagram */}
                   <a
-                    href="https://www.instagram.com/spacenexus__/"
+                    href="https://www.instagram.com/space_kindora/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-[#E1306C] transition-all duration-300"
@@ -230,7 +230,7 @@ export default function KindoraFooter() {
                   </a>
                   {/* X / Twitter */}
                   <a
-                    href="https://x.com/spacenexus_"
+                    href="https://x.com/space_kindora"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-black transition-all duration-300"
@@ -242,7 +242,7 @@ export default function KindoraFooter() {
                   </a>
                   {/* LinkedIn */}
                   <a
-                    href="https://www.linkedin.com/company/spacenexus"
+                    href="https://www.linkedin.com/company/kindora-ngo-os"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-[#0A66C2] transition-all duration-300"

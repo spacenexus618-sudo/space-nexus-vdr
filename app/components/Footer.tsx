@@ -192,7 +192,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3">
               {/* YouTube */}
               <a
-                href="https://www.youtube.com/channel/UCjhQbX5ivCfH46ODlbrVoGw"
+                href="https://www.youtube.com/@spacenexus-v1g"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:border-transparent hover:bg-[#FF0000] transition-all duration-300"
@@ -204,7 +204,7 @@ export default function Footer() {
               </a>
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/spacenexus__/"
+                href="https://www.instagram.com/spacenexus7/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:border-transparent hover:bg-[#E1306C] transition-all duration-300"
@@ -216,7 +216,7 @@ export default function Footer() {
               </a>
               {/* X / Twitter */}
               <a
-                href="https://x.com/spacenexus_"
+                href="https://x.com/space__nexus"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:bg-black hover:border-black transition-all duration-300"
@@ -228,7 +228,7 @@ export default function Footer() {
               </a>
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/company/spacenexus"
+                href="https://www.linkedin.com/in/space-nexus/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:border-transparent hover:bg-[#0A66C2] transition-all duration-300"
