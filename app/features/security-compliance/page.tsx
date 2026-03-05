@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security & Compliance - Trust Foundation | Space Nexus",
+  title: "Secure Data Room | Security & Compliance — SpaceNexus",
   description:
-    "Enterprise security with encryption at rest and in transit, multi-factor authentication, data residency controls, and industry certifications.",
+    "SpaceNexus delivers bank-grade secure data room infrastructure — SOC 2 Type II, 256-bit encryption, GDPR, HIPAA compliant. Built for high-stakes deals.",
   alternates: {
     canonical: "/features/security-compliance",
+  },
+  openGraph: {
+    title: "Secure Data Room | Security & Compliance — SpaceNexus",
+    description:
+      "SpaceNexus delivers bank-grade secure data room infrastructure — SOC 2 Type II, 256-bit encryption, GDPR, HIPAA compliant. Built for high-stakes deals.",
+    url: "https://spacenexus.net/features/security-compliance",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Secure Data Room | Security & Compliance — SpaceNexus",
+    description:
+      "Bank-grade secure data room: SOC 2 Type II, AES-256 encryption, GDPR & HIPAA compliant. Purpose-built for M&A due diligence.",
   },
 };
 

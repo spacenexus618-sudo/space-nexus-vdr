@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Investment Banking Solutions | Space Nexus",
+  title: "Investment Banking Data Room | Financial VDR — SpaceNexus",
   description:
     "Manage complex M&A transactions, capital raises, and client relationships with Space Nexus - the enterprise-grade virtual data room for investment banks.",
   alternates: {
     canonical: "/industries/investment-banking",
+  },
+  openGraph: {
+    title: "Investment Banking Data Room | Financial VDR — SpaceNexus",
+    description:
+      "Execute M&A mandates, IPOs, and restructurings with an investment banking data room built for speed, security, and institutional deal-making.",
+    url: "https://spacenexus.net/industries/investment-banking",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Investment Banking Data Room | Financial VDR — SpaceNexus",
+    description:
+      "Execute M&A mandates, IPOs, and restructurings with an investment banking data room built for speed, security, and institutional deal-making.",
   },
 };
 

@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Law Firm Solutions | Space Nexus",
+  title: "Secure File Sharing for Lawyers | Law Firm VDR — SpaceNexus",
   description:
     "Streamline legal due diligence, document review, and client collaboration with Space Nexus - the compliance-first virtual data room for law firms.",
   alternates: {
     canonical: "/industries/law-firms",
+  },
+  openGraph: {
+    title: "Secure File Sharing for Lawyers | Law Firm VDR — SpaceNexus",
+    description:
+      "Purpose-built secure file sharing for lawyers and law firms: client privilege protection, due diligence management, ethical walls, and full audit trails.",
+    url: "https://spacenexus.net/industries/law-firms",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Secure File Sharing for Lawyers | Law Firm VDR — SpaceNexus",
+    description:
+      "Purpose-built secure file sharing for lawyers: client privilege protection, due diligence management, and full audit trails.",
   },
 };
 

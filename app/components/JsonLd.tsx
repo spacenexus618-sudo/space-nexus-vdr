@@ -3,8 +3,8 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Space Nexus",
-    url: "https://spacenexus.com",
-    logo: "https://spacenexus.com/logo.png",
+    url: "https://spacenexus.net",
+    logo: "https://spacenexus.net/logo.png",
     description:
       "Enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing.",
     foundingDate: "2020",
@@ -62,12 +62,12 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Space Nexus",
-    url: "https://spacenexus.com",
+    url: "https://spacenexus.net",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://spacenexus.com/search?q={search_term_string}",
+        urlTemplate: "https://spacenexus.net/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -81,19 +81,19 @@ export default function JsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://spacenexus.com",
+        item: "https://spacenexus.net",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Features",
-        item: "https://spacenexus.com/features",
+        item: "https://spacenexus.net/features",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Industries",
-        item: "https://spacenexus.com/industries",
+        item: "https://spacenexus.net/industries",
       },
     ],
   };

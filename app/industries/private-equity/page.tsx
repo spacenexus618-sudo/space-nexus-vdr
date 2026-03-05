@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Private Equity Solutions | Space Nexus",
+  title: "Financial Data Room for Private Equity | SpaceNexus VDR",
   description:
     "Accelerate portfolio management, fundraising, and exit transactions with Space Nexus - the secure virtual data room built for private equity workflows.",
   alternates: {
     canonical: "/industries/private-equity",
+  },
+  openGraph: {
+    title: "Financial Data Room for Private Equity | SpaceNexus VDR",
+    description:
+      "The financial data room trusted by private equity firms for buy-side due diligence, LP reporting, portfolio management, and sell-side auction processes.",
+    url: "https://spacenexus.net/industries/private-equity",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Financial Data Room for Private Equity | SpaceNexus VDR",
+    description:
+      "The financial data room trusted by private equity firms for buy-side due diligence, LP reporting, portfolio management, and sell-side exits.",
   },
 };
 

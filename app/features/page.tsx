@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features - Space Nexus",
+  title: "Features | VDR & Due Diligence Tools — SpaceNexus",
   description:
     "Explore the complete feature set of Space Nexus Virtual Data Room. From secure document management to AI-powered analytics, discover everything you need for successful M&A transactions.",
   alternates: {
     canonical: "/features",
+  },
+  openGraph: {
+    title: "Features | VDR & Due Diligence Tools — SpaceNexus",
+    description:
+      "Explore SpaceNexus's full VDR feature suite — AI redaction, Q&A management, granular permissions, and real-time analytics for secure deal management.",
+    url: "https://spacenexus.net/features",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Features | VDR & Due Diligence Tools — SpaceNexus",
+    description:
+      "Explore SpaceNexus's full VDR feature suite — AI redaction, Q&A management, granular permissions, and real-time analytics for secure deal management.",
   },
 };
 

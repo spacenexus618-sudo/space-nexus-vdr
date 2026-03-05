@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Data Room - Secure Document Management | Space Nexus",
+  title: "Due Diligence Data Room — Secure Document Management | SpaceNexus",
   description:
     "Enterprise-grade document management with structured folder indexes, bulk uploads, version control, redaction, watermarking, and full-text search.",
   alternates: {
     canonical: "/features/data-room",
+  },
+  openGraph: {
+    title: "Due Diligence Data Room — Secure Document Management | SpaceNexus",
+    description:
+      "Enterprise VDR document management: structured indexes, version control, AI redaction, dynamic watermarking, and full-text search for M&A due diligence.",
+    url: "https://spacenexus.net/features/data-room",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Due Diligence Data Room — Secure Document Management | SpaceNexus",
+    description:
+      "Enterprise VDR document management: structured indexes, version control, AI redaction, dynamic watermarking, and full-text search for M&A due diligence.",
   },
 };
 
