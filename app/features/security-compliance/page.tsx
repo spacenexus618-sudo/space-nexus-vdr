@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "VDR Security & Compliance — Audit Logs, Granular Access Control | Space Nexus",
     description: "SOC 2 Type II certified. AES-256 encryption at rest. Tamper-evident audit logs. Granular access control. Dynamic watermarking. Zero Trust architecture.",
     url: "https://spacenexus.net/features/security-compliance",
+    type: "website",
   },
   keywords: [
     "tamper-evident audit logs",
@@ -22,6 +23,12 @@ export const metadata: Metadata = {
     "VDR security compliance",
     "Zero Trust data room",
   ],
+  twitter: {
+    card: "summary_large_image",
+    title: "VDR Security & Compliance — Tamper-Evident Audit Logs | Space Nexus",
+    description:
+      "Bank-grade secure data room: SOC 2 Type II, AES-256 encryption, GDPR & HIPAA compliant. Purpose-built for M&A due diligence.",
+  },
 };
 
 const features = [

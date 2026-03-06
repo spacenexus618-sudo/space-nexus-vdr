@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "People Management - Staff & Volunteer Coordination",
+  title: "Volunteer Management System for Nonprofits — Kindora",
   description:
     "Manage employees and volunteers with unified profiles, role assignments, availability tracking, and comprehensive team coordination tools.",
   alternates: {
     canonical: "/kindora/features/people-management",
+  },
+  openGraph: {
+    title: "Volunteer Management System for Nonprofits — Kindora",
+    description:
+      "Kindora's volunteer management system unifies staff and volunteer profiles, role assignments, and availability tracking for nonprofit organizations.",
+    url: "https://spacenexus.net/kindora/features/people-management",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Volunteer Management System for Nonprofits — Kindora",
+    description:
+      "Unified volunteer management system: track staff, volunteers, roles, and availability — purpose-built for nonprofits.",
   },
 };
 
@@ -76,6 +89,21 @@ const reports = [
 export default function PeopleManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Volunteer Management System", item: "https://spacenexus.net/kindora/features/people-management" },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

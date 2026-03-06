@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     title: "Investment Banking Data Room | Space Nexus",
     description: "Enterprise VDR software for investment banks. Sell-side M&A, buy-side advisory, IPOs, and capital raises with granular permissions and buyer analytics.",
     url: "https://spacenexus.net/industries/investment-banking",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Investment Banking Data Room Software — Sell-Side & Buy-Side M&A | Space Nexus",
+    description:
+      "Execute M&A mandates, IPOs, and restructurings with an investment banking data room built for speed, security, and institutional deal-making.",
   },
 };
 

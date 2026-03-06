@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     title: "Virtual Data Room Features | Space Nexus",
     description: "The complete VDR feature set for M&A deal teams: secure data rooms, due diligence Q&A, buyer analytics, watermarking, and enterprise compliance.",
     url: "https://spacenexus.net/features",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Virtual Data Room Features — M&A Due Diligence Software | Space Nexus",
+    description:
+      "Explore SpaceNexus's full VDR feature suite — AI redaction, Q&A management, granular permissions, and real-time analytics for secure deal management.",
   },
 };
 

@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Client Management - Community Service Tracking",
+  title: "Client Management Software for Nonprofits — Kindora",
   description:
     "Track clients, manage program enrollments, record service deliveries, and maintain comprehensive case records for community service organizations.",
   alternates: {
     canonical: "/kindora/features/client-management",
+  },
+  openGraph: {
+    title: "Client Management Software for Nonprofits — Kindora",
+    description:
+      "Kindora's nonprofit client management software tracks enrollments, service deliveries, and case records for community organizations and social service NGOs.",
+    url: "https://spacenexus.net/kindora/features/client-management",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Client Management Software for Nonprofits — Kindora",
+    description:
+      "Track clients, enrollments, and service deliveries with Kindora's nonprofit client management software.",
   },
 };
 
@@ -74,6 +87,21 @@ const reports = [
 export default function ClientManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Client Management Software", item: "https://spacenexus.net/kindora/features/client-management" },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

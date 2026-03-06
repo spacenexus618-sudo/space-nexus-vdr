@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "virtual-data-room-for-private-equity",
     "vdr-security-what-to-look-for",
     "how-to-set-up-virtual-data-room-series-a",
+    "best-virtual-data-room-for-ma",
+    "secure-file-sharing-for-lawyers",
+    "due-diligence-virtual-data-room-guide",
+    "hipaa-compliant-file-sharing-healthcare-ma",
+    "automated-due-diligence-software",
+    "vdr-software-investment-banking",
   ].map((slug) => ({
     route: `/blog/${slug}`,
     priority: 0.8,

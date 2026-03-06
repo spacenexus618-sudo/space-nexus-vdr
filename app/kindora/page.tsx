@@ -1046,6 +1046,70 @@ export default function KindoraHomePage() {
           </div>
         </div>
       </section>
-    </>
+
+      {/* SEO Content Block */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            The All-in-One Nonprofit Management Software for NGOs of Every Size
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Kindora is the all-in-one{" "}
+            <a href="/kindora/features/donor-management" className="text-[#2563eb] hover:underline">
+              donor management software
+            </a>{" "}
+            and{" "}
+            <a href="/kindora/features/grant-management" className="text-[#2563eb] hover:underline">
+              grant management software
+            </a>{" "}
+            built for modern nonprofits, social service organizations, and community NGOs. Our
+            integrated platform replaces scattered spreadsheets with a unified nonprofit CRM that
+            tracks every donor relationship, grant lifecycle, and program outcome in one place.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            From{" "}
+            <a href="/kindora/features/financial-management" className="text-[#2563eb] hover:underline">
+              nonprofit financial reporting
+            </a>{" "}
+            to{" "}
+            <a href="/kindora/features/people-management" className="text-[#2563eb] hover:underline">
+              volunteer management system
+            </a>{" "}
+            features, Kindora provides the infrastructure nonprofit teams need to scale their impact.
+            Our{" "}
+            <a href="/kindora/features/dashboard-analytics" className="text-[#2563eb] hover:underline">
+              nonprofit dashboard software
+            </a>{" "}
+            delivers real-time KPIs, donation trend analytics, and program performance metrics —
+            giving executive directors and board members the visibility they need without manual
+            reporting.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Whether you run a small community organization or a multi-program social services agency,
+            Kindora&apos;s{" "}
+            <a href="/kindora/features/campaign-management" className="text-[#2563eb] hover:underline">
+              campaign management software for NGOs
+            </a>{" "}
+            and{" "}
+            <a href="/kindora/features/client-management" className="text-[#2563eb] hover:underline">
+              client management software for nonprofits
+            </a>{" "}
+            integrates seamlessly with your{" "}
+            <a href="/kindora/features/reporting" className="text-[#2563eb] hover:underline">
+              nonprofit financial reporting
+            </a>{" "}
+            workflows. Explore our{" "}
+            <a href="/kindora/solutions/small-nonprofits" className="text-[#2563eb] hover:underline">
+              solutions for small nonprofits
+            </a>{" "}
+            or{" "}
+            <a href="/kindora/pricing" className="text-[#2563eb] hover:underline">
+              view Kindora&apos;s pricing plans
+            </a>{" "}
+            to get started free today.
+          </p>
+        </div>
+      </section>
+</>
   );
 }

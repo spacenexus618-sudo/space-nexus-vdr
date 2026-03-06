@@ -95,6 +95,49 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQSection />
+
+      {/* SEO Content Block */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            The Enterprise Virtual Data Room for M&amp;A and Due Diligence
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            SpaceNexus is the enterprise{" "}
+            <a href="/features/data-room" className="text-[#2563eb] hover:underline">
+              virtual data room
+            </a>{" "}
+            trusted by M&amp;A advisors, investment bankers, private equity firms, and legal teams
+            worldwide. Our{" "}
+            <a href="/features/security-compliance" className="text-[#2563eb] hover:underline">
+              secure data room
+            </a>{" "}
+            platform delivers bank-grade encrypted file sharing, AI-powered{" "}
+            <a href="/features/data-room" className="text-[#2563eb] hover:underline">
+              due diligence automation
+            </a>
+            , and granular access controls — everything deal teams need for complex transactions.
+            Whether you need an{" "}
+            <a href="/industries/investment-banking" className="text-[#2563eb] hover:underline">
+              M&amp;A data room
+            </a>{" "}
+            for a cross-border acquisition,{" "}
+            <a href="/industries/healthcare" className="text-[#2563eb] hover:underline">
+              HIPAA compliant file sharing
+            </a>{" "}
+            for healthcare deals, or{" "}
+            <a href="/features/security-compliance" className="text-[#2563eb] hover:underline">
+              confidential document sharing
+            </a>{" "}
+            for capital raises, SpaceNexus delivers speed, security, and compliance. Trusted by
+            500+ enterprises as the best{" "}
+            <a href="/features/security-compliance" className="text-[#2563eb] hover:underline">
+              secure virtual data room
+            </a>{" "}
+            for high-stakes transactions.
+          </p>
+        </div>
+      </section>
     </>
   );
 }

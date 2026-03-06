@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     title: "Virtual Data Room for Law Firms | Space Nexus",
     description: "Secure legal due diligence software with privilege management, ethical walls, contract analysis, and client collaboration — built for law firm workflows.",
     url: "https://spacenexus.net/industries/law-firms",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Virtual Data Room for Law Firms — Legal Due Diligence Software | Space Nexus",
+    description:
+      "Purpose-built secure file sharing for lawyers: client privilege protection, due diligence management, and full audit trails.",
   },
 };
 

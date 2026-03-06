@@ -16,6 +16,19 @@ export const metadata: Metadata = {
     "document version control",
     "data room document management",
   ],
+  openGraph: {
+    title: "Data Room — Automated Document Indexing & Full-Text Search | Space Nexus VDR",
+    description:
+      "Enterprise VDR document management: structured indexes, version control, AI redaction, dynamic watermarking, and full-text search for M&A due diligence.",
+    url: "https://spacenexus.net/features/data-room",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Data Room — Automated Document Indexing & Full-Text Search | Space Nexus VDR",
+    description:
+      "Enterprise VDR document management: structured indexes, version control, AI redaction, dynamic watermarking, and full-text search for M&A due diligence.",
+  },
 };
 
 const features = [

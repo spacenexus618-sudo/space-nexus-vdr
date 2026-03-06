@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Campaign Management - Fundraising Goal Tracking",
+  title: "Campaign Management Software for NGOs — Kindora",
   description:
     "Create and manage fundraising, event, awareness, and advocacy campaigns with real-time goal tracking, donation attribution, and performance analytics.",
   alternates: {
     canonical: "/kindora/features/campaign-management",
+  },
+  openGraph: {
+    title: "Campaign Management Software for NGOs — Kindora",
+    description:
+      "Kindora's campaign management software for NGOs tracks fundraising goals, donation attribution, and campaign performance in real time.",
+    url: "https://spacenexus.net/kindora/features/campaign-management",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Campaign Management Software for NGOs — Kindora",
+    description:
+      "Run fundraising, event, and advocacy campaigns with real-time goal tracking using Kindora's NGO campaign management software.",
   },
 };
 
@@ -77,6 +90,21 @@ const features = [
 export default function CampaignManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Campaign Management Software", item: "https://spacenexus.net/kindora/features/campaign-management" },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

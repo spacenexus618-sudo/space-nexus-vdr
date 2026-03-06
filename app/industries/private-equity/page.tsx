@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     title: "Virtual Data Room for Private Equity | Space Nexus",
     description: "The VDR built for PE workflows: deal sourcing, due diligence, LP reporting, and exit preparation. Purpose-built for the investment lifecycle.",
     url: "https://spacenexus.net/industries/private-equity",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Virtual Data Room for Private Equity — Deal Sourcing, Due Diligence & Exits | Space Nexus",
+    description:
+      "The financial data room trusted by private equity firms for buy-side due diligence, LP reporting, portfolio management, and sell-side exits.",
   },
 };
 
