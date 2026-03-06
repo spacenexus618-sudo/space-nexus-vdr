@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reporting & Analytics - Comprehensive Nonprofit Insights",
+  title: "Nonprofit Financial Reporting & Analytics — Kindora",
   description:
     "Generate financial reports, donor analytics, client metrics, and program performance reports with Kindora's comprehensive reporting suite.",
   alternates: {
     canonical: "/kindora/features/reporting",
+  },
+  openGraph: {
+    title: "Nonprofit Financial Reporting & Analytics — Kindora",
+    description:
+      "Kindora's nonprofit financial reporting tools generate donor analytics, program performance reports, and compliance-ready financials for NGOs.",
+    url: "https://spacenexus.net/kindora/features/reporting",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nonprofit Financial Reporting & Analytics — Kindora",
+    description:
+      "Generate financial reports, donor analytics, and program metrics with Kindora's nonprofit reporting suite.",
   },
 };
 
@@ -95,6 +108,21 @@ const features = [
 export default function ReportingPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Nonprofit Financial Reporting & Analytics", item: "https://spacenexus.net/kindora/features/reporting" },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

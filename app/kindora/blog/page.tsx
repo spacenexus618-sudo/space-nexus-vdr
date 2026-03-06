@@ -24,6 +24,12 @@ export const metadata: Metadata = {
         url: "https://spacenexus.net/kindora/blog",
         type: "website",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+        description:
+            "Practical guides on donor management, grant writing, volunteer coordination, and nonprofit financial reporting.",
+    },
 };
 
 

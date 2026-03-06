@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Grant Management - Full Lifecycle Grant Tracking",
+  title: "Grant Management Software & Tracking for Nonprofits — Kindora",
   description:
     "Track grants from prospect to close, manage grantors, process receipts, and generate compliance-ready reports with Kindora's grant management tools.",
   alternates: {
     canonical: "/kindora/features/grant-management",
+  },
+  openGraph: {
+    title: "Grant Management Software & Tracking for Nonprofits — Kindora",
+    description:
+      "Full-lifecycle grant management software: track applications, manage grantors, process receipts, and generate compliance reports — built for nonprofits.",
+    url: "https://spacenexus.net/kindora/features/grant-management",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Grant Management Software & Tracking for Nonprofits — Kindora",
+    description:
+      "Track grants from prospect to close with Kindora's nonprofit grant management software. Compliance reports included.",
   },
 };
 
@@ -91,6 +104,21 @@ const reports = [
 export default function GrantManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Grant Management Software", item: "https://spacenexus.net/kindora/features/grant-management" },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

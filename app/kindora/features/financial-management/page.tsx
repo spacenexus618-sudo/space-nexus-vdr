@@ -2,11 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Financial Management - Integrated Nonprofit Finance Tools",
+  title: "Nonprofit Financial Reporting Software — Kindora",
   description:
     "Unified view of donations, grants, expenses, and net income with comprehensive financial reporting for nonprofit organizations.",
   alternates: {
     canonical: "/kindora/features/financial-management",
+  },
+  openGraph: {
+    title: "Nonprofit Financial Reporting Software — Kindora",
+    description:
+      "Kindora's nonprofit financial reporting software delivers unified donation, grant, and expense tracking with audit-ready reports for NGOs.",
+    url: "https://spacenexus.net/kindora/features/financial-management",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nonprofit Financial Reporting Software — Kindora",
+    description:
+      "Unified nonprofit financial reporting: track donations, grants, and expenses in one dashboard. Audit-ready reports for NGOs.",
   },
 };
 
@@ -91,6 +104,21 @@ const reports = [
 export default function FinancialManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Nonprofit Financial Reporting", item: "https://spacenexus.net/kindora/features/financial-management" },
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

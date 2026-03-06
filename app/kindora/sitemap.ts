@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "./blog/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://spaceaiapp.com/kindora";
+  const baseUrl = "https://spacenexus.net/kindora";
 
   const staticRoutes = [
     { route: "", priority: 1 },
