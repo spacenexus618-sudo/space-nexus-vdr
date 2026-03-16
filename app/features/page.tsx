@@ -24,6 +24,36 @@ export const metadata: Metadata = {
 
 const features = [
   {
+    id: "dashboard",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+        />
+      </svg>
+    ),
+    title: "Dashboard",
+    subtitle: "Deal command center",
+    description:
+      "Centralized overview of all deal activities — monitor transactions, documents, and collaboration in real time.",
+    features: [
+      "Active deals, docs, Q&As, and users in one view",
+      "AI Redaction & Auto-Categorization",
+      "Real-time deal pipeline by stage",
+      "Quick actions for deals and uploads",
+    ],
+    color: "blue",
+    href: "/features/dashboard",
+  },
+  {
     id: "deals",
     icon: (
       <svg
