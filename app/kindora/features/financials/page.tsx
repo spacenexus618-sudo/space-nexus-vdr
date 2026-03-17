@@ -75,10 +75,22 @@ const features = [
 ];
 
 const galleryScreenshots = [
-  { src: "/kindora/screenshots/Financials/Donation1.png", caption: "Donation Tracking & History" },
-  { src: "/kindora/screenshots/Financials/Campaign1.png", caption: "Campaign Fundraising Management" },
-  { src: "/kindora/screenshots/Financials/Grants%20(1).png", caption: "Grant Pipeline Management" },
-  { src: "/kindora/screenshots/Financials/Expenses%20(1).png", caption: "Expense Tracking & Categories" },
+  {
+    src: "/kindora/screenshots/Financials/Donation1.png",
+    caption: "Donation Tracking & History",
+  },
+  {
+    src: "/kindora/screenshots/Financials/Campaign1.png",
+    caption: "Campaign Fundraising Management",
+  },
+  {
+    src: "/kindora/screenshots/Financials/Grants%20(1).png",
+    caption: "Grant Pipeline Management",
+  },
+  {
+    src: "/kindora/screenshots/Financials/Expenses%20(1).png",
+    caption: "Expense Tracking & Categories",
+  },
 ];
 
 export default function FinancialsPage() {
@@ -91,10 +103,30 @@ export default function FinancialsPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Financials", item: "https://spacenexus.net/kindora/features/financials" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://spacenexus.net",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Kindora",
+                item: "https://spacenexus.net/kindora",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Features",
+                item: "https://spacenexus.net/kindora/features",
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
+                name: "Financials",
+                item: "https://spacenexus.net/kindora/features/financials",
+              },
             ],
           }),
         }}
@@ -109,8 +141,18 @@ export default function FinancialsPage() {
                 href="/kindora/features"
                 className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
-                <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
                 Back to Features
               </Link>
@@ -124,10 +166,12 @@ export default function FinancialsPage() {
                 Manage every dollar with clarity, transparency, and control.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                The Financials module provides a comprehensive system for managing all financial activities
-                within your organization. From tracking donors and donations to managing grants, campaigns,
-                vendors, expenses, and financial reports, it centralizes all financial operations into one
-                unified platform for accurate record-keeping, transparency, and better decision-making.
+                The Financials module provides a comprehensive system for
+                managing all financial activities within your organization. From
+                tracking donors and donations to managing grants, campaigns,
+                vendors, expenses, and financial reports, it centralizes all
+                financial operations into one unified platform for accurate
+                record-keeping, transparency, and better decision-making.
               </p>
               <ul className="space-y-2.5 mb-8">
                 {[
@@ -140,10 +184,23 @@ export default function FinancialsPage() {
                   "Monitor accounts payable — bills, due dates, and overdue payments",
                   "Generate financial reports for expenses, donations, and financial performance",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-gray-700"
+                  >
                     <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-3 h-3 text-emerald-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </span>
                     {item}
@@ -198,8 +255,9 @@ export default function FinancialsPage() {
               Every Financial Operation in One Place
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From the first donation to the final expense report — Kindora Financials
-              centralizes every financial activity for complete visibility and control.
+              From the first donation to the final expense report — Kindora
+              Financials centralizes every financial activity for complete
+              visibility and control.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -209,12 +267,26 @@ export default function FinancialsPage() {
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-emerald-200 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d={feature.icon}
+                    />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -229,7 +301,8 @@ export default function FinancialsPage() {
               Explore Financials Modules
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto text-sm">
-              Each area of the Financials module is purpose-built for nonprofit financial management.
+              Each area of the Financials module is purpose-built for nonprofit
+              financial management.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -251,7 +324,9 @@ export default function FinancialsPage() {
                     loading="lazy"
                   />
                 </div>
-                <p className="text-xs text-gray-500 text-center mt-2">{screenshot.caption}</p>
+                <p className="text-xs text-gray-500 text-center mt-2">
+                  {screenshot.caption}
+                </p>
               </div>
             ))}
           </div>
@@ -266,8 +341,9 @@ export default function FinancialsPage() {
               Take Control of Your Nonprofit Finances
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              Schedule a demo and see how Kindora Financials brings every financial operation —
-              donors, donations, grants, campaigns, and expenses — into one unified platform.
+              Schedule a demo and see how Kindora Financials brings every
+              financial operation — donors, donations, grants, campaigns, and
+              expenses — into one unified platform.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -275,8 +351,18 @@ export default function FinancialsPage() {
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300"
               >
                 Request a Demo
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
               <Link

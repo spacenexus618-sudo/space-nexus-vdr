@@ -72,10 +72,30 @@ export default function UsersPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
-              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
-              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Users", item: "https://spacenexus.net/kindora/features/user-management" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://spacenexus.net",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Kindora",
+                item: "https://spacenexus.net/kindora",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Features",
+                item: "https://spacenexus.net/kindora/features",
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
+                name: "Users",
+                item: "https://spacenexus.net/kindora/features/user-management",
+              },
             ],
           }),
         }}
@@ -90,8 +110,18 @@ export default function UsersPage() {
                 href="/kindora/features"
                 className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
-                <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
                 Back to Features
               </Link>
@@ -105,10 +135,11 @@ export default function UsersPage() {
                 Control access and manage system users securely.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                The Users module allows organizations to manage system users and define their access
-                levels within the platform. It helps administrators assign roles, control permissions,
-                and ensure that team members have appropriate access to different modules — improving
-                security and operational efficiency.
+                The Users module allows organizations to manage system users and
+                define their access levels within the platform. It helps
+                administrators assign roles, control permissions, and ensure
+                that team members have appropriate access to different modules —
+                improving security and operational efficiency.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -118,10 +149,23 @@ export default function UsersPage() {
                   "Monitor user status and manage active or inactive accounts",
                   "Maintain a centralized system for secure user access management",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-gray-700"
+                  >
                     <span className="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-3 h-3 text-rose-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </span>
                     {item}
@@ -172,19 +216,41 @@ export default function UsersPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Access Role Levels</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Access Role Levels
+            </h2>
             <p className="text-gray-600 max-w-xl mx-auto text-sm">
-              Assign the right level of access to every team member based on their role and responsibilities.
+              Assign the right level of access to every team member based on
+              their role and responsibilities.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: "Admin", description: "Full platform access and configuration", color: "bg-rose-50 border-rose-100 text-rose-700" },
-              { label: "Manager", description: "Manage team, programs, and reports", color: "bg-orange-50 border-orange-100 text-orange-700" },
-              { label: "Staff", description: "Operational access for daily tasks", color: "bg-blue-50 border-blue-100 text-blue-700" },
-              { label: "Viewer", description: "Read-only access to approved modules", color: "bg-gray-50 border-gray-200 text-gray-700" },
+              {
+                label: "Admin",
+                description: "Full platform access and configuration",
+                color: "bg-rose-50 border-rose-100 text-rose-700",
+              },
+              {
+                label: "Manager",
+                description: "Manage team, programs, and reports",
+                color: "bg-orange-50 border-orange-100 text-orange-700",
+              },
+              {
+                label: "Staff",
+                description: "Operational access for daily tasks",
+                color: "bg-blue-50 border-blue-100 text-blue-700",
+              },
+              {
+                label: "Viewer",
+                description: "Read-only access to approved modules",
+                color: "bg-gray-50 border-gray-200 text-gray-700",
+              },
             ].map((role) => (
-              <div key={role.label} className={`rounded-xl border p-5 text-center ${role.color}`}>
+              <div
+                key={role.label}
+                className={`rounded-xl border p-5 text-center ${role.color}`}
+              >
                 <p className="font-bold text-lg mb-1">{role.label}</p>
                 <p className="text-xs opacity-80">{role.description}</p>
               </div>
@@ -201,8 +267,9 @@ export default function UsersPage() {
               Secure Access for Every Team Member
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Kindora Users gives administrators complete control over who can access what —
-              so your data stays protected and your team stays productive.
+              Kindora Users gives administrators complete control over who can
+              access what — so your data stays protected and your team stays
+              productive.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -212,12 +279,26 @@ export default function UsersPage() {
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-rose-200 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 mb-4">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d={feature.icon}
+                    />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -232,8 +313,9 @@ export default function UsersPage() {
               Take Control of Platform Access
             </h2>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-              See how Kindora helps administrators manage users, assign roles, and control
-              access — so your team always has exactly the right level of access.
+              See how Kindora helps administrators manage users, assign roles,
+              and control access — so your team always has exactly the right
+              level of access.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -241,8 +323,18 @@ export default function UsersPage() {
                 className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300"
               >
                 Request a Demo
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
               <Link
