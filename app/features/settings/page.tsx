@@ -2,132 +2,86 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Settings - Organization Management | Space Nexus",
+  title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
   description:
-    "Customize Space Nexus for your organization with company profiles, branding, notifications, and regional settings.",
+    "Space Nexus Integrated Trackers help teams monitor deal progress, engagement metrics, and Q&A activity in real time. Track milestones, performance indicators, and collaboration across ongoing transactions.",
   alternates: {
-    canonical: "/features/settings",
+    canonical: "https://spacenexus.net/features/settings",
+  },
+  openGraph: {
+    title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
+    description:
+      "Real-time tracking of deal milestones, engagement metrics, document views, and Q&A activity across all ongoing transactions — all in one centralized view.",
+    url: "https://spacenexus.net/features/settings",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
+    description:
+      "Monitor deal stages, project completion, buyer engagement, and Q&A activity across departments with Space Nexus Integrated Trackers.",
   },
 };
 
 const features = [
   {
-    title: "Company Profile",
+    title: "Deal Progress Tracking",
     description:
-      "Manage your organization's details, contact information, and business settings in one central location.",
+      "Track overall deal progress across different stages in real time. Get a clear view of where each transaction stands — from initial discovery through due diligence, negotiation, and close.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
     ),
   },
   {
-    title: "Custom Branding",
+    title: "Project Completion Status",
     description:
-      "White-label your data room with custom logos, colors, and domain. Deliver a branded experience to clients.",
+      "Monitor project completion percentages, in-progress tasks, and overdue items at a glance. Identify bottlenecks early and keep all workstreams aligned with deal timelines.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
   {
-    title: "Notification Preferences",
+    title: "Engagement Metrics",
     description:
-      "Control how and when you receive alerts. Configure email, in-app, and mobile notifications.",
+      "View key engagement metrics including total views, unique viewers, and time spent on documents. Understand how actively buyers and counterparties are engaging with your data room.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
   },
   {
-    title: "Language Settings",
+    title: "Most Viewed Documents",
     description:
-      "Multi-language support for global teams. Set default language and allow user preferences.",
+      "Identify which documents are receiving the most attention during the transaction process. Surface high-interest files to understand buyer focus and anticipate follow-up questions.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
       </svg>
     ),
   },
   {
-    title: "Regional Settings",
+    title: "Q&A Activity Tracking",
     description:
-      "Configure time zones, date formats, and currency preferences for accurate local display.",
+      "Track Q&A activity across departments such as Legal, Finance, HR, and Tax. Monitor open questions, response times, and department workloads to keep due diligence moving forward.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
     ),
   },
   {
-    title: "Security Settings",
+    title: "Deal Milestones Overview",
     description:
-      "Configure password policies, session timeouts, and IP restrictions for enhanced security.",
+      "Get a centralized view of deal milestones and collaboration activity. Keep all stakeholders aligned on progress, flag delays before they escalate, and maintain full visibility across every workstream.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
       </svg>
     ),
   },
@@ -136,116 +90,96 @@ const features = [
 export default function SettingsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+              { "@type": "ListItem", position: 3, name: "Integrated Trackers", item: "https://spacenexus.net/features/settings" },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
             <div>
               <Link
                 href="/features"
                 className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
-                <svg
-                  className="w-4 h-4 mr-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
+                <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Features
               </Link>
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium mb-4">
-                Organization Management
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
+                Deal Monitoring
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Settings
+                Integrated Trackers
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Customize Space Nexus to match your organization's needs.
-                Configure branding, notifications, and preferences to create the
-                perfect experience for your team.
+                The Integrated Trackers section helps teams monitor deal progress, engagement metrics,
+                and Q&A activity within ongoing transactions. It provides real-time tracking of milestones
+                and performance indicators to ensure smooth deal management.
               </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Track overall deal progress across different stages",
+                  "Monitor project completion, in-progress tasks, and overdue items",
+                  "View engagement metrics such as views, unique viewers, and time spent",
+                  "Identify most viewed documents during the transaction process",
+                  "Track Q&A activity across departments like Legal, Finance, HR, and Tax",
+                  "Get a centralized overview of deal milestones and collaboration activity",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <Link
                 href="/demo"
                 className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
               >
                 Request a Demo
-                <svg
-                  className="ml-2 w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             </div>
+
+            {/* Right: Screenshot */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-slate-50 to-gray-100 rounded-3xl" />
-              <div className="relative bg-white rounded-2xl border border-gray-200 shadow-xl p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="font-semibold text-gray-900">Settings</h3>
+              <div className="absolute -inset-4 bg-amber-500/10 blur-2xl rounded-3xl -z-10" />
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.spacenexus.net / trackers
                 </div>
-                <div className="space-y-2">
-                  {[
-                    "Company Profile",
-                    "Branding",
-                    "Notifications",
-                    "Language",
-                    "Security",
-                    "Integrations",
-                  ].map((setting, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between p-4 bg-[#f8f9fa] rounded-xl hover:bg-slate-100 transition-colors cursor-pointer"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-slate-200 flex items-center justify-center text-slate-600">
-                          <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                            />
-                          </svg>
-                        </div>
-                        <span className="text-sm font-medium text-gray-700">
-                          {setting}
-                        </span>
-                      </div>
-                      <svg
-                        className="w-4 h-4 text-gray-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  ))}
-                </div>
+              </div>
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/spacenexus/screenshots/integrated%20traks.jpeg"
+                  alt="Space Nexus VDR Integrated Trackers — deal progress and engagement monitoring"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
@@ -257,10 +191,11 @@ export default function SettingsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Complete Customization
+              Full Visibility Across Every Deal Workstream
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tailor every aspect of your Space Nexus experience.
+              From deal stage progress to document engagement and Q&A across departments —
+              Integrated Trackers keep your entire deal team informed and aligned in real time.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -269,16 +204,89 @@ export default function SettingsPage() {
                 key={index}
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Keep Every Deal on Track
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Space Nexus Integrated Trackers give deal teams a live pulse on progress, engagement,
+              and activity — so nothing falls through the cracks during a complex transaction.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Monitor Deal Progress",
+                description:
+                  "View deal stages and project completion status at a glance. Track what's done, what's in progress, and what's overdue across all active transactions.",
+              },
+              {
+                step: "02",
+                title: "Track Engagement",
+                description:
+                  "See which buyers are most active, which documents are getting attention, and how time is being spent — with engagement metrics updated in real time.",
+              },
+              {
+                step: "03",
+                title: "Manage Q&A Activity",
+                description:
+                  "Monitor Q&A volume across Legal, Finance, HR, and Tax. Track response times across departments and identify areas where the deal needs more attention.",
+              },
+            ].map((step) => (
+              <div key={step.step} className="relative pl-8">
+                <div className="absolute left-0 top-0 w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">{step.step.replace("0", "")}</span>
+                </div>
+                <p className="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-2">
+                  Step {step.step}
+                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Features */}
+      <section className="py-12 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-4">
+            Explore More Features
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { title: "Activity & Analytics — Buyer Intelligence", href: "/features/activity-analytics" },
+              { title: "Q&A Management — Due Diligence Questions", href: "/features/qa" },
+              { title: "Dashboard — Deal Command Center", href: "/features/dashboard" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-center justify-between p-5 bg-white border border-gray-200 rounded-xl hover:border-amber-300 hover:shadow-md transition-all duration-200"
+              >
+                <p className="text-sm font-medium text-gray-900 group-hover:text-amber-600 transition-colors">
+                  {link.title}
+                </p>
+                <svg className="w-4 h-4 text-gray-400 group-hover:text-amber-600 transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             ))}
           </div>
         </div>
@@ -287,31 +295,32 @@ export default function SettingsPage() {
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Ready to Customize Your Experience?
-          </h2>
-          <p className="text-gray-600 mb-8">
-            See how Space Nexus can be tailored to your organization.
-          </p>
-          <Link
-            href="/demo"
-            className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
-          >
-            Request a Demo
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 lg:p-12 border border-amber-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              See Integrated Trackers in Action
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              Schedule a personalized demo and see how Space Nexus keeps your deal team
+              aligned with real-time tracking of progress, engagement, and Q&A activity.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/demo"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+              >
+                Request a Demo
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/features"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                View All Features
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -2,271 +2,183 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "VDR Security & Compliance — Tamper-Evident Audit Logs, Granular Access Control | Space Nexus",
+  title: "Security & Compliance — Enterprise-Grade Data Protection | Space Nexus VDR",
   description:
-    "Space Nexus is a SOC 2 Type II certified VDR with AES-256 encryption at rest, tamper-evident audit logs, granular access control, dynamic watermarking, Zero Trust architecture, and GDPR compliance — purpose-built for M&A due diligence.",
+    "Space Nexus Security & Compliance provides enterprise-level security controls including MFA, document watermarking, session timeout, encrypted storage, and compliance with SOC 2 Type II, ISO 27001, GDPR, and HIPAA.",
   alternates: {
     canonical: "https://spacenexus.net/features/security-compliance",
   },
   openGraph: {
-    title: "VDR Security & Compliance — Audit Logs, Granular Access Control | Space Nexus",
-    description: "SOC 2 Type II certified. AES-256 encryption at rest. Tamper-evident audit logs. Granular access control. Dynamic watermarking. Zero Trust architecture.",
+    title: "Security & Compliance — Enterprise-Grade Data Protection | Space Nexus VDR",
+    description:
+      "Enterprise security controls: MFA, document watermarking, encrypted storage, session timeout, and compliance with SOC 2 Type II, ISO 27001, GDPR, and HIPAA.",
     url: "https://spacenexus.net/features/security-compliance",
     type: "website",
   },
-  keywords: [
-    "tamper-evident audit logs",
-    "granular access control VDR",
-    "AES-256 encryption at rest",
-    "dynamic watermarking documents",
-    "SOC 2 Type II virtual data room",
-    "VDR security compliance",
-    "Zero Trust data room",
-  ],
   twitter: {
     card: "summary_large_image",
-    title: "VDR Security & Compliance — Tamper-Evident Audit Logs | Space Nexus",
+    title: "Security & Compliance — Enterprise-Grade Data Protection | Space Nexus VDR",
     description:
-      "Bank-grade secure data room: SOC 2 Type II, AES-256 encryption, GDPR & HIPAA compliant. Purpose-built for M&A due diligence.",
+      "MFA, watermarking, encrypted storage, session controls, and regulatory compliance for secure M&A data rooms.",
   },
 };
 
 const features = [
   {
-    title: "Encryption at Rest & Transit",
+    title: "Security Score Monitoring",
     description:
-      "256-bit AES encryption protects your data at rest. TLS 1.3 secures all data in transit between clients and servers.",
+      "Monitor your overall security score and system protection status at a glance. Identify gaps in your security posture and take action before they become vulnerabilities in an active transaction.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
   },
   {
     title: "Multi-Factor Authentication",
     description:
-      "Require MFA for all users. Support for authenticator apps, SMS, and hardware security keys.",
+      "Enable MFA for all users to add a critical layer of access security. Ensure that only verified individuals can access the data room — even if login credentials are compromised.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
       </svg>
     ),
   },
   {
-    title: "Data Residency Controls",
+    title: "Document Watermarking",
     description:
-      "Choose where your data is stored. Meet regional compliance requirements with data centers across the globe.",
+      "Apply dynamic watermarks to documents to protect sensitive information and deter unauthorized distribution. Watermarks can include viewer identity, timestamp, and access context — visible or invisible.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
   },
   {
-    title: "Zero Trust Architecture",
+    title: "Session Timeout Controls",
     description:
-      "Never trust, always verify. Every access request is authenticated and authorized regardless of location.",
+      "Configure session timeout settings to prevent unauthorized access from unattended sessions. Set inactivity thresholds appropriate for your organization's security requirements.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
   {
-    title: "Penetration Testing",
+    title: "Encrypted Data Storage",
     description:
-      "Regular third-party security assessments. Continuous vulnerability scanning and remediation.",
+      "Maintain encrypted data storage and secure document handling throughout the deal lifecycle. All documents and transaction data are protected at rest with enterprise-grade encryption standards.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
       </svg>
     ),
   },
   {
-    title: "Disaster Recovery",
+    title: "Regulatory Compliance",
     description:
-      "Automated backups with point-in-time recovery. Multi-region redundancy ensures business continuity.",
+      "Support compliance with SOC 2 Type II, ISO 27001, GDPR, and HIPAA. Space Nexus is built to meet the standards required for M&A transactions, financial services, and regulated industries.",
     icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-        />
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
   },
-];
-
-const certifications = [
-  {
-    name: "SOC 2 Type II",
-    description:
-      "Annual audit of security, availability, and confidentiality controls",
-  },
-  {
-    name: "ISO 27001",
-    description: "International standard for information security management",
-  },
-  {
-    name: "GDPR",
-    description: "Full compliance with European data protection regulations",
-  },
-  {
-    name: "HIPAA",
-    description: "Healthcare data protection for life sciences transactions",
-  },
-  { name: "CCPA", description: "California Consumer Privacy Act compliance" },
 ];
 
 export default function SecurityCompliancePage() {
   return (
     <main className="pt-20 lg:pt-24">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+              { "@type": "ListItem", position: 3, name: "Security & Compliance", item: "https://spacenexus.net/features/security-compliance" },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
             <div>
               <Link
                 href="/features"
                 className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
-                <svg
-                  className="w-4 h-4 mr-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
+                <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Features
               </Link>
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
-                Trust Foundation
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-100 text-red-700 text-sm font-medium mb-4">
+                Enterprise Security
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
                 Security & Compliance
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Security is embedded at every layer of the platform. From
-                encryption to certifications, we protect your most sensitive
-                deal data with enterprise-grade security.
+                The Security & Compliance section provides enterprise-level security controls to protect
+                sensitive deal data within the platform. It ensures that documents, user access, and
+                transaction activities meet strict security and regulatory standards.
               </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Monitor overall security score and system protection status",
+                  "Enable Multi-Factor Authentication (MFA) for secure user access",
+                  "Apply document watermarking to protect sensitive information",
+                  "Configure session timeout settings to prevent unauthorized access",
+                  "Maintain encrypted data storage and secure document handling",
+                  "Support compliance with SOC 2 Type II, ISO 27001, GDPR, and HIPAA",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <Link
                 href="/demo"
                 className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
               >
                 Request a Demo
-                <svg
-                  className="ml-2 w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             </div>
+
+            {/* Right: Screenshot */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl" />
-              <div className="relative bg-white rounded-2xl border border-gray-200 shadow-xl p-8 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
-                  <svg
-                    className="w-10 h-10 text-green-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
+              <div className="absolute -inset-4 bg-red-500/10 blur-2xl rounded-3xl -z-10" />
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.spacenexus.net / security
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Enterprise Grade
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Bank-level security for your critical transactions
-                </p>
-                <div className="flex justify-center gap-4">
-                  {["SOC 2", "ISO 27001", "GDPR"].map((cert, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1.5 bg-green-100 text-green-700 text-sm font-medium rounded-full"
-                    >
-                      {cert}
-                    </span>
-                  ))}
-                </div>
+              </div>
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/spacenexus/screenshots/security%20complince.jpeg"
+                  alt="Space Nexus VDR Security & Compliance — enterprise security controls dashboard"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
@@ -278,10 +190,11 @@ export default function SecurityCompliancePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Security at Every Layer
+              Enterprise Security Built for High-Stakes Transactions
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive protection for your most sensitive information.
+              From MFA to encrypted storage and regulatory compliance — Space Nexus provides
+              the security infrastructure that M&A teams and regulated industries demand.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -290,91 +203,113 @@ export default function SecurityCompliancePage() {
                 key={index}
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Certifications */}
+      {/* Compliance Standards */}
       <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Regulatory Compliance Standards</h2>
+            <p className="text-gray-600 max-w-xl mx-auto text-sm">
+              Space Nexus is built to meet the requirements of the world&apos;s most demanding security and privacy regulations.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: "SOC 2 Type II", description: "Security & availability controls", color: "bg-red-50 border-red-100 text-red-700" },
+              { label: "ISO 27001", description: "Information security management", color: "bg-orange-50 border-orange-100 text-orange-700" },
+              { label: "GDPR", description: "EU data privacy regulation", color: "bg-blue-50 border-blue-100 text-blue-700" },
+              { label: "HIPAA", description: "Healthcare data protection", color: "bg-green-50 border-green-100 text-green-700" },
+            ].map((standard) => (
+              <div key={standard.label} className={`rounded-xl border p-5 text-center ${standard.color}`}>
+                <p className="font-bold text-lg mb-1">{standard.label}</p>
+                <p className="text-xs opacity-80">{standard.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Industry Certifications
+              Security That Protects Every Layer of Your Deal
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Independently verified compliance with global standards.
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Space Nexus enforces security at access, document, and data levels — so your
+              team and your counterparties can transact with full confidence.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6 flex items-start gap-4"
-              >
-                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-5 h-5 text-green-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Secure Access",
+                description:
+                  "Enable MFA and configure session timeouts to protect all entry points. Ensure only authorized users access the platform with verified, time-limited sessions.",
+              },
+              {
+                step: "02",
+                title: "Protect Documents",
+                description:
+                  "Apply watermarking to documents before sharing. Maintain encrypted storage for all files so sensitive deal information is protected both in transit and at rest.",
+              },
+              {
+                step: "03",
+                title: "Monitor & Comply",
+                description:
+                  "Track your security score, review system protection status, and maintain compliance with SOC 2, ISO 27001, GDPR, and HIPAA requirements for regulated industries.",
+              },
+            ].map((step) => (
+              <div key={step.step} className="relative pl-8">
+                <div className="absolute left-0 top-0 w-6 h-6 rounded-full bg-red-600 flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">{step.step.replace("0", "")}</span>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                    {cert.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{cert.description}</p>
-                </div>
+                <p className="text-xs font-semibold text-red-600 uppercase tracking-wider mb-2">
+                  Step {step.step}
+                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Related Guides */}
-      <section className="py-12 bg-[#f8f9fa] border-t border-gray-100">
+      {/* Related Features */}
+      <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Resources</p>
-          <div className="grid md:grid-cols-2 gap-4">
+          <p className="text-xs font-semibold text-red-600 uppercase tracking-wider mb-4">
+            Explore More Features
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
             {[
-              {
-                title: "VDR Security: What to Look For Before You Sign Up",
-                href: "/blog/vdr-security-what-to-look-for",
-                label: "Security",
-              },
-              {
-                title: "What Is a Virtual Data Room? The Complete Guide for 2025",
-                href: "/blog/what-is-a-virtual-data-room",
-                label: "Guide",
-              },
-            ].map((post) => (
+              { title: "Users & Permissions — Access Control", href: "/features/users-permissions" },
+              { title: "Secure Data Room — Document Management", href: "/features/data-room" },
+              { title: "Reports — Audit Trails & Compliance Logs", href: "/features/reports" },
+            ].map((link) => (
               <Link
-                key={post.href}
-                href={post.href}
-                className="group flex flex-col p-5 bg-white border border-gray-200 rounded-xl hover:border-[#2563eb]/30 hover:shadow-md transition-all duration-200"
+                key={link.href}
+                href={link.href}
+                className="group flex items-center justify-between p-5 bg-[#f8f9fa] border border-gray-200 rounded-xl hover:border-red-300 hover:shadow-md transition-all duration-200"
               >
-                <span className="text-xs font-semibold text-[#2563eb] mb-2">{post.label}</span>
-                <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">
-                  {post.title} →
+                <p className="text-sm font-medium text-gray-900 group-hover:text-red-600 transition-colors">
+                  {link.title}
                 </p>
+                <svg className="w-4 h-4 text-gray-400 group-hover:text-red-600 transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             ))}
           </div>
@@ -384,31 +319,32 @@ export default function SecurityCompliancePage() {
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Ready for Enterprise Security?
-          </h2>
-          <p className="text-gray-600 mb-8">
-            See how Space Nexus protects your most sensitive transactions.
-          </p>
-          <Link
-            href="/demo"
-            className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
-          >
-            Request a Demo
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-3xl p-8 lg:p-12 border border-red-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              See Enterprise Security in Action
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              Schedule a personalized demo and see how Space Nexus protects your deal data
+              with MFA, encryption, watermarking, and full regulatory compliance.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/demo"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+              >
+                Request a Demo
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/features"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                View All Features
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -161,26 +161,25 @@ const features = [
   },
 ];
 
-// Gallery captions — update filenames to match uploaded screenshots
 const galleryScreenshots = [
   {
-    src: "/spacenexus/screenshots/vdr-analytics-2.png",
-    caption: "Document Popularity & Views",
+    src: "/spacenexus/screenshots/anlytics-douementviews.jpeg",
+    caption: "Document Views",
   },
   {
-    src: "/spacenexus/screenshots/vdr-analytics-3.png",
+    src: "/spacenexus/screenshots/anelectics-useractiviy.jpeg",
     caption: "User Activity Log",
   },
   {
-    src: "/spacenexus/screenshots/vdr-analytics-4.png",
-    caption: "Buyer Engagement Comparison",
+    src: "/spacenexus/screenshots/anlytics-buyerinsights.jpeg",
+    caption: "Buyer Insights",
   },
   {
-    src: "/spacenexus/screenshots/vdr-analytics-5.png",
+    src: "/spacenexus/screenshots/anlytics-enagementheatmap.jpeg",
     caption: "Engagement Heatmap",
   },
   {
-    src: "/spacenexus/screenshots/vdr-analytics-6.png",
+    src: "/spacenexus/screenshots/anlytics-export.jpeg",
     caption: "Export & Reports",
   },
 ];
@@ -323,7 +322,7 @@ export default function ActivityAnalyticsPage() {
               </div>
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
-                  src="/spacenexus/screenshots/vdr-analytics.png"
+                  src="/spacenexus/screenshots/aneletics-overview.jpeg"
                   alt="Space Nexus VDR Activity & Analytics — engagement overview dashboard"
                   className="w-full h-auto"
                   loading="eager"
