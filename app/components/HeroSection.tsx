@@ -64,7 +64,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="/features"
-                className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-200"
+                className="inline-flex mr3 items-center px-6 py-3.5 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-200"
               >
                 Explore Features
               </Link>

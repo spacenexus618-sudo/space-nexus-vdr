@@ -151,7 +151,7 @@ export default function ProductEcosystem() {
         <div className="mt-12 lg:mt-16 text-center">
           <a
             href="/features"
-            className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+            className="inline-flex  mr-3 items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
           >
             Explore All Features
             <svg

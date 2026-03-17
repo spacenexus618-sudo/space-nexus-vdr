@@ -2,19 +2,75 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Activity & Analytics - Buyer Intelligence | Space Nexus",
+  title:
+    "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
   description:
-    "Get buyer intelligence with document engagement tracking, user activity monitoring, buyer comparison insights, and engagement heatmaps.",
+    "Monitor user activity, track document engagement, analyze buyer participation, and export analytics reports with Space Nexus Activity & Analytics. Visualize deal momentum with engagement heatmaps.",
   alternates: {
-    canonical: "/features/activity-analytics",
+    canonical: "https://spacenexus.net/features/activity-analytics",
+  },
+  openGraph: {
+    title:
+      "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
+    description:
+      "Track views, downloads, unique viewers, and time spent. Analyze document popularity, monitor buyer engagement, and export analytics reports — all from one interface.",
+    url: "https://spacenexus.net/features/activity-analytics",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
+    description:
+      "Real-time activity tracking, engagement heatmaps, buyer monitoring, and exportable analytics reports for M&A deal teams.",
   },
 };
 
 const features = [
   {
-    title: "Document Views & Engagement",
+    title: "Overall Metrics Overview",
     description:
-      "Track which documents are viewed, how long they're read, and which pages get the most attention from buyers.",
+      "View top-level engagement metrics at a glance — total views, downloads, unique viewers, and time spent. Understand deal momentum with numbers that actually matter.",
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Document Popularity & Engagement",
+    description:
+      "Analyze which documents are most viewed, most downloaded, and most time-consuming. Identify which materials are driving buyer interest and which need more attention.",
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "User Activity Tracking",
+    description:
+      "Track individual user actions — uploads, downloads, and document views — with timestamps. Know exactly who did what and when across your entire data room.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -38,9 +94,9 @@ const features = [
     ),
   },
   {
-    title: "User Activity Tracking",
+    title: "Buyer Engagement Monitoring",
     description:
-      "Monitor login times, session durations, and navigation patterns. Understand how buyers interact with your data room.",
+      "Monitor buyer participation levels across the deal. Compare engagement between bidder groups to identify the most serious parties and prioritize your dealmaking efforts.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -52,27 +108,7 @@ const features = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Buyer Comparison",
-    description:
-      "Compare engagement levels across different buyers. Identify the most serious bidders based on their activity patterns.",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
         />
       </svg>
     ),
@@ -80,7 +116,7 @@ const features = [
   {
     title: "Engagement Heatmaps",
     description:
-      "Visualize document engagement with intuitive heatmaps. See at a glance which sections attract the most interest.",
+      "Visualize activity patterns with engagement heatmaps. See when users are most active, which time periods drive the most document access, and where deal momentum is building.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -104,29 +140,9 @@ const features = [
     ),
   },
   {
-    title: "Real-Time Alerts",
+    title: "Export Analytics Reports",
     description:
-      "Get notified instantly when key buyers access critical documents. Stay informed about important activity as it happens.",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Export & Reporting",
-    description:
-      "Generate detailed analytics reports for stakeholders. Export data in multiple formats for presentations and analysis.",
+      "Export analytics and activity reports for presentations, investor updates, or compliance reviews. Download data in structured formats for deeper analysis outside the platform.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -145,17 +161,73 @@ const features = [
   },
 ];
 
+// Gallery captions — update filenames to match uploaded screenshots
+const galleryScreenshots = [
+  {
+    src: "/spacenexus/screenshots/vdr-analytics-2.png",
+    caption: "Document Popularity & Views",
+  },
+  {
+    src: "/spacenexus/screenshots/vdr-analytics-3.png",
+    caption: "User Activity Log",
+  },
+  {
+    src: "/spacenexus/screenshots/vdr-analytics-4.png",
+    caption: "Buyer Engagement Comparison",
+  },
+  {
+    src: "/spacenexus/screenshots/vdr-analytics-5.png",
+    caption: "Engagement Heatmap",
+  },
+  {
+    src: "/spacenexus/screenshots/vdr-analytics-6.png",
+    caption: "Export & Reports",
+  },
+];
+
 export default function ActivityAnalyticsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://spacenexus.net",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Features",
+                item: "https://spacenexus.net/features",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Activity & Analytics",
+                item: "https://spacenexus.net/features/activity-analytics",
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
             <div>
               <Link
                 href="/features"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -179,10 +251,44 @@ export default function ActivityAnalyticsPage() {
                 Activity & Analytics
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Helps sellers and advisors identify serious bidders and monitor
-                deal momentum. Understand buyer behavior with detailed
-                engagement analytics and real-time insights.
+                The Activity & Analytics section provides insights into user
+                interactions and document engagement within the Space Nexus
+                platform. It helps deal teams monitor activity, track document
+                views and downloads, analyze buyer engagement, and generate
+                reports to better understand the progress of transactions.
               </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "View overall metrics: views, downloads, unique viewers, and time spent",
+                  "Analyze document popularity and engagement levels",
+                  "Track user activity including uploads, downloads, and views",
+                  "Monitor buyer engagement and participation",
+                  "Visualize activity patterns through engagement heatmaps",
+                  "Export analytics and activity reports for further analysis",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-gray-700"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-cyan-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg
+                        className="w-3 h-3 text-cyan-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <Link
                 href="/demo"
                 className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
@@ -203,42 +309,25 @@ export default function ActivityAnalyticsPage() {
                 </svg>
               </Link>
             </div>
+
+            {/* Right: Hero Screenshot */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl" />
-              <div className="relative bg-white rounded-2xl border border-gray-200 shadow-xl p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="font-semibold text-gray-900">
-                    Engagement Overview
-                  </h3>
-                  <span className="text-sm text-gray-500">Last 7 days</span>
+              <div className="absolute -inset-4 bg-cyan-500/10 blur-2xl rounded-3xl -z-10" />
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.spacenexus.net / analytics
                 </div>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  {[
-                    { label: "Total Views", value: "2,847" },
-                    { label: "Unique Users", value: "34" },
-                    { label: "Avg. Session", value: "18m" },
-                    { label: "Downloads", value: "156" },
-                  ].map((stat, i) => (
-                    <div
-                      key={i}
-                      className="p-4 bg-[#f8f9fa] rounded-xl text-center"
-                    >
-                      <p className="text-2xl font-bold text-cyan-600">
-                        {stat.value}
-                      </p>
-                      <p className="text-sm text-gray-500">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="h-24 bg-gradient-to-r from-cyan-100 via-blue-100 to-cyan-100 rounded-lg flex items-end justify-around p-2">
-                  {[40, 65, 45, 80, 55, 70, 60].map((h, i) => (
-                    <div
-                      key={i}
-                      className="w-6 bg-cyan-500 rounded-t"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
-                </div>
+              </div>
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/spacenexus/screenshots/vdr-analytics.png"
+                  alt="Space Nexus VDR Activity & Analytics — engagement overview dashboard"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
@@ -250,10 +339,11 @@ export default function ActivityAnalyticsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Comprehensive Analytics
+              Every Insight You Need to Move Deals Forward
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Every metric you need to understand buyer interest.
+              From top-level metrics to individual user actions — get complete
+              visibility into how buyers engage with your data room.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -277,34 +367,127 @@ export default function ActivityAnalyticsPage() {
         </div>
       </section>
 
+      {/* Screenshot Gallery */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              See Analytics in Detail
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Every view of your deal&apos;s activity — from document-level
+              engagement to buyer-by-buyer participation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryScreenshots.map((shot, index) => (
+              <div key={index} className="group">
+                <div className="bg-gray-800 rounded-t-lg px-3 py-2 flex items-center gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                </div>
+                <div className="border border-gray-200 border-t-0 rounded-b-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src={shot.src}
+                    alt={`Space Nexus Analytics — ${shot.caption}`}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-sm text-gray-500 text-center mt-3">
+                  {shot.caption}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Features */}
+      <section className="py-12 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wider mb-4">
+            Explore More Features
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                title: "Dashboard — Deal Command Center",
+                href: "/features/dashboard",
+              },
+              {
+                title: "Reports — Audit & Compliance",
+                href: "/features/reports",
+              },
+              { title: "Q&A Management — Due Diligence", href: "/features/qa" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-center justify-between p-5 bg-white border border-gray-200 rounded-xl hover:border-cyan-300 hover:shadow-md transition-all duration-200"
+              >
+                <p className="text-sm font-medium text-gray-900 group-hover:text-cyan-700 transition-colors">
+                  {link.title}
+                </p>
+                <svg
+                  className="w-4 h-4 text-gray-400 group-hover:text-cyan-600 transition-colors shrink-0 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Ready for Buyer Intelligence?
-          </h2>
-          <p className="text-gray-600 mb-8">
-            See how Space Nexus analytics can help you identify serious bidders.
-          </p>
-          <Link
-            href="/demo"
-            className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
-          >
-            Request a Demo
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl p-8 lg:p-12 border border-cyan-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              See Who&apos;s Serious About Your Deal
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              Book a demo and see how Space Nexus analytics helps you identify
+              your most engaged buyers and track deal momentum in real time.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/demo"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+              >
+                Request a Demo
+                <svg
+                  className="ml-2 w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="/features"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                View All Features
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

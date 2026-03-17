@@ -2,19 +2,35 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reports - Audit & Compliance Reporting | Space Nexus",
+  title:
+    "Reports — Audit Trails, Access Logs & Compliance Reporting | Space Nexus VDR",
   description:
-    "Generate comprehensive audit and compliance reports with access logs, document activity tracking, Q&A exports, and regulator-ready audit trails.",
+    "Generate and manage detailed reports in Space Nexus VDR — Access Logs, Document Activity, Q&A Export, Audit Trails, and Engagement Reports. Maintain transparency and support compliance requirements.",
   alternates: {
-    canonical: "/features/reports",
+    canonical: "https://spacenexus.net/features/reports",
+  },
+  openGraph: {
+    title:
+      "Reports — Audit Trails, Access Logs & Compliance Reporting | Space Nexus VDR",
+    description:
+      "Generate Access Logs, Document Activity, Q&A Export, Audit Trails, and Engagement Reports. Download and export for compliance, documentation, and stakeholder reporting.",
+    url: "https://spacenexus.net/features/reports",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Reports — Audit Trails, Access Logs & Compliance Reporting | Space Nexus VDR",
+    description:
+      "Audit-ready reporting for M&A transactions — access logs, document activity, Q&A exports, and engagement reports all in one place.",
   },
 };
 
 const features = [
   {
-    title: "Access Logs",
+    title: "Multiple Report Types",
     description:
-      "Complete record of who accessed what, when, and from where. Every login, view, and download is logged for accountability.",
+      "Generate the reports that matter — Access Logs, Document Activity, Q&A Export, Audit Trails, and Engagement Reports. Cover every aspect of your transaction from a single reporting interface.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -26,15 +42,15 @@ const features = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
         />
       </svg>
     ),
   },
   {
-    title: "Document Activity Reports",
+    title: "Document Tracking",
     description:
-      "Track document lifecycle from upload to final access. See version history, viewer lists, and engagement metrics.",
+      "Track document views, downloads, and user interactions with full timestamps. Know exactly which documents were accessed, by whom, and how many times throughout the deal lifecycle.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -52,29 +68,9 @@ const features = [
     ),
   },
   {
-    title: "Q&A Exports",
+    title: "Compliance & Audit-Ready Logs",
     description:
-      "Export complete Q&A threads with timestamps, participants, and attachments. Generate organized reports for review.",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Audit Trails",
-    description:
-      "Immutable records of all actions taken in the data room. Regulator-ready documentation for compliance requirements.",
+      "Maintain immutable audit logs for compliance and security monitoring. Every user action is captured, timestamped, and preserved — ready for regulators, auditors, or legal review.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -92,9 +88,9 @@ const features = [
     ),
   },
   {
-    title: "Scheduled Reports",
+    title: "Report Management",
     description:
-      "Automate report generation on daily, weekly, or monthly schedules. Receive reports directly in your inbox.",
+      "View and manage all previously generated reports in one place. Organize reports by type, date, or deal — and re-generate or update them as your transaction progresses.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -106,15 +102,15 @@ const features = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
         />
       </svg>
     ),
   },
   {
-    title: "Custom Report Builder",
+    title: "Download & Export",
     description:
-      "Create custom reports with the metrics that matter to you. Filter, group, and visualize data your way.",
+      "Download or export reports for analysis, documentation, and record keeping. Share with stakeholders, upload to external systems, or store for post-deal compliance archives.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -126,13 +122,33 @@ const features = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Transaction Transparency",
+    description:
+      "Support transparency across all deal parties with shareable, verifiable reports. Demonstrate platform integrity and maintain trust with buyers, sellers, advisors, and legal teams.",
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
         />
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
         />
       </svg>
     ),
@@ -142,14 +158,46 @@ const features = [
 export default function ReportsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://spacenexus.net",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Features",
+                item: "https://spacenexus.net/features",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Reports",
+                item: "https://spacenexus.net/features/reports",
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
             <div>
               <Link
                 href="/features"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -173,10 +221,42 @@ export default function ReportsPage() {
                 Reports
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Supports legal, regulatory, and internal review requirements.
-                Generate comprehensive reports with complete audit trails and
-                compliance documentation.
+                The Reports section allows users to generate and manage detailed
+                reports related to platform activity, document usage, and
+                transaction engagement. It helps teams maintain transparency,
+                track system activity, and support compliance requirements.
               </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Generate Access Logs, Document Activity, Q&A Export, Audit Trails, and Engagement Reports",
+                  "Track document views, downloads, and user interactions",
+                  "Maintain audit-ready logs for compliance and security monitoring",
+                  "View and manage all previously generated reports",
+                  "Download or export reports for analysis, documentation, and record keeping",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm text-gray-700"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg
+                        className="w-3 h-3 text-rose-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <Link
                 href="/demo"
                 className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
@@ -197,68 +277,25 @@ export default function ReportsPage() {
                 </svg>
               </Link>
             </div>
+
+            {/* Right: Screenshot */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl" />
-              <div className="relative bg-white rounded-2xl border border-gray-200 shadow-xl p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="font-semibold text-gray-900">
-                    Recent Reports
-                  </h3>
-                  <button className="text-sm text-[#2563eb] font-medium">
-                    Generate New
-                  </button>
+              <div className="absolute -inset-4 bg-rose-500/10 blur-2xl rounded-3xl -z-10" />
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.spacenexus.net / reports
                 </div>
-                <div className="space-y-3">
-                  {[
-                    {
-                      name: "Access Log - January 2026",
-                      date: "Feb 1, 2026",
-                      type: "PDF",
-                    },
-                    {
-                      name: "Q&A Summary Report",
-                      date: "Jan 28, 2026",
-                      type: "Excel",
-                    },
-                    {
-                      name: "Audit Trail - Project Alpha",
-                      date: "Jan 25, 2026",
-                      type: "PDF",
-                    },
-                  ].map((report, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between p-4 bg-[#f8f9fa] rounded-xl"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-600">
-                          <svg
-                            className="w-5 h-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          <p className="font-medium text-gray-900 text-sm">
-                            {report.name}
-                          </p>
-                          <p className="text-xs text-gray-500">{report.date}</p>
-                        </div>
-                      </div>
-                      <span className="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-medium rounded-full">
-                        {report.type}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              </div>
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/spacenexus/screenshots/vdr-rports.png"
+                  alt="Space Nexus VDR Reports — compliance and audit reporting interface"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
@@ -270,10 +307,12 @@ export default function ReportsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Comprehensive Reporting
+              Full Reporting Coverage for Every Deal
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Every report you need for compliance and governance.
+              From access logs to engagement summaries — generate, manage, and
+              export every report your team needs for compliance, governance,
+              and stakeholder communication.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -297,34 +336,143 @@ export default function ReportsPage() {
         </div>
       </section>
 
+      {/* Report Types Highlight */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Every Report Type You Need
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Built for M&A teams that need reliable, audit-ready documentation
+              at every stage of the transaction.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              {
+                label: "Access Logs",
+                description: "Who accessed what and when",
+                color: "bg-rose-50 border-rose-100 text-rose-700",
+              },
+              {
+                label: "Document Activity",
+                description: "Views, downloads, and versions",
+                color: "bg-orange-50 border-orange-100 text-orange-700",
+              },
+              {
+                label: "Q&A Export",
+                description: "Full diligence thread export",
+                color: "bg-amber-50 border-amber-100 text-amber-700",
+              },
+              {
+                label: "Audit Trails",
+                description: "Immutable action records",
+                color: "bg-green-50 border-green-100 text-green-700",
+              },
+              {
+                label: "Engagement Reports",
+                description: "Buyer participation analysis",
+                color: "bg-blue-50 border-blue-100 text-blue-700",
+              },
+            ].map((type) => (
+              <div
+                key={type.label}
+                className={`p-5 rounded-xl border ${type.color} text-center`}
+              >
+                <p className="font-semibold text-sm mb-1">{type.label}</p>
+                <p className="text-xs opacity-80">{type.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Features */}
+      <section className="py-12 bg-[#f8f9fa] border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold text-rose-600 uppercase tracking-wider mb-4">
+            Explore More Features
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                title: "Activity & Analytics — Buyer Intelligence",
+                href: "/features/activity-analytics",
+              },
+              { title: "Q&A Management — Due Diligence", href: "/features/qa" },
+              {
+                title: "Security & Compliance — Data Protection",
+                href: "/features/security-compliance",
+              },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-center justify-between p-5 bg-white border border-gray-200 rounded-xl hover:border-rose-200 hover:shadow-md transition-all duration-200"
+              >
+                <p className="text-sm font-medium text-gray-900 group-hover:text-rose-700 transition-colors">
+                  {link.title}
+                </p>
+                <svg
+                  className="w-4 h-4 text-gray-400 group-hover:text-rose-600 transition-colors shrink-0 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Ready for Compliance Reporting?
-          </h2>
-          <p className="text-gray-600 mb-8">
-            See how Space Nexus reports can support your audit requirements.
-          </p>
-          <Link
-            href="/demo"
-            className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
-          >
-            Request a Demo
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 lg:p-12 border border-rose-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Always Audit-Ready
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              Book a demo and see how Space Nexus keeps every transaction
+              documented, every action logged, and every report ready when you
+              need it.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/demo"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+              >
+                Request a Demo
+                <svg
+                  className="ml-2 w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="/features"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                View All Features
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
