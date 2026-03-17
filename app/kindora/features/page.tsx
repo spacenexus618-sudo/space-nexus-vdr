@@ -19,42 +19,21 @@ const featureCategories = [
         name: "Dashboard & Analytics",
         href: "/kindora/features/dashboard-analytics",
         description:
-          "Real-time KPIs, donation trends, campaign progress, and activity feeds in one interactive dashboard.",
+          "Centralized overview of donations, net income, campaigns, donor distribution, and activity — all in one powerful view.",
         icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
       },
       {
-        name: "Donor Management",
-        href: "/kindora/features/donor-management",
+        name: "Financials",
+        href: "/kindora/features/financials",
         description:
-          "Complete donor profiles, donation history, communication tracking, and detailed analytics per donor.",
-        icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+          "Manage donors, donations, campaigns, grants, vendors, expenses, and financial reports — all in one unified financial platform.",
+        icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
       },
       {
-        name: "Campaign Management",
-        href: "/kindora/features/campaign-management",
-        description:
-          "Create fundraising, event, awareness, and advocacy campaigns with goal tracking and performance analytics.",
-        icon: "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z",
-      },
-      {
-        name: "Grant Management",
-        href: "/kindora/features/grant-management",
-        description:
-          "Track grants from prospect to close, manage receipts, and maintain grantor relationships.",
-        icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
-      },
-      {
-        name: "Expense Management",
-        href: "/kindora/features/expense-management",
-        description:
-          "Track expenses, manage vendors and bills, allocate costs across grants and programs.",
-        icon: "M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z",
-      },
-      {
-        name: "Financial Management",
+        name: "Finance",
         href: "/kindora/features/financial-management",
         description:
-          "Chart of accounts with nonprofit standards, budget planning, and actual vs budgeted tracking.",
+          "Manage a structured chart of accounts, create budgets for programs and operations, and track financial allocations.",
         icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
       },
     ],
@@ -64,17 +43,17 @@ const featureCategories = [
     color: "violet",
     features: [
       {
-        name: "Client Management",
+        name: "Programs",
         href: "/kindora/features/client-management",
         description:
-          "Comprehensive client intake, demographics tracking, service enrollment, and case management.",
+          "Manage client services, track enrollments, monitor program performance, and measure community impact.",
         icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
       },
       {
-        name: "People Management",
+        name: "People",
         href: "/kindora/features/people-management",
         description:
-          "Employee directory, volunteer management, skills tracking, and hours logging.",
+          "Manage employees, volunteers, and communications — with staff records, participation tracking, and interaction logs.",
         icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
       },
     ],
@@ -97,10 +76,10 @@ const featureCategories = [
     color: "amber",
     features: [
       {
-        name: "Reports & Analytics",
+        name: "Reports",
         href: "/kindora/features/reporting",
         description:
-          "Comprehensive reports with Excel, PDF, and JSON exports. Statement of Activities generation.",
+          "View key metrics, analyze income vs expenses, track donation trends, monitor program outcomes, and export financial data.",
         icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
       },
     ],
@@ -110,10 +89,10 @@ const featureCategories = [
     color: "rose",
     features: [
       {
-        name: "User Management & Security",
+        name: "Users",
         href: "/kindora/features/user-management",
         description:
-          "Role-based access control with Admin, Manager, Staff, and Viewer roles. Session management and 2FA ready.",
+          "Create user accounts, assign role-based access levels — Admin, Manager, Staff, Viewer — and control module permissions.",
         icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
       },
       {

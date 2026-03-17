@@ -2,106 +2,67 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Financial Reporting Software — Kindora",
+  title: "Finance — Chart of Accounts & Budget Management | Kindora",
   description:
-    "Unified view of donations, grants, expenses, and net income with comprehensive financial reporting for nonprofit organizations.",
+    "Kindora Finance helps nonprofits manage their financial structure and budgeting processes. Organize a structured chart of accounts, track financial categories, and create budgets for programs and operations.",
   alternates: {
     canonical: "/kindora/features/financial-management",
   },
   openGraph: {
-    title: "Nonprofit Financial Reporting Software — Kindora",
+    title: "Finance — Chart of Accounts & Budget Management | Kindora",
     description:
-      "Kindora's nonprofit financial reporting software delivers unified donation, grant, and expense tracking with audit-ready reports for NGOs.",
+      "Manage a structured chart of accounts, create and monitor budgets, and track financial allocations — all built for nonprofit financial planning and accountability.",
     url: "https://spacenexus.net/kindora/features/financial-management",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Financial Reporting Software — Kindora",
+    title: "Finance — Chart of Accounts & Budget Management | Kindora",
     description:
-      "Unified nonprofit financial reporting: track donations, grants, and expenses in one dashboard. Audit-ready reports for NGOs.",
+      "Chart of accounts, budget tracking, and financial structure management built for nonprofits.",
   },
 };
 
-const financialModules = [
-  {
-    name: "Donations",
-    description:
-      "Track all incoming donations from individuals, corporations, and foundations",
-    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-    color: "emerald",
-  },
-  {
-    name: "Grants",
-    description: "Manage grant awards, receipts, and fund utilization",
-    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
-    color: "blue",
-  },
-  {
-    name: "Expenses",
-    description: "Record and categorize all organizational spending",
-    icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
-    color: "rose",
-  },
-  {
-    name: "Net Income",
-    description: "Real-time calculation of total income minus expenses",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    color: "violet",
-  },
-];
-
 const features = [
   {
-    title: "Unified Financial Dashboard",
+    title: "Chart of Accounts",
     description:
-      "See donations, grants, and expenses in one consolidated view. Understand your organization's financial health at a glance.",
-    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z",
+      "Manage a structured chart of accounts including assets, liabilities, revenue, and expenses. Organize financial categories using nonprofit accounting standards for accurate record-keeping.",
+    icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
   },
   {
-    title: "Real-Time Net Income",
+    title: "Financial Category Organization",
     description:
-      "Automatic calculation of total donations plus grants minus expenses. Always know your current financial position.",
+      "Organize financial categories to maintain accurate accounting records across all activities. Group accounts logically to support clean financial reporting and audit-ready records.",
+    icon: "M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z",
+  },
+  {
+    title: "Budget Creation & Management",
+    description:
+      "Create and manage budgets for organizational operations and programs. Define budget amounts for each account category and manage financial allocations across different activities.",
     icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
-    title: "Income by Source Analysis",
+    title: "Budget vs Actual Tracking",
     description:
-      "Break down revenue by donor type, grant source, and campaign. Understand your funding mix and diversify strategically.",
-    icon: "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z",
+      "Track total budgeted amounts, actual spending, and remaining funds. Compare planned vs actual finances to stay on track and make informed adjustments during the fiscal year.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
   },
   {
-    title: "Expense Tracking Integration",
+    title: "Active Budget Monitoring",
     description:
-      "All expenses flow into financial reporting automatically. No double entry or manual reconciliation required.",
-    icon: "M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z",
+      "Monitor active budgets and financial allocations across different activities in real time. Identify budget overruns early and reallocate resources before they impact program delivery.",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
-    title: "Monthly Trend Analysis",
+    title: "Financial Planning & Reporting",
     description:
-      "View income and expenses over time to identify patterns, seasonality, and growth opportunities.",
-    icon: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z",
-  },
-  {
-    title: "Board-Ready Reports",
-    description:
-      "Generate professional financial summaries for board meetings, audits, and stakeholder communications.",
+      "Maintain a centralized system for financial planning and reporting. Generate budget reports that provide visibility into organizational financial health and support board accountability.",
     icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
   },
 ];
 
-const reports = [
-  "Income statement summary",
-  "Cash flow analysis",
-  "Revenue by source breakdown",
-  "Expense by category breakdown",
-  "Monthly financial trends",
-  "Year-over-year comparison",
-  "Fund balance tracking",
-  "Program-specific financials",
-];
-
-export default function FinancialManagementPage() {
+export default function FinancePage() {
   return (
     <main className="pt-20 lg:pt-24">
       <script
@@ -114,223 +75,94 @@ export default function FinancialManagementPage() {
               { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
               { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
               { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
-              { "@type": "ListItem", position: 4, name: "Nonprofit Financial Reporting", item: "https://spacenexus.net/kindora/features/financial-management" },
+              { "@type": "ListItem", position: 4, name: "Finance", item: "https://spacenexus.net/kindora/features/financial-management" },
             ],
           }),
         }}
       />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <Link
-              href="/kindora/features"
-              className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
-            >
-              <svg
-                className="w-4 h-4 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              Back to Features
-            </Link>
-
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-medium mb-4">
-              Financial Management
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Financial Management
-            </h1>
-
-            <p className="text-xl text-gray-600 mb-8">
-              See the complete financial picture of your organization. Integrate
-              donations, grants, and expenses into unified reporting for
-              informed decision-making.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/kindora/contact"
-                className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25"
-              >
-                Request a Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Financial Modules */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Integrated Financial Data
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              All financial data flows together for a complete picture of
-              organizational finances.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {financialModules.map((module) => (
-              <div
-                key={module.name}
-                className={`bg-white rounded-xl border-2 p-6 transition-all duration-300 ${
-                  module.color === "emerald"
-                    ? "border-emerald-200 hover:border-emerald-400"
-                    : module.color === "blue"
-                      ? "border-blue-200 hover:border-blue-400"
-                      : module.color === "rose"
-                        ? "border-rose-200 hover:border-rose-400"
-                        : "border-violet-200 hover:border-violet-400"
-                }`}
-              >
-                <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    module.color === "emerald"
-                      ? "bg-emerald-100 text-emerald-600"
-                      : module.color === "blue"
-                        ? "bg-blue-100 text-blue-600"
-                        : module.color === "rose"
-                          ? "bg-rose-100 text-rose-600"
-                          : "bg-violet-100 text-violet-600"
-                  }`}
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={module.icon}
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {module.name}
-                </h3>
-                <p className="text-sm text-gray-600">{module.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Financial Overview Visualization */}
-      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Complete Financial Visibility
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Your dashboard shows all key financial metrics in one place.
-                Track income, expenses, and net position in real-time.
+              <Link
+                href="/kindora/features"
+                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Features
+              </Link>
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-medium mb-4">
+                Financial Management
+              </div>
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                Finance
+              </h1>
+              <p className="text-sm font-medium text-emerald-600 mb-4 italic">
+                Organize financial structure and plan budgets effectively.
               </p>
-              <ul className="space-y-4">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                The Finance module helps organizations manage their financial structure and budgeting
+                processes. It provides tools to organize accounts, track financial categories, and
+                create budgets for programs and operations — ensuring better financial planning,
+                transparency, and accountability.
+              </p>
+              <ul className="space-y-3 mb-8">
                 {[
-                  {
-                    metric: "Total Donations",
-                    desc: "All individual and corporate giving",
-                  },
-                  { metric: "Awarded Grants", desc: "Grant funding secured" },
-                  { metric: "Total Expenses", desc: "Organizational spending" },
-                  { metric: "Net Income", desc: "Income minus expenses" },
+                  "Manage a structured chart of accounts including assets, liabilities, revenue, and expenses",
+                  "Organize financial categories to maintain accurate accounting records",
+                  "Create and manage budgets for organizational operations and programs",
+                  "Track total budgeted amounts, spending, and remaining funds",
+                  "Monitor active budgets and financial allocations across different activities",
+                  "Maintain a centralized system for financial planning and reporting",
                 ].map((item) => (
-                  <li key={item.metric} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#2563eb]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg
-                        className="w-3 h-3 text-[#2563eb]"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-900">
-                        {item.metric}
-                      </span>
-                      <span className="text-gray-600"> – {item.desc}</span>
-                    </div>
+                    </span>
+                    {item}
                   </li>
                 ))}
               </ul>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/kindora/contact"
+                  className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
+                >
+                  Request a Demo
+                </Link>
+                <Link
+                  href="/kindora/pricing"
+                  className="inline-flex items-center px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-200 rounded-full hover:border-gray-300 transition-colors"
+                >
+                  View Pricing
+                </Link>
+              </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6">
-                Financial Overview
-              </h3>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {[
-                  {
-                    label: "Income",
-                    trend: "up",
-                    color: "text-emerald-600 bg-emerald-50",
-                  },
-                  {
-                    label: "Expenses",
-                    trend: "down",
-                    color: "text-rose-600 bg-rose-50",
-                  },
-                  {
-                    label: "Net",
-                    trend: "up",
-                    color: "text-blue-600 bg-blue-50",
-                  },
-                  {
-                    label: "Balance",
-                    trend: "neutral",
-                    color: "text-violet-600 bg-violet-50",
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className={`rounded-xl p-4 ${item.color}`}
-                  >
-                    <p className="text-xs font-medium opacity-75 mb-1">
-                      {item.label}
-                    </p>
-                    <div className="h-6 w-20 bg-current opacity-10 rounded" />
-                  </div>
-                ))}
+            {/* Hero Screenshot */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-emerald-500/10 blur-2xl rounded-3xl -z-10" />
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.kindora.com / finance
+                </div>
               </div>
-              <div className="h-32 bg-gray-50 rounded-xl flex items-end justify-between p-4 gap-2">
-                {[35, 45, 30, 55, 48, 60, 52, 65, 58, 70, 62, 75].map(
-                  (h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 flex flex-col gap-1"
-                      style={{ height: `${h}%` }}
-                    >
-                      <div className="flex-1 bg-emerald-400 rounded-t opacity-80" />
-                      <div className="h-1/3 bg-rose-400 rounded-b opacity-80" />
-                    </div>
-                  ),
-                )}
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/kindora/screenshots/Finance/Finance%20(1).png"
+                  alt="Kindora Finance — chart of accounts and budget management"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
@@ -338,123 +170,95 @@ export default function FinancialManagementPage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Financial Capabilities
+              Structure Your Finances for Growth & Accountability
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Everything you need for comprehensive nonprofit financial
-              management.
+              Kindora Finance gives your organization a solid financial foundation — from a
+              structured chart of accounts to budgets that track every dollar allocated.
             </p>
           </div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-emerald-200 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#2563eb]/10 flex items-center justify-center text-[#2563eb] mb-4">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={feature.icon}
-                    />
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Reports Section */}
-      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Financial Reports
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Generate the reports you need for boards, audits, and strategic
-              planning.
+      {/* 2nd Screenshot */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Budget Planning & Tracking</h2>
+            <p className="text-gray-600 max-w-xl mx-auto text-sm">
+              Create and monitor budgets across programs and operations — with clear visibility into spending and remaining funds.
             </p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {reports.map((report) => (
-              <div
-                key={report}
-                className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200"
-              >
-                <div className="w-8 h-8 rounded-lg bg-[#2563eb]/10 flex items-center justify-center text-[#2563eb] flex-shrink-0">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium text-gray-700">
-                  {report}
-                </span>
+          <div className="relative">
+            <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-400" />
+              <div className="w-3 h-3 rounded-full bg-yellow-400" />
+              <div className="w-3 h-3 rounded-full bg-green-400" />
+              <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                app.kindora.com / finance / budgets
               </div>
-            ))}
+            </div>
+            <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10">
+              <img
+                src="/kindora/screenshots/Finance/Finance%20(2).png"
+                alt="Kindora Finance — budget planning and tracking"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready for complete financial visibility?
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            See how Kindora&apos;s integrated financial tools can help you
-            manage your organization&apos;s finances with confidence.
-          </p>
-          <Link
-            href="/kindora/contact"
-            className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25"
-          >
-            Request a Demo
-            <svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 lg:p-12 border border-emerald-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Build a Stronger Financial Foundation
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              See how Kindora Finance helps your organization structure accounts, plan budgets,
+              and maintain financial transparency for better decision-making.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/kindora/contact"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300"
+              >
+                Request a Demo
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/kindora/features"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                View All Features
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

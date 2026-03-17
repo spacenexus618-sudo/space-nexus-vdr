@@ -2,83 +2,85 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "User Management - Team Access & Permissions Control",
+  title: "Users — Access Control & System User Management | Kindora",
   description:
-    "Manage system users, assign roles, control permissions, and maintain secure access to your nonprofit's data with Kindora's user management.",
+    "Kindora Users allows organizations to manage system users and define access levels within the platform. Assign roles, control permissions, and ensure team members have appropriate access to different modules.",
   alternates: {
     canonical: "/kindora/features/user-management",
   },
+  openGraph: {
+    title: "Users — Access Control & System User Management | Kindora",
+    description:
+      "Create user accounts, assign role-based access levels, control module permissions, and manage active or inactive users — all from a centralized interface.",
+    url: "https://spacenexus.net/kindora/features/user-management",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Users — Access Control & System User Management | Kindora",
+    description:
+      "Role-based access control, user management, and secure module permissions for nonprofit platforms.",
+  },
 };
-
-const roles = [
-  {
-    name: "Admin",
-    description: "Full system access and configuration",
-    permissions: "All permissions",
-    color: "violet",
-  },
-  {
-    name: "Manager",
-    description: "Team oversight and reporting",
-    permissions: "Read, write, limited admin",
-    color: "blue",
-  },
-  {
-    name: "Staff",
-    description: "Day-to-day operations",
-    permissions: "Read, write assigned areas",
-    color: "emerald",
-  },
-  {
-    name: "Viewer",
-    description: "Read-only access",
-    permissions: "Read only",
-    color: "gray",
-  },
-];
 
 const features = [
   {
-    title: "User Directory",
+    title: "User Account Management",
     description:
-      "Maintain a complete list of all system users with contact information, roles, and access status in one central location.",
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+      "Create and manage user accounts for all team members on the platform. Add new users, update account details, and maintain a complete registry of everyone with access to your system.",
+    icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
   },
   {
-    title: "Role-Based Access",
+    title: "Role-Based Access Levels",
     description:
-      "Assign roles to control what each user can see and do. Ensure sensitive data is only accessible to authorized personnel.",
+      "Assign role-based access levels such as Admin, Manager, Staff, and Viewer. Each role comes with predefined permission sets that match the responsibilities of different team members.",
     icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
   {
-    title: "Access Activation",
+    title: "Module Permission Control",
     description:
-      "Easily activate or deactivate user accounts. Manage access as team members join, leave, or change roles.",
-    icon: "M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636",
-  },
-  {
-    title: "Activity Logging",
-    description:
-      "Track user actions within the system. Maintain audit trails for compliance and security monitoring.",
-    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
-  },
-  {
-    title: "Secure Authentication",
-    description:
-      "Password-protected access with security best practices. Keep your organization&apos;s data safe from unauthorized access.",
+      "Control permissions for different modules and system features. Ensure team members can only access the areas of the platform relevant to their role — protecting sensitive data.",
     icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
   },
   {
-    title: "User Invitations",
+    title: "User Status Management",
     description:
-      "Invite new team members with email invitations. Set up their access before they even log in for the first time.",
-    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+      "Monitor user status and manage active or inactive accounts. Deactivate accounts when team members leave, and reactivate them when needed — without losing historical records.",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+  },
+  {
+    title: "Centralized Access Management",
+    description:
+      "Maintain a centralized system for secure user access management. View all users, their roles, and access levels at a glance — and make changes from one unified interface.",
+    icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
+  },
+  {
+    title: "Operational Security",
+    description:
+      "Improve organizational security by ensuring team members only access data relevant to their responsibilities. Reduce data exposure risk while maintaining operational efficiency.",
+    icon: "M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
 ];
 
-export default function UserManagementPage() {
+export default function UsersPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+              { "@type": "ListItem", position: 2, name: "Kindora", item: "https://spacenexus.net/kindora" },
+              { "@type": "ListItem", position: 3, name: "Features", item: "https://spacenexus.net/kindora/features" },
+              { "@type": "ListItem", position: 4, name: "Users", item: "https://spacenexus.net/kindora/features/user-management" },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,155 +88,105 @@ export default function UserManagementPage() {
             <div>
               <Link
                 href="/kindora/features"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
+                <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Features
               </Link>
-
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-medium mb-4">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-medium mb-4">
                 Administration
               </div>
-
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                User Management
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                Users
               </h1>
-
-              <p className="text-xl text-gray-600 mb-8">
-                Control who has access to your organization&apos;s data with
-                role-based permissions, user activation controls, and
-                comprehensive access logging.
+              <p className="text-sm font-medium text-rose-600 mb-4 italic">
+                Control access and manage system users securely.
               </p>
-
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                The Users module allows organizations to manage system users and define their access
+                levels within the platform. It helps administrators assign roles, control permissions,
+                and ensure that team members have appropriate access to different modules — improving
+                security and operational efficiency.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Create and manage user accounts for team members",
+                  "Assign role-based access levels such as Admin, Manager, Staff, and Viewer",
+                  "Control permissions for different modules and system features",
+                  "Monitor user status and manage active or inactive accounts",
+                  "Maintain a centralized system for secure user access management",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/kindora/contact"
-                  className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25"
+                  className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40"
                 >
                   Request a Demo
+                </Link>
+                <Link
+                  href="/kindora/pricing"
+                  className="inline-flex items-center px-6 py-3 text-base font-semibold text-gray-700 border-2 border-gray-200 rounded-full hover:border-gray-300 transition-colors"
+                >
+                  View Pricing
                 </Link>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-6">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-semibold text-gray-900">Team Members</h3>
-                <button className="text-sm text-[#2563eb] font-medium">
-                  + Invite User
-                </button>
+            {/* Hero Screenshot */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-rose-500/10 blur-2xl rounded-3xl -z-10" />
+              <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                  app.kindora.com / users
+                </div>
               </div>
-              <div className="space-y-3">
-                {[
-                  { role: "Admin", status: "Active", color: "violet" },
-                  { role: "Manager", status: "Active", color: "blue" },
-                  { role: "Staff", status: "Active", color: "emerald" },
-                  { role: "Viewer", status: "Pending", color: "gray" },
-                ].map((user, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-600 font-medium">
-                      {String.fromCharCode(65 + idx)}
-                    </div>
-                    <div className="flex-1">
-                      <div className="h-4 w-28 bg-gray-200 rounded mb-1" />
-                      <span
-                        className={`text-xs px-2 py-0.5 rounded ${
-                          user.color === "violet"
-                            ? "bg-violet-100 text-violet-700"
-                            : user.color === "blue"
-                              ? "bg-blue-100 text-blue-700"
-                              : user.color === "emerald"
-                                ? "bg-emerald-100 text-emerald-700"
-                                : "bg-gray-100 text-gray-700"
-                        }`}
-                      >
-                        {user.role}
-                      </span>
-                    </div>
-                    <span
-                      className={`text-xs ${user.status === "Active" ? "text-emerald-600" : "text-amber-600"}`}
-                    >
-                      {user.status}
-                    </span>
-                  </div>
-                ))}
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
+                <img
+                  src="/kindora/screenshots/Users/Screenshot%202026-03-17%20123550.png"
+                  alt="Kindora Users — user management and access control interface"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Roles Overview */}
+      {/* Role Levels */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Role-Based Access Control
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Assign roles to team members based on their responsibilities. Each
-              role comes with appropriate permissions.
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Access Role Levels</h2>
+            <p className="text-gray-600 max-w-xl mx-auto text-sm">
+              Assign the right level of access to every team member based on their role and responsibilities.
             </p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {roles.map((role) => (
-              <div
-                key={role.name}
-                className={`bg-white rounded-xl border-2 p-6 ${
-                  role.color === "violet"
-                    ? "border-violet-200"
-                    : role.color === "blue"
-                      ? "border-blue-200"
-                      : role.color === "emerald"
-                        ? "border-emerald-200"
-                        : "border-gray-200"
-                }`}
-              >
-                <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    role.color === "violet"
-                      ? "bg-violet-100 text-violet-600"
-                      : role.color === "blue"
-                        ? "bg-blue-100 text-blue-600"
-                        : role.color === "emerald"
-                          ? "bg-emerald-100 text-emerald-600"
-                          : "bg-gray-100 text-gray-600"
-                  }`}
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-1">
-                  {role.name}
-                </h3>
-                <p className="text-sm text-gray-600 mb-3">{role.description}</p>
-                <p className="text-xs text-gray-500">{role.permissions}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: "Admin", description: "Full platform access and configuration", color: "bg-rose-50 border-rose-100 text-rose-700" },
+              { label: "Manager", description: "Manage team, programs, and reports", color: "bg-orange-50 border-orange-100 text-orange-700" },
+              { label: "Staff", description: "Operational access for daily tasks", color: "bg-blue-50 border-blue-100 text-blue-700" },
+              { label: "Viewer", description: "Read-only access to approved modules", color: "bg-gray-50 border-gray-200 text-gray-700" },
+            ].map((role) => (
+              <div key={role.label} className={`rounded-xl border p-5 text-center ${role.color}`}>
+                <p className="font-bold text-lg mb-1">{role.label}</p>
+                <p className="text-xs opacity-80">{role.description}</p>
               </div>
             ))}
           </div>
@@ -246,137 +198,61 @@ export default function UserManagementPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              User Management Capabilities
+              Secure Access for Every Team Member
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Complete tools for managing team access and maintaining security.
+              Kindora Users gives administrators complete control over who can access what —
+              so your data stays protected and your team stays productive.
             </p>
           </div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-rose-200 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 mb-4">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={feature.icon}
-                    />
+                <div className="w-12 h-12 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 mb-4">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Security Section */}
+      {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 lg:p-12 text-white">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-4">
-                  Built with Security in Mind
-                </h2>
-                <p className="text-gray-300 mb-6">
-                  Your nonprofit&apos;s data is sensitive. Kindora&apos;s user
-                  management ensures only authorized personnel can access what
-                  they need.
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    "Role-based access control",
-                    "User activity logging",
-                    "Secure authentication",
-                    "Easy access revocation",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <svg
-                        className="w-5 h-5 text-emerald-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                        />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-500 flex items-center justify-center">
-                  <svg
-                    className="w-16 h-16 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 lg:p-12 border border-rose-100">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Take Control of Platform Access
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              See how Kindora helps administrators manage users, assign roles, and control
+              access — so your team always has exactly the right level of access.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/kindora/contact"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300"
+              >
+                Request a Demo
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/kindora/features"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                View All Features
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-[#f8f9fa]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to secure your team&apos;s access?
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            See how Kindora&apos;s user management can help you control access
-            and maintain security.
-          </p>
-          <Link
-            href="/kindora/contact"
-            className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full shadow-lg shadow-blue-500/25"
-          >
-            Request a Demo
-            <svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
         </div>
       </section>
     </main>

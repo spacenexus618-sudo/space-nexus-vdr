@@ -129,7 +129,7 @@ export default function DonorManagementPage() {
             <div>
               <Link
                 href="/kindora/features"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-2"
