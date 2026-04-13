@@ -1,25 +1,95 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Virtual Data Room for Law Firms — Legal Due Diligence Software | Space Nexus",
+  title: "Data Rooms for Law Firms — Secure Legal Virtual Data Room | SpaceNexus",
   description:
-    "Space Nexus is the virtual data room law firms rely on for M&A due diligence, privilege management, document review, and litigation support. SOC 2 certified, with granular access controls and complete audit trails.",
+    "SpaceNexus data rooms for law firms provide SOC 2 Type II certified document sharing, attorney-client privilege protection, structured due diligence Q&A, and tamper-evident audit trails. The legal VDR trusted by top firms for M&A, litigation, and corporate transactions.",
   alternates: {
     canonical: "https://spacenexus.net/industries/law-firms",
   },
   openGraph: {
-    title: "Virtual Data Room for Law Firms | Space Nexus",
-    description: "Secure legal due diligence software with privilege management, ethical walls, contract analysis, and client collaboration — built for law firm workflows.",
+    title: "Data Rooms for Law Firms — SpaceNexus Legal VDR",
+    description:
+      "Secure data rooms purpose-built for law firms. Privilege protection, due diligence Q&A, ethical walls, and court-admissible audit trails.",
     url: "https://spacenexus.net/industries/law-firms",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Virtual Data Room for Law Firms — Legal Due Diligence Software | Space Nexus",
+    title: "Data Rooms for Law Firms — Secure Legal VDR | SpaceNexus",
     description:
-      "Purpose-built secure file sharing for lawyers: client privilege protection, due diligence management, and full audit trails.",
+      "Purpose-built data rooms for law firms: privilege protection, due diligence management, structured Q&A, and SOC 2 Type II compliance.",
   },
+  keywords: [
+    "data rooms for law firms",
+    "legal data room",
+    "virtual data room for law firms",
+    "law firm data room",
+    "legal VDR",
+    "attorney data room",
+    "secure document sharing for lawyers",
+    "legal due diligence software",
+    "law firm virtual data room",
+    "M&A data room for lawyers",
+  ],
+};
+
+const faqItems = [
+  {
+    question: "What is a data room for law firms?",
+    answer:
+      "A data room for law firms is a secure Virtual Data Room (VDR) designed specifically for legal workflows. It enables attorneys to share confidential documents with clients, opposing counsel, and deal parties while protecting attorney-client privilege, maintaining tamper-evident audit trails, and enforcing granular access controls that meet regulatory and ethical requirements.",
+  },
+  {
+    question: "Why do law firms need a dedicated data room instead of Dropbox or SharePoint?",
+    answer:
+      "Consumer file-sharing tools lack the security controls law firms require: there are no attorney-client privilege folder hierarchies, no tamper-evident audit logs accepted by courts, no dynamic watermarking, no NDA click-through gates, and no ethical wall enforcement. A legal data room like SpaceNexus is purpose-built for regulated industries where document security, privilege protection, and compliance are non-negotiable.",
+  },
+  {
+    question: "Is SpaceNexus SOC 2 Type II certified for law firm use?",
+    answer:
+      "Yes. SpaceNexus is independently audited and SOC 2 Type II certified, with ISO 27001 alignment and GDPR readiness. All data is encrypted with AES-256 at rest and TLS 1.3 in transit. These certifications satisfy the security review requirements of Am Law 100 firms and their enterprise clients.",
+  },
+  {
+    question: "How does a legal data room protect attorney-client privilege?",
+    answer:
+      "SpaceNexus provides dedicated privilege and non-privilege folder hierarchies with separate permission sets, ensuring only authorized attorneys can view protected materials. Privilege logs are maintained automatically, every access is recorded in an immutable audit trail, and ethical walls prevent information from crossing matter boundaries — preventing inadvertent waiver of privilege during due diligence or litigation.",
+  },
+  {
+    question: "What types of legal matters use data rooms?",
+    answer:
+      "Law firm data rooms are used for M&A due diligence, litigation and e-discovery document production, corporate restructuring, IPO preparation, real estate closings, joint ventures, debt financing, and licensing agreements. Any legal workflow that involves sharing confidential or privileged documents with external parties benefits from a secure, audit-ready data room.",
+  },
+  {
+    question: "How quickly can a law firm set up a data room in SpaceNexus?",
+    answer:
+      "Most law firms have their SpaceNexus data room operational within 24 hours. The platform includes drag-and-drop bulk uploading, AI-powered auto-indexing by document category, and pre-built folder templates for common legal transactions including M&A due diligence and litigation discovery.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://spacenexus.net/industries" },
+    { "@type": "ListItem", position: 3, name: "Data Rooms for Law Firms", item: "https://spacenexus.net/industries/law-firms" },
+  ],
 };
 
 const capabilities = [
@@ -147,6 +217,17 @@ const capabilities = [
 
 export default function LawFirmsPage() {
   return (
+    <>
+      <Script
+        id="law-firms-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id="law-firms-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -176,13 +257,14 @@ export default function LawFirmsPage() {
                 Law Firms
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Secure Data Rooms for Legal Excellence
+                Data Rooms for Law Firms
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Manage due diligence, protect client privilege, and collaborate
-                on transactions with a platform built for the rigorous demands
-                of legal practice. Space Nexus delivers security and
-                organization that law firms require.
+                SpaceNexus provides data rooms purpose-built for law firms — manage
+                due diligence, protect attorney-client privilege, enforce ethical
+                walls, and collaborate on M&amp;A transactions with a SOC 2 Type II
+                certified platform that meets the rigorous security demands of
+                modern legal practice.
               </p>
               <Link
                 href="/demo"
@@ -267,15 +349,42 @@ export default function LawFirmsPage() {
         </div>
       </section>
 
+      {/* Compliance Badges */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm font-medium text-gray-500 mb-6">
+            Security certifications that satisfy law firm oversight committees
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { label: "SOC 2 Type II", detail: "Independently audited" },
+              { label: "ISO 27001", detail: "Information security" },
+              { label: "GDPR Ready", detail: "Data protection" },
+              { label: "AES-256 + TLS 1.3", detail: "Bank-grade encryption" },
+            ].map((badge) => (
+              <div key={badge.label} className="flex flex-col items-center text-center p-4 rounded-xl bg-[#f8f9fa] border border-gray-100">
+                <div className="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-3">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-bold text-gray-900">{badge.label}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{badge.detail}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Capabilities Grid */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Designed for Legal Professionals
+              Why law firms choose SpaceNexus data rooms
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tools that understand the unique requirements of legal practice.
+              Every capability is designed for the unique requirements of legal practice — from privilege protection to billing integration.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -303,47 +412,66 @@ export default function LawFirmsPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Why Law Firms Choose Space Nexus
+            Why law firms need dedicated data rooms
           </h2>
           <div className="prose prose-lg max-w-none text-gray-600">
             <p className="mb-6">
               Legal practice demands precision, confidentiality, and
-              comprehensive record-keeping. Whether conducting due diligence on
-              a major transaction, managing discovery in complex litigation, or
-              collaborating with clients on sensitive matters, law firms need
-              technology that meets the highest professional standards.
+              comprehensive record-keeping that generic file-sharing tools
+              cannot provide. When attorneys share documents through consumer-grade
+              platforms, they risk inadvertent waiver of attorney-client privilege,
+              loss of work-product protections, and regulatory violations that can
+              result in sanctions, malpractice claims, or disqualification from
+              proceedings.
             </p>
             <p className="mb-6">
-              Space Nexus provides law firms with a secure document management
-              platform that supports the full range of legal work. Our virtual
-              data rooms are designed to handle the volume and complexity of
-              modern transactions, where thousands of documents must be
+              SpaceNexus data rooms for law firms solve these problems with a
+              secure document management platform designed for the full range of
+              legal work. Our virtual data rooms handle the volume and complexity
+              of modern transactions, where thousands of documents must be
               reviewed, organized, and shared with appropriate parties while
-              maintaining strict access controls.
+              maintaining strict access controls and tamper-evident audit trails.
             </p>
             <p className="mb-6">
-              Privilege protection is central to our design. Attorneys can
-              clearly segregate privileged materials from documents that may be
-              produced, with access controls that prevent inadvertent
-              disclosure. When working with opposing counsel or third parties,
-              Space Nexus ensures that only designated materials are visible
-              while maintaining detailed logs of every access for ethical
-              compliance.
+              Privilege protection is central to the SpaceNexus design. Attorneys
+              can clearly segregate privileged materials from documents that may
+              be produced, with folder-level access controls that prevent
+              inadvertent disclosure. When working with opposing counsel or third
+              parties, SpaceNexus ensures that only designated materials are
+              visible while maintaining detailed logs of every access for ethical
+              compliance and courtroom admissibility.
             </p>
             <p className="mb-6">
-              For transactional practices, our platform streamlines the due
-              diligence process. Custom checklists help teams track review
-              progress across all document categories. The Q&A module provides a
-              structured channel for raising and resolving issues with
+              For transactional practices, our data rooms streamline the entire
+              due diligence process. Custom checklists help teams track review
+              progress across all document categories. The{" "}
+              <Link href="/features/qa" className="text-[#2563eb] hover:underline">
+                Q&amp;A module
+              </Link>{" "}
+              provides a structured channel for raising and resolving issues with
               counterparties. When deals close, complete archives preserve the
-              transaction record for future reference.
+              transaction record for future reference and regulatory review.
             </p>
-            <p>
+            <p className="mb-6">
               Integration with legal workflows extends to billing and matter
               management. Activity data can be exported to support accurate time
               tracking and client invoicing. Attorneys can see exactly how much
               time was spent reviewing specific document categories, providing
               the detail clients increasingly expect in legal bills.
+            </p>
+            <p>
+              Whether your firm handles{" "}
+              <Link href="/solutions/mergers-and-acquisitions-vdr" className="text-[#2563eb] hover:underline">
+                M&amp;A transactions
+              </Link>
+              , litigation discovery, corporate restructuring, or IPO preparation,
+              SpaceNexus provides the{" "}
+              <Link href="/solutions/secure-document-sharing-for-legal" className="text-[#2563eb] hover:underline">
+                secure document sharing platform
+              </Link>{" "}
+              that law firms and their oversight committees require — with SOC 2
+              Type II certification, ISO 27001 alignment, and GDPR readiness as
+              standard.
             </p>
           </div>
         </div>
@@ -366,7 +494,7 @@ export default function LawFirmsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-qa.png"
-                  alt="Space Nexus Q&A Management — due diligence questions and answers for law firms"
+                  alt="SpaceNexus Q&A Management — due diligence questions and answers for law firms"
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -382,7 +510,7 @@ export default function LawFirmsPage() {
                 Structured Q&amp;A — no more email chains
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Every due diligence question is categorized, prioritized, and assigned directly in Space Nexus. Finance, Legal, and Technical queries each have their own track — and urgent items are flagged so nothing falls through the cracks.
+                Every due diligence question is categorized, prioritized, and assigned directly in your SpaceNexus data room. Finance, Legal, and Technical queries each have their own track — and urgent items are flagged so nothing falls through the cracks.
               </p>
               <ul className="space-y-2.5 mb-8">
                 {[
@@ -447,15 +575,31 @@ export default function LawFirmsPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+            Frequently asked questions about data rooms for law firms
+          </h2>
+          <div className="space-y-6">
+            {faqItems.map((item) => (
+              <div key={item.question} className="bg-[#f8f9fa] rounded-2xl border border-gray-100 p-6">
+                <h3 className="text-base font-bold text-gray-900 mb-3">{item.question}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Ready to Enhance Your Legal Practice?
+            Set up your law firm data room today
           </h2>
           <p className="text-gray-600 mb-8">
-            See how Space Nexus supports law firms in delivering exceptional
-            client service.
+            SOC 2 Type II certified. Attorney-client privilege protection. Tamper-evident audit trails. See why leading law firms choose SpaceNexus.
           </p>
           <Link
             href="/demo"
@@ -479,5 +623,6 @@ export default function LawFirmsPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

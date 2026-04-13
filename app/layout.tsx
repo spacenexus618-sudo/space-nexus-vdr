@@ -25,12 +25,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://spacenexus.net"),
   title: {
     default:
-      "Space Nexus | Enterprise Virtual Data Room for M&A & Due Diligence",
-    template: "%s | Space Nexus",
+      "SpaceNexus (Space Nexus) — Secure Virtual Data Room for M&A & Legal Teams",
+    template: "%s | SpaceNexus",
   },
   description:
-    "Space Nexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing. Bank-grade security with AI-powered document processing.",
+    "SpaceNexus (Space Nexus) is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams. Bank-grade security with AI-powered document processing.",
   keywords: [
+    "SpaceNexus",
+    "Space Nexus",
     "Virtual Data Room",
     "VDR",
     "M&A Due Diligence Software",
@@ -51,9 +53,9 @@ export const metadata: Metadata = {
     "SOC 2 Virtual Data Room",
     "Zero Trust Data Room",
   ],
-  authors: [{ name: "Space Nexus" }],
-  creator: "Space Nexus",
-  publisher: "Space Nexus",
+  authors: [{ name: "SpaceNexus" }],
+  creator: "SpaceNexus",
+  publisher: "SpaceNexus",
   robots: {
     index: true,
     follow: true,
@@ -69,8 +71,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://spacenexus.net",
-    siteName: "Space Nexus",
-    title: "Space Nexus | Enterprise Virtual Data Room for M&A & Due Diligence",
+    siteName: "SpaceNexus",
+    title: "SpaceNexus — Secure Virtual Data Room for M&A & Legal Teams",
     description:
       "Enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing. Trusted by 500+ enterprises worldwide.",
     images: [
@@ -78,22 +80,35 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Space Nexus - Secure Virtual Data Room",
+        alt: "SpaceNexus - Secure Virtual Data Room",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Space Nexus | Enterprise Virtual Data Room",
+    title: "SpaceNexus — Secure Virtual Data Room for M&A & Legal Teams",
     description:
-      "Enterprise-grade VDR for M&A due diligence and secure document sharing.",
+      "Enterprise-grade VDR for M&A due diligence and secure document sharing for legal teams.",
     images: ["/og-image.png"],
     creator: "@spacenexus",
   },
   alternates: {
     canonical: "https://spacenexus.net",
+    languages: {
+      "en-US": "https://spacenexus.net",
+      "en-GB": "https://spacenexus.net",
+      "en-CA": "https://spacenexus.net/solutions/virtual-data-room-canada",
+      "zh-Hant-TW": "https://spacenexus.net/solutions/virtual-data-room-taiwan",
+      "ar-AE": "https://spacenexus.net/solutions/virtual-data-room-uae",
+      "de-DE": "https://spacenexus.net/solutions/virtual-data-room-germany",
+      "x-default": "https://spacenexus.net",
+    },
   },
   category: "technology",
+  other: {
+    "geo.region": "US",
+    "geo.placename": "United States",
+  },
 };
 
 export default function RootLayout({
@@ -102,7 +117,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en-US" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

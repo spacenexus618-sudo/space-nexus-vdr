@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -114,9 +115,70 @@ function Cross() {
     );
 }
 
+const pricingFaqs = [
+  {
+    question: "How much does a virtual data room cost?",
+    answer: "SpaceNexus VDR pricing starts with a free 14-day trial. Paid plans scale based on storage, number of users, and feature tier (Starter, Professional, Enterprise). Contact us for a custom quote tailored to your deal size and compliance needs.",
+  },
+  {
+    question: "Is there a free trial of SpaceNexus?",
+    answer: "Yes — SpaceNexus offers a full-featured 14-day free trial with no credit card required. You get access to all features including data room setup, Q&A management, analytics, and user permissions.",
+  },
+  {
+    question: "What is included in the Enterprise plan?",
+    answer: "The Enterprise plan includes unlimited storage, unlimited users, custom branding, SSO/SAML authentication, dedicated account management, API access, custom integrations, SLA guarantees, and priority 24/7 support. It also includes advanced security features like customer-managed encryption keys.",
+  },
+  {
+    question: "Can I switch plans or upgrade later?",
+    answer: "Yes. You can upgrade or downgrade your SpaceNexus plan at any time. Upgrades take effect immediately, and downgrades apply at the next billing cycle. All your data and configurations are preserved during plan changes.",
+  },
+  {
+    question: "How does SpaceNexus pricing compare to Datasite or Intralinks?",
+    answer: "SpaceNexus offers transparent, predictable pricing — typically 40–60% less than legacy providers like Datasite and Intralinks. Unlike per-page or per-user pricing models, SpaceNexus plans include unlimited pages and flexible user seats.",
+  },
+];
+
+const pricingFaqSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: pricingFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "SpaceNexus Virtual Data Room",
+      applicationCategory: "BusinessApplication",
+      url: "https://spacenexus.net",
+      offers: {
+        "@type": "AggregateOffer",
+        lowPrice: "149",
+        highPrice: "999",
+        priceCurrency: "USD",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "500",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
+  ],
+};
+
 export default function PricingPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
+            <Script
+                id="pricing-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
+            />
             {/* Hero */}
             <section className="pt-28 pb-16 bg-white border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -241,6 +303,24 @@ export default function PricingPage() {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing FAQ</h2>
+                        <p className="text-lg text-gray-600">Common questions about SpaceNexus VDR pricing and plans.</p>
+                    </div>
+                    <div className="space-y-4">
+                        {pricingFaqs.map((faq, i) => (
+                            <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

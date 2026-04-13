@@ -1,28 +1,38 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Q&A Management — Due Diligence Questions & Responses | Space Nexus VDR",
+    "Virtual Data Room Q&A Software — Due Diligence Question Management | SpaceNexus",
   description:
-    "Manage due diligence questions and responses with Space Nexus Q&A. Track status, categorize by department, assign to teams, and resolve questions efficiently in a centralized interface.",
+    "SpaceNexus Virtual Data Room Q&A software for M&A due diligence. Track buyer questions, automate responses, organize by department, and generate audit trails — all in one secure VDR platform.",
+  keywords: [
+    "Virtual Data Room Q&A",
+    "VDR Q&A software",
+    "due diligence question management",
+    "M&A Q&A platform",
+    "deal Q&A management",
+    "buyer question tracking",
+    "data room Q&A",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/qa",
   },
   openGraph: {
     title:
-      "Q&A Management — Due Diligence Questions & Responses | Space Nexus VDR",
+      "Virtual Data Room Q&A Management Software | SpaceNexus VDR",
     description:
-      "Centralized Q&A management with status tracking (Open, Answered, Urgent), department categorization, team assignment, and direct question actions — all in one interface.",
+      "Centralized VDR Q&A software for due diligence. Track questions by status, categorize by department, assign to teams, and maintain a full audit trail in SpaceNexus.",
     url: "https://spacenexus.net/features/qa",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Q&A Management — Due Diligence Questions & Responses | Space Nexus VDR",
+      "Virtual Data Room Q&A Software — Due Diligence Questions | SpaceNexus",
     description:
-      "Track, categorize, and resolve due diligence questions with full status tracking and team assignment in Space Nexus VDR.",
+      "Manage due diligence questions in your Virtual Data Room. Status tracking, department categorization, team assignment & audit trails in SpaceNexus VDR.",
   },
 };
 
@@ -149,9 +159,43 @@ const features = [
   },
 ];
 
+const qaFaqs = [
+  {
+    question: "What is a virtual data room Q&A module?",
+    answer: "A VDR Q&A module is a structured communication tool built into virtual data rooms that allows buyers, investors, and advisors to ask questions about deal documents directly within the platform. Unlike email, Q&A modules provide tracked, auditable threads with automatic notifications and deadline management.",
+  },
+  {
+    question: "How does SpaceNexus Q&A differ from email-based due diligence?",
+    answer: "SpaceNexus Q&A replaces scattered email threads with a centralized, searchable workspace. Every question is linked to specific documents, assigned to the right team member, tracked with SLA deadlines, and logged in an immutable audit trail — eliminating the risk of lost or overlooked questions during live deals.",
+  },
+  {
+    question: "Can I set deadlines and SLAs for Q&A responses?",
+    answer: "Yes. SpaceNexus lets you set response deadlines for each question or batch of questions. The system sends automatic escalation alerts when deadlines approach, and overdue items are flagged in the dashboard — ensuring no question falls through the cracks during time-sensitive transactions.",
+  },
+  {
+    question: "Is the Q&A module included in all SpaceNexus plans?",
+    answer: "Yes, Q&A management is included in all SpaceNexus plans. Starter plans include core Q&A features, while Professional and Enterprise plans add advanced workflows, bulk operations, role-based routing, and custom SLA configurations.",
+  },
+];
+
+const qaFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: qaFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export default function QAPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="qa-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(qaFaqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -212,13 +256,13 @@ export default function QAPage() {
                 Due Diligence Communication
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Q&A Management
+                Virtual Data Room Q&A Management
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                The Q&A Management section enables teams to manage due diligence
-                questions and responses during a transaction. It provides a
-                structured environment where stakeholders can ask, track, and
-                respond to questions efficiently.
+                SpaceNexus Virtual Data Room Q&A software enables deal teams to
+                manage due diligence questions and responses throughout M&A
+                transactions. Track buyer questions, automate seller responses,
+                and maintain a complete audit trail — all within your secure VDR.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -428,6 +472,24 @@ export default function QAPage() {
                   />
                 </svg>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Q&A Module FAQ</h2>
+            <p className="text-lg text-gray-600">Common questions about SpaceNexus Q&A management.</p>
+          </div>
+          <div className="space-y-4">
+            {qaFaqs.map((faq, i) => (
+              <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

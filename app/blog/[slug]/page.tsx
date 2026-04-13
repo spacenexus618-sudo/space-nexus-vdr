@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { blogPosts } from "../data/posts";
+import { blogPosts, authorProfiles } from "../data/posts";
 
 type Params = Promise<{ slug: string }>;
 
@@ -87,6 +87,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     if (!post) notFound();
 
     const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
+    const authorProfile = authorProfiles[post.author.name];
 
     const articleSchema = {
         "@context": "https://schema.org",
@@ -94,11 +95,25 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         headline: post.title,
         description: post.description,
         datePublished: post.publishedAt,
-        author: { "@type": "Person", name: post.author.name },
+        ...(post.lastReviewed && { dateModified: post.lastReviewed }),
+        author: {
+            "@type": "Person",
+            name: post.author.name,
+            jobTitle: post.author.role,
+            ...(authorProfile && {
+                url: `https://spacenexus.net/about#${authorProfile.slug}`,
+                description: authorProfile.bio,
+                sameAs: [authorProfile.linkedin],
+            }),
+        },
         publisher: {
             "@type": "Organization",
-            name: "Space Nexus",
+            name: "SpaceNexus",
             url: "https://spacenexus.net",
+            logo: {
+                "@type": "ImageObject",
+                url: "https://spacenexus.net/logo.png",
+            },
         },
         url: `https://spacenexus.net/blog/${slug}`,
     };
@@ -145,7 +160,13 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                             {post.author.initials}
                         </div>
                         <div>
-                            <p className="text-sm font-semibold text-gray-900">{post.author.name}</p>
+                            <p className="text-sm font-semibold text-gray-900">
+                                {authorProfile ? (
+                                    <a href={`/about#${authorProfile.slug}`} className="hover:text-[#2563eb] transition-colors">
+                                        {post.author.name}
+                                    </a>
+                                ) : post.author.name}
+                            </p>
                             <p className="text-xs text-gray-500">
                                 {post.author.role} ·{" "}
                                 {new Date(post.publishedAt).toLocaleDateString("en-US", {
@@ -155,6 +176,15 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                                 })}{" "}
                                 · {post.readTime}
                             </p>
+                            {post.lastReviewed && (
+                                <p className="text-xs text-emerald-600 mt-1">
+                                    ✓ Last reviewed{" "}
+                                    {new Date(post.lastReviewed).toLocaleDateString("en-US", {
+                                        month: "long",
+                                        year: "numeric",
+                                    })}
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -168,6 +198,46 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                     </div>
                 </div>
             </article>
+
+            {/* Author Bio Box */}
+            {authorProfile && (
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+                    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
+                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">About the Author</p>
+                        <div className="flex flex-col sm:flex-row gap-5">
+                            <div
+                                className={`w-16 h-16 rounded-full bg-gradient-to-br ${authorProfile.color} flex items-center justify-center text-white text-xl font-bold shrink-0`}
+                            >
+                                {authorProfile.initials}
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <a href={`/about#${authorProfile.slug}`} className="text-lg font-bold text-gray-900 hover:text-[#2563eb] transition-colors">
+                                        {authorProfile.name}
+                                    </a>
+                                    <a
+                                        href={authorProfile.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs font-medium text-[#2563eb] hover:underline"
+                                    >
+                                        LinkedIn →
+                                    </a>
+                                </div>
+                                <p className="text-sm font-medium text-gray-500 mb-3">{authorProfile.role}, SpaceNexus</p>
+                                <p className="text-sm text-gray-600 leading-relaxed mb-4">{authorProfile.bio}</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {authorProfile.credentials.map((cred, i) => (
+                                        <span key={i} className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
+                                            {cred}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* CTA Box */}
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">

@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/features/user-management", priority: 0.8 },
     { route: "/features/file-management", priority: 0.8 },
     { route: "/features/settings", priority: 0.8 },
+    { route: "/features/financials", priority: 0.8 },
     { route: "/pricing", priority: 0.9 },
     { route: "/contact", priority: 0.8 },
     { route: "/solutions", priority: 0.9 },

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Explore Kindora's comprehensive feature set: donor management, grant tracking, program delivery, financial reporting, volunteer coordination, and more.",
   alternates: {
-    canonical: "/kindora/features",
+    canonical: "https://spacenexus.net/kindora/features",
   },
 };
 

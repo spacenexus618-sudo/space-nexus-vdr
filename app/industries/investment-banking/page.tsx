@@ -2,23 +2,23 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Investment Banking Data Room Software — Sell-Side & Buy-Side M&A | Space Nexus",
+  title: "Investment Banking Data Room — SEC, FINRA & FCA Compliant VDR for M&A | SpaceNexus",
   description:
-    "The virtual data room trusted by investment bankers for sell-side M&A, buy-side advisory, IPOs, and capital raises. Manage bidder access, track buyer engagement, and run structured due diligence processes with Space Nexus.",
+    "SpaceNexus is the virtual data room trusted by US investment banks for sell-side M&A, buy-side advisory, IPOs, and capital raises. SEC and FINRA compliance ready with granular bidder access controls, buyer engagement analytics, and structured due diligence workflows.",
   alternates: {
     canonical: "https://spacenexus.net/industries/investment-banking",
   },
   openGraph: {
-    title: "Investment Banking Data Room | Space Nexus",
-    description: "Enterprise VDR software for investment banks. Sell-side M&A, buy-side advisory, IPOs, and capital raises with granular permissions and buyer analytics.",
+    title: "Investment Banking Data Room — SEC Compliant | SpaceNexus",
+    description: "Enterprise VDR for US investment banks. Sell-side M&A, buy-side advisory, IPOs, and capital raises with SEC and FINRA compliance, granular permissions, and buyer analytics.",
     url: "https://spacenexus.net/industries/investment-banking",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Investment Banking Data Room Software — Sell-Side & Buy-Side M&A | Space Nexus",
+    title: "Investment Banking Data Room — SEC & FINRA Compliant | SpaceNexus",
     description:
-      "Execute M&A mandates, IPOs, and restructurings with an investment banking data room built for speed, security, and institutional deal-making.",
+      "Execute M&A mandates, IPOs, and restructurings with a US-compliant investment banking data room built for speed, security, and institutional deal-making.",
   },
 };
 
