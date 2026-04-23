@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { authorProfiles } from "../blog/data/posts";
-
+//about
 const teamMembers = Object.values(authorProfiles);
 
 export const metadata: Metadata = {
