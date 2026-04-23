@@ -35,7 +35,7 @@ const faqSchema = {
       name: "Is Space Nexus SOC 2 compliant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Space Nexus meets enterprise-grade security standards including SOC 2 Type II compliance, ISO 27001 alignment, and GDPR readiness. All data is encrypted in transit (TLS 1.3) and at rest (AES-256) with 99.9% uptime SLA.",
+        text: "Yes. SpaceNexus meets enterprise-grade security standards including SOC 2 Type II compliance, ISO 27001 alignment, GDPR readiness, and CCPA compliance. The platform supports SEC regulatory requirements for IPO data rooms and FINRA compliance for investment banking transactions. All data is encrypted in transit (TLS 1.3) and at rest (AES-256) with 99.9% uptime SLA.",
       },
     },
     {
@@ -51,7 +51,15 @@ const faqSchema = {
       name: "What industries use virtual data rooms?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "VDRs are used across M&A deals, private equity fundraising, IPO preparation, debt financing, real estate transactions, life sciences licensing, and legal due diligence. Space Nexus supports investment banking, private equity, law firms, corporate development, and real estate.",
+        text: "VDRs are used across M&A deals, private equity fundraising, IPO preparation, debt financing, real estate transactions, life sciences licensing, and legal due diligence. SpaceNexus supports US investment banks, private equity firms, Am Law 100 law firms, corporate development teams, and real estate companies nationwide.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Q&A management work in a Virtual Data Room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides a dedicated Virtual Data Room Q&A module where buyers submit due diligence questions, sellers categorize them by department (Technical, Finance, HR, Commercial), assign to team members, and track status from Open through to Answered. Every question and response is logged in a full audit trail for compliance and transparency.",
       },
     },
   ],
@@ -73,28 +81,44 @@ export default function Home() {
       <TrustBar />
 
       {/* Core Product Ecosystem - 12 Modules */}
-      <ProductEcosystem />
+      <div className="content-auto">
+        <ProductEcosystem />
+      </div>
 
       {/* Real Product Screenshots - Interactive Gallery */}
-      <VDRScreenshotGallery />
+      <div className="content-auto">
+        <VDRScreenshotGallery />
+      </div>
 
       {/* Intelligent Document Processing Feature */}
-      <IDPSection />
+      <div className="content-auto">
+        <IDPSection />
+      </div>
 
       {/* Before/After Transformation Table */}
-      <TransformationTable />
+      <div className="content-auto">
+        <TransformationTable />
+      </div>
 
       {/* Benefits & ROI Section */}
-      <BenefitsSection />
+      <div className="content-auto">
+        <BenefitsSection />
+      </div>
 
       {/* Testimonials / Social Proof */}
-      <TestimonialsSection />
+      <div className="content-auto">
+        <TestimonialsSection />
+      </div>
 
       {/* Kindora — Nonprofit Management Platform (cross-product + link equity) */}
-      <KindoraCallout />
+      <div className="content-auto">
+        <KindoraCallout />
+      </div>
 
       {/* FAQ Section */}
-      <FAQSection />
+      <div className="content-auto">
+        <FAQSection />
+      </div>
 
       {/* SEO Content Block */}
       <section className="py-16 bg-white border-t border-gray-100">

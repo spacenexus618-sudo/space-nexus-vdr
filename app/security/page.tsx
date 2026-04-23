@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -68,9 +69,47 @@ const certifications = [
     { name: "99.9% Uptime SLA", description: "Enterprise reliability guarantee" },
 ];
 
+const securityFaqs = [
+  {
+    question: "Is SpaceNexus SOC 2 Type II certified?",
+    answer: "Yes. SpaceNexus undergoes annual SOC 2 Type II audits conducted by an independent third-party auditor. This certification verifies that our security controls for data protection, availability, and confidentiality meet or exceed AICPA Trust Services Criteria. Enterprise clients can request the full audit report.",
+  },
+  {
+    question: "What encryption does SpaceNexus use?",
+    answer: "SpaceNexus uses AES-256 encryption for data at rest and TLS 1.3 for data in transit — the same standards used by major financial institutions. Enterprise plans also support customer-managed encryption keys (CMEK) for additional control.",
+  },
+  {
+    question: "Is SpaceNexus compliant with GDPR, SEC, and HIPAA regulations?",
+    answer: "Yes. SpaceNexus is GDPR compliant for European data protection, supports SEC Rule 17a-4 requirements for financial record retention, and offers HIPAA-compliant configurations for healthcare M&A. We also comply with ISO 27001 and CCPA.",
+  },
+  {
+    question: "Where is SpaceNexus data stored?",
+    answer: "SpaceNexus data is stored in SOC 2 certified data centers with geographic redundancy. Enterprise clients can choose data residency in the US, EU, or other regions to meet compliance requirements. All data centers feature physical security, biometric access, and 24/7 monitoring.",
+  },
+  {
+    question: "Does SpaceNexus support multi-factor authentication (MFA)?",
+    answer: "Yes — MFA is available on all plans and mandatory on Enterprise plans. SpaceNexus supports TOTP authenticator apps, SMS verification, and SSO/SAML integration with identity providers like Okta, Azure AD, and Google Workspace.",
+  },
+];
+
+const securityFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: securityFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export default function SecurityPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
+            <Script
+                id="security-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(securityFaqSchema) }}
+            />
             {/* Hero */}
             <section className="pt-28 pb-20 bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
@@ -132,6 +171,53 @@ export default function SecurityPage() {
                                 <p className="text-sm text-gray-600 leading-relaxed">{f.description}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Security FAQ</h2>
+                        <p className="text-lg text-gray-600">Common questions about SpaceNexus VDR security and compliance.</p>
+                    </div>
+                    <div className="space-y-4">
+                        {securityFaqs.map((faq, i) => (
+                            <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Related Security Resources */}
+            <section className="py-16 lg:py-20 bg-[#f8f9fa] border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Security Resources</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <Link href="/blog/vdr-security-compliance-guide" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
+                            <p className="text-xs font-semibold text-rose-600 mb-2">PILLAR GUIDE</p>
+                            <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">VDR Security & Compliance: The Definitive Guide</h3>
+                            <p className="text-sm text-gray-600">SOC 2, ISO 27001, GDPR, HIPAA, SEC & FINRA — everything you need to evaluate VDR compliance.</p>
+                        </Link>
+                        <Link href="/blog/vdr-security-what-to-look-for" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
+                            <p className="text-xs font-semibold text-rose-600 mb-2">CHECKLIST</p>
+                            <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">VDR Security: 10 Critical Features to Check</h3>
+                            <p className="text-sm text-gray-600">The essential 2025 checklist before signing up for any virtual data room provider.</p>
+                        </Link>
+                        <Link href="/blog/hipaa-compliant-file-sharing-healthcare-ma" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
+                            <p className="text-xs font-semibold text-rose-600 mb-2">HEALTHCARE</p>
+                            <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">HIPAA Compliant File Sharing in Healthcare M&A</h3>
+                            <p className="text-sm text-gray-600">How to handle PHI during healthcare transactions and meet HIPAA requirements.</p>
+                        </Link>
+                        <Link href="/blog/secure-platforms-for-legal-due-diligence" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
+                            <p className="text-xs font-semibold text-rose-600 mb-2">LEGAL</p>
+                            <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">Secure Platforms for Legal Due Diligence</h3>
+                            <p className="text-sm text-gray-600">What attorneys need from a secure due diligence platform in 2025.</p>
+                        </Link>
                     </div>
                 </div>
             </section>

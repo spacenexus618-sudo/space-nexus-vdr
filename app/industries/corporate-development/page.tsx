@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Execute strategic acquisitions, divestitures, and corporate transactions with Space Nexus - the professional data room for corporate M&A teams.",
   alternates: {
-    canonical: "/industries/corporate-development",
+    canonical: "https://spacenexus.net/industries/corporate-development",
   },
 };
 

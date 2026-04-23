@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Execute technology M&A, venture transactions, and strategic partnerships with Space Nexus - the fast, secure data room for tech companies.",
   alternates: {
-    canonical: "/industries/technology",
+    canonical: "https://spacenexus.net/industries/technology",
   },
 };
 

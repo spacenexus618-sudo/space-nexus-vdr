@@ -97,6 +97,37 @@ const reasons = [
 export default function DatasiteAlternativePage() {
     return (
         <main className="pt-20 lg:pt-24">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "BreadcrumbList",
+                                itemListElement: [
+                                    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+                                    { "@type": "ListItem", position: 2, name: "Competitors", item: "https://spacenexus.net/competitors/vdr-alternatives" },
+                                    { "@type": "ListItem", position: 3, name: "Datasite Alternative", item: "https://spacenexus.net/competitors/datasite-alternative" },
+                                ],
+                            },
+                            {
+                                "@type": "SoftwareApplication",
+                                name: "SpaceNexus Virtual Data Room",
+                                applicationCategory: "BusinessApplication",
+                                url: "https://spacenexus.net",
+                                aggregateRating: {
+                                    "@type": "AggregateRating",
+                                    ratingValue: "4.9",
+                                    reviewCount: "500",
+                                    bestRating: "5",
+                                    worstRating: "1",
+                                },
+                            },
+                        ],
+                    }),
+                }}
+            />
             {/* Hero */}
             <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,6 +295,22 @@ export default function DatasiteAlternativePage() {
                                 <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="Space Nexus VDR dashboard — Datasite alternative" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Related Comparisons */}
+            <section className="py-10 bg-[#f8f9fa] border-t border-gray-100">
+                <div className="max-w-3xl mx-auto px-4 text-center">
+                    <p className="text-sm text-gray-600 mb-3">Comparing other VDR providers?</p>
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                        <Link href="/competitors/vdr-alternatives" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Best VDR Providers 2025 — Full Comparison →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/intralinks-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Intralinks →
+                        </Link>
                     </div>
                 </div>
             </section>

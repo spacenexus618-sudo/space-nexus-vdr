@@ -19,9 +19,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/checklists", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/competitors/datasite-alternative", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/competitors/intralinks-alternative", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/competitors/vdr-alternatives", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/reviews", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/solutions/mergers-and-acquisitions-vdr", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/solutions/series-a-fundraising-data-room", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/solutions/secure-document-sharing-for-legal", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/law-firm-document-exchange", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/ma-document-sharing", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/virtual-data-room-canada", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/solutions/virtual-data-room-taiwan", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/solutions/virtual-data-room-uae", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/solutions/virtual-data-room-germany", priority: 0.7, changeFrequency: "monthly" as const },
   ];
 
   // VDR blog posts
@@ -35,6 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "secure-file-sharing-for-lawyers",
     "due-diligence-virtual-data-room-guide",
     "hipaa-compliant-file-sharing-healthcare-ma",
+    "vdr-security-compliance-guide",
+    "secure-data-room-uk-law-firms",
+    "secure-platforms-for-legal-due-diligence",
     "automated-due-diligence-software",
     "vdr-software-investment-banking",
   ].map((slug) => ({
@@ -47,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // VDR feature pages
   const vdrFeaturePages = [
     "data-room",
+    "dashboard",
     "security-compliance",
     "users-permissions",
     "activity-analytics",
@@ -104,8 +116,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "reporting",
     "settings",
     "user-management",
+    "financials",
   ].map((feature) => ({
     route: `/kindora/features/${feature}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // Kindora blog posts
+  const kindoraBlogPosts = [
+    "complete-guide-nonprofit-management-software",
+    "how-to-choose-donor-management-software",
+    "grant-management-101-track-win-more-grants",
+    "why-nonprofits-are-ditching-spreadsheets",
+    "nonprofit-client-intake-best-practices",
+    "how-to-measure-nonprofit-program-outcomes",
+    "nonprofit-fundraising-campaign-guide",
+    "year-end-giving-strategy-nonprofits",
+    "kindora-nonprofit-os-launch",
+    "nonprofit-annual-report-guide",
+    "best-nonprofit-crm-software",
+    "grant-management-software-guide",
+    "donor-management-software-nonprofits",
+    "volunteer-management-system-2025",
+    "all-in-one-nonprofit-software",
+    "nonprofit-financial-reporting-tips",
+  ].map((slug) => ({
+    route: `/kindora/blog/${slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // Kindora solution pages
+  const kindoraSolutionPages = [
+    "youth-nonprofits",
+    "small-nonprofits",
+    "community-organizations",
+    "social-services",
+    "housing-nonprofits",
+  ].map((solution) => ({
+    route: `/kindora/solutions/${solution}`,
     priority: 0.8,
     changeFrequency: "monthly" as const,
   }));
@@ -118,6 +168,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryPages,
     ...kindoraStaticPages,
     ...kindoraFeaturePages,
+    ...kindoraBlogPosts,
+    ...kindoraSolutionPages,
   ];
 
   return allPages.map((page) => ({

@@ -2,33 +2,101 @@ export default function JsonLd() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Space Nexus",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    legalName: "SpaceNexus Inc.",
+    alternateName: "Space Nexus",
     url: "https://spacenexus.net",
-    logo: "https://spacenexus.net/logo.png",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://spacenexus.net/logo.png",
+      width: 512,
+      height: 512,
+    },
+    image: "https://spacenexus.net/og-image.png",
     description:
-      "Enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing.",
+      "SpaceNexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams.",
     foundingDate: "2020",
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      minValue: 10,
+      maxValue: 50,
+    },
+    knowsAbout: [
+      "Virtual Data Rooms",
+      "M&A Due Diligence",
+      "Secure Document Sharing",
+      "Investment Banking Technology",
+      "Legal Technology",
+      "SOC 2 Compliance",
+      "ISO 27001",
+    ],
     sameAs: [
       "https://twitter.com/spacenexus",
       "https://linkedin.com/company/spacenexus",
+      "https://www.crunchbase.com/organization/spacenexus",
+      "https://www.g2.com/products/spacenexus/reviews",
+      "https://www.capterra.com/p/spacenexus/",
+      "https://www.trustradius.com/products/spacenexus/reviews",
+      "https://www.getapp.com/p/spacenexus/",
     ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1-800-SPACENEXUS",
-      contactType: "sales",
-      areaServed: "Worldwide",
-      availableLanguage: ["English"],
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+1-800-SPACENEXUS",
+        contactType: "sales",
+        areaServed: [
+          { "@type": "Country", name: "United States" },
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "Canada" },
+          { "@type": "Country", name: "Australia" },
+        ],
+        availableLanguage: ["English"],
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        url: "https://spacenexus.net/demo",
+        availableLanguage: ["English"],
+      },
+    ],
     address: {
       "@type": "PostalAddress",
+      addressLocality: "New York",
+      addressRegion: "NY",
       addressCountry: "US",
+    },
+    slogan: "The Secure Virtual Data Room for M&A & Legal Teams",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "SpaceNexus Products",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "SoftwareApplication",
+            name: "SpaceNexus VDR",
+            applicationCategory: "BusinessApplication",
+            url: "https://spacenexus.net",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "SoftwareApplication",
+            name: "Kindora NGO OS",
+            applicationCategory: "BusinessApplication",
+            url: "https://spacenexus.net/kindora",
+          },
+        },
+      ],
     },
   };
 
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Space Nexus Virtual Data Room",
+    name: "SpaceNexus Virtual Data Room",
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Virtual Data Room",
     operatingSystem: "Web Browser",
@@ -52,6 +120,10 @@ export default function JsonLd() {
       "Zero Trust architecture",
       "AES-256 encryption at rest and in transit",
       "SOC 2 Type II certified",
+      "ISO 27001 aligned",
+      "SEC and FINRA compliance ready",
+      "FCA and UK GDPR compliance ready",
+      "CCPA and GDPR data privacy compliant",
       "AI-powered document processing and redaction",
       "Real-time buyer activity analytics",
       "Granular role-based permissions",
@@ -66,7 +138,8 @@ export default function JsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Space Nexus",
+    name: "SpaceNexus",
+    alternateName: "Space Nexus",
     url: "https://spacenexus.net",
     potentialAction: {
       "@type": "SearchAction",

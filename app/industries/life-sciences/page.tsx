@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Manage pharmaceutical, biotech, and healthcare transactions with Space Nexus - the compliant virtual data room for life sciences companies.",
   alternates: {
-    canonical: "/industries/life-sciences",
+    canonical: "https://spacenexus.net/industries/life-sciences",
   },
 };
 

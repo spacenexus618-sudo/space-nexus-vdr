@@ -2,11 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Real Estate Solutions | Space Nexus",
+  title: "Virtual Data Room for Real Estate — Property Transactions & Portfolio Sales | SpaceNexus",
   description:
-    "Execute property transactions, portfolio sales, and asset dispositions with Space Nexus - the organized virtual data room for real estate professionals.",
+    "The secure virtual data room for real estate due diligence. Manage property transactions, portfolio dispositions, REIT compliance, and CRE deal rooms with SOC 2 certified document sharing.",
   alternates: {
-    canonical: "/industries/real-estate",
+    canonical: "https://spacenexus.net/industries/real-estate",
+  },
+  openGraph: {
+    title: "Virtual Data Room for Real Estate — SpaceNexus",
+    description: "Execute property transactions, portfolio sales, and asset dispositions with enterprise-grade security, granular permissions, and real-time buyer analytics.",
+    url: "https://spacenexus.net/industries/real-estate",
   },
 };
 

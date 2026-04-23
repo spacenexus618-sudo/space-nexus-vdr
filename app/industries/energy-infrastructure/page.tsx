@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Manage complex energy, utilities, and infrastructure transactions with Space Nexus - the enterprise data room for power and infrastructure deals.",
   alternates: {
-    canonical: "/industries/energy-infrastructure",
+    canonical: "https://spacenexus.net/industries/energy-infrastructure",
   },
 };
 

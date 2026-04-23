@@ -6,6 +6,7 @@ export default function ProductEcosystem() {
       description:
         "AI-powered document organization with intelligent auto-tagging and folder structures.",
       tag: "Core",
+      href: "/features/data-room",
     },
     {
       icon: "🔍",
@@ -13,6 +14,7 @@ export default function ProductEcosystem() {
       description:
         "Full-text search across 100+ file types with natural language query support.",
       tag: "Core",
+      href: "/features/data-room",
     },
     {
       icon: "❓",
@@ -20,6 +22,7 @@ export default function ProductEcosystem() {
       description:
         "Streamlined buyer-seller communication with automated tracking and notifications.",
       tag: "Core",
+      href: "/features/qa",
     },
     {
       icon: "📊",
@@ -27,6 +30,7 @@ export default function ProductEcosystem() {
       description:
         "Real-time engagement analytics with heatmaps and investor behavior insights.",
       tag: "Analytics",
+      href: "/features/activity-analytics",
     },
     {
       icon: "🔐",
@@ -34,6 +38,7 @@ export default function ProductEcosystem() {
       description:
         "Granular access controls with dynamic watermarking and fence-view protection.",
       tag: "Security",
+      href: "/features/users-permissions",
     },
     {
       icon: "📝",
@@ -41,6 +46,7 @@ export default function ProductEcosystem() {
       description:
         "AI-assisted sensitive information detection and bulk redaction tools.",
       tag: "Security",
+      href: "/features/security-compliance",
     },
     {
       icon: "🔄",
@@ -48,6 +54,7 @@ export default function ProductEcosystem() {
       description:
         "Complete document history with compare, restore, and audit trail features.",
       tag: "Core",
+      href: "/features/data-room",
     },
     {
       icon: "📧",
@@ -55,6 +62,7 @@ export default function ProductEcosystem() {
       description:
         "End-to-end encrypted communication with read receipts and expiry controls.",
       tag: "Communication",
+      href: "/features/support",
     },
     {
       icon: "📋",
@@ -62,6 +70,7 @@ export default function ProductEcosystem() {
       description:
         "Integrated workflows with deadline tracking and team collaboration tools.",
       tag: "Productivity",
+      href: "/features/deals",
     },
     {
       icon: "🔗",
@@ -69,6 +78,7 @@ export default function ProductEcosystem() {
       description:
         "RESTful APIs and native integrations with Salesforce, DocuSign, and more.",
       tag: "Integration",
+      href: "/features/integrations",
     },
     {
       icon: "📱",
@@ -76,6 +86,7 @@ export default function ProductEcosystem() {
       description:
         "Full-featured iOS and Android apps with offline document access.",
       tag: "Accessibility",
+      href: "/features/dashboard",
     },
     {
       icon: "🤖",
@@ -83,6 +94,7 @@ export default function ProductEcosystem() {
       description:
         "Intelligent document summarization, contract analysis, and due diligence automation.",
       tag: "AI",
+      href: "/features/reports",
     },
   ];
 
@@ -117,9 +129,10 @@ export default function ProductEcosystem() {
         {/* Modules Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {modules.map((module, index) => (
-            <div
+            <a
               key={index}
-              className="group bg-white rounded-xl border border-gray-200 p-6 transition-all duration-300 hover:shadow-lg hover:border-[#2563eb]/30 hover:-translate-y-1"
+              href={module.href}
+              className="group bg-white rounded-xl border border-gray-200 p-6 transition-all duration-300 hover:shadow-lg hover:border-[#2563eb]/30 hover:-translate-y-1 no-underline"
             >
               {/* Icon */}
               <div className="text-3xl mb-4">{module.icon}</div>
@@ -143,7 +156,7 @@ export default function ProductEcosystem() {
               <p className="text-sm text-gray-600 leading-relaxed">
                 {module.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
 
