@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { ecosystemProducts } from "./ecosystem/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://spacenexus.net";
@@ -87,6 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/kindora/contact", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/kindora/demo", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/kindora/vs-competitors", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/kindora/ecosystem", priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
   // Kindora feature pages
@@ -110,6 +112,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
+  // Ecosystem hub + individual product pages
+  const integrationPages = [
+    { route: "/ecosystem", priority: 0.9, changeFrequency: "monthly" as const },
+    ...ecosystemProducts.map((p) => ({
+      route: `/ecosystem/${p.slug}`,
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    })),
+  ];
+
   // Combine all pages
   const allPages = [
     ...vdrStaticPages,
@@ -118,6 +130,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryPages,
     ...kindoraStaticPages,
     ...kindoraFeaturePages,
+    ...integrationPages,
   ];
 
   return allPages.map((page) => ({
