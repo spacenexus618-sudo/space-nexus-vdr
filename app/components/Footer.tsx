@@ -4,6 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
+const spaceAiEcosystem = [
+  { name: "PMSpace", desc: "Project & Contract Management", href: "https://pmspace.ai/" },
+  { name: "Space-Sign", desc: "Digital Signing Platform", href: "https://space-sign.ai/" },
+  { name: "Space-Capture", desc: "Field Data Capture", href: "https://spacecapture.ai/" },
+  { name: "Space-Lizit", desc: "Immigration Management", href: "https://spacelizit.com/" },
+  { name: "SpaceHR", desc: "Human Resource Management", href: "https://spacehr.net/" },
+  { name: "SpaceLean", desc: "Lean Construction Scheduling", href: "https://spacelean.ai/" },
+  { name: "SpaceCRM", desc: "Customer Relationship Management", href: "https://spacecrm.net/" },
+];
+
 const vdrFooterLinks = {
   main: {
     title: "Navigation",
@@ -319,17 +329,41 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Space AI Ecosystem Strip */}
+      <div className="border-t border-gray-200 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">
+            Space AI Ecosystem
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {spaceAiEcosystem.map((product) => (
+              <a
+                key={product.name}
+                href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 hover:border-[#2563eb] hover:shadow-sm transition-all duration-200"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#2563eb] opacity-60 group-hover:opacity-100 transition-opacity" />
+                <span className="text-sm font-medium text-gray-700 group-hover:text-[#2563eb] transition-colors">
+                  {product.name}
+                </span>
+                <span className="hidden sm:inline text-xs text-gray-400 group-hover:text-gray-500 transition-colors">
+                  — {product.desc}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Bottom Bar */}
       <div className="border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()}{" "}
-              {isKindora ? "SpaceAI App - Kindora NGO OS" : "Space Nexus"}. All
-              rights reserved.
+              © {new Date().getFullYear()} Space Nexus. All rights reserved.
             </div>
-
-            {/* Legal Links */}
             <div className="flex items-center space-x-6">
               <span className="text-sm text-gray-500">Privacy Policy</span>
               <span className="text-sm text-gray-500">Terms of Service</span>
@@ -337,6 +371,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer >
+    </footer>
+
   );
 }
