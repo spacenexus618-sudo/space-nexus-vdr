@@ -12,7 +12,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/", "/private/"],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/kindora/sitemap.xml`,
+    ],
     host: baseUrl,
   };
 }

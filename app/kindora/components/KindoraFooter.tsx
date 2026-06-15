@@ -1,10 +1,22 @@
 import Link from "next/link";
 
+const spaceAiEcosystem = [
+  { name: "PMSpace", desc: "Project & Contract Management", href: "https://pmspace.ai/" },
+  { name: "Space-Sign", desc: "Digital Signing", href: "https://space-sign.ai/" },
+  { name: "Space-Capture", desc: "Field Data Capture", href: "https://spacecapture.ai/" },
+  { name: "Space-Lizit", desc: "Immigration Management", href: "https://spacelizit.com/" },
+  { name: "SpaceHR", desc: "HR Management", href: "https://spacehr.net/" },
+  { name: "SpaceLean", desc: "Lean Scheduling", href: "https://spacelean.ai/" },
+  { name: "SpaceNexus", desc: "Virtual Data Room", href: "https://spacenexus.net/" },
+  { name: "SpaceCRM", desc: "CRM Platform", href: "https://spacecrm.net/" },
+];
+
 const footerLinks = {
   product: [
     { name: "Features", href: "/kindora/features" },
     { name: "Pricing", href: "/kindora/pricing" },
     { name: "Solutions", href: "/kindora/solutions" },
+    { name: "Space AI Ecosystem", href: "/kindora/ecosystem" },
     { name: "Request Demo", href: "/kindora/contact" },
   ],
   features: [
@@ -274,6 +286,34 @@ export default function KindoraFooter() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Space AI Ecosystem Strip */}
+      <div className="border-t border-gray-800 bg-gray-900/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">
+            Space AI Ecosystem
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {spaceAiEcosystem.map((product) => (
+              <a
+                key={product.name}
+                href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 border border-gray-700 hover:border-[#2563eb] hover:bg-gray-700 transition-all duration-200"
+              >
+                <span className="w-2 h-2 rounded-full bg-[#2563eb] opacity-60 group-hover:opacity-100 transition-opacity" />
+                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                  {product.name}
+                </span>
+                <span className="hidden sm:inline text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
+                  — {product.desc}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       </div>

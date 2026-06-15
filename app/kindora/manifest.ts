@@ -12,12 +12,14 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#2563eb",
     icons: [
       {
-        src: "/kindora-icon-192.png",
+        // TODO: replace with a dedicated Kindora 192×192 icon
+        src: "/icononly_transparent_nobuffer.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/kindora-icon-512.png",
+        // TODO: replace with a dedicated Kindora 512×512 icon
+        src: "/icononly_transparent_nobuffer.png",
         sizes: "512x512",
         type: "image/png",
       },
