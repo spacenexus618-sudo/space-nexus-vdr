@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Get help when you need it with our help center, live support, and real-time system status monitoring.",
   alternates: {
-    canonical: "/features/support",
+    canonical: "https://spacenexus.net/features/support",
   },
 };
 

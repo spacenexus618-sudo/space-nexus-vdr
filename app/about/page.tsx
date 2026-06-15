@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { authorProfiles } from "../blog/data/posts";
+//about
+const teamMembers = Object.values(authorProfiles);
 
 export const metadata: Metadata = {
     title: "About Space Nexus — Enterprise Virtual Data Room",
@@ -49,6 +52,34 @@ const milestones = [
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [
+                            {
+                                "@type": "AboutPage",
+                                name: "About SpaceNexus",
+                                url: "https://spacenexus.net/about",
+                            },
+                            ...teamMembers.map((m) => ({
+                                "@type": "Person",
+                                name: m.name,
+                                jobTitle: m.role,
+                                description: m.bio,
+                                url: `https://spacenexus.net/about#${m.slug}`,
+                                sameAs: [m.linkedin],
+                                worksFor: {
+                                    "@type": "Organization",
+                                    name: "SpaceNexus",
+                                    url: "https://spacenexus.net",
+                                },
+                            })),
+                        ],
+                    }),
+                }}
+            />
             {/* Hero */}
             <section className="pt-28 pb-20 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,6 +174,51 @@ export default function AboutPage() {
                                     <div className="absolute -left-[5px] top-1 w-2 h-2 rounded-full bg-[#2563eb]" />
                                     <p className="text-sm text-gray-700">{m.event}</p>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Team */}
+            <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Built by deal professionals from Fortune 500 companies, Big 4 firms, and leading investment banks.
+                        </p>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        {teamMembers.map((member) => (
+                            <div key={member.slug} id={member.slug} className="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div
+                                        className={`w-14 h-14 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center text-white text-lg font-bold shrink-0`}
+                                    >
+                                        {member.initials}
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900">{member.name}</h3>
+                                        <p className="text-sm text-gray-500">{member.role}</p>
+                                    </div>
+                                </div>
+                                <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {member.credentials.map((cred, i) => (
+                                        <span key={i} className="text-xs font-medium text-gray-600 bg-gray-50 border border-gray-100 px-2.5 py-1 rounded-full">
+                                            {cred}
+                                        </span>
+                                    ))}
+                                </div>
+                                <a
+                                    href={member.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-medium text-[#2563eb] hover:underline"
+                                >
+                                    View LinkedIn Profile →
+                                </a>
                             </div>
                         ))}
                     </div>

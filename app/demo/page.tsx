@@ -1,12 +1,27 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import DemoRequest from "@/app/components/DemoRequest";
 
 export const metadata: Metadata = {
-  title: "Request a Demo | Space Nexus",
+  title: "Book a Free SpaceNexus Demo — Secure Virtual Data Room for Legal & M&A Teams",
   description:
-    "Schedule a personalized demo of Space Nexus Virtual Data Room. See how our enterprise platform can streamline your M&A, due diligence, and secure file sharing needs.",
+    "Request a free 30-minute SpaceNexus VDR demo. See enterprise-grade security (SOC 2, ISO 27001), real-time analytics, and AI-powered due diligence in action. 14-day free trial included.",
   alternates: {
-    canonical: "/demo",
+    canonical: "https://spacenexus.net/demo",
+  },
+  keywords: [
+    "virtual data room demo",
+    "VDR free trial",
+    "secure data room demo",
+    "SpaceNexus demo",
+    "data room for legal teams",
+    "M&A data room demo",
+  ],
+  openGraph: {
+    title: "Book a Free SpaceNexus Demo — Secure VDR for Legal & M&A Teams",
+    description:
+      "Schedule a personalized demo. Enterprise security, real-time analytics, and 14-day free trial — no credit card required.",
+    url: "https://spacenexus.net/demo",
   },
 };
 
@@ -89,9 +104,82 @@ const benefits = [
   },
 ];
 
+const demoFaqs = [
+  {
+    question: "How long is the SpaceNexus demo?",
+    answer:
+      "Our standard demo is 30 minutes. We walk you through the key features — data room setup, permission controls, Q&A workflows, and analytics — tailored to your use case. Extended sessions are available for enterprise evaluations.",
+  },
+  {
+    question: "Is there a free trial of SpaceNexus?",
+    answer:
+      "Yes! After your demo, you can start a free 14-day trial with full access to all features including unlimited storage, user permissions, and analytics. No credit card required to get started.",
+  },
+  {
+    question: "What security certifications does SpaceNexus have?",
+    answer:
+      "SpaceNexus is SOC 2 Type II certified, ISO 27001 compliant, and GDPR compliant. We use AES-256 encryption for data at rest, TLS 1.3 for data in transit, and support customer-managed encryption keys on enterprise plans.",
+  },
+  {
+    question: "Can I migrate from Datasite, Intralinks, or another VDR?",
+    answer:
+      "Absolutely. Our team provides white-glove migration services to move you from any existing VDR — including Datasite, Intralinks, and Firmex — with zero downtime. We support bulk imports and preserve your existing folder structures and permissions.",
+  },
+  {
+    question: "How much does SpaceNexus cost?",
+    answer:
+      "SpaceNexus offers flexible pricing starting with a free trial. Plans scale based on storage, users, and feature requirements. We offer special pricing for law firms and startups. Visit our pricing page or request a demo for a custom quote.",
+  },
+  {
+    question: "Is SpaceNexus suitable for law firms and legal due diligence?",
+    answer:
+      "Yes — SpaceNexus is built for legal teams handling M&A transactions, litigation holds, and regulatory compliance. Features include granular permission controls, dynamic watermarking, redaction tools, and immutable audit trails required for attorney-client privilege and SEC compliance.",
+  },
+  {
+    question: "How quickly can I set up a data room?",
+    answer:
+      "Most teams have their data room live in under 24 hours. SpaceNexus includes AI-powered document indexing, automatic folder structure templates for M&A and fundraising, and bulk upload support — so you can go from signup to sharing documents the same day.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: demoFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "SpaceNexus Virtual Data Room",
+      applicationCategory: "BusinessApplication",
+      url: "https://spacenexus.net",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "500",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
+  ],
+};
+
 export default function DemoPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="demo-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,13 +190,14 @@ export default function DemoPage() {
                 Get Started Today
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                See Space Nexus <br className="hidden sm:block" />
-                <span className="text-[#2563eb]">in Action</span>
+                Book a Free <br className="hidden sm:block" />
+                <span className="text-[#2563eb]">SpaceNexus VDR Demo</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Schedule a personalized demo with our team and discover how
-                Space Nexus can transform your due diligence, M&A, and secure
-                document sharing workflows.
+                See how SpaceNexus helps legal teams, investment banks, and PE
+                firms run secure due diligence — with SOC 2 certified security,
+                real-time analytics, and AI-powered document management. Includes
+                a 14-day free trial.
               </p>
 
               {/* Benefits */}
@@ -203,32 +292,11 @@ export default function DemoPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-600">
-              Common questions about getting started with Space Nexus.
+              Common questions about SpaceNexus demos, pricing, and getting started.
             </p>
           </div>
           <div className="space-y-4">
-            {[
-              {
-                question: "How long is the demo?",
-                answer:
-                  "Our standard demo is 30 minutes. We'll show you the key features of Space Nexus and answer any questions you have. For more in-depth walkthroughs, we can schedule extended sessions.",
-              },
-              {
-                question: "Is there a free trial?",
-                answer:
-                  "Yes! After your demo, you can start a free 14-day trial with full access to all features. No credit card required to get started.",
-              },
-              {
-                question: "What security certifications does Space Nexus have?",
-                answer:
-                  "Space Nexus is SOC 2 Type II certified, ISO 27001 compliant, and GDPR compliant. We use 256-bit AES encryption for data at rest and TLS 1.3 for data in transit.",
-              },
-              {
-                question: "Can I migrate from another VDR?",
-                answer:
-                  "Absolutely. Our team provides white-glove migration services to help you move from your existing VDR with zero downtime. We support bulk imports and maintain folder structures.",
-              },
-            ].map((faq, index) => (
+            {demoFaqs.map((faq, index) => (
               <div
                 key={index}
                 className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6"

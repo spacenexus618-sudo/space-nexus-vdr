@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Enforce no trailing slash for consistent canonical URLs
+  trailingSlash: false,
+
   // Enable gzip/brotli compression
   compress: true,
 

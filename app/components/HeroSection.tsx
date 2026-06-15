@@ -20,8 +20,7 @@ export default function HeroSection() {
             {/* Main Headline */}
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 animate-fade-in"
-              style={{ animationDelay: "0.1s" }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6"
             >
               Secure the Deal.
               <br />
@@ -30,8 +29,7 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <p
-              className="text-lg sm:text-xl text-gray-600 mb-10 animate-fade-in max-w-xl"
-              style={{ animationDelay: "0.2s" }}
+              className="text-lg sm:text-xl text-gray-600 mb-10 max-w-xl"
             >
               Enterprise-grade Virtual Data Room for high-stakes M&A
               transactions, capital raising, and secure document sharing. Built
@@ -40,8 +38,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div
-              className="flex flex-col sm:flex-row items-start gap-4 mb-12 animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
+              className="flex flex-col sm:flex-row items-start gap-4 mb-12"
             >
               <Link
                 href="/demo"
@@ -71,7 +68,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Indicator */}
-            <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <p className="text-sm text-gray-500 mb-3">
                 Built by a team from:
               </p>

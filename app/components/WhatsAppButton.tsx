@@ -1,26 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const whatsappNumber = "+17652713686";
   const message = "Hi, I'm interested in Space Nexus services.!";
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Show button after a small delay
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex items-center gap-3">
+    <div
+      className="fixed bottom-8 right-8 z-50 flex items-center gap-3 opacity-0 animate-fade-in"
+      style={{ animationDelay: "1s", animationFillMode: "forwards" }}
+    >
       {/* Tooltip/Label */}
       <div
         className="hidden md:block bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 transform transition-all duration-300 origin-right opacity-0 hover:opacity-100 translate-x-4 hover:translate-x-0 group-hover:opacity-100 group-hover:translate-x-0"

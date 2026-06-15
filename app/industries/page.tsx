@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover how Space Nexus serves Private Equity, Investment Banking, Law Firms, Real Estate, Life Sciences, Technology, Energy, and Corporate Development sectors.",
   alternates: {
-    canonical: "/industries",
+    canonical: "https://spacenexus.net/industries",
   },
 };
 

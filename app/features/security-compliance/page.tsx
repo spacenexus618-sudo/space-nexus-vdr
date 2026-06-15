@@ -1,25 +1,26 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security & Compliance — Enterprise-Grade Data Protection | Space Nexus VDR",
+  title: "Security & Compliance — SOC 2, SEC, FINRA, FCA & CCPA Compliant VDR | SpaceNexus",
   description:
-    "Space Nexus Security & Compliance provides enterprise-level security controls including MFA, document watermarking, session timeout, encrypted storage, and compliance with SOC 2 Type II, ISO 27001, GDPR, and HIPAA.",
+    "SpaceNexus Security & Compliance provides enterprise-level security controls including MFA, document watermarking, session timeout, encrypted storage, and compliance with SOC 2 Type II, ISO 27001, GDPR, UK GDPR, HIPAA, SEC, FINRA, FCA, and CCPA requirements.",
   alternates: {
     canonical: "https://spacenexus.net/features/security-compliance",
   },
   openGraph: {
-    title: "Security & Compliance — Enterprise-Grade Data Protection | Space Nexus VDR",
+    title: "Security & Compliance — SOC 2, SEC & FINRA Compliant VDR | SpaceNexus",
     description:
-      "Enterprise security controls: MFA, document watermarking, encrypted storage, session timeout, and compliance with SOC 2 Type II, ISO 27001, GDPR, and HIPAA.",
+      "Enterprise security controls: MFA, watermarking, encrypted storage, and compliance with SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC, and FINRA.",
     url: "https://spacenexus.net/features/security-compliance",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Security & Compliance — Enterprise-Grade Data Protection | Space Nexus VDR",
+    title: "Security & Compliance — SOC 2, SEC & FINRA Compliant | SpaceNexus",
     description:
-      "MFA, watermarking, encrypted storage, session controls, and regulatory compliance for secure M&A data rooms.",
+      "MFA, watermarking, encrypted storage, session controls, and US regulatory compliance (SEC, FINRA, CCPA) for secure M&A data rooms.",
   },
 };
 
@@ -86,9 +87,43 @@ const features = [
   },
 ];
 
+const secCompFaqs = [
+  {
+    question: "What compliance certifications does SpaceNexus hold?",
+    answer: "SpaceNexus holds SOC 2 Type II certification, ISO 27001 accreditation, and is fully GDPR and UK GDPR compliant. We also support SEC Rule 17a-4, FINRA requirements, FCA regulatory standards, CCPA, and HIPAA-compliant configurations for healthcare transactions.",
+  },
+  {
+    question: "How does SpaceNexus handle document watermarking?",
+    answer: "SpaceNexus applies dynamic watermarks that display the viewer's name, email, IP address, and access timestamp on every document page. Watermarks are rendered server-side and cannot be removed — deterring unauthorized sharing and providing forensic traceability.",
+  },
+  {
+    question: "Can SpaceNexus generate compliance audit reports?",
+    answer: "Yes. SpaceNexus provides immutable, timestamped audit logs tracking every user action — document views, downloads, prints, permission changes, and login events. These logs can be exported as compliance reports for SEC filings, litigation holds, and regulatory reviews.",
+  },
+  {
+    question: "Does SpaceNexus support IP whitelisting and geo-restrictions?",
+    answer: "Yes. Enterprise plans include IP whitelisting, geo-based access restrictions, and device management policies. You can restrict data room access to specific office networks, countries, or approved devices for maximum security.",
+  },
+];
+
+const secCompFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: secCompFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export default function SecurityCompliancePage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="sec-comp-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(secCompFaqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -311,6 +346,24 @@ export default function SecurityCompliancePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Security &amp; Compliance FAQ</h2>
+            <p className="text-lg text-gray-600">Common questions about SpaceNexus certifications, encryption, and compliance.</p>
+          </div>
+          <div className="space-y-4">
+            {secCompFaqs.map((faq, i) => (
+              <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>
