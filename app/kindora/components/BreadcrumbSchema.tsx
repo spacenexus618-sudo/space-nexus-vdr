@@ -72,7 +72,7 @@ export default function BreadcrumbSchema() {
             id={scriptId}
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
         />
     );
 }
