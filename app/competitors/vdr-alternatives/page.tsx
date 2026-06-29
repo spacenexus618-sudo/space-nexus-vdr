@@ -3,22 +3,21 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Best Virtual Data Room Providers 2025 — VDR Comparison & Alternatives | SpaceNexus",
-    description:
-        "Compare the best virtual data room providers for 2025. Side-by-side VDR comparison of SpaceNexus, Datasite, Intralinks, Merrill, Firmex, and iDeals — pricing, features, security, and best use cases.",
+    title: "VDR Alternatives 2026 | SpaceNexus",
+    description: "Compare the top 7 alternatives to legacy VDR providers. Modern UX, transparent pricing, AI included.",
     alternates: {
         canonical: "https://spacenexus.net/competitors/vdr-alternatives",
     },
     openGraph: {
-        title: "Best Virtual Data Room Providers 2025 — VDR Comparison",
+        title: "VDR Alternatives 2026 | SpaceNexus",
         description:
-            "The definitive VDR comparison guide. Compare pricing, security, features, and compliance across 6 top virtual data room providers.",
+            "Compare the top 7 alternatives to legacy VDR providers. Modern UX, transparent pricing,...",
         url: "https://spacenexus.net/competitors/vdr-alternatives",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Best Virtual Data Room Providers 2025 — VDR Comparison | SpaceNexus",
+        title: "Best Virtual Data Room Providers 2026 — VDR Comparison | SpaceNexus",
         description:
             "Side-by-side comparison of the top virtual data room providers. Pricing, features, security, and use case recommendations.",
     },
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
         "Datasite alternative",
         "Intralinks alternative",
         "virtual data room pricing",
-        "VDR comparison 2025",
+        "VDR comparison 2026",
         "top virtual data rooms",
         "data room software comparison",
     ],
@@ -41,7 +40,7 @@ const providers = [
     {
         name: "SpaceNexus",
         tagline: "AI-powered VDR for modern deal teams",
-        pricing: "From $149/mo",
+        pricing: "Transparent pricing",
         pricingNote: "Transparent, public pricing",
         bestFor: "M&A due diligence, legal teams, startups raising capital",
         pros: [
@@ -64,7 +63,7 @@ const providers = [
         name: "Datasite (fka Merrill Datasites)",
         tagline: "Legacy enterprise VDR for large-cap M&A",
         pricing: "Quote only",
-        pricingNote: "Typically $15,000–$50,000+ per deal",
+        pricingNote: "Typically tens of thousands per deal",
         bestFor: "Large-cap M&A ($500M+ deals), bulge bracket banks",
         pros: [
             "Established brand in investment banking",
@@ -86,7 +85,7 @@ const providers = [
         name: "Intralinks (SS&C)",
         tagline: "Capital markets-focused VDR",
         pricing: "Quote only",
-        pricingNote: "Typically $10,000–$40,000+ per deal",
+        pricingNote: "Typically tens of thousands per deal",
         bestFor: "Capital raising, syndicated lending, fund administration",
         pros: [
             "Strong capital markets workflow tools",
@@ -107,7 +106,7 @@ const providers = [
     {
         name: "Firmex",
         tagline: "Mid-market Canadian VDR",
-        pricing: "From ~$500/mo",
+        pricing: "Quote-based",
         pricingNote: "Per-project pricing available",
         bestFor: "Mid-market M&A, Canadian and European deals",
         pros: [
@@ -128,7 +127,7 @@ const providers = [
     {
         name: "iDeals",
         tagline: "European VDR for cross-border deals",
-        pricing: "From ~$400/mo",
+        pricing: "Quote-based",
         pricingNote: "Per-project or subscription",
         bestFor: "European cross-border M&A, mid-market transactions",
         pros: [
@@ -149,7 +148,7 @@ const providers = [
     {
         name: "Ansarada",
         tagline: "Australia-based VDR with deal workflow tools",
-        pricing: "From ~$449/mo",
+        pricing: "Quote-based",
         pricingNote: "Subscription-based",
         bestFor: "Asia-Pacific deals, board governance",
         pros: [
@@ -191,14 +190,14 @@ const providerNames = ["SpaceNexus", "Datasite", "Intralinks", "Firmex", "iDeals
 
 const faqItems = [
     {
-        question: "What is the best virtual data room for M&A in 2025?",
+        question: "What is the best virtual data room for M&A in 2026?",
         answer:
-            "The best virtual data room for M&A depends on your deal size and requirements. For mid-market and growth-stage M&A, SpaceNexus offers the best combination of AI-powered features, transparent pricing (from $149/mo), and rapid setup. For large-cap deals ($500M+) at bulge bracket banks, Datasite and Intralinks remain established choices — though at significantly higher price points with opaque quote-based pricing.",
+            "The best virtual data room for M&A depends on your deal size and requirements. For mid-market and growth-stage M&A, SpaceNexus offers the best combination of AI-powered features, transparent published pricing, and rapid setup. For large-cap deals ($500M+) at bulge bracket banks, Datasite and Intralinks remain established choices — though at significantly higher price points with opaque quote-based pricing.",
     },
     {
         question: "How much does a virtual data room cost?",
         answer:
-            "VDR pricing varies widely. SpaceNexus starts at $149/month with transparent, published pricing and no per-page fees. Datasite and Intralinks typically cost $10,000–$50,000+ per deal with quote-only pricing. Mid-market providers like Firmex and iDeals range from $400–$500/month. Key factors affecting cost include storage, number of users, deal duration, and add-on features like AI redaction.",
+            "VDR pricing varies widely. SpaceNexus offers transparent, published monthly pricing with no per-page fees. Datasite and Intralinks typically cost tens of thousands per deal with quote-only pricing. Mid-market providers like Firmex and iDeals use quote-based subscription or per-project pricing. Key factors affecting cost include storage, number of users, deal duration, and add-on features like AI redaction.",
     },
     {
         question: "What should I look for when comparing virtual data room providers?",
@@ -208,7 +207,7 @@ const faqItems = [
     {
         question: "Is SpaceNexus a good alternative to Datasite?",
         answer:
-            "Yes. SpaceNexus is the leading modern alternative to Datasite for M&A due diligence. It offers AI-powered document redaction and auto-categorization as standard features (not expensive add-ons), transparent pricing starting at $149/month (vs. Datasite's opaque enterprise quotes), and setup in under 24 hours (vs. days with Datasite). Both platforms are SOC 2 Type II certified.",
+            "Yes. SpaceNexus is the leading modern alternative to Datasite for M&A due diligence. It offers AI-powered document redaction and auto-categorization as standard features (not expensive add-ons), transparent published pricing (vs. Datasite's opaque enterprise quotes), and setup in under 24 hours (vs. days with Datasite). Both platforms are SOC 2 Type II certified.",
     },
     {
         question: "Which VDR providers are compliant with SEC and FINRA regulations?",
@@ -233,7 +232,7 @@ const breadcrumbSchema = {
     itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Competitors", item: "https://spacenexus.net/competitors" },
-        { "@type": "ListItem", position: 3, name: "Best VDR Providers 2025", item: "https://spacenexus.net/competitors/vdr-alternatives" },
+        { "@type": "ListItem", position: 3, name: "Best VDR Providers 2026", item: "https://spacenexus.net/competitors/vdr-alternatives" },
     ],
 };
 
@@ -251,17 +250,17 @@ export default function VdrAlternativesPage() {
                                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                 </svg>
-                                2025 Comparison Guide
+                                2026 Comparison Guide
                             </div>
                             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Best Virtual Data Room Providers{" "}
-                                <span className="text-[#2563eb]">Compared for 2025</span>
+                                <span className="text-[#2563eb]">Compared for 2026</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Choosing the right VDR can make or break your deal timeline. We compared pricing, security, AI features, and compliance across the six most-used virtual data room providers — so you don&apos;t have to request six demo calls to find out.
                             </p>
                             <p className="text-base text-gray-500 mb-10 leading-relaxed">
-                                Last updated: April 2025. This guide covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada.
+                                Last updated: June 2026. This guide covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
@@ -498,6 +497,26 @@ export default function VdrAlternativesPage() {
                     </div>
                 </section>
 
+                {/* Related Links */}
+                <section className="py-10 bg-[#f8f9fa] border-t border-gray-100">
+                    <div className="max-w-4xl mx-auto px-4 text-center">
+                        <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
+                        <div className="flex flex-wrap gap-3 justify-center">
+                            <Link href="/best-data-room-for-startups" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                                Best Data Room for Startups (2026 Ranking) →
+                            </Link>
+                            <span className="text-gray-300">|</span>
+                            <Link href="/competitors/datasite-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                                SpaceNexus vs Datasite →
+                            </Link>
+                            <span className="text-gray-300">|</span>
+                            <Link href="/competitors/intralinks-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                                SpaceNexus vs Intralinks →
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
                 {/* CTA */}
                 <section className="py-16 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-3xl mx-auto px-4 text-center">
@@ -505,7 +524,7 @@ export default function VdrAlternativesPage() {
                             Ready to see why deal teams are switching to SpaceNexus?
                         </h2>
                         <p className="text-gray-600 mb-8">
-                            AI-powered redaction. Transparent pricing from $149/mo. Setup in under 24 hours. SOC 2 Type II certified. No annual lock-in.
+                            AI-powered redaction. Transparent published pricing. Setup in under 24 hours. SOC 2 Type II certified. No annual lock-in.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">

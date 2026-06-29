@@ -1,0 +1,78 @@
+Section,Category,Item,Required,Notes
+Architecture & Infrastructure,System,High-level system architecture diagram,Y,Current state architecture
+Architecture & Infrastructure,System,Network topology and segmentation diagram,Y,Network zones and controls
+Architecture & Infrastructure,System,Data flow diagrams (key workflows),Y,For sensitive data flows
+Architecture & Infrastructure,Hosting,Cloud provider(s) and regions,Y,AWS / Azure / GCP / hybrid
+Architecture & Infrastructure,Hosting,Production vs. non-production separation,Y,Environment controls
+Architecture & Infrastructure,Hosting,Disaster recovery site / region,Y,Multi-region redundancy
+Architecture & Infrastructure,Hosting,Single points of failure analysis,Y,Critical infrastructure dependencies
+Architecture & Infrastructure,Hosting,Capacity utilization and scaling triggers,N,Current and projected capacity
+Architecture & Infrastructure,Data,Database technologies and versions,Y,All production databases
+Architecture & Infrastructure,Data,Data retention policies (per data type),Y,Retention and deletion procedures
+Architecture & Infrastructure,Data,Backup strategy and frequency,Y,Backup procedures and testing
+Architecture & Infrastructure,Data,Backup restoration testing history,N,Most recent DR test results
+Architecture & Infrastructure,Data,Encryption at rest (per data store),Y,Algorithm and key management
+Architecture & Infrastructure,Data,Encryption in transit (per service),Y,TLS version and configuration
+Architecture & Infrastructure,Data,Key management procedures,Y,"KMS, key rotation, access controls"
+Software Development,Code,Source code repository platform,Y,GitHub / GitLab / Bitbucket
+Software Development,Code,Code review and approval process,Y,Required reviewers and checks
+Software Development,Code,Code quality tooling and metrics,N,"Linters, code coverage, static analysis"
+Software Development,Code,Technical debt documentation,N,Known issues and remediation plans
+Software Development,DevOps,CI/CD platform and pipeline,Y,"Build, test, deploy automation"
+Software Development,DevOps,Deployment frequency and lead time,N,DORA metrics
+Software Development,DevOps,Mean time to recovery (MTTR),N,Incident recovery performance
+Software Development,DevOps,Change failure rate,N,Deployment failure metrics
+Software Development,DevOps,Infrastructure as code (IaC) coverage,N,Terraform / CloudFormation usage
+Software Development,Testing,Test automation coverage,N,"Unit, integration, E2E coverage"
+Software Development,Testing,Performance testing procedures,N,Load and stress testing
+Software Development,Testing,Security testing in SDLC,N,"SAST, DAST, dependency scanning"
+Security & Compliance,Certifications,SOC 2 Type II report (most recent),Y,Full report with auditor opinion
+Security & Compliance,Certifications,SOC 2 bridge letter,N,Gap period coverage
+Security & Compliance,Certifications,ISO 27001 certificate,N,If applicable
+Security & Compliance,Certifications,HITRUST certification,N,For healthcare
+Security & Compliance,Certifications,PCI DSS AOC,N,For payment card processing
+Security & Compliance,Certifications,FedRAMP authorization,N,For federal government
+Security & Compliance,Testing,Penetration test report (most recent),Y,External pen test by third party
+Security & Compliance,Testing,Internal vulnerability scan results,Y,Authenticated and unauthenticated
+Security & Compliance,Testing,Remediation status of findings,Y,For pen test and vulnerability findings
+Security & Compliance,Testing,Red team exercises,N,If performed
+Security & Compliance,Controls,Information security policy,Y,Master information security policy
+Security & Compliance,Controls,Acceptable use policy,Y,For employees and contractors
+Security & Compliance,Controls,Access control policy,Y,User access management procedures
+Security & Compliance,Controls,Privileged access management,Y,Admin and root access controls
+Security & Compliance,Controls,Password policy and MFA enforcement,Y,Authentication standards
+Security & Compliance,Controls,Endpoint protection (EDR),Y,Laptop and server protection
+Security & Compliance,Controls,"Email security (anti-phishing, DLP)",Y,Email protection controls
+Security & Compliance,Controls,Patch management procedures,Y,Vulnerability remediation SLAs
+Security & Compliance,Controls,Security awareness training program,N,Employee training and phishing simulation
+Security & Compliance,Controls,Third-party security risk management,N,Vendor security assessment program
+Security & Compliance,Incident Response,Incident response plan,Y,Documented IR procedures and runbooks
+Security & Compliance,Incident Response,Data breach history (5 years),Y,All incidents and outcomes
+Security & Compliance,Incident Response,Tabletop exercise results,N,Most recent IR exercise
+Security & Compliance,Incident Response,Cyber insurance policy,Y,Coverage and limits
+Security & Compliance,Monitoring,SIEM / log management platform,Y,Centralized logging and monitoring
+Security & Compliance,Monitoring,SOC monitoring (24x7),N,Internal or outsourced SOC
+Security & Compliance,Monitoring,Anomaly detection and alerting,N,"User behavior analytics, threat detection"
+Data Privacy,Compliance,Privacy policy (current),Y,Public-facing privacy policy
+Data Privacy,Compliance,Cookie policy and consent management,Y,For websites and applications
+Data Privacy,Compliance,Data subject rights procedures,Y,DSAR response procedures
+Data Privacy,Compliance,Data Processing Agreements (vendor),Y,All material data processors
+Data Privacy,Compliance,Data Processing Addendums (customer),Y,For all customer contracts
+Data Privacy,Compliance,Records of processing activities (ROPA),N,GDPR Article 30 documentation
+Data Privacy,Compliance,Data Protection Impact Assessments (DPIAs),N,For high-risk processing
+Data Privacy,Compliance,Cross-border transfer mechanisms (SCCs),N,For non-adequate jurisdictions
+Data Privacy,Compliance,Privacy notice and consent flows,Y,In-app and on website
+Data Privacy,Data,Personal data inventory,Y,Categories of personal data processed
+Data Privacy,Data,Data minimization procedures,N,How personal data is limited
+Data Privacy,Data,Data retention and deletion procedures,Y,Per data category
+Data Privacy,Data,Data lineage and flow documentation,N,For personal data flows
+Product & Engineering Team,Team,Engineering team structure,Y,"Teams, reporting, locations"
+Product & Engineering Team,Team,Engineering team attrition (24 months),Y,Key person risk
+Product & Engineering Team,Team,Key technical leaders (org chart),Y,For retention planning
+Product & Engineering Team,Product,Product roadmap (12-24 months),Y,Strategic direction
+Product & Engineering Team,Product,Product analytics and usage data,N,"MAU, DAU, engagement metrics"
+Product & Engineering Team,Product,Customer feedback and NPS,N,Product satisfaction signals
+Product & Engineering Team,Product,Technical support metrics,N,"Ticket volume, resolution time"
+Product & Engineering Team,Vendor,Critical technology vendors,Y,List of material technology vendors
+Product & Engineering Team,Vendor,Vendor concentration risk,Y,Spend and dependency analysis
+Product & Engineering Team,Vendor,Vendor SOC 2 reports (where available),N,Third-party security assurance

@@ -2,15 +2,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Free Due Diligence Checklists — M&A & Series A Templates | Space Nexus",
-    description:
-        "Download free, comprehensive due diligence checklists for M&A transactions and Series A fundraising. Includes 40+ item M&A checklist and 25-item startup Series A prep checklist. Execute them securely in Space Nexus.",
+    title: "Free Due Diligence Checklists | SpaceNexus",
+    description: "Free M&A and Series A due diligence checklists. 40+ M&A items, 25 Series A items, organized by workstream.",
     alternates: {
         canonical: "https://spacenexus.net/checklists",
     },
     openGraph: {
-        title: "Free Due Diligence Checklists — M&A & Series A | Space Nexus",
-        description: "Free downloadable M&A due diligence checklist (40+ items) and Series A fundraising data room checklist (25 items). Built for deal teams.",
+        title: "Free Due Diligence Checklists | SpaceNexus",
+        description: "Free M&A and Series A due diligence checklists. 40+ M&A items, 25 Series A items, organ...",
         url: "https://spacenexus.net/checklists",
     },
     keywords: [
@@ -288,6 +287,34 @@ export default function ChecklistsPage() {
                 </div>
             </section>
 
+            {/* Downloadable Templates CTA */}
+            <section className="py-12 bg-white border-t border-gray-100">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <Link
+                        href="/checklists/templates"
+                        className="group block bg-gradient-to-br from-blue-50 to-white rounded-2xl border-2 border-blue-200 hover:border-blue-400 p-7 sm:p-9 transition-all duration-200 hover:shadow-lg"
+                    >
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                            <div>
+                                <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-2">Free Downloads</p>
+                                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 group-hover:text-[#2563eb] transition-colors mb-2">
+                                    Need editable CSV templates?
+                                </h2>
+                                <p className="text-gray-600 max-w-2xl">
+                                    Download 8 professional-grade due diligence templates — buy-side &amp; sell-side checklists, financial and legal workbooks, tech diligence, Q&amp;A tracker, and risk register. CSV format, opens in Excel or Google Sheets.
+                                </p>
+                            </div>
+                            <div className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#2563eb] text-white text-sm font-semibold rounded-full group-hover:bg-[#1d4ed8] transition-colors">
+                                Browse templates
+                                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
             {/* Why Space Nexus */}
             <section className="py-14 bg-white border-t border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -325,9 +352,9 @@ export default function ChecklistsPage() {
                     <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Resources</p>
                     <div className="grid md:grid-cols-3 gap-4">
                         {[
-                            { title: "M&A Due Diligence Checklist 2025 — Full Guide", href: "/blog/ma-due-diligence-checklist-2025", label: "Blog" },
+                            { title: "Due Diligence Checklist 2026 — Complete Guide (200+ Items)", href: "/checklists/due-diligence-checklist", label: "Guide" },
+                            { title: "Free DD Templates + Investor Data Room Checklists (CSV)", href: "/checklists/templates", label: "Templates" },
                             { title: "M&A VDR — Virtual Data Room for Mergers", href: "/solutions/mergers-and-acquisitions-vdr", label: "Solution" },
-                            { title: "M&A & Due Diligence Glossary", href: "/glossary", label: "Glossary" },
                         ].map((post) => (
                             <Link key={post.href} href={post.href} className="group flex flex-col p-5 border border-gray-200 bg-white rounded-xl hover:border-[#2563eb]/30 hover:shadow-md transition-all duration-200">
                                 <span className="text-xs font-semibold text-[#2563eb] mb-2">{post.label}</span>

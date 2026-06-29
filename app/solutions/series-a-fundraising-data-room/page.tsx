@@ -1,16 +1,16 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Series A Fundraising Data Room — Startup Due Diligence VDR | Space Nexus",
-    description:
-        "The data room startups use to close Series A rounds. Organize your investor materials, control VC access, track engagement, and answer due diligence questions — all in one secure platform.",
+    title: "Series A Fundraising Data Room | SpaceNexus",
+    description: "Purpose-built VDR for Series A raises. Organize investor materials, control VC access, track engagement, and manage due diligence Q&A.",
     alternates: {
         canonical: "https://spacenexus.net/solutions/series-a-fundraising-data-room",
     },
     openGraph: {
-        title: "Series A Fundraising Data Room — Space Nexus",
-        description: "Launch a professional investor data room in under an hour. Space Nexus helps startups close Series A rounds faster with organized due diligence materials and real-time VC engagement tracking.",
+        title: "Series A Fundraising Data Room | SpaceNexus",
+        description: "Purpose-built VDR for Series A raises. Organize investor materials, control VC access, ...",
         url: "https://spacenexus.net/solutions/series-a-fundraising-data-room",
     },
     keywords: [
@@ -56,9 +56,56 @@ const steps = [
     },
 ];
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Series A Fundraising Data Room",
+    description: "A purpose-built virtual data room for Series A fundraising. Organize investor materials, control VC access with NDA workflows, track engagement, and manage due diligence Q&A in one secure platform.",
+    url: "https://spacenexus.net/solutions/series-a-fundraising-data-room",
+    serviceType: "Virtual Data Room",
+    provider: {
+        "@type": "Organization",
+        name: "SpaceNexus",
+        url: "https://spacenexus.net",
+    },
+    areaServed: { "@type": "Place", name: "Worldwide" },
+    audience: {
+        "@type": "BusinessAudience",
+        audienceType: "Startups raising Series A",
+    },
+    offers: {
+        "@type": "Offer",
+        url: "https://spacenexus.net/pricing",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "USD",
+        description: "Contact for pricing tailored to round size and investor count.",
+    },
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Solutions", item: "https://spacenexus.net/solutions" },
+        { "@type": "ListItem", position: 3, name: "Series A Fundraising Data Room", item: "https://spacenexus.net/solutions/series-a-fundraising-data-room" },
+    ],
+};
+
 export default function SeriesADataRoomPage() {
     return (
-        <main className="pt-20 lg:pt-24">
+        <>
+            <Script
+                id="series-a-service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
+            <Script
+                id="series-a-breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <main className="pt-20 lg:pt-24">
             {/* Hero */}
             <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,6 +234,30 @@ export default function SeriesADataRoomPage() {
                 </div>
             </section>
 
+            {/* Related Links */}
+            <section className="py-10 bg-white border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        <Link href="/best-data-room-for-startups" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Best Data Room for Startups (2026 Ranking) →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/solutions/startup-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Startup Data Room →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/solutions/investor-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Investor Data Room Guide →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/checklists/due-diligence-checklist" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Due Diligence Checklist (200+ items) →
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="py-16 bg-[#f8f9fa]">
                 <div className="max-w-3xl mx-auto px-4 text-center">
@@ -199,6 +270,59 @@ export default function SeriesADataRoomPage() {
                     <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular access control</p>
                 </div>
             </section>
-        </main>
+                    {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/investor-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">General-purpose investor VDR.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Investor data room →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/startup-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Founder-friendly platform.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Startup data room →</h3>
+                        </Link>
+                        <Link
+                            href="/checklists/investor-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Pre-Seed, Seed, and Series B+ indexes.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free investor data room templates →</h3>
+                        </Link>
+                        <Link
+                            href="/checklists"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">M&A and Series A checklists.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free due diligence checklists →</h3>
+                        </Link>
+                        <Link
+                            href="/blog/how-to-set-up-virtual-data-room-series-a"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Step-by-step guide.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">How to set up a Series A data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/technology"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Source code, IP, and AI diligence workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For technology companies →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
+        </>
     );
 }

@@ -1,0 +1,65 @@
+Section,Subfolder,Document,Required,Notes
+01. Executive Summary,01.1 Pitch,"Pitch deck (8-12 slides, PDF)",Y,Primary marketing document
+01. Executive Summary,01.1 Pitch,One-pager (single page summary),Y,For quick investor review
+01. Executive Summary,01.1 Pitch,Founder LinkedIn profiles,Y,Background credibility
+01. Executive Summary,01.1 Pitch,Product demo video or live link,Y,Walk through the product
+01. Executive Summary,01.2 Company,Company mission and vision,Y,Concise statement
+01. Executive Summary,01.2 Company,What problem are you solving?,Y,Customer pain point
+01. Executive Summary,01.2 Company,What is your solution?,Y,Product / approach
+02. Company & Formation,02.1 Corporate,Certificate of incorporation,Y,Foundation document
+02. Company & Formation,02.1 Corporate,Bylaws or operating agreement,Y,Current governance docs
+02. Company & Formation,02.1 Corporate,EIN confirmation letter,Y,Tax ID verification
+02. Company & Formation,02.1 Corporate,Foreign qualifications (if any),N,For multi-state operations
+02. Company & Formation,02.2 Cap Table,Cap table (current),Y,"Founders, advisors, ESOP"
+02. Company & Formation,02.2 Cap Table,Stock ledger,Y,All issuances to date
+02. Company & Formation,02.2 Cap Table,Founder vesting schedules,Y,Vesting terms and cliffs
+02. Company & Formation,02.2 Cap Table,83(b) elections (filed),N,For founder stock
+02. Company & Formation,02.3 Funding,List of prior investments (if any),N,"Friends, family, FFF"
+02. Company & Formation,02.3 Funding,SAFE / convertible note agreements,N,For pre-seed rounds
+02. Company & Formation,02.3 Funding,Form D filings (if any),N,For private placements
+02. Company & Formation,02.4 Equity Plan,Equity incentive plan (basic),N,Stock option plan for hires
+02. Company & Formation,02.4 Equity Plan,409A valuation (if obtained),N,For option strike prices
+03. Product & Technology,03.1 Product,Product demo or screenshots,Y,Current product state
+03. Product & Technology,03.1 Product,Product roadmap (next 6-12 months),Y,Planned features and milestones
+03. Product & Technology,03.1 Product,Key product metrics,Y,"Users, engagement, retention"
+03. Product & Technology,03.1 Product,User testimonials (3-5),N,Quotes from early users
+03. Product & Technology,03.2 Tech,Tech stack summary,Y,"Languages, frameworks, services"
+03. Product & Technology,03.2 Tech,Hosting and infrastructure summary,Y,Cloud providers used
+03. Product & Technology,03.2 Tech,GitHub / GitLab profile (public),N,For technical credibility
+03. Product & Technology,03.3 IP,IP assignment from founders,Y,Critical for clean ownership
+03. Product & Technology,03.3 IP,IP assignment from any employees,N,Standard PIIA
+03. Product & Technology,03.3 IP,Open source license audit,N,For any OSS dependencies
+04. Market & Customers,04.1 Market,"Market size estimate (TAM, SAM, SOM)",Y,Bottom-up analysis
+04. Market & Customers,04.1 Market,Target customer profile,Y,ICP and personas
+04. Market & Customers,04.1 Market,Competitive landscape,Y,Key competitors
+04. Market & Customers,04.1 Market,Why now? Market timing,Y,Why this opportunity
+04. Market & Customers,04.2 Customers,List of early users / design partners,Y,If available
+04. Market & Customers,04.2 Customers,Customer case study or testimonials,N,Validation of product-market fit
+04. Market & Customers,04.2 Customers,Waitlist or pre-registration list,N,If applicable
+04. Market & Customers,04.2 Customers,Letters of intent or pilot agreements,N,For B2B products
+04. Market & Customers,04.3 Traction,Weekly active users / monthly active users,Y,Engagement metrics
+04. Market & Customers,04.3 Traction,Conversion or activation rates,N,Funnel metrics
+04. Market & Customers,04.3 Traction,Revenue (if any),Y,Including pilots and pilots-to-paid
+05. Financials,05.1 Burn & Runway,Current cash on hand,Y,Bank balance
+05. Financials,05.1 Burn & Runway,Monthly burn rate,Y,Operating expenses
+05. Financials,05.1 Burn & Runway,Months of runway remaining,Y,At current burn
+05. Financials,05.2 Use of Funds,Use of funds breakdown,Y,How the pre-seed will be spent
+05. Financials,05.2 Use of Funds,Milestone plan (next 12-18 months),Y,What the funds will achieve
+05. Financials,05.3 Forecasts,High-level projections (12-18 months),N,Light projections at this stage
+05. Financials,05.3 Forecasts,Key assumptions underlying projections,N,For investor review
+06. Team,06.1 Founders,Founder bios and backgrounds,Y,Detailed backgrounds
+06. Team,06.1 Founders,Why this team? Domain expertise,Y,Unique insight or experience
+06. Team,06.1 Founders,Prior startup experience (if any),Y,Previous exits or operating roles
+06. Team,06.1 Founders,Relevant industry experience,Y,Why you are the right team
+06. Team,06.2 Advisors,List of formal advisors,N,With equity and terms
+06. Team,06.2 Advisors,Advisor agreements (sample),N,Standard advisor agreement
+06. Team,06.2 Advisors,Why each advisor is relevant,N,How they help the company
+06. Team,06.3 Hiring,Key hires planned post-funding,N,Critical roles to fill
+06. Team,06.3 Hiring,Compensation philosophy (high level),N,Salary + equity approach
+07. Legal & Compliance,07.1 Contracts,Standard customer agreement / ToS,N,If product is live
+07. Legal & Compliance,07.1 Contracts,Material vendor contracts,N,Significant engagements
+07. Legal & Compliance,07.2 Compliance,Privacy policy (public),Y,For any user-facing product
+07. Legal & Compliance,07.2 Compliance,Terms of service (public),Y,For any user-facing product
+07. Legal & Compliance,07.2 Compliance,GDPR / CCPA compliance (if applicable),N,For any data processing
+07. Legal & Compliance,07.3 Disputes,Any pending or threatened litigation,Y,Full disclosure required
+07. Legal & Compliance,07.4 Insurance,Insurance policies in place,N,"General liability, E&O if available"

@@ -2,9 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support - Customer Success | Space Nexus",
-  description:
-    "Get help when you need it with our help center, live support, and real-time system status monitoring.",
+  title: "VDR Support & Onboarding | SpaceNexus",
+  description: "24/7 support, dedicated deal support, onboarding help, and security reviews. Get your data room live fast.",
   alternates: {
     canonical: "https://spacenexus.net/features/support",
   },

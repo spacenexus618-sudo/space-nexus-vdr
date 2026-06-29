@@ -3,14 +3,13 @@ import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Pricing — Space Nexus Virtual Data Room",
-    description:
-        "Flexible pricing for every deal size. Space Nexus VDR plans for startups raising capital to Fortune 500 M&A teams. Start free, scale as you grow.",
+    title: "Transparent VDR Pricing | SpaceNexus",
+    description: "Flat-rate VDR pricing with no per-page fees. Self-serve, team, and enterprise plans. See what is included.",
     alternates: { canonical: "https://spacenexus.net/pricing" },
     openGraph: {
-        title: "Pricing — Space Nexus Virtual Data Room",
+        title: "Transparent VDR Pricing | SpaceNexus",
         description:
-            "Transparent VDR pricing for every deal size. No hidden fees. Cancel anytime.",
+            "Flat-rate VDR pricing with no per-page fees. Self-serve, team, and enterprise plans. Se...",
         url: "https://spacenexus.net/pricing",
     },
 };

@@ -3,16 +3,15 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security & Compliance — SOC 2, SEC, FINRA, FCA & CCPA Compliant VDR | SpaceNexus",
-  description:
-    "SpaceNexus Security & Compliance provides enterprise-level security controls including MFA, document watermarking, session timeout, encrypted storage, and compliance with SOC 2 Type II, ISO 27001, GDPR, UK GDPR, HIPAA, SEC, FINRA, FCA, and CCPA requirements.",
+  title: "Security & Compliance Features | SpaceNexus",
+  description: "SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4. Enterprise-grade security for sensitive deal documents.",
   alternates: {
     canonical: "https://spacenexus.net/features/security-compliance",
   },
   openGraph: {
-    title: "Security & Compliance — SOC 2, SEC & FINRA Compliant VDR | SpaceNexus",
+    title: "Security & Compliance Features | SpaceNexus",
     description:
-      "Enterprise security controls: MFA, watermarking, encrypted storage, and compliance with SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC, and FINRA.",
+      "SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4. Enterprise-grade security for sensiti...",
     url: "https://spacenexus.net/features/security-compliance",
     type: "website",
   },

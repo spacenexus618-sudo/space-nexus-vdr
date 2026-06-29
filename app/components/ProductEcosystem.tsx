@@ -118,7 +118,7 @@ export default function ProductEcosystem() {
             Product Ecosystem
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Everything You Need for Secure Deals
+            Everything Your Virtual Data Room Needs for Secure Deals
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A comprehensive suite of 12 integrated modules designed to

@@ -128,7 +128,7 @@ export default function VDRScreenshotGallery() {
                         Real Product Screenshots
                     </p>
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                        See Space Nexus in action
+                        See our virtual data room in action
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         No mock-ups. No stock art. Every screen you see is the live Space
@@ -252,7 +252,7 @@ export default function VDRScreenshotGallery() {
                             <div className="relative border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/15">
                                 <Image
                                     src={active.image}
-                                    alt={`Space Nexus ${active.label} screenshot`}
+                                    alt={`SpaceNexus virtual data room ${active.label.toLowerCase()} interface for secure deal collaboration`}
                                     width={1280}
                                     height={800}
                                     className="w-full h-auto object-cover object-top"

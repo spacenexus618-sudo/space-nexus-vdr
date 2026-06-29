@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Virtual Data Room for Canada — PIPEDA Compliant Secure Document Sharing | SpaceNexus",
-  description:
-    "The virtual data room built for Canadian law firms, investment banks, and PE firms. PIPEDA compliant, SOC 2 Type II certified, with support for TSX-listed company transactions, Canadian M&A workflows, and bilingual document management.",
+  title: "Virtual Data Room for Canada | SpaceNexus",
+  description: "PIPEDA-compliant VDR for Canadian M&A, PE, and real estate. SOC 2 certified with Canadian data residency options.",
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-canada",
   },
   openGraph: {
-    title: "Virtual Data Room for Canada — PIPEDA Compliant | SpaceNexus",
+    title: "Virtual Data Room for Canada | SpaceNexus",
     description:
-      "Secure data room for Canadian M&A, capital markets, and legal due diligence. PIPEDA, CASL, and provincial privacy law compliant.",
+      "PIPEDA-compliant VDR for Canadian M&A, PE, and real estate. SOC 2 certified with Canadi...",
     url: "https://spacenexus.net/solutions/virtual-data-room-canada",
   },
   keywords: [
@@ -116,9 +116,39 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Virtual Data Room for Canada",
+  description: "PIPEDA-compliant virtual data room for Canadian M&A, capital markets, mining, real estate, and PE transactions. SOC 2 certified with Canadian data residency options.",
+  url: "https://spacenexus.net/solutions/virtual-data-room-canada",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Canada",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "CAD",
+    description: "Contact for pricing tailored to transaction size and document volume.",
+  },
+};
+
 export default function CanadaVDRPage() {
   return (
     <>
+      <Script
+        id="canada-vdr-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -304,6 +334,51 @@ export default function CanadaVDRPage() {
           </div>
         </div>
       </section>
-    </>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">PIPEDA-compliant M&A workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/investor-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Canadian-resident investor comms.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Investor data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">TSX-listed and PE deals.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/real-estate"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">REIT and CRE due diligence.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For real estate →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/energy-infrastructure"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Mining, oil & gas, and infrastructure.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For energy & infrastructure →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</>
   );
 }

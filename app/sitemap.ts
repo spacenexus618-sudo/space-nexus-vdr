@@ -18,12 +18,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Phase 2: Content Strategy pages
     { route: "/glossary", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/checklists", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/checklists/due-diligence-checklist", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/checklists/templates", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/checklists/investor-data-room", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/faq", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/faq/vdr-security", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/faq/vdr-compliance", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/faq/data-room", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/resources/backlink-strategy", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/resources/keyword-tracking", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/tutorials/data-room-setup-walkthrough", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/managing-bidder-access", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/structured-qa-workflow", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/dynamic-watermarking-setup", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/engagement-analytics", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/permission-management", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/audit-log-export", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/tutorials/sso-and-mfa-configuration", priority: 0.7, changeFrequency: "monthly" as const },
     { route: "/competitors/datasite-alternative", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/competitors/intralinks-alternative", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/competitors/vdr-alternatives", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/virtual-data-room-providers", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/data-room-providers", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/data-room-software", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/vdr-providers", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/board-portal-software", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/board-portals", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/secure-document-sharing", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/legal-document-management", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/fundraising-and-investor-due-diligence", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/m-a-case-studies", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/startup-fundraising-case-studies", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/data-room-due-diligence", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/m-a-data-room-providers", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/deal-room-software", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/due-diligence-software", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/pricing-comparison", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/reviews", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/solutions/mergers-and-acquisitions-vdr", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/investor-data-room", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/solutions/series-a-fundraising-data-room", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/startup-data-room", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/best-data-room-for-startups", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/solutions/secure-document-sharing-for-legal", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/solutions/law-firm-document-exchange", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/solutions/ma-document-sharing", priority: 0.9, changeFrequency: "monthly" as const },
@@ -49,6 +86,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "secure-platforms-for-legal-due-diligence",
     "automated-due-diligence-software",
     "vdr-software-investment-banking",
+    "vdr-vs-physical-data-room",
+    "ma-market-pulse-june-2026",
+    "tech-ma-insights-may-2026",
+    "mid-market-deal-structure-april-2026",
+    "security-compliance-pulse-june-2026",
+    "compliance-landscape-2026",
+    "vendor-security-assessment-vdr-2026",
+    "insider-threats-deal-data-rooms-march-2026",
+    "ai-governance-ma-diligence-february-2026",
+    "data-room-organization-best-practices",
+    "seller-data-room-prep-checklist-14-days",
+    "buyer-diligence-efficiency-playbook",
+    "mid-deal-qa-playbook",
+    "data-room-mistakes-that-kill-deals",
   ].map((slug) => ({
     route: `/blog/${slug}`,
     priority: 0.8,
@@ -59,6 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // VDR feature pages
   const vdrFeaturePages = [
     "data-room",
+    "vdr-data-room",
     "dashboard",
     "security-compliance",
     "users-permissions",
@@ -87,6 +139,58 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "energy-infrastructure",
   ].map((industry) => ({
     route: `/industries/${industry}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // Law firm practice pages
+  const lawFirmPracticePages = [
+    "ma-diligence",
+    "litigation-discovery",
+    "client-portals",
+    "real-estate",
+    "ip-licensing",
+  ].map((practice) => ({
+    route: `/industries/law-firms/${practice}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // Investment banking practice pages
+  const ibPracticePages = [
+    "ma-advisory",
+    "capital-markets",
+    "restructuring",
+    "private-capital",
+    "sell-side-process",
+  ].map((practice) => ({
+    route: `/industries/investment-banking/${practice}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // Private equity practice pages
+  const pePracticePages = [
+    "buy-side-diligence",
+    "portfolio-management",
+    "lp-fundraising",
+    "exit-sell-side",
+    "add-on-acquisitions",
+  ].map((practice) => ({
+    route: `/industries/private-equity/${practice}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // Venture capital practice pages
+  const vcPracticePages = [
+    "early-stage-diligence",
+    "portfolio-support",
+    "fund-operations",
+    "lp-communications",
+    "exits-secondaries",
+  ].map((practice) => ({
+    route: `/industries/venture-capital/${practice}`,
     priority: 0.8,
     changeFrequency: "monthly" as const,
   }));
@@ -178,6 +282,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...vdrBlogPosts,
     ...vdrFeaturePages,
     ...industryPages,
+    ...lawFirmPracticePages,
+    ...ibPracticePages,
+    ...pePracticePages,
+    ...vcPracticePages,
     ...kindoraStaticPages,
     ...kindoraFeaturePages,
     ...kindoraBlogPosts,

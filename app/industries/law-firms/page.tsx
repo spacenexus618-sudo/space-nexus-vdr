@@ -3,16 +3,15 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Data Rooms for Law Firms — Secure Legal Virtual Data Room | SpaceNexus",
-  description:
-    "SpaceNexus data rooms for law firms provide SOC 2 Type II certified document sharing, attorney-client privilege protection, structured due diligence Q&A, and tamper-evident audit trails. The legal VDR trusted by top firms for M&A, litigation, and corporate transactions.",
+  title: "Virtual Data Room for Law Firms | SpaceNexus",
+  description: "Legal VDR with privilege protection, ethical walls, due diligence Q&A, and court-admissible audit trails for Am Law 100 firms.",
   alternates: {
     canonical: "https://spacenexus.net/industries/law-firms",
   },
   openGraph: {
-    title: "Data Rooms for Law Firms — SpaceNexus Legal VDR",
+    title: "Virtual Data Room for Law Firms | SpaceNexus",
     description:
-      "Secure data rooms purpose-built for law firms. Privilege protection, due diligence Q&A, ethical walls, and court-admissible audit trails.",
+      "Legal VDR with privilege protection, ethical walls, due diligence Q&A, and court-admiss...",
     url: "https://spacenexus.net/industries/law-firms",
     type: "website",
   },
@@ -90,6 +89,32 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 2, name: "Industries", item: "https://spacenexus.net/industries" },
     { "@type": "ListItem", position: 3, name: "Data Rooms for Law Firms", item: "https://spacenexus.net/industries/law-firms" },
   ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Data Room for Law Firms",
+  description: "Virtual data room purpose-built for law firms. Privilege protection, ethical wall enforcement, due diligence Q&A, court-admissible audit trails, and SOC 2 Type II compliance for legal M&A, litigation, and corporate transactions.",
+  url: "https://spacenexus.net/industries/law-firms",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Law firms and legal departments",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to matter volume and user count.",
+  },
 };
 
 const capabilities = [
@@ -218,6 +243,11 @@ const capabilities = [
 export default function LawFirmsPage() {
   return (
     <>
+      <Script
+        id="law-firms-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Script
         id="law-firms-faq-schema"
         type="application/ld+json"
@@ -550,8 +580,8 @@ export default function LawFirmsPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
-                title: "M&A Due Diligence Checklist 2025 — The Complete Deal Room Guide",
-                href: "/blog/ma-due-diligence-checklist-2025",
+                title: "M&A Due Diligence Checklist 2026 — The Complete Deal Room Guide",
+                href: "/blog/ma-due-diligence-checklist-2026",
                 label: "M&A",
               },
               {
@@ -622,7 +652,59 @@ export default function LawFirmsPage() {
           </Link>
         </div>
       </section>
-    </main>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Law Firms — related resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/law-firm-document-exchange"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Counsel-to-counsel exchange.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Law firm document exchange →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/secure-document-sharing-for-legal"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Encrypted sharing for legal teams.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing for legal →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Transactional data rooms for counsel.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/legal-document-management"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Manage legal documents at scale.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Legal document management →</h3>
+                        </Link>
+                        <Link
+                            href="/secure-document-sharing"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">General-purpose secure sharing.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing →</h3>
+                        </Link>
+                        <Link
+                            href="/blog/secure-file-sharing-for-lawyers"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">What to look for in 2026.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure file sharing for lawyers →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
     </>
   );
 }

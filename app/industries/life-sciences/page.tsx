@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Life Sciences Solutions | Space Nexus",
-  description:
-    "Manage pharmaceutical, biotech, and healthcare transactions with Space Nexus - the compliant virtual data room for life sciences companies.",
+  title: "VDR for Life Sciences | SpaceNexus",
+  description: "Virtual data room for pharmaceutical licensing, biotech M&A, and clinical trial data sharing. HIPAA-ready configuration.",
   alternates: {
     canonical: "https://spacenexus.net/industries/life-sciences",
   },
@@ -133,8 +133,55 @@ const capabilities = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Life Sciences Virtual Data Room",
+  description: "Virtual data room for life sciences licensing, M&A, and clinical trial data sharing. HIPAA-ready configuration, FDA 21 CFR Part 11 alignment, and pharma-grade audit trails.",
+  url: "https://spacenexus.net/industries/life-sciences",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Life Sciences professionals and deal teams",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to life sciences transaction volume and team size.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://spacenexus.net/industries" },
+    { "@type": "ListItem", position: 3, name: "Life Sciences", item: "https://spacenexus.net/industries/life-sciences" },
+  ],
+};
+
 export default function LifeSciencesPage() {
   return (
+    <>
+      <Script
+        id="life-sciences-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="life-sciences-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -369,6 +416,46 @@ export default function LifeSciencesPage() {
           </Link>
         </div>
       </section>
-    </main>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Life Sciences — related resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Pharma licensing and biotech M&A.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/secure-document-sharing-for-legal"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">HIPAA-ready secure sharing.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing for legal →</h3>
+                        </Link>
+                        <Link
+                            href="/features/security-compliance"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">HIPAA, GDPR, FDA 21 CFR Part 11.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
+                        </Link>
+                        <Link
+                            href="/blog/hipaa-compliant-file-sharing-healthcare-ma"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">PHI handling in transactions.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">HIPAA compliant file sharing in healthcare M&A →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
+  </>
   );
 }
+

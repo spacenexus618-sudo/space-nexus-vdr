@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Flexible Permission Settings — Role-Based Access Control | Space Nexus VDR",
-  description:
-    "Space Nexus Flexible Permission Settings provide role-based and granular access control. Create custom roles, configure folder and document-level permissions, and enforce enterprise-grade access policies.",
+  title: "Users & Permissions | SpaceNexus",
+  description: "Granular per-user, per-folder, per-document permissions. RBAC, dynamic watermarking, IP whitelisting.",
   alternates: {
     canonical: "https://spacenexus.net/features/users-permissions",
   },
   openGraph: {
-    title: "Flexible Permission Settings — Role-Based Access Control | Space Nexus VDR",
+    title: "Users & Permissions | SpaceNexus",
     description:
-      "Admin-controlled role-based permissions for documents, folders, and Q&A. Granular access restrictions for viewing, uploading, editing, and downloading — with enterprise-grade security.",
+      "Granular per-user, per-folder, per-document permissions. RBAC, dynamic watermarking, IP...",
     url: "https://spacenexus.net/features/users-permissions",
     type: "website",
   },

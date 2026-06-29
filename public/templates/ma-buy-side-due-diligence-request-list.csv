@@ -1,0 +1,121 @@
+Section,Category,Item,Required,Priority
+1. Corporate & Legal,Corporate Records,Certificate of Incorporation and all amendments,Y,High
+1. Corporate & Legal,Corporate Records,Bylaws / Operating Agreement (current and historical),Y,High
+1. Corporate & Legal,Corporate Records,"Cap table — fully diluted, including all option pools and convertibles",Y,High
+1. Corporate & Legal,Corporate Records,"List of all subsidiaries, JVs, and affiliated entities",Y,High
+1. Corporate & Legal,Corporate Records,Board minutes and resolutions (last 3 years),Y,High
+1. Corporate & Legal,Corporate Records,"Shareholder agreements, voting agreements, drag/tag rights",Y,High
+1. Corporate & Legal,Corporate Records,Stock ledger and capitalization history,Y,High
+1. Corporate & Legal,Corporate Records,Good standing certificates in each jurisdiction of operation,Y,Medium
+1. Corporate & Legal,Material Contracts,Top 20 customer contracts by revenue,Y,High
+1. Corporate & Legal,Material Contracts,Top 10 supplier / vendor contracts by spend,Y,High
+1. Corporate & Legal,Material Contracts,Change-of-control provisions across all material contracts,Y,High
+1. Corporate & Legal,Material Contracts,Assignment / consent requirements for the transaction,Y,High
+1. Corporate & Legal,Material Contracts,Most-favored-customer clauses and exclusivity arrangements,Y,Medium
+1. Corporate & Legal,Material Contracts,"Reseller, distributor, and partner agreements",N,Medium
+1. Corporate & Legal,Litigation & Disputes,Schedule of pending and threatened litigation,Y,High
+1. Corporate & Legal,Litigation & Disputes,Historical litigation outcomes (last 5 years),Y,Medium
+1. Corporate & Legal,Litigation & Disputes,Open regulatory inquiries or government investigations,Y,High
+1. Corporate & Legal,Litigation & Disputes,Settlement agreements and release documents,N,Medium
+1. Corporate & Legal,Regulatory & Compliance,"All material licenses, permits, and registrations",Y,High
+1. Corporate & Legal,Regulatory & Compliance,"Industry-specific regulatory filings (FCC, FDA, state regulators)",N,Medium
+1. Corporate & Legal,Regulatory & Compliance,GDPR / CCPA / HIPAA compliance documentation,Y,High
+1. Corporate & Legal,Regulatory & Compliance,Anti-corruption / FCPA / sanctions compliance program,N,Medium
+1. Corporate & Legal,Insurance,Schedule of all insurance policies with limits and premiums,Y,High
+1. Corporate & Legal,Insurance,Claims history (last 5 years),Y,Medium
+1. Corporate & Legal,Insurance,D&O run-off / tail coverage proposals,N,High
+1. Corporate & Legal,Real Estate,All facility leases and amendments,Y,High
+1. Corporate & Legal,Real Estate,Property deeds for owned real estate,N,Medium
+2. Financial,Historical Financials,Audited financial statements (last 3 fiscal years),Y,High
+2. Financial,Historical Financials,Unaudited interim financials (most recent quarter),Y,High
+2. Financial,Historical Financials,Monthly management accounts (last 24 months),Y,High
+2. Financial,Historical Financials,"Revenue breakdown by product, customer, and geography",Y,High
+2. Financial,Historical Financials,Cost of goods sold / cost of revenue detail,Y,High
+2. Financial,Historical Financials,Operating expense detail by function and category,Y,High
+2. Financial,Historical Financials,EBITDA bridge from GAAP to adjusted,Y,High
+2. Financial,Projections & KPIs,3-year financial projections with monthly detail,Y,High
+2. Financial,Projections & KPIs,Key assumptions underlying projections,Y,High
+2. Financial,Projections & KPIs,ARR / MRR breakdown (recurring vs. non-recurring),Y,High
+2. Financial,Projections & KPIs,Cohort retention curves (logo and revenue),Y,High
+2. Financial,Projections & KPIs,Customer acquisition cost (CAC) by channel,Y,High
+2. Financial,Projections & KPIs,Customer lifetime value (LTV) and LTV/CAC ratio,Y,High
+2. Financial,Projections & KPIs,Net revenue retention (NRR) and gross retention,Y,High
+2. Financial,Projections & KPIs,Pipeline and bookings forecast,Y,High
+2. Financial,Working Capital,Net working capital analysis (12-month average),Y,High
+2. Financial,Working Capital,Accounts receivable aging schedule,Y,High
+2. Financial,Working Capital,Accounts payable schedule,Y,High
+2. Financial,Working Capital,Inventory detail (if applicable),N,Medium
+2. Financial,Tax,"Federal, state, and local tax returns (last 3 years)",Y,High
+2. Financial,Tax,Open tax positions and uncertain tax positions (FIN 48),Y,High
+2. Financial,Tax,Sales and use tax compliance documentation,Y,High
+2. Financial,Tax,International tax structure and transfer pricing,N,Medium
+2. Financial,Debt & Capitalization,Schedule of all outstanding debt and credit facilities,Y,High
+2. Financial,Debt & Capitalization,Debt covenants and compliance certificates,Y,High
+2. Financial,Debt & Capitalization,Off-balance-sheet obligations and guarantees,Y,High
+2. Financial,Debt & Capitalization,"All financing agreements (SAFEs, convertibles, preferred stock terms)",Y,High
+3. Commercial,Customers,Top 20 customers by revenue (last 12 months),Y,High
+3. Commercial,Customers,Customer churn and retention analysis (logo and revenue),Y,High
+3. Commercial,Customers,Customer satisfaction / NPS data,N,Medium
+3. Commercial,Customers,Reference customer contacts (5-10),Y,High
+3. Commercial,Customers,Win/loss analysis,N,Low
+3. Commercial,Sales & Marketing,Sales pipeline detail by stage,Y,High
+3. Commercial,Sales & Marketing,Go-to-market strategy and segmentation,N,Medium
+3. Commercial,Sales & Marketing,Marketing spend and ROI by channel,N,Low
+3. Commercial,Market & Competition,Market sizing and segmentation analysis,Y,High
+3. Commercial,Market & Competition,Competitive landscape and positioning,Y,High
+3. Commercial,Market & Competition,Industry trends and growth drivers,N,Medium
+4. Technology & IP,Technology,Technology architecture overview and stack,Y,High
+4. Technology & IP,Technology,Infrastructure diagrams and hosting providers,Y,High
+4. Technology & IP,Technology,Code repository access (read-only mirror or escrow),Y,High
+4. Technology & IP,Technology,CI/CD and deployment process documentation,N,Medium
+4. Technology & IP,Technology,Disaster recovery and business continuity plans,Y,High
+4. Technology & IP,Technology,Capacity planning and scaling architecture,N,Medium
+4. Technology & IP,IP,Patent portfolio (granted and pending),Y,High
+4. Technology & IP,IP,Trademark and service mark registrations,Y,High
+4. Technology & IP,IP,Copyright registrations,N,Medium
+4. Technology & IP,IP,"IP assignment agreements (founders, employees, contractors)",Y,High
+4. Technology & IP,IP,Open source license audit and compliance,Y,High
+4. Technology & IP,IP,Third-party IP licenses (inbound and outbound),Y,Medium
+4. Technology & IP,IP,Trade secret protection policies,N,Medium
+4. Technology & IP,Security,SOC 2 Type II report (or equivalent),Y,High
+4. Technology & IP,Security,Penetration test results (last 12 months),Y,High
+4. Technology & IP,Security,Vulnerability scan results,Y,Medium
+4. Technology & IP,Security,Data breach history and incident response plan,Y,High
+4. Technology & IP,Security,Information security policies and procedures,Y,High
+4. Technology & IP,Security,Employee security training program,N,Low
+4. Technology & IP,Data Privacy,Privacy policy and terms of service (current and historical),Y,High
+4. Technology & IP,Data Privacy,Data Processing Agreements (DPAs) with key vendors,Y,High
+4. Technology & IP,Data Privacy,Data Processing Addendums (DPAs) with customers,Y,High
+4. Technology & IP,Data Privacy,Records of processing activities (ROPA),N,Medium
+4. Technology & IP,Data Privacy,"Cross-border data transfer mechanisms (SCCs, adequacy)",N,Medium
+5. Human Resources,People,Organizational chart (full company),Y,High
+5. Human Resources,People,"Headcount by function, location, and tenure",Y,High
+5. Human Resources,People,Attrition and retention statistics (last 24 months),Y,High
+5. Human Resources,People,Key person dependencies and succession plans,Y,High
+5. Human Resources,Compensation,Compensation philosophy and bands by level,N,Medium
+5. Human Resources,Compensation,Executive compensation arrangements,Y,High
+5. Human Resources,Compensation,Sales compensation plans,N,Medium
+5. Human Resources,Compensation,Bonus and incentive plans,N,Medium
+5. Human Resources,Equity & Benefits,Equity incentive plan documents and reserve status,Y,High
+5. Human Resources,Equity & Benefits,Option grants and vesting schedules (full detail),Y,High
+5. Human Resources,Equity & Benefits,Acceleration provisions and change-of-control triggers,Y,High
+5. Human Resources,Equity & Benefits,Employee benefits plans and insurance,N,Medium
+5. Human Resources,Equity & Benefits,Pension or retirement obligations (if any),N,Low
+5. Human Resources,Employment,Employment agreements (key executives),Y,High
+5. Human Resources,Employment,Non-compete and non-solicitation agreements,Y,High
+5. Human Resources,Employment,Independent contractor agreements,N,Medium
+5. Human Resources,Employment,EEOC complaints and labor disputes,Y,High
+5. Human Resources,Employment,Union or collective bargaining agreements,N,Low
+5. Human Resources,Employment,I-9 and work eligibility documentation compliance,N,Medium
+6. Operations,Facilities,Facility lease agreements (all locations),Y,High
+6. Operations,Facilities,Property condition reports,N,Low
+6. Operations,Facilities,Environmental assessments (Phase I / II if applicable),N,Medium
+6. Operations,Suppliers,Key supplier list and spend concentration,Y,High
+6. Operations,Suppliers,Critical supplier contracts and SLAs,Y,High
+6. Operations,Suppliers,Single-source supplier dependencies,Y,High
+6. Operations,Suppliers,Supplier code of conduct and ESG compliance,N,Low
+6. Operations,Logistics & Inventory,Inventory management and warehouse operations,N,Low
+6. Operations,Logistics & Inventory,Logistics and shipping arrangements,N,Low
+6. Operations,ESG & Sustainability,ESG policies and sustainability reports,N,Low
+6. Operations,ESG & Sustainability,Carbon footprint and emissions data,N,Low
+6. Operations,ESG & Sustainability,"Diversity, equity, and inclusion (DEI) initiatives",N,Low

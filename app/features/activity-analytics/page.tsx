@@ -2,18 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
-  description:
-    "Monitor user activity, track document engagement, analyze buyer participation, and export analytics reports with Space Nexus Activity & Analytics. Visualize deal momentum with engagement heatmaps.",
+  title: "Activity & Engagement Analytics | SpaceNexus",
+  description: "Real-time engagement analytics: per-user document views, time spent, download tracking, and Q&A SLAs.",
   alternates: {
     canonical: "https://spacenexus.net/features/activity-analytics",
   },
   openGraph: {
     title:
-      "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
+      "Activity & Engagement Analytics | SpaceNexus",
     description:
-      "Track views, downloads, unique viewers, and time spent. Analyze document popularity, monitor buyer engagement, and export analytics reports — all from one interface.",
+      "Real-time engagement analytics: per-user document views, time spent, download tracking,...",
     url: "https://spacenexus.net/features/activity-analytics",
     type: "website",
   },

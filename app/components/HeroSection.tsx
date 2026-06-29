@@ -12,8 +12,9 @@ export default function HeroSection() {
           <div>
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-8 animate-fade-in">
+              <span className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse" />
               <span className="text-sm text-gray-600">
-                Trusted by 500+ enterprises worldwide
+                Virtual Data Room Software · Trusted by 500+ enterprises
               </span>
             </div>
 
@@ -22,18 +23,16 @@ export default function HeroSection() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6"
             >
-              Secure the Deal.
+              Secure Virtual Data Room Software
               <br />
-              <span className="text-gradient">Simplify Due Diligence.</span>
+              <span className="text-gradient">for M&A, Fundraising & Legal Deals</span>
             </h1>
 
             {/* Subheadline */}
             <p
               className="text-lg sm:text-xl text-gray-600 mb-10 max-w-xl"
             >
-              Enterprise-grade Virtual Data Room for high-stakes M&A
-              transactions, capital raising, and secure document sharing. Built
-              for speed, security, and compliance.
+              Virtual data room software purpose-built for M&A, capital raising, and legal transactions. AI-powered document processing, SOC 2 certified, and live in under 24 hours.
             </p>
 
             {/* CTA Buttons */}

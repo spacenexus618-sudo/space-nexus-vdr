@@ -1,16 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Investment Banking Data Room — SEC, FINRA & FCA Compliant VDR for M&A | SpaceNexus",
-  description:
-    "SpaceNexus is the virtual data room trusted by US investment banks for sell-side M&A, buy-side advisory, IPOs, and capital raises. SEC and FINRA compliance ready with granular bidder access controls, buyer engagement analytics, and structured due diligence workflows.",
+  title: "VDR for Investment Banking | SpaceNexus",
+  description: "Virtual data room for investment banking M&A, capital markets, and restructuring. Multi-bidder workflows and structured Q&A.",
   alternates: {
     canonical: "https://spacenexus.net/industries/investment-banking",
   },
   openGraph: {
-    title: "Investment Banking Data Room — SEC Compliant | SpaceNexus",
-    description: "Enterprise VDR for US investment banks. Sell-side M&A, buy-side advisory, IPOs, and capital raises with SEC and FINRA compliance, granular permissions, and buyer analytics.",
+    title: "VDR for Investment Banking | SpaceNexus",
+    description: "Virtual data room for investment banking M&A, capital markets, and restructuring. Multi...",
     url: "https://spacenexus.net/industries/investment-banking",
     type: "website",
   },
@@ -145,8 +145,55 @@ const capabilities = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Investment Banking Virtual Data Room",
+  description: "Virtual data room for investment banking M&A, capital markets, and restructuring. Multi-bidder processes, structured Q&A, real-time engagement analytics, and SOC 2 Type II compliance.",
+  url: "https://spacenexus.net/industries/investment-banking",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Investment Banking professionals and deal teams",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to investment banking transaction volume and team size.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://spacenexus.net/industries" },
+    { "@type": "ListItem", position: 3, name: "Investment Banking", item: "https://spacenexus.net/industries/investment-banking" },
+  ],
+};
+
 export default function InvestmentBankingPage() {
   return (
+    <>
+      <Script
+        id="investment-banking-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="investment-banking-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -368,7 +415,7 @@ export default function InvestmentBankingPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-deals.png"
-                  alt="Space Nexus Deals Management — M&A pipeline with $450M deal value"
+                  alt="Space Nexus Deals Management — M&A pipeline view"
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -388,7 +435,7 @@ export default function InvestmentBankingPage() {
               </p>
               <ul className="space-y-2.5 mb-8">
                 {[
-                  "$450M+ in concurrent deal value tracked",
+                  "Concurrent deal pipeline with live value tracking",
                   "Deal stage pipeline with instant filters",
                   "Per-deal document count & import management",
                   "One-click 'Create Deal' — live in minutes",
@@ -424,12 +471,12 @@ export default function InvestmentBankingPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
-                title: "M&A Due Diligence Checklist 2025 — The Complete Deal Room Guide",
-                href: "/blog/ma-due-diligence-checklist-2025",
+                title: "M&A Due Diligence Checklist 2026 — The Complete Deal Room Guide",
+                href: "/blog/ma-due-diligence-checklist-2026",
                 label: "M&A",
               },
               {
-                title: "What Is a Virtual Data Room? The Complete Guide for 2025",
+                title: "What Is a Virtual Data Room? The Complete Guide for 2026",
                 href: "/blog/what-is-a-virtual-data-room",
                 label: "Guide",
               },
@@ -479,6 +526,60 @@ export default function InvestmentBankingPage() {
           </Link>
         </div>
       </section>
-    </main>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Investment Banking — related resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Multi-bidder sell-side processes.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/ma-document-sharing"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Multi-party deal document exchange.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A document sharing →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">PE deal workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/law-firms"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Co-counsel deal coordination.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For law firms →</h3>
+                        </Link>
+                        <Link
+                            href="/best-data-room-for-startups"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Independent ranking of 7 providers.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
+                        </Link>
+                        <Link
+                            href="/pricing-comparison"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Transparent pricing vs legacy.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
+  </>
   );
 }
+

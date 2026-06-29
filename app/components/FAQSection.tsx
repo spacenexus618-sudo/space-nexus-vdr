@@ -5,6 +5,11 @@ import Link from "next/link";
 
 const faqs = [
     {
+        question: "What are virtual data rooms?",
+        answer:
+            "Virtual data rooms (VDRs) are secure, cloud-based platforms for storing and sharing confidential documents during business transactions. Unlike generic file storage, virtual data rooms provide NDA enforcement at room entry, document-level permission controls, a tamper-evident audit trail, structured Q&A workflow management, dynamic watermarking, and compliance certifications (SOC 2 Type II, ISO 27001) required for M&A due diligence, capital raising, IPOs, and legal proceedings.",
+    },
+    {
         question: "What is a Virtual Data Room (VDR)?",
         answer:
             "A Virtual Data Room (VDR) is a secure online repository used to store and share confidential documents during high-stakes transactions like M&A due diligence, capital raising, and corporate restructuring. Unlike generic cloud storage, a VDR offers granular access controls, full audit trails, NDA management, and AI-powered document processing designed specifically for deal teams.",
@@ -59,7 +64,7 @@ export default function FAQSection() {
                         Frequently asked questions
                     </h2>
                     <p className="text-lg text-gray-600">
-                        Everything deal teams need to know before choosing a virtual data room.
+                        Everything deal teams need to know about virtual data rooms and choosing the right provider.
                     </p>
                 </div>
 

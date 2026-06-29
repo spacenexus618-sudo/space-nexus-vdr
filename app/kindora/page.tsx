@@ -889,7 +889,7 @@ export default function KindoraHomePage() {
             {[
               {
                 slug: "complete-guide-nonprofit-management-software",
-                title: "The Complete Guide to Nonprofit Management Software in 2025",
+                title: "The Complete Guide to Nonprofit Management Software in 2026",
                 excerpt: "Everything you need to know before choosing a nonprofit management platform — features, pricing, and what most vendors won't tell you.",
                 category: "Nonprofit Tips",
                 readingTime: 12,

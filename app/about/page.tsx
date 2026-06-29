@@ -46,7 +46,7 @@ const milestones = [
     { year: "2023", event: "Launched AI-powered document processing & intelligent indexing" },
     { year: "2023", event: "Reached 100+ active deal rooms across APAC, US, and Europe" },
     { year: "2024", event: "Launched Kindora NGO OS — expanding to nonprofit sector" },
-    { year: "2025", event: "500+ enterprises trust Space Nexus for critical transactions" },
+    { year: "2026", event: "500+ enterprises trust Space Nexus for critical transactions" },
 ];
 
 export default function AboutPage() {

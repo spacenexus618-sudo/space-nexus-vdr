@@ -2,18 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Reports — Audit Trails, Access Logs & Compliance Reporting | Space Nexus VDR",
-  description:
-    "Generate and manage detailed reports in Space Nexus VDR — Access Logs, Document Activity, Q&A Export, Audit Trails, and Engagement Reports. Maintain transparency and support compliance requirements.",
+  title: "Reports & Audit Trail | SpaceNexus",
+  description: "Court-admissible audit logs, compliance reports, and engagement analytics. Tamper-evident and exportable.",
   alternates: {
     canonical: "https://spacenexus.net/features/reports",
   },
   openGraph: {
     title:
-      "Reports — Audit Trails, Access Logs & Compliance Reporting | Space Nexus VDR",
+      "Reports & Audit Trail | SpaceNexus",
     description:
-      "Generate Access Logs, Document Activity, Q&A Export, Audit Trails, and Engagement Reports. Download and export for compliance, documentation, and stakeholder reporting.",
+      "Court-admissible audit logs, compliance reports, and engagement analytics. Tamper-evide...",
     url: "https://spacenexus.net/features/reports",
     type: "website",
   },

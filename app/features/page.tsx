@@ -2,15 +2,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Virtual Data Room Features — M&A Due Diligence Software | Space Nexus",
-  description:
-    "Space Nexus is purpose-built VDR software for M&A due diligence, capital raises, and IPOs. Granular permissions, AI document processing, real-time buyer analytics, Q&A workflows, and SOC 2-certified security — all in one platform.",
+  title: "VDR Features | SpaceNexus",
+  description: "All SpaceNexus VDR features: AI redaction, structured Q&A, engagement analytics, dynamic watermarking, audit logs, and more.",
   alternates: {
     canonical: "https://spacenexus.net/features",
   },
   openGraph: {
-    title: "Virtual Data Room Features | Space Nexus",
-    description: "The complete VDR feature set for M&A deal teams: secure data rooms, due diligence Q&A, buyer analytics, watermarking, and enterprise compliance.",
+    title: "VDR Features | SpaceNexus",
+    description: "All SpaceNexus VDR features: AI redaction, structured Q&A, engagement analytics, dynami...",
     url: "https://spacenexus.net/features",
     type: "website",
   },
@@ -650,13 +649,13 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
-                title: "What Is a Virtual Data Room? The Complete Guide for 2025",
+                title: "What Is a Virtual Data Room? The Complete Guide for 2026",
                 href: "/blog/what-is-a-virtual-data-room",
                 label: "Guide",
               },
               {
-                title: "M&A Due Diligence Checklist 2025 — The Complete Deal Room Guide",
-                href: "/blog/ma-due-diligence-checklist-2025",
+                title: "M&A Due Diligence Checklist 2026 — The Complete Deal Room Guide",
+                href: "/blog/ma-due-diligence-checklist-2026",
                 label: "M&A",
               },
               {

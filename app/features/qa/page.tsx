@@ -3,10 +3,8 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Virtual Data Room Q&A Software — Due Diligence Question Management | SpaceNexus",
-  description:
-    "SpaceNexus Virtual Data Room Q&A software for M&A due diligence. Track buyer questions, automate responses, organize by department, and generate audit trails — all in one secure VDR platform.",
+  title: "Structured Q&A Workflow | SpaceNexus",
+  description: "Replace email threads with structured Q&A. Category routing, deadline tracking, audit trail, and SLA management.",
   keywords: [
     "Virtual Data Room Q&A",
     "VDR Q&A software",
@@ -21,9 +19,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Virtual Data Room Q&A Management Software | SpaceNexus VDR",
+      "Structured Q&A Workflow | SpaceNexus",
     description:
-      "Centralized VDR Q&A software for due diligence. Track questions by status, categorize by department, assign to teams, and maintain a full audit trail in SpaceNexus.",
+      "Replace email threads with structured Q&A. Category routing, deadline tracking, audit t...",
     url: "https://spacenexus.net/features/qa",
     type: "website",
   },

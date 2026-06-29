@@ -110,7 +110,7 @@ export default function BenefitsSection() {
               Why Space Nexus
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Built for Modern Deal Teams
+              Virtual Data Rooms Built for Modern Deal Teams
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Everything you need to manage high-stakes transactions with

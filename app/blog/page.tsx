@@ -27,9 +27,12 @@ export const metadata: Metadata = {
 const categoryColors: Record<string, string> = {
     Guides: "bg-blue-50 text-blue-700 border-blue-100",
     "M&A": "bg-violet-50 text-violet-700 border-violet-100",
+    "M&A Insights": "bg-violet-50 text-violet-700 border-violet-100",
     "Private Equity": "bg-emerald-50 text-emerald-700 border-emerald-100",
     Security: "bg-rose-50 text-rose-700 border-rose-100",
+    "Security & Compliance": "bg-rose-50 text-rose-700 border-rose-100",
     "Startup Fundraising": "bg-amber-50 text-amber-700 border-amber-100",
+    "Distressed Debt": "bg-amber-50 text-amber-700 border-amber-100",
 };
 
 const topicClusters = [
@@ -48,13 +51,13 @@ const topicClusters = [
         label: "M&A",
         slug: "ma",
         icon: "🤝",
-        categories: ["M&A"],
+        categories: ["M&A", "M&A Insights"],
     },
     {
         label: "Security & Compliance",
         slug: "security",
         icon: "🔐",
-        categories: ["Security"],
+        categories: ["Security", "Security & Compliance"],
     },
     {
         label: "Private Equity",
@@ -262,7 +265,7 @@ export default function BlogPage() {
                             <Link href="/competitors/vdr-alternatives" className="group flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-[#2563eb]/30 hover:bg-blue-50/50 transition-all">
                                 <span className="text-xl">⚖️</span>
                                 <div>
-                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">VDR Comparison 2025</p>
+                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">VDR Comparison 2026</p>
                                     <p className="text-xs text-gray-500">6 providers ranked</p>
                                 </div>
                             </Link>

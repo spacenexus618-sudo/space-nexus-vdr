@@ -4,6 +4,22 @@ const nextConfig: NextConfig = {
   // Enforce no trailing slash for consistent canonical URLs
   trailingSlash: false,
 
+  // Redirects for legacy/short URLs
+  async redirects() {
+    return [
+      {
+        source: "/ma-document-sharing",
+        destination: "/solutions/ma-document-sharing",
+        permanent: true,
+      },
+      {
+        source: "/blog/ma-due-diligence-checklist-2025",
+        destination: "/blog/ma-due-diligence-checklist-2026",
+        permanent: true,
+      },
+    ];
+  },
+
   // Enable gzip/brotli compression
   compress: true,
 

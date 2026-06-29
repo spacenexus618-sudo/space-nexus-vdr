@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Integrations — Connect Cloud Storage, CRM & E-Signature Tools | Space Nexus VDR",
-  description:
-    "Connect Space Nexus with Google Drive, Salesforce, Box, Adobe Sign, and more. Sync documents with cloud storage, integrate CRM systems, enable e-signature workflows, and configure SSO for secure authentication.",
+  title: "VDR Integrations | SpaceNexus",
+  description: "Native integrations with Slack, Microsoft 365, Salesforce, and SSO providers including Okta and Azure AD.",
   alternates: {
     canonical: "https://spacenexus.net/features/integrations",
   },
   openGraph: {
-    title: "Integrations — Connect Cloud Storage, CRM & E-Signature Tools | Space Nexus VDR",
+    title: "VDR Integrations | SpaceNexus",
     description:
-      "Integrate Space Nexus with your existing tools — Google Drive, Salesforce, Box, Adobe Sign, and Identity & SSO providers — from one centralized interface.",
+      "Native integrations with Slack, Microsoft 365, Salesforce, and SSO providers including ...",
     url: "https://spacenexus.net/features/integrations",
     type: "website",
   },

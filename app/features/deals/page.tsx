@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Deals — Transaction Management & Deal Pipeline | Space Nexus VDR",
-  description:
-    "Track and manage all M&A transactions in Space Nexus. View deal stages, monitor key metrics, access documents and deal details, and create or manage deals from one centralized interface.",
+  title: "Deal Pipeline Management | SpaceNexus",
+  description: "Manage multiple deals in one workspace. Pipeline view, deal-level access, and consolidated reporting.",
   alternates: {
     canonical: "https://spacenexus.net/features/deals",
   },
   openGraph: {
-    title: "Deals — Transaction Management & Deal Pipeline | Space Nexus VDR",
+    title: "Deal Pipeline Management | SpaceNexus",
     description:
-      "Structured overview of all ongoing deals with stage tracking (Discovery → Due Diligence → Negotiation → Closed), deal metrics, and one-click access to documents and deal details.",
+      "Manage multiple deals in one workspace. Pipeline view, deal-level access, and consolida...",
     url: "https://spacenexus.net/features/deals",
     type: "website",
   },

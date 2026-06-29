@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Secure Data Room — Document Management & AI Redaction | Space Nexus VDR",
-  description:
-    "Space Nexus Secure Data Room provides centralized document storage, AI-powered redaction, OCR search, encryption, watermarking, and secure folder management for M&A due diligence.",
+  title: "Data Room Software | SpaceNexus",
+  description: "Secure data room software with bulk upload, AI auto-categorization, granular permissions, and audit logs.",
   alternates: {
     canonical: "https://spacenexus.net/features/data-room",
   },
   openGraph: {
-    title: "Secure Data Room — Document Management & AI Redaction | Space Nexus VDR",
+    title: "Data Room Software | SpaceNexus",
     description:
-      "Centralized secure document storage with AI redaction, OCR search, encryption, watermarking, and folder-level access controls for M&A transactions.",
+      "Secure data room software with bulk upload, AI auto-categorization, granular permission...",
     url: "https://spacenexus.net/features/data-room",
     type: "website",
   },
@@ -270,6 +269,7 @@ export default function DataRoomPage() {
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             {[
+              { title: "VDR Data Room — Virtual Data Room", href: "/features/vdr-data-room" },
               { title: "Users & Permissions — Access Control", href: "/features/users-permissions" },
               { title: "Security & Compliance — Enterprise Protection", href: "/features/security-compliance" },
               { title: "Activity & Analytics — Buyer Intelligence", href: "/features/activity-analytics" },

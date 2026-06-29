@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "VDR Dashboard — Deal Command Center | Space Nexus",
-  description:
-    "The Space Nexus VDR Dashboard gives your team a centralized overview of all deal activities — active deals, documents, Q&A, buyer analytics, and AI-powered automation in one place.",
+  title: "Data Room Dashboard | SpaceNexus",
+  description: "Real-time pipeline visibility, deal health, document activity, and Q&A status in one dashboard.",
   alternates: {
     canonical: "https://spacenexus.net/features/dashboard",
   },
   openGraph: {
-    title: "VDR Dashboard — Deal Command Center | Space Nexus",
+    title: "Data Room Dashboard | SpaceNexus",
     description:
-      "Monitor transactions, documents, and collaboration in real time. AI redaction, auto-categorization, and one-click access to every module.",
+      "Real-time pipeline visibility, deal health, document activity, and Q&A status in one da...",
     url: "https://spacenexus.net/features/dashboard",
     type: "website",
   },

@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "SpaceNexus Reviews — What Customers Say About Our Virtual Data Room",
-  description:
-    "Read SpaceNexus VDR reviews from legal teams, investment banks, and M&A advisors. See ratings on G2, Capterra, TrustRadius, and GetApp. Rated 4.9/5 for security, ease of use, and deal management.",
+  title: "VDR Reviews & Testimonials | SpaceNexus",
+  description: "Read verified reviews of SpaceNexus VDR from investment banks, PE firms, law firms, and corporate teams.",
   alternates: {
     canonical: "https://spacenexus.net/reviews",
   },
   openGraph: {
-    title: "SpaceNexus Reviews — Rated 4.9/5 by Deal Professionals",
+    title: "VDR Reviews & Testimonials | SpaceNexus",
     description:
-      "See why legal teams and investment banks rate SpaceNexus the top virtual data room for M&A due diligence, fundraising, and secure document sharing.",
+      "Read verified reviews of SpaceNexus VDR from investment banks, PE firms, law firms, and...",
     url: "https://spacenexus.net/reviews",
   },
   twitter: {
@@ -409,7 +408,7 @@ export default function ReviewsPage() {
               className="group bg-white rounded-xl border border-gray-200 p-6 text-center hover:border-[#2563eb] transition-colors"
             >
               <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">
-                VDR Alternatives 2025
+                VDR Alternatives 2026
               </h3>
               <p className="text-sm text-gray-500">
                 Compare 6 providers side-by-side

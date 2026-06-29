@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Billing & Plans — Subscription Management & Usage Tracking | Space Nexus VDR",
-  description:
-    "Manage your Space Nexus subscription, monitor active deals and storage usage, access billing invoices, and track monthly limits — all from a clear, centralized billing interface.",
+  title: "Billing & Plans | SpaceNexus",
+  description: "Transparent flat-rate pricing for VDR. No per-page fees, no hidden overages. Self-serve or enterprise plans.",
   alternates: {
     canonical: "https://spacenexus.net/features/billing-plans",
   },
   openGraph: {
-    title: "Billing & Plans — Subscription Management & Usage Tracking | Space Nexus VDR",
+    title: "Billing & Plans | SpaceNexus",
     description:
-      "View your current plan, monitor active deals and storage, access invoices, and manage upgrades — transparent subscription management for VDR teams.",
+      "Transparent flat-rate pricing for VDR. No per-page fees, no hidden overages. Self-serve...",
     url: "https://spacenexus.net/features/billing-plans",
     type: "website",
   },

@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Intralinks Alternative for Capital Raising — Space Nexus VDR",
-    description:
-        "Switching from Intralinks? Space Nexus offers a modern UI, structured Q&A management, and transparent pricing for capital raising, M&A, and due diligence. Compare feature-by-feature.",
+    title: "Intralinks Alternative | SpaceNexus",
+    description: "SpaceNexus vs Intralinks: modern VDR with transparent pricing, AI features, and no per-page fees.",
     alternates: {
         canonical: "https://spacenexus.net/competitors/intralinks-alternative",
     },
     openGraph: {
-        title: "Intralinks Alternative — Space Nexus Virtual Data Room",
+        title: "Intralinks Alternative | SpaceNexus",
         description:
-            "Space Nexus vs Intralinks for capital raising and M&A. Modern UX, built-in AI, structured Q&A workflows, and no legacy pricing surprises.",
+            "SpaceNexus vs Intralinks: modern VDR with transparent pricing, AI features, and no per-...",
         url: "https://spacenexus.net/competitors/intralinks-alternative",
     },
     keywords: [
@@ -42,7 +41,7 @@ const comparisonRows = [
     },
     {
         feature: "Pricing Transparency",
-        spacenexus: { value: "From $149/mo — listed publicly", positive: true },
+        spacenexus: { value: "Transparent — listed publicly", positive: true },
         intralinks: { value: "Enterprise quote only", positive: false },
     },
     {
@@ -298,7 +297,7 @@ export default function IntralinksAlternativePage() {
                     <p className="text-sm text-gray-600 mb-3">Comparing other VDR providers?</p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link href="/competitors/vdr-alternatives" className="text-sm font-semibold text-[#2563eb] hover:underline">
-                            Best VDR Providers 2025 — Full Comparison →
+                            Best VDR Providers 2026 — Full Comparison →
                         </Link>
                         <span className="hidden sm:inline text-gray-300">|</span>
                         <Link href="/competitors/datasite-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">

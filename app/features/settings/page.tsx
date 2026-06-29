@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
-  description:
-    "Space Nexus Integrated Trackers help teams monitor deal progress, engagement metrics, and Q&A activity in real time. Track milestones, performance indicators, and collaboration across ongoing transactions.",
+  title: "Settings & Administration | SpaceNexus",
+  description: "Workspace settings, security policies, branding, and admin controls. Configure SpaceNexus for your team.",
   alternates: {
     canonical: "https://spacenexus.net/features/settings",
   },
   openGraph: {
-    title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
+    title: "Settings & Administration | SpaceNexus",
     description:
-      "Real-time tracking of deal milestones, engagement metrics, document views, and Q&A activity across all ongoing transactions — all in one centralized view.",
+      "Workspace settings, security policies, branding, and admin controls. Configure SpaceNex...",
     url: "https://spacenexus.net/features/settings",
     type: "website",
   },

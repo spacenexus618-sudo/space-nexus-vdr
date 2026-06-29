@@ -41,11 +41,11 @@ export default function TransformationTable() {
             The Transformation
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Before & After Space Nexus
+            How Virtual Data Rooms Transform Due Diligence
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            See how Space Nexus transforms your deal workflow from manual chaos
-            to streamlined efficiency.
+            See how SpaceNexus virtual data rooms replace manual, error-prone
+            workflows with AI-powered deal automation.
           </p>
         </div>
 
