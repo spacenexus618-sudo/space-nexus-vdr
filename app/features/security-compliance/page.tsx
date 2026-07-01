@@ -5,6 +5,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Security & Compliance Features | SpaceNexus",
   description: "SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4. Enterprise-grade security for sensitive deal documents.",
+  keywords: [
+    "VDR security",
+    "SOC 2 data room",
+    "ISO 27001 VDR",
+    "HIPAA compliant data room",
+    "secure virtual data room",
+    "data room compliance",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/security-compliance",
   },
@@ -209,9 +217,9 @@ export default function SecurityCompliancePage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/security%20complince.jpeg"
-                  alt="Space Nexus VDR Security & Compliance — enterprise security controls dashboard"
+                  alt="SpaceNexus VDR Security & Compliance — enterprise security controls dashboard"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -412,7 +412,7 @@ const articleSchema = {
     description:
         "Independent comparison and ranking of the 7 best due diligence software providers in 2026. Pricing, AI features, security, and which one deal teams actually pick.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-24",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/due-diligence-software",
@@ -435,6 +435,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Due Diligence Software", item: "https://spacenexus.net/due-diligence-software" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 function CheckIcon() {
@@ -547,6 +555,7 @@ function ProviderCard({ provider }: { provider: Provider }) {
 export default function DueDiligenceSoftwarePage() {
     return (
         <>
+            <Script id="dds-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="dds-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="dds-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="dds-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "File Management - Secure Document Organization",
   description:
     "Store, organize, and attach files to records throughout Kindora. Maintain receipts, contracts, reports, and documents in one secure location.",
+  keywords: [
+    "nonprofit document management",
+    "secure file storage NGO",
+    "nonprofit file organization",
+    "document management for nonprofits",
+    "NGO record keeping",
+  ],
   alternates: {
     canonical: "/kindora/features/file-management",
+  },
+  openGraph: {
+    title: "File Management - Secure Document Organization",
+    description:
+      "Store, organize, and attach files to records throughout Kindora. Maintain receipts, contracts, reports, and documents in one secure location.",
+    url: "https://spacenexus.net/kindora/features/file-management",
+    type: "website",
   },
 };
 

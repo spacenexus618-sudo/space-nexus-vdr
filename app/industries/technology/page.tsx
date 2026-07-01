@@ -5,8 +5,22 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "VDR for Technology Companies | SpaceNexus",
   description: "Virtual data room for tech M&A, IP licensing, and source code escrow. Built for SaaS, AI, and hardware companies.",
+  keywords: [
+    "technology VDR",
+    "tech M&A data room",
+    "IP licensing data room",
+    "SaaS M&A VDR",
+    "source code escrow VDR",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/technology",
+  },
+  openGraph: {
+    title: "VDR for Technology Companies | SpaceNexus",
+    description:
+      "Virtual data room for tech M&A, IP licensing, and source code escrow. Built for SaaS, AI, and hardware companies.",
+    url: "https://spacenexus.net/industries/technology",
+    type: "website",
   },
 };
 

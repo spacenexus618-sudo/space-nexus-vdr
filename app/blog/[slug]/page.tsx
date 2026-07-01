@@ -118,12 +118,27 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         url: `https://spacenexus.net/blog/${slug}`,
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://spacenexus.net/blog" },
+            { "@type": "ListItem", position: 3, name: post.title },
+        ],
+    };
+
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             {/* JSON-LD Article Schema */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
+            <script
+                id="blogpost-breadcrumb"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
 
             {/* Breadcrumb */}

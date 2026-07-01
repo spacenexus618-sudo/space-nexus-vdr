@@ -408,7 +408,7 @@ const articleSchema = {
     description:
         "Independent ranking and comparison of the 7 best M&A data room providers in 2026. AI features, security, and which one deal teams actually pick.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-22",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/m-a-data-room-providers",
@@ -431,6 +431,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "M&A Data Room Providers", item: "https://spacenexus.net/m-a-data-room-providers" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 function CheckIcon() {
@@ -541,6 +549,7 @@ function ProviderCard({ provider }: { provider: Provider }) {
 export default function MADataRoomProvidersPage() {
     return (
         <>
+            <Script id="madrp-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="madrp-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="madrp-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="madrp-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

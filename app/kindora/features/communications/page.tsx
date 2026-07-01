@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "Communications Hub - Email & Stakeholder Outreach",
   description:
     "Send targeted emails to donors, clients, volunteers, and team members directly from the platform with templates and tracking.",
+  keywords: [
+    "nonprofit email software",
+    "donor communication tools",
+    "stakeholder outreach platform",
+    "NGO newsletter software",
+    "volunteer email system",
+  ],
   alternates: {
     canonical: "/kindora/features/communications",
+  },
+  openGraph: {
+    title: "Communications Hub - Email & Stakeholder Outreach",
+    description:
+      "Send targeted emails to donors, clients, volunteers, and team members directly from the platform with templates and tracking.",
+    url: "https://spacenexus.net/kindora/features/communications",
+    type: "website",
   },
 };
 

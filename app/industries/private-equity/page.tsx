@@ -5,6 +5,14 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "VDR for Private Equity | SpaceNexus",
   description: "Virtual data room for PE buy-side due diligence, sell-side portfolio exits, and LP reporting. IR-grade security and analytics.",
+  keywords: [
+    "private equity data room",
+    "PE VDR",
+    "buy-side diligence VDR",
+    "portfolio management VDR",
+    "LP reporting data room",
+    "PE deal room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/private-equity",
   },
@@ -460,7 +468,7 @@ export default function PrivateEquityPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-analytics.png"
-                  alt="Space Nexus Activity & Analytics — buyer engagement insights for private equity"
+                  alt="SpaceNexus Activity & Analytics — buyer engagement insights for private equity"
                   className="w-full h-auto"
                   loading="lazy"
                 />

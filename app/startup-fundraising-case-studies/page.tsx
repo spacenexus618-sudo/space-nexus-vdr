@@ -242,7 +242,7 @@ const articleSchema = {
     description:
         "Real startup fundraising case studies. How founders used SpaceNexus to close pre-seed through Series C rounds faster.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-25",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/startup-fundraising-case-studies",
@@ -267,6 +267,14 @@ const breadcrumbSchema = {
     ],
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+};
+
 function CheckIcon() {
     return (
         <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -278,6 +286,7 @@ function CheckIcon() {
 export default function StartupFundraisingCaseStudiesPage() {
     return (
         <>
+            <Script id="sfcs-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="sfcs-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="sfcs-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="sfcs-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -458,6 +467,44 @@ export default function StartupFundraisingCaseStudiesPage() {
                             <span className="text-gray-300">|</span>
                             <Link href="/fundraising-and-investor-due-diligence" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 Fundraising &amp; Investor Due Diligence Guide →
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Related VDR Resources */}
+                <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring fundraising resources</h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <Link
+                                href="/best-data-room-for-startups"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">7 providers ranked.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
+                            </Link>
+                            <Link
+                                href="/solutions/series-a-fundraising-data-room"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Series A solution.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Series A fundraising data room →</h3>
+                            </Link>
+                            <Link
+                                href="/fundraising-and-investor-due-diligence"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Complete guide.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Fundraising & investor DD guide →</h3>
+                            </Link>
+                            <Link
+                                href="/checklists/investor-data-room"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Investor data room checklist →</h3>
                             </Link>
                         </div>
                     </div>

@@ -5,8 +5,22 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "VDR for Energy & Infrastructure | SpaceNexus",
   description: "Virtual data room for energy M&A, project finance, and asset divestitures. Long-term retention and audit-ready infrastructure.",
+  keywords: [
+    "energy VDR",
+    "infrastructure data room",
+    "project finance data room",
+    "energy M&A VDR",
+    "asset divestiture data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/energy-infrastructure",
+  },
+  openGraph: {
+    title: "VDR for Energy & Infrastructure | SpaceNexus",
+    description:
+      "Virtual data room for energy M&A, project finance, and asset divestitures. Long-term retention and audit-ready infrastructure.",
+    url: "https://spacenexus.net/industries/energy-infrastructure",
+    type: "website",
   },
 };
 

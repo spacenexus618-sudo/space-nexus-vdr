@@ -328,9 +328,9 @@ export default function QAPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-qa.png"
-                  alt="Space Nexus VDR Q&A — due diligence question management interface"
+                  alt="SpaceNexus VDR Q&A — due diligence question management interface"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

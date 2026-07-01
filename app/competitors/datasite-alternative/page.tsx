@@ -291,7 +291,7 @@ export default function DatasiteAlternativePage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
-                                <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="Space Nexus VDR dashboard — Datasite alternative" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus VDR dashboard — Datasite alternative" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
                     </div>

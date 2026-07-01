@@ -134,6 +134,16 @@ const organizationSchema = {
   description: "SpaceNexus provides secure virtual data rooms and collaboration software for structured credit, private credit, ESG, and M&A workflows.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://spacenexus.net/solutions" },
+    { "@type": "ListItem", position: 3, name: "CLO Advisory", item: "https://spacenexus.net/solutions/clo-advisory" },
+  ],
+};
+
 const relatedSolutions = [
   {
     title: "Private Credit",
@@ -155,14 +165,22 @@ const relatedSolutions = [
 export default function CLOAdvisoryPage() {
   return (
     <>
+      <Script id="sol-clo-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="clo-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Script id="clo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="clo-organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <main className="pt-20 lg:pt-24">
+        <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <Link href="/features" className="hover:text-[#2563eb] transition-colors">Solutions</Link>
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-gray-600">CLO Advisory</span>
+        </nav>
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
-              <Link href="/solutions" className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors">
+              <Link href="/features" className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors">
                 <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                 All Solutions
               </Link>

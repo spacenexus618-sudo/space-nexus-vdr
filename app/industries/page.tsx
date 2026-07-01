@@ -5,8 +5,22 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Industries — VDR Solutions by Sector | SpaceNexus",
   description: "Virtual data room solutions for Private Equity, Investment Banking, Law Firms, Real Estate, Life Sciences, Technology, and Energy sectors.",
+  keywords: [
+    "VDR industry solutions",
+    "virtual data room by industry",
+    "data room sector solutions",
+    "industry-specific VDR",
+    "M&A data room industries",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries",
+  },
+  openGraph: {
+    title: "Industries — VDR Solutions by Sector | SpaceNexus",
+    description:
+      "Virtual data room solutions for Private Equity, Investment Banking, Law Firms, Real Estate, Life Sciences, Technology, and Energy sectors.",
+    url: "https://spacenexus.net/industries",
+    type: "website",
   },
 };
 

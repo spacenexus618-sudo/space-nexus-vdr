@@ -345,7 +345,7 @@ const articleSchema = {
     description:
         "The complete 2026 guide to legal document management for law firms, in-house legal teams, and legal operations. DMS vs. document exchange vs. VDR, key features, and best practices.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-25",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/legal-document-management",
@@ -370,6 +370,14 @@ const breadcrumbSchema = {
     ],
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+};
+
 function CheckIcon() {
     return (
         <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -389,6 +397,7 @@ function XIcon() {
 export default function LegalDocumentManagementPage() {
     return (
         <>
+            <Script id="ldm-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="ldm-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="ldm-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="ldm-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

@@ -3,14 +3,15 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-    title: "Free Investor Data Room Checklists | SpaceNexus",
-    description: "8 free investor data room templates: Pre-Seed, Seed, Series B+ indexes, DD questions, cap table, term sheet.",
+    title: "Investor Data Room Checklist — Free Templates 2026 | SpaceNexus",
+    description: "Free investor data room checklist and templates for every fundraising stage. Pre-Seed, Seed, Series B+ indexes, DD questions, cap table templates, and more.",
     alternates: {
         canonical: "https://spacenexus.net/checklists/investor-data-room",
     },
     keywords: [
         "investor data room checklist",
-        "fundraising data room",
+        "investor data room",
+        "fundraising data room checklist",
         "pre-seed data room",
         "seed data room checklist",
         "Series B data room",
@@ -18,12 +19,11 @@ export const metadata: Metadata = {
         "Series A data room index",
         "free investor data room template",
         "fundraising checklist",
-        "startup data room",
     ],
     openGraph: {
-        title: "Free Investor Data Room Checklists | SpaceNexus",
+        title: "Investor Data Room Checklist — Free Templates 2026 | SpaceNexus",
         description:
-            "8 free investor data room templates: Pre-Seed, Seed, Series B+ indexes, DD questions, c...",
+            "Free investor data room checklist and templates for every fundraising stage. Pre-Seed, Seed, Series B+ indexes, DD questions, cap table templates.",
         url: "https://spacenexus.net/checklists/investor-data-room",
         type: "website",
     },
@@ -154,8 +154,8 @@ export default function InvestorDataRoomPage() {
     const itemListSchema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        name: "Investor Data Room Checklists",
-        description: "8 downloadable CSV templates for fundraising data rooms at every stage.",
+        name: "Investor Data Room Checklist",
+        description: "Free downloadable CSV templates for fundraising data rooms at every stage.",
         numberOfItems: templates.length,
         itemListElement: templates.map((t, i) => ({
             "@type": "ListItem",
@@ -172,7 +172,7 @@ export default function InvestorDataRoomPage() {
         mainEntity: [
             {
                 "@type": "Question",
-                name: "What is an investor data room?",
+                name: "What is an investor data room checklist?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text: "An investor data room is a secure, organized repository of company documents shared with prospective investors during a fundraising round. It typically includes pitch materials, financials, cap table, product information, customer evidence, team bios, and legal documents. A well-organized data room signals professionalism and accelerates diligence.",
@@ -213,10 +213,21 @@ export default function InvestorDataRoomPage() {
         ],
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+            { "@type": "ListItem", position: 2, name: "Checklists", item: "https://spacenexus.net/checklists" },
+            { "@type": "ListItem", position: 3, name: "Investor Data Room Checklist", item: "https://spacenexus.net/checklists/investor-data-room" },
+        ],
+    };
+
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="investor-templates-itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
             <Script id="investor-templates-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="cl-ird-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
@@ -232,10 +243,10 @@ export default function InvestorDataRoomPage() {
                         Free Downloads
                     </p>
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                        Investor Data Room Checklists
+                        Investor Data Room Checklist
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl mb-8">
-                        {templates.length} free, professional-grade templates for fundraising data rooms at every stage — from pre-seed to Series B+. Plus the investor DD question bank, monthly update template, cap table, term sheet comparison, and pipeline tracker.
+                        A complete investor data room checklist with {templates.length} free, professional-grade templates for fundraising data rooms at every stage — from pre-seed to Series B+. Plus the investor DD question bank, monthly update template, cap table, term sheet comparison, and pipeline tracker.
                     </p>
                     <div className="flex flex-wrap gap-3 text-sm">
                         <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 font-medium">

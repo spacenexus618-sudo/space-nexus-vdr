@@ -3,15 +3,29 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "VDR for Real Estate | SpaceNexus",
-  description: "Virtual data room for commercial real estate, REITs, and property due diligence. Multi-party access and long-term retention.",
+  title: "Real Estate Data Room 2026 | SpaceNexus",
+  description: "Secure real estate data room for commercial property transactions, REIT due diligence, portfolio sales, and asset management. AI-powered, SOC 2 Type II.",
+  keywords: [
+    "real estate data room",
+    "commercial real estate data room",
+    "REIT data room",
+    "property due diligence data room",
+    "real estate transaction VDR",
+    "real estate due diligence platform",
+    "property data room software",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/real-estate",
   },
   openGraph: {
-    title: "VDR for Real Estate | SpaceNexus",
-    description: "Virtual data room for commercial real estate, REITs, and property due diligence. Multi-...",
+    title: "Real Estate Data Room 2026 | SpaceNexus",
+    description: "Secure real estate data room for commercial property transactions, REIT due diligence, portfolio sales, and asset management. AI-powered, SOC 2 Type II.",
     url: "https://spacenexus.net/industries/real-estate",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real Estate Data Room 2026 — VDR for Property Transactions | SpaceNexus",
+    description: "Complete guide to real estate data rooms. Secure virtual data rooms for commercial real estate, REITs, property due diligence, and portfolio management.",
   },
 };
 
@@ -216,7 +230,7 @@ export default function RealEstatePage() {
                 Real Estate
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Data Rooms for Real Estate Transactions
+                Real Estate Data Room
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Execute property transactions, portfolio sales, and fund

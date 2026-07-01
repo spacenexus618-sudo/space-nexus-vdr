@@ -213,10 +213,21 @@ export default function TemplatesPage() {
         ],
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+            { "@type": "ListItem", position: 2, name: "Checklists", item: "https://spacenexus.net/checklists" },
+            { "@type": "ListItem", position: 3, name: "Templates", item: "https://spacenexus.net/checklists/templates" },
+        ],
+    };
+
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="templates-itemlist-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
             <Script id="templates-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="cl-tpl-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             {/* Hero */}
             <section className="pt-28 pb-16 bg-white border-b border-gray-100">

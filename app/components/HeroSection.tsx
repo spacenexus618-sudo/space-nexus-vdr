@@ -23,7 +23,7 @@ export default function HeroSection() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6"
             >
-              Secure Virtual Data Room Software
+              AI-Powered Virtual Data Room Software
               <br />
               <span className="text-gradient">for M&A, Fundraising & Legal Deals</span>
             </h1>
@@ -60,7 +60,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="/features"
-                className="inline-flex mr3 items-center px-6 py-3.5 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-200"
+                className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-200"
               >
                 Explore Features
               </Link>
@@ -87,7 +87,7 @@ export default function HeroSection() {
 
           {/* Right Visual - M&A Deal Flow Visualization */}
           <div
-            className="relative animate-fade-in hidden lg:block"
+            className="relative animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
             {/* Decorative Background */}
@@ -159,61 +159,61 @@ export default function HeroSection() {
                     fill="none"
                     strokeDasharray="4 4"
                   >
-                    <animate
-                      attributeName="stroke-dashoffset"
-                      from="8"
-                      to="0"
-                      dur="1s"
-                      repeatCount="indefinite"
-                    />
-                  </path>
-                  {/* Lines from Buyer to Center */}
-                  <path
-                    d="M 240 60 Q 150 80 150 120"
-                    stroke="url(#lineGradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="4 4"
-                  >
-                    <animate
-                      attributeName="stroke-dashoffset"
-                      from="8"
-                      to="0"
-                      dur="1s"
-                      repeatCount="indefinite"
-                    />
-                  </path>
-                  {/* Lines from Center to Advisors */}
-                  <path
-                    d="M 150 160 Q 80 180 60 200"
-                    stroke="url(#lineGradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="4 4"
-                  >
-                    <animate
-                      attributeName="stroke-dashoffset"
-                      from="0"
-                      to="8"
-                      dur="1s"
-                      repeatCount="indefinite"
-                    />
-                  </path>
-                  <path
-                    d="M 150 160 Q 220 180 240 200"
-                    stroke="url(#lineGradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeDasharray="4 4"
-                  >
-                    <animate
-                      attributeName="stroke-dashoffset"
-                      from="0"
-                      to="8"
-                      dur="1s"
-                      repeatCount="indefinite"
-                    />
-                  </path>
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        from="8"
+                        to="0"
+                        dur="1s"
+                        repeatCount="1"
+                      />
+                    </path>
+                    {/* Lines from Buyer to Center */}
+                    <path
+                      d="M 240 60 Q 150 80 150 120"
+                      stroke="url(#lineGradient)"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="4 4"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        from="8"
+                        to="0"
+                        dur="1s"
+                        repeatCount="1"
+                      />
+                    </path>
+                    {/* Lines from Center to Advisors */}
+                    <path
+                      d="M 150 160 Q 80 180 60 200"
+                      stroke="url(#lineGradient)"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="4 4"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        from="0"
+                        to="8"
+                        dur="1s"
+                        repeatCount="1"
+                      />
+                    </path>
+                    <path
+                      d="M 150 160 Q 220 180 240 200"
+                      stroke="url(#lineGradient)"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="4 4"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        from="0"
+                        to="8"
+                        dur="1s"
+                        repeatCount="1"
+                      />
+                    </path>
                 </svg>
 
                 {/* Top Row - Seller & Buyer */}

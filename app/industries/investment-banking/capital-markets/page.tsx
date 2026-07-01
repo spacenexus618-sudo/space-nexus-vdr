@@ -184,7 +184,7 @@ export default function IBCapitalMarketsPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for investment banking →</h3>
                             <p className="text-xs text-gray-500 mt-2">The full IB VDR solution overview.</p>
                         </Link>
-                        <Link href="/blog/vdr-software-investment-banking" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/best-virtual-data-room-for-ma" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR software for IB →</h3>
                             <p className="text-xs text-gray-500 mt-2">Practical guide for investment banking teams.</p>

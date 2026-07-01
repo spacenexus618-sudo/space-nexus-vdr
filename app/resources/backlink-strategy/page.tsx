@@ -66,11 +66,22 @@ const faqSchema = {
     })),
 };
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Resources", item: "https://spacenexus.net/resources" },
+        { "@type": "ListItem", position: 3, name: "Backlink Strategy", item: "https://spacenexus.net/resources/backlink-strategy" },
+    ],
+};
+
 export default function BacklinkStrategyPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="backlink-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
             <Script id="backlink-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="res-bs-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,20 +310,20 @@ export default function BacklinkStrategyPage() {
                     <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related Resources</p>
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Continue exploring</h2>
                     <div className="grid md:grid-cols-3 gap-4">
-                        <Link href="/blog/vdr-software-investment-banking" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/best-virtual-data-room-for-ma" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR software for IB →</h3>
                             <p className="text-xs text-gray-500 mt-2">Reference content for backlink context.</p>
                         </Link>
-                        <Link href="/blog/security-compliance-pulse-june-2026" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/vdr-security-what-to-look-for" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security &amp; compliance pulse →</h3>
                             <p className="text-xs text-gray-500 mt-2">Linkable research content for journalists.</p>
                         </Link>
-                        <Link href="/resources" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Resources</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">All resources →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Templates, guides, and tools for deal teams.</p>
+                        <Link href="/blog" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Blog & resources →</h3>
+                            <p className="text-xs text-gray-500 mt-2">Guides, templates, and tools for deal teams.</p>
                         </Link>
                     </div>
                 </div>

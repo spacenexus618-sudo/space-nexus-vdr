@@ -90,6 +90,45 @@ const serviceSchema = {
     },
 };
 
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+        {
+            "@type": "Question",
+            name: "What is an M&A virtual data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "An M&A virtual data room (VDR) is a secure online repository for storing and sharing confidential company documents during mergers and acquisitions. It provides granular bidder access controls, structured Q&A workflows, tamper-evident audit logs, and AI-powered redaction — all designed to streamline sell-side and buy-side due diligence while protecting sensitive deal information.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How does an M&A data room protect deal confidentiality?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "SpaceNexus M&A data rooms protect confidentiality through NDA enforcement at room entry, granular document-level and folder-level permissions per bidder group, IP access restrictions, download controls, dynamic watermarking, and tamper-evident audit logs that track every view and action. SOC 2 Type II certification and AES-256 encryption provide bank-grade security throughout the deal lifecycle.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How quickly can an M&A data room be set up?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "SpaceNexus M&A data rooms are fully operational within 24 hours. The bulk uploader processes 100+ file types, and AI Auto-Categorization organizes documents instantly. You can invite bidders, configure NDA gates, and set granular permissions the same day — no IT support or software installation required.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "What documents go into an M&A data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A typical M&A data room includes the Confidential Information Memorandum (CIM), audited financials, cap table, material contracts, IP registrations, employee and benefit plans, regulatory filings, customer and supplier lists, litigation records, and environmental reports. SpaceNexus provides pre-built folder templates organized by due diligence workstream to accelerate setup.",
+            },
+        },
+    ],
+};
+
 const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -112,6 +151,11 @@ export default function MAVDRPage() {
                 id="ma-vdr-breadcrumb-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
+                id="ma-vdr-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <main className="pt-20 lg:pt-24">
             {/* Hero */}
@@ -211,7 +255,7 @@ export default function MAVDRPage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / deals</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                                <img src="/spacenexus/screenshots/vdr-deals.png" alt="Space Nexus M&A deal pipeline" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-deals.png" alt="SpaceNexus M&A deal pipeline" className="w-full h-auto" loading="lazy" />
                             </div>
                             <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
                         </div>

@@ -1,9 +1,18 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "VDR Features | SpaceNexus",
   description: "All SpaceNexus VDR features: AI redaction, structured Q&A, engagement analytics, dynamic watermarking, audit logs, and more.",
+  keywords: [
+    "VDR features",
+    "virtual data room features",
+    "data room software features",
+    "M&A due diligence tools",
+    "AI VDR platform",
+    "secure document sharing features",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features",
   },
@@ -447,9 +456,50 @@ const colorClasses: Record<
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the key VDR features of SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus includes a comprehensive VDR feature suite: AI-powered document redaction, structured Q&A workflows with category-based routing, granular role-based permissions, real-time buyer engagement analytics, dynamic watermarking, tamper-evident audit logs, NDA click-through enforcement, bulk document upload with AI auto-categorization, OCR full-text search, and SSO integrations. All features are built specifically for M&A, fundraising, and legal transactions." },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus compare to other VDR providers?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus combines AI-powered features like auto-redaction and smart categorization with transparent flat-rate pricing — unlike traditional VDRs that charge per page or per GB. With SOC 2 Type II certification, 24-hour setup, and no hidden overage fees, SpaceNexus delivers enterprise-grade VDR capabilities at a fraction of the cost of legacy providers like Datasite and Intralinks." },
+    },
+    {
+      "@type": "Question",
+      name: "Is AI redaction included in all plans?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. AI-powered document redaction is a standard feature included across all SpaceNexus plans — not an expensive add-on. The AI automatically detects and redacts PII, financial figures, and privileged information across PDFs, Word documents, and scanned files on every upload." },
+    },
+    {
+      "@type": "Question",
+      name: "What makes SpaceNexus different from generic cloud storage?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus is purpose-built for transaction workflows with features that generic cloud storage (Dropbox, Google Drive, Box) cannot provide: NDA click-through enforcement, granular bidder-level permissions with ethical walls, AI redaction, structured Q&A workflows, tamper-evident audit logs, dynamic watermarking, and real-time engagement analytics. It is SOC 2 Type II certified and designed to meet the security requirements of M&A, fundraising, and legal due diligence." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+  ],
+};
+
 export default function FeaturesPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="features-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -631,7 +681,7 @@ export default function FeaturesPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-dashboard.png"
-                  alt="Space Nexus VDR Dashboard — deal command center with AI features"
+                  alt="SpaceNexus VDR Dashboard — deal command center with AI features"
                   className="w-full h-auto"
                   loading="lazy"
                 />

@@ -520,7 +520,7 @@ export default function KindoraHomePage() {
                   className="w-full h-auto object-cover block"
                 >
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
-                  <source src="/videos/kindora-demo-video.webm" type="video/webm" />
+
                 </video>
                 {/* Bottom fade */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />

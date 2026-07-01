@@ -329,7 +329,7 @@ const articleSchema = {
     description:
         "The complete 2026 guide to secure document sharing. What it is, how it differs from email and cloud storage, key features, use cases by industry, and best practices.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-25",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/secure-document-sharing",
@@ -354,6 +354,14 @@ const breadcrumbSchema = {
     ],
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+};
+
 function CheckIcon() {
     return (
         <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -373,6 +381,7 @@ function XIcon() {
 export default function SecureDocumentSharingPage() {
     return (
         <>
+            <Script id="sds-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="sds-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="sds-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="sds-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

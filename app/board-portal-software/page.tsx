@@ -385,7 +385,7 @@ const articleSchema = {
     description:
         "Independent comparison and ranking of the 7 best board portal software providers in 2026. AI features, security, and which one boards actually pick.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-24",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/board-portal-software",
@@ -408,6 +408,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Board Portal Software", item: "https://spacenexus.net/board-portal-software" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 function CheckIcon() {
@@ -520,6 +528,7 @@ function ProviderCard({ provider }: { provider: Provider }) {
 export default function BoardPortalSoftwarePage() {
     return (
         <>
+            <Script id="bps-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="bps-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="bps-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="bps-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

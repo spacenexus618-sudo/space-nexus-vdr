@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Data Room Software 2026 | SpaceNexus",
-    description: "Compare the best data room software platforms. AI features, security, pricing, and which one fits your deal.",
+    description: "Compare the best data room software and virtual deal room platforms. AI features, security, pricing, and which one fits your deal.",
     alternates: {
         canonical: "https://spacenexus.net/data-room-software",
     },
     openGraph: {
         title: "Data Room Software 2026 | SpaceNexus",
         description:
-            "Compare the best data room software platforms. AI features, security, pricing, and whic...",
+            "Compare the best data room software and virtual deal room platforms. AI features, security, pricing, and which one fits your deal.",
         url: "https://spacenexus.net/data-room-software",
         type: "website",
     },
@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     keywords: [
         "data room software",
         "best data room software",
+        "virtual deal room",
         "data room software comparison",
         "data room software 2026",
         "M&A data room software",
@@ -293,7 +294,7 @@ const articleSchema = {
     headline: "Data Room Software 2026 — Complete Guide to Features, Pricing & Top Picks",
     description: "The complete guide to data room software in 2026. Compare features, pricing, and security certifications across the top platforms.",
     author: { "@type": "Organization", name: "SpaceNexus" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     dateModified: "2026-06-01",
     mainEntityOfPage: "https://spacenexus.net/data-room-software",
 };
@@ -315,6 +316,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Data Room Software", item: "https://spacenexus.net/data-room-software" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 const softwareSchema = {
@@ -344,6 +353,7 @@ const softwareSchema = {
 export default function DataRoomSoftwarePage() {
     return (
         <>
+            <Script id="drs-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="drs-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="drs-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="drs-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

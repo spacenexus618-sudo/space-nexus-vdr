@@ -338,7 +338,7 @@ const articleSchema = {
     description:
         "The definitive guide to virtual data room providers in 2026. Compare top VDR software for M&A, due diligence, fundraising, and legal transactions.",
     author: { "@type": "Organization", name: "SpaceNexus" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     dateModified: "2026-06-01",
     mainEntityOfPage: "https://spacenexus.net/virtual-data-room-providers",
 };
@@ -362,9 +362,18 @@ const breadcrumbSchema = {
     ],
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+};
+
 export default function VirtualDataRoomProvidersPage() {
     return (
         <>
+            <Script id="vdr-providers-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="vdr-providers-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="vdr-providers-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="vdr-providers-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

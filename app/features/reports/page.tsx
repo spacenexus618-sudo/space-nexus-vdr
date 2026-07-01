@@ -1,9 +1,17 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Reports & Audit Trail | SpaceNexus",
   description: "Court-admissible audit logs, compliance reports, and engagement analytics. Tamper-evident and exportable.",
+  keywords: [
+    "VDR audit trail",
+    "compliance reporting VDR",
+    "data room reports",
+    "audit log software",
+    "deal reports VDR",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/reports",
   },
@@ -153,9 +161,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What types of reports can I generate in SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus generates five key report types: Access Logs (who viewed what and when), Document Activity (views, downloads, and interactions), Q&A Export (all questions and responses), Audit Trails (immutable, timestamped user actions), and Engagement Reports (buyer interest scoring and document heatmaps). All reports are exportable in PDF and CSV formats." },
+    },
+    {
+      "@type": "Question",
+      name: "Are SpaceNexus audit logs court-admissible?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. SpaceNexus audit logs are tamper-evident, meaning every document view, download, permission change, and user action is logged with a timestamp and cannot be altered or deleted. These immutable logs meet the evidentiary standards required for litigation, SEC filings, FINRA requirements, and regulatory reviews." },
+    },
+    {
+      "@type": "Question",
+      name: "How does document tracking work in the reports?",
+      acceptedAnswer: { "@type": "Answer", text: "The document tracking report shows every document access event with full timestamps, user identities, and action types (view, download, print). You can filter by user, document, date range, or deal. This reveals exactly which documents each counterparty reviewed, how many times, and for how long." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I export compliance reports for auditors and regulators?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. All SpaceNexus reports — including audit trails, access logs, and Q&A exports — can be exported as PDF or CSV files. The export includes complete metadata with digital signatures, making them suitable for submission to auditors, regulators (SEC, FINRA, FCA), and opposing counsel during litigation." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Reports & Audit Trail", item: "https://spacenexus.net/features/reports" },
+  ],
+};
+
 export default function ReportsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="reports-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -290,9 +340,9 @@ export default function ReportsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-rports.png"
-                  alt="Space Nexus VDR Reports — compliance and audit reporting interface"
+                  alt="SpaceNexus VDR Reports — compliance and audit reporting interface"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

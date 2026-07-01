@@ -5,8 +5,22 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "VDR for Corporate Development | SpaceNexus",
   description: "Virtual data room for corporate M&A, divestitures, joint ventures, and strategic investments. AI redaction and analytics included.",
+  keywords: [
+    "corporate development VDR",
+    "corporate M&A data room",
+    "divestiture data room",
+    "joint venture VDR",
+    "strategic investment data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/corporate-development",
+  },
+  openGraph: {
+    title: "VDR for Corporate Development | SpaceNexus",
+    description:
+      "Virtual data room for corporate M&A, divestitures, joint ventures, and strategic investments. AI redaction and analytics included.",
+    url: "https://spacenexus.net/industries/corporate-development",
+    type: "website",
   },
 };
 

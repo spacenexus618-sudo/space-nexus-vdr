@@ -301,9 +301,31 @@ const breadcrumbSchema = {
     ],
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+};
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "VDR Providers 2026 — Compare Top Virtual Data Room Vendors",
+    description:
+        "Honest comparison of the top 6 VDR providers in 2026. Pricing, AI features, security certifications, and best-fit use cases.",
+    author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    dateModified: "2026-06-01",
+    mainEntityOfPage: "https://spacenexus.net/vdr-providers",
+};
+
 export default function VdrProvidersPage() {
     return (
         <>
+            <Script id="vdrp-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+            <Script id="vdrp-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="vdrp-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="vdrp-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

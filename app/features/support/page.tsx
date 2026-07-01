@@ -1,11 +1,26 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "VDR Support & Onboarding | SpaceNexus",
   description: "24/7 support, dedicated deal support, onboarding help, and security reviews. Get your data room live fast.",
+  keywords: [
+    "VDR support",
+    "data room onboarding",
+    "24/7 VDR support",
+    "deal support services",
+    "data room setup help",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/support",
+  },
+  openGraph: {
+    title: "VDR Support & Onboarding | SpaceNexus",
+    description:
+      "24/7 support, dedicated deal support, onboarding help, and security reviews. Get your data room live fast.",
+    url: "https://spacenexus.net/features/support",
+    type: "website",
   },
 };
 
@@ -132,9 +147,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What support does SpaceNexus provide?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus provides comprehensive support including a self-service help center with documentation and tutorials, real-time chat and phone support from our expert team, system status monitoring with incident notifications, and dedicated success managers for enterprise customers. Support is available 24/7." },
+    },
+    {
+      "@type": "Question",
+      name: "Is there 24/7 live support available?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. SpaceNexus offers 24/7 live chat and phone support from our expert team. Whether your deal is closing at midnight or your team is working across time zones, our support team is available around the clock to help you keep transactions moving." },
+    },
+    {
+      "@type": "Question",
+      name: "What is a dedicated success manager?",
+      acceptedAnswer: { "@type": "Answer", text: "Enterprise customers are assigned a dedicated success manager — a single point of contact who provides strategic guidance, onboarding support, and ongoing optimization recommendations. Your success manager helps configure data rooms, train teams, and ensure you're getting maximum value from the SpaceNexus platform." },
+    },
+    {
+      "@type": "Question",
+      name: "How do I access the SpaceNexus help center?",
+      acceptedAnswer: { "@type": "Answer", text: "The SpaceNexus help center is accessible directly from your VDR dashboard. It includes comprehensive documentation, step-by-step tutorials, best practice guides, and FAQs covering every feature. You can also reach live support through the chat widget available on every page of the platform." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Support & Onboarding", item: "https://spacenexus.net/features/support" },
+  ],
+};
+
 export default function SupportPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="support-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

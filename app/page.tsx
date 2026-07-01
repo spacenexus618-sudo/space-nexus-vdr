@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Script from "next/script";
 import HeroSection from "./components/HeroSection";
 import TrustBar from "./components/TrustBar";
@@ -9,6 +10,15 @@ import BenefitsSection from "./components/BenefitsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
 import KindoraCallout from "./components/KindoraCallout";
+
+export const metadata: Metadata = {
+  title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
+  description:
+    "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
+  alternates: {
+    canonical: "https://spacenexus.net",
+  },
+};
 
 const softwareSchema = {
   "@context": "https://schema.org",

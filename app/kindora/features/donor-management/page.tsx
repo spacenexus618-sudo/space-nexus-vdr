@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Donor Management Software for Nonprofits — Kindora",
   description:
     "Manage donor profiles, track donations, monitor giving history, and build lasting donor relationships with Kindora's comprehensive donor management system.",
+  keywords: [
+    "donor management software",
+    "nonprofit donor tracking",
+    "donor CRM",
+    "recurring giving software",
+    "donor database nonprofit",
+  ],
   alternates: {
     canonical: "/kindora/features/donor-management",
   },

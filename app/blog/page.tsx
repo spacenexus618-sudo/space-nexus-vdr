@@ -156,6 +156,15 @@ export default function BlogPage() {
         clusterMap[cluster.label] = blogPosts.filter((p) => cluster.categories!.includes(p.category));
     }
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://spacenexus.net/blog" },
+        ],
+    };
+
     const blogListSchema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -176,10 +185,20 @@ export default function BlogPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
+                id="blog-breadcrumb"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
                 id="blog-list-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
             />
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <span className="text-gray-600">Blog</span>
+            </nav>
 
             {/* Hero */}
             <section className="pt-28 pb-16 bg-white border-b border-gray-100">

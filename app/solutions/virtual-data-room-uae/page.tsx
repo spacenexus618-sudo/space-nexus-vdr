@@ -5,6 +5,14 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Virtual Data Room for UAE | SpaceNexus",
   description: "DIFC and ADGM compliant VDR for UAE M&A, capital markets, and family office transactions. SOC 2 certified with Arabic support.",
+  keywords: [
+    "virtual data room UAE",
+    "DIFC compliant VDR",
+    "ADGM data room",
+    "UAE M&A data room",
+    "Middle East VDR",
+    "Dubai virtual data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-uae",
     languages: {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { authorProfiles } from "../blog/data/posts";
 //about
 const teamMembers = Object.values(authorProfiles);
@@ -49,9 +50,23 @@ const milestones = [
     { year: "2026", event: "500+ enterprises trust Space Nexus for critical transactions" },
 ];
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://spacenexus.net/about" },
+    ],
+};
+
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
+            <Script
+                id="about-breadcrumb"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -80,6 +95,11 @@ export default function AboutPage() {
                     }),
                 }}
             />
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <span className="text-gray-600">About</span>
+            </nav>
             {/* Hero */}
             <section className="pt-28 pb-20 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

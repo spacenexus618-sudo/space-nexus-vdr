@@ -1,9 +1,17 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Data Room Dashboard | SpaceNexus",
   description: "Real-time pipeline visibility, deal health, document activity, and Q&A status in one dashboard.",
+  keywords: [
+    "data room dashboard",
+    "deal pipeline tracking",
+    "VDR dashboard",
+    "document activity tracking",
+    "deal monitoring software",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/dashboard",
   },
@@ -145,9 +153,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What does the SpaceNexus VDR dashboard show?",
+      acceptedAnswer: { "@type": "Answer", text: "The SpaceNexus dashboard provides a centralized command center showing active deals, document counts, open Q&A requests, and invited users in a single consolidated view. You can monitor deal pipeline stages, track AI redaction and auto-categorization activity, and access every deal module without switching between screens." },
+    },
+    {
+      "@type": "Question",
+      name: "How does AI auto-categorization work in the dashboard?",
+      acceptedAnswer: { "@type": "Answer", text: "When documents are uploaded, SpaceNexus AI analyzes their content and automatically sorts them into the correct folder categories — financial statements, legal agreements, HR records, intellectual property, and more. This saves hours of manual organization and ensures consistent folder structures across all deals." },
+    },
+    {
+      "@type": "Question",
+      name: "How does the pipeline tracker help deal teams?",
+      acceptedAnswer: { "@type": "Answer", text: "The pipeline tracker displays all deals organized by progress stage — Discovery, Due Diligence, Negotiation, and Closed. You can instantly see where each transaction stands, identify bottlenecks, and drill into any deal's documents, metrics, and counterparty activity with one click." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I monitor Q&A activity from the dashboard?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. The dashboard shows open Q&A requests by category, response status, and assigned subject matter experts. You can track overdue questions, monitor departmental workloads, and jump directly into the Q&A interface to manage responses from the command center." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Dashboard", item: "https://spacenexus.net/features/dashboard" },
+  ],
+};
+
 export default function DashboardPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="dashboard-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -282,9 +332,9 @@ export default function DashboardPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-dashboard.png"
-                  alt="Space Nexus VDR Dashboard — deal command center with AI features"
+                  alt="SpaceNexus VDR Dashboard — deal command center with AI features"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

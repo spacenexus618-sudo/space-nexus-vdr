@@ -236,7 +236,7 @@ const articleSchema = {
     description:
         "Real M&A case studies. How deal teams used SpaceNexus to close technology M&A, healthcare, PE buyouts, and cross-border transactions faster.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-25",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/m-a-case-studies",
@@ -261,6 +261,14 @@ const breadcrumbSchema = {
     ],
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+};
+
 function CheckIcon() {
     return (
         <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -272,6 +280,7 @@ function CheckIcon() {
 export default function MACaseStudiesPage() {
     return (
         <>
+            <Script id="macs-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="macs-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="macs-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="macs-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -455,6 +464,44 @@ export default function MACaseStudiesPage() {
                             <span className="text-gray-300">|</span>
                             <Link href="/solutions/ma-document-sharing" className="text-sm font-semibold text-[#2563eb] hover:underline">
                                 M&amp;A Document Sharing →
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Related VDR Resources */}
+                <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring M&A resources</h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <Link
+                                href="/m-a-data-room-providers"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Top providers ranked.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A data room providers →</h3>
+                            </Link>
+                            <Link
+                                href="/solutions/mergers-and-acquisitions-vdr"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">M&A guide.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                            </Link>
+                            <Link
+                                href="/data-room-due-diligence"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Setup & best practices.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room due diligence →</h3>
+                            </Link>
+                            <Link
+                                href="/deal-room-software"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Platform comparison.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Deal room software →</h3>
                             </Link>
                         </div>
                     </div>

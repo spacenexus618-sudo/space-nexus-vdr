@@ -429,7 +429,7 @@ const articleSchema = {
     description:
         "Independent comparison and ranking of the 7 best deal room software providers in 2026. Pricing, AI features, security, and which one deal teams actually pick.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-23",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/deal-room-software",
@@ -452,6 +452,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Deal Room Software", item: "https://spacenexus.net/deal-room-software" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 function CheckIcon() {
@@ -564,6 +572,7 @@ function ProviderCard({ provider }: { provider: Provider }) {
 export default function DealRoomSoftwarePage() {
     return (
         <>
+            <Script id="drs-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="drs-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="drs-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="drs-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

@@ -44,6 +44,7 @@ const articleSchema = {
     author: { "@type": "Organization", name: "SpaceNexus" },
     publisher: {
         "@type": "Organization",
+        "@id": "https://spacenexus.net/#organization",
         name: "SpaceNexus",
         logo: { "@type": "ImageObject", url: "https://spacenexus.net/logo.png" },
     },
@@ -100,6 +101,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Data Room Due Diligence", item: "https://spacenexus.net/data-room-due-diligence" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 const setupSteps = [
@@ -374,6 +383,7 @@ const commonErrors = [
 export default function DataRoomDueDiligencePage() {
     return (
         <>
+            <Script id="drdd-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="drdd-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="drdd-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="drdd-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -565,7 +575,7 @@ export default function DataRoomDueDiligencePage() {
                                 The minimum security standards your data room must meet before a document goes near it.
                             </p>
                         </div>
-                        <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
                             <table className="w-full text-sm">
                                 <thead>
                                     <tr className="bg-gray-900 text-white">
@@ -706,6 +716,44 @@ export default function DataRoomDueDiligencePage() {
                                     <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">{post.title} →</p>
                                 </Link>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Related VDR Resources */}
+                <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring data room resources</h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <Link
+                                href="/vdr-providers"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Top providers for M&A.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR providers compared →</h3>
+                            </Link>
+                            <Link
+                                href="/data-room-software"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Software comparison.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room software guide →</h3>
+                            </Link>
+                            <Link
+                                href="/checklists/due-diligence-checklist"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">200+ item checklist.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Due diligence checklist →</h3>
+                            </Link>
+                            <Link
+                                href="/solutions/mergers-and-acquisitions-vdr"
+                                className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                            >
+                                <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">M&A solution.</p>
+                                <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                            </Link>
                         </div>
                     </div>
                 </section>

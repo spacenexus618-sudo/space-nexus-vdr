@@ -5,8 +5,22 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "VDR for Life Sciences | SpaceNexus",
   description: "Virtual data room for pharmaceutical licensing, biotech M&A, and clinical trial data sharing. HIPAA-ready configuration.",
+  keywords: [
+    "life sciences data room",
+    "pharma VDR",
+    "biotech M&A data room",
+    "HIPAA compliant VDR",
+    "clinical trial data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/life-sciences",
+  },
+  openGraph: {
+    title: "VDR for Life Sciences | SpaceNexus",
+    description:
+      "Virtual data room for pharmaceutical licensing, biotech M&A, and clinical trial data sharing. HIPAA-ready configuration.",
+    url: "https://spacenexus.net/industries/life-sciences",
+    type: "website",
   },
 };
 
@@ -444,7 +458,7 @@ export default function LifeSciencesPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
                         </Link>
                         <Link
-                            href="/blog/hipaa-compliant-file-sharing-healthcare-ma"
+                            href="/blog/vdr-security-what-to-look-for"
                             className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
                         >
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">PHI handling in transactions.</p>

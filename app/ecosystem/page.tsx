@@ -122,6 +122,15 @@ const organizationJsonLd = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Ecosystem", item: "https://spacenexus.net/ecosystem" },
+  ],
+};
+
 const categoryColors: Record<string, string> = {
   "Contracts & E-Signatures": "bg-indigo-500/20 text-indigo-300",
   "Field Data & Documentation": "bg-emerald-500/20 text-emerald-300",
@@ -136,6 +145,11 @@ export default function EcosystemPage() {
   return (
     <>
       <Script
+        id="eco-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
         id="ecosystem-org-schema"
         type="application/ld+json"
         strategy="beforeInteractive"
@@ -143,6 +157,11 @@ export default function EcosystemPage() {
       />
 
       <main className="min-h-screen bg-gray-950 text-white">
+        <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-gray-600">Ecosystem</span>
+        </nav>
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-gray-800 bg-gradient-to-b from-gray-900 to-gray-950">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none" />
@@ -284,7 +303,7 @@ export default function EcosystemPage() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/demo"
                 className="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
               >
                 Request a demo

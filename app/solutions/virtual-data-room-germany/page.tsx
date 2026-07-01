@@ -5,6 +5,14 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Virtueller Datenraum für M&A | SpaceNexus",
   description: "DSGVO-konformer VDR für deutsche M&A und Due Diligence. SOC 2 zertifiziert, ISO 27001, mit EU-Datenresidenz.",
+  keywords: [
+    "Virtueller Datenraum",
+    "VDR Deutschland",
+    "DSGVO Datenraum",
+    "German virtual data room",
+    "EU data room",
+    "M&A Datenraum Deutschland",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-germany",
     languages: {

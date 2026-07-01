@@ -1,9 +1,17 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Users & Permissions | SpaceNexus",
   description: "Granular per-user, per-folder, per-document permissions. RBAC, dynamic watermarking, IP whitelisting.",
+  keywords: [
+    "VDR permissions",
+    "role-based access control VDR",
+    "data room access management",
+    "document level permissions",
+    "IP whitelisting VDR",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/users-permissions",
   },
@@ -85,9 +93,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do role-based permissions work in SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus allows you to create custom user roles (Admin, Buyer, Seller, Legal, Finance) and assign granular permissions at the folder, document, and page levels. Each role can have distinct viewing, uploading, editing, downloading, and deleting rights, ensuring each counterparty sees only what they're authorized to see." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I set document-level access controls for individual files?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. SpaceNexus supports document-level and folder-level access controls independently. You can restrict entire sections of the data room to specific roles, or apply finer controls to individual sensitive files within shared folders. This includes time-limited access windows and deal-specific restrictions." },
+    },
+    {
+      "@type": "Question",
+      name: "What custom access rules are available?",
+      acceptedAnswer: { "@type": "Answer", text: "Beyond standard role templates, SpaceNexus supports custom access rules including time-limited access windows, IP whitelisting, geo-based restrictions, and deal-specific permission overrides. Enterprise plans also include device management policies for maximum security." },
+    },
+    {
+      "@type": "Question",
+      name: "How does enterprise-grade security protect user data?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus enforces enterprise-grade access controls at every level of the platform. Users can only access documents and actions relevant to their responsibilities. Combined with SOC 2 Type II certification, AES-256 encryption, dynamic watermarking, and tamper-evident audit logs, your data room maintains the highest security standards." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Users & Permissions", item: "https://spacenexus.net/features/users-permissions" },
+  ],
+};
+
 export default function UsersPermissionsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="users-permissions-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -173,9 +223,9 @@ export default function UsersPermissionsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/flexible%20permisson%20settings.jpeg"
-                  alt="Space Nexus VDR Flexible Permission Settings — role-based access control"
+                  alt="SpaceNexus VDR Flexible Permission Settings — role-based access control"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -233,7 +283,7 @@ export default function UsersPermissionsPage() {
             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10">
               <img
                 src="/spacenexus/screenshots/flexible%20permison%20-%20rolebsed.jpeg"
-                alt="Space Nexus VDR role-based permission configuration interface"
+                alt="SpaceNexus VDR role-based permission configuration interface"
                 className="w-full h-auto"
                 loading="lazy"
               />

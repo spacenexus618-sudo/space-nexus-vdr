@@ -282,7 +282,7 @@ export default function DataRoomFAQPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR compliance FAQ →</h3>
                             <p className="text-xs text-gray-500 mt-2">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4 — all compliance questions answered.</p>
                         </Link>
-                        <Link href="/blog/vdr-vs-physical-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/what-is-a-virtual-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR vs physical data room →</h3>
                             <p className="text-xs text-gray-500 mt-2">Side-by-side comparison of VDRs and physical data rooms in 2026.</p>

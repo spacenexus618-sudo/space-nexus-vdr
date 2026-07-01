@@ -3,34 +3,34 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "VDR Providers Comparison 2026 | Side-by-Side | SpaceNexus",
-    description: "Detailed comparison of top VDR providers. See pricing, features, security, setup time, and ratings side-by-side.",
+    title: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix | SpaceNexus",
+    description: "Independent data room comparison of top VDR providers. See pricing, features, security, setup time, and ratings side-by-side in our 2026 feature matrix.",
     alternates: {
         canonical: "https://spacenexus.net/vdr-comparison",
     },
     openGraph: {
-        title: "VDR Providers Comparison 2026 | SpaceNexus",
+        title: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix | SpaceNexus",
         description:
-            "Detailed side-by-side comparison of leading VDR providers. Compare pricing, features, and security.",
+            "Independent data room comparison of top VDR providers. Compare pricing, features, security, and ratings side-by-side.",
         url: "https://spacenexus.net/vdr-comparison",
         type: "article",
     },
     twitter: {
         card: "summary_large_image",
-        title: "VDR Provider Comparison 2026 — Side-by-Side Feature Matrix",
+        title: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix",
         description:
-            "Compare SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada. Features, pricing, security, and ratings.",
+            "Independent data room comparison of SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada. Features, pricing, security, and ratings.",
     },
     keywords: [
+        "data room comparison",
         "VDR comparison",
         "VDR provider comparison",
         "best VDR providers",
-        "VDR feature comparison",
+        "virtual data room comparison",
         "VDR pricing comparison",
         "SpaceNexus vs competitors",
         "VDR comparison 2026",
         "VDR comparison chart",
-        "virtual data room comparison",
         "VDR providers compared",
     ],
 };
@@ -482,11 +482,20 @@ const quickComparison = [
     { feature: "Best Security/Compliance", winner: "Tie: SpaceNexus & Datasite", reason: "Both SOC 2 Type II + ISO 27001 + SEC/FINRA" },
 ];
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Data Room Comparison", item: "https://spacenexus.net/vdr-comparison" },
+    ],
+};
+
 const articleSchema = {
     "@context": "https://schema.org",
     "@type": "ComparisonChart",
-    headline: "VDR Providers Comparison 2026 — Side-by-Side",
-    description: "Detailed side-by-side comparison of top VDR providers with feature matrix, pricing, and decision guides.",
+    headline: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix",
+    description: "Independent data room comparison of top VDR providers with feature matrix, pricing, and decision guides.",
     author: { "@type": "Organization", name: "SpaceNexus" },
     publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     dateModified: "2026-06-01",
@@ -496,9 +505,15 @@ const articleSchema = {
 export default function VDRComparisonPage() {
     return (
         <>
+            <Script id="vdrc-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="vdr-comparison-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
             <main className="pt-20 lg:pt-24">
+                <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                    <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                    <span className="text-gray-600">Data Room Comparison</span>
+                </nav>
                 {/* Hero */}
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,11 +525,11 @@ export default function VDRComparisonPage() {
                                 Side-by-Side Comparison
                             </div>
                             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                                VDR Provider Comparison{" "}
+                                Data Room Comparison{" "}
                                 <span className="text-[#2563eb]">2026</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                Detailed feature matrix, pricing breakdown, and decision guides for selecting the right VDR provider for your specific use case. Compare 6 leading providers across 30+ factors.
+                                Detailed data room comparison featuring an independent feature matrix, pricing breakdown, and decision guides for selecting the right VDR provider. Compare 6 leading providers across 30+ factors.
                             </p>
                         </div>
                     </div>

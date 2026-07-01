@@ -180,7 +180,7 @@ export default function IBSellSideProcessPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&amp;A virtual data room →</h3>
                             <p className="text-xs text-gray-500 mt-2">The platform built for the full sell-side process.</p>
                         </Link>
-                        <Link href="/blog/seller-data-room-prep-checklist-14-days" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/ma-due-diligence-checklist-2026" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Seller 14-day prep checklist →</h3>
                             <p className="text-xs text-gray-500 mt-2">The countdown to launching your data room.</p>

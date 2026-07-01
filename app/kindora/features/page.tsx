@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "Features - Complete Nonprofit Management Tools",
   description:
     "Explore Kindora's comprehensive feature set: donor management, grant tracking, program delivery, financial reporting, volunteer coordination, and more.",
+  keywords: [
+    "nonprofit software features",
+    "NGO management tools",
+    "donor management features",
+    "grant tracking features",
+    "nonprofit platform capabilities",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/kindora/features",
+  },
+  openGraph: {
+    title: "Features - Complete Nonprofit Management Tools",
+    description:
+      "Explore Kindora's comprehensive feature set: donor management, grant tracking, program delivery, financial reporting, volunteer coordination, and more.",
+    url: "https://spacenexus.net/kindora/features",
+    type: "website",
   },
 };
 

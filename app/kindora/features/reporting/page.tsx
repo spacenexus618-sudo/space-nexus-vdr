@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Reports — Financial & Program Analytics | Kindora",
   description:
     "Kindora Reports provides a comprehensive overview of organizational performance combining financial data and program analytics. Monitor revenue, expenses, donations, and service outcomes for better decision-making.",
+  keywords: [
+    "nonprofit reporting software",
+    "NGO financial reports",
+    "impact reporting tools",
+    "nonprofit analytics platform",
+    "program outcome reporting",
+  ],
   alternates: {
     canonical: "/kindora/features/reporting",
   },
@@ -161,7 +168,7 @@ export default function ReportsPage() {
                   src="/kindora/screenshots/Reports/Reports%20(1).png"
                   alt="Kindora Reports — financial and program analytics overview"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

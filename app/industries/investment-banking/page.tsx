@@ -5,6 +5,14 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "VDR for Investment Banking | SpaceNexus",
   description: "Virtual data room for investment banking M&A, capital markets, and restructuring. Multi-bidder workflows and structured Q&A.",
+  keywords: [
+    "investment banking data room",
+    "M&A data room",
+    "IPO data room",
+    "capital markets VDR",
+    "investment bank VDR",
+    "IB deal room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/investment-banking",
   },
@@ -415,7 +423,7 @@ export default function InvestmentBankingPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-deals.png"
-                  alt="Space Nexus Deals Management — M&A pipeline view"
+                  alt="SpaceNexus Deals Management — M&A pipeline view"
                   className="w-full h-auto"
                   loading="lazy"
                 />

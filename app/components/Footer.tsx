@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -27,6 +28,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Security", href: "/features/security-compliance" },
       { name: "Integrations", href: "/features/integrations" },
       { name: "Pricing", href: "/pricing" },
+      { name: "Lead Generation", href: "/lead-generation" },
     ],
   },
   {
@@ -61,6 +63,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Blog", href: "/blog" },
       { name: "VDR Guide", href: "/vdr-guide" },
       { name: "Glossary", href: "/glossary" },
+      { name: "Financial Glossary", href: "/glossary/financial" },
       { name: "Checklists", href: "/checklists" },
       { name: "Templates", href: "/checklists/templates" },
       { name: "Video Tutorials", href: "/tutorials" },
@@ -74,11 +77,43 @@ const footerColumns: FooterColumn[] = [
       { name: "VDR Alternatives", href: "/competitors/vdr-alternatives" },
       { name: "Datasite Alternative", href: "/competitors/datasite-alternative" },
       { name: "Intralinks Alternative", href: "/competitors/intralinks-alternative" },
+      { name: "iDeals Alternative", href: "/competitors/ideals-alternative" },
+      { name: "Drooms Alternative", href: "/competitors/drooms-alternative" },
       { name: "Pricing Comparison", href: "/pricing-comparison" },
       { name: "VDR Providers", href: "/vdr-providers" },
       { name: "Data Room Providers", href: "/data-room-providers" },
-      { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
       { name: "Virtual Data Room Providers", href: "/virtual-data-room-providers" },
+      { name: "Top Data Room Providers", href: "/top-data-room-providers" },
+      { name: "Data Room Comparison", href: "/vdr-comparison" },
+      { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
+    ],
+  },
+  {
+    title: "Guides",
+    links: [
+      { name: "Data Room Solutions", href: "/data-room-solutions" },
+      { name: "Data Room Pricing", href: "/data-room-pricing" },
+      { name: "Electronic Data Room", href: "/electronic-data-room" },
+      { name: "Investment Data Room", href: "/investment-data-room" },
+      { name: "Startup Fundraising Room", href: "/startup-fundraising-data-room" },
+      { name: "Private Equity Data Room", href: "/private-equity-data-room" },
+      { name: "Data Room Security", href: "/data-room-security" },
+      { name: "VDR Software", href: "/vdr-software" },
+      { name: "Virtual Deal Management", href: "/virtual-deal-management" },
+    ],
+  },
+  {
+    title: "More Guides",
+    links: [
+      { name: "Deal Management Software", href: "/deal-management-software" },
+      { name: "M&A Platform", href: "/ma-platform" },
+      { name: "Merger & Acquisition SW", href: "/merger-acquisition-software" },
+      { name: "Online Due Diligence", href: "/online-due-diligence-platform" },
+      { name: "Business Acquisition SW", href: "/business-acquisition-software" },
+      { name: "Board Document Portal", href: "/board-document-portal" },
+      { name: "Deal Collaboration Platform", href: "/deal-collaboration-platform" },
+      { name: "Vendor Due Diligence SW", href: "/vendor-due-diligence-software" },
+      { name: "Secure Document Sharing", href: "/secure-document-sharing" },
     ],
   },
   {
@@ -131,8 +166,17 @@ function FooterAnchor({
 
 export default function Footer() {
   const pathname = usePathname();
+  const [visible, setVisible] = useState(!pathname?.startsWith("/kindora"));
 
-  if (pathname?.startsWith("/kindora")) return null;
+  useEffect(() => {
+    if (pathname?.startsWith("/kindora")) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+  }, [pathname]);
+
+  if (!visible) return null;
 
   return (
     <footer className="bg-white border-t border-gray-200" role="contentinfo">
@@ -203,7 +247,7 @@ export default function Footer() {
 
           <nav
             aria-label="Footer navigation"
-            className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6"
+            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8"
           >
             {footerColumns.map((column) => (
               <div key={column.title}>

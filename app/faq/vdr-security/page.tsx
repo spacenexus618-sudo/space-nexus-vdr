@@ -357,7 +357,7 @@ export default function VDRSecurityFAQPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security: 10 critical features →</h3>
                             <p className="text-xs text-gray-500 mt-2">The 10-point security checklist to use before signing with any VDR provider.</p>
                         </Link>
-                        <Link href="/blog/vdr-security-compliance-guide" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/vdr-security-what-to-look-for" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security & compliance guide →</h3>
                             <p className="text-xs text-gray-500 mt-2">The definitive 22-minute guide to VDR security standards and evaluation.</p>

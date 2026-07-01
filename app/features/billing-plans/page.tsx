@@ -1,9 +1,17 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Billing & Plans | SpaceNexus",
   description: "Transparent flat-rate pricing for VDR. No per-page fees, no hidden overages. Self-serve or enterprise plans.",
+  keywords: [
+    "VDR pricing",
+    "data room plans",
+    "flat-rate VDR",
+    "transparent VDR pricing",
+    "data room billing",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/billing-plans",
   },
@@ -85,9 +93,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus billing work?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus offers transparent flat-rate pricing with no per-page fees and no hidden overages. Plans are based on the number of active deals and concurrent users your team needs. You can view your current plan, monitor usage metrics, access invoices, and upgrade directly from the billing interface." },
+    },
+    {
+      "@type": "Question",
+      name: "Is there flat-rate pricing for the VDR?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. Unlike traditional VDR providers that charge per page, per GB, or per user, SpaceNexus offers transparent flat-rate pricing. Your subscription includes a defined number of active deals and users, with clear upgrade paths as your deal volume grows. There are no surprise charges or hidden overage fees." },
+    },
+    {
+      "@type": "Question",
+      name: "How do I access my billing invoices?",
+      acceptedAnswer: { "@type": "Answer", text: "All billing invoices are accessible and downloadable directly from the SpaceNexus platform. Your finance team can retrieve current and historical invoices without submitting support requests. Invoice data includes plan details, billing period, payment method, and transaction history." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I upgrade my plan mid-cycle without disrupting active deals?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. Plan upgrades can be initiated directly from the billing interface and take effect immediately without interrupting active transactions. Your usage limits are increased instantly, and billing is prorated for the remainder of the cycle. Active deals continue without any downtime or data room interruption." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Billing & Plans", item: "https://spacenexus.net/features/billing-plans" },
+  ],
+};
+
 export default function BillingPlansPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="billing-plans-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -173,9 +223,9 @@ export default function BillingPlansPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/billing%20plans.jpeg"
-                  alt="Space Nexus VDR Billing & Plans — subscription management interface"
+                  alt="SpaceNexus VDR Billing & Plans — subscription management interface"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

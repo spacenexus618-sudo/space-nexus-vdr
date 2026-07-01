@@ -3,23 +3,25 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Intralinks Alternative | SpaceNexus",
-    description: "SpaceNexus vs Intralinks: modern VDR with transparent pricing, AI features, and no per-page fees.",
+    description: "SpaceNexus vs Intralinks: the modern Intralinks virtual data room alternative with transparent pricing, AI features, and no per-page fees.",
     alternates: {
         canonical: "https://spacenexus.net/competitors/intralinks-alternative",
     },
     openGraph: {
         title: "Intralinks Alternative | SpaceNexus",
         description:
-            "SpaceNexus vs Intralinks: modern VDR with transparent pricing, AI features, and no per-...",
+            "SpaceNexus vs Intralinks: the modern Intralinks virtual data room alternative with transparent pricing, AI features, and no per-page fees.",
         url: "https://spacenexus.net/competitors/intralinks-alternative",
     },
     keywords: [
         "Intralinks alternative",
+        "Intralinks virtual data room",
         "Intralinks competitor",
         "alternative to Intralinks",
         "Intralinks vs Space Nexus",
         "capital raising data room",
         "virtual data room alternative",
+        "Intralinks data room",
     ],
 };
 
@@ -253,7 +255,7 @@ export default function IntralinksAlternativePage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
-                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="Space Nexus buyer analytics — Intralinks alternative" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus buyer analytics — Intralinks alternative" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
                         <div>

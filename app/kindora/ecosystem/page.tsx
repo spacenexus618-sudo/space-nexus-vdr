@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Space AI Product Ecosystem | Kindora Nonprofit Software",
   description:
     "Kindora is one of 8 products built by Space AI — a suite of AI-powered business software covering nonprofit management, virtual data rooms, project management, CRM, HR, scheduling, e-signatures, and more.",
+  keywords: [
+    "Space AI ecosystem",
+    "Kindora product family",
+    "AI business software suite",
+    "Space Nexus products",
+    "nonprofit software ecosystem",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/kindora/ecosystem",
   },

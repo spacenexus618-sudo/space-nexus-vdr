@@ -137,6 +137,15 @@ const pricingFaqs = [
   },
 ];
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Pricing", item: "https://spacenexus.net/pricing" },
+    ],
+};
+
 const pricingFaqSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -174,10 +183,20 @@ export default function PricingPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
+                id="pricing-breadcrumb"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
                 id="pricing-faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
             />
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <span className="text-gray-600">Pricing</span>
+            </nav>
             {/* Hero */}
             <section className="pt-28 pb-16 bg-white border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { gql, useMutation, ApolloProvider } from "@apollo/client";
 import { apolloClient } from "@/lib/apollo-client";
 
@@ -325,13 +326,13 @@ function DemoRequestForm() {
 
       <p className="mt-4 text-xs text-gray-500 text-center">
         By submitting this form, you agree to our{" "}
-        <a href="/privacy" className="text-[#2563eb] hover:underline">
+        <Link href="/privacy" className="text-[#2563eb] hover:underline">
           Privacy Policy
-        </a>{" "}
+        </Link>{" "}
         and{" "}
-        <a href="/terms" className="text-[#2563eb] hover:underline">
+        <Link href="/terms" className="text-[#2563eb] hover:underline">
           Terms of Service
-        </a>
+        </Link>
         .
       </p>
     </form>

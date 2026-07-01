@@ -96,10 +96,20 @@ const itemListSchema = {
     })),
 };
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Tutorials", item: "https://spacenexus.net/tutorials" },
+    ],
+};
+
 export default function TutorialsIndexPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="tutorials-itemlist" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+            <Script id="tutorials-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -163,7 +173,7 @@ export default function TutorialsIndexPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Browse all features →</h3>
                             <p className="text-xs text-gray-500 mt-2">Complete feature catalog.</p>
                         </Link>
-                        <Link href="/blog/seller-data-room-prep-checklist-14-days" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/ma-due-diligence-checklist-2026" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">14-day prep checklist →</h3>
                             <p className="text-xs text-gray-500 mt-2">Practical launch timeline.</p>

@@ -324,12 +324,12 @@ export default function VDRComplianceFAQPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security FAQ →</h3>
                             <p className="text-xs text-gray-500 mt-2">Encryption, access controls, watermarking, audit logs, and 35+ more security questions answered.</p>
                         </Link>
-                        <Link href="/blog/vdr-security-compliance-guide" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/vdr-security-what-to-look-for" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR compliance guide →</h3>
                             <p className="text-xs text-gray-500 mt-2">The 22-minute definitive guide to SOC 2, ISO 27001, GDPR, HIPAA, SEC, and FINRA standards.</p>
                         </Link>
-                        <Link href="/blog/secure-data-room-uk-law-firms" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                        <Link href="/blog/secure-file-sharing-for-lawyers" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">UK law firm compliance →</h3>
                             <p className="text-xs text-gray-500 mt-2">FCA, Companies Act 2006, SRA, and UK GDPR requirements for law firms.</p>

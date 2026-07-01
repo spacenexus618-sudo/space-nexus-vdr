@@ -1,9 +1,18 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Data Room Software | SpaceNexus",
   description: "Secure data room software with bulk upload, AI auto-categorization, granular permissions, and audit logs.",
+  keywords: [
+    "data room software",
+    "virtual data room",
+    "secure document storage",
+    "AI document categorization",
+    "data room platform",
+    "document management VDR",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/data-room",
   },
@@ -85,9 +94,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus handle document upload and organization?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus provides bulk upload support for 100+ file types with AI Auto-Categorization that automatically sorts documents into the correct folder categories. The platform maintains a clean folder hierarchy that mirrors your deal's due diligence checklist, giving every team member instant access to the right files." },
+    },
+    {
+      "@type": "Question",
+      name: "What is OCR-powered full-text search in a VDR?",
+      acceptedAnswer: { "@type": "Answer", text: "OCR (Optical Character Recognition) full-text search allows you to find specific clauses, financial figures, or terms within scanned documents and PDFs. SpaceNexus uses OCR to make every document fully searchable, so you can locate critical information across hundreds of files without manually opening each one." },
+    },
+    {
+      "@type": "Question",
+      name: "How does dynamic watermarking protect my documents?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus applies dynamic watermarks that display the viewer's name, email, IP address, and access timestamp on every document page. Watermarks are rendered server-side and cannot be removed, deterring unauthorized sharing and providing forensic traceability if documents are leaked." },
+    },
+    {
+      "@type": "Question",
+      name: "What encryption does SpaceNexus use for document security?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus uses AES-256 encryption at rest and TLS 1.3 encryption in transit to protect all documents. Combined with SOC 2 Type II certification and ISO 27001 compliance, this provides bank-grade security for your most sensitive transaction documents throughout the entire deal lifecycle." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Data Room", item: "https://spacenexus.net/features/data-room" },
+  ],
+};
+
 export default function DataRoomPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="data-room-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -174,9 +225,9 @@ export default function DataRoomPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/secure%20data%20room.jpeg"
-                  alt="Space Nexus VDR Secure Data Room — document management workspace"
+                  alt="SpaceNexus VDR Secure Data Room — document management workspace"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

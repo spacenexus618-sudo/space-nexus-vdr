@@ -9,12 +9,14 @@ export const metadata: Metadata = {
     canonical: "https://spacenexus.net/enterprise",
   },
   keywords: [
+    "enterprise data room",
     "enterprise virtual data room",
     "enterprise VDR",
     "Fortune 500 data room",
     "enterprise M&A platform",
     "enterprise deal room software",
     "enterprise secure document sharing",
+    "enterprise data room solutions",
   ],
   openGraph: {
     title: "Enterprise Virtual Data Room Solutions | SpaceNexus",
@@ -94,6 +96,15 @@ const industries = [
   { name: "Corporate Development", href: "/industries/corporate-development", desc: "Strategic acquisitions, integration" },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Enterprise", item: "https://spacenexus.net/enterprise" },
+  ],
+};
+
 const enterpriseSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -117,12 +128,22 @@ export default function EnterprisePage() {
   return (
     <>
       <Script
+        id="ent-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
         id="enterprise-schema"
         type="application/ld+json"
       >
         {JSON.stringify(enterpriseSchema)}
       </Script>
       <main className="pt-20 lg:pt-24">
+        <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-gray-600">Enterprise</span>
+        </nav>
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

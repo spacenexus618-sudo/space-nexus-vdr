@@ -46,6 +46,16 @@ const faqSchema = {
     })),
 };
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Resources", item: "https://spacenexus.net/resources" },
+        { "@type": "ListItem", position: 3, name: "Keyword Tracking", item: "https://spacenexus.net/resources/keyword-tracking" },
+    ],
+};
+
 const tier1Keywords = [
     "virtual data room", "VDR", "data room", "M&A data room", "best data room",
     "best virtual data room", "virtual data room providers", "secure data room", "online data room",
@@ -81,6 +91,7 @@ export default function KeywordTrackingPage() {
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="kw-article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="kw-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="res-kt-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -282,10 +293,10 @@ export default function KeywordTrackingPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR &amp; M&amp;A glossary →</h3>
                             <p className="text-xs text-gray-500 mt-2">100+ terms defined.</p>
                         </Link>
-                        <Link href="/resources" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
-                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Resources</p>
-                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">All resources →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Templates, guides, and tools.</p>
+                        <Link href="/blog" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Blog & resources →</h3>
+                            <p className="text-xs text-gray-500 mt-2">Guides, templates, and tools.</p>
                         </Link>
                     </div>
                 </div>

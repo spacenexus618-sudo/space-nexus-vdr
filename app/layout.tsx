@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | SpaceNexus",
   },
   description:
-    "Secure virtual data room software for M&A due diligence, fundraising, and legal transactions. AI-powered workflows, SOC 2 Type II security, transparent pricing, and setup in 24 hours.",
+    "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
   keywords: [
     "virtual data room software",
     "VDR software",
@@ -81,9 +81,9 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net",
     siteName: "SpaceNexus",
     title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
-    description:
-      "Enterprise virtual data room software for M&A due diligence, fundraising, and secure document sharing. AI-powered, SOC 2 Type II certified, and easy to launch in 24 hours.",
-    images: [
+      description:
+        "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
+      images: [
       {
         url: "/og-image.png",
         width: 1200,
@@ -95,9 +95,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
-    description:
-      "Enterprise-grade virtual data room software for M&A due diligence, fundraising, and secure document sharing. AI-powered, SOC 2 Type II certified, with transparent pricing.",
-    images: ["/og-image.png"],
+      description:
+        "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
+      images: ["/og-image.png"],
     creator: "@spacenexus",
   },
   alternates: {
@@ -147,6 +147,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         <JsonLd />
+
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="google43f4a543c8cb4c24" />
       </head>
       <body
         className={`${inter.variable} antialiased bg-[#f8f9fa] text-gray-900`}

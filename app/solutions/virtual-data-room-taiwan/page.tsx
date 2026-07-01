@@ -5,6 +5,14 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "虛擬資料室 | M&A 盡職調查平台 | SpaceNexus",
   description: "安全的虛擬資料室，支援繁體中文、GDPR、PDPA 與 SOC 2 認證，適用於 M&A、IPO 與跨境交易。",
+  keywords: [
+    "虛擬資料室",
+    "台灣 VDR",
+    "繁體中文資料室",
+    "virtual data room Taiwan",
+    "Taiwan VDR",
+    "Asia Pacific data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-taiwan",
     languages: {

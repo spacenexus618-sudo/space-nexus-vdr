@@ -316,7 +316,7 @@ const articleSchema = {
     description:
         "Independent ranking of the 7 best data rooms for startup fundraising in 2026. Compare pricing, AI features, NDA controls, and which one founders actually pick.",
     author: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" },
+    publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
     datePublished: "2026-06-20",
     dateModified: "2026-06-25",
     mainEntityOfPage: "https://spacenexus.net/best-data-room-for-startups",
@@ -339,6 +339,14 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "Best Data Room for Startups", item: "https://spacenexus.net/best-data-room-for-startups" },
     ],
+};
+
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://spacenexus.net/#organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
 };
 
 function CheckIcon() {
@@ -455,6 +463,7 @@ function ProviderCard({ provider }: { provider: Provider }) {
 export default function BestDataRoomForStartupsPage() {
     return (
         <>
+            <Script id="bdrs-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="bdrs-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="bdrs-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="bdrs-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

@@ -82,6 +82,45 @@ const serviceSchema = {
     },
 };
 
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+        {
+            "@type": "Question",
+            name: "What is a Series A fundraising data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A Series A fundraising data room is a secure virtual repository where startups organize and share due diligence materials with prospective venture capital investors. It includes pitch decks, financial models, cap tables, legal documents, product roadmaps, and team bios — all accessible under controlled, NDA-protected permissions so founders can manage VC access and track investor engagement.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "What documents should startups include in a Series A data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A Series A data room typically includes the pitch deck, executive summary, 3-year historical P&L, monthly MRR/ARR breakdown, 12-month cash flow forecast, unit economics model, cap table, certificate of incorporation, shareholder agreements, IP assignments, key contracts, product roadmap, architecture overview, security certifications, org chart, founder bios, TAM/SAM/SOM analysis, competitive landscape, and customer references.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How does a data room help with Series A fundraising?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A data room accelerates Series A fundraising by centralizing all due diligence materials in one secure location, letting founders control which VCs see what, tracking which investors are most engaged through real-time analytics, and managing Q&A directly on the platform instead of scattered email chains. This reduces fundraising timelines and keeps the process organized for both founders and investors.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How do VCs access a startup's data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Founders invite VCs via email directly from the SpaceNexus platform. Each VC firm receives unique login credentials with permissions scoped to their access tier. Founders can require NDA signature before entry, set view-only or download permissions per folder, and revoke access instantly if a VC passes or the round closes. No software installation is required — VCs access the room from any browser.",
+            },
+        },
+    ],
+};
+
 const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -104,6 +143,11 @@ export default function SeriesADataRoomPage() {
                 id="series-a-breadcrumb-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
+                id="series-a-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <main className="pt-20 lg:pt-24">
             {/* Hero */}
@@ -204,7 +248,7 @@ export default function SeriesADataRoomPage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="Space Nexus investor engagement analytics for Series A" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus investor engagement analytics for Series A" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
                         <div>

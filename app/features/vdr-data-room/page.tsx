@@ -1,9 +1,18 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "VDR Data Room Features | SpaceNexus",
     description: "AI redaction, structured Q&A, real-time engagement analytics, dynamic watermarking. The features of a modern VDR.",
+    keywords: [
+        "VDR features",
+        "virtual data room platform",
+        "AI redaction software",
+        "Q&A workflow VDR",
+        "data room features",
+        "dynamic watermarking VDR",
+    ],
     alternates: {
         canonical: "https://spacenexus.net/features/vdr-data-room",
     },
@@ -202,9 +211,51 @@ const useCases = [
     },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a modern virtual data room (VDR)?",
+      acceptedAnswer: { "@type": "Answer", text: "A modern virtual data room (VDR) is a secure online repository designed for the document workflows of M&A, fundraising, and legal transactions. Unlike generic cloud storage, a VDR provides granular access controls, NDA enforcement, AI-powered redaction, structured Q&A workflows, dynamic watermarking, and tamper-evident audit logs purpose-built for deal-making." },
+    },
+    {
+      "@type": "Question",
+      name: "How does AI redaction work in SpaceNexus VDR?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus AI redaction automatically detects and redacts personally identifiable information (PII), financial figures, privileged legal content, and other sensitive data across PDFs, Word documents, and scanned files. The AI runs on every upload, and redactions can be reviewed and adjusted before documents are shared with external parties." },
+    },
+    {
+      "@type": "Question",
+      name: "What is structured Q&A in a virtual data room?",
+      acceptedAnswer: { "@type": "Answer", text: "Structured Q&A is a workflow that routes due diligence questions by category (Financial, Legal, Technical, Commercial), urgency level, and subject matter expert. Each question is tracked from submission to answer with a version-controlled audit trail. This replaces scattered email threads and spreadsheets with a single, auditable question management system." },
+    },
+    {
+      "@type": "Question",
+      name: "How does NDA click-through enforcement work?",
+      acceptedAnswer: { "@type": "Answer", text: "In SpaceNexus, every counterparty must electronically accept a non-disclosure agreement (NDA) before they can view any document. The click-through acceptance is timestamped and IP-bound, forming part of the permanent transaction record. This ensures legal compliance and protects deal confidentiality from the first access event." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "VDR Data Room", item: "https://spacenexus.net/features/vdr-data-room" },
+  ],
+};
+
 export default function VDRDataRoomPage() {
     return (
         <main className="pt-20 lg:pt-24">
+            <Script
+                id="vdr-data-room-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             {/* Breadcrumb JSON-LD */}
             <script
                 type="application/ld+json"
@@ -289,9 +340,9 @@ export default function VDRDataRoomPage() {
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                 <img
                                     src="/spacenexus/screenshots/vdr-dashboard.png"
-                                    alt="Space Nexus VDR Data Room — virtual data room dashboard for M&A and fundraising"
+                                    alt="SpaceNexus VDR Data Room — virtual data room dashboard for M&A and fundraising"
                                     className="w-full h-auto"
-                                    loading="eager"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>

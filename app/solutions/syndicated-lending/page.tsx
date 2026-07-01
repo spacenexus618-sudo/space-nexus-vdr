@@ -86,15 +86,73 @@ const schema = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: "https://spacenexus.net/solutions" },
+    { "@type": "ListItem", position: 3, name: "Syndicated Lending", item: "https://spacenexus.net/solutions/syndicated-lending" },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a syndicated lending data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A syndicated lending data room is a secure online platform where lead arrangers distribute confidential information memoranda, financial models, credit agreements, and due diligence materials to prospective syndicate lenders. It supports tiered lender access, KYC/AML workflows, credit agreement negotiation, and ongoing facility reporting — all with full audit trails for regulatory compliance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does a data room support syndicated loan origination?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus supports syndicated loan origination by enabling arrangers to stage lender access (teaser → term sheet → full credit pack → committed), manage KYC and AML documentation collection, coordinate credit agreement redlines and negotiations with version control, distribute inter-creditor and security documentation, and maintain a permanent post-closing facility record for agent reporting.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are lenders onboarded through the data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Lenders are onboarded through a tiered-access workflow: prospective syndicate participants first access the teaser and term sheet, committed lenders unlock the full credit memo and financial model, and KYC/AML documentation is collected directly within the platform. Each lender receives scoped permissions based on their commitment status and role in the syndicate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What security controls protect syndicated loan documents?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus syndicated lending data rooms feature AES-256 encryption, granular role-based permissions, tiered lender access controls, dynamic watermarking, IP restrictions, download controls, tamper-evident audit trails, and NDA enforcement at room entry. The platform supports LMA-standard documentation and is compliant with LCR, NSFR, and BCBS regulatory requirements for syndicated exposures.",
+      },
+    },
+  ],
+};
+
 export default function SyndicatedLendingPage() {
   return (
     <>
+      <Script id="sol-sl-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="syndicated-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Script id="syndicated-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="pt-20 lg:pt-24">
+        <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <Link href="/features" className="hover:text-[#2563eb] transition-colors">Solutions</Link>
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <span className="text-gray-600">Syndicated Lending</span>
+        </nav>
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
-              <Link href="/solutions" className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors">
+              <Link href="/features" className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors">
                 <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                 All Solutions
               </Link>
