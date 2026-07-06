@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 const spaceAiEcosystem = [
@@ -17,23 +19,124 @@ const footerLinks = {
     { name: "Pricing", href: "/kindora/pricing" },
     { name: "Solutions", href: "/kindora/solutions" },
     { name: "Space AI Ecosystem", href: "/kindora/ecosystem" },
-    { name: "Request Demo", href: "/kindora/contact" },
+    { name: "Request Demo", href: "/kindora/demo" },
   ],
   features: [
     { name: "Donor Management", href: "/kindora/features/donor-management" },
     { name: "Grant Tracking", href: "/kindora/features/grant-management" },
     { name: "Program Management", href: "/kindora/features/client-management" },
     { name: "Financial Reports", href: "/kindora/features/reporting" },
-    {
-      name: "Volunteer Management",
-      href: "/kindora/features/people-management",
-    },
+    { name: "Volunteer Management", href: "/kindora/features/people-management" },
+    { name: "Campaign Management", href: "/kindora/features/campaign-management" },
+    { name: "Communications", href: "/kindora/features/communications" },
+    { name: "Financials", href: "/kindora/features/financials" },
+    { name: "Financial Management", href: "/kindora/features/financial-management" },
+    { name: "Dashboard Analytics", href: "/kindora/features/dashboard-analytics" },
+    { name: "Expense Management", href: "/kindora/features/expense-management" },
+    { name: "File Management", href: "/kindora/features/file-management" },
+    { name: "User Management", href: "/kindora/features/user-management" },
+    { name: "Settings", href: "/kindora/features/settings" },
+  ],
+  donorDonation: [
+    { name: "Donor Management Software", href: "/kindora/donor-management-software" },
+    { name: "Best Donor Management Software", href: "/kindora/best-donor-management-software" },
+    { name: "Donation Management Software", href: "/kindora/donation-management-software" },
+    { name: "Donation Reporting", href: "/kindora/donation-reporting-software" },
+    { name: "Donation Tracking", href: "/kindora/donation-tracking-software" },
+    { name: "Donor Portal", href: "/kindora/donor-portal" },
+    { name: "Donor Database", href: "/kindora/donor-database-software" },
+    { name: "Donor Database for Nonprofits", href: "/kindora/donor-database-for-nonprofits" },
+    { name: "Donor CRM", href: "/kindora/donor-crm" },
+    { name: "Donor Communication", href: "/kindora/donor-communication-software" },
+    { name: "Donor Engagement", href: "/kindora/donor-engagement-software" },
+    { name: "Donor Retention", href: "/kindora/donor-retention-software" },
+    { name: "Donor Relationship Mgmt", href: "/kindora/donor-relationship-management" },
+    { name: "Donor Analytics", href: "/kindora/donor-analytics-software" },
+    { name: "Pledge Management", href: "/kindora/pledge-management-software" },
+    { name: "Recurring Donations", href: "/kindora/recurring-donation-software" },
+    { name: "Online Donation Platform", href: "/kindora/online-donation-platform" },
+    { name: "Text-to-Give", href: "/kindora/text-to-give-software" },
+  ],
+  fundraising: [
+    { name: "Fundraising Software", href: "/kindora/fundraising-software" },
+    { name: "Fundraising Management", href: "/kindora/fundraising-management-software" },
+    { name: "Fundraising CRM", href: "/kindora/fundraising-crm" },
+    { name: "Peer-to-Peer Fundraising", href: "/kindora/peer-to-peer-fundraising-software" },
+    { name: "Event Fundraising", href: "/kindora/event-fundraising-software" },
+    { name: "Event Management", href: "/kindora/event-management-software" },
+    { name: "Campaign Management", href: "/kindora/campaign-management-software" },
+    { name: "Grant Management", href: "/kindora/grant-management-software" },
+    { name: "Grant Tracking", href: "/kindora/grant-tracking-software" },
+    { name: "Grant Reporting", href: "/kindora/grant-reporting-software" },
+    { name: "Grant Compliance", href: "/kindora/grant-compliance-software" },
+    { name: "Grant Lifecycle", href: "/kindora/grant-lifecycle-management" },
+  ],
+  volunteer: [
+    { name: "Volunteer Management", href: "/kindora/volunteer-management-software" },
+    { name: "Volunteer Scheduling", href: "/kindora/volunteer-scheduling-software" },
+    { name: "Volunteer Recruitment", href: "/kindora/volunteer-recruitment-software" },
+    { name: "Volunteer Hours Tracking", href: "/kindora/volunteer-hours-tracking-software" },
+    { name: "Volunteer Database", href: "/kindora/volunteer-database-software" },
+  ],
+  crmManagement: [
+    { name: "Nonprofit CRM", href: "/kindora/nonprofit-crm" },
+    { name: "Best Nonprofit CRM", href: "/kindora/best-nonprofit-crm" },
+    { name: "Small Nonprofit CRM", href: "/kindora/small-nonprofit-crm" },
+    { name: "CRM for Nonprofits", href: "/kindora/crm-for-nonprofits" },
+    { name: "Membership Management", href: "/kindora/membership-management-software" },
+    { name: "Association Management", href: "/kindora/association-management-software" },
+    { name: "Nonprofit Management", href: "/kindora/nonprofit-management-software" },
+    { name: "All-in-One Platform", href: "/kindora/all-in-one-nonprofit-management-platform" },
+    { name: "NGO Management", href: "/kindora/ngo-management-software" },
+    { name: "Charity Management", href: "/kindora/charity-management-software" },
+    { name: "Church Management", href: "/kindora/church-management-software" },
+    { name: "Foundation Management", href: "/kindora/foundation-management-software" },
+  ],
+  operations: [
+    { name: "Program Management", href: "/kindora/program-management-software" },
+    { name: "Program Outcome Tracking", href: "/kindora/program-outcome-tracking" },
+    { name: "Nonprofit Operations", href: "/kindora/nonprofit-operations-platform" },
+    { name: "Workflow Automation", href: "/kindora/nonprofit-workflow-automation" },
+    { name: "Document Management", href: "/kindora/nonprofit-document-management" },
+    { name: "Case Management", href: "/kindora/client-case-management-software" },
+    { name: "Social Services Case Mgmt", href: "/kindora/social-services-case-management" },
+    { name: "Communications Hub", href: "/kindora/communications-hub" },
+  ],
+  reportingAnalytics: [
+    { name: "Nonprofit Reporting", href: "/kindora/nonprofit-reporting-software" },
+    { name: "Nonprofit Dashboard", href: "/kindora/nonprofit-dashboard-software" },
+    { name: "Nonprofit Analytics", href: "/kindora/nonprofit-analytics-dashboard" },
+    { name: "Board Reporting", href: "/kindora/board-reporting-software" },
+    { name: "Budget Management", href: "/kindora/budget-management-software" },
+    { name: "Expense Management", href: "/kindora/expense-management-software" },
+    { name: "Cost Allocation", href: "/kindora/cost-allocation-software" },
+    { name: "Financial Reporting", href: "/kindora/financial-reporting-software" },
+  ],
+  emailMarketing: [
+    { name: "Email Marketing", href: "/kindora/email-marketing-for-nonprofits" },
+    { name: "Email Automation", href: "/kindora/nonprofit-email-automation" },
+    { name: "Email Communication", href: "/kindora/nonprofit-email-communication-software" },
+  ],
+  industrySolutions: [
+    { name: "Multi-Program NGO Management", href: "/kindora/multi-program-ngo-management" },
+    { name: "Housing Nonprofits", href: "/kindora/solutions/housing-nonprofits" },
+    { name: "Community Organizations", href: "/kindora/solutions/community-organizations" },
+    { name: "Small Nonprofits", href: "/kindora/solutions/small-nonprofits" },
+    { name: "Social Services", href: "/kindora/solutions/social-services" },
+    { name: "Youth Nonprofits", href: "/kindora/solutions/youth-nonprofits" },
+  ],
+  compare: [
+    { name: "Bloomerang Alternative", href: "/kindora/bloomerang-alternative" },
+    { name: "Kindora vs Bloomerang", href: "/kindora/kindora-vs-bloomerang" },
+    { name: "Why Kindora Over Bloomerang", href: "/kindora/why-kindora-over-bloomerang" },
+    { name: "Bonterra Alternative", href: "/kindora/bonterra-alternative" },
+    { name: "Better Alternative to Bonterra", href: "/kindora/better-alternative-to-bonterra" },
+    { name: "Kindora vs Bonterra", href: "/kindora/kindora-vs-bonterra" },
+    { name: "Vs Competitors", href: "/kindora/vs-competitors" },
   ],
   company: [
-    { name: "About SpaceAI", href: "/kindora/contact" },
     { name: "Contact", href: "/kindora/contact" },
     { name: "Blog", href: "/kindora/blog" },
-    { name: "Vs Competitors", href: "/kindora/vs-competitors" },
   ],
 };
 
@@ -78,7 +181,7 @@ export default function KindoraFooter() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/kindora" className="flex items-center space-x-2 mb-4">
@@ -136,6 +239,177 @@ export default function KindoraFooter() {
             </h4>
             <ul className="space-y-3">
               {footerLinks.features.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Donor & Donation Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Donor & Donation
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.donorDonation.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Fundraising Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Fundraising
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.fundraising.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Volunteer Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Volunteer
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.volunteer.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CRM & Management Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              CRM & Management
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.crmManagement.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Operations Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Operations
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.operations.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Reporting & Analytics Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Reporting & Analytics
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.reportingAnalytics.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Email & Marketing Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Email & Marketing
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.emailMarketing.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industry Solutions Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Industry Solutions
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.industrySolutions.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Compare Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Compare
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.compare.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -323,7 +597,7 @@ export default function KindoraFooter() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} SpaceAI App. All rights reserved.
+              © 2026 SpaceAI App. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <span className="text-xs text-gray-600">

@@ -3,7 +3,7 @@ import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import AppFooter from "./components/AppFooter";
 import SystemStatus from "./components/SystemStatus";
 import JsonLd from "./components/JsonLd";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -158,7 +158,7 @@ export default function RootLayout({
         <main id="main-content" role="main">
           {children}
         </main>
-        <Footer />
+        <AppFooter />
         <WhatsAppButton />
         <SystemStatus />
 

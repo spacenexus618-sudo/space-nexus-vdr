@@ -75,6 +75,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/solutions/npl-portfolio", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/solutions/private-credit", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/solutions/syndicated-lending", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/solutions/program-management-software", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/solutions/program-outcome-tracking", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/vdr-comparison", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/vdr-guide", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/enterprise", priority: 0.8, changeFrequency: "monthly" as const },
@@ -216,6 +218,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/kindora/demo", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/kindora/vs-competitors", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/kindora/ecosystem", priority: 0.8, changeFrequency: "monthly" as const },
+    { route: "/kindora/bonterra-alternative", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/kindora/kindora-vs-bonterra", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/kindora/better-alternative-to-bonterra", priority: 0.9, changeFrequency: "monthly" as const },
+    { route: "/kindora/nonprofit-operations-platform", priority: 0.9, changeFrequency: "monthly" as const },
   ];
 
   // Kindora feature pages
@@ -271,6 +277,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "community-organizations",
     "social-services",
     "housing-nonprofits",
+    "program-management-software",
+    "program-outcome-tracking",
   ].map((solution) => ({
     route: `/kindora/solutions/${solution}`,
     priority: 0.8,

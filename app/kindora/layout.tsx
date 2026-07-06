@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import KindoraHeader from "./components/KindoraHeader";
-import KindoraFooter from "./components/KindoraFooter";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
 
 // Replace with your Kindora-specific GA4 measurement ID when available.
@@ -88,7 +87,6 @@ export default function KindoraLayout({
       <BreadcrumbSchema />
       <KindoraHeader />
       {children}
-      <KindoraFooter />
 
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${KINDORA_GA_ID}`}
