@@ -325,13 +325,13 @@ function KindoraDemoRequestForm() {
 
       <p className="mt-4 text-xs text-gray-500 text-center">
         By submitting this form, you agree to our{" "}
-        <a href="/privacy" className="text-[#2563eb] hover:underline">
+        <span className="text-[#2563eb]">
           Privacy Policy
-        </a>{" "}
+        </span>{" "}
         and{" "}
-        <a href="/terms" className="text-[#2563eb] hover:underline">
+        <span className="text-[#2563eb]">
           Terms of Service
-        </a>
+        </span>
         .
       </p>
     </form>

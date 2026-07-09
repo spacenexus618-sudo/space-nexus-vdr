@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Financials — Complete Nonprofit Financial Management | Kindora",
   description:
     "Kindora Financials centralizes all financial operations: donor management, donation tracking, campaign fundraising, grant management, vendor records, expense tracking, and financial reporting in one unified platform.",
+  keywords: [
+    "nonprofit financial management",
+    "NGO financial software",
+    "donation tracking platform",
+    "nonprofit financial reporting",
+    "grant financial management",
+  ],
   alternates: {
     canonical: "/kindora/features/financials",
   },
@@ -239,7 +246,7 @@ export default function FinancialsPage() {
                   src="/kindora/screenshots/Financials/Donors.png"
                   alt="Kindora Financials — donor management and financial overview"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

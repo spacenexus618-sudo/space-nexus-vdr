@@ -1,391 +1,344 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-const spaceAiEcosystem = [
-  { name: "PMSpace", desc: "Project & Contract Management", href: "https://pmspace.ai/" },
-  { name: "Space-Sign", desc: "Digital Signing Platform", href: "https://space-sign.ai/" },
-  { name: "Space-Capture", desc: "Field Data Capture", href: "https://spacecapture.ai/" },
-  { name: "Space-Lizit", desc: "Immigration Management", href: "https://spacelizit.com/" },
-  { name: "SpaceHR", desc: "Human Resource Management", href: "https://spacehr.net/" },
-  { name: "SpaceLean", desc: "Lean Construction Scheduling", href: "https://spacelean.ai/" },
-  { name: "SpaceCRM", desc: "Customer Relationship Management", href: "https://spacecrm.net/" },
-];
+type FooterLink = {
+  name: string;
+  href: string;
+  external?: boolean;
+};
 
-const vdrFooterLinks = {
-  main: {
-    title: "Navigation",
+type FooterColumn = {
+  title: string;
+  links: FooterLink[];
+};
+
+const footerColumns: FooterColumn[] = [
+  {
+    title: "Product",
     links: [
-      { name: "Home", href: "/" },
       { name: "Features", href: "/features" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "Security", href: "/security" },
-      { name: "Blog", href: "/blog" },
-      { name: "About", href: "/about" },
-      { name: "Space AI Ecosystem", href: "/ecosystem" },
-      { name: "Request Demo", href: "/demo" },
-    ],
-  },
-  features: {
-    title: "Product Features",
-    links: [
-      { name: "Deals", href: "/features/deals" },
       { name: "Data Room", href: "/features/data-room" },
+      { name: "VDR Data Room", href: "/features/vdr-data-room" },
+      { name: "Deals", href: "/features/deals" },
       { name: "Dashboard", href: "/features/dashboard" },
-      { name: "Q&A Module", href: "/features/qa" },
+      { name: "Q&A Workflow", href: "/features/qa" },
       { name: "Users & Permissions", href: "/features/users-permissions" },
-      { name: "Activity & Analytics", href: "/features/activity-analytics" },
+      { name: "Analytics", href: "/features/activity-analytics" },
       { name: "Reports", href: "/features/reports" },
-      { name: "Security & Compliance", href: "/features/security-compliance" },
+      { name: "Security", href: "/features/security-compliance" },
+      { name: "Integrations", href: "/features/integrations" },
       { name: "Billing & Plans", href: "/features/billing-plans" },
-      { name: "Support", href: "/features/support" },
       { name: "Settings", href: "/features/settings" },
+      { name: "Support", href: "/features/support" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Lead Generation", href: "/lead-generation" },
     ],
   },
-  solutions: {
+  {
     title: "Solutions",
     links: [
       { name: "M&A Virtual Data Room", href: "/solutions/mergers-and-acquisitions-vdr" },
-      { name: "Series A Data Room", href: "/solutions/series-a-fundraising-data-room" },
-      { name: "Legal Document Sharing", href: "/solutions/secure-document-sharing-for-legal" },
-      { name: "Law Firm Document Exchange", href: "/solutions/law-firm-document-exchange" },
       { name: "M&A Document Sharing", href: "/solutions/ma-document-sharing" },
-      { name: "VDR for Canada", href: "/solutions/virtual-data-room-canada" },
+      { name: "Investor Data Room", href: "/solutions/investor-data-room" },
+      { name: "Startup Data Room", href: "/solutions/startup-data-room" },
+      { name: "Series A Fundraising", href: "/solutions/series-a-fundraising-data-room" },
+      { name: "Legal Document Sharing", href: "/solutions/secure-document-sharing-for-legal" },
+      { name: "Law Firm Exchange", href: "/solutions/law-firm-document-exchange" },
+      { name: "Private Credit", href: "/solutions/private-credit" },
+      { name: "Distressed Debt", href: "/solutions/distressed-debt" },
+      { name: "CLO Advisory", href: "/solutions/clo-advisory" },
+      { name: "Syndicated Lending", href: "/solutions/syndicated-lending" },
+      { name: "NPL Portfolio", href: "/solutions/npl-portfolio" },
+      { name: "ESG Consulting", href: "/solutions/esg-consulting" },
+      { name: "Program Management", href: "/solutions/program-management-software" },
+      { name: "Program Outcome Tracking", href: "/solutions/program-outcome-tracking" },
+      { name: "Secure Document Sharing", href: "/secure-document-sharing" },
+      { name: "Enterprise", href: "/enterprise" },
+      { name: "VDR UAE", href: "/solutions/virtual-data-room-uae" },
+      { name: "VDR Canada", href: "/solutions/virtual-data-room-canada" },
+      { name: "VDR Germany", href: "/solutions/virtual-data-room-germany" },
+      { name: "VDR Taiwan", href: "/solutions/virtual-data-room-taiwan" },
+    ],
+  },
+  {
+    title: "Industries",
+    links: [
       { name: "Investment Banking", href: "/industries/investment-banking" },
+      { name: "M&A Advisory", href: "/industries/investment-banking/ma-advisory" },
+      { name: "Sell-Side Process", href: "/industries/investment-banking/sell-side-process" },
+      { name: "Capital Markets", href: "/industries/investment-banking/capital-markets" },
+      { name: "Private Capital", href: "/industries/investment-banking/private-capital" },
+      { name: "Restructuring", href: "/industries/investment-banking/restructuring" },
       { name: "Private Equity", href: "/industries/private-equity" },
+      { name: "Buy-Side Diligence", href: "/industries/private-equity/buy-side-diligence" },
+      { name: "Sell-Side Exit", href: "/industries/private-equity/sell-side-exit" },
+      { name: "Add-On Acquisitions", href: "/industries/private-equity/add-on-acquisitions" },
+      { name: "Portfolio Management", href: "/industries/private-equity/portfolio-management" },
+      { name: "LP Fundraising", href: "/industries/private-equity/lp-fundraising" },
+      { name: "Venture Capital", href: "/industries/venture-capital" },
+      { name: "Early-Stage Diligence", href: "/industries/venture-capital/early-stage-diligence" },
+      { name: "Fund Operations", href: "/industries/venture-capital/fund-operations" },
+      { name: "LP Communications", href: "/industries/venture-capital/lp-communications" },
+      { name: "Portfolio Support", href: "/industries/venture-capital/portfolio-support" },
+      { name: "Exits & Secondaries", href: "/industries/venture-capital/exits-secondaries" },
       { name: "Law Firms", href: "/industries/law-firms" },
+      { name: "M&A Due Diligence", href: "/industries/law-firms/ma-diligence" },
+      { name: "Litigation & E-Discovery", href: "/industries/law-firms/litigation-discovery" },
+      { name: "IP & Licensing", href: "/industries/law-firms/ip-licensing" },
+      { name: "Client Portals", href: "/industries/law-firms/client-portals" },
       { name: "Real Estate", href: "/industries/real-estate" },
+      { name: "Real Estate Practice", href: "/industries/law-firms/real-estate" },
       { name: "Life Sciences", href: "/industries/life-sciences" },
       { name: "Technology", href: "/industries/technology" },
       { name: "Energy & Infrastructure", href: "/industries/energy-infrastructure" },
       { name: "Corporate Development", href: "/industries/corporate-development" },
     ],
   },
-  resources: {
+  {
     title: "Resources",
     links: [
-      { name: "M&A Glossary", href: "/glossary" },
-      { name: "Free Due Diligence Checklists", href: "/checklists" },
-      { name: "VDR Comparison 2025", href: "/competitors/vdr-alternatives" },
+      { name: "Blog", href: "/blog" },
+      { name: "VDR Guide", href: "/vdr-guide" },
+      { name: "Glossary", href: "/glossary" },
+      { name: "Financial Glossary", href: "/glossary/financial" },
+      { name: "Checklists", href: "/checklists" },
+      { name: "DD Checklist", href: "/checklists/due-diligence-checklist" },
+      { name: "Investor DD Checklist", href: "/checklists/investor-data-room" },
+      { name: "Templates", href: "/checklists/templates" },
+      { name: "Video Tutorials", href: "/tutorials" },
+      { name: "Setup Walkthrough", href: "/tutorials/data-room-setup-walkthrough" },
+      { name: "Managing Bidder Access", href: "/tutorials/managing-bidder-access" },
+      { name: "Permission Management", href: "/tutorials/permission-management" },
+      { name: "Q&A Workflow Tutorial", href: "/tutorials/structured-qa-workflow" },
+      { name: "Watermarking Setup", href: "/tutorials/dynamic-watermarking-setup" },
+      { name: "Engagement Analytics", href: "/tutorials/engagement-analytics" },
+      { name: "Audit Log Export", href: "/tutorials/audit-log-export" },
+      { name: "SSO & MFA Config", href: "/tutorials/sso-and-mfa-configuration" },
+      { name: "FAQ", href: "/faq" },
+      { name: "Data Room FAQ", href: "/faq/data-room" },
+      { name: "VDR Security FAQ", href: "/faq/vdr-security" },
+      { name: "VDR Compliance FAQ", href: "/faq/vdr-compliance" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Startup Fundraising", href: "/case-studies/startup-fundraising" },
+      { name: "M&A Case Studies", href: "/m-a-case-studies" },
+      { name: "Startup Case Studies", href: "/startup-fundraising-case-studies" },
+      { name: "Reviews", href: "/reviews" },
+      { name: "NPL Guide", href: "/resources/npl-guide" },
+    ],
+  },
+  {
+    title: "Compare",
+    links: [
+      { name: "VDR Alternatives", href: "/competitors/vdr-alternatives" },
       { name: "Datasite Alternative", href: "/competitors/datasite-alternative" },
       { name: "Intralinks Alternative", href: "/competitors/intralinks-alternative" },
-      { name: "Reviews", href: "/reviews" },
+      { name: "iDeals Alternative", href: "/competitors/ideals-alternative" },
+      { name: "Drooms Alternative", href: "/competitors/drooms-alternative" },
+      { name: "Pricing Comparison", href: "/pricing-comparison" },
+      { name: "VDR Comparison", href: "/vdr-comparison" },
+      { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
     ],
   },
-};
-
-const kindoraFooterLinks = {
-  main: {
-    title: "Navigation",
+  {
+    title: "Guides",
     links: [
-      { name: "Home", href: "/kindora" },
-      { name: "Features", href: "/kindora/features" },
-      { name: "Solutions", href: "/kindora/solutions" },
-      { name: "Pricing", href: "/kindora/pricing" },
-      { name: "Request Demo", href: "/kindora/contact" },
+      { name: "Data Room Solutions", href: "/data-room-solutions" },
+      { name: "Data Room Pricing", href: "/data-room-pricing" },
+      { name: "Data Room Providers", href: "/data-room-providers" },
+      { name: "Virtual Data Room Providers", href: "/virtual-data-room-providers" },
+      { name: "Top Data Room Providers", href: "/top-data-room-providers" },
+      { name: "Electronic Data Room", href: "/electronic-data-room" },
+      { name: "Enterprise Data Room", href: "/enterprise-data-room" },
+      { name: "Cloud Data Room", href: "/cloud-data-room" },
+      { name: "Investment Data Room", href: "/investment-data-room" },
+      { name: "Startup Fundraising Room", href: "/startup-fundraising-data-room" },
+      { name: "Private Equity Data Room", href: "/private-equity-data-room" },
+      { name: "Data Room Security", href: "/data-room-security" },
+      { name: "Data Room Due Diligence", href: "/data-room-due-diligence" },
+      { name: "Due Diligence Software", href: "/due-diligence-software" },
+      { name: "Best Data Room for Startups", href: "/best-data-room-for-startups" },
+      { name: "VDR Software", href: "/vdr-software" },
+      { name: "VDR Guide", href: "/vdr-guide" },
     ],
   },
-  features: {
-    title: "Platform Features",
+  {
+    title: "More Guides",
     links: [
-      {
-        name: "Dashboard & Analytics",
-        href: "/kindora/features/dashboard-analytics",
-      },
-      { name: "Donor Management", href: "/kindora/features/donor-management" },
-      { name: "Grant Management", href: "/kindora/features/grant-management" },
-      {
-        name: "Campaign Management",
-        href: "/kindora/features/campaign-management",
-      },
-      {
-        name: "Client & Programs",
-        href: "/kindora/features/client-management",
-      },
-      {
-        name: "Financial Management",
-        href: "/kindora/features/financial-management",
-      },
-      { name: "Reporting & Export", href: "/kindora/features/reporting" },
-      { name: "Communications", href: "/kindora/features/communications" },
+      { name: "Virtual Deal Management", href: "/virtual-deal-management" },
+      { name: "Deal Management Software", href: "/deal-management-software" },
+      { name: "Deal Room Software", href: "/deal-room-software" },
+      { name: "Deal Collaboration Platform", href: "/deal-collaboration-platform" },
+      { name: "M&A Platform", href: "/ma-platform" },
+      { name: "Merger & Acquisition SW", href: "/merger-acquisition-software" },
+      { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
+      { name: "Online Due Diligence", href: "/online-due-diligence-platform" },
+      { name: "Business Acquisition SW", href: "/business-acquisition-software" },
+      { name: "Vendor Due Diligence SW", href: "/vendor-due-diligence-software" },
+      { name: "Board Portals", href: "/board-portals" },
+      { name: "Board Portal Software", href: "/board-portal-software" },
+      { name: "Board Document Portal", href: "/board-document-portal" },
+      { name: "Legal Document Management", href: "/legal-document-management" },
+      { name: "Investor Due Diligence", href: "/investor-due-diligence" },
+      { name: "Investor DD Platform", href: "/fundraising-and-investor-due-diligence" },
+      { name: "Secure Document Sharing", href: "/secure-document-sharing" },
+      { name: "Data Room Comparison", href: "/vdr-comparison" },
     ],
   },
-};
+  {
+    title: "Company",
+    links: [
+      { name: "About", href: "/about" },
+      { name: "Security", href: "/security" },
+      { name: "Demo", href: "/demo" },
+      { name: "Get Started", href: "/get-started" },
+      { name: "Ecosystem", href: "/ecosystem" },
+      { name: "Try for Free", href: "https://cad.spaceaiapp.com/vdr", external: true },
+    ],
+  },
+];
 
-export default function Footer() {
-  const pathname = usePathname();
-  const isKindora = pathname?.startsWith("/kindora");
+const socialLinks: FooterLink[] = [
+  { name: "YouTube", href: "https://www.youtube.com/@spacenexus-v1g", external: true },
+  { name: "Instagram", href: "https://www.instagram.com/spacenexus7/", external: true },
+  { name: "X", href: "https://x.com/space__nexus", external: true },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/space-nexus/", external: true },
+];
 
-  // Kindora has its own dedicated KindoraFooter rendered in kindora/layout.tsx
-  if (isKindora) return null;
-
-  const footerLinks = vdrFooterLinks;
+function FooterAnchor({
+  link,
+  className,
+}: {
+  link: FooterLink;
+  className: string;
+}) {
+  if (link.external) {
+    return (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {link.name}
+      </a>
+    );
+  }
 
   return (
+    <Link href={link.href} className={className}>
+      {link.name}
+    </Link>
+  );
+}
+
+export default function Footer() {
+  return (
     <footer className="bg-white border-t border-gray-200" role="contentinfo">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2 md:col-span-2">
-            {isKindora ? (
-              <Link
-                href="/kindora"
-                className="flex items-center gap-2.5 mb-6"
-                aria-label="Kindora NGO OS Home"
-              >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center shadow-lg shadow-blue-500/30">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl font-black tracking-tight text-[#2563eb]">
-                    KINDORA
-                  </span>
-                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                    NGO OS
-                  </span>
-                </div>
-              </Link>
-            ) : (
-              <Link
-                href="/"
-                className="flex items-center gap-2.5 mb-6"
-                aria-label="Space Nexus Home"
-              >
-                <div className="relative w-10 h-10 flex-shrink-0">
-                  <Image
-                    src="/icononly_transparent_nobuffer.png"
-                    alt="Space Nexus Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl font-black tracking-tight text-gray-900">
-                    SPACE
-                  </span>
-                  <span className="text-xl font-black tracking-tight text-[#2563eb]">
-                    NEXUS
-                  </span>
-                </div>
-              </Link>
-            )}
-            <p className="text-base text-gray-600 mb-8 max-w-md">
-              {isKindora
-                ? "The complete operating system for nonprofits. Manage donors, track grants, deliver programs, and report impact from a single platform."
-                : "Enterprise-grade virtual data room platform for secure M&A transactions, due diligence, and capital raising."}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
+        <div className="grid gap-12 lg:grid-cols-[minmax(260px,1.1fr)_minmax(0,2.4fr)]">
+          <div>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5"
+              aria-label="Space Nexus Home"
+            >
+              <span className="relative block w-10 h-10 flex-shrink-0">
+                <Image
+                  src="/icononly_transparent_nobuffer.png"
+                  alt="SpaceNexus secure virtual data room logo"
+                  fill
+                  className="object-contain"
+                  sizes="40px"
+                />
+              </span>
+              <span className="flex items-baseline gap-1.5">
+                <span className="text-xl font-black tracking-tight text-gray-900">
+                  SPACE
+                </span>
+                <span className="text-xl font-black tracking-tight text-[#2563eb]">
+                  NEXUS
+                </span>
+              </span>
+            </Link>
+
+            <p className="mt-5 max-w-sm text-sm leading-6 text-gray-600">
+              Enterprise-grade virtual data room software for M&A, fundraising,
+              legal diligence, and secure document collaboration.
             </p>
 
-            {/* Contact Info for Kindora */}
-            {isKindora && (
-              <div className="space-y-2 mb-6">
-                <p className="text-sm text-gray-600">
-                  <span className="font-medium text-gray-900">Contact:</span>{" "}
-                  <a
-                    href="mailto:contact@spacenexus.net"
-                    className="text-[#2563eb] hover:underline"
-                  >
-                    contact@spacenexus.net
-                  </a>
-                </p>
-                <p className="text-sm text-gray-600 flex items-center gap-2">
-                  <span className="font-medium text-gray-900">SG:</span>{" "}
-                  <a href="tel:+6586111900" className="text-[#2563eb] hover:underline">
-                    +65 8611 1900
-                  </a>
-                </p>
-                <p className="text-xs text-gray-500">Version: Kindora-V1.0</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/demo"
+                className="inline-flex items-center justify-center rounded-full bg-[#2563eb] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#1d4ed8]"
+              >
+                Request demo
+              </Link>
+              <a
+                href="https://cad.spaceaiapp.com/vdr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-[#2563eb] hover:text-[#2563eb]"
+              >
+                Try for free
+              </a>
+            </div>
+
+            <div className="mt-8">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                Connect
+              </p>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {socialLinks.map((link) => (
+                  <FooterAnchor
+                    key={link.name}
+                    link={link}
+                    className="text-sm font-medium text-gray-500 transition-colors hover:text-[#2563eb]"
+                  />
+                ))}
               </div>
-            )}
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-3">
-              {/* YouTube */}
-              <a
-                href="https://www.youtube.com/@spacenexus-v1g"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:border-transparent hover:bg-[#FF0000] transition-all duration-300"
-                aria-label="YouTube"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </a>
-              {/* Instagram */}
-              <a
-                href="https://www.instagram.com/spacenexus7/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:border-transparent hover:bg-[#E1306C] transition-all duration-300"
-                aria-label="Instagram"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-              {/* X / Twitter */}
-              <a
-                href="https://x.com/space__nexus"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:bg-black hover:border-black transition-all duration-300"
-                aria-label="Twitter/X"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/space-nexus/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-white hover:border-transparent hover:bg-[#0A66C2] transition-all duration-300"
-                aria-label="LinkedIn"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">
-              {footerLinks.main.title}
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.main.links.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Features Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">
-              {footerLinks.features.title}
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.features.links.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Solutions Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">
-              {footerLinks.solutions.title}
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.solutions.links.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">
-              {footerLinks.resources.title}
-            </h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.links.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Space AI Ecosystem Strip */}
-      <div className="border-t border-gray-200 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">
-            Space AI Ecosystem
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {spaceAiEcosystem.map((product) => (
-              <a
-                key={product.name}
-                href={product.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 hover:border-[#2563eb] hover:shadow-sm transition-all duration-200"
-              >
-                <span className="w-2 h-2 rounded-full bg-[#2563eb] opacity-60 group-hover:opacity-100 transition-opacity" />
-                <span className="text-sm font-medium text-gray-700 group-hover:text-[#2563eb] transition-colors">
-                  {product.name}
-                </span>
-                <span className="hidden sm:inline text-xs text-gray-400 group-hover:text-gray-500 transition-colors">
-                  — {product.desc}
-                </span>
-              </a>
+          <nav
+            aria-label="Footer navigation"
+            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8"
+          >
+            {footerColumns.map((column) => (
+              <div key={column.title}>
+                <h2 className="text-sm font-semibold text-gray-900">
+                  {column.title}
+                </h2>
+                <ul className="mt-4 space-y-3">
+                  {column.links.map((link) => (
+                    <li key={`${column.title}-${link.name}`}>
+                      <FooterAnchor
+                        link={link}
+                        className="text-sm leading-5 text-gray-600 transition-colors hover:text-[#2563eb]"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </div>
+          </nav>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Space Nexus. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6">
-              <span className="text-sm text-gray-500">Privacy Policy</span>
-              <span className="text-sm text-gray-500">Terms of Service</span>
-            </div>
+        <div className="mt-12 flex flex-col gap-3 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+          <span>&copy; 2026 Space Nexus. All rights reserved.</span>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <span>Privacy Policy</span>
+            <span>Terms of Service</span>
+            <Link
+              href="/sitemap.xml"
+              className="font-medium text-gray-500 transition-colors hover:text-[#2563eb]"
+            >
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>
     </footer>
-
   );
 }

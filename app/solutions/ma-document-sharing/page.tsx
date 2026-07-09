@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "M&A Document Sharing — Secure Deal Room for Investment Banks & PE Firms | SpaceNexus",
-  description:
-    "The secure M&A document sharing platform built for investment banks, PE firms, and corporate development teams. Share confidential deal documents with SOC 2 certified encryption, granular permissions, and real-time buyer analytics.",
+  title: "M&A Document Sharing Platform | SpaceNexus",
+  description: "Secure deal room for investment banks, PE firms, and corporate development. SOC 2 encryption, granular permissions, and real-time buyer analytics.",
   alternates: {
     canonical: "https://spacenexus.net/solutions/ma-document-sharing",
   },
   openGraph: {
-    title: "M&A Document Sharing — Secure Virtual Data Room | SpaceNexus",
+    title: "M&A Document Sharing Platform | SpaceNexus",
     description:
-      "Share M&A documents securely with buyers, sellers, and advisors. AES-256 encryption, dynamic watermarking, and immutable audit trails for every transaction.",
+      "Secure deal room for investment banks, PE firms, and corporate development. SOC 2 encry...",
     url: "https://spacenexus.net/solutions/ma-document-sharing",
   },
   keywords: [
@@ -83,7 +83,7 @@ const useCases = [
   {
     title: "Buy-Side Due Diligence",
     description: "PE firms and corporate acquirers reviewing target company data rooms need secure access to hundreds of documents across legal, financial, commercial, and operational workstreams.",
-    link: "/blog/ma-due-diligence-checklist-2025",
+    link: "/blog/ma-due-diligence-checklist-2026",
   },
   {
     title: "Cross-Border Transactions",
@@ -130,9 +130,40 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "M&A Document Sharing",
+  description: "Secure document sharing platform for mergers and acquisitions. Built for investment banks, PE firms, and corporate development teams. Granular permissions, SOC 2 encryption, and real-time buyer analytics.",
+  url: "https://spacenexus.net/solutions/ma-document-sharing",
+  serviceType: "Secure Document Sharing",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Investment banks, PE firms, and corporate development teams",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to deal size and document volume.",
+  },
+};
+
 export default function MADocumentSharingPage() {
   return (
     <>
+      <Script
+        id="ma-doc-sharing-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -339,6 +370,51 @@ export default function MADocumentSharingPage() {
           </div>
         </div>
       </section>
-    </>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">The complete M&A deal room platform.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/investment-banking"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Multi-bidder sell-side processes.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For investment banks →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Buy-side and sell-side workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/features/security-compliance"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">SOC 2, ISO 27001, GDPR.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
+                        </Link>
+                        <Link
+                            href="/pricing-comparison"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Transparent pricing vs legacy.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</>
   );
 }

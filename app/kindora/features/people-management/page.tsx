@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "People — Team, Volunteer & Communications Management | Kindora",
   description:
     "Kindora People helps nonprofits manage employees, volunteers, and communication activities in one platform. Maintain staff records, coordinate volunteers, and track all interactions with donors, clients, and partners.",
+  keywords: [
+    "volunteer management software",
+    "nonprofit staff management",
+    "volunteer coordination tools",
+    "nonprofit HR software",
+    "team management NGO",
+  ],
   alternates: {
     canonical: "/kindora/features/people-management",
   },
@@ -166,7 +173,7 @@ export default function PeoplePage() {
                   src="/kindora/screenshots/People/People%20(1).png"
                   alt="Kindora People — employee and volunteer management overview"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -4,6 +4,74 @@ const nextConfig: NextConfig = {
   // Enforce no trailing slash for consistent canonical URLs
   trailingSlash: false,
 
+  // Redirects for legacy/short URLs and duplicate content consolidation
+  async redirects() {
+    return [
+      {
+        source: "/ma-document-sharing",
+        destination: "/solutions/ma-document-sharing",
+        permanent: true,
+      },
+      {
+        source: "/blog/ma-due-diligence-checklist-2025",
+        destination: "/blog/ma-due-diligence-checklist-2026",
+        permanent: true,
+      },
+      // Consolidate duplicate VDR provider pages → single canonical
+      {
+        source: "/vdr-providers",
+        destination: "/virtual-data-room-providers",
+        permanent: true,
+      },
+      {
+        source: "/data-room-providers",
+        destination: "/virtual-data-room-providers",
+        permanent: true,
+      },
+      // Consolidate board portal duplicate
+      {
+        source: "/board-portals",
+        destination: "/board-portal-software",
+        permanent: true,
+      },
+      // Consolidate deal room ↔ data room synonym duplicate
+      {
+        source: "/deal-room-software",
+        destination: "/data-room-software",
+        permanent: true,
+      },
+      // Consolidate redundant "VDR Data Room" naming
+      {
+        source: "/features/vdr-data-room",
+        destination: "/features/data-room",
+        permanent: true,
+      },
+      // Standardize M&A abbreviation (m-a → ma)
+      {
+        source: "/m-a-data-room-providers",
+        destination: "/ma-data-room-providers",
+        permanent: true,
+      },
+      {
+        source: "/m-a-case-studies",
+        destination: "/ma-case-studies",
+        permanent: true,
+      },
+      // Shorter SEO-friendly URL for fundraising guide
+      {
+        source: "/fundraising-and-investor-due-diligence",
+        destination: "/investor-due-diligence",
+        permanent: true,
+      },
+      // Restructure case studies under parent directory
+      {
+        source: "/startup-fundraising-case-studies",
+        destination: "/case-studies/startup-fundraising",
+        permanent: true,
+      },
+    ];
+  },
+
   // Enable gzip/brotli compression
   compress: true,
 

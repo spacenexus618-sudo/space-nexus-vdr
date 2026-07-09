@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Grant Management Software & Tracking for Nonprofits — Kindora",
   description:
     "Track grants from prospect to close, manage grantors, process receipts, and generate compliance-ready reports with Kindora's grant management tools.",
+  keywords: [
+    "grant management software",
+    "grant tracking nonprofit",
+    "grant compliance reporting",
+    "grantor management",
+    "nonprofit grant software",
+  ],
   alternates: {
     canonical: "/kindora/features/grant-management",
   },

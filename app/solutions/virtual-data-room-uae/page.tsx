@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "غرفة البيانات الافتراضية — منصة آمنة للصفقات في الإمارات | SpaceNexus",
-  description:
-    "غرفة بيانات افتراضية آمنة للشركات في الإمارات. متوافقة مع لوائح هيئة الأوراق المالية والسلع، مركز دبي المالي العالمي (DIFC)، وقوانين حماية البيانات. شهادة SOC 2 Type II وتشفير AES-256.",
+  title: "Virtual Data Room for UAE | SpaceNexus",
+  description: "DIFC and ADGM compliant VDR for UAE M&A, capital markets, and family office transactions. SOC 2 certified with Arabic support.",
+  keywords: [
+    "virtual data room UAE",
+    "DIFC compliant VDR",
+    "ADGM data room",
+    "UAE M&A data room",
+    "Middle East VDR",
+    "Dubai virtual data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-uae",
     languages: {
@@ -14,8 +22,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Virtual Data Room UAE — Secure Deal Platform | SpaceNexus",
-    description: "SOC 2 certified virtual data room for UAE M&A, capital markets, and legal due diligence. DIFC, ADGM, and SCA compliant.",
+    title: "Virtual Data Room for UAE | SpaceNexus",
+    description: "DIFC and ADGM compliant VDR for UAE M&A, capital markets, and family office transaction...",
     url: "https://spacenexus.net/solutions/virtual-data-room-uae",
     locale: "ar_AE",
   },
@@ -60,9 +68,39 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Virtual Data Room for UAE",
+  description: "DIFC and ADGM compliant virtual data room for UAE M&A, capital markets, real estate, and family office transactions. SOC 2 Type II certified with Arabic language support.",
+  url: "https://spacenexus.net/solutions/virtual-data-room-uae",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United Arab Emirates",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to transaction size and document volume.",
+  },
+};
+
 export default function UAEVDRPage() {
   return (
     <>
+      <Script
+        id="uae-vdr-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -175,6 +213,51 @@ export default function UAEVDRPage() {
           </Link>
         </div>
       </section>
-    </>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">DIFC and ADGM compliant.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/real-estate"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Dubai property and GCC real estate.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For real estate →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">GCC PE and family office.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/energy-infrastructure"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Oil & gas, renewables.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For energy & infrastructure →</h3>
+                        </Link>
+                        <Link
+                            href="/features/security-compliance"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">DIFC, ADGM, UAE PDPL.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</>
   );
 }

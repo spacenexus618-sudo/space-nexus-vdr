@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Programs — Client Services & Enrollment Management | Kindora",
   description:
     "Kindora Programs helps nonprofits manage client services, track enrollments, and monitor program performance. Organize service offerings, manage client participation, and measure community impact.",
+  keywords: [
+    "client management nonprofit",
+    "program management software",
+    "client case management",
+    "service delivery tracking",
+    "nonprofit program software",
+  ],
   alternates: {
     canonical: "/kindora/features/client-management",
   },
@@ -169,7 +176,7 @@ export default function ProgramsPage() {
                   src="/kindora/screenshots/Programs/Programs(1).png"
                   alt="Kindora Programs — client services and enrollment management"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

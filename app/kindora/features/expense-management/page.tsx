@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "Expense Management - Track & Categorize Nonprofit Spending",
   description:
     "Record expenses, attach receipts, categorize spending, track vendors, and maintain complete financial records for nonprofit operations.",
+  keywords: [
+    "nonprofit expense tracking",
+    "expense management software NGO",
+    "receipt tracking nonprofit",
+    "vendor expense management",
+    "nonprofit spending tracker",
+  ],
   alternates: {
     canonical: "/kindora/features/expense-management",
+  },
+  openGraph: {
+    title: "Expense Management - Track & Categorize Nonprofit Spending",
+    description:
+      "Record expenses, attach receipts, categorize spending, track vendors, and maintain complete financial records for nonprofit operations.",
+    url: "https://spacenexus.net/kindora/features/expense-management",
+    type: "website",
   },
 };
 

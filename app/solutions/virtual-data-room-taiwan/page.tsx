@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "虛擬資料室 — 台灣企業併購與盡職調查安全平台 | SpaceNexus",
-  description:
-    "SpaceNexus 為台灣企業提供安全的虛擬資料室（VDR），支援併購交易、盡職調查、募資與法律文件共享。SOC 2 Type II 認證、AES-256 加密、符合台灣個資法與 GDPR 規範。",
+  title: "虛擬資料室 | M&A 盡職調查平台 | SpaceNexus",
+  description: "安全的虛擬資料室，支援繁體中文、GDPR、PDPA 與 SOC 2 認證，適用於 M&A、IPO 與跨境交易。",
+  keywords: [
+    "虛擬資料室",
+    "台灣 VDR",
+    "繁體中文資料室",
+    "virtual data room Taiwan",
+    "Taiwan VDR",
+    "Asia Pacific data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-taiwan",
     languages: {
@@ -14,8 +22,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "虛擬資料室 — 台灣企業的安全資料室 | SpaceNexus",
-    description: "SOC 2 認證、AES-256 加密、專為台灣併購與法律交易設計的虛擬資料室。",
+    title: "虛擬資料室 | M&A 盡職調查平台 | SpaceNexus",
+    description: "安全的虛擬資料室，支援繁體中文、GDPR、PDPA 與 SOC 2 認證，適用於 M&A、IPO 與跨境交易。",
     url: "https://spacenexus.net/solutions/virtual-data-room-taiwan",
     locale: "zh_TW",
   },
@@ -60,9 +68,39 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "虛擬資料室 (Virtual Data Room for Taiwan)",
+  description: "Secure virtual data room for Taiwan M&A, due diligence, and IPO transactions. SOC 2 certified with Traditional Chinese language support.",
+  url: "https://spacenexus.net/solutions/virtual-data-room-taiwan",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Taiwan",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to transaction size and document volume.",
+  },
+};
+
 export default function TaiwanVDRPage() {
   return (
     <>
+      <Script
+        id="taiwan-vdr-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -168,6 +206,44 @@ export default function TaiwanVDRPage() {
           </Link>
         </div>
       </section>
-    </>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Cross-border M&A workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/technology"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Semiconductor and hardware.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For technology →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">PE-backed transactions.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/features/security-compliance"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">SOC 2, ISO 27001, PDPA.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</>
   );
 }

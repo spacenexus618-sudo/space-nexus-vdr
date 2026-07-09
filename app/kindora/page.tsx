@@ -520,7 +520,7 @@ export default function KindoraHomePage() {
                   className="w-full h-auto object-cover block"
                 >
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
-                  <source src="/videos/kindora-demo-video.webm" type="video/webm" />
+
                 </video>
                 {/* Bottom fade */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />
@@ -889,7 +889,7 @@ export default function KindoraHomePage() {
             {[
               {
                 slug: "complete-guide-nonprofit-management-software",
-                title: "The Complete Guide to Nonprofit Management Software in 2025",
+                title: "The Complete Guide to Nonprofit Management Software in 2026",
                 excerpt: "Everything you need to know before choosing a nonprofit management platform — features, pricing, and what most vendors won't tell you.",
                 category: "Nonprofit Tips",
                 readingTime: 12,

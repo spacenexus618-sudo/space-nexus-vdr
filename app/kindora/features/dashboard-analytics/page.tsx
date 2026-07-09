@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Dashboard & Analytics — Mission Impact in One Powerful View | Kindora",
   description:
     "Kindora's Dashboard & Analytics provides a centralized overview combining financial data, donor insights, campaign progress, and operational activity into one intuitive interface for data-driven nonprofit decisions.",
+  keywords: [
+    "nonprofit dashboard",
+    "NGO analytics",
+    "donation trends tracking",
+    "nonprofit KPI dashboard",
+    "mission impact analytics",
+  ],
   alternates: {
     canonical: "/kindora/features/dashboard-analytics",
   },
@@ -172,7 +179,7 @@ export default function DashboardAnalyticsPage() {
                   src="/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.png"
                   alt="Kindora Dashboard & Analytics — centralized nonprofit performance overview"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -107,7 +107,7 @@ export default function JsonLd() {
       "@type": "Offer",
       price: "149",
       priceCurrency: "USD",
-      description: "Starting from $149/month — Enterprise pricing available",
+      description: "Transparent, published pricing — Enterprise plans available",
     },
     aggregateRating: {
       "@type": "AggregateRating",

@@ -3,16 +3,15 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Secure Document Sharing for Law Firms — Legal VDR & Due Diligence Platform | SpaceNexus",
-    description:
-        "SpaceNexus provides secure document sharing purpose-built for law firms. Protect attorney-client privilege, manage due diligence Q&A workflows, maintain court-admissible audit trails, and meet SOC 2 Type II, ISO 27001, and GDPR compliance requirements.",
+    title: "Secure Document Sharing for Legal | SpaceNexus",
+    description: "Encrypted legal file sharing with court-admissible audit trails, ethical wall enforcement, and SOC 2 / ISO 27001 compliance.",
     alternates: {
         canonical: "https://spacenexus.net/solutions/secure-document-sharing-for-legal",
     },
     openGraph: {
-        title: "Secure Document Sharing for Law Firms — SpaceNexus Legal VDR",
+        title: "Secure Document Sharing for Legal | SpaceNexus",
         description:
-            "SOC 2 Type II certified Virtual Data Room for legal due diligence. Protect privilege, manage Q&A, and maintain court-admissible audit trails with SpaceNexus.",
+            "Encrypted legal file sharing with court-admissible audit trails, ethical wall enforceme...",
         url: "https://spacenexus.net/solutions/secure-document-sharing-for-legal",
         type: "website",
     },
@@ -203,9 +202,40 @@ const useCases = [
     },
 ];
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Secure Document Sharing for Legal",
+    description: "Secure document sharing solution for legal teams. Encrypted file exchange, granular access controls, immutable audit trails, and compliance with legal industry regulations including GDPR, HIPAA, and SOC 2.",
+    url: "https://spacenexus.net/solutions/secure-document-sharing-for-legal",
+    serviceType: "Secure Document Sharing",
+    provider: {
+        "@type": "Organization",
+        name: "SpaceNexus",
+        url: "https://spacenexus.net",
+    },
+    areaServed: { "@type": "Place", name: "Worldwide" },
+    audience: {
+        "@type": "BusinessAudience",
+        audienceType: "Legal professionals and law firms",
+    },
+    offers: {
+        "@type": "Offer",
+        url: "https://spacenexus.net/pricing",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "USD",
+        description: "Contact for pricing tailored to team size and document volume.",
+    },
+};
+
 export default function SecureDocumentSharingLegalPage() {
     return (
         <>
+            <Script
+                id="legal-service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
             <Script
                 id="legal-faq-schema"
                 type="application/ld+json"
@@ -531,7 +561,59 @@ export default function SecureDocumentSharingLegalPage() {
                         <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · GDPR · AES-256 · TLS 1.3 · Dynamic watermarking · NDA gate</p>
                     </div>
                 </section>
-            </main>
+                        {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/law-firm-document-exchange"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Counsel-to-counsel document exchange.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Law firm document exchange →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/law-firms"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Practice-wide VDR deployment.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For law firms →</h3>
+                        </Link>
+                        <Link
+                            href="/features/security-compliance"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
+                        </Link>
+                        <Link
+                            href="/secure-document-sharing"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">General-purpose secure sharing.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing →</h3>
+                        </Link>
+                        <Link
+                            href="/legal-document-management"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Manage legal documents at scale.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Legal document management →</h3>
+                        </Link>
+                        <Link
+                            href="/blog/secure-file-sharing-for-lawyers"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">What to look for in 2026.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure file sharing for lawyers →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
         </>
     );
 }

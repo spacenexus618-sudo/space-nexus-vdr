@@ -27,9 +27,12 @@ export const metadata: Metadata = {
 const categoryColors: Record<string, string> = {
     Guides: "bg-blue-50 text-blue-700 border-blue-100",
     "M&A": "bg-violet-50 text-violet-700 border-violet-100",
+    "M&A Insights": "bg-violet-50 text-violet-700 border-violet-100",
     "Private Equity": "bg-emerald-50 text-emerald-700 border-emerald-100",
     Security: "bg-rose-50 text-rose-700 border-rose-100",
+    "Security & Compliance": "bg-rose-50 text-rose-700 border-rose-100",
     "Startup Fundraising": "bg-amber-50 text-amber-700 border-amber-100",
+    "Distressed Debt": "bg-amber-50 text-amber-700 border-amber-100",
 };
 
 const topicClusters = [
@@ -48,13 +51,13 @@ const topicClusters = [
         label: "M&A",
         slug: "ma",
         icon: "🤝",
-        categories: ["M&A"],
+        categories: ["M&A", "M&A Insights"],
     },
     {
         label: "Security & Compliance",
         slug: "security",
         icon: "🔐",
-        categories: ["Security"],
+        categories: ["Security", "Security & Compliance"],
     },
     {
         label: "Private Equity",
@@ -153,6 +156,15 @@ export default function BlogPage() {
         clusterMap[cluster.label] = blogPosts.filter((p) => cluster.categories!.includes(p.category));
     }
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://spacenexus.net/blog" },
+        ],
+    };
+
     const blogListSchema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -173,10 +185,20 @@ export default function BlogPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
+                id="blog-breadcrumb"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
                 id="blog-list-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
             />
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <span className="text-gray-600">Blog</span>
+            </nav>
 
             {/* Hero */}
             <section className="pt-28 pb-16 bg-white border-b border-gray-100">
@@ -262,7 +284,7 @@ export default function BlogPage() {
                             <Link href="/competitors/vdr-alternatives" className="group flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-[#2563eb]/30 hover:bg-blue-50/50 transition-all">
                                 <span className="text-xl">⚖️</span>
                                 <div>
-                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">VDR Comparison 2025</p>
+                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">VDR Comparison 2026</p>
                                     <p className="text-xs text-gray-500">6 providers ranked</p>
                                 </div>
                             </Link>

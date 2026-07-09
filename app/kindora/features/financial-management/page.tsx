@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Finance — Chart of Accounts & Budget Management | Kindora",
   description:
     "Kindora Finance helps nonprofits manage their financial structure and budgeting processes. Organize a structured chart of accounts, track financial categories, and create budgets for programs and operations.",
+  keywords: [
+    "nonprofit accounting software",
+    "nonprofit budget tracking",
+    "chart of accounts nonprofit",
+    "financial management NGO",
+    "nonprofit bookkeeping",
+  ],
   alternates: {
     canonical: "/kindora/features/financial-management",
   },
@@ -161,7 +168,7 @@ export default function FinancePage() {
                   src="/kindora/screenshots/Finance/Finance%20(1).png"
                   alt="Kindora Finance — chart of accounts and budget management"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

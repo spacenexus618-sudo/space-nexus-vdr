@@ -1,17 +1,24 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
-  description:
-    "Space Nexus Integrated Trackers help teams monitor deal progress, engagement metrics, and Q&A activity in real time. Track milestones, performance indicators, and collaboration across ongoing transactions.",
+  title: "Settings & Administration | SpaceNexus",
+  description: "Workspace settings, security policies, branding, and admin controls. Configure SpaceNexus for your team.",
+  keywords: [
+    "VDR settings",
+    "data room administration",
+    "workspace configuration VDR",
+    "VDR admin controls",
+    "data room security policies",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/settings",
   },
   openGraph: {
-    title: "Integrated Trackers — Deal Progress & Engagement Monitoring | Space Nexus VDR",
+    title: "Settings & Administration | SpaceNexus",
     description:
-      "Real-time tracking of deal milestones, engagement metrics, document views, and Q&A activity across all ongoing transactions — all in one centralized view.",
+      "Workspace settings, security policies, branding, and admin controls. Configure SpaceNex...",
     url: "https://spacenexus.net/features/settings",
     type: "website",
   },
@@ -87,9 +94,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do workspace settings work in SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus workspace settings provide centralized control over your account configuration, including branding customization, security policies, user management, notification preferences, and integration management. Administrators can configure global settings that apply across all deals in the workspace." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I customize my VDR branding?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. Enterprise plans include white-label branding options. You can customize the data room with your organization's logo, color scheme, and branded login page, presenting a professional, consistent experience to buyers, investors, and counterparties." },
+    },
+    {
+      "@type": "Question",
+      name: "What security policies can I configure?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus administrators can configure IP whitelisting, geo-based access restrictions, session timeout policies, multi-factor authentication requirements, device management policies, and password complexity rules. These enterprise-grade security controls ensure your data room meets your organization's compliance requirements." },
+    },
+    {
+      "@type": "Question",
+      name: "How do admin controls work for managing team access?",
+      acceptedAnswer: { "@type": "Answer", text: "Administrators can manage team members, assign roles, set permissions, and control access to individual deals from the settings interface. Bulk user management, audit log access, and billing controls are also centralized in the admin panel, giving IT and compliance teams full oversight." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Settings & Administration", item: "https://spacenexus.net/features/settings" },
+  ],
+};
+
 export default function SettingsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="settings-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -176,9 +225,9 @@ export default function SettingsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/integrated%20traks.jpeg"
-                  alt="Space Nexus VDR Integrated Trackers — deal progress and engagement monitoring"
+                  alt="SpaceNexus VDR Integrated Trackers — deal progress and engagement monitoring"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

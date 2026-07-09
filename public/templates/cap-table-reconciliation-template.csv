@@ -1,0 +1,35 @@
+Holder / Class,Type,Shares (units),Issue Date,Price/Share,Total Value,As-of Date,Notes
+Founders,Common,0,,0,0,00/00/0000,Founder shares (pre-financing)
+Founders,Common,0,,0,0,00/00/0000,Founder shares (pre-financing)
+Founders,Common,0,,0,0,00/00/0000,Founder shares (pre-financing)
+Employee Stock Pool,Option Pool,0,Various,0,0,Various,Reserved for future option grants
+Issued Option Grants,Common (Options),0,Various,0,0,Various,Already-granted options (exercised and unexercised)
+Issued Option Grants,Common (Options),0,Various,0,0,Various,Already-granted options
+Issued Option Grants,Common (Options),0,Various,0,0,Various,Already-granted options
+Issued Option Grants,Common (Options),0,Various,0,0,Various,Already-granted options
+Advisor 1,Common (Options),0,00/00/0000,0,0,00/00/0000,Advisor grant
+Advisor 2,Common (Options),0,00/00/0000,0,0,00/00/0000,Advisor grant
+Pre-Seed Investor 1 (FFF),SAFE,0,00/00/0000,0,0,00/00/0000,Convertible note — converts at next round
+Pre-Seed Investor 2 (FFF),SAFE,0,00/00/0000,0,0,00/00/0000,Convertible note — converts at next round
+Pre-Seed Investor 3 (FFF),SAFE,0,00/00/0000,0,0,00/00/0000,Convertible note — converts at next round
+Accelerator / Incubator,SAFE,0,00/00/0000,0,0,00/00/0000,Often discount + MFN
+Grant Program,Non-Dilutive,0,00/00/0000,0,0,00/00/0000,"SBIR, NSF, or other non-dilutive grant"
+Seed Lead Investor,Series Seed Preferred,0,00/00/0000,0,0,00/00/0000,Lead investor in seed round
+Seed Co-Investor 1,Series Seed Preferred,0,00/00/0000,0,0,00/00/0000,Co-investor in seed round
+Seed Co-Investor 2,Series Seed Preferred,0,00/00/0000,0,0,00/00/0000,Co-investor in seed round
+Strategic Investor,Series Seed Preferred,0,00/00/0000,0,0,00/00/0000,Strategic partner in seed round
+Warrants Outstanding,Warrant,0,Various,0,0,Various,Warrants issued to service providers or lenders
+Convertible Notes Outstanding,Convertible Note,0,00/00/0000,0,0,00/00/0000,Outstanding convertible note (pre-financing)
+Total Authorized Shares,Common,0,00/00/0000,0,0,00/00/0000,Total authorized common stock
+Total Issued and Outstanding,Common,0,,0,0,,Sum of all issued common (founders + exercised options)
+Total Reserved for Option Pool,Option Pool,0,,0,0,,Authorized but unissued (reserved for future grants)
+Fully Diluted Shares,All Classes,0,,0,0,,Common + all options + all SAFEs/notes (converted) + warrants
+Founder Ownership (Fully Diluted),,0,,0,0,,Sum of founder holdings / fully diluted shares
+Employee Ownership (Fully Diluted),,0,,0,0,,Sum of all option grants (vested + unvested) / fully diluted shares
+Investor Ownership (Fully Diluted),,0,,0,0,,Sum of all investor holdings / fully diluted shares
+Option Pool Available for Future Grants,,0,,0,0,,Pool minus already-granted options
+Vesting — Cliff (months),,0,,0,0,,Typical founder cliff (often 12 months)
+Vesting — Total (months),,0,,0,0,,Typical founder vesting (often 48 months)
+Founder Repurchase Right at Termination,,0,,0,0,,Company right to repurchase unvested at original price
+Last 409A Valuation Date,,0,,0,0,00/00/0000,Date of most recent 409A
+Last 409A Fair Market Value (per share),,0,,0,0,,FMV per share from most recent 409A

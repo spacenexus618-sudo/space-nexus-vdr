@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Users — Access Control & System User Management | Kindora",
   description:
     "Kindora Users allows organizations to manage system users and define access levels within the platform. Assign roles, control permissions, and ensure team members have appropriate access to different modules.",
+  keywords: [
+    "nonprofit user management",
+    "role-based access control NGO",
+    "team permissions software",
+    "user access management nonprofit",
+    "multi-user nonprofit platform",
+  ],
   alternates: {
     canonical: "/kindora/features/user-management",
   },
@@ -204,7 +211,7 @@ export default function UsersPage() {
                   src="/kindora/screenshots/Users/Screenshot%202026-03-17%20123550.png"
                   alt="Kindora Users — user management and access control interface"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

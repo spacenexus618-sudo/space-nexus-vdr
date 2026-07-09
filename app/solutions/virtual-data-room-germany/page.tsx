@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Virtueller Datenraum — Sichere Plattform für M&A und Due Diligence | SpaceNexus",
-  description:
-    "SpaceNexus bietet einen sicheren virtuellen Datenraum (VDR) für deutsche Unternehmen. SOC 2 Type II zertifiziert, ISO 27001, DSGVO-konform. Ideal für M&A-Transaktionen, Due Diligence, Unternehmensverkäufe und Kapitalmarktgeschäfte.",
+  title: "Virtueller Datenraum für M&A | SpaceNexus",
+  description: "DSGVO-konformer VDR für deutsche M&A und Due Diligence. SOC 2 zertifiziert, ISO 27001, mit EU-Datenresidenz.",
+  keywords: [
+    "Virtueller Datenraum",
+    "VDR Deutschland",
+    "DSGVO Datenraum",
+    "German virtual data room",
+    "EU data room",
+    "M&A Datenraum Deutschland",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/solutions/virtual-data-room-germany",
     languages: {
@@ -14,8 +22,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Virtueller Datenraum Deutschland — SpaceNexus",
-    description: "SOC 2 zertifizierter virtueller Datenraum für M&A, Due Diligence und Unternehmenstransaktionen. DSGVO-konform mit EU-Datenresidenz.",
+    title: "Virtueller Datenraum für M&A | SpaceNexus",
+    description: "DSGVO-konformer VDR für deutsche M&A und Due Diligence. SOC 2 zertifiziert, ISO 27001, ...",
     url: "https://spacenexus.net/solutions/virtual-data-room-germany",
     locale: "de_DE",
   },
@@ -67,9 +75,39 @@ const faqs = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Virtueller Datenraum für Deutschland",
+  description: "GDPR-konformer virtueller Datenraum für deutsche M&A-Transaktionen, Due Diligence und Compliance. SOC 2 zertifiziert mit EU-Datenresidenz.",
+  url: "https://spacenexus.net/solutions/virtual-data-room-germany",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Germany",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "EUR",
+    description: "Kontakt für individuelle Preisgestaltung je nach Transaktionsgröße und Dokumentenvolumen.",
+  },
+};
+
 export default function GermanyVDRPage() {
   return (
     <>
+      <Script
+        id="germany-vdr-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -194,6 +232,51 @@ export default function GermanyVDRPage() {
           </Link>
         </div>
       </section>
-    </>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">GDPR-compliant M&A workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">DACH-region PE transactions.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/law-firms"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">For German and EU law firms.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For law firms →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/energy-infrastructure"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Mittelstand deals.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For energy & infrastructure →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/real-estate"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Commercial real estate.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For real estate →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</>
   );
 }

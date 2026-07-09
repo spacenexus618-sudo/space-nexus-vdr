@@ -190,6 +190,13 @@ a:focus-visible {
    Core Web Vitals & Performance
    ============================================= */
 
+/* Prevent CLS from images without explicit dimensions */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 /* Promote card hover to compositor layer to avoid paint on hover */
 .card-hover {
   will-change: transform;

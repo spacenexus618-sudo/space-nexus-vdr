@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "Request a Demo | Kindora NGO OS",
   description:
     "Schedule a personalized demo of Kindora NGO OS. See how our comprehensive nonprofit management platform can streamline your donor relations, program delivery, and impact reporting.",
+  keywords: [
+    "Kindora demo",
+    "nonprofit software demo",
+    "NGO platform demo",
+    "book Kindora demo",
+    "nonprofit management demo",
+  ],
   alternates: {
     canonical: "/kindora/demo",
+  },
+  openGraph: {
+    title: "Request a Demo | Kindora NGO OS",
+    description:
+      "Schedule a personalized demo of Kindora NGO OS. See how our comprehensive nonprofit management platform can streamline your donor relations, program delivery, and impact reporting.",
+    url: "https://spacenexus.net/kindora/demo",
+    type: "website",
   },
 };
 

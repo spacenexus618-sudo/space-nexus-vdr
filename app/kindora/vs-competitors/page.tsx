@@ -692,7 +692,7 @@ export default function VsCompetitorsPage() {
                             },
                             {
                                 q: "How does Kindora compare to Salesforce Nonprofit Cloud in cost?",
-                                a: "Salesforce Nonprofit Cloud typically costs $36,000–$100,000+ per year when you factor in licenses, implementation consultants, customization, and training. Kindora is a fraction of that cost, requires no consultants, and is ready in under 30 minutes.",
+                                a: "Salesforce Nonprofit Cloud typically requires large annual commitments once you factor in licenses, implementation consultants, customization, and training. Kindora is a fraction of that cost, requires no consultants, and is ready in under 30 minutes.",
                             },
                             {
                                 q: "Can Kindora replace Bonterra Apricot for case management?",

@@ -29,7 +29,7 @@ export default function SystemStatus() {
   const allOperational = services.every((s) => s.status === "operational");
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 left-4 md:left-6 z-50">
       <div className="bg-white rounded-full px-4 py-2 shadow-lg border border-gray-200 flex items-center gap-3 hover:shadow-xl transition-shadow">
         {/* Status Indicator */}
         <div className="flex items-center gap-2">

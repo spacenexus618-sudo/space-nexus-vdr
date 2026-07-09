@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Script from "next/script";
 import DemoRequest from "@/app/components/DemoRequest";
 
@@ -142,6 +143,15 @@ const demoFaqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Book a Demo", item: "https://spacenexus.net/demo" },
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -176,10 +186,20 @@ export default function DemoPage() {
   return (
     <main className="pt-20 lg:pt-24">
       <Script
+        id="demo-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
         id="demo-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+        <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+        <span className="text-gray-600">Book a Demo</span>
+      </nav>
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

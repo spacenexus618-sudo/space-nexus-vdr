@@ -1,16 +1,16 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Virtual Data Room for Mergers & Acquisitions — M&A VDR Software | Space Nexus",
-    description:
-        "Purpose-built VDR for M&A transactions. Space Nexus accelerates sell-side and buy-side due diligence with AI redaction, granular bidder permissions, structured Q&A, and tamper-evident audit logs. Trusted for $10B+ in deals.",
+    title: "M&A Virtual Data Room Software | SpaceNexus",
+    description: "Sell-side and buy-side M&A VDR with AI redaction, granular bidder access, structured Q&A, and tamper-evident audit logs. Start your data room in 24 hours.",
     alternates: {
         canonical: "https://spacenexus.net/solutions/mergers-and-acquisitions-vdr",
     },
     openGraph: {
-        title: "M&A Virtual Data Room Software — Space Nexus",
-        description: "The VDR built for M&A teams. AI due diligence, structured Q&A, granular bidder access, and real-time buyer analytics — all in one platform.",
+        title: "M&A Virtual Data Room Software | SpaceNexus",
+        description: "Sell-side and buy-side M&A VDR with AI redaction, granular bidder access, structured Q&...",
         url: "https://spacenexus.net/solutions/mergers-and-acquisitions-vdr",
     },
     keywords: [
@@ -68,9 +68,96 @@ const capabilities = [
     { title: "SOC 2 Type II Compliance", desc: "Independently certified security controls protect your most sensitive transaction documents." },
 ];
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "M&A Virtual Data Room",
+    description: "Purpose-built virtual data room for mergers and acquisitions due diligence, with AI redaction, structured Q&A, granular bidder permissions, and tamper-evident audit logs.",
+    url: "https://spacenexus.net/solutions/mergers-and-acquisitions-vdr",
+    serviceType: "Virtual Data Room",
+    provider: {
+        "@type": "Organization",
+        name: "SpaceNexus",
+        url: "https://spacenexus.net",
+    },
+    areaServed: { "@type": "Place", name: "Worldwide" },
+    offers: {
+        "@type": "Offer",
+        url: "https://spacenexus.net/pricing",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "USD",
+        description: "Contact for custom pricing tailored to transaction size and document volume.",
+    },
+};
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+        {
+            "@type": "Question",
+            name: "What is an M&A virtual data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "An M&A virtual data room (VDR) is a secure online repository for storing and sharing confidential company documents during mergers and acquisitions. It provides granular bidder access controls, structured Q&A workflows, tamper-evident audit logs, and AI-powered redaction — all designed to streamline sell-side and buy-side due diligence while protecting sensitive deal information.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How does an M&A data room protect deal confidentiality?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "SpaceNexus M&A data rooms protect confidentiality through NDA enforcement at room entry, granular document-level and folder-level permissions per bidder group, IP access restrictions, download controls, dynamic watermarking, and tamper-evident audit logs that track every view and action. SOC 2 Type II certification and AES-256 encryption provide bank-grade security throughout the deal lifecycle.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How quickly can an M&A data room be set up?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "SpaceNexus M&A data rooms are fully operational within 24 hours. The bulk uploader processes 100+ file types, and AI Auto-Categorization organizes documents instantly. You can invite bidders, configure NDA gates, and set granular permissions the same day — no IT support or software installation required.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "What documents go into an M&A data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A typical M&A data room includes the Confidential Information Memorandum (CIM), audited financials, cap table, material contracts, IP registrations, employee and benefit plans, regulatory filings, customer and supplier lists, litigation records, and environmental reports. SpaceNexus provides pre-built folder templates organized by due diligence workstream to accelerate setup.",
+            },
+        },
+    ],
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Solutions", item: "https://spacenexus.net/solutions" },
+        { "@type": "ListItem", position: 3, name: "M&A Virtual Data Room", item: "https://spacenexus.net/solutions/mergers-and-acquisitions-vdr" },
+    ],
+};
+
 export default function MAVDRPage() {
     return (
-        <main className="pt-20 lg:pt-24">
+        <>
+            <Script
+                id="ma-vdr-service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
+            <Script
+                id="ma-vdr-breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
+                id="ma-vdr-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <main className="pt-20 lg:pt-24">
             {/* Hero */}
             <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +173,7 @@ export default function MAVDRPage() {
                             <span className="text-[#2563eb]">Mergers &amp; Acquisitions</span>
                         </h1>
                         <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                            From CIM upload to closing binder — Space Nexus manages the entire M&amp;A due diligence process. AI redaction, structured Q&amp;A, granular bidder access, and tamper-evident audit logs. Trusted for <strong>$10B+ in transactions</strong>.
+                            From CIM upload to closing binder — Space Nexus manages the entire M&amp;A due diligence process. AI redaction, structured Q&amp;A, granular bidder access, and tamper-evident audit logs. Trusted on transactions of all sizes, from <strong>mid-market to large-cap</strong>.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
@@ -168,10 +255,34 @@ export default function MAVDRPage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / deals</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                                <img src="/spacenexus/screenshots/vdr-deals.png" alt="Space Nexus M&A deal pipeline" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-deals.png" alt="SpaceNexus M&A deal pipeline" className="w-full h-auto" loading="lazy" />
                             </div>
                             <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Related Links */}
+            <section className="py-10 bg-white border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        <Link href="/m-a-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            M&amp;A Data Room Providers (2026 Ranking) →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            All Data Room Providers →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/ma-document-sharing" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            M&amp;A Document Sharing →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/competitors/datasite-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Datasite →
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -188,6 +299,59 @@ export default function MAVDRPage() {
                     <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
                 </div>
             </section>
-        </main>
+                    {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/industries/investment-banking"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">M&A advisory workflows, multi-bidder processes, and pitch materials.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For investment banks →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/private-equity"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Buy-side due diligence and sell-side portfolio exits.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For private equity →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/law-firms"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Privilege protection, ethical walls, and court-admissible audit trails.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For law firms →</h3>
+                        </Link>
+                        <Link
+                            href="/m-a-data-room-providers"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Independent ranking of the top providers for M&A transactions.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A data room providers (2026) →</h3>
+                        </Link>
+                        <Link
+                            href="/checklists/due-diligence-checklist"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">200+ items across every workstream.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A due diligence checklist →</h3>
+                        </Link>
+                        <Link
+                            href="/features/vdr-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">AI redaction, structured Q&A, and real-time engagement analytics.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR data room features →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
+        </>
     );
 }

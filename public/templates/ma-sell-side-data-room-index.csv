@@ -1,0 +1,134 @@
+Folder,Subfolder,Document,Required,Purpose / Notes
+01. Corporate,01.1 Formation,Certificate of Incorporation,Y,Foundation documents proving entity existence and authority
+01. Corporate,01.1 Formation,Bylaws (current and all amended versions),Y,Governance rules in effect over the company history
+01. Corporate,01.1 Formation,Operating Agreement (if LLC),N,"For LLC targets, the operating agreement supersedes bylaws"
+01. Corporate,01.1 Formation,Good standing certificates in each state of operation,Y,Confirms active status and current state compliance
+01. Corporate,01.1 Formation,Foreign qualifications,N,Required for operating in states beyond state of incorporation
+01. Corporate,01.2 Governance,Board minutes (last 3 years),Y,"All formal board actions, including any sale-related approvals"
+01. Corporate,01.2 Governance,Shareholder / member minutes and consents,Y,"Equity holder approvals, including any pre-sale waivers"
+01. Corporate,01.2 Governance,"Board committee charters (audit, comp, nominating)",N,For public or pre-IPO companies
+01. Corporate,01.3 Capitalization,Cap table — fully diluted,Y,Single most-viewed document in the data room
+01. Corporate,01.3 Capitalization,Stock ledger,Y,Detailed record of all issuances and transfers
+01. Corporate,01.3 Capitalization,Form D filings,N,SEC private placement exemption filings
+01. Corporate,01.3 Capitalization,Section 1202 / QSBS documentation,N,"For tax planning purposes, particularly QSBS-eligible investors"
+01. Corporate,01.4 Equity Plans,Equity incentive plan documents,Y,"Stock option plan, RSU plan, or equivalent"
+01. Corporate,01.4 Equity Plans,Option grant detail and vesting schedules,Y,"List of all option holders, grants, vesting, exercise prices"
+01. Corporate,01.4 Equity Plans,Form 3921 (ISO grants) and 3922 (ESPP),N,Required IRS informational filings
+01. Corporate,01.4 Equity Plans,Stockholder rights agreement,N,"Drag/tag, ROFR, co-sale provisions"
+01. Corporate,01.5 Subsidiaries,Subsidiary organization documents,Y,For each subsidiary entity
+01. Corporate,01.5 Subsidiaries,Intercompany agreements,Y,"Cost-sharing, tax-sharing, services agreements"
+02. Financial,02.1 Historicals,Audited financials (last 3 years),Y,Reviewed by independent auditor with opinion letter
+02. Financial,02.1 Historicals,Auditor management letters,Y,Internal control observations from the auditor
+02. Financial,02.1 Historicals,Unaudited interim financials (YTD),Y,Most recent monthly or quarterly results
+02. Financial,02.1 Historicals,Trial balance (most recent period),Y,Detail-level general ledger trial balance
+02. Financial,02.2 Revenue,Revenue by customer detail (last 12 months),Y,Transaction-level or summarized customer revenue
+02. Financial,02.2 Revenue,Revenue by product / SKU detail,Y,For product-level analysis
+02. Financial,02.2 Revenue,Deferred revenue schedule,Y,"Billings, revenue recognition, and deferred balance"
+02. Financial,02.2 Revenue,Customer contract files (top 20),Y,"Actual customer agreements, MSAs, SOWs"
+02. Financial,02.2 Revenue,Disaggregated revenue disclosure,Y,Geographic and category breakdowns
+02. Financial,02.3 Costs,Cost of revenue detail (last 12 months),Y,Direct costs by category
+02. Financial,02.3 Costs,Operating expense detail by function,Y,"R&D, S&M, G&A detail"
+02. Financial,02.3 Costs,"Headcount cost detail (salary, benefits, taxes)",Y,Payroll register and reconciliation
+02. Financial,02.3 Costs,Capital expenditure history (last 3 years),N,CapEx schedule with categorization
+02. Financial,02.4 Working Capital,AR aging schedule (most recent),Y,Customer-level aging detail
+02. Financial,02.4 Working Capital,AP aging schedule (most recent),Y,Vendor-level aging detail
+02. Financial,02.4 Working Capital,Net working capital walk-forward,Y,13-month rolling NWC analysis
+02. Financial,02.5 Tax,Federal tax returns (last 3 years),Y,Filed returns and supporting workpapers
+02. Financial,02.5 Tax,State tax returns (last 3 years),Y,"All state filings, especially in nexus states"
+02. Financial,02.5 Tax,Sales and use tax filings,Y,Compliance documentation by state
+02. Financial,02.5 Tax,Tax provision workpapers,Y,GAAP tax provision and rate reconciliation
+02. Financial,02.5 Tax,International tax structure documentation,N,For companies with foreign operations
+02. Financial,02.6 Debt,Debt schedule (all instruments),Y,Detail of all outstanding debt
+02. Financial,02.6 Debt,Credit agreements and amendments,Y,Full text of credit facility documentation
+02. Financial,02.6 Debt,Debt covenant compliance certificates,Y,Most recent compliance certificates
+02. Financial,02.7 Forecasts,Board-approved budget (current year),Y,Latest approved annual plan
+02. Financial,02.7 Forecasts,Long-range plan (3 years),Y,Multi-year projections with assumptions
+02. Financial,02.7 Forecasts,KPI dashboards (most recent),Y,"ARR, MRR, NRR, customer count, etc."
+03. Commercial,03.1 Customers,Top customer revenue analysis,Y,"Top 20 by revenue, with concentration metrics"
+03. Commercial,03.1 Customers,Customer cohort retention,Y,Cohort-based retention analysis
+03. Commercial,03.1 Customers,Customer health scores,N,"CSAT, NPS, product usage metrics"
+03. Commercial,03.1 Customers,Reference list (10 customers),Y,Pre-cleared reference contacts
+03. Commercial,03.2 Sales,Sales pipeline report (most recent),Y,"Pipeline by stage, weighted forecast"
+03. Commercial,03.2 Sales,Win/loss analysis,N,Aggregated win/loss trends
+03. Commercial,03.2 Sales,Sales rep productivity,N,Per-rep bookings and quota attainment
+03. Commercial,03.3 Marketing,Marketing plan and budget,N,Current year plan and spend
+03. Commercial,03.3 Marketing,Brand and positioning materials,N,"Messaging, competitive positioning, decks"
+03. Commercial,03.4 Market,Market sizing analysis,Y,"TAM, SAM, SOM analysis with sources"
+03. Commercial,03.4 Market,Competitive analysis,Y,Competitor profiles and win rate
+03. Commercial,03.4 Market,Industry reports and analyst coverage,N,Third-party research and analyst reports
+04. Technology & IP,04.1 Architecture,System architecture diagram,Y,High-level system architecture
+04. Technology & IP,04.1 Architecture,Infrastructure and hosting documentation,Y,"Cloud providers, regions, redundancy"
+04. Technology & IP,04.1 Architecture,Network topology,N,Network architecture and security zones
+04. Technology & IP,04.1 Architecture,Data flow diagrams,N,Data flow for key workflows
+04. Technology & IP,04.2 Code & DevOps,Code repository access procedure,Y,Read-only access or escrow instructions
+04. Technology & IP,04.2 Code & DevOps,CI/CD pipeline documentation,N,"Build, test, deploy process"
+04. Technology & IP,04.2 Code & DevOps,Issue tracking and project management,N,Jira/Linear boards and processes
+04. Technology & IP,04.2 Code & DevOps,Disaster recovery and business continuity plans,Y,DR plan with RTO/RPO targets
+04. Technology & IP,04.2 Code & DevOps,Capacity planning and scaling playbook,N,Performance and scaling procedures
+04. Technology & IP,04.3 IP,Patent portfolio summary,Y,Granted and pending patents with status
+04. Technology & IP,04.3 IP,Trademark portfolio summary,Y,Registered and applied-for marks
+04. Technology & IP,04.3 IP,Copyright registrations,N,For significant creative works
+04. Technology & IP,04.3 IP,IP assignment agreements,Y,"Founder, employee, contractor assignments"
+04. Technology & IP,04.3 IP,Open source license compliance,Y,SBOM or equivalent audit
+04. Technology & IP,04.3 IP,In-bound IP licenses,Y,All third-party technology licenses
+04. Technology & IP,04.3 IP,Out-bound IP licenses,N,Customer or partner IP grants
+04. Technology & IP,04.3 IP,Standard NDA template,N,Current NDA used with third parties
+04. Technology & IP,04.4 Security,SOC 2 Type II report,Y,Most recent SOC 2 Type II report
+04. Technology & IP,04.4 Security,ISO 27001 certificate,N,If applicable
+04. Technology & IP,04.4 Security,Penetration test reports (last 12 months),Y,Internal and external pen test results
+04. Technology & IP,04.4 Security,Vulnerability scan results,Y,Most recent scans with remediation status
+04. Technology & IP,04.4 Security,Information security policy,Y,Master security policy document
+04. Technology & IP,04.4 Security,Data breach history,Y,Any incidents in last 5 years
+04. Technology & IP,04.4 Security,Incident response plan,Y,Documented IR procedures and runbooks
+04. Technology & IP,04.4 Security,Business continuity plan,Y,BCP with critical functions identified
+04. Technology & IP,04.5 Privacy,Privacy policy and terms of service,Y,Current published policies
+04. Technology & IP,04.5 Privacy,Data Processing Agreements (vendor),Y,DPAs with all material data processors
+04. Technology & IP,04.5 Privacy,Data Processing Addendums (customer),Y,DPAs offered to customers
+04. Technology & IP,04.5 Privacy,Records of processing activities (ROPA),N,GDPR Article 30 documentation
+04. Technology & IP,04.5 Privacy,Cross-border transfer mechanisms,N,"SCCs, adequacy decisions, binding corporate rules"
+05. People & HR,05.1 Org & Headcount,Organizational chart,Y,Current org chart by function
+05. People & HR,05.1 Org & Headcount,Headcount detail by function/location/tenure,Y,Detailed headcount analytics
+05. People & HR,05.1 Org & Headcount,Attrition and retention reports (24 months),Y,Voluntary/involuntary breakdown
+05. People & HR,05.1 Org & Headcount,Offer decline analysis,N,For understanding hiring competitiveness
+05. People & HR,05.2 Comp & Benefits,Compensation philosophy and bands,N,Internal compensation framework
+05. People & HR,05.2 Comp & Benefits,Benefits plan documents,N,"Health, dental, 401(k), etc."
+05. People & HR,05.2 Comp & Benefits,Employee handbook,Y,Current handbook with all policies
+05. People & HR,05.2 Comp & Benefits,Bonus and incentive plans,Y,"Current year plans for sales, executives, all employees"
+05. People & HR,05.3 Key People,Executive employment agreements,Y,C-suite and direct reports
+05. People & HR,05.3 Key People,Key person retention agreements,Y,Existing retention bonuses or agreements
+05. People & HR,05.3 Key People,Non-compete and non-solicit agreements,Y,For key employees
+05. People & HR,05.3 Key People,Resumes / bios for leadership team,Y,For buyer reference
+05. People & HR,05.4 Equity,Equity plan documents and reserve status,Y,Plan document and share availability
+05. People & HR,05.4 Equity,Individual equity grant detail (full),Y,"All grants, vesting, exercise prices"
+05. People & HR,05.4 Equity,Acceleration provisions summary,Y,"Single vs. double trigger, who has it"
+05. People & HR,05.5 Compliance,EEOC complaints and investigations,Y,Last 5 years
+05. People & HR,05.5 Compliance,Labor disputes or union activity,Y,Current or threatened
+05. People & HR,05.5 Compliance,Worker classification analysis,N,For contractor/employee compliance
+05. People & HR,05.5 Compliance,I-9 audit results,N,Most recent I-9 compliance review
+06. Legal & Compliance,06.1 Litigation,Schedule of pending litigation,Y,All active matters with status
+06. Legal & Compliance,06.1 Litigation,Schedule of threatened claims,Y,Pre-litigation correspondence and demands
+06. Legal & Compliance,06.1 Litigation,Historical litigation outcomes (5 years),Y,Closed matters with outcomes
+06. Legal & Compliance,06.1 Litigation,Insurance claim history,Y,Claims filed under any policy
+06. Legal & Compliance,06.2 Regulatory,Regulatory licenses and permits,Y,All material government authorizations
+06. Legal & Compliance,06.2 Regulatory,Government investigations or inquiries,Y,Current or recent
+06. Legal & Compliance,06.2 Regulatory,Consent decrees or settlement orders,N,Active consent decrees
+06. Legal & Compliance,06.2 Regulatory,Industry-specific compliance certifications,N,"PCI DSS, HITRUST, FedRAMP, etc."
+06. Legal & Compliance,06.3 Insurance,Insurance policy schedule,Y,"All policies, limits, premiums, carriers"
+06. Legal & Compliance,06.3 Insurance,Claims history (5 years),Y,Claims made and outcomes
+06. Legal & Compliance,06.3 Insurance,Cyber insurance documentation,Y,Cyber policy and breach response
+07. Real Estate & Operations,07.1 Real Estate,Facility leases (all locations),Y,Full text of all leases
+07. Real Estate & Operations,07.1 Real Estate,Lease amendments and side letters,Y,Any modifications to base leases
+07. Real Estate & Operations,07.1 Real Estate,Property condition assessments,N,For owned real estate
+07. Real Estate & Operations,07.2 Suppliers,Key supplier list and spend,Y,Top 25 by spend
+07. Real Estate & Operations,07.2 Suppliers,Critical supplier contracts,Y,Single-source or strategic suppliers
+07. Real Estate & Operations,07.2 Suppliers,Supplier ESG assessments,N,For ESG-focused buyers
+08. Management Presentation,08.1 IM and Decks,Information Memorandum (full version),Y,Primary marketing document for the sale process
+08. Management Presentation,08.1 IM and Decks,Management presentation (current version),Y,Slide deck for management meetings with buyers
+08. Management Presentation,08.1 IM and Decks,Teaser / anonymous summary,Y,Initial marketing piece for outbound buyer outreach
+08. Management Presentation,08.1 IM and Decks,Financial model (Excel),Y,Working financial model with assumptions
+08. Management Presentation,08.2 Process,Process letter (Round 1),Y,Instructions for first-round bids
+08. Management Presentation,08.2 Process,Process letter (Round 2),Y,Instructions for second-round bids
+08. Management Presentation,08.2 Process,Form of NDA,Y,Standard NDA for buyer execution
+08. Management Presentation,08.2 Process,Bid letter template,Y,Format for buyer bids
+08. Management Presentation,08.3 Q&A,FAQ document (pre-prepared),Y,Anticipated buyer questions with prepared answers
+08. Management Presentation,08.3 Q&A,Q&A log (current),Y,Live log of all buyer questions and responses

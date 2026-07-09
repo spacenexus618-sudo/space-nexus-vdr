@@ -1,0 +1,80 @@
+Category,Question,Priority,Suggested Source / Section
+Team & Founders,Why is this the right team to win in this market?,High,"Founder bios, prior experience, why-now narrative"
+Team & Founders,What relevant domain expertise do the founders bring?,High,"Founder bios, industry experience"
+Team & Founders,Have the founders worked together before?,Medium,"Founder history, prior collaborations"
+Team & Founders,Who are your key team members and what do they own?,High,"Org chart, key hires"
+Team & Founders,What is the attrition rate over the last 24 months?,Medium,"HR analytics, retention metrics"
+Team & Founders,How do you attract and retain top talent?,Medium,"Comp philosophy, culture"
+Team & Founders,"What advisory board do you have, and how active are they?",Low,"Advisor list, contribution history"
+Market & Timing,"What is the TAM, SAM, and SOM for this market?",High,Market sizing analysis
+Market & Timing,Why is now the right time for this product?,High,"Market timing narrative, trends"
+Market & Timing,"What is your beachhead market, and how do you expand from there?",High,"GTM strategy, segmentation"
+Market & Timing,Who are your main competitors and how do you differentiate?,High,Competitive analysis
+Market & Timing,What market trends are you riding or creating?,Medium,"Industry reports, tailwinds"
+Market & Timing,How is the market expected to evolve over the next 5 years?,Medium,"Industry forecasts, analyst reports"
+Market & Timing,What barriers to entry protect this market?,Medium,"Competitive moats, IP"
+Product & Technology,What problem does your product solve and for whom?,High,"Product overview, customer pain"
+Product & Technology,What is your unique technical or product advantage?,High,"Tech architecture, IP"
+Product & Technology,How defensible is the product moat?,High,"IP, data, network effects"
+Product & Technology,What does the product roadmap look like over 12-24 months?,High,"Product roadmap, priorities"
+Product & Technology,What is your tech stack and why did you choose it?,Medium,Tech architecture
+Product & Technology,How do you handle scalability?,Medium,"Infrastructure, capacity planning"
+Product & Technology,What is your open source compliance posture?,Medium,"SBOM, license audit"
+Product & Technology,What AI/ML capabilities does the product use?,Medium,"AI architecture, data, models"
+Product & Technology,How is the product protected from competitors copying it?,Medium,"IP, trade secrets, contracts"
+Traction & Metrics,"What are your key growth metrics (MRR, ARR, users, etc.)?",High,KPI dashboards
+Traction & Metrics,What is your month-over-month or year-over-year growth?,High,Growth trend charts
+Traction & Metrics,What is your net revenue retention or customer retention?,High,Cohort retention analysis
+Traction & Metrics,What is your CAC and LTV?,High,Unit economics analysis
+Traction & Metrics,What is your CAC payback period?,High,Unit economics
+Traction & Metrics,What is your Rule of 40?,Medium,Growth + margin
+Traction & Metrics,What is your gross margin and how has it trended?,High,Financial statements
+Traction & Metrics,How is your sales pipeline looking for the next 2 quarters?,High,Sales pipeline reports
+Traction & Metrics,What is your logo churn and revenue churn?,High,Retention analytics
+Traction & Metrics,How many active customers do you have and what is the growth rate?,High,Customer count trends
+Traction & Metrics,What is the trend in average contract value (ACV)?,Medium,Deal size analytics
+Customers & Sales,Who are your top 10 customers and what is the revenue mix?,High,Customer revenue analysis
+Traction & Metrics,Can you share 3-5 customer references I can speak with?,High,Customer reference list
+Customers & Sales,What is your customer concentration risk?,High,Top customer revenue %
+Customers & Sales,"How do you acquire customers (channels, CAC)?",High,"Sales process, channel analysis"
+Customers & Sales,What is your sales cycle length?,Medium,Pipeline analytics
+Customers & Sales,What is your win rate against competitors?,Medium,Win/loss analysis
+Customers & Sales,How long is your average customer relationship (logo and revenue)?,Medium,Cohort retention
+Customers & Sales,What does your ideal customer profile (ICP) look like?,Medium,GTM strategy
+Customers & Sales,Do you have any customer case studies you can share?,Medium,Customer success stories
+Financials & Projections,What is your current revenue and how is it trending?,High,Financial statements
+Financials & Projections,What is your current burn rate and runway?,High,Cash flow analysis
+Financials & Projections,What are your key assumptions in the financial projections?,High,Financial model
+Financials & Projections,What is your path to profitability or cash flow breakeven?,High,"Projections, scenario analysis"
+Financials & Projections,What is the use of funds for this round?,High,Use of funds breakdown
+Financials & Projections,What milestones will this round fund you to?,High,Milestone plan
+Financials & Product,What is your gross margin today and where will it be in 3 years?,High,Financial projections
+Financials & Projections,What is your pricing strategy and how has it evolved?,Medium,Pricing history
+Financials & Projections,What are your largest expense categories and how will they grow?,Medium,OpEx breakdown
+Financials & Projections,Do you have any debt or material liabilities?,Medium,"Balance sheet, debt schedule"
+Competition & Moat,Who are the top 3 competitors and why will you win?,High,Competitive analysis
+Competition & Moat,What is your sustainable competitive advantage?,High,Moat analysis
+Competition & Moat,What is the market share today and what is the path to leadership?,Medium,Market position analysis
+Competition & Moat,How do you plan to compete against well-funded incumbents?,Medium,Competitive strategy
+Competition & Moat,What are the barriers to entry for new competitors?,Medium,"IP, network effects, scale"
+Security & Compliance,"What security certifications do you have (SOC 2, ISO 27001)?",High,Compliance documentation
+Security & Compliance,What is your security incident history?,High,Breach history
+Security & Compliance,What is your approach to data privacy and GDPR/CCPA?,High,Privacy compliance
+Security & Compliance,What is your incident response plan?,Medium,IR plan documentation
+Security & Compliance,Have you had a penetration test in the last 12 months?,Medium,Pen test reports
+Security & Compliance,How do you handle data residency for international customers?,Medium,Data residency strategy
+Legal & Governance,Are there any pending or threatened legal actions?,High,Litigation schedule
+Legal & Governance,What is the cap table and vesting schedule for founders?,High,"Cap table, founder vesting"
+Legal & Governance,What is the size of your option pool and how much is unallocated?,High,Equity plan details
+Legal & Governance,Are there any change-of-control provisions in material contracts?,Medium,Contract review
+Legal & Governance,What is the composition of the board of directors?,Medium,Board structure
+Legal & Governance,Are there any investor rights or veto provisions in prior rounds?,Medium,Prior investment docs
+Exit & Returns,What is the most likely exit path for investors?,Medium,"Strategic acquirers, IPO potential"
+Exit & Returns,"What comparable companies have been acquired, and at what multiples?",Medium,Comparable transaction analysis
+Exit & Returns,What is the timeline to a potential exit?,Low,Strategic plan
+Exit & Returns,Who are the likely strategic acquirers in your space?,Low,Strategic landscape
+Use of Funds,What specific milestones will this round fund?,High,Milestone plan
+Use of Funds,How much of the round goes to hiring vs. growth vs. runway extension?,High,Use of funds breakdown
+Use of Funds,What is the minimum amount you would raise?,Medium,Downside funding scenario
+Use of Funds,What happens if you only raise part of the target?,Medium,Contingency planning
+Use of Funds,How long will this round take you to your next major milestone?,High,Runway analysis

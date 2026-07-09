@@ -1,19 +1,25 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
-  description:
-    "Monitor user activity, track document engagement, analyze buyer participation, and export analytics reports with Space Nexus Activity & Analytics. Visualize deal momentum with engagement heatmaps.",
+  title: "Activity & Engagement Analytics | SpaceNexus",
+  description: "Real-time engagement analytics: per-user document views, time spent, download tracking, and Q&A SLAs.",
+  keywords: [
+    "VDR analytics",
+    "buyer engagement tracking",
+    "data room analytics",
+    "deal insights software",
+    "document view tracking VDR",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/activity-analytics",
   },
   openGraph: {
     title:
-      "Activity & Analytics — Buyer Engagement & Deal Insights | Space Nexus VDR",
+      "Activity & Engagement Analytics | SpaceNexus",
     description:
-      "Track views, downloads, unique viewers, and time spent. Analyze document popularity, monitor buyer engagement, and export analytics reports — all from one interface.",
+      "Real-time engagement analytics: per-user document views, time spent, download tracking,...",
     url: "https://spacenexus.net/features/activity-analytics",
     type: "website",
   },
@@ -184,9 +190,51 @@ const galleryScreenshots = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does engagement analytics help M&A deal teams?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus engagement analytics reveals which buyers are most serious by tracking per-user document views, time spent, download activity, and repeat visits. Document heatmaps show which sections attract the most interest, giving deal teams critical intelligence for negotiations and follow-up prioritization." },
+    },
+    {
+      "@type": "Question",
+      name: "What activity metrics can I track in SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus tracks total views, downloads, unique viewers, time spent per document, most-viewed documents, most active users, and engagement trends over time. Per-user activity logs capture every upload, download, and document view with timestamps, giving you complete visibility into deal activity." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I see which documents buyers view the most?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. The document popularity report ranks every document by views, downloads, and total time spent. This helps you identify which materials are driving buyer interest, which sections need more attention, and which counterparties are conducting the most thorough due diligence." },
+    },
+    {
+      "@type": "Question",
+      name: "How does user activity tracking help during due diligence?",
+      acceptedAnswer: { "@type": "Answer", text: "User activity tracking shows exactly who did what and when across your entire data room. During due diligence, this reveals which bidder groups are most engaged, flags unusual access patterns for security review, and provides the engagement intelligence needed to prioritize follow-ups with the most serious counterparties." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Activity & Analytics", item: "https://spacenexus.net/features/activity-analytics" },
+  ],
+};
+
 export default function ActivityAnalyticsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="activity-analytics-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -323,9 +371,9 @@ export default function ActivityAnalyticsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/aneletics-overview.jpeg"
-                  alt="Space Nexus VDR Activity & Analytics — engagement overview dashboard"
+                  alt="SpaceNexus VDR Activity & Analytics — engagement overview dashboard"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

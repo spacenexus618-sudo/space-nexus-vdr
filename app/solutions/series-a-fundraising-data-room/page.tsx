@@ -1,16 +1,16 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Series A Fundraising Data Room — Startup Due Diligence VDR | Space Nexus",
-    description:
-        "The data room startups use to close Series A rounds. Organize your investor materials, control VC access, track engagement, and answer due diligence questions — all in one secure platform.",
+    title: "Series A Fundraising Data Room | SpaceNexus",
+    description: "Purpose-built VDR for Series A raises. Organize investor materials, control VC access, track engagement, and manage due diligence Q&A.",
     alternates: {
         canonical: "https://spacenexus.net/solutions/series-a-fundraising-data-room",
     },
     openGraph: {
-        title: "Series A Fundraising Data Room — Space Nexus",
-        description: "Launch a professional investor data room in under an hour. Space Nexus helps startups close Series A rounds faster with organized due diligence materials and real-time VC engagement tracking.",
+        title: "Series A Fundraising Data Room | SpaceNexus",
+        description: "Purpose-built VDR for Series A raises. Organize investor materials, control VC access, ...",
         url: "https://spacenexus.net/solutions/series-a-fundraising-data-room",
     },
     keywords: [
@@ -56,9 +56,100 @@ const steps = [
     },
 ];
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Series A Fundraising Data Room",
+    description: "A purpose-built virtual data room for Series A fundraising. Organize investor materials, control VC access with NDA workflows, track engagement, and manage due diligence Q&A in one secure platform.",
+    url: "https://spacenexus.net/solutions/series-a-fundraising-data-room",
+    serviceType: "Virtual Data Room",
+    provider: {
+        "@type": "Organization",
+        name: "SpaceNexus",
+        url: "https://spacenexus.net",
+    },
+    areaServed: { "@type": "Place", name: "Worldwide" },
+    audience: {
+        "@type": "BusinessAudience",
+        audienceType: "Startups raising Series A",
+    },
+    offers: {
+        "@type": "Offer",
+        url: "https://spacenexus.net/pricing",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "USD",
+        description: "Contact for pricing tailored to round size and investor count.",
+    },
+};
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+        {
+            "@type": "Question",
+            name: "What is a Series A fundraising data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A Series A fundraising data room is a secure virtual repository where startups organize and share due diligence materials with prospective venture capital investors. It includes pitch decks, financial models, cap tables, legal documents, product roadmaps, and team bios — all accessible under controlled, NDA-protected permissions so founders can manage VC access and track investor engagement.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "What documents should startups include in a Series A data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A Series A data room typically includes the pitch deck, executive summary, 3-year historical P&L, monthly MRR/ARR breakdown, 12-month cash flow forecast, unit economics model, cap table, certificate of incorporation, shareholder agreements, IP assignments, key contracts, product roadmap, architecture overview, security certifications, org chart, founder bios, TAM/SAM/SOM analysis, competitive landscape, and customer references.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How does a data room help with Series A fundraising?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "A data room accelerates Series A fundraising by centralizing all due diligence materials in one secure location, letting founders control which VCs see what, tracking which investors are most engaged through real-time analytics, and managing Q&A directly on the platform instead of scattered email chains. This reduces fundraising timelines and keeps the process organized for both founders and investors.",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "How do VCs access a startup's data room?",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "Founders invite VCs via email directly from the SpaceNexus platform. Each VC firm receives unique login credentials with permissions scoped to their access tier. Founders can require NDA signature before entry, set view-only or download permissions per folder, and revoke access instantly if a VC passes or the round closes. No software installation is required — VCs access the room from any browser.",
+            },
+        },
+    ],
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Solutions", item: "https://spacenexus.net/solutions" },
+        { "@type": "ListItem", position: 3, name: "Series A Fundraising Data Room", item: "https://spacenexus.net/solutions/series-a-fundraising-data-room" },
+    ],
+};
+
 export default function SeriesADataRoomPage() {
     return (
-        <main className="pt-20 lg:pt-24">
+        <>
+            <Script
+                id="series-a-service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
+            <Script
+                id="series-a-breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
+                id="series-a-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <main className="pt-20 lg:pt-24">
             {/* Hero */}
             <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,7 +248,7 @@ export default function SeriesADataRoomPage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="Space Nexus investor engagement analytics for Series A" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus investor engagement analytics for Series A" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
                         <div>
@@ -187,6 +278,30 @@ export default function SeriesADataRoomPage() {
                 </div>
             </section>
 
+            {/* Related Links */}
+            <section className="py-10 bg-white border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        <Link href="/best-data-room-for-startups" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Best Data Room for Startups (2026 Ranking) →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/solutions/startup-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Startup Data Room →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/solutions/investor-data-room" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Investor Data Room Guide →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/checklists/due-diligence-checklist" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            Due Diligence Checklist (200+ items) →
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="py-16 bg-[#f8f9fa]">
                 <div className="max-w-3xl mx-auto px-4 text-center">
@@ -199,6 +314,59 @@ export default function SeriesADataRoomPage() {
                     <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular access control</p>
                 </div>
             </section>
-        </main>
+                    {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Continue exploring VDR resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/investor-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">General-purpose investor VDR.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Investor data room →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/startup-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Founder-friendly platform.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Startup data room →</h3>
+                        </Link>
+                        <Link
+                            href="/checklists/investor-data-room"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Pre-Seed, Seed, and Series B+ indexes.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free investor data room templates →</h3>
+                        </Link>
+                        <Link
+                            href="/checklists"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">M&A and Series A checklists.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free due diligence checklists →</h3>
+                        </Link>
+                        <Link
+                            href="/blog/how-to-set-up-virtual-data-room-series-a"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Step-by-step guide.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">How to set up a Series A data room →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/technology"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Source code, IP, and AI diligence workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For technology companies →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
+        </>
     );
 }

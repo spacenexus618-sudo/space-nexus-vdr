@@ -3,14 +3,13 @@ import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Security & Compliance — Space Nexus VDR",
-    description:
-        "Bank-grade security for your most sensitive deals. Space Nexus uses 256-bit AES encryption, SOC 2 compliance, full audit trails, and role-based access controls for M&A due diligence.",
+    title: "VDR Security & Compliance | SpaceNexus",
+    description: "SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4. How SpaceNexus protects your deal documents end-to-end.",
     alternates: { canonical: "https://spacenexus.net/security" },
     openGraph: {
-        title: "Security & Compliance — Space Nexus VDR",
+        title: "VDR Security & Compliance | SpaceNexus",
         description:
-            "256-bit AES encryption, SOC 2 Type II, GDPR ready. Enterprise-grade security for M&A data rooms.",
+            "SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4. How SpaceNexus protects your deal doc...",
         url: "https://spacenexus.net/security",
     },
 };
@@ -92,6 +91,15 @@ const securityFaqs = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Security", item: "https://spacenexus.net/security" },
+  ],
+};
+
 const securityFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -106,10 +114,20 @@ export default function SecurityPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
+                id="sec-breadcrumb"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <Script
                 id="security-faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(securityFaqSchema) }}
             />
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <span className="text-gray-600">Security</span>
+            </nav>
             {/* Hero */}
             <section className="pt-28 pb-20 bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
@@ -198,7 +216,7 @@ export default function SecurityPage() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Security Resources</h2>
                     <div className="grid md:grid-cols-2 gap-6">
-                        <Link href="/blog/vdr-security-compliance-guide" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
+                        <Link href="/blog/vdr-security-what-to-look-for" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
                             <p className="text-xs font-semibold text-rose-600 mb-2">PILLAR GUIDE</p>
                             <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">VDR Security & Compliance: The Definitive Guide</h3>
                             <p className="text-sm text-gray-600">SOC 2, ISO 27001, GDPR, HIPAA, SEC & FINRA — everything you need to evaluate VDR compliance.</p>
@@ -206,9 +224,9 @@ export default function SecurityPage() {
                         <Link href="/blog/vdr-security-what-to-look-for" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
                             <p className="text-xs font-semibold text-rose-600 mb-2">CHECKLIST</p>
                             <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">VDR Security: 10 Critical Features to Check</h3>
-                            <p className="text-sm text-gray-600">The essential 2025 checklist before signing up for any virtual data room provider.</p>
+                            <p className="text-sm text-gray-600">The essential 2026 checklist before signing up for any virtual data room provider.</p>
                         </Link>
-                        <Link href="/blog/hipaa-compliant-file-sharing-healthcare-ma" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
+                        <Link href="/blog/vdr-security-what-to-look-for" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
                             <p className="text-xs font-semibold text-rose-600 mb-2">HEALTHCARE</p>
                             <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">HIPAA Compliant File Sharing in Healthcare M&A</h3>
                             <p className="text-sm text-gray-600">How to handle PHI during healthcare transactions and meet HIPAA requirements.</p>
@@ -216,7 +234,7 @@ export default function SecurityPage() {
                         <Link href="/blog/secure-platforms-for-legal-due-diligence" className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors">
                             <p className="text-xs font-semibold text-rose-600 mb-2">LEGAL</p>
                             <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">Secure Platforms for Legal Due Diligence</h3>
-                            <p className="text-sm text-gray-600">What attorneys need from a secure due diligence platform in 2025.</p>
+                            <p className="text-sm text-gray-600">What attorneys need from a secure due diligence platform in 2026.</p>
                         </Link>
                     </div>
                 </div>
@@ -243,6 +261,26 @@ export default function SecurityPage() {
                             className="px-8 py-4 bg-white text-gray-700 font-semibold rounded-full hover:bg-gray-50 transition-colors border border-gray-300"
                         >
                             See All Security Features
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Related FAQ */}
+            <section className="py-14 bg-white border-t border-gray-100">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Related VDR Resources</p>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Have questions about VDR security and compliance?</h2>
+                    <div className="grid md:grid-cols-2 gap-4">
+                        <Link href="/faq/vdr-security" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security FAQ →</h3>
+                            <p className="text-xs text-gray-500 mt-2">40+ questions on encryption, access controls, watermarking, MFA, SSO, and more.</p>
+                        </Link>
+                        <Link href="/faq/vdr-compliance" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR compliance FAQ →</h3>
+                            <p className="text-xs text-gray-500 mt-2">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4, FINRA — all compliance questions answered.</p>
                         </Link>
                     </div>
                 </div>

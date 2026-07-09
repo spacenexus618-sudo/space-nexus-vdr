@@ -2,16 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Datasite Alternative for M&A Due Diligence — Space Nexus VDR",
-    description:
-        "Looking for a Datasite alternative? Space Nexus delivers AI-powered M&A due diligence, transparent pricing, and SOC 2 compliance — without Datasite's enterprise lock-in. Compare features side by side.",
+    title: "Datasite Alternative | SpaceNexus",
+    description: "SpaceNexus vs Datasite: feature-by-feature comparison. Modern UX, transparent pricing, AI built in.",
     alternates: {
         canonical: "https://spacenexus.net/competitors/datasite-alternative",
     },
     openGraph: {
-        title: "Datasite Alternative — Space Nexus Virtual Data Room",
+        title: "Datasite Alternative | SpaceNexus",
         description:
-            "Compare Space Nexus vs Datasite for M&A due diligence. AI Copilot, transparent pricing, and modern UI vs Datasite's legacy platform and opaque enterprise pricing.",
+            "SpaceNexus vs Datasite: feature-by-feature comparison. Modern UX, transparent pricing, ...",
         url: "https://spacenexus.net/competitors/datasite-alternative",
     },
     keywords: [
@@ -32,7 +31,7 @@ const comparisonRows = [
     },
     {
         feature: "Transparent Pricing",
-        spacenexus: { value: "From $149/mo, public pricing", positive: true },
+        spacenexus: { value: "Transparent, public pricing", positive: true },
         datasite: { value: "Opaque — quote only", positive: false },
     },
     {
@@ -72,7 +71,7 @@ const reasons = [
         icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
         title: "Transparent, Predictable Pricing",
         description:
-            "Space Nexus starts at $149/month with no hidden fees, no per-page charges, and no surprise overages. Datasite's pricing is available only on request — and typically runs 3–5× higher for equivalent functionality.",
+            "Space Nexus offers transparent, published monthly pricing with no hidden fees, no per-page charges, and no surprise overages. Datasite's pricing is available only on request — and typically runs 3–5× higher for equivalent functionality.",
     },
     {
         icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
@@ -144,7 +143,7 @@ export default function DatasiteAlternativePage() {
                             for M&amp;A Due Diligence
                         </h1>
                         <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                            Space Nexus delivers everything your deal team needs — AI redaction, structured Q&A, real-time buyer analytics, and SOC 2 compliance — starting at <strong>$149/month</strong>. No opaque enterprise quotes. No annual lock-in.
+                            Space Nexus delivers everything your deal team needs — AI redaction, structured Q&A, real-time buyer analytics, and SOC 2 compliance — with transparent published pricing. No opaque enterprise quotes. No annual lock-in.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
@@ -292,7 +291,7 @@ export default function DatasiteAlternativePage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
-                                <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="Space Nexus VDR dashboard — Datasite alternative" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus VDR dashboard — Datasite alternative" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -305,9 +304,29 @@ export default function DatasiteAlternativePage() {
                     <p className="text-sm text-gray-600 mb-3">Comparing other VDR providers?</p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link href="/competitors/vdr-alternatives" className="text-sm font-semibold text-[#2563eb] hover:underline">
-                            Best VDR Providers 2025 — Full Comparison →
+                            Best VDR Providers 2026 — Full Comparison →
                         </Link>
                         <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/intralinks-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Intralinks →
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Related Links */}
+            <section className="py-10 bg-[#f8f9fa] border-t border-gray-100">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <p className="text-sm font-semibold text-gray-700 mb-4">Continue exploring</p>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        <Link href="/m-a-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            M&amp;A Data Room Providers (2026 Ranking) →
+                        </Link>
+                        <span className="text-gray-300">|</span>
+                        <Link href="/data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            All Data Room Providers →
+                        </Link>
+                        <span className="text-gray-300">|</span>
                         <Link href="/competitors/intralinks-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
                             SpaceNexus vs Intralinks →
                         </Link>

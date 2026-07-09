@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "Solutions - Use Cases for Every Nonprofit Type",
   description:
     "Discover how Kindora NGO OS serves community service organizations, fundraising-focused nonprofits, grant-dependent organizations, and multi-program nonprofits.",
+  keywords: [
+    "nonprofit solutions",
+    "NGO use cases",
+    "community organization software",
+    "social services software",
+    "nonprofit sector solutions",
+  ],
   alternates: {
     canonical: "/kindora/solutions",
+  },
+  openGraph: {
+    title: "Solutions - Use Cases for Every Nonprofit Type",
+    description:
+      "Discover how Kindora NGO OS serves community service organizations, fundraising-focused nonprofits, grant-dependent organizations, and multi-program nonprofits.",
+    url: "https://spacenexus.net/kindora/solutions",
+    type: "website",
   },
 };
 

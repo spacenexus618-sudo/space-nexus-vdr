@@ -1,17 +1,24 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Integrations — Connect Cloud Storage, CRM & E-Signature Tools | Space Nexus VDR",
-  description:
-    "Connect Space Nexus with Google Drive, Salesforce, Box, Adobe Sign, and more. Sync documents with cloud storage, integrate CRM systems, enable e-signature workflows, and configure SSO for secure authentication.",
+  title: "VDR Integrations | SpaceNexus",
+  description: "Native integrations with Slack, Microsoft 365, Salesforce, and SSO providers including Okta and Azure AD.",
+  keywords: [
+    "VDR integrations",
+    "Slack integration VDR",
+    "Microsoft 365 data room",
+    "SSO data room",
+    "Salesforce VDR integration",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/integrations",
   },
   openGraph: {
-    title: "Integrations — Connect Cloud Storage, CRM & E-Signature Tools | Space Nexus VDR",
+    title: "VDR Integrations | SpaceNexus",
     description:
-      "Integrate Space Nexus with your existing tools — Google Drive, Salesforce, Box, Adobe Sign, and Identity & SSO providers — from one centralized interface.",
+      "Native integrations with Slack, Microsoft 365, Salesforce, and SSO providers including ...",
     url: "https://spacenexus.net/features/integrations",
     type: "website",
   },
@@ -86,9 +93,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What integrations does SpaceNexus support?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus integrates with cloud storage platforms (Google Drive, Box), CRM systems (Salesforce), e-signature tools (Adobe Sign), and identity providers for SSO (Okta, Azure AD). A centralized integrations interface lets you view, connect, and manage all integrations from one place." },
+    },
+    {
+      "@type": "Question",
+      name: "How does SSO integration work with SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus supports enterprise SSO through identity providers including Okta and Azure AD. Users can log in with their existing enterprise credentials, reducing friction while maintaining strong access controls. SSO is configured from the integrations management interface without requiring IT support." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I sync documents with cloud storage platforms?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. SpaceNexus syncs directly with Google Drive and Box, keeping your data room content aligned with existing storage workflows. You can push documents from cloud storage into your VDR and maintain synchronization without manual file transfers." },
+    },
+    {
+      "@type": "Question",
+      name: "How does CRM integration help deal teams?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus integrates with Salesforce to keep your deal pipeline in sync between your VDR and CRM. Counterparty data, deal stages, and transaction details flow between systems without duplicate data entry, ensuring your team always works from the latest information." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Integrations", item: "https://spacenexus.net/features/integrations" },
+  ],
+};
+
 export default function IntegrationsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="integrations-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -175,9 +224,9 @@ export default function IntegrationsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/integration.jpeg"
-                  alt="Space Nexus VDR Integrations — connected tools and services overview"
+                  alt="SpaceNexus VDR Integrations — connected tools and services overview"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -235,7 +284,7 @@ export default function IntegrationsPage() {
             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10">
               <img
                 src="/spacenexus/screenshots/avilabe%20integratoins.jpeg"
-                alt="Space Nexus VDR available integrations — full library of connectable tools"
+                alt="SpaceNexus VDR available integrations — full library of connectable tools"
                 className="w-full h-auto"
                 loading="lazy"
               />

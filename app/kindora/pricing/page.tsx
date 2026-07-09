@@ -635,7 +635,7 @@ export default function PricingPage() {
             </table>
           </div>
           <p className="text-xs text-gray-400 text-center mt-4">
-            Based on publicly available feature information. Last reviewed February 2025.
+            Based on publicly available feature information. Last reviewed February 2026.
           </p>
         </div>
       </section>

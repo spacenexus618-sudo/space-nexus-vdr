@@ -3,7 +3,7 @@ import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import AppFooter from "./components/AppFooter";
 import SystemStatus from "./components/SystemStatus";
 import JsonLd from "./components/JsonLd";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -25,33 +25,41 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://spacenexus.net"),
   title: {
     default:
-      "SpaceNexus (Space Nexus) — Secure Virtual Data Room for M&A & Legal Teams",
+      "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
     template: "%s | SpaceNexus",
   },
   description:
-    "SpaceNexus (Space Nexus) is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams. Bank-grade security with AI-powered document processing.",
+    "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
   keywords: [
+    "virtual data room software",
+    "VDR software",
+    "virtual data room platform",
+    "M&A software",
+    "deal room software",
+    "secure document sharing software",
     "SpaceNexus",
     "Space Nexus",
-    "Virtual Data Room",
+    "virtual data rooms",
+    "virtual data room",
     "VDR",
+    "virtual data rooms for M&A",
+    "best virtual data rooms",
+    "online virtual data rooms",
+    "virtual data room providers",
+    "data room providers",
     "M&A Due Diligence Software",
     "AI Due Diligence Software",
-    "Best Virtual Data Room",
     "VDR Comparison",
     "Secure Virtual Data Room",
     "Data Room Software",
-    "Data Room Pricing",
     "Due Diligence Platform",
-    "M&A Software",
-    "Capital Raising",
-    "Deal Room",
+    "Capital Raising Software",
     "IPO Data Room",
     "Investment Banking Data Room",
     "Private Equity Data Room",
     "Virtual Data Room for Law Firms",
     "SOC 2 Virtual Data Room",
-    "Zero Trust Data Room",
+    "document management software for M&A",
   ],
   authors: [{ name: "SpaceNexus" }],
   creator: "SpaceNexus",
@@ -72,24 +80,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://spacenexus.net",
     siteName: "SpaceNexus",
-    title: "SpaceNexus — Secure Virtual Data Room for M&A & Legal Teams",
-    description:
-      "Enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing. Trusted by 500+ enterprises worldwide.",
-    images: [
+    title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
+      description:
+        "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
+      images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SpaceNexus - Secure Virtual Data Room",
+        alt: "SpaceNexus - Virtual Data Room Software",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SpaceNexus — Secure Virtual Data Room for M&A & Legal Teams",
-    description:
-      "Enterprise-grade VDR for M&A due diligence and secure document sharing for legal teams.",
-    images: ["/og-image.png"],
+    title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
+      description:
+        "SpaceNexus is the AI-powered virtual data room for M&A due diligence, fundraising & legal deals. SOC 2 Type II certified, transparent flat-rate pricing & 24-hour setup. Start free.",
+      images: ["/og-image.png"],
     creator: "@spacenexus",
   },
   alternates: {
@@ -139,6 +147,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         <JsonLd />
+
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="google43f4a543c8cb4c24" />
       </head>
       <body
         className={`${inter.variable} antialiased bg-[#f8f9fa] text-gray-900`}
@@ -147,7 +158,7 @@ export default function RootLayout({
         <main id="main-content" role="main">
           {children}
         </main>
-        <Footer />
+        <AppFooter />
         <WhatsAppButton />
         <SystemStatus />
 

@@ -2,25 +2,26 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Intralinks Alternative for Capital Raising — Space Nexus VDR",
-    description:
-        "Switching from Intralinks? Space Nexus offers a modern UI, structured Q&A management, and transparent pricing for capital raising, M&A, and due diligence. Compare feature-by-feature.",
+    title: "Intralinks Alternative | SpaceNexus",
+    description: "SpaceNexus vs Intralinks: the modern Intralinks virtual data room alternative with transparent pricing, AI features, and no per-page fees.",
     alternates: {
         canonical: "https://spacenexus.net/competitors/intralinks-alternative",
     },
     openGraph: {
-        title: "Intralinks Alternative — Space Nexus Virtual Data Room",
+        title: "Intralinks Alternative | SpaceNexus",
         description:
-            "Space Nexus vs Intralinks for capital raising and M&A. Modern UX, built-in AI, structured Q&A workflows, and no legacy pricing surprises.",
+            "SpaceNexus vs Intralinks: the modern Intralinks virtual data room alternative with transparent pricing, AI features, and no per-page fees.",
         url: "https://spacenexus.net/competitors/intralinks-alternative",
     },
     keywords: [
         "Intralinks alternative",
+        "Intralinks virtual data room",
         "Intralinks competitor",
         "alternative to Intralinks",
         "Intralinks vs Space Nexus",
         "capital raising data room",
         "virtual data room alternative",
+        "Intralinks data room",
     ],
 };
 
@@ -42,7 +43,7 @@ const comparisonRows = [
     },
     {
         feature: "Pricing Transparency",
-        spacenexus: { value: "From $149/mo — listed publicly", positive: true },
+        spacenexus: { value: "Transparent — listed publicly", positive: true },
         intralinks: { value: "Enterprise quote only", positive: false },
     },
     {
@@ -254,7 +255,7 @@ export default function IntralinksAlternativePage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
-                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="Space Nexus buyer analytics — Intralinks alternative" className="w-full h-auto" loading="lazy" />
+                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus buyer analytics — Intralinks alternative" className="w-full h-auto" loading="lazy" />
                             </div>
                         </div>
                         <div>
@@ -298,7 +299,7 @@ export default function IntralinksAlternativePage() {
                     <p className="text-sm text-gray-600 mb-3">Comparing other VDR providers?</p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link href="/competitors/vdr-alternatives" className="text-sm font-semibold text-[#2563eb] hover:underline">
-                            Best VDR Providers 2025 — Full Comparison →
+                            Best VDR Providers 2026 — Full Comparison →
                         </Link>
                         <span className="hidden sm:inline text-gray-300">|</span>
                         <Link href="/competitors/datasite-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">

@@ -1,17 +1,24 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Deals — Transaction Management & Deal Pipeline | Space Nexus VDR",
-  description:
-    "Track and manage all M&A transactions in Space Nexus. View deal stages, monitor key metrics, access documents and deal details, and create or manage deals from one centralized interface.",
+  title: "Deal Pipeline Management | SpaceNexus",
+  description: "Manage multiple deals in one workspace. Pipeline view, deal-level access, and consolidated reporting.",
+  keywords: [
+    "deal management VDR",
+    "M&A pipeline software",
+    "transaction management",
+    "deal tracking VDR",
+    "multi-deal data room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/features/deals",
   },
   openGraph: {
-    title: "Deals — Transaction Management & Deal Pipeline | Space Nexus VDR",
+    title: "Deal Pipeline Management | SpaceNexus",
     description:
-      "Structured overview of all ongoing deals with stage tracking (Discovery → Due Diligence → Negotiation → Closed), deal metrics, and one-click access to documents and deal details.",
+      "Manage multiple deals in one workspace. Pipeline view, deal-level access, and consolida...",
     url: "https://spacenexus.net/features/deals",
     type: "website",
   },
@@ -146,9 +153,51 @@ const features = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does deal pipeline management work in SpaceNexus?",
+      acceptedAnswer: { "@type": "Answer", text: "SpaceNexus organizes every deal by progress stage — Discovery, Due Diligence, Negotiation, and Closed. Each deal acts as a secure workspace containing its own documents, users, Q&A, and analytics. The pipeline view lets you monitor all active transactions at a glance and identify bottlenecks before they delay your close." },
+    },
+    {
+      "@type": "Question",
+      name: "What deal metrics can I monitor?",
+      acceptedAnswer: { "@type": "Answer", text: "The deal metrics dashboard shows key performance indicators including total deals, active deals, closed deals, total deal value, document counts, and user activity. This gives deal leaders a real-time snapshot of pipeline health without digging through individual records." },
+    },
+    {
+      "@type": "Question",
+      name: "Can I manage multiple deals in one workspace?",
+      acceptedAnswer: { "@type": "Answer", text: "Yes. SpaceNexus supports unlimited concurrent deals in a single workspace. Each deal has its own isolated data room with independent permissions, document libraries, Q&A threads, and analytics. You can switch between deals instantly and get consolidated reporting across your entire portfolio." },
+    },
+    {
+      "@type": "Question",
+      name: "How do I create a new deal in the VDR?",
+      acceptedAnswer: { "@type": "Answer", text: "Creating a new deal takes seconds in SpaceNexus. From the Deals interface, click 'Create Deal,' enter the deal name, organization details, counterparty information, and transaction value. You can optionally start from a deal template that pre-configures folder structures, permission groups, and NDA gates for your transaction type." },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Features", item: "https://spacenexus.net/features" },
+    { "@type": "ListItem", position: 3, name: "Deals", item: "https://spacenexus.net/features/deals" },
+  ],
+};
+
 export default function DealsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="deals-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -283,9 +332,9 @@ export default function DealsPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-deals.png"
-                  alt="Space Nexus VDR Deals — transaction management workspace"
+                  alt="SpaceNexus VDR Deals — transaction management workspace"
                   className="w-full h-auto"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             </div>

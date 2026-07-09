@@ -1,16 +1,24 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Virtual Data Room for Private Equity — Deal Sourcing, Due Diligence & Exits | Space Nexus",
-  description:
-    "Space Nexus is the virtual data room built for private equity. Run buy-side due diligence, manage LP communications, track portfolio companies, and prepare sell-side exit rooms — all in a SOC 2-certified platform.",
+  title: "VDR for Private Equity | SpaceNexus",
+  description: "Virtual data room for PE buy-side due diligence, sell-side portfolio exits, and LP reporting. IR-grade security and analytics.",
+  keywords: [
+    "private equity data room",
+    "PE VDR",
+    "buy-side diligence VDR",
+    "portfolio management VDR",
+    "LP reporting data room",
+    "PE deal room",
+  ],
   alternates: {
     canonical: "https://spacenexus.net/industries/private-equity",
   },
   openGraph: {
-    title: "Virtual Data Room for Private Equity | Space Nexus",
-    description: "The VDR built for PE workflows: deal sourcing, due diligence, LP reporting, and exit preparation. Purpose-built for the investment lifecycle.",
+    title: "VDR for Private Equity | SpaceNexus",
+    description: "Virtual data room for PE buy-side due diligence, sell-side portfolio exits, and LP repo...",
     url: "https://spacenexus.net/industries/private-equity",
     type: "website",
   },
@@ -151,8 +159,55 @@ const capabilities = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Private Equity Virtual Data Room",
+  description: "Virtual data room for private equity buy-side due diligence, sell-side portfolio exits, and LP reporting. Granular permissions, engagement analytics, and IR-grade security.",
+  url: "https://spacenexus.net/industries/private-equity",
+  serviceType: "Virtual Data Room",
+  provider: {
+    "@type": "Organization",
+    name: "SpaceNexus",
+    url: "https://spacenexus.net",
+  },
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Private Equity professionals and deal teams",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://spacenexus.net/pricing",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+    description: "Contact for pricing tailored to private equity transaction volume and team size.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://spacenexus.net/industries" },
+    { "@type": "ListItem", position: 3, name: "Private Equity", item: "https://spacenexus.net/industries/private-equity" },
+  ],
+};
+
 export default function PrivateEquityPage() {
   return (
+    <>
+      <Script
+        id="private-equity-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="private-equity-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <main className="pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -413,7 +468,7 @@ export default function PrivateEquityPage() {
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                 <img
                   src="/spacenexus/screenshots/vdr-analytics.png"
-                  alt="Space Nexus Activity & Analytics — buyer engagement insights for private equity"
+                  alt="SpaceNexus Activity & Analytics — buyer engagement insights for private equity"
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -436,8 +491,8 @@ export default function PrivateEquityPage() {
                 label: "Private Equity",
               },
               {
-                title: "M&A Due Diligence Checklist 2025 — The Complete Deal Room Guide",
-                href: "/blog/ma-due-diligence-checklist-2025",
+                title: "M&A Due Diligence Checklist 2026 — The Complete Deal Room Guide",
+                href: "/blog/ma-due-diligence-checklist-2026",
                 label: "M&A",
               },
             ].map((post) => (
@@ -487,6 +542,53 @@ export default function PrivateEquityPage() {
           </Link>
         </div>
       </section>
-    </main>
+                {/* Related VDR Resources */}
+            <section className="py-14 lg:py-20 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Related VDR Resources</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Private Equity — related resources</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <Link
+                            href="/solutions/mergers-and-acquisitions-vdr"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Buy-side and sell-side workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
+                        </Link>
+                        <Link
+                            href="/solutions/ma-document-sharing"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Multi-party deal document exchange.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A document sharing →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/investment-banking"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Co-advisory deal workflows.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For investment banking →</h3>
+                        </Link>
+                        <Link
+                            href="/industries/law-firms"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Legal counsel coordination.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For law firms →</h3>
+                        </Link>
+                        <Link
+                            href="/best-data-room-for-startups"
+                            className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200"
+                        >
+                            <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">7 providers compared.</p>
+                            <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+</main>
+  </>
   );
 }
+

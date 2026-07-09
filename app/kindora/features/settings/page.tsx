@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   title: "Settings & Configuration - Customize Your Kindora Experience",
   description:
     "Configure organization settings, manage system preferences, customize categories, and tailor Kindora to match your nonprofit's unique needs.",
+  keywords: [
+    "nonprofit software configuration",
+    "NGO platform settings",
+    "nonprofit customization tools",
+    "organization settings platform",
+    "nonprofit system preferences",
+  ],
   alternates: {
     canonical: "/kindora/features/settings",
+  },
+  openGraph: {
+    title: "Settings & Configuration - Customize Your Kindora Experience",
+    description:
+      "Configure organization settings, manage system preferences, customize categories, and tailor Kindora to match your nonprofit's unique needs.",
+    url: "https://spacenexus.net/kindora/features/settings",
+    type: "website",
   },
 };
 

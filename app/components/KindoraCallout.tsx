@@ -97,7 +97,7 @@ export default function KindoraCallout() {
                         </p>
 
                         {/* Feature pill list */}
-                        <ul className="grid grid-cols-2 gap-3 mb-8">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                             {kindoraFeatures.map((f) => (
                                 <li key={f.label} className="flex items-center gap-2.5 text-sm font-medium text-gray-700">
                                     <span className="shrink-0 w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-[#2563eb]">
@@ -133,7 +133,7 @@ export default function KindoraCallout() {
                     <div className="relative pt-6 pr-6">
                         {/* Floating "Free to start" badge — sits above/outside the card */}
                         <div
-                            className="absolute top-0 right-0 z-10 bg-white border border-gray-200 rounded-xl px-4 py-2.5 flex items-center gap-2"
+                            className="absolute -top-3 -right-3 sm:top-0 sm:right-0 z-10 bg-white border border-gray-200 rounded-xl px-4 py-2.5 flex items-center gap-2"
                             style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.12)" }}
                         >
                             <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse inline-block" />

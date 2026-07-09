@@ -220,7 +220,7 @@ export default function IDPSection() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <p className="text-xl lg:text-2xl font-bold text-[#2563eb]">

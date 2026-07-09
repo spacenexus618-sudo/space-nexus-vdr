@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Campaign Management Software for NGOs — Kindora",
   description:
     "Create and manage fundraising, event, awareness, and advocacy campaigns with real-time goal tracking, donation attribution, and performance analytics.",
+  keywords: [
+    "fundraising campaign management",
+    "nonprofit campaign software",
+    "campaign tracking tools",
+    "donation attribution software",
+    "NGO campaign platform",
+  ],
   alternates: {
     canonical: "/kindora/features/campaign-management",
   },

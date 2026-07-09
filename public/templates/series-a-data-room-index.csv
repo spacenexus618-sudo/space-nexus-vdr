@@ -1,0 +1,87 @@
+Section,Subfolder,Document,Required,Notes
+01. Executive Summary,01.1 Pitch,"Pitch deck (latest version, PDF)",Y,Primary marketing document for the raise
+01. Executive Summary,01.1 Pitch,One-pager / company snapshot,Y,Single-page summary for busy investors
+01. Executive Summary,01.1 Pitch,Product demo video,N,Link or hosted video file
+01. Executive Summary,01.1 Pitch,Founder LinkedIn profiles and bios,Y,Background credibility
+02. Company Overview,02.1 Corporate,Certificate of incorporation,Y,Foundation document
+02. Company Overview,02.1 Corporate,Bylaws (current),Y,Governance rules
+02. Company Overview,02.1 Corporate,All amendments to charter,Y,Historical governance changes
+02. Company Overview,02.1 Corporate,Foreign qualifications (if any),N,For multi-state operations
+02. Company Overview,02.2 Cap Table,Cap table — fully diluted,Y,Most-viewed document by investors
+02. Company Overview,02.2 Cap Table,Stock ledger,Y,Detailed issuance history
+02. Company Overview,02.2 Cap Table,Form D filings,Y,Private placement exemption filings
+02. Company Overview,02.2 Cap Table,Section 1202 (QSBS) documentation,N,For tax-advantaged investment
+02. Company Overview,02.3 Funding History,Summary of all prior funding rounds,Y,Capitalization history
+02. Company Overview,02.3 Funding History,Convertible note / SAFE agreements,Y,All pre-seed and seed instruments
+02. Company Overview,02.3 Funding History,Stock purchase agreements (preferred),Y,Prior priced round documents
+02. Company Overview,02.3 Funding History,Investor rights agreements,Y,"Voting, registration, information rights"
+02. Company Overview,02.3 Funding History,Voting agreements,N,"Director nomination, drag/tag"
+02. Company Overview,02.3 Funding History,Right of first refusal / co-sale agreements,N,For preferred holders
+02. Company Overview,02.4 Equity Plan,Equity incentive plan document,Y,Stock option / RSU plan
+02. Company Overview,02.4 Equity Plan,409A valuation report (most recent),N,For option strike prices
+02. Company Overview,02.4 Equity Plan,Form 3921 / 3922 filings,N,IRS informational filings
+02. Company Overview,02.4 Equity Plan,Option pool size and reserve status,Y,Available shares for new grants
+03. Financial,03.1 Historicals,Profit & Loss statement (current YTD),Y,Current year monthly P&L
+03. Financial,03.1 Historicals,Profit & Loss statement (prior 2 years),Y,Historical P&L by month
+03. Financial,03.1 Historicals,Balance sheet (most recent),Y,Current BS with cash position
+03. Financial,03.1 Historicals,Cash flow statement (most recent),Y,Monthly cash flow detail
+03. Financial,03.1 Historicals,Bank statements (3-6 months),N,For cash verification
+03. Financial,03.2 Revenue,MRR / ARR detail (last 24 months),Y,Monthly recurring revenue
+03. Financial,03.2 Revenue,Customer cohort retention analysis,Y,Logo and revenue retention by cohort
+03. Financial,03.2 Revenue,Customer count and growth,Y,"Total customers, new, churned"
+03. Financial,03.2 Revenue,Average contract value (ACV),Y,For revenue per customer analysis
+03. Financial,03.2 Revenue,Net revenue retention (NRR),Y,Including expansion and churn
+03. Financial,03.2 Revenue,Top 20 customers (anonymized if needed),N,For revenue concentration analysis
+03. Financial,03.3 Costs,Operating expense detail (monthly),Y,By function and category
+03. Financial,03.3 Costs,Payroll register (current),Y,"Salary, benefits, taxes by employee"
+03. Financial,03.3 Costs,Burn rate and runway analysis,Y,Monthly burn and months remaining
+03. Financial,03.4 Projections,3-year financial projections (monthly),Y,With key assumptions
+03. Financial,03.4 Projections,Use of funds breakdown,Y,How the Series A will be deployed
+03. Financial,03.4 Projections,Hiring plan (next 12-18 months),Y,"Roles, timing, comp"
+03. Financial,03.5 Tax,Tax returns (last 2 years),Y,Filed federal and state returns
+03. Financial,03.5 Tax,Sales tax compliance,N,For revenue-generating businesses
+04. Product & Technology,04.1 Product,Product demo / walkthrough,Y,Live demo or recorded video
+04. Product & Technology,04.1 Product,Product roadmap (12 months),Y,Planned features and timing
+04. Product & Technology,04.1 Product,Product metrics dashboard,Y,"Usage, engagement, retention"
+04. Product & Technology,04.1 Product,Customer feedback summary,N,Themes from customer interviews
+04. Product & Technology,04.2 Tech,Technical architecture overview,Y,High-level system design
+04. Product & Technology,04.2 Tech,Infrastructure and hosting summary,Y,Cloud providers and setup
+04. Product & Technology,04.2 Tech,"Tech stack (languages, frameworks, services)",Y,Key technologies used
+04. Product & Technology,04.2 Tech,Source code repository (read-only access),N,For technical diligence
+04. Product & Technology,04.3 IP,"IP assignment agreements (founders, employees)",Y,Critical for clean IP ownership
+04. Product & Technology,04.3 IP,Patent applications / grants (if any),N,If applicable
+04. Product & Technology,04.3 IP,Trademark applications / registrations,N,If applicable
+04. Product & Technology,04.3 IP,Open source license audit,N,Software bill of materials
+04. Product & Technology,04.4 Security,SOC 2 Type II report (if available),N,Required for enterprise customers
+04. Product & Technology,04.4 Security,Penetration test report (most recent),N,If performed
+04. Product & Technology,04.4 Security,Information security policy,N,For enterprise-ready companies
+04. Product & Technology,04.4 Security,Privacy policy and data handling practices,Y,GDPR/CCPA compliance
+05. Customers & Market,05.1 Customers,Customer list (with consent),Y,Anonymized if required by contract
+05. Customers & Market,05.1 Customers,Customer case studies (3-5),Y,Detailed customer success stories
+05. Customers & Market,05.1 Customers,Customer reference list (5-10),Y,For investor reference calls
+05. Customers & Market,05.1 Customers,NPS or satisfaction scores,N,Customer satisfaction metrics
+05. Customers & Market,05.2 Sales,Sales pipeline and forecast,Y,Active opportunities by stage
+05. Customers & Market,05.2 Sales,Sales process documentation,N,GTM playbook and ICP
+05. Customers & Market,05.2 Sales,Win/loss analysis,N,Recent sales outcomes
+05. Customers & Market,05.3 Market,"Market sizing (TAM, SAM, SOM)",Y,Bottom-up and top-down analysis
+05. Customers & Market,05.3 Market,Competitive landscape analysis,Y,Key competitors and positioning
+05. Customers & Market,05.3 Market,Industry trends and tailwinds,N,Macro market context
+05. Customers & Market,05.3 Market,Analyst coverage / third-party research,N,If available
+06. Team,06.1 Leadership,Founder bios and backgrounds,Y,Detailed backgrounds
+06. Team,06.1 Leadership,Founder LinkedIn profiles,Y,Public professional profiles
+06. Team,06.1 Leadership,Org chart (full company),Y,Current organizational structure
+06. Team,06.2 Hiring,Headcount and growth chart,Y,Current and planned headcount
+06. Team,06.2 Hiring,Key hires needed post-funding,Y,Roles critical to next phase
+06. Team,06.2 Hiring,Compensation philosophy and bands,N,For retention planning
+06. Team,06.3 Equity,"Cap table allocation (founders, team, investors)",Y,Visual cap table summary
+06. Team,06.3 Equity,Equity pool and option grants detail,Y,Allocation to date
+07. Legal & Compliance,07.1 Contracts,Standard customer contract / ToS,Y,Current form agreement
+07. Legal & Compliance,07.1 Contracts,Top 10 customer contracts,N,If founder is comfortable sharing
+07. Legal & Compliance,07.1 Contracts,Material vendor contracts,N,Critical vendor agreements
+07. Legal & Compliance,07.1 Contracts,Contractor agreements (material),N,For significant engagements
+07. Legal & Compliance,07.2 Compliance,Privacy policy and ToS (published),Y,Public-facing policies
+07. Legal & Compliance,07.2 Compliance,Data Processing Agreements (vendor),N,If processing personal data
+07. Legal & Compliance,07.2 Compliance,GDPR / CCPA compliance documentation,N,For international operations
+07. Legal & Compliance,07.3 Insurance,Insurance policies in place,N,"General liability, E&O, cyber"
+07. Legal & Compliance,07.4 Disputes,Any pending or threatened litigation,Y,Full disclosure required
+07. Legal & Compliance,07.4 Disputes,Regulatory inquiries (if any),Y,Full disclosure required

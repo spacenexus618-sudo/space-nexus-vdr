@@ -278,7 +278,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
               diligence.
             </p>
             <Link
-              href="/contact"
+              href="/demo"
               className="inline-block rounded-lg bg-blue-600 px-8 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
             >
               Request a SpaceNexus demo
