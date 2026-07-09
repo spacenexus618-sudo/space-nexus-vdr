@@ -136,7 +136,7 @@ const jsonLd = {
       description:
         "Pledge management software for nonprofits — track pledges, automate reminders, manage collections, and convert pledges into donations.",
       url: "https://spacenexus.net/kindora/pledge-management-software",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: { "@type": "Offer", description: "Free trial available" },
     },
     {
       "@type": "FAQPage",
@@ -228,12 +228,11 @@ export default function PledgeManagementSoftwarePage() {
 
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {[
-                    { label: "Total Pledged", value: "$189K" },
-                    { label: "Collected", value: "$142K" },
-                    { label: "Outstanding", value: "$47K" },
+                    { label: "Total Pledged" },
+                    { label: "Collected" },
+                    { label: "Outstanding" },
                   ].map((s) => (
                     <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
-                      <p className="text-lg font-bold text-gray-900">{s.value}</p>
                       <p className="text-xs text-gray-500">{s.label}</p>
                     </div>
                   ))}
@@ -242,18 +241,14 @@ export default function PledgeManagementSoftwarePage() {
                 <div className="space-y-2">
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Upcoming Collections</p>
                   {[
-                    { donor: "Robert M.", amount: "$5,000", due: "Jul 20" },
-                    { donor: "Jennifer L.", amount: "$2,500", due: "Aug 1" },
-                    { donor: "Michael R.", amount: "$10,000", due: "Aug 15" },
+                    { donor: "Robert M." },
+                    { donor: "Jennifer L." },
+                    { donor: "Michael R." },
                   ].map((p) => (
                     <div key={p.donor} className="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 border border-gray-100">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-cyan-400" />
                         <span className="text-sm font-semibold text-gray-900">{p.donor}</span>
-                      </div>
-                      <div className="text-right text-xs">
-                        <span className="text-gray-500">{p.amount}</span>
-                        <span className="text-gray-400 ml-2">Due {p.due}</span>
                       </div>
                     </div>
                   ))}

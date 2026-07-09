@@ -3,584 +3,479 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Operations Platform | Unified Operations Software | Kindora",
+  title: "Nonprofit Operations Platform | Nonprofit Management Software | Kindora",
   description:
-    "One platform to manage donors, grants, programs, volunteers, finances, and impact reporting. Replace every disconnected tool with Kindora's nonprofit operations platform.",
+    "Kindora nonprofit operations platform centralises donor management, fundraising, grants, volunteers, and reporting — one system for your entire organisation.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-operations-platform",
   },
   openGraph: {
     title: "Nonprofit Operations Platform — Kindora",
-    description:
-      "One unified platform for nonprofit operations. Donor CRM, grant tracking, program delivery, volunteer management, financial reporting, and impact analytics — all in one place.",
+    description: "Centralise all nonprofit operations in one integrated platform with Kindora.",
     url: "https://spacenexus.net/kindora/nonprofit-operations-platform",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [
-      {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
-        width: 1200,
-        height: 630,
-        alt: "Nonprofit Operations Platform — Kindora",
-      },
-    ],
+    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Nonprofit Operations Platform" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nonprofit Operations Platform — Kindora",
-    description:
-      "The complete nonprofit operations platform. Donors, grants, programs, volunteers, finances — unified in one system.",
+    description: "Centralise all nonprofit operations in one integrated platform with Kindora.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
     "nonprofit operations platform",
+    "nonprofit management software",
     "nonprofit operations software",
     "nonprofit management platform",
-    "nonprofit operating system",
-    "NGO operations platform",
-    "nonprofit all-in-one software",
-    "nonprofit management software",
+    "all-in-one nonprofit software",
+    "nonprofit operational software",
+    "nonprofit system",
+    "charity management platform",
+    "NGO operations software",
+    "nonprofit software platform",
+    "nonprofit back office software",
+    "nonprofit admin software",
     "unified nonprofit platform",
-    "nonprofit operations management",
-    "nonprofit technology platform",
+    "nonprofit organisation software",
+    "nonprofit enterprise software",
   ],
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Kindora — Nonprofit Operations Platform",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "The complete nonprofit operations platform. Donor CRM, grant tracking, client case management, volunteer coordination, nonprofit accounting, and impact analytics — unified in one application.",
-      url: "https://spacenexus.net/kindora/nonprofit-operations-platform",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free trial available",
-      },
-      featureList: [
-        "Donor & Donation Management",
-        "Grant Lifecycle Tracking",
-        "Client Case Management",
-        "Volunteer Coordination",
-        "Nonprofit Accounting & Cost Allocation",
-        "Campaign & Fundraising Tools",
-        "Communications Hub",
-        "Impact Analytics & Reporting",
-      ],
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is a nonprofit operations platform?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "A nonprofit operations platform is a single software system that manages every aspect of nonprofit operations — donor management, grant tracking, program delivery, volunteer coordination, financial reporting, and impact analytics. It replaces multiple disconnected tools with one unified system.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Why do nonprofits need an operations platform?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Nonprofits typically use 5–10 separate tools for donors, grants, programs, accounting, volunteers, and reporting. This creates data silos, duplicate data entry, and inconsistent reporting. An operations platform consolidates everything into one system, reducing costs and improving efficiency.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How does Kindora compare to Salesforce for nonprofits?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora is purpose-built for nonprofits and ready to use immediately, unlike Salesforce which requires expensive consultants, months of customization, and ongoing maintenance. Kindora includes nonprofit-specific modules like grant lifecycle management, cost allocation, and client case management built in from day one.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I migrate from spreadsheets to Kindora?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Kindora is designed to replace Excel and Google Sheets for nonprofits. The platform includes guided onboarding, data import tools, and training to help you migrate your donor lists, grant records, and program data smoothly.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What modules are included in Kindora?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Kindora includes 12 integrated modules: Donor & Donation Management, Grant Tracking & Receipts, Client Case Management, Program Enrollment, Campaign Management, Volunteer Management, Expense & Bill Management, Chart of Accounts & Budgets, Cost Allocation, Communications Hub, Employee Management, and Reports & Analytics.",
-          },
-        },
-      ],
-    },
-  ],
-};
-
-const modules = [
+const benefits = [
   {
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-    name: "Donor & Donation Management",
-    description: "Complete donor CRM with giving history, automated acknowledgments, and retention analytics.",
-    link: "/kindora/features/donor-management",
+    metric: "1",
+    title: "Single Source of Truth",
+    description: "All your nonprofit data — donors, grants, volunteers, events, programs — in one integrated system. No more spreadsheets or siloed tools.",
   },
   {
+    metric: "40%",
+    title: "Reduce Software Costs",
+    description: "Replace 5-10 separate tools with one platform. Cut subscription fees, reduce training time, and eliminate integration headaches.",
+  },
+  {
+    metric: "100%",
+    title: "Full Organisational Visibility",
+    description: "Real-time dashboards showing fundraising progress, program outcomes, volunteer engagement, and financial health — all in one view.",
+  },
+  {
+    metric: "2x",
+    title: "Team Productivity",
+    description: "When your team uses one system instead of switching between tools, they accomplish twice as much in the same time.",
+  },
+];
+
+const features = [
+  {
+    title: "Donor Management",
+    description: "Complete CRM with giving history, donor segmentation, engagement tracking, and relationship management.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+  },
+  {
+    title: "Fundraising & Campaigns",
+    description: "Run campaigns, track donations, manage recurring gifts, and accept online giving — all built in.",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+  {
+    title: "Grant Management",
+    description: "Track applications, manage deadlines, monitor budgets, and generate funder reports from one system.",
     icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
-    name: "Grant Tracking & Receipts",
-    description: "Full grant lifecycle — prospect, apply, award, track receipts, and compliance reporting.",
-    link: "/kindora/features/grant-management",
   },
   {
+    title: "Volunteer Management",
+    description: "Recruit, schedule, track hours, and communicate with your volunteer team from a centralised dashboard.",
     icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
-    name: "Client & Program Services",
-    description: "Track enrollment, case notes, outcomes, and program impact for every participant.",
-    link: "/kindora/features/client-management",
   },
   {
-    icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
-    name: "Volunteer Management",
-    description: "Recruit, schedule, track hours, and recognize your volunteer workforce.",
-    link: "/kindora/volunteer-management-software",
-  },
-  {
-    icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
-    name: "Nonprofit Accounting",
-    description: "Built-in accounting with cost allocation, fund accounting, and board-ready financial reports.",
-    link: "/kindora/features/financial-management",
-  },
-  {
-    icon: "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z",
-    name: "Campaign & Fundraising",
-    description: "Plan and execute campaigns, track progress in real time, and measure ROI across channels.",
-    link: "/kindora/features/campaign-management",
-  },
-  {
-    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    name: "Communications Hub",
-    description: "Centralized email, SMS, and internal messaging with donor and stakeholder workflows.",
-    link: "/kindora/features/communications",
-  },
-  {
+    title: "Program Management",
+    description: "Track program outcomes, manage enrolment, measure impact, and report results to stakeholders.",
     icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    name: "Impact Analytics & Reporting",
-    description: "Real-time dashboards, custom reports, and export-ready formats for board and funders.",
-    link: "/kindora/features/reporting",
+  },
+  {
+    title: "Event Management",
+    description: "Create events, manage registrations, track attendance, and send automated event communications.",
+    icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+  },
+  {
+    title: "Reporting & Analytics",
+    description: "Real-time dashboards and custom reports for fundraising, programs, grants, and organisational performance.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+  },
+  {
+    title: "Workflow Automation",
+    description: "Automate repetitive tasks, donor communications, and internal processes with visual workflow builder.",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
   },
 ];
 
-const problems = [
-  {
-    problem: "Data Silos",
-    description: "Donor data in one tool, grant data in another, program data in spreadsheets. No single source of truth.",
-    solution: "One unified database. Every interaction — donor, grant, client, volunteer — connected in one place.",
-  },
-  {
-    problem: "Duplicate Data Entry",
-    description: "Staff re-entering the same information across multiple systems. Wasted hours, introduction of errors.",
-    solution: "Enter data once. Every module sees the same record. No duplication, no inconsistencies.",
-  },
-  {
-    problem: "Fragmented Reporting",
-    description: "Stitching together reports from 5+ tools for board meetings. Incomplete picture of organizational health.",
-    solution: "One-click reports pulling from all modules. Board-ready, funder-ready, audit-ready.",
-  },
-  {
-    problem: "Tool Sprawl",
-    description: "Paying for 5–10 separate subscriptions. Training staff on multiple interfaces. Managing multiple logins.",
-    solution: "One platform, one login, one subscription. Every feature your nonprofit needs, built in.",
-  },
-];
-
-const comparisons = [
-  {
-    tool: "Spreadsheets",
-    issues: ["No audit trail", "No permission controls", "Version control chaos", "No automation"],
-    kindora: "Secure, auditable, permission-controlled, automated — with real-time dashboards.",
-  },
-  {
-    tool: "Salesforce Nonprofit Cloud",
-    issues: ["Expensive consultants", "Months of setup", "Ongoing maintenance", "Not purpose-built"],
-    kindora: "Ready in 30 minutes. No consultants. Purpose-built for nonprofits from day one.",
-  },
-  {
-    tool: "Multiple Point Solutions",
-    issues: ["Data silos", "Duplicate entry", "Fragmented reporting", "High total cost"],
-    kindora: "One unified platform. One database. One subscription. Complete visibility.",
-  },
+const comparisonData = [
+  { feature: "All-in-One Platform", kindora: true, blackbaud: true, salesforce: false, bloomerang: false },
+  { feature: "Donor Management", kindora: true, blackbaud: true, salesforce: true, bloomerang: true },
+  { feature: "Fundraising Tools", kindora: true, blackbaud: true, salesforce: "partial", bloomerang: true },
+  { feature: "Grant Management", kindora: true, blackbaud: false, salesforce: false, bloomerang: false },
+  { feature: "Volunteer Management", kindora: true, blackbaud: false, salesforce: false, bloomerang: false },
+  { feature: "Program Management", kindora: true, blackbaud: "partial", salesforce: true, bloomerang: false },
+  { feature: "Workflow Automation", kindora: true, blackbaud: false, salesforce: true, bloomerang: false },
+  { feature: "Affordable Pricing", kindora: true, blackbaud: false, salesforce: false, bloomerang: true },
 ];
 
 const faqs = [
   {
     question: "What is a nonprofit operations platform?",
     answer:
-      "A nonprofit operations platform is a single software system that manages every aspect of nonprofit operations — donor management, grant tracking, program delivery, volunteer coordination, financial reporting, and impact analytics. It replaces multiple disconnected tools with one unified system.",
+      "A nonprofit operations platform is an all-in-one software system that centralises every aspect of nonprofit management — donor relations, fundraising, grant tracking, volunteer coordination, program delivery, event management, and reporting — into a single integrated platform. It eliminates the need for multiple disconnected tools.",
   },
   {
-    question: "Why do nonprofits need an operations platform?",
+    question: "How is Kindora different from other nonprofit software?",
     answer:
-      "Nonprofits typically use 5–10 separate tools for donors, grants, programs, accounting, volunteers, and reporting. This creates data silos, duplicate data entry, and inconsistent reporting. An operations platform consolidates everything into one system, reducing costs and improving efficiency.",
+      "Most nonprofit tools do one thing well — donor management OR grant tracking OR volunteer scheduling. Kindora does everything in one platform. This means your data lives in one place, your team learns one system, and you get complete visibility across your entire organisation without paying for 5-10 separate subscriptions.",
   },
   {
-    question: "How does Kindora compare to Salesforce for nonprofits?",
+    question: "Can I replace my existing nonprofit tools with Kindora?",
     answer:
-      "Kindora is purpose-built for nonprofits and ready to use immediately, unlike Salesforce which requires expensive consultants, months of customization, and ongoing maintenance. Kindora includes nonprofit-specific modules like grant lifecycle management, cost allocation, and client case management built in from day one.",
+      "Yes. Most nonprofits using Kindora replace 5-10 separate tools — their donor CRM, fundraising platform, grant tracker, volunteer scheduler, event system, and reporting tools. Kindora handles all of these functions in one integrated system, reducing costs and eliminating data silos.",
   },
   {
-    question: "Can I migrate from spreadsheets to Kindora?",
+    question: "Is Kindora suitable for small nonprofits?",
     answer:
-      "Yes. Kindora is designed to replace Excel and Google Sheets for nonprofits. The platform includes guided onboarding, data import tools, and training to help you migrate your donor lists, grant records, and program data smoothly.",
+      "Yes. Kindora is designed for nonprofits of all sizes. Small organisations benefit from having one affordable system instead of managing multiple free tools. Larger organisations benefit from unified data and enterprise features. Pricing scales with your needs.",
   },
   {
-    question: "What modules are included in Kindora?",
+    question: "How long does it take to set up Kindora?",
     answer:
-      "Kindora includes 12 integrated modules: Donor & Donation Management, Grant Tracking & Receipts, Client Case Management, Program Enrollment, Campaign Management, Volunteer Management, Expense & Bill Management, Chart of Accounts & Budgets, Cost Allocation, Communications Hub, Employee Management, and Reports & Analytics.",
-  },
-  {
-    question: "How long does it take to get started with Kindora?",
-    answer:
-      "Most nonprofits are live on Kindora within 30 minutes. No consultants, no implementation fees, no months of setup. The platform is designed to be intuitive and ready to use immediately.",
+      "Most nonprofits are up and running with Kindora within 30 minutes. Our onboarding team helps you import existing data, configure your workflows, and train your team. You can start with the features you need and add more as your organisation grows.",
   },
 ];
+
+const platformStats = [
+  { metric: "1", label: "Platform for everything" },
+  { metric: "40%", label: "Lower software costs" },
+  { metric: "100%", label: "Data visibility" },
+  { metric: "2x", label: "Team productivity" },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      name: "Kindora Nonprofit Operations Platform",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description:
+        "All-in-one nonprofit operations platform — centralise donor management, fundraising, grants, volunteers, and reporting.",
+      url: "https://spacenexus.net/kindora/nonprofit-operations-platform",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+  ],
+};
 
 export default function NonprofitOperationsPlatformPage() {
   return (
     <>
-      <Script
-        id="nonprofit-operations-platform-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <Script id="nonprofit-operations-platform-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-white to-white" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-indigo-100/30 rounded-full blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 via-white to-white" />
+        <div className="absolute top-0 right-1/3 w-96 h-96 bg-purple-100/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-indigo-100/30 rounded-full blur-3xl" />
+        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse mr-2" />
-              <span className="text-sm font-medium text-blue-600">
-                Nonprofit Operations Platform
-              </span>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
+                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse mr-2" />
+                <span className="text-sm font-medium text-purple-600">Operations Platform</span>
+              </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-              The{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563eb] to-[#7c3aed]">
-                Nonprofit Operations Platform
-              </span>{" "}
-              That Replaces Everything
-            </h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
+                Nonprofit Operations Platform That{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-600">Unifies Everything</span>
+              </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-              Donor CRM. Grant tracking. Case management. Volunteer
-              coordination. Nonprofit accounting. Impact reporting. One unified
-              platform — no more tool sprawl.
-            </p>
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+                Replace 5-10 disconnected tools with one integrated platform. Manage donors, fundraising, grants, volunteers, programs, and reporting from a single source of truth.
+              </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-              <a
-                href="https://cad.spaceaiapp.com/kindora"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Try Kindora Free
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              <Link
-                href="/kindora/demo"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
-              >
-                Request a Demo
-              </Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              {[
-                "No credit card required",
-                "Setup in 30 minutes",
-                "Cancel anytime",
-              ].map((text) => (
-                <span key={text} className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+                <a
+                  href="https://cad.spaceaiapp.com/kindora"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-indigo-600 hover:to-purple-700 rounded-full shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  Try for Free
+                  <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                  {text}
-                </span>
-              ))}
+                </a>
+                <Link
+                  href="/kindora/contact"
+                  className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
+                >
+                  Request a Demo
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-6 text-sm text-gray-500">
+                {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                  <span key={text} className="flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {text}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Visual: Operations Dashboard */}
+            <div className="relative">
+              <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl" />
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-sm font-bold text-gray-900">Operations Dashboard</h3>
+                  <span className="text-xs px-3 py-1 bg-purple-500/10 text-purple-600 rounded-full font-semibold">Live</span>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                    <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-900">Donor Management</p>
+                      <p className="text-[10px] text-gray-500">1,247 active donors</p>
+                    </div>
+                    <span className="text-[10px] text-green-600 font-semibold">Synced</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-3 bg-green-50 rounded-xl border border-green-100">
+                    <div className="w-10 h-10 rounded-lg bg-green-500 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-900">Fundraising</p>
+                      <p className="text-[10px] text-gray-500">Campaign progress tracking</p>
+                    </div>
+                    <span className="text-[10px] text-green-600 font-semibold">Active</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-3 bg-orange-50 rounded-xl border border-orange-100">
+                    <div className="w-10 h-10 rounded-lg bg-orange-500 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-900">Grant Tracking</p>
+                      <p className="text-[10px] text-gray-500">3 grants pending reports</p>
+                    </div>
+                    <span className="text-[10px] text-orange-600 font-semibold">Review</span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-3 mt-6">
+                  {[
+                    { label: "Modules Active", value: "8" },
+                    { label: "Data Sources", value: "Unified" },
+                    { label: "Reports", value: "Real-time" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
+                      <p className="text-lg font-bold text-gray-900">{stat.value}</p>
+                      <p className="text-[10px] text-gray-500">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Problem Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      {/* Platform Stats */}
+      <section className="py-16 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-red-500 uppercase tracking-wider mb-3">
-              The Problem
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Your nonprofit is running on too many tools
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Most nonprofits juggle 5–10 separate tools for donors, grants,
-              programs, accounting, and reporting. It&apos;s expensive,
-              inefficient, and impossible to get a complete picture.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {problems.map((item) => (
-              <div
-                key={item.problem}
-                className="rounded-2xl border border-gray-200 bg-white p-6 lg:p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
-                  <h3 className="font-bold text-gray-900">{item.problem}</h3>
-                </div>
-                <p className="text-sm text-gray-500 mb-4">{item.description}</p>
-                <div className="flex items-start gap-2 p-3 rounded-lg bg-blue-50 border border-blue-100">
-                  <svg className="w-4 h-4 text-[#2563eb] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm text-blue-700 font-medium">{item.solution}</span>
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {platformStats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-600">{stat.metric}</p>
+                <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Modules Section */}
-      <section className="py-20 lg:py-28 bg-gray-50">
+      {/* Benefits */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
-              Everything You Need
+            <span className="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-600 text-sm font-semibold mb-4">Why Unify</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">One Platform, One Team, One Truth</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Scattered tools create data silos, duplicate work, and blind spots. Kindora brings everything together so your entire team works from the same information.
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              8 integrated modules. One platform.
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Every module shares the same database. Enter data once, see it
-              everywhere. No duplicate entry, no data silos.
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="group p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white text-xl font-bold mb-5">
+                  {benefit.metric}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 text-sm font-semibold mb-4">Platform Features</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Everything Your Nonprofit Needs</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              From donor management to program delivery, Kindora covers every function your nonprofit needs in one integrated platform.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {modules.map((mod) => (
-              <Link
-                key={mod.name}
-                href={mod.link}
-                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-blue-500/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-[#2563eb] group-hover:text-white transition-colors">
-                  <svg
-                    className="w-5 h-5 text-[#2563eb] group-hover:text-white transition-colors"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={mod.icon}
-                    />
+            {features.map((feature) => (
+              <div key={feature.title} className="group p-6 rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-gray-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
                   </svg>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-[#2563eb] transition-colors">
-                  {mod.name}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {mod.description}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Section */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
-              Why Not the Alternatives?
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              How Kindora compares to other approaches
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {comparisons.map((comp) => (
-              <div
-                key={comp.tool}
-                className="rounded-2xl border border-gray-200 bg-white p-6 lg:p-8"
-              >
-                <div className="grid lg:grid-cols-2 gap-6">
-                  <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center">
-                        <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </div>
-                      <h3 className="font-bold text-gray-900">{comp.tool}</h3>
-                    </div>
-                    <ul className="space-y-2">
-                      {comp.issues.map((issue) => (
-                        <li key={issue} className="flex items-center gap-2 text-sm text-gray-600">
-                          <span className="w-4 h-4 rounded-full bg-red-100 text-red-400 flex items-center justify-center shrink-0">
-                            <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                          </span>
-                          {issue}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="flex items-center p-4 rounded-xl bg-blue-50 border border-blue-100">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#2563eb] flex items-center justify-center shrink-0">
-                        <span className="text-white font-bold text-xs">K</span>
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-[#2563eb] mb-1">Kindora</p>
-                        <p className="text-sm text-blue-700">{comp.kindora}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#2563eb] to-[#1d4ed8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-black text-white mb-2">12</div>
-              <div className="text-base font-semibold text-blue-100">Integrated Modules</div>
-              <div className="text-sm text-blue-200 mt-1">Everything your nonprofit needs</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black text-white mb-2">30min</div>
-              <div className="text-base font-semibold text-blue-100">Setup Time</div>
-              <div className="text-sm text-blue-200 mt-1">No consultants required</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black text-white mb-2">1</div>
-              <div className="text-base font-semibold text-blue-100">Platform</div>
-              <div className="text-sm text-blue-200 mt-1">Replaces 5–10 tools</div>
+      {/* Comparison */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-600 text-sm font-semibold mb-4">How We Compare</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Kindora vs Other Platforms</h2>
+            <p className="text-lg text-gray-600">See why nonprofits choose Kindora over disconnected point solutions.</p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-100">
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-gray-500">Feature</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-purple-600">Kindora</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Blackbaud</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Salesforce NPSP</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Bloomerang</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={row.feature} className={i < comparisonData.length - 1 ? "border-b border-gray-50" : ""}>
+                      <td className="py-4 px-6 text-sm text-gray-900 font-medium">{row.feature}</td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.kindora === "boolean" ? (
+                          row.kindora ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.blackbaud === "boolean" ? (
+                          row.blackbaud ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.salesforce === "boolean" ? (
+                          row.salesforce ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.bloomerang === "boolean" ? (
+                          row.bloomerang ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 lg:py-28 bg-white" id="faq">
+      {/* FAQs */}
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
-              FAQ
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-600">
-              Common questions about nonprofit operations platforms.
-            </p>
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 text-sm font-semibold mb-4">FAQs</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
 
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <details
-                key={idx}
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                  <span className="text-base font-semibold text-gray-900">
-                    {faq.question}
-                  </span>
-                  <svg
-                    className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="px-6 pb-5 pt-1">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
-              </details>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="p-6 rounded-2xl bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8f9fa] to-white">
+      {/* CTA */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-purple-500 via-indigo-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to unify your nonprofit operations?
-          </h2>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Get started with Kindora today. Replace every disconnected tool
-            with one unified operations platform.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Unify Your Nonprofit?</h2>
+          <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">
+            Join thousands of nonprofits replacing scattered tools with one integrated operations platform.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://cad.spaceaiapp.com/kindora"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-purple-600 bg-white hover:bg-purple-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Start Free — No Credit Card Required
+              Start Free Trial
               <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
             <Link
-              href="/kindora/pricing"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
+              href="/kindora/contact"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:border-white/60 rounded-full transition-all duration-300"
             >
-              View Pricing
+              Request a Demo
             </Link>
           </div>
-          <p className="mt-6 text-sm text-gray-500">
-            Free trial · No credit card · Setup in 30 minutes · Cancel anytime
-          </p>
         </div>
       </section>
     </>

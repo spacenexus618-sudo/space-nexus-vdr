@@ -3,128 +3,162 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "CRM for Nonprofits | Donor Relationship Management Software | Kindora",
+  title: "CRM for Nonprofits | Nonprofit CRM Software | Kindora",
   description:
-    "Kindora is the CRM for nonprofits — donor management, fundraising campaigns, grant tracking, volunteer coordination, and impact reporting in one affordable platform.",
+    "Kindora CRM for nonprofits helps you manage donors, grants, volunteers, programs, and communications — all from one integrated platform built for nonprofits.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/crm-for-nonprofits",
   },
   openGraph: {
     title: "CRM for Nonprofits — Kindora",
-    description:
-      "The CRM purpose-built for nonprofits. Manage donors, run campaigns, track grants, and report impact — all in one platform.",
+    description: "Manage donors, grants, volunteers, and programs with Kindora nonprofit CRM software.",
     url: "https://spacenexus.net/kindora/crm-for-nonprofits",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora CRM for Nonprofits" }],
+    images: [
+      {
+        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        width: 1200,
+        height: 630,
+        alt: "Kindora CRM for Nonprofits",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "CRM for Nonprofits — Kindora",
-    description: "The CRM purpose-built for nonprofits. Donor management, campaigns, grants, and impact reporting.",
+    description: "Manage donors, grants, volunteers, and programs with Kindora nonprofit CRM software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
     "CRM for nonprofits",
-    "nonprofit donor management",
-    "donor CRM",
-    "nonprofit fundraising software",
-    "constituent relationship management",
-    "nonprofit contact database",
-    "NGO donor tracking",
-    "charity CRM software",
-    "fundraising CRM for nonprofits",
-    "donor engagement platform",
-    "nonprofit donor analytics",
-    "grant management CRM",
-    "volunteer management CRM",
-    "affordable nonprofit CRM",
+    "nonprofit CRM software",
+    "nonprofit CRM system",
+    "nonprofit CRM platform",
+    "nonprofit customer relationship management",
+    "nonprofit management software",
+    "nonprofit database software",
+    "nonprofit organization software",
+    "nonprofit management system",
+    "best CRM for nonprofits",
+    "nonprofit CRM tools",
+    "nonprofit relationship management",
+    "nonprofit donor CRM",
+    "nonprofit constituent management",
+    "NGO CRM software",
   ],
 };
 
-const capabilities = [
+const benefits = [
   {
-    title: "Donor Management",
-    description: "Complete donor profiles with giving history, communication logs, engagement scoring, and segmentation.",
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    metric: "1",
+    title: "Unified Constituent View",
+    description: "Every donor, volunteer, grant, and program in one system — no more switching between spreadsheets and disconnected tools.",
   },
   {
-    title: "Fundraising Campaigns",
-    description: "Set goals, segment audiences, track donations, and measure campaign ROI in real time.",
-    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+    metric: "360°",
+    title: "Complete Relationship Mapping",
+    description: "See how constituents connect — donors who volunteer, board members who give, volunteers who advocate — and leverage those relationships.",
   },
   {
-    title: "Grant Lifecycle Management",
-    description: "Track grants from prospect to close-out with deadline reminders, receipt tracking, and compliance reporting.",
-    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+    metric: "2.5x",
+    title: "Better Donor Engagement",
+    description: "Personalised communication based on complete constituent history drives 2.5x higher engagement rates than generic outreach.",
   },
   {
-    title: "Communication Tools",
-    description: "Email templates, bulk messaging, communication logging, and automated follow-up sequences.",
-    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-  },
-  {
-    title: "Volunteer Coordination",
-    description: "Track volunteer hours, skills, availability, and engagement alongside donor data.",
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
-  },
-  {
-    title: "Impact & Board Reporting",
-    description: "Generate professional reports, donor statements, and impact summaries ready for board meetings.",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-  },
-  {
-    title: "Nonprofit Accounting",
-    description: "Chart of accounts, budgets, expense tracking, and cost allocation built into your CRM.",
-    icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
-  },
-  {
-    title: "Data Import & Export",
-    description: "Import existing donor data from CSV/Excel and export reports in PDF or Excel format.",
-    icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4",
+    metric: "80%",
+    title: "Less Administrative Work",
+    description: "Automated workflows, duplicate detection, and integrated reporting eliminate manual data entry and free your team for mission work.",
   },
 ];
 
-const whyChoose = [
-  { number: "01", title: "Built for nonprofits, not enterprises", description: "Kindora CRM is designed specifically for nonprofit workflows — not a scaled-down version of an enterprise CRM." },
-  { number: "02", title: "Affordable from day one", description: "Enterprise-grade features at a price nonprofits can actually afford. Free trial available — no credit card needed." },
-  { number: "03", title: "Ready in minutes, not months", description: "No consultants, no customisation, no complex setup. Start using Kindora CRM in under 30 minutes." },
-  { number: "04", title: "All-in-one platform", description: "Donor management, campaigns, grants, accounting, volunteers, and reporting — all in one unified system." },
-  { number: "05", title: "Real-time insights", description: "Live dashboards, donor analytics, and campaign tracking so you always know where you stand." },
-  { number: "06", title: "Enterprise-grade security", description: "SOC 2 compliant, encrypted data, role-based access control, and automated backups." },
+const features = [
+  {
+    title: "Constituent Profiles",
+    description: "Complete records for every person — donors, volunteers, beneficiaries, board members — with full interaction history.",
+    icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
+  },
+  {
+    title: "Relationship Mapping",
+    description: "Visualise connections between constituents — family ties, employer relationships, board affiliations, and volunteer networks.",
+    icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
+  },
+  {
+    title: "Donor Management",
+    description: "Track gifts, pledges, recurring donations, and in-kind contributions with automated receipts and thank-you workflows.",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+  {
+    title: "Grant Tracking",
+    description: "Monitor grant applications, deadlines, reporting requirements, and deliverables — never miss a reporting date again.",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+  },
+  {
+    title: "Volunteer Tracking",
+    description: "Log volunteer hours, skills, availability, and assignments — match the right volunteers to the right opportunities.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+  },
+  {
+    title: "Program Management",
+    description: "Track program enrollment, outcomes, budgets, and impact metrics — demonstrate results to funders and stakeholders.",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01",
+  },
+  {
+    title: "Financial Tools",
+    description: "Nonprofit-specific accounting, fund tracking, budget management, and financial reporting — all aligned with nonprofit standards.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+  },
+  {
+    title: "Communications",
+    description: "Email campaigns, mail merges, communication tracking, and engagement analytics — reach the right people with the right message.",
+    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+];
+
+const comparisonData = [
+  { feature: "Constituent Profiles", kindora: true, bloomerang: true, blackbaud: true, salesforce: true },
+  { feature: "Relationship Mapping", kindora: true, bloomerang: false, blackbaud: false, salesforce: "partial" },
+  { feature: "Donor Management", kindora: true, bloomerang: true, blackbaud: true, salesforce: true },
+  { feature: "Grant Tracking", kindora: true, bloomerang: false, blackbaud: "partial", salesforce: false },
+  { feature: "Volunteer Management", kindora: true, bloomerang: false, blackbaud: "partial", salesforce: false },
+  { feature: "Program Tracking", kindora: true, bloomerang: false, blackbaud: true, salesforce: false },
+  { feature: "Nonprofit Accounting", kindora: true, bloomerang: false, blackbaud: true, salesforce: false },
+  { feature: "All-in-One", kindora: true, bloomerang: false, blackbaud: true, salesforce: false },
 ];
 
 const faqs = [
   {
     question: "What is a CRM for nonprofits?",
     answer:
-      "A CRM (Constituent Relationship Management) for nonprofits is a software platform that helps organizations manage interactions with donors, volunteers, grantors, and other stakeholders. Unlike business CRMs, nonprofit CRMs include features like donation tracking, fundraising campaign management, grant lifecycle management, volunteer coordination, and impact reporting.",
+      "A CRM for nonprofits is a system that helps organisations manage relationships with donors, volunteers, beneficiaries, and other constituents. It centralises constituent data, tracks interactions, and provides tools for fundraising, programme management, and communications.",
   },
   {
-    question: "Why do nonprofits need a dedicated CRM?",
+    question: "Why do nonprofits need a CRM instead of spreadsheets?",
     answer:
-      "Generic CRMs like Salesforce or HubSpot are designed for sales teams and for-profit businesses. Nonprofits need specialized features like donor segmentation, campaign goal tracking, grant compliance reporting, volunteer hour tracking, and cost allocation — features that purpose-built nonprofit CRMs like Kindora provide out of the box.",
+      "Spreadsheets can't track relationships between constituents, automate communications, or provide complete visibility across your organisation. A CRM like Kindora eliminates duplicate data, prevents lost information, and gives your team the insights they need to build stronger relationships.",
   },
   {
-    question: "How is Kindora different from Salesforce Nonprofit Cloud?",
+    question: "How is a nonprofit CRM different from a for-profit CRM?",
     answer:
-      "Salesforce Nonprofit Cloud requires expensive consultants, months of setup, and ongoing customisation costs. Kindora is ready to use immediately, costs a fraction of the price, and includes nonprofit-specific features like grant lifecycle management, client case management, and cost allocation — features that require expensive add-ons in Salesforce.",
+      "Nonprofit CRMs include features like donor management, grant tracking, volunteer management, programme tracking, and nonprofit-specific financial tools. They're built to handle the unique workflows of mission-driven organisations, not just sales pipelines.",
   },
   {
-    question: "Can Kindora replace my current donor database?",
+    question: "What features should I look for in a nonprofit CRM?",
     answer:
-      "Yes. Kindora is a complete donor management system that can replace legacy databases, spreadsheets, and multiple disconnected tools. Import your existing data via CSV/Excel and get started quickly with a unified CRM.",
+      "Key features include constituent profiles, relationship mapping, donor management, grant tracking, volunteer management, programme tracking, nonprofit accounting, and communications tools. Look for an all-in-one platform rather than stitching together multiple tools.",
   },
   {
-    question: "Is Kindora suitable for small nonprofits?",
+    question: "How long does it take to set up Kindora CRM for nonprofits?",
     answer:
-      "Absolutely. Kindora is designed for small to mid-sized nonprofits. It's affordable, easy to set up, and includes all the features you need without requiring a dedicated IT team or expensive consultants.",
+      "Most nonprofits are up and running with Kindora in 30 minutes. Our team provides free data migration support to import your existing records from spreadsheets or other systems — so nothing is lost in the switch.",
   },
-  {
-    question: "Does Kindora integrate with other tools?",
-    answer:
-      "Kindora supports data import/export via CSV and Excel. As an all-in-one platform, it reduces the need for integrations by including donor management, campaigns, grants, accounting, and reporting in a single system.",
-  },
+];
+
+const platformStats = [
+  { metric: "1", label: "Unified Platform" },
+  { metric: "360°", label: "Complete Constituent View" },
+  { metric: "80%", label: "Less Manual Work" },
+  { metric: "2.5x", label: "Better Engagement" },
 ];
 
 const jsonLd = {
@@ -136,9 +170,14 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "CRM for nonprofits: donor management, fundraising campaigns, grant tracking, volunteer coordination, and impact reporting in one affordable platform.",
+        "CRM for nonprofits — manage donors, grants, volunteers, programs, and communications from one integrated platform.",
       url: "https://spacenexus.net/kindora/crm-for-nonprofits",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        description: "Free trial available",
+      },
     },
     {
       "@type": "FAQPage",
@@ -151,148 +190,127 @@ const jsonLd = {
   ],
 };
 
-export default function CRMForNonprofitsPage() {
+export default function CrmForNonprofitsPage() {
   return (
     <>
       <Script id="crm-for-nonprofits-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero */}
       <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 via-white to-white" />
-        <div className="absolute top-0 right-1/3 w-96 h-96 bg-indigo-100/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-purple-100/30 rounded-full blur-3xl" />
-        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-white to-white" />
+        <div className="absolute top-0 right-1/3 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-cyan-100/30 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#2563eb]/10 border border-[#2563eb]/20 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse mr-2" />
-              <span className="text-sm font-medium text-[#2563eb]">CRM for Nonprofits</span>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse mr-2" />
+              <span className="text-sm font-medium text-blue-600">CRM for Nonprofits</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6">
-              The CRM for Nonprofits Built{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563eb] to-[#7c3aed]">Different</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
+              The CRM Nonprofits{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">Actually Need</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-              Kindora is the CRM purpose-built for nonprofits. Manage donor relationships, run fundraising campaigns, track grants, coordinate volunteers, and report impact — all without enterprise complexity or enterprise pricing.
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+              Manage donors, grants, volunteers, and programs in one system. The nonprofit CRM software that replaces scattered tools and spreadsheets.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/kindora/contact"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Request a Demo
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <a
                 href="https://cad.spaceaiapp.com/kindora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-cyan-600 hover:to-blue-700 rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Try for Free
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
+              <Link
+                href="/kindora/contact"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
+              >
+                Request a Demo
+              </Link>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                No credit card required
-              </span>
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Set up in 30 minutes
-              </span>
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                SOC 2 compliant
-              </span>
+            <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
+              {["No credit card required", "Set up in 30 minutes", "Cancel anytime"].map((text) => (
+                <span key={text} className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  {text}
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "12+", label: "Core CRM Modules" },
-              { value: "100%", label: "Cloud-based" },
-              { value: "30 min", label: "Average Setup Time" },
-              { value: "Free", label: "Trial Available" },
-            ].map((stat) => (
+            {platformStats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl lg:text-4xl font-black text-[#2563eb] mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-500 font-medium">{stat.label}</div>
+                <p className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">{stat.metric}</p>
+                <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Capabilities */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8f9fa] to-white">
+      {/* Benefits */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">CRM Capabilities</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Everything a nonprofit CRM should be
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Kindora combines donor management, fundraising, grants, volunteers, finances, and reporting into one seamless platform.
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">Why Nonprofit CRM</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Your Organisation Deserves Better Than Spreadsheets</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Without a nonprofit CRM, organisations lose track of relationships, miss follow-ups, and struggle to demonstrate impact. Kindora changes that.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {capabilities.map((cap) => (
-              <div
-                key={cap.title}
-                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#2563eb]/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#2563eb]/10 flex items-center justify-center mb-4 group-hover:bg-[#2563eb] group-hover:text-white transition-colors">
-                  <svg className="w-5 h-5 text-[#2563eb] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={cap.icon} />
-                  </svg>
+          <div className="grid md:grid-cols-2 gap-8">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="group p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white text-xl font-bold mb-5">
+                  {benefit.metric}
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-[#2563eb] transition-colors">{cap.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{cap.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose */}
+      {/* Features */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Why Choose Kindora</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              The CRM built by nonprofit people, for nonprofit people
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We understand the challenges nonprofits face — because we&apos;ve been there. Kindora CRM is designed to solve them.
+            <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-600 text-sm font-semibold mb-4">Features</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Everything You Need in One Platform</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              From constituent profiles to financial tools, Kindora covers every aspect of nonprofit management.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyChoose.map((item) => (
-              <div key={item.number} className="p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#2563eb]/20 hover:shadow-md transition-all duration-300">
-                <div className="text-4xl font-black text-[#2563eb]/20 mb-3">{item.number}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature) => (
+              <div key={feature.title} className="group p-6 rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-gray-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -300,172 +318,111 @@ export default function CRMForNonprofitsPage() {
       </section>
 
       {/* Comparison */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8f9fa] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">CRM Comparison</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              How Kindora compares to other nonprofit CRMs
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Not all CRMs are created equal. See why Kindora is the smarter choice for nonprofits.
-            </p>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">How We Compare</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Kindora vs Other Nonprofit CRMs</h2>
+            <p className="text-lg text-gray-600">See why nonprofits choose Kindora over generic CRM platforms.</p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left px-6 py-4 text-gray-500 font-medium bg-gray-50 w-48">Capability</th>
-                  <th className="px-6 py-4 bg-[#2563eb] text-white font-bold text-center min-w-[140px]">
-                    <div className="flex flex-col items-center gap-1">
-                      <span className="text-xs font-semibold uppercase tracking-wider opacity-80">Best Value</span>
-                      <span className="text-base">Kindora</span>
-                    </div>
-                  </th>
-                  <th className="px-6 py-4 bg-gray-50 text-gray-600 font-semibold text-center min-w-[130px]">Salesforce</th>
-                  <th className="px-6 py-4 bg-gray-50 text-gray-600 font-semibold text-center min-w-[130px]">Bloomerang</th>
-                  <th className="px-6 py-4 bg-gray-50 text-gray-600 font-semibold text-center min-w-[130px]">HubSpot</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { feature: "Donor Management", kindora: true, sf: true, bloomerang: true, hubspot: true },
-                  { feature: "Grant Tracking", kindora: true, sf: "partial", bloomerang: false, hubspot: false },
-                  { feature: "Fundraising Campaigns", kindora: true, sf: true, bloomerang: true, hubspot: "partial" },
-                  { feature: "Client Case Management", kindora: true, sf: "partial", bloomerang: false, hubspot: false },
-                  { feature: "Nonprofit Accounting", kindora: true, sf: false, bloomerang: false, hubspot: false },
-                  { feature: "Volunteer Management", kindora: true, sf: "partial", bloomerang: "partial", hubspot: false },
-                  { feature: "Impact Reporting", kindora: true, sf: true, bloomerang: "partial", hubspot: false },
-                  { feature: "Nonprofit-Specific", kindora: true, sf: "partial", bloomerang: true, hubspot: false },
-                  { feature: "Affordable Pricing", kindora: true, sf: false, bloomerang: true, hubspot: "partial" },
-                  { feature: "Quick Setup (No Consultants)", kindora: true, sf: false, bloomerang: true, hubspot: true },
-                ].map((row, i) => (
-                  <tr key={i} className={`border-b border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
-                    <td className="px-6 py-4 text-gray-700 font-medium">{row.feature}</td>
-                    <td className="px-6 py-4 text-center bg-blue-50/50">
-                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#2563eb] text-white">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                      </span>
-                    </td>
-                    {[row.sf, row.bloomerang, row.hubspot].map((val, j) => (
-                      <td key={j} className="px-6 py-4 text-center">
-                        {val === true ? (
-                          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-600">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                          </span>
-                        ) : val === "partial" ? (
-                          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-yellow-100 text-yellow-600">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M20 12H4" /></svg>
-                          </span>
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-100">
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-gray-500">Feature</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-blue-600">Kindora</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Bloomerang</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Blackbaud</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Salesforce</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={row.feature} className={i < comparisonData.length - 1 ? "border-b border-gray-50" : ""}>
+                      <td className="py-4 px-6 text-sm text-gray-900 font-medium">{row.feature}</td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.kindora === "boolean" ? (
+                          row.kindora ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
                         ) : (
-                          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-400">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
-                          </span>
+                          <span className="text-yellow-500 text-sm">Partial</span>
                         )}
                       </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.bloomerang === "boolean" ? (
+                          row.bloomerang ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.blackbaud === "boolean" ? (
+                          row.blackbaud ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.salesforce === "boolean" ? (
+                          row.salesforce ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
+      {/* FAQs */}
       <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">Who It&apos;s For</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              A CRM for every type of nonprofit
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Whether you&apos;re a social service agency, community organization, or faith-based nonprofit — Kindora adapts to your needs.
-            </p>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-600 text-sm font-semibold mb-4">FAQs</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: "Social Services", description: "Manage client intake, case notes, program enrollments, and outcome tracking alongside donor data." },
-              { name: "Community Organizations", description: "Track membership, event participation, donations, and volunteer engagement all in one CRM." },
-              { name: "Youth & Education", description: "Enroll participants, track program outcomes, manage grants, and communicate with families." },
-              { name: "Faith-Based Nonprofits", description: "Manage congregant giving, event registrations, volunteer rosters, and community outreach programs." },
-              { name: "Housing & Homeless Services", description: "Coordinate client services, track grant compliance, manage donations, and report program impact." },
-              { name: "Health & Human Services", description: "Secure client records, grant reporting, volunteer scheduling, and donor management in one platform." },
-            ].map((useCase) => (
-              <div key={useCase.name} className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                <h3 className="font-bold text-gray-900 mb-2">{useCase.name}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{useCase.description}</p>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="p-6 rounded-2xl bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 lg:py-28 bg-gray-50" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">FAQ</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600">Everything you need to know about Kindora CRM for nonprofits.</p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <details key={idx} className="group bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                  <span className="text-base font-semibold text-gray-900">{faq.question}</span>
-                  <svg className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="px-6 pb-5 pt-1">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-500 via-cyan-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to find the CRM your nonprofit deserves?
-          </h2>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Stop fighting with tools built for businesses. Start using a CRM built for your mission.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your Nonprofit?</h2>
+          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+            Join thousands of nonprofits replacing scattered tools with a single, powerful CRM platform.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/kindora/contact"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
-            >
-              Request a Demo
-              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              href="/kindora/pricing"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
-            >
-              View Pricing
-            </Link>
-          </div>
-          <div className="mt-8">
             <a
               href="https://cad.spaceaiapp.com/kindora"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Try for Free
+              Start Free Trial
+              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
+            <Link
+              href="/kindora/contact"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:border-white/60 rounded-full transition-all duration-300"
+            >
+              Request a Demo
+            </Link>
           </div>
         </div>
       </section>

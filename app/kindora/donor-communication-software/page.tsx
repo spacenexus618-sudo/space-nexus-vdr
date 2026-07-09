@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Donor Communication Software | Nonprofit Outreach | Kindora",
+  title: "Donor Communication Software | Donor Communication Tools | Kindora",
   description:
-    "Kindora donor communication software helps nonprofits connect with supporters through personalized email, SMS, and in-app messaging — with templates, automation, and engagement tracking.",
+    "Kindora donor communication software helps you send personalised thank-yous, automate follow-ups, and build lasting donor relationships — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-communication-software",
   },
   openGraph: {
     title: "Donor Communication Software — Kindora",
-    description: "Connect with donors through personalized email, SMS, and in-app messaging with automation and tracking.",
+    description: "Build stronger donor relationships with personalised communication, automated thank-yous, and engagement tracking.",
     url: "https://spacenexus.net/kindora/donor-communication-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -20,109 +20,138 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Donor Communication Software — Kindora",
-    description: "Personalized email, SMS, and in-app messaging with automation and engagement tracking for nonprofits.",
+    description: "Build stronger donor relationships with personalised communication, automated thank-yous, and engagement tracking.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
     "donor communication software",
-    "nonprofit communication tools",
+    "donor communication tools",
+    "donor communication platform",
+    "donor engagement software",
+    "donor thank you software",
+    "donor acknowledgement software",
+    "donor relations software",
     "donor outreach software",
-    "donor messaging platform",
-    "nonprofit email marketing",
-    "donor SMS software",
-    "donor engagement platform",
-    "nonprofit communication platform",
-    "donor communication system",
-    "donor touchpoint management",
-    "donor message automation",
-    "nonprofit outreach software",
-    "donor email templates",
-    "donor communication workflow",
-    "nonprofit messaging platform",
+    "charity communication software",
+    "NGO communication software",
+    "donor engagement tools",
+    "donor stewardship software",
+    "donor follow up software",
+    "donor appreciation software",
+    "best donor communication software",
   ],
 };
 
-const commFeatures = [
+const benefits = [
   {
-    title: "Multi-Channel Messaging",
-    description: "Reach donors where they are — email, SMS, and in-app messages. Consistent messaging across every channel.",
-    icon: "M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z",
+    metric: "2x",
+    title: "Higher Donor Retention",
+    description: "Personalised, timely communication keeps donors engaged. Organisations using donor communication software retain 2x more donors.",
   },
   {
-    title: "Email Campaigns",
-    description: "Design and send beautiful emails with drag-and-drop builder. Templates for appeals, newsletters, and thank-yous.",
-    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    metric: "100%",
+    title: "Automated Thank-Yous",
+    description: "Every donor receives an immediate, personalised thank-you after every gift — no manual work, no missed acknowledgements.",
   },
   {
-    title: "SMS Outreach",
-    description: "Send text messages for urgent appeals, event reminders, and personalized donor updates.",
-    icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z",
+    metric: "5x",
+    title: "Stronger Relationships",
+    description: "Track every touchpoint, personalise every message, and never let a donor fall through the cracks again.",
   },
   {
-    title: "Automation Workflows",
-    description: "Create automated communication sequences triggered by donor actions — donations, events, birthdays, and more.",
-    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-  },
-  {
-    title: "Personalization",
-    description: "Merge donor data into messages dynamically. Address donors by name, reference their giving, and tailor content.",
-    icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
-  },
-  {
-    title: "Segmentation",
-    description: "Target communications by donor segment — giving level, interests, frequency, recency, and engagement history.",
-    icon: "M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z",
-  },
-  {
-    title: "Engagement Tracking",
-    description: "Monitor open rates, click-throughs, reply rates, and opt-outs. See which messages drive donations.",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-  },
-  {
-    title: "Communication History",
-    description: "Every message sent to a donor is logged on their profile. See the full communication timeline per donor.",
-    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+    metric: "90%",
+    title: "Less Manual Work",
+    description: "Automated workflows handle thank-yous, follow-ups, and re-engagement — freeing your team for high-value relationship building.",
   },
 ];
 
-const stats = [
-  { metric: "Multi-channel", label: "Email, SMS, in-app" },
-  { metric: "Automated", label: "Trigger workflows" },
-  { metric: "Personalized", label: "Donor messaging" },
-  { metric: "Tracked", label: "Engagement analytics" },
+const features = [
+  {
+    title: "Automated Thank-You Emails",
+    description: "Instant, personalised thank-you emails sent immediately after every donation. Donors feel appreciated right away.",
+    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+  },
+  {
+    title: "Personalised Email Campaigns",
+    description: "Send targeted messages based on giving history, interests, and engagement levels — not generic blasts.",
+    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+  {
+    title: "Donor Segmentation",
+    description: "Segment donors by giving level, recency, frequency, programme interest, or custom fields for targeted communication.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+  },
+  {
+    title: "Follow-Up Automation",
+    description: "Automated follow-up sequences for first-time donors, lapsed donors, and major gift prospects.",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+  },
+  {
+    title: "Impact Reports",
+    description: "Automated impact reports showing donors exactly how their gifts made a difference.",
+    icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+  },
+  {
+    title: "Engagement Tracking",
+    description: "Track opens, clicks, event attendance, and giving patterns to understand donor engagement.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+  },
+  {
+    title: "Multi-Channel Communication",
+    description: "Reach donors via email, text, mail, and phone — all tracked in one unified communication history.",
+    icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z",
+  },
+  {
+    title: "Thank-You Call Reminders",
+    description: "Automated reminders for your team to make personal thank-you phone calls to major donors.",
+    icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+  },
+];
+
+const comparisonData = [
+  { feature: "Automated Thank-Yous", kindora: true, mailchimp: false, bloomerang: true, hubspot: false },
+  { feature: "Donor-Specific Templates", kindora: true, mailchimp: false, bloomerang: true, hubspot: false },
+  { feature: "Multi-Channel Tracking", kindora: true, mailchimp: false, bloomerang: false, hubspot: "partial" },
+  { feature: "Impact Reports", kindora: true, mailchimp: false, bloomerang: false, hubspot: false },
+  { feature: "Thank-You Call Reminders", kindora: true, mailchimp: false, bloomerang: false, hubspot: false },
+  { feature: "CRM-Connected Communication", kindora: true, mailchimp: false, bloomerang: true, hubspot: true },
+  { feature: "Nonprofit-Specific Workflows", kindora: true, mailchimp: false, bloomerang: true, hubspot: false },
+  { feature: "Affordable Pricing", kindora: true, mailchimp: true, bloomerang: true, hubspot: false },
 ];
 
 const faqs = [
   {
     question: "What is donor communication software?",
     answer:
-      "Donor communication software centralizes and automates outreach to supporters across email, SMS, and in-app messaging. It helps nonprofits send personalized, timely messages and track engagement.",
+      "Donor communication software is a tool that helps nonprofits send personalised messages to donors, automate thank-yous, track engagement, and build lasting relationships. It goes beyond basic email marketing by integrating with donor data to deliver relevant, timely communication.",
   },
   {
-    question: "What channels does Kindora support?",
+    question: "How does donor communication software improve retention?",
     answer:
-      "Kindora supports email campaigns, SMS messaging, and in-app notifications — all from a single platform with unified donor history.",
+      "Timely, personalised communication is the #1 driver of donor retention. Software that automates thank-yous, sends impact reports, and triggers follow-ups ensures every donor feels appreciated — making them far more likely to give again.",
   },
   {
-    question: "Can Kindora automate donor communications?",
+    question: "Can I automate thank-you emails after donations?",
     answer:
-      "Yes. Kindora has automation workflows triggered by donor actions — new donations, event registrations, birthdays, lapsed giving, and more.",
+      "Yes. Kindora automatically sends personalised thank-you emails immediately after every donation. The email includes the donor's name, gift amount, and fund designation — all sent instantly without any manual work.",
   },
   {
-    question: "Can I personalize messages to donors?",
+    question: "How do I track donor communication in Kindora?",
     answer:
-      "Yes. Kindora dynamically merges donor data like name, giving history, and interests into your messages for personalized outreach.",
+      "Every email, text, phone call, and mail piece is logged in the donor's record. You can see complete communication history for any donor, ensuring your team never sends duplicate messages or misses follow-ups.",
   },
   {
-    question: "Does Kindora track email and SMS engagement?",
+    question: "Is Kindora donor communication software suitable for small nonprofits?",
     answer:
-      "Yes. Kindora tracks open rates, click-throughs, reply rates, and opt-outs so you can measure and improve your communication effectiveness.",
+      "Yes. Kindora is designed for nonprofits of all sizes. Small organisations benefit from automated thank-yous and follow-ups that would be impossible to do manually. Larger organisations benefit from segmentation, multi-channel tracking, and impact reporting.",
   },
-  {
-    question: "Is donor communication history stored?",
-    answer:
-      "Yes. Every message sent to a donor is logged on their profile, providing a complete communication timeline for your team.",
-  },
+];
+
+const platformStats = [
+  { metric: "2x", label: "Higher donor retention" },
+  { metric: "100%", label: "Automated thank-yous" },
+  { metric: "5x", label: "Stronger relationships" },
+  { metric: "90%", label: "Less manual work" },
 ];
 
 const jsonLd = {
@@ -134,7 +163,7 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "Donor communication software for nonprofits — email, SMS, and in-app messaging with automation and engagement tracking.",
+        "Donor communication software — personalised thank-yous, automated follow-ups, and engagement tracking.",
       url: "https://spacenexus.net/kindora/donor-communication-software",
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
     },
@@ -152,49 +181,50 @@ const jsonLd = {
 export default function DonorCommunicationSoftwarePage() {
   return (
     <>
-      <Script id="donor-communication-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Script id="donor-communication-software-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
+      {/* Hero */}
       <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-50/50 via-white to-white" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-100/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-white to-white" />
+        <div className="absolute top-0 right-1/3 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-cyan-100/30 rounded-full blur-3xl" />
         <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 mb-6">
-                <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse mr-2" />
-                <span className="text-sm font-medium text-sky-600">Donor Communication Software</span>
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse mr-2" />
+                <span className="text-sm font-medium text-blue-600">Donor Communication</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-                Connect with Donors{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">Meaningfully</span>
+                Donor Communication Software That{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">Builds Relationships</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Reach donors with the right message, on the right channel, at the right time. Kindora donor communication software makes personalized outreach easy.
+                Send personalised thank-yous, automate follow-ups, and track every donor interaction — all connected to complete donor data.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
-                <Link
-                  href="/kindora/contact"
-                  className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-blue-600 hover:to-sky-700 rounded-full shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all duration-300 hover:-translate-y-0.5"
-                >
-                  Request a Demo
-                  <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
                 <a
                   href="https://cad.spaceaiapp.com/kindora"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-cyan-600 hover:to-blue-700 rounded-full shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Try for Free
+                  <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </a>
+                <Link
+                  href="/kindora/contact"
+                  className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300"
+                >
+                  Request a Demo
+                </Link>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-gray-500">
@@ -209,52 +239,61 @@ export default function DonorCommunicationSoftwarePage() {
               </div>
             </div>
 
+            {/* Visual: Donor Communication */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-sky-50 to-blue-50 rounded-3xl" />
-              <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+              <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl" />
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center">
+                  <h3 className="text-sm font-bold text-gray-900">Donor Communication</h3>
+                  <span className="text-xs px-3 py-1 bg-green-500/10 text-green-600 rounded-full font-semibold">Automated</span>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-3 bg-green-50 rounded-xl border border-green-100">
+                    <div className="w-10 h-10 rounded-lg bg-green-500 flex items-center justify-center">
                       <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
                     </div>
-                    <span className="text-sm font-semibold text-gray-900">Communications</span>
-                  </div>
-                  <span className="px-3 py-1 bg-sky-100 text-sky-700 text-xs font-medium rounded-full">
-                    Active
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-3 gap-3 mb-6">
-                  {[
-                    { label: "Sent This Month", value: "12.4K" },
-                    { label: "Avg Open Rate", value: "34%" },
-                    { label: "Avg CTR", value: "4.2%" },
-                  ].map((s) => (
-                    <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
-                      <p className="text-lg font-bold text-gray-900">{s.value}</p>
-                      <p className="text-xs text-gray-500">{s.label}</p>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-900">Thank-You Email Sent</p>
+                      <p className="text-[10px] text-gray-500">To: Sarah Johnson — $250 gift</p>
                     </div>
-                  ))}
+                    <span className="text-[10px] text-green-600 font-semibold">Delivered</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                    <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-900">Follow-Up Sequence</p>
+                      <p className="text-[10px] text-gray-500">Day 3 of 5 — Re-engagement</p>
+                    </div>
+                    <span className="text-[10px] text-blue-600 font-semibold">Running</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-3 bg-purple-50 rounded-xl border border-purple-100">
+                    <div className="w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-900">Impact Report</p>
+                      <p className="text-[10px] text-gray-500">Monthly programme update</p>
+                    </div>
+                    <span className="text-[10px] text-purple-600 font-semibold">Scheduled</span>
+                  </div>
                 </div>
-
-                <div className="space-y-2">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Recent Campaigns</p>
+                <div className="grid grid-cols-3 gap-3 mt-6">
                   {[
-                    { name: "Summer Appeal", channel: "Email", sent: "4,280" },
-                    { name: "Event Reminder", channel: "SMS", sent: "1,450" },
-                    { name: "Thank You Series", channel: "Auto", sent: "892" },
-                  ].map((c) => (
-                    <div key={c.name} className="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 border border-gray-100">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-sky-400" />
-                        <div>
-                          <span className="text-sm font-semibold text-gray-900">{c.name}</span>
-                          <span className="text-xs text-gray-400 ml-2">{c.channel}</span>
-                        </div>
-                      </div>
-                      <span className="text-xs text-gray-500">{c.sent} sent</span>
+                    { label: "Thank-Yous Sent", value: "847" },
+                    { label: "Retention Rate", value: "78%" },
+                    { label: "Response Rate", value: "34%" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
+                      <p className="text-sm font-bold text-gray-900">{stat.value}</p>
+                      <p className="text-[10px] text-gray-500">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -264,135 +303,178 @@ export default function DonorCommunicationSoftwarePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white border-t border-gray-100">
+      {/* Platform Stats */}
+      <section className="py-16 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
+            {platformStats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl lg:text-4xl font-black text-sky-500 mb-1">{stat.metric}</div>
-                <div className="text-sm text-gray-500 font-medium">{stat.label}</div>
+                <p className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600">{stat.metric}</p>
+                <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-white">
+      {/* Benefits */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-sky-500 uppercase tracking-wider mb-3">Features</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Communicate with purpose</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Reach every donor with the right message, on their preferred channel.
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">Why Communication Matters</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Communication Builds Loyalty</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Donors give because they care. Communication software ensures they feel appreciated, informed, and connected to your mission.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {commFeatures.map((feature) => (
-              <div
-                key={feature.title}
-                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-sky-500/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center mb-4 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                  <svg className="w-5 h-5 text-sky-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="grid md:grid-cols-2 gap-8">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="group p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white text-xl font-bold mb-5">
+                  {benefit.metric}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-600 text-sm font-semibold mb-4">Features</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Everything You Need to Connect</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              From automated thank-yous to impact reports, Kindora covers every aspect of donor communication.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature) => (
+              <div key={feature.title} className="group p-6 rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-gray-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
                   </svg>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-600 transition-colors">{feature.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8f9fa] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Comparison */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-sky-500 uppercase tracking-wider mb-3">Workflow</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">From message to connection</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">A simple communication workflow.</p>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 text-sm font-semibold mb-4">How We Compare</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Kindora vs Other Communication Tools</h2>
+            <p className="text-lg text-gray-600">See why nonprofits choose Kindora over generic email and communication tools.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Segment", description: "Choose your audience based on donor data and behavior." },
-              { step: "02", title: "Create", description: "Craft your message with templates and personalization." },
-              { step: "03", title: "Send", description: "Deliver via email, SMS, or in-app — manually or automated." },
-              { step: "04", title: "Track", description: "Monitor opens, clicks, and conversions to improve." },
-            ].map((item) => (
-              <div key={item.step} className="text-center p-6">
-                <div className="w-14 h-14 rounded-full bg-sky-500 text-white text-xl font-black flex items-center justify-center mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-100">
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-gray-500">Feature</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-blue-600">Kindora</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Mailchimp</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">Bloomerang</th>
+                    <th className="text-center py-4 px-6 text-sm font-semibold text-gray-500">HubSpot</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={row.feature} className={i < comparisonData.length - 1 ? "border-b border-gray-50" : ""}>
+                      <td className="py-4 px-6 text-sm text-gray-900 font-medium">{row.feature}</td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.kindora === "boolean" ? (
+                          row.kindora ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.mailchimp === "boolean" ? (
+                          row.mailchimp ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.bloomerang === "boolean" ? (
+                          row.bloomerang ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        {typeof row.hubspot === "boolean" ? (
+                          row.hubspot ? <span className="text-green-500 text-lg">&#10003;</span> : <span className="text-red-400 text-lg">&#10007;</span>
+                        ) : (
+                          <span className="text-yellow-500 text-sm">Partial</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-600 text-sm font-semibold mb-4">FAQs</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          </div>
+
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="p-6 rounded-2xl bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-white" id="faq">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-sky-500 uppercase tracking-wider mb-3">FAQ</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600">Everything you need to know about donor communication software.</p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <details key={idx} className="group bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                  <span className="text-base font-semibold text-gray-900">{faq.question}</span>
-                  <svg className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="px-6 pb-5 pt-1">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#f8f9fa] to-white">
+      {/* CTA */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-500 via-cyan-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to connect with your donors?
-          </h2>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Get started with Kindora donor communication software today.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Build Stronger Donor Relationships?</h2>
+          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+            Join thousands of nonprofits replacing generic email tools with donor-focused communication software.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/kindora/contact"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-blue-600 hover:to-sky-700 rounded-full shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all duration-300"
-            >
-              Get Started Today
-              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              href="/kindora/pricing"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-sky-600 transition-colors"
-            >
-              View Pricing
-            </Link>
-          </div>
-          <div className="mt-8">
             <a
               href="https://cad.spaceaiapp.com/kindora"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold text-sky-500 bg-sky-50 hover:bg-sky-100 rounded-full transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              Try for Free
+              Start Free Trial
+              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
+            <Link
+              href="/kindora/contact"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 hover:border-white/60 rounded-full transition-all duration-300"
+            >
+              Request a Demo
+            </Link>
           </div>
         </div>
       </section>

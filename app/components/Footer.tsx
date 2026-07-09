@@ -158,22 +158,32 @@ const footerColumns: FooterColumn[] = [
       { name: "Data Room Security", href: "/data-room-security" },
       { name: "Data Room Due Diligence", href: "/data-room-due-diligence" },
       { name: "Due Diligence Software", href: "/due-diligence-software" },
+      { name: "Best Data Room for Startups", href: "/best-data-room-for-startups" },
+      { name: "VDR Software", href: "/vdr-software" },
+      { name: "VDR Guide", href: "/vdr-guide" },
+    ],
+  },
+  {
+    title: "More Guides",
+    links: [
       { name: "Virtual Deal Management", href: "/virtual-deal-management" },
       { name: "Deal Management Software", href: "/deal-management-software" },
       { name: "Deal Room Software", href: "/deal-room-software" },
+      { name: "Deal Collaboration Platform", href: "/deal-collaboration-platform" },
       { name: "M&A Platform", href: "/ma-platform" },
       { name: "Merger & Acquisition SW", href: "/merger-acquisition-software" },
+      { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
       { name: "Online Due Diligence", href: "/online-due-diligence-platform" },
       { name: "Business Acquisition SW", href: "/business-acquisition-software" },
+      { name: "Vendor Due Diligence SW", href: "/vendor-due-diligence-software" },
       { name: "Board Portals", href: "/board-portals" },
       { name: "Board Portal Software", href: "/board-portal-software" },
       { name: "Board Document Portal", href: "/board-document-portal" },
-      { name: "Deal Collaboration Platform", href: "/deal-collaboration-platform" },
-      { name: "Vendor Due Diligence SW", href: "/vendor-due-diligence-software" },
       { name: "Legal Document Management", href: "/legal-document-management" },
       { name: "Investor Due Diligence", href: "/investor-due-diligence" },
       { name: "Investor DD Platform", href: "/fundraising-and-investor-due-diligence" },
-      { name: "Best Data Room for Startups", href: "/best-data-room-for-startups" },
+      { name: "Secure Document Sharing", href: "/secure-document-sharing" },
+      { name: "Data Room Comparison", href: "/vdr-comparison" },
     ],
   },
   {
@@ -184,7 +194,6 @@ const footerColumns: FooterColumn[] = [
       { name: "Demo", href: "/demo" },
       { name: "Get Started", href: "/get-started" },
       { name: "Ecosystem", href: "/ecosystem" },
-      { name: "Kindora", href: "/kindora" },
       { name: "Try for Free", href: "https://cad.spaceaiapp.com/vdr", external: true },
     ],
   },
@@ -294,7 +303,7 @@ export default function Footer() {
 
           <nav
             aria-label="Footer navigation"
-            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
+            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8"
           >
             {footerColumns.map((column) => (
               <div key={column.title}>

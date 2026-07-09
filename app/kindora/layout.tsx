@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import KindoraHeader from "./components/KindoraHeader";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
-
-// Replace with your Kindora-specific GA4 measurement ID when available.
-// Using the same property as SpaceNexus for now — create a separate GA4
-// property for Kindora at analytics.google.com and update this value.
-const KINDORA_GA_ID = "G-18DD7WWPHE";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spacenexus.net"),
@@ -85,21 +78,7 @@ export default function KindoraLayout({
   return (
     <>
       <BreadcrumbSchema />
-      <KindoraHeader />
       {children}
-
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${KINDORA_GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="kindora-google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${KINDORA_GA_ID}');
-        `}
-      </Script>
     </>
   );
 }
