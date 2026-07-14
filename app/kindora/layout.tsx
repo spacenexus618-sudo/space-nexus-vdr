@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
+import KindoraNav from "./components/KindoraNav";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spacenexus.net"),
@@ -78,6 +79,7 @@ export default function KindoraLayout({
   return (
     <>
       <BreadcrumbSchema />
+      <KindoraNav />
       {children}
     </>
   );

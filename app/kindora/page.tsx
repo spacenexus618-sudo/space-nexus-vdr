@@ -17,8 +17,6 @@ import {
   AnimatedHeroDashboard,
   AnimatedScreenshotGallery,
 } from "./components/AnimatedSections";
-
-
 export const metadata: Metadata = {
   title: "Kindora | All-in-One Nonprofit Management Software",
   description:
@@ -62,7 +60,7 @@ export const metadata: Metadata = {
     "grant tracking software for nonprofits",
   ],
 };
- 
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -367,7 +365,6 @@ export default function KindoraHomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
       {/* Hero Section */}
       <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden">
         {/* Background decorations */}
@@ -1110,6 +1107,6 @@ export default function KindoraHomePage() {
           </p>
         </div>
       </section>
-</>
+    </>
   );
 }

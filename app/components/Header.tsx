@@ -348,7 +348,7 @@ const industries = [
 
 export default function Header() {
   const pathname = usePathname();
-  const isKindora = pathname?.startsWith("/kindora");
+  const isKindora = typeof pathname === "string" && pathname.startsWith("/kindora");
 
   // All hooks must be declared before any early returns (React Rules of Hooks)
   const [isScrolled, setIsScrolled] = useState(false);
@@ -360,6 +360,7 @@ export default function Header() {
     useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -367,6 +368,10 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   // Close dropdowns when route changes
@@ -377,6 +382,8 @@ export default function Header() {
     setProductsOpen(false);
   }, [pathname]);
 
+  // During SSR, pathname is null — don't render to prevent flash of wrong content
+  if (pathname === null) return null;
   // Kindora has its own KindoraHeader rendered in kindora/layout.tsx
   if (isKindora) return null;
 
@@ -483,18 +490,8 @@ export default function Header() {
                       className={`flex items-start gap-3 p-3 rounded-xl transition-colors group ${!isKindora ? "bg-blue-50" : "hover:bg-gray-50"}`}
                     >
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-5 h-5 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                          />
+                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                         </svg>
                       </div>
                       <div>
@@ -508,23 +505,11 @@ export default function Header() {
                     </Link>
                     <Link
                       href="/kindora"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={`flex items-start gap-3 p-3 rounded-xl transition-colors group ${isKindora ? "bg-blue-50" : "hover:bg-gray-50"}`}
                     >
                       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-5 h-5 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                          />
+                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                       </div>
                       <div>
@@ -833,49 +818,23 @@ export default function Header() {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                          />
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                         </svg>
                       </div>
-                      <span className="text-sm font-medium">
-                        Space Nexus VDR
-                      </span>
+                      <span className="text-sm font-medium">Space Nexus VDR</span>
                     </Link>
                     <Link
                       href="/kindora"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${isKindora ? "bg-blue-50 text-[#2563eb]" : "text-gray-600 hover:bg-gray-50"}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                          />
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                       </div>
-                      <span className="text-sm font-medium">
-                        Kindora NGO OS
-                      </span>
+                      <span className="text-sm font-medium">Kindora NGO OS</span>
                     </Link>
                   </div>
                 )}
