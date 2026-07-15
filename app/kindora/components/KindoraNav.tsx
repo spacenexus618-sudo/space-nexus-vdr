@@ -61,8 +61,10 @@ export default function KindoraNav() {
       >
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link
+          <a
             href="/kindora"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2.5 group"
             aria-label="Kindora Home"
           >
@@ -81,7 +83,7 @@ export default function KindoraNav() {
                 KINDORA
               </span>
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -108,8 +110,10 @@ export default function KindoraNav() {
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 mb-2">
                       Our Products
                     </p>
-                    <Link
+                    <a
                       href="/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                       onClick={() => setProductsOpen(false)}
                     >
@@ -126,9 +130,11 @@ export default function KindoraNav() {
                           Virtual Data Room for M&A & due diligence
                         </p>
                       </div>
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="/kindora"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                       onClick={() => setProductsOpen(false)}
                     >
@@ -145,7 +151,7 @@ export default function KindoraNav() {
                           Complete operating system for nonprofits
                         </p>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               )}
