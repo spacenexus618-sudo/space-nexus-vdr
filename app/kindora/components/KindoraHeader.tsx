@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const featureLinks = [
   {
@@ -72,10 +73,13 @@ const featureLinks = [
 ];
 
 export default function KindoraHeader() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [mobileFeaturesOpen, setMobileFeaturesOpen] = useState(false);
+
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -132,7 +136,7 @@ export default function KindoraHeader() {
               onMouseEnter={() => setFeaturesOpen(true)}
               onMouseLeave={() => setFeaturesOpen(false)}
             >
-              <button className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors">
+              <button className={`flex items-center px-4 py-2 text-sm font-medium transition-colors ${isActive("/kindora/features") ? "text-[#2563eb]" : "text-gray-700 hover:text-[#2563eb]"}`}>
                 Features
                 <svg
                   className={`ml-1 w-4 h-4 transition-transform ${featuresOpen ? "rotate-180" : ""}`}
@@ -203,25 +207,25 @@ export default function KindoraHeader() {
 
             <Link
               href="/kindora/solutions"
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
+              className={`px-4 py-2 text-sm font-medium transition-colors ${isActive("/kindora/solutions") ? "text-[#2563eb]" : "text-gray-700 hover:text-[#2563eb]"}`}
             >
               Solutions
             </Link>
             <Link
               href="/kindora/pricing"
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
+              className={`px-4 py-2 text-sm font-medium transition-colors ${isActive("/kindora/pricing") ? "text-[#2563eb]" : "text-gray-700 hover:text-[#2563eb]"}`}
             >
               Pricing
             </Link>
             <Link
               href="/kindora/blog"
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
+              className={`px-4 py-2 text-sm font-medium transition-colors ${isActive("/kindora/blog") ? "text-[#2563eb]" : "text-gray-700 hover:text-[#2563eb]"}`}
             >
               Blog
             </Link>
             <Link
               href="/kindora/contact"
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
+              className={`px-4 py-2 text-sm font-medium transition-colors ${isActive("/kindora/contact") ? "text-[#2563eb]" : "text-gray-700 hover:text-[#2563eb]"}`}
             >
               Contact
             </Link>
@@ -346,28 +350,28 @@ export default function KindoraHeader() {
 
             <Link
               href="/kindora/solutions"
-              className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className={`block px-4 py-3 text-base font-medium rounded-lg ${isActive("/kindora/solutions") ? "text-[#2563eb] bg-[#2563eb]/5" : "text-gray-700 hover:bg-gray-50"}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Solutions
             </Link>
             <Link
               href="/kindora/pricing"
-              className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className={`block px-4 py-3 text-base font-medium rounded-lg ${isActive("/kindora/pricing") ? "text-[#2563eb] bg-[#2563eb]/5" : "text-gray-700 hover:bg-gray-50"}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Pricing
             </Link>
             <Link
               href="/kindora/blog"
-              className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className={`block px-4 py-3 text-base font-medium rounded-lg ${isActive("/kindora/blog") ? "text-[#2563eb] bg-[#2563eb]/5" : "text-gray-700 hover:bg-gray-50"}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/kindora/contact"
-              className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className={`block px-4 py-3 text-base font-medium rounded-lg ${isActive("/kindora/contact") ? "text-[#2563eb] bg-[#2563eb]/5" : "text-gray-700 hover:bg-gray-50"}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact

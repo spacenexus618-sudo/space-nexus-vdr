@@ -853,8 +853,6 @@ export default function Header() {
                     </Link>
                     <Link
                       href="/kindora"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${isKindora ? "bg-blue-50 text-[#2563eb]" : "text-gray-600 hover:bg-gray-50"}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >

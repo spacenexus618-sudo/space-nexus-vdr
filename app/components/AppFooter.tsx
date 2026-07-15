@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import Footer from "./Footer";
 import KindoraFooter from "../kindora/components/KindoraFooter";
+import GlobalLocations from "../kindora/components/GlobalLocations";
 
 export default function AppFooter() {
   const pathname = usePathname();
@@ -17,6 +18,6 @@ export default function AppFooter() {
     return <Footer />;
   }
 
-  if (pathname?.startsWith("/kindora")) return <KindoraFooter />;
+  if (pathname?.startsWith("/kindora")) return <><GlobalLocations /><KindoraFooter /></>;
   return <Footer />;
 }
