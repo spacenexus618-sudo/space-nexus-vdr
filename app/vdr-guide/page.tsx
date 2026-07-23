@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Virtual Data Room Provider Guide 2026 | Complete Resource | SpaceNexus",
+    title: "Virtual Data Room Guide 2026 — How to Choose & Use a VDR | SpaceNexus",
     description: "The ultimate guide to virtual data room providers. Compare features, pricing, security, and select the right VDR for your M&A, fundraising, or legal transaction.",
     alternates: {
         canonical: "https://spacenexus.net/vdr-guide",
     },
     openGraph: {
-        title: "Virtual Data Room Provider Guide 2026 | SpaceNexus",
+        title: "Virtual Data Room Guide 2026 | SpaceNexus",
         description:
             "The ultimate guide to virtual data room providers. Compare features, pricing, security, and select the right VDR.",
         url: "https://spacenexus.net/vdr-guide",
@@ -17,22 +18,20 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Complete Guide to Virtual Data Room Providers 2026 — SpaceNexus",
+        title: "Complete Virtual Data Room Guide 2026 — How to Choose & Use a VDR | SpaceNexus",
         description:
             "Learn how to select, implement, and maximize your virtual data room provider. Includes pricing, features, security, and best practices.",
     },
     keywords: [
-        "virtual data room provider guide",
-        "how to choose a VDR provider",
-        "VDR provider selection",
-        "virtual data room software guide",
+        "virtual data room guide",
+        "how to choose a VDR",
+        "VDR selection guide",
         "VDR best practices",
         "VDR pricing guide",
         "VDR security guide",
-        "VDR provider comparison",
-        "VDR implementation guide",
-        "virtual data room requirements",
         "VDR evaluation checklist",
+        "virtual data room requirements",
+        "VDR implementation guide",
         "VDR provider review",
     ],
 };
@@ -779,7 +778,11 @@ export default function VDRGuidePage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>

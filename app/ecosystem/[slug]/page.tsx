@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ecosystemProducts, getProductBySlug } from "../data";
+import LastUpdated from "../../components/LastUpdated";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -285,6 +286,11 @@ export default async function EcosystemProductPage({ params }: PageProps) {
             </Link>
           </div>
         </section>
+
+        {/* Last Updated */}
+        <div className="py-6 text-center border-t border-gray-100 mt-8 bg-gray-900/50">
+          <LastUpdated date="2026-07-19" />
+        </div>
       </main>
     </>
   );

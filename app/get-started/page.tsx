@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import DemoRequest from "@/app/components/DemoRequest";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Get Started with SpaceNexus — Free Virtual Data Room Trial | SpaceNexus",
@@ -69,6 +70,13 @@ const faqSchema = {
       applicationCategory: "BusinessApplication",
       url: "https://spacenexus.net",
       aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5", worstRating: "1" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Get Started", item: "https://spacenexus.net/get-started" },
+      ],
     },
   ],
 };
@@ -148,7 +156,11 @@ export default function GetStartedPage() {
               </div>
             ))}
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

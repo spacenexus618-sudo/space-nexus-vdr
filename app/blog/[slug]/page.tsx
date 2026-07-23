@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts, authorProfiles } from "../data/posts";
+import LastUpdated from "../../components/LastUpdated";
 
 type Params = Promise<{ slug: string }>;
 
@@ -61,9 +62,41 @@ function renderContent(markdown: string) {
                 </li>
             );
         } else if (line.startsWith("| ")) {
-            // Simple table rendering - skip for now, just render as-is
+            // Collect all table lines
+            const tableLines: string[] = [];
+            while (i < lines.length && lines[i].startsWith("| ")) {
+                tableLines.push(lines[i]);
+                i++;
+            }
+            i--; // Adjust for loop increment
+
+            // Parse table
+            const headerCells = tableLines[0].split("|").filter(c => c.trim()).map(c => c.trim());
+            const bodyRows = tableLines.slice(2).filter(r => !r.match(/^\|[\s-|]+\|$/)).map(r =>
+                r.split("|").filter(c => c.trim()).map(c => c.trim())
+            );
+
             elements.push(
-                <p key={key++} className="text-xs text-gray-500 font-mono">{line}</p>
+                <div key={key++} className="overflow-x-auto my-4">
+                    <table className="w-full text-sm border border-gray-200 rounded-lg">
+                        <thead>
+                            <tr className="bg-gray-50">
+                                {headerCells.map((cell, ci) => (
+                                    <th key={ci} className="px-4 py-2 text-left font-semibold text-gray-900 border-b border-gray-200">{cell}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {bodyRows.map((row, ri) => (
+                                <tr key={ri} className="border-b border-gray-100 last:border-0">
+                                    {row.map((cell, ci) => (
+                                        <td key={ci} className="px-4 py-2 text-gray-600">{cell}</td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             );
         } else if (line.startsWith("```")) {
             // code block start/end
@@ -79,6 +112,36 @@ function renderContent(markdown: string) {
         }
     }
     return elements;
+}
+
+function extractFaqItems(content: string): { question: string; answer: string }[] {
+    const faqSectionMatch = content.match(/## Frequently Asked Questions\n([\s\S]*?)(?=\n## |\n$)/);
+    if (!faqSectionMatch) return [];
+
+    const faqBlock = faqSectionMatch[1];
+    const items: { question: string; answer: string }[] = [];
+    const lines = faqBlock.split("\n").map(l => l.trim()).filter(l => l.length > 0);
+
+    let currentQuestion = "";
+    let currentAnswer = "";
+
+    for (const line of lines) {
+        if (line.startsWith("**") && line.endsWith("**")) {
+            if (currentQuestion && currentAnswer) {
+                items.push({ question: currentQuestion, answer: currentAnswer.trim() });
+            }
+            currentQuestion = line.replace(/\*\*/g, "");
+            currentAnswer = "";
+        } else if (currentQuestion) {
+            currentAnswer += (currentAnswer ? " " : "") + line;
+        }
+    }
+
+    if (currentQuestion && currentAnswer) {
+        items.push({ question: currentQuestion, answer: currentAnswer.trim() });
+    }
+
+    return items;
 }
 
 export default async function BlogPostPage({ params }: { params: Params }) {
@@ -104,6 +167,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 url: `https://spacenexus.net/about#${authorProfile.slug}`,
                 description: authorProfile.bio,
                 sameAs: [authorProfile.linkedin],
+                hasCredential: authorProfile.credentials,
             }),
         },
         publisher: {
@@ -128,6 +192,17 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         ],
     };
 
+    const faqItems = extractFaqItems(post.content);
+    const faqSchema = faqItems.length > 0 ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+    } : null;
+
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             {/* JSON-LD Article Schema */}
@@ -140,6 +215,13 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
+            {faqSchema && (
+                <script
+                    id="blogpost-faq"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                />
+            )}
 
             {/* Breadcrumb */}
             <div className="bg-white border-b border-gray-100">
@@ -270,6 +352,11 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                         Talk to Founders →
                     </Link>
                 </div>
+            </div>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
             </div>
 
             {/* Related Posts */}

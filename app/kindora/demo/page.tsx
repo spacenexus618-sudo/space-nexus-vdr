@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import KindoraDemoRequest from "../components/KindoraDemoRequest";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Request a Demo | Kindora NGO OS",
@@ -310,7 +311,11 @@ export default function KindoraDemoPage() {
               </div>
             </div>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

@@ -105,7 +105,7 @@ export default function JsonLd() {
       "Enterprise Virtual Data Room for secure M&A due diligence, capital raising, and document management. Built on Zero Trust architecture with AES-256 encryption and SOC 2 Type II compliance.",
     offers: {
       "@type": "Offer",
-      price: "149",
+      price: "Contact for pricing",
       priceCurrency: "USD",
       description: "Transparent, published pricing — Enterprise plans available",
     },

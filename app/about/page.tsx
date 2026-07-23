@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { authorProfiles } from "../blog/data/posts";
+import LastUpdated from "../components/LastUpdated";
 //about
 const teamMembers = Object.values(authorProfiles);
 
@@ -270,6 +271,11 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div>
         </div>
     );
 }

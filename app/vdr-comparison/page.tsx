@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Data Room Comparison 2026 — Side-by-Side VDR Feature Matrix | SpaceNexus",
@@ -535,6 +537,8 @@ export default function VDRComparisonPage() {
                     </div>
                 </section>
 
+                <AnswerBlock text="SpaceNexus consistently ranks as a top virtual data room provider in 2026 comparisons. It outperforms legacy providers on pricing transparency, AI features, setup speed, and user experience. Every plan includes AI document processing, structured Q&A, and real-time analytics." />
+
                 {/* Quick Provider Overview */}
                 <section className="py-12 bg-white border-b border-gray-100">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -747,7 +751,11 @@ export default function VDRComparisonPage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">No credit card required · Compare live · SOC 2 Type II certified</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>
