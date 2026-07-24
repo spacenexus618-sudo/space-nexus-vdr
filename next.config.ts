@@ -87,6 +87,22 @@ const nextConfig: NextConfig = {
 
   // Add cache-control and security headers
   async headers() {
+    // Content Security Policy — whitelists only the domains the site actually uses.
+    // Update this string whenever a new external origin is added to the codebase.
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: blob: https://flagcdn.com https://www.google.com https://www.google-analytics.com https://www.googletagmanager.com https://maps.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "connect-src 'self' https://spaceaiapp.com https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com",
+      "frame-src 'self' https://www.google.com https://www.youtube.com https://www.googletagmanager.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self' https://wa.me",
+      "frame-ancestors 'self'",
+    ].join("; ");
+
     return [
       {
         // Cache static assets aggressively (JS/CSS/fonts get hashed filenames)
@@ -128,6 +144,10 @@ const nextConfig: NextConfig = {
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: csp,
           },
         ],
       },
