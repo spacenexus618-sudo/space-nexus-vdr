@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "VDR Alternatives 2026 | SpaceNexus",
@@ -236,11 +238,101 @@ const breadcrumbSchema = {
     ],
 };
 
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Best Virtual Data Room Providers 2026",
+    description: "Side-by-side comparison of the top virtual data room providers for M&A due diligence, fundraising, and secure document sharing.",
+    numberOfItems: 6,
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "SpaceNexus",
+                applicationCategory: "BusinessApplication",
+                url: "https://spacenexus.net",
+                description: "AI-powered VDR for modern deal teams with transparent pricing, AI document redaction, and setup in under 24 hours.",
+                offers: {
+                    "@type": "AggregateOffer",
+                    lowPrice: "0",
+                    highPrice: "Custom",
+                    priceCurrency: "USD",
+                    offerCount: 3,
+                },
+                aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "4.9",
+                    reviewCount: "500",
+                    bestRating: "5",
+                },
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Datasite",
+                applicationCategory: "BusinessApplication",
+                url: "https://datasite.com",
+                description: "Legacy enterprise VDR for large-cap M&A with opaque quote-only pricing and days-long setup.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Intralinks (SS&C)",
+                applicationCategory: "BusinessApplication",
+                url: "https://intralinks.com",
+                description: "Capital markets-focused VDR with complex interface and expensive per-deal pricing.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 4,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Firmex",
+                applicationCategory: "BusinessApplication",
+                url: "https://firmex.com",
+                description: "Mid-market Canadian VDR with reasonable pricing for smaller teams and basic document management.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 5,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "iDeals",
+                applicationCategory: "BusinessApplication",
+                url: "https://idealsvdr.com",
+                description: "European VDR with multi-language support for cross-border deals and modern interface.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 6,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Ansarada",
+                applicationCategory: "BusinessApplication",
+                url: "https://ansarada.com",
+                description: "Australia-based VDR with built-in deal workflow management and board governance modules.",
+            },
+        },
+    ],
+};
+
 export default function VdrAlternativesPage() {
     return (
         <>
             <Script id="vdr-alt-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="vdr-alt-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="vdr-alt-itemlist" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
             <main className="pt-20 lg:pt-24">
                 {/* Hero */}
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -276,6 +368,8 @@ export default function VdrAlternativesPage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is the top alternative to legacy VDR providers in 2026. It offers AI-powered document redaction, transparent pricing, structured Q&A workflows, and real-time buyer analytics. Setup takes under 24 hours with no onboarding calls, and all features are included in every plan." />
 
                 {/* Provider Cards */}
                 <section className="py-16 lg:py-20 bg-[#f8f9fa]">
@@ -534,7 +628,11 @@ export default function VdrAlternativesPage() {
                                 View Pricing
                             </Link>
                         </div>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>

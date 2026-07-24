@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Corporate Development | SpaceNexus",
@@ -183,6 +184,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a corp dev data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A corporate development data room is a secure platform for managing acquisition target documents, integration planning materials, and deal team collaboration during M&A processes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus support corporate development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides multi-deal room management, target company document organization, buyer-seller workflow templates, and post-merger integration document hubs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can corp dev teams run multiple acquisitions in SpaceNexus?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus supports unlimited deal rooms with separate permission structures, allowing corporate development teams to manage multiple acquisitions simultaneously.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is a corp dev data room?",
+    answer: "A corporate development data room is a secure platform for managing acquisition target documents, integration planning materials, and deal team collaboration during M&A processes.",
+  },
+  {
+    question: "How does SpaceNexus support corporate development?",
+    answer: "SpaceNexus provides multi-deal room management, target company document organization, buyer-seller workflow templates, and post-merger integration document hubs.",
+  },
+  {
+    question: "Can corp dev teams run multiple acquisitions in SpaceNexus?",
+    answer: "Yes. SpaceNexus supports unlimited deal rooms with separate permission structures, allowing corporate development teams to manage multiple acquisitions simultaneously.",
+  },
+];
+
 export default function CorporateDevelopmentPage() {
   return (
     <>
@@ -197,6 +244,11 @@ export default function CorporateDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="corpdev-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -474,7 +526,26 @@ export default function CorporateDevelopmentPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A data room providers →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Investment Banking | SpaceNexus",
@@ -189,6 +190,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is an investment banking data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An investment banking data room is a secure virtual workspace used to share confidential deal documents with bidders, advisors, and regulatory parties during M&A and capital markets transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus support IB workflows?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides structured Q&A workflows, bidder engagement analytics, dynamic watermarking, and tiered access controls designed for sell-side M&A and capital raising processes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is SpaceNexus used by investment banks?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus is used by boutique and mid-market investment banks for M&A advisory, capital raising, restructuring, and private capital transactions.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is an investment banking data room?",
+    answer: "An investment banking data room is a secure virtual workspace used to share confidential deal documents with bidders, advisors, and regulatory parties during M&A and capital markets transactions.",
+  },
+  {
+    question: "How does SpaceNexus support IB workflows?",
+    answer: "SpaceNexus provides structured Q&A workflows, bidder engagement analytics, dynamic watermarking, and tiered access controls designed for sell-side M&A and capital raising processes.",
+  },
+  {
+    question: "Is SpaceNexus used by investment banks?",
+    answer: "Yes. SpaceNexus is used by boutique and mid-market investment banks for M&A advisory, capital raising, restructuring, and private capital transactions.",
+  },
+];
+
 export default function InvestmentBankingPage() {
   return (
     <>
@@ -203,6 +250,11 @@ export default function InvestmentBankingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="ib-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -583,7 +635,26 @@ export default function InvestmentBankingPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

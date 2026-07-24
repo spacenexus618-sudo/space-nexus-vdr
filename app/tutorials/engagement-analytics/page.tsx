@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Engagement Analytics — SpaceNexus Video Tutorial | SpaceNexus",
@@ -12,6 +13,22 @@ export const metadata: Metadata = {
 
 const videoSchema = { "@context": "https://schema.org", "@type": "VideoObject", name: "Engagement Analytics for Sell-Side", description: "Tutorial on using engagement analytics to identify the most serious bidders.", thumbnailUrl: "https://spacenexus.net/tutorials/engagement-analytics/thumbnail.png", uploadDate: "2026-06-10", duration: "PT11M", contentUrl: "https://spacenexus.net/tutorials/engagement-analytics", embedUrl: "https://spacenexus.net/tutorials/engagement-analytics", publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" } };
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" }, { "@type": "ListItem", position: 2, name: "Tutorials", item: "https://spacenexus.net/tutorials" }, { "@type": "ListItem", position: 3, name: "Engagement Analytics", item: "https://spacenexus.net/tutorials/engagement-analytics" }] };
+
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Use Engagement Analytics to Identify Serious Bidders",
+    description: "Use engagement analytics to identify the most serious bidders through read heatmaps, time-on-document metrics, and bidder comparison dashboards.",
+    totalTime: "PT11M",
+    step: [
+        { "@type": "HowToStep", name: "Review engagement dashboard", text: "Overview of the buyer engagement dashboard — what is tracked and how to read it." },
+        { "@type": "HowToStep", name: "Analyze engagement scores", text: "Understand how the engagement score is calculated and what high vs low scores mean for the process." },
+        { "@type": "HowToStep", name: "Read document heatmaps", text: "Read document heatmaps to see which sections bidders are spending the most time on." },
+        { "@type": "HowToStep", name: "Compare bidder activity", text: "Side-by-side comparison of bidder activity to identify the most engaged and serious buyers." },
+        { "@type": "HowToStep", name: "Analyze time-on-document", text: "Review how long bidders are spending on key documents and what that signals about their interest." },
+        { "@type": "HowToStep", name: "Act on engagement data", text: "Use engagement analytics to prioritize follow-up, advance bidders between rounds, and identify stalling." },
+    ],
+};
 
 const steps = [
     { time: "0:00", title: "The engagement analytics dashboard", desc: "Overview of the buyer engagement dashboard — what is tracked and how to read it." },
@@ -27,6 +44,7 @@ export default function EngagementAnalyticsPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="tut-ea-video" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
+            <Script id="tut-ea-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <Script id="tut-ea-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,6 +113,10 @@ export default function EngagementAnalyticsPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

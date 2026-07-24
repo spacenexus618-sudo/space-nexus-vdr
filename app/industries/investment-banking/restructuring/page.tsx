@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Restructuring Data Room for Investment Banks | SpaceNexus",
@@ -195,6 +196,10 @@ export default function IBRestructuringPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

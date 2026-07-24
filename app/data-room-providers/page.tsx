@@ -1,36 +1,36 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "Data Room Providers 2026 | SpaceNexus",
+    title: "Data Room Provider Comparison 2026 — Top 10 Ranked | SpaceNexus",
     description: "Compare the top 10 data room providers. Pricing, AI features, security certifications, and best use cases by industry.",
     alternates: {
         canonical: "https://spacenexus.net/data-room-providers",
     },
     openGraph: {
-        title: "Data Room Providers 2026 | SpaceNexus",
+        title: "Data Room Provider Comparison 2026 | SpaceNexus",
         description:
-            "Compare the top 10 data room providers. Pricing, AI features, security certifications, ...",
+            "Compare the top 10 data room providers. Pricing, AI features, security certifications, and best use cases.",
         url: "https://spacenexus.net/data-room-providers",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Data Room Providers 2026 — Best Online Data Room Software | SpaceNexus",
+        title: "Data Room Provider Comparison 2026 — Top 10 Ranked | SpaceNexus",
         description:
-            "Expert guide to the best data room providers in 2026. Compare pricing, features, security, and use cases.",
+            "Expert comparison of the top data room providers in 2026. Pricing, features, security, and use cases.",
     },
     keywords: [
-        "data room providers",
+        "data room provider comparison",
         "best data room providers",
-        "online data room",
-        "data room software",
+        "top 10 data room providers",
         "data room for M&A",
         "secure data room",
         "due diligence data room",
         "data room comparison 2026",
-        "top data room providers",
         "data room services",
         "M&A data room software",
         "data room solutions",
@@ -412,6 +412,8 @@ export default function DataRoomProvidersPage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is a leading virtual data room provider with AI-powered features, transparent pricing, and SOC 2 Type II certification. It serves M&A teams, law firms, and investment banks with automatic document indexing, structured Q&A, and buyer engagement analytics." />
 
                 {/* What is a Data Room Provider */}
                 <section className="py-14 bg-white">
@@ -809,7 +811,11 @@ export default function DataRoomProvidersPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

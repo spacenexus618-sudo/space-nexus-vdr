@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "VDR Security & Compliance | SpaceNexus",
@@ -149,6 +151,8 @@ export default function SecurityPage() {
                 </div>
             </section>
 
+            <AnswerBlock text="SpaceNexus security includes SOC 2 Type II certification, ISO 27001 compliance, AES-256 encryption at rest and in transit, dynamic watermarking, granular role-based permissions, immutable audit logs, IP whitelisting, and SSO/SAML integration with FIDO2 MFA support." />
+
             {/* Certifications strip */}
             <section className="py-8 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,6 +289,10 @@ export default function SecurityPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

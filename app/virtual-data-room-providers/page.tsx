@@ -1,38 +1,37 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Virtual Data Room Providers 2026 | SpaceNexus",
-    description: "Complete directory of 10+ virtual data room providers. Compare features, pricing, security, and use cases.",
+    title: "Virtual Data Room Provider Directory 2026 | Compare Top Vendors | SpaceNexus",
+    description: "Complete directory of 10+ virtual data room providers. Compare features, pricing, security, and use cases by industry.",
     alternates: {
         canonical: "https://spacenexus.net/virtual-data-room-providers",
     },
     openGraph: {
-        title: "Virtual Data Room Providers 2026 | SpaceNexus",
+        title: "Virtual Data Room Provider Directory 2026 | SpaceNexus",
         description:
-            "Complete directory of 10+ virtual data room providers. Compare features, pricing, secur...",
+            "Complete directory of 10+ virtual data room providers. Compare features, pricing, security, and use cases.",
         url: "https://spacenexus.net/virtual-data-room-providers",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Virtual Data Room Providers 2026 — Top VDR Software | SpaceNexus",
+        title: "Virtual Data Room Provider Directory 2026 — Compare Vendors | SpaceNexus",
         description:
-            "Comprehensive guide to the top virtual data room providers. Compare pricing, features, security certifications, and use cases.",
+            "Comprehensive directory of virtual data room providers. Compare pricing, features, security certifications, and use cases.",
     },
     keywords: [
-        "virtual data room providers",
+        "virtual data room provider directory",
         "VDR providers",
-        "best virtual data room",
-        "virtual data room software",
-        "VDR software 2026",
+        "VDR vendor comparison",
+        "virtual data room vendors",
         "secure data room providers",
         "M&A data room providers",
         "due diligence data room",
-        "virtual data room comparison",
         "top VDR providers",
-        "data room software",
+        "data room vendor list",
         "online data room providers",
     ],
 };
@@ -816,7 +815,11 @@ export default function VirtualDataRoomProvidersPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

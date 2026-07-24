@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import DemoRequest from "@/app/components/DemoRequest";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Generate More M&A & Fundraising Leads | SpaceNexus VDR",
@@ -79,10 +80,20 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+    { "@type": "ListItem", position: 2, name: "Lead Generation", item: "https://spacenexus.net/lead-generation" },
+  ],
+};
+
 export default function LeadGenerationPage() {
   return (
     <main className="pt-20 lg:pt-24">
       <Script id="leadgen-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="leadgen-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <section className="py-16 lg:py-24 bg-gradient-to-br from-[#1e3a8a] to-[#2563eb]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,7 +204,11 @@ export default function LeadGenerationPage() {
               </div>
             ))}
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

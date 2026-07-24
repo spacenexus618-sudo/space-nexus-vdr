@@ -1,37 +1,36 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Best VDR Software 2026 — Top Virtual Data Room Platforms Compared | SpaceNexus",
-    description: "Find the best VDR software for your deal in 2026. Compare top virtual data room platforms on AI features, pricing, security certifications, and which one fits your transaction.",
+    title: "Best VDR Software for M&A 2026 — Top Platforms Compared | SpaceNexus",
+    description: "Find the best VDR software for M&A due diligence in 2026. Compare top virtual data room platforms on AI features, pricing, security certifications, and deal-specific workflows.",
     alternates: {
         canonical: "https://spacenexus.net/vdr-software",
     },
     openGraph: {
-        title: "Best VDR Software 2026 — Top Virtual Data Room Platforms Compared | SpaceNexus",
+        title: "Best VDR Software for M&A 2026 | SpaceNexus",
         description:
-            "Find the best VDR software for your deal in 2026. Compare top virtual data room platforms on AI features, pricing, security certifications, and which one fits your transaction.",
+            "Find the best VDR software for M&A due diligence in 2026. Compare top platforms on AI features, pricing, security, and deal workflows.",
         url: "https://spacenexus.net/vdr-software",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Best VDR Software 2026 — Top Picks & Comparison Guide | SpaceNexus",
+        title: "Best VDR Software for M&A 2026 — Top Picks & Comparison | SpaceNexus",
         description:
-            "Find the best VDR software in 2026. Compare features, pricing, and security certifications across the top virtual data room platforms.",
+            "Find the best VDR software for M&A in 2026. Compare features, pricing, and security certifications across the top virtual data room platforms.",
     },
     keywords: [
-        "best VDR software",
-        "VDR software",
-        "virtual data room software",
+        "best VDR software for M&A",
+        "VDR software for due diligence",
         "VDR software 2026",
         "VDR software comparison",
-        "virtual data room platform",
         "secure VDR software",
         "AI VDR software",
-        "online data room software",
-        "deal room software",
+        "M&A deal room software",
+        "due diligence VDR",
     ],
 };
 
@@ -431,7 +430,11 @@ export default function VdrSoftwarePage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>
