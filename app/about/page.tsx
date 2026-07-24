@@ -56,10 +56,12 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "About", item: "https://spacenexus.net/about" },
     ],
-};
+}; 
+
 
 export default function AboutPage() {
     return (
+        
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
                 id="about-breadcrumb"
