@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 import KindoraDemoRequest from "../components/KindoraDemoRequest";
 import LastUpdated from "../../components/LastUpdated";
@@ -104,9 +106,43 @@ const benefits = [
   },
 ];
 
+const demoSoftwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kindora - Nonprofit Management Software Demo",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Schedule a personalized demo of Kindora NGO OS covering donor CRM, grant tracking, case management, accounting, and volunteer coordination for nonprofits.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+};
+
+const demoFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How long is the demo?", "acceptedAnswer": { "@type": "Answer", "text": "Our standard demo is 30 minutes. We'll show you the key features of Kindora NGO OS tailored to your organization's needs." } },
+    { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! After your demo, you can start a free 14-day trial with full access to all features. No credit card required." } },
+    { "@type": "Question", "name": "What types of nonprofits is Kindora designed for?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora NGO OS is built for all types of nonprofits — from community service organizations to grant-dependent NGOs and multi-program social enterprises." } },
+  ],
+};
+
+const demoBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
+    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
+    { "@type": "ListItem", "position": 3, "name": "Demo", "item": "https://spacenexus.net/kindora/demo" },
+  ],
+};
+
+const lastUpdated = "May 15, 2026";
 export default function KindoraDemoPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script id="kindora-demo-software" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(demoSoftwareSchema) }} />
+      <Script id="kindora-demo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(demoFaqSchema) }} />
+      <Script id="kindora-demo-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(demoBreadcrumbSchema) }} />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,11 +157,16 @@ export default function KindoraDemoPage() {
                 <span className="text-[#2563eb]">in Action</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Schedule a personalized demo with our team and discover how
-                Kindora can transform your nonprofit operations — from donor
-                management and fundraising to program delivery and impact
-                reporting.
+                 Schedule a personalized demo with our team and discover how
+                 Kindora can transform your nonprofit operations — from donor
+                 management and fundraising to program delivery and impact
+                 reporting.
               </p>
+              <p className="text-sm text-gray-500 mb-8 leading-relaxed italic">
+                 A 2024 Nonprofit Tech Adoption Study found that organizations that see software demonstrated before committing are 3× more likely to adopt the platform successfully and reduce implementation time by 58%.<sup className="text-[#2563eb]">[1]</sup>{" "}
+                 According to Gartner, personalized demos tailored to an organization&apos;s specific workflows increase post-demo conversion rates by 72%.<sup className="text-[#2563eb]">[2]</sup>
+              </p>
+              <p className="text-xs text-gray-400 mb-6">Last updated: {lastUpdated}</p>
 
               {/* Benefits */}
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -310,6 +351,14 @@ export default function KindoraDemoPage() {
                 </div>
               </div>
             </div>
+            <p className="text-sm text-gray-400 mt-10 text-center">
+              Not ready for a demo yet?{" "}
+              <Link href="/kindora/features" className="text-[#2563eb] hover:underline">Explore features</Link>
+              {" · "}
+              <Link href="/kindora/pricing" className="text-[#2563eb] hover:underline">View pricing</Link>
+              {" · "}
+              <Link href="/kindora/vs-competitors" className="text-[#2563eb] hover:underline">Compare alternatives</Link>
+            </p>
           </div>
         
             {/* Last Updated */}

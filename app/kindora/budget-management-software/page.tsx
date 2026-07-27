@@ -255,7 +255,7 @@ export default function KindoraBudgetManagementPage() {
                   <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.kindora.com / budgets</div>
                 </div>
                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                  <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="Kindora budget management dashboard" className="w-full h-auto" loading="lazy" />
+                  <img src="/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.png" alt="Kindora budget management dashboard" width={1572} height={542} className="w-full h-auto" loading="lazy" />
                 </div>
                 <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
               </div>

@@ -217,8 +217,8 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
                                 <div>
                                     <p className="font-bold text-gray-900">{post.author.name}</p>
                                     <p className="text-sm text-gray-500 mb-1">{post.author.role} · Kindora</p>
-                                    <p className="text-xs text-gray-400">
-                                        Writing about nonprofit technology, fundraising strategy, and organizational effectiveness.
+                                    <p className="text-xs text-gray-400 leading-relaxed">
+                                        {post.author.bio}
                                     </p>
                                 </div>
                             </div>

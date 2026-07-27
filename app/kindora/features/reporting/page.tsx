@@ -168,6 +168,8 @@ export default function ReportsPage() {
                 <img
                   src="/kindora/screenshots/Reports/Reports%20(1).png"
                   alt="Kindora Reports — financial and program analytics overview"
+                  width={1909}
+                  height={914}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -230,6 +232,8 @@ export default function ReportsPage() {
               <img
                 src="/kindora/screenshots/Reports/Reports%20(2).png"
                 alt="Kindora Reports — financial analytics and visual charts"
+                width={1888}
+                height={558}
                 className="w-full h-auto"
                 loading="lazy"
               />

@@ -176,6 +176,8 @@ export default function ProgramsPage() {
                 <img
                   src="/kindora/screenshots/Programs/Programs(1).png"
                   alt="Kindora Programs — client services and enrollment management"
+                  width={1911}
+                  height={906}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -240,6 +242,8 @@ export default function ProgramsPage() {
                   <img
                     src={screenshot.src}
                     alt={`Kindora Programs — ${screenshot.caption}`}
+                    width={1914}
+                    height={910}
                     className="w-full h-auto"
                     loading="lazy"
                   />

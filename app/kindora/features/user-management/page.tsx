@@ -211,6 +211,8 @@ export default function UsersPage() {
                 <img
                   src="/kindora/screenshots/Users/Screenshot%202026-03-17%20123550.png"
                   alt="Kindora Users — user management and access control interface"
+                  width={1907}
+                  height={892}
                   className="w-full h-auto"
                   loading="lazy"
                 />
