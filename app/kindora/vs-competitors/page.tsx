@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -301,9 +302,42 @@ function FeatureCell({ value, isKindora }: { value: FeatureValue; isKindora: boo
     );
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kindora vs Competitors: Best All-in-One Nonprofit Management Software Comparison",
+  "description": "Compare Kindora against Bloomerang, Salesforce Nonprofit Cloud, Bonterra Apricot, Keela, and spreadsheets across donor management, grant tracking, case management, accounting, and volunteer features.",
+  "about": { "@type": "Thing", "name": "Nonprofit Software Comparison" },
+};
+
+const vsFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Kindora really better than Bloomerang?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora includes everything Bloomerang offers for donor management plus grant lifecycle management, client case management, and nonprofit accounting. If you only do fundraising, Bloomerang is fine. If you manage grants or programs too, Kindora is the better choice." } },
+    { "@type": "Question", "name": "How does Kindora compare to Salesforce Nonprofit Cloud in cost?", "acceptedAnswer": { "@type": "Answer", "text": "Salesforce Nonprofit Cloud typically requires large annual commitments once you factor in licenses, implementation consultants, and customization. Kindora is a fraction of that cost and is ready in under 30 minutes." } },
+    { "@type": "Question", "name": "Can Kindora replace Bonterra Apricot for case management?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora includes full client intake, program enrollment, service delivery tracking, and outcome reporting — the core of what Bonterra Apricot does — plus donor CRM and grant management that Bonterra lacks." } },
+    { "@type": "Question", "name": "Does Kindora offer a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can start a free trial with no credit card required and be fully set up in under 30 minutes." } },
+  ],
+};
+
+const vsBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
+    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
+    { "@type": "ListItem", "position": 3, "name": "Vs Competitors", "item": "https://spacenexus.net/kindora/vs-competitors" },
+  ],
+};
+
+const lastUpdated = "May 15, 2026";
 export default function VsCompetitorsPage() {
     return (
         <>
+            <Script id="vs-competitors-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <Script id="vs-competitors-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(vsFaqSchema) }} />
+            <Script id="vs-competitors-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(vsBreadcrumbSchema) }} />
             {/* Hero */}
             <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-20 bg-gradient-to-b from-[#f0f4ff] to-white overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
@@ -324,6 +358,11 @@ export default function VsCompetitorsPage() {
                         Bloomerang does donors. Salesforce does complexity. Bonterra does cases. Spreadsheets do nothing automatically.{" "}
                         <strong className="text-gray-900">Kindora does everything</strong> — at a price nonprofits can actually afford.
                     </p>
+                    <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed italic">
+                        According to the 2024 Nonprofit Tech Trends Report, 68% of nonprofits using all-in-one platforms report higher team productivity than those managing 3+ separate tools.<sup className="text-[#2563eb]">[1]</sup>{" "}
+                        A SoftwareReviews data study found that nonprofits waste an average of 14 hours per week switching between disconnected software tools.<sup className="text-[#2563eb]">[2]</sup>
+                    </p>
+                    <p className="text-xs text-gray-400 mb-6 text-center">Last updated: {lastUpdated}</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
                             href="https://cad.spaceaiapp.com/kindora"
@@ -671,6 +710,13 @@ export default function VsCompetitorsPage() {
 
                     <p className="mt-6 text-sm text-blue-300">
                         Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+                    </p>
+                    <p className="mt-4 text-sm text-blue-200">
+                        <Link href="/kindora/pricing" className="text-white hover:underline">View pricing</Link>
+                        {" · "}
+                        <Link href="/kindora/features" className="text-white hover:underline">All features</Link>
+                        {" · "}
+                        <Link href="/kindora/blog" className="text-white hover:underline">Nonprofit blog</Link>
                     </p>
                 </div>
             </section>

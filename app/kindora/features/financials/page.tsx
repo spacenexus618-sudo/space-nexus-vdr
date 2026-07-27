@@ -245,6 +245,8 @@ export default function FinancialsPage() {
                 <img
                   src="/kindora/screenshots/Financials/Donors.png"
                   alt="Kindora Financials — donor management and financial overview"
+                  width={1902}
+                  height={902}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -327,6 +329,8 @@ export default function FinancialsPage() {
                   <img
                     src={screenshot.src}
                     alt={`Kindora Financials — ${screenshot.caption}`}
+                    width={1919}
+                    height={916}
                     className="w-full h-auto"
                     loading="lazy"
                   />

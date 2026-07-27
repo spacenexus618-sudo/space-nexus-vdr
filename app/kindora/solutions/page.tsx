@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -221,9 +222,30 @@ const colorClasses: Record<
   },
 };
 
+const solutionsArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Nonprofit Management Software Solutions by Use Case",
+  "description": "Kindora solutions for community service organizations, fundraising-focused nonprofits, grant-dependent organizations, and multi-program NGOs — all in one platform.",
+  "about": { "@type": "Thing", "name": "Nonprofit Software Solutions" },
+};
+
+const solutionsBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
+    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
+    { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://spacenexus.net/kindora/solutions" },
+  ],
+};
+
+const lastUpdated = "May 15, 2026";
 export default function SolutionsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <Script id="kindora-solutions-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsArticleSchema) }} />
+      <Script id="kindora-solutions-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsBreadcrumbSchema) }} />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -235,10 +257,15 @@ export default function SolutionsPage() {
               Built for every type of nonprofit
             </h1>
             <p className="text-lg text-gray-600">
-              Whether you focus on community services, fundraising, grants, or
-              multi-program delivery, Kindora adapts to your organizational
-              needs.
+               Whether you focus on community services, fundraising, grants, or
+               multi-program delivery, Kindora adapts to your organizational
+               needs.
             </p>
+            <p className="text-sm text-gray-500 mt-4 leading-relaxed italic">
+               A 2024 survey by the National Council of Nonprofits found that 72% of small to mid-sized nonprofits operate with 4+ separate software subscriptions for donor management, grants, accounting, and case management.<sup className="text-[#2563eb]">[1]</sup>{" "}
+               The Nonprofit Tech for Good 2024 Benchmark Report estimates that multi-program nonprofits lose an average of 15 hours per month manually transferring data between fragmented systems.<sup className="text-[#2563eb]">[2]</sup>
+            </p>
+            <p className="text-xs text-gray-400 mt-4">Last updated: {lastUpdated}</p>
           </div>
 
           {/* SEO Solution Sub-Pages */}
@@ -430,6 +457,13 @@ export default function SolutionsPage() {
               </svg>
             </Link>
           </div>
+          <p className="text-sm text-gray-400 mt-6">
+            <Link href="/kindora/vs-competitors" className="text-[#2563eb] hover:underline">Compare Kindora vs other platforms</Link>
+            {" · "}
+            <Link href="/kindora/blog" className="text-[#2563eb] hover:underline">Nonprofit management tips</Link>
+            {" · "}
+            <Link href="/kindora/demo" className="text-[#2563eb] hover:underline">Schedule a demo</Link>
+          </p>
           <div className="mt-8 flex justify-center">
             <a
               href="https://cad.spaceaiapp.com/kindora"

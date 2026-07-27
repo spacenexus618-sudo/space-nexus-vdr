@@ -172,6 +172,8 @@ export default function PeoplePage() {
                 <img
                   src="/kindora/screenshots/People/People%20(1).png"
                   alt="Kindora People — employee and volunteer management overview"
+                  width={1905}
+                  height={900}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -236,6 +238,8 @@ export default function PeoplePage() {
                   <img
                     src={screenshot.src}
                     alt={`Kindora People — ${screenshot.caption}`}
+                    width={1905}
+                    height={905}
                     className="w-full h-auto"
                     loading="lazy"
                   />

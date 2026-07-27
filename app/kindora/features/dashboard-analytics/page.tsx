@@ -178,6 +178,8 @@ export default function DashboardAnalyticsPage() {
                 <img
                   src="/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.png"
                   alt="Kindora Dashboard & Analytics — centralized nonprofit performance overview"
+                  width={1572}
+                  height={542}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -242,6 +244,8 @@ export default function DashboardAnalyticsPage() {
                   <img
                     src={screenshot.src}
                     alt={`Kindora Dashboard — ${screenshot.caption}`}
+                    width={1865}
+                    height={892}
                     className="w-full h-auto"
                     loading="lazy"
                   />

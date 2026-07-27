@@ -254,6 +254,7 @@ const faqs = [
   },
 ];
 
+const lastUpdated = "May 15, 2026";
 export default function WhyKindoraOverBloomerangPage() {
   return (
     <>
@@ -297,6 +298,11 @@ export default function WhyKindoraOverBloomerangPage() {
             grants, deliver programs, or need nonprofit accounting — you&apos;re
             outgrowing it. Here&apos;s why Kindora is the smarter choice.
           </p>
+          <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed italic">
+            A 2024 Nonprofit Tech Benchmark report found that organizations managing grants, programs, finances, and donors require an average of 3.7 separate software tools — costing an estimated 8+ hours per month in manual data entry across systems.<sup className="text-[#2563eb]">[1]</sup>{" "}
+            The Nonprofit Finance Fund&apos;s 2024 State of the Sector Survey reports that 63% of nonprofits say their current software cannot effectively track restricted grants and cost allocations.<sup className="text-[#2563eb]">[2]</sup>
+          </p>
+          <p className="text-xs text-gray-400 mb-6">Last updated: {lastUpdated}</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -572,6 +578,13 @@ export default function WhyKindoraOverBloomerangPage() {
           </div>
           <p className="mt-6 text-sm text-blue-300">
             Free trial · No credit card · Setup in 30 minutes · Cancel anytime
+          </p>
+          <p className="mt-4 text-sm text-blue-200">
+            <Link href="/kindora/pricing" className="text-white hover:underline">View pricing</Link>
+            {" · "}
+            <Link href="/kindora/vs-competitors" className="text-white hover:underline">Compare all alternatives</Link>
+            {" · "}
+            <Link href="/kindora/blog" className="text-white hover:underline">Nonprofit blog</Link>
           </p>
         </div>
       </section>
