@@ -167,6 +167,8 @@ export default function FinancePage() {
                 <img
                   src="/kindora/screenshots/Finance/Finance%20(1).png"
                   alt="Kindora Finance — chart of accounts and budget management"
+                  width={1917}
+                  height={910}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -229,6 +231,8 @@ export default function FinancePage() {
               <img
                 src="/kindora/screenshots/Finance/Finance%20(2).png"
                 alt="Kindora Finance — budget planning and tracking"
+                width={1892}
+                height={902}
                 className="w-full h-auto"
                 loading="lazy"
               />

@@ -72,6 +72,8 @@ export default function KindoraNav() {
               <img
                 src="/icononly_transparent_nobuffer.png"
                 alt="Kindora"
+                width={40}
+                height={40}
                 className="object-contain drop-shadow-md w-full h-full"
               />
             </div>

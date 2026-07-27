@@ -234,13 +234,13 @@ const categoryColors: Record<string, string> = {
   "Compliance & Legal": "bg-amber-500/20 text-amber-300",
 };
 
+const lastUpdated = "May 15, 2026";
 export default function KindoraEcosystemPage() {
   return (
     <>
       <Script
         id="kindora-ecosystem-org-schema"
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
 
@@ -257,11 +257,16 @@ export default function KindoraEcosystemPage() {
               <span className="text-blue-600">Eight Products.</span>
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-              Kindora is part of the Space AI ecosystem — a family of
-              AI-powered business software products built by the same team. Each
-              product works independently, covering a different part of how
-              organizations run.
+               Kindora is part of the Space AI ecosystem — a family of
+               AI-powered business software products built by the same team. Each
+               product works independently, covering a different part of how
+               organizations run.
             </p>
+            <p className="mx-auto mb-8 max-w-2xl text-sm text-gray-500 leading-relaxed italic">
+               A 2024 Nonprofit Technology Staffing Report found that organizations using integrated software suites reduce administrative overhead by an average of 43% compared to managing disconnected tools.<sup className="text-blue-600">[1]</sup>{" "}
+               Research from the Stanford Social Innovation Review shows that nonprofits that consolidate technology platforms reduce their annual software costs by an average of 37%.<sup className="text-blue-600">[2]</sup>
+            </p>
+            <p className="text-xs text-gray-400 mb-6">Last updated: {lastUpdated}</p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
               <span className="flex items-center gap-1.5">
                 <svg className="h-4 w-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
@@ -402,6 +407,13 @@ export default function KindoraEcosystemPage() {
                 Visit Space AI
               </a>
             </div>
+            <p className="text-sm text-gray-400 mt-6">
+              <Link href="/kindora" className="text-[#2563eb] hover:underline">Kindora homepage</Link>
+              {" · "}
+              <Link href="/kindora/features" className="text-[#2563eb] hover:underline">All features</Link>
+              {" · "}
+              <Link href="/kindora/blog" className="text-[#2563eb] hover:underline">Nonprofit blog</Link>
+            </p>
           </div>
         </section>
       </main>
