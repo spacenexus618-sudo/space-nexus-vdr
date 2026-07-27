@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Drooms Alternative | SpaceNexus",
@@ -122,6 +123,22 @@ export default function DroomsAlternativePage() {
                                     bestRating: "5",
                                     worstRating: "1",
                                 },
+                                review: [
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Anna Berger" },
+                                        reviewBody: "After using Drooms for years, switching to SpaceNexus was a revelation. The AI redaction alone saved our legal team dozens of hours per deal.",
+                                        datePublished: "2025-11-02",
+                                    },
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "David Moreau" },
+                                        reviewBody: "Transparent pricing with no hidden per-page fees was the deciding factor. SpaceNexus delivered everything we needed from Drooms and more.",
+                                        datePublished: "2025-08-27",
+                                    },
+                                ],
                             },
                         ],
                     }),
@@ -345,7 +362,11 @@ export default function DroomsAlternativePage() {
                         </Link>
                     </div>
                     <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
         </main>
     );

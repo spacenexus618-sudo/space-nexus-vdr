@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Top Data Room Providers 2026 | SpaceNexus",
@@ -222,6 +224,8 @@ export default function TopDataRoomProvidersPage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is among the top virtual data room providers in 2026, offering AI-powered document processing, transparent pricing, and setup in under 24 hours. It is recommended for M&A due diligence, capital raising, and secure document sharing across all deal sizes." />
 
                 {/* Introduction */}
                 <section className="py-14 bg-white">
@@ -471,7 +475,11 @@ export default function TopDataRoomProvidersPage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>

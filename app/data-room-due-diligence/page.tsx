@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Data Room for Due Diligence | SpaceNexus",
@@ -426,6 +428,8 @@ export default function DataRoomDueDiligencePage() {
                     </div>
                 </section>
 
+                <AnswerBlock text="SpaceNexus streamlines M&A due diligence with AI-powered document categorization, structured Q&A workflows with SLA tracking, real-time buyer engagement analytics, and tiered bidder access controls. Setup takes under 24 hours with pre-built folder templates for common deal types." />
+
                 {/* What is a due diligence data room */}
                 <section className="py-14 bg-white border-t border-gray-100">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -776,7 +780,11 @@ export default function DataRoomDueDiligencePage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
 
             </main>

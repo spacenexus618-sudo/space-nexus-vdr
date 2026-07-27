@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
   title: "Enterprise Virtual Data Room Solutions | SpaceNexus",
@@ -175,6 +177,8 @@ export default function EnterprisePage() {
           </div>
         </section>
 
+        <AnswerBlock text="SpaceNexus Enterprise includes unlimited storage and users, SSO/SAML integration, custom branding and white-label options, API access, dedicated account management, 99.99% SLA uptime guarantee, on-premise deployment options, and 24/7 phone support with compliance reporting." />
+
         {/* Trust Badges */}
         <section className="py-12 bg-white border-y border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -305,7 +309,11 @@ export default function EnterprisePage() {
                 View Enterprise Pricing
               </Link>
             </div>
-          </div>
+          
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
         </section>
       </main>
     </>

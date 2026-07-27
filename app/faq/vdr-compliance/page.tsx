@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "VDR Compliance FAQ — SOC 2, GDPR, HIPAA, SEC | SpaceNexus",
@@ -227,11 +228,22 @@ export default function VDRComplianceFAQPage() {
         areaServed: { "@type": "Place", name: "Worldwide" },
     };
 
+    const speakableSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "VDR Compliance FAQ",
+        speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: [".faq-question", ".faq-answer"],
+        },
+    };
+
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="vdr-compliance-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="vdr-compliance-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="vdr-compliance-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <Script id="vdr-compliance-speakable-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
@@ -357,6 +369,10 @@ export default function VDRComplianceFAQPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

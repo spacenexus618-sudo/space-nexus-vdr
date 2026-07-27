@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Best Nonprofit CRM | Top Rated Nonprofit CRM Software | Kindora",
@@ -663,7 +664,11 @@ export default function BestNonprofitCrmPage() {
             <Link href="/kindora/nonprofit-crm" className="text-purple-600 hover:underline font-medium">Nonprofit CRM →</Link>
             <Link href="/kindora/vs-competitors" className="text-purple-600 hover:underline font-medium">VS Competitors →</Link>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </>
   );

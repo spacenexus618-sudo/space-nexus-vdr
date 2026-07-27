@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Space AI Product Ecosystem | Kindora Nonprofit Software",
@@ -407,14 +408,11 @@ export default function KindoraEcosystemPage() {
                 Visit Space AI
               </a>
             </div>
-            <p className="text-sm text-gray-400 mt-6">
-              <Link href="/kindora" className="text-[#2563eb] hover:underline">Kindora homepage</Link>
-              {" · "}
-              <Link href="/kindora/features" className="text-[#2563eb] hover:underline">All features</Link>
-              {" · "}
-              <Link href="/kindora/blog" className="text-[#2563eb] hover:underline">Nonprofit blog</Link>
-            </p>
-          </div>
+          
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
         </section>
       </main>
     </>

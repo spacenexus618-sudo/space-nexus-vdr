@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
   title: "VDR Features | SpaceNexus",
@@ -539,6 +541,9 @@ export default function FeaturesPage() {
         </div>
       </section>
 
+      {/* AI Answer Block */}
+      <AnswerBlock text="SpaceNexus features include AI-powered document redaction and auto-categorization, structured Q&A workflow management, real-time buyer engagement analytics, role-based permissions, dynamic watermarking, audit log export, and SSO/MFA configuration. Setup takes under 24 hours with no onboarding calls required." />
+
       {/* Features Grid */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -768,6 +773,11 @@ export default function FeaturesPage() {
               </Link>
             </div>
           </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div>
         </div>
       </section>
     </main>

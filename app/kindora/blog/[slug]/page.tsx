@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getPostBySlug, blogPosts } from "../data/posts";
 import BlogPostContent from "./BlogPostContent";
+import LastUpdated from "../../../components/LastUpdated";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -46,5 +47,46 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  return <BlogPostContent slug={slug} />;
+  const post = getPostBySlug(slug);
+
+  const articleSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.publishedAt,
+        author: {
+          "@type": "Person",
+          name: post.author.name,
+          jobTitle: post.author.role,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "SpaceNexus",
+          url: "https://spacenexus.net",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://spacenexus.net/logo.png",
+          },
+        },
+        url: `https://spacenexus.net/kindora/blog/${slug}`,
+      }
+    : null;
+
+  return (
+    <>
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      <BlogPostContent slug={slug} />
+      {/* Last Updated */}
+      <div className="py-6 text-center border-t border-gray-100 mt-8">
+        <LastUpdated date="2026-07-19" />
+      </div>
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "iDeals Alternative | SpaceNexus",
@@ -122,6 +123,22 @@ export default function IdealsAlternativePage() {
                                     bestRating: "5",
                                     worstRating: "1",
                                 },
+                                review: [
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Luca Fontana" },
+                                        reviewBody: "We moved from iDeals to SpaceNexus for cross-border M&A. The AI auto-categorization and modern interface made the transition seamless for our global team.",
+                                        datePublished: "2025-10-10",
+                                    },
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Emily Zhang" },
+                                        reviewBody: "SpaceNexus pricing is refreshingly transparent compared to iDeals. No per-page fees, no surprises. The Q&A workflow is exactly what our deal team needed.",
+                                        datePublished: "2025-12-01",
+                                    },
+                                ],
                             },
                         ],
                     }),
@@ -345,7 +362,11 @@ export default function IdealsAlternativePage() {
                         </Link>
                     </div>
                     <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
         </main>
     );

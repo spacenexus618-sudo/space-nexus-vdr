@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Private Equity | SpaceNexus",
@@ -195,6 +196,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a PE data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A private equity data room is a secure platform for managing confidential documents during buy-side due diligence, portfolio company reporting, LP fundraising, and exit transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus support PE firms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides multi-room management for concurrent deals, add-on acquisition templates, portfolio company document hubs, and LP reporting workflows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can PE firms manage multiple deals in SpaceNexus?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus Professional and Enterprise plans include unlimited deal rooms, allowing PE firms to run multiple acquisitions simultaneously with separate permission structures.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is a PE data room?",
+    answer: "A private equity data room is a secure platform for managing confidential documents during buy-side due diligence, portfolio company reporting, LP fundraising, and exit transactions.",
+  },
+  {
+    question: "How does SpaceNexus support PE firms?",
+    answer: "SpaceNexus provides multi-room management for concurrent deals, add-on acquisition templates, portfolio company document hubs, and LP reporting workflows.",
+  },
+  {
+    question: "Can PE firms manage multiple deals in SpaceNexus?",
+    answer: "Yes. SpaceNexus Professional and Enterprise plans include unlimited deal rooms, allowing PE firms to run multiple acquisitions simultaneously with separate permission structures.",
+  },
+];
+
 export default function PrivateEquityPage() {
   return (
     <>
@@ -209,6 +256,11 @@ export default function PrivateEquityPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="pe-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -584,7 +636,26 @@ export default function PrivateEquityPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

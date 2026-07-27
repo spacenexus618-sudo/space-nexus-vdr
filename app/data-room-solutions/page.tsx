@@ -1,32 +1,32 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Data Room Solutions 2026 | SpaceNexus",
+    title: "Data Room Solutions by Use Case 2026 — M&A, Fundraising & Legal | SpaceNexus",
     description: "Compare the best data room solutions for M&A, fundraising, legal deals, and secure document sharing. AI-powered, SOC 2 Type II, transparent pricing.",
     alternates: {
         canonical: "https://spacenexus.net/data-room-solutions",
     },
     openGraph: {
-        title: "Data Room Solutions 2026 | SpaceNexus",
+        title: "Data Room Solutions by Use Case 2026 | SpaceNexus",
         description:
-            "Compare the best data room solutions for M&A, fundraising, legal deals, and secure document sharing. AI-powered, SOC 2 Type II, transparent pricing.",
+            "Compare the best data room solutions for M&A, fundraising, legal deals, and secure document sharing.",
         url: "https://spacenexus.net/data-room-solutions",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Data Room Solutions 2026 — Secure Virtual Data Rooms | SpaceNexus",
+        title: "Data Room Solutions by Use Case 2026 — M&A, Fundraising & Legal | SpaceNexus",
         description:
-            "Complete guide to data room solutions. Compare features, pricing, and security certifications across the top platforms.",
+            "Complete guide to data room solutions by use case. Compare features, pricing, and security certifications.",
     },
     keywords: [
-        "data room solutions",
-        "virtual data room solutions",
-        "secure data room solutions",
-        "data room software solutions",
+        "data room solutions by use case",
         "M&A data room solutions",
+        "fundraising data room",
+        "legal data room solutions",
         "due diligence data room solutions",
         "online data room solutions",
         "best data room solutions",
@@ -516,7 +516,11 @@ export default function DataRoomSolutionsPage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>
