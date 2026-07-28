@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "People — Team, Volunteer & Communications Management | Kindora",
+  title: "People — Team, Volunteer & Communications Management",
   description:
     "Kindora People helps nonprofits manage employees, volunteers, and communication activities in one platform. Maintain staff records, coordinate volunteers, and track all interactions with donors, clients, and partners.",
   keywords: [
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/people-management",
   },
   openGraph: {
-    title: "People — Team, Volunteer & Communications Management | Kindora",
+    title: "People — Team, Volunteer & Communications Management",
     description:
       "Employee profiles, volunteer management, communication logs, and engagement tracking — all in one centralized platform for nonprofit team management.",
     url: "https://spacenexus.net/kindora/features/people-management",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "People — Team, Volunteer & Communications Management | Kindora",
+    title: "People — Team, Volunteer & Communications Management",
     description:
       "Manage employees, volunteers, and communications in one place — built for nonprofit teams.",
   },
@@ -168,12 +169,14 @@ export default function PeoplePage() {
                   app.kindora.com / people
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/People/People%20(1).png"
                   alt="Kindora People — employee and volunteer management overview"
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>
@@ -232,12 +235,13 @@ export default function PeoplePage() {
                     app.kindora.com / people
                   </div>
                 </div>
-                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg">
-                  <img
+                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg aspect-[16/9] relative">
+                  <Image
                     src={screenshot.src}
                     alt={`Kindora People — ${screenshot.caption}`}
-                    className="w-full h-auto"
-                    loading="lazy"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />
                 </div>
                 <p className="text-xs text-gray-500 text-center mt-2">{screenshot.caption}</p>

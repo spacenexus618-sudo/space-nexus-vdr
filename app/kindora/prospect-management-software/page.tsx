@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Prospect Management Software | Track Donor Prospects | Kindora",
+  title: "Prospect Management Software | Track Donor Prospects",
   description:
     "Kindora prospect management software helps nonprofits identify, track, and cultivate donor prospects with pipeline stages, capacity indicators, and automated follow-ups.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/prospect-management-software",
   },
   openGraph: {
-    title: "Prospect Management Software — Kindora",
+    title: "Prospect Management Software",
     description: "Identify, track, and cultivate donor prospects with Kindora's all-in-one prospect management software.",
     url: "https://spacenexus.net/kindora/prospect-management-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prospect Management Software — Kindora",
+    title: "Prospect Management Software",
     description: "Identify, track, and cultivate donor prospects with Kindora — pipeline, capacity scoring, and follow-ups.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

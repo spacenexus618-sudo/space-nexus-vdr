@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Board Reporting Software | Nonprofit Board Reports | Kindora",
+  title: "Board Reporting Software | Nonprofit Board Reports",
   description:
     "Kindora board reporting software helps nonprofits prepare executive summaries, financial reports, program updates, and impact metrics for board meetings — with automated scheduling and collaboration.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/board-reporting-software",
   },
   openGraph: {
-    title: "Board Reporting Software — Kindora",
+    title: "Board Reporting Software",
     description: "Prepare board-ready reports with executive summaries, financials, program updates, and impact metrics.",
     url: "https://spacenexus.net/kindora/board-reporting-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Board Reporting Software — Kindora",
+    title: "Board Reporting Software",
     description: "Prepare board-ready reports with financials, program updates, and impact metrics.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -234,7 +234,7 @@ export default function BoardReportingSoftwarePage() {
                   ].map((s) => (
                     <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
                       <p className="text-lg font-bold text-gray-900">{s.value}</p>
-                      <p className="text-xs text-gray-500">{s.label}</p>
+                       <p className="text-xs text-gray-600">{s.label}</p>
                     </div>
                   ))}
                 </div>
@@ -327,7 +327,7 @@ export default function BoardReportingSoftwarePage() {
                   {item.step}
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>

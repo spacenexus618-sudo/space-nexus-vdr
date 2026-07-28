@@ -41,6 +41,8 @@ function KindoraDemoRequestForm() {
     projectDetails: "",
   });
 
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [touched, setTouched] = useState<Set<string>>(new Set());
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -61,16 +63,40 @@ function KindoraDemoRequestForm() {
     },
   );
 
+  const validate = (data: FormData): Record<string, string> => {
+    const errs: Record<string, string> = {};
+    if (!data.firstName.trim()) errs.firstName = "First name is required";
+    if (!data.lastName.trim()) errs.lastName = "Last name is required";
+    if (!data.email.trim()) {
+      errs.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      errs.email = "Enter a valid email address";
+    }
+    if (!data.company.trim()) errs.company = "Organization name is required";
+    return errs;
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const updated = { ...formData, [name]: value };
+    setFormData(updated);
+    if (touched.has(name)) setErrors(validate(updated));
+  };
+
+  const handleBlur = (field: string) => {
+    setTouched((prev) => new Set(prev).add(field));
+    setErrors(validate(formData));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    const validationErrors = validate(formData);
+    setErrors(validationErrors);
+    setTouched(new Set(["firstName", "lastName", "email", "company"]));
+    if (Object.keys(validationErrors).length > 0) return;
 
     try {
       await createDemoRequest({
@@ -149,7 +175,7 @@ function KindoraDemoRequestForm() {
       </div>
 
       {error && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+        <div role="alert" aria-live="polite" className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
           {error}
         </div>
       )}
@@ -168,10 +194,17 @@ function KindoraDemoRequestForm() {
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            onBlur={() => handleBlur("firstName")}
             required
-            className="w-full px-4 py-3 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+            aria-required="true"
+            aria-invalid={touched.has("firstName") && !!errors.firstName}
+            aria-describedby={errors.firstName ? "firstName-error" : undefined}
+            className={`w-full px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all ${touched.has("firstName") && errors.firstName ? "bg-red-50 border border-red-400 focus:ring-red-500" : "bg-[#f8f9fa] border border-gray-200 focus:ring-[#2563eb]"}`}
             placeholder="Jane"
           />
+          {touched.has("firstName") && errors.firstName && (
+            <p id="firstName-error" role="alert" className="text-red-600 text-xs mt-1">{errors.firstName}</p>
+          )}
         </div>
         <div>
           <label
@@ -186,10 +219,17 @@ function KindoraDemoRequestForm() {
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            onBlur={() => handleBlur("lastName")}
             required
-            className="w-full px-4 py-3 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+            aria-required="true"
+            aria-invalid={touched.has("lastName") && !!errors.lastName}
+            aria-describedby={errors.lastName ? "lastName-error" : undefined}
+            className={`w-full px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all ${touched.has("lastName") && errors.lastName ? "bg-red-50 border border-red-400 focus:ring-red-500" : "bg-[#f8f9fa] border border-gray-200 focus:ring-[#2563eb]"}`}
             placeholder="Smith"
           />
+          {touched.has("lastName") && errors.lastName && (
+            <p id="lastName-error" role="alert" className="text-red-600 text-xs mt-1">{errors.lastName}</p>
+          )}
         </div>
       </div>
 
@@ -206,10 +246,17 @@ function KindoraDemoRequestForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          onBlur={() => handleBlur("email")}
           required
-          className="w-full px-4 py-3 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+          aria-required="true"
+          aria-invalid={touched.has("email") && !!errors.email}
+          aria-describedby={errors.email ? "email-error" : undefined}
+          className={`w-full px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all ${touched.has("email") && errors.email ? "bg-red-50 border border-red-400 focus:ring-red-500" : "bg-[#f8f9fa] border border-gray-200 focus:ring-[#2563eb]"}`}
           placeholder="jane.smith@organization.org"
         />
+        {touched.has("email") && errors.email && (
+          <p id="email-error" role="alert" className="text-red-600 text-xs mt-1">{errors.email}</p>
+        )}
       </div>
 
       <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -226,10 +273,17 @@ function KindoraDemoRequestForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
+            onBlur={() => handleBlur("company")}
             required
-            className="w-full px-4 py-3 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+            aria-required="true"
+            aria-invalid={touched.has("company") && !!errors.company}
+            aria-describedby={errors.company ? "company-error" : undefined}
+            className={`w-full px-4 py-3.5 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all ${touched.has("company") && errors.company ? "bg-red-50 border border-red-400 focus:ring-red-500" : "bg-[#f8f9fa] border border-gray-200 focus:ring-[#2563eb]"}`}
             placeholder="Global Impact Foundation"
           />
+          {touched.has("company") && errors.company && (
+            <p id="company-error" role="alert" className="text-red-600 text-xs mt-1">{errors.company}</p>
+          )}
         </div>
         <div>
           <label
@@ -245,7 +299,7 @@ function KindoraDemoRequestForm() {
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, companySize: e.target.value }))
             }
-            className="w-full px-4 py-3 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+            className="w-full px-4 py-3.5 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
           >
             <option value="">Select size</option>
             <option value="1-10">1-10 employees</option>
@@ -270,7 +324,7 @@ function KindoraDemoRequestForm() {
           name="phoneNumber"
           value={formData.phoneNumber}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
+          className="w-full px-4 py-3.5 bg-[#f8f9fa] border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-all"
           placeholder="+1 (555) 000-0000"
         />
       </div>
@@ -296,7 +350,7 @@ function KindoraDemoRequestForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full px-6 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="w-full px-6 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {loading ? (
           <>

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Communication Platform | Nonprofit Communication Software | Kindora",
+  title: "Nonprofit Communication Platform | Nonprofit Communication Software",
   description:
     "Kindora nonprofit communication platform centralises donor emails, texts, mail, and phone calls — one system for every stakeholder relationship.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-communication-platform",
   },
   openGraph: {
-    title: "Nonprofit Communication Platform — Kindora",
+    title: "Nonprofit Communication Platform",
     description: "Centralise all nonprofit communications — donors, volunteers, board members, and funders — in one platform.",
     url: "https://spacenexus.net/kindora/nonprofit-communication-platform",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Communication Platform — Kindora",
+    title: "Nonprofit Communication Platform",
     description: "Centralise all nonprofit communications — donors, volunteers, board members, and funders — in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

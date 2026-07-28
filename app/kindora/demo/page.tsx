@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import KindoraDemoRequest from "../components/KindoraDemoRequest";
 
 export const metadata: Metadata = {
-  title: "Request a Demo | Kindora NGO OS",
+  title: "Request a Demo",
   description:
     "Schedule a personalized demo of Kindora NGO OS. See how our comprehensive nonprofit management platform can streamline your donor relations, program delivery, and impact reporting.",
   keywords: [
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/demo",
   },
   openGraph: {
-    title: "Request a Demo | Kindora NGO OS",
+    title: "Request a Demo",
     description:
       "Schedule a personalized demo of Kindora NGO OS. See how our comprehensive nonprofit management platform can streamline your donor relations, program delivery, and impact reporting.",
     url: "https://spacenexus.net/kindora/demo",
@@ -104,8 +105,26 @@ const benefits = [
 ];
 
 export default function KindoraDemoPage() {
+  const contactPointSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://spacenexus.net/kindora/demo",
+    name: "Request a Demo — Kindora NGO OS",
+    description: "Schedule a personalized demo of Kindora NGO OS nonprofit management platform.",
+    publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
+    url: "https://spacenexus.net/kindora/demo",
+    mainEntity: {
+      "@type": "ContactPoint",
+      contactType: "demo request",
+      url: "https://spacenexus.net/kindora/demo",
+      availableLanguage: ["English"],
+    },
+  };
+
   return (
-    <main className="pt-20 lg:pt-24">
+    <>
+      <Script id="demo-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPointSchema) }} />
+      <main className="pt-20 lg:pt-24">
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -313,5 +332,6 @@ export default function KindoraDemoPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

@@ -377,7 +377,7 @@ export default function Header() {
     setProductsOpen(false);
   }, [pathname]);
 
-  // Kindora has its own KindoraHeader rendered in kindora/layout.tsx
+  // Kindora has its own KindoraNav rendered in kindora/layout.tsx
   if (isKindora) return null;
 
   return (

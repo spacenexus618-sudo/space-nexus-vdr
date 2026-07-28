@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Grant Reporting Software | Automated Grant Reports | Kindora",
+  title: "Grant Reporting Software | Automated Grant Reports",
   description:
     "Grant reporting software for nonprofits — generate funder reports, compliance reports, and financial reports with one click. Pull data from across your organization automatically.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/grant-reporting-software",
   },
   openGraph: {
-    title: "Grant Reporting Software — Kindora",
+    title: "Grant Reporting Software",
     description:
       "Generate grant reports in minutes, not days. Automated funder reports, compliance reports, and financial statements from one platform.",
     url: "https://spacenexus.net/kindora/grant-reporting-software",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grant Reporting Software — Kindora",
+    title: "Grant Reporting Software",
     description:
       "Automated grant reporting software. Generate funder reports, compliance reports, and financial statements with one click.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

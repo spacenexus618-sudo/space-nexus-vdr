@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Best Nonprofit CRM | Top Rated Nonprofit CRM Software | Kindora",
+  title: "Best Nonprofit CRM | Top Rated Nonprofit CRM Software",
   description:
     "Kindora is the best nonprofit CRM software. Top-rated donor management, fundraising tools, reporting, and automation — all in one affordable platform. Trusted by nonprofits worldwide.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-nonprofit-crm",
   },
   openGraph: {
-    title: "Best Nonprofit CRM — Kindora",
+    title: "Best Nonprofit CRM",
     description: "Top-rated nonprofit CRM with donor management, fundraising, reporting, and automation. Trusted by nonprofits worldwide.",
     url: "https://spacenexus.net/kindora/best-nonprofit-crm",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Nonprofit CRM — Kindora",
+    title: "Best Nonprofit CRM",
     description: "Top-rated nonprofit CRM with donor management, fundraising, reporting, and automation.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -332,21 +332,22 @@ export default function BestNonprofitCrmPage() {
                     <span className="truncate">cad.spaceaiapp.com/kindora</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-1.5 text-[10px] text-gray-400 hidden sm:flex">
+                <div className="flex items-center gap-1.5 text-[10px] text-gray-500 hidden sm:flex">
                   <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
                   Secure
                 </div>
               </div>
 
-              <div className="relative bg-[#f0f4ff]">
+              <div className="relative bg-[#f0f4ff] aspect-video">
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="w-full h-auto object-cover block"
+                  className="absolute inset-0 w-full h-full object-cover"
                 >
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />
               </div>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://spacenexus.net/kindora/nonprofit-fundraising-platform",
   },
   openGraph: {
-    title: "Nonprofit Fundraising Platform — Kindora",
+    title: "Nonprofit Fundraising Platform",
     description: "Raise more with Kindora's all-in-one nonprofit fundraising platform — campaigns, peer-to-peer, recurring giving, and reporting.",
     url: "https://spacenexus.net/kindora/nonprofit-fundraising-platform",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Fundraising Platform — Kindora",
+    title: "Nonprofit Fundraising Platform",
     description: "Raise more with Kindora — campaign pages, peer-to-peer fundraising, recurring giving, and real-time dashboards.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

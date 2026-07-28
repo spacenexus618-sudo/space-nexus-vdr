@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Constituent Management Software | Manage Constituents | Kindora",
+  title: "Constituent Management Software | Manage Constituents",
   description:
     "Kindora constituent management software helps nonprofits track donors, volunteers, staff, and beneficiaries in one unified system with relationship mapping and engagement tracking.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/constituent-management-software",
   },
   openGraph: {
-    title: "Constituent Management Software — Kindora",
+    title: "Constituent Management Software",
     description: "Track and manage all constituents — donors, volunteers, staff, and beneficiaries — in one unified system.",
     url: "https://spacenexus.net/kindora/constituent-management-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Constituent Management Software — Kindora",
+    title: "Constituent Management Software",
     description: "Track and manage all constituents — donors, volunteers, staff, and beneficiaries — in one system.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

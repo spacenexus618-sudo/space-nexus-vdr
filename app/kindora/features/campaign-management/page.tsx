@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Campaign Management Software for NGOs — Kindora",
+  title: "Campaign Management Software for NGOs",
   description:
     "Create and manage fundraising, event, awareness, and advocacy campaigns with real-time goal tracking, donation attribution, and performance analytics.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/campaign-management",
   },
   openGraph: {
-    title: "Campaign Management Software for NGOs — Kindora",
+    title: "Campaign Management Software for NGOs",
     description:
       "Kindora's campaign management software for NGOs tracks fundraising goals, donation attribution, and campaign performance in real time.",
     url: "https://spacenexus.net/kindora/features/campaign-management",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Campaign Management Software for NGOs — Kindora",
+    title: "Campaign Management Software for NGOs",
     description:
       "Run fundraising, event, and advocacy campaigns with real-time goal tracking using Kindora's NGO campaign management software.",
   },

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Volunteer Scheduling Software | Shift Management | Kindora",
+  title: "Volunteer Scheduling Software | Shift Management",
   description:
     "Kindora volunteer scheduling software helps nonprofits create shift schedules, manage availability, fill open spots, and communicate with volunteers — all from one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/volunteer-scheduling-software",
   },
   openGraph: {
-    title: "Volunteer Scheduling Software — Kindora",
+    title: "Volunteer Scheduling Software",
     description: "Create and manage volunteer shift schedules with ease. Fill openings, track availability, and communicate with your team.",
     url: "https://spacenexus.net/kindora/volunteer-scheduling-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volunteer Scheduling Software — Kindora",
+    title: "Volunteer Scheduling Software",
     description: "Create shifts, manage availability, and fill openings with Kindora volunteer scheduling software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -253,7 +253,7 @@ export default function VolunteerSchedulingSoftwarePage() {
                       </div>
                       <div className="text-right text-xs">
                         <span className="text-gray-500">{s.volunteer}</span>
-                        <span className="text-gray-400 ml-2">{s.time}</span>
+                        <span className="text-gray-500 ml-2">{s.time}</span>
                       </div>
                     </div>
                   ))}

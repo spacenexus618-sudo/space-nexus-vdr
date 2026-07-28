@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { getPostBySlug, blogPosts } from "../data/posts";
 import BlogPostContent from "./BlogPostContent";
 
@@ -16,13 +17,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!post) {
     return {
-      title: "Article Not Found | Kindora Blog",
+      title: "Article Not Found",
       description: "The article you are looking for could not be found.",
     };
   }
 
   return {
-    title: `${post.title} | Kindora Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
@@ -46,5 +47,42 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  return <BlogPostContent slug={slug} />;
+  const post = getPostBySlug(slug);
+
+  const blogPostingSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.publishedAt,
+        author: {
+          "@type": "Person",
+          name: post.author.name,
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://spacenexus.net/kindora/#organization",
+          name: "Kindora",
+        },
+        url: `https://spacenexus.net/kindora/blog/${slug}`,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://spacenexus.net/kindora/blog/${slug}`,
+        },
+      }
+    : null;
+
+  return (
+    <>
+      {blogPostingSchema && (
+        <Script
+          id={`blog-${slug}-jsonld`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        />
+      )}
+      <BlogPostContent slug={slug} />
+    </>
+  );
 }

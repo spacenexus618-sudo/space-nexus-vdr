@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Donor CRM | Nonprofit Donor Relationship Management | Kindora",
+  title: "Donor CRM | Nonprofit Donor Relationship Management",
   description:
     "Kindora Donor CRM helps nonprofits manage donor relationships, track giving history, run campaigns, and build long-term supporter engagement — all in one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-crm",
   },
   openGraph: {
-    title: "Donor CRM — Kindora",
+    title: "Donor CRM",
     description: "Build stronger donor relationships with Kindora CRM. Track interactions, manage campaigns, and grow engagement.",
     url: "https://spacenexus.net/kindora/donor-crm",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor CRM — Kindora",
+    title: "Donor CRM",
     description: "The donor CRM built for nonprofits. Manage relationships, track interactions, and grow engagement.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -302,7 +302,7 @@ export default function DonorCRM() {
                         <p className="text-sm font-semibold text-gray-900">{item.action}</p>
                         <p className="text-xs text-gray-500 truncate">{item.donor} — {item.detail}</p>
                       </div>
-                      <span className="text-[10px] text-gray-400 whitespace-nowrap">{item.time}</span>
+                      <span className="text-[10px] text-gray-500 whitespace-nowrap">{item.time}</span>
                     </div>
                   ))}
                 </div>

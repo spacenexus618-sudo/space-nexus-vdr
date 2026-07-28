@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Event Fundraising Software | Fundraising Events Platform | Kindora",
+  title: "Event Fundraising Software | Fundraising Events Platform",
   description:
     "Kindora event fundraising software helps nonprofits maximize fundraising through events — with ticketing, donation collection, peer-to-peer tools, sponsor management, and post-event reporting.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/event-fundraising-software",
   },
   openGraph: {
-    title: "Event Fundraising Software — Kindora",
+    title: "Event Fundraising Software",
     description: "Maximize fundraising at events with ticketing, donations, peer-to-peer tools, and sponsor management.",
     url: "https://spacenexus.net/kindora/event-fundraising-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Event Fundraising Software — Kindora",
+    title: "Event Fundraising Software",
     description: "Maximize fundraising at events with ticketing, donations, peer-to-peer, and sponsor management.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -254,7 +254,7 @@ export default function EventFundraisingSoftwarePage() {
                         </div>
                         <span className="text-xs text-gray-500">{e.date}</span>
                       </div>
-                      <div className="flex justify-between text-xs text-gray-400 pl-4">
+                      <div className="flex justify-between text-xs text-gray-500 pl-4">
                         <span>{e.tickets}</span>
                         <span>{e.revenue}</span>
                       </div>

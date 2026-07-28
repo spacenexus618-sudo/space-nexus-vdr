@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Better Alternative to Bonterra | All-in-One Nonprofit Platform | Kindora",
+  title: "Better Alternative to Bonterra | All-in-One Nonprofit Platform",
   description:
     "Bonterra handles case management — but ignores your donors, grants, and finances. Kindora is the better alternative: case management, donor CRM, grant tracking, and accounting in one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/better-alternative-to-bonterra",
   },
   openGraph: {
-    title: "Better Alternative to Bonterra — Kindora",
+    title: "Better Alternative to Bonterra",
     description:
       "Bonterra only handles case management. Kindora is the better alternative — case management, donor CRM, grant tracking, and nonprofit accounting in one affordable platform.",
     url: "https://spacenexus.net/kindora/better-alternative-to-bonterra",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Better Alternative to Bonterra — Kindora",
+    title: "Better Alternative to Bonterra",
     description:
       "Why nonprofits are choosing Kindora over Bonterra. Case management + donor CRM + grants + accounting — one platform, one price.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
@@ -372,7 +372,7 @@ export default function BetterAlternativeToBonterraPage() {
                         {row.feature}
                       </span>
                       <div className="flex items-center gap-4">
-                        <span className="text-xs text-gray-400 w-16 text-right">
+                        <span className="text-xs text-gray-500 w-16 text-right">
                           Bonterra
                         </span>
                         <span
@@ -388,7 +388,7 @@ export default function BetterAlternativeToBonterraPage() {
                             </svg>
                           )}
                         </span>
-                        <span className="text-xs text-gray-400 w-16 text-right">
+                        <span className="text-xs text-gray-500 w-16 text-right">
                           Kindora
                         </span>
                         <span

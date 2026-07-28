@@ -14,7 +14,7 @@ export async function generateMetadata(
 
   if (!post) {
     return {
-      title: "Article Not Found | Kindora Blog",
+      title: "Article Not Found",
       alternates: { canonical: "https://spacenexus.net/kindora/blog" },
     };
   }
@@ -22,7 +22,7 @@ export async function generateMetadata(
   const canonical = `https://spacenexus.net/kindora/blog/${slug}`;
 
   return {
-    title: `${post.title} | Kindora Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
     alternates: { canonical },
     openGraph: {

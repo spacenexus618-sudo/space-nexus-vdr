@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Volunteer Database Software | Volunteer Directory | Kindora",
+  title: "Volunteer Database Software | Volunteer Directory",
   description:
     "Kindora volunteer database software helps nonprofits maintain a centralized volunteer directory with contact info, skills, availability, hours, and engagement history — all searchable and segmentable.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/volunteer-database-software",
   },
   openGraph: {
-    title: "Volunteer Database Software — Kindora",
+    title: "Volunteer Database Software",
     description: "Maintain a centralized volunteer directory with skills tracking, availability, hours, and engagement history.",
     url: "https://spacenexus.net/kindora/volunteer-database-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volunteer Database Software — Kindora",
+    title: "Volunteer Database Software",
     description: "Centralize volunteer data with contact info, skills, hours, and engagement history in one searchable directory.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

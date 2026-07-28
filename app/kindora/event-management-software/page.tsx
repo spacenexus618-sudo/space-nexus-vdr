@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Event Management Software | Fundraising Events | Kindora",
+  title: "Event Management Software | Fundraising Events",
   description:
     "Kindora event management software helps nonprofits plan, promote, and manage fundraising events — from registration and ticketing to check-in, donations, and post-event reporting.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/event-management-software",
   },
   openGraph: {
-    title: "Event Management Software — Kindora",
+    title: "Event Management Software",
     description: "Plan and manage successful fundraising events with Kindora — registration, ticketing, check-in, and post-event reporting.",
     url: "https://spacenexus.net/kindora/event-management-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Event Management Software — Kindora",
+    title: "Event Management Software",
     description: "Plan, promote, and manage fundraising events with Kindora event management software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -253,7 +253,7 @@ export default function EventManagementSoftwarePage() {
                       </div>
                       <div className="text-right text-xs">
                         <span className="text-gray-500">{e.tickets}</span>
-                        <span className="text-gray-400 ml-2">{e.date}</span>
+                        <span className="text-gray-500 ml-2">{e.date}</span>
                       </div>
                     </div>
                   ))}

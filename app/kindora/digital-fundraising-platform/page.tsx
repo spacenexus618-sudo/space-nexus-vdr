@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Digital Fundraising Platform | Online Fundraising Software | Kindora",
+  title: "Digital Fundraising Platform | Online Fundraising Software",
   description:
     "Kindora digital fundraising platform helps nonprofits raise more online with donation forms, peer-to-peer pages, event fundraising, text-to-give, and real-time analytics.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/digital-fundraising-platform",
   },
   openGraph: {
-    title: "Digital Fundraising Platform — Kindora",
+    title: "Digital Fundraising Platform",
     description: "Raise more online with Kindora's digital fundraising platform — donation forms, peer-to-peer, events, and analytics.",
     url: "https://spacenexus.net/kindora/digital-fundraising-platform",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Fundraising Platform — Kindora",
+    title: "Digital Fundraising Platform",
     description: "Raise more online with donation forms, peer-to-peer pages, event fundraising, and real-time analytics.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -254,7 +254,7 @@ export default function DigitalFundraisingPlatformPage() {
                       <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-cyan-400 to-teal-500 rounded-full" style={{ width: c.progress }} />
                       </div>
-                      <p className="text-xs text-gray-400 mt-1">{c.channel}</p>
+                      <p className="text-xs text-gray-500 mt-1">{c.channel}</p>
                     </div>
                   ))}
                 </div>

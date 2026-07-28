@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Donor Database for Nonprofits | Centralized Donor Records | Kindora",
+  title: "Donor Database for Nonprofits | Centralized Donor Records",
   description:
     "Kindora is the donor database for nonprofits. Centralized donor records, complete giving history, powerful search, segmentation, and real-time reports — all in one secure platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-database-for-nonprofits",
   },
   openGraph: {
-    title: "Donor Database for Nonprofits — Kindora",
+    title: "Donor Database for Nonprofits",
     description: "Centralized donor database for nonprofits with giving history, search, segmentation, and real-time reporting.",
     url: "https://spacenexus.net/kindora/donor-database-for-nonprofits",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Database for Nonprofits — Kindora",
+    title: "Donor Database for Nonprofits",
     description: "The donor database built for nonprofits. Centralize, search, and grow your donor relationships.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -292,6 +292,7 @@ export default function DonorDatabaseForNonprofitsPage() {
                     <input
                       type="text"
                       placeholder="Search donors..."
+                      aria-label="Search donors"
                       className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none"
                       readOnly
                     />

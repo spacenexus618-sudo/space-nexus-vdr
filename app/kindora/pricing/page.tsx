@@ -201,8 +201,9 @@ function XIcon() {
 
 // ─── FAQ Item ─────────────────────────────────────────────────────────────────
 
-function FaqItem({ question, answer }: { question: string; answer: string }) {
+function FaqItem({ question, answer, index }: { question: string; answer: string; index: number }) {
   const [open, setOpen] = useState(false);
+  const panelId = `faq-panel-${index}`;
   return (
     <div
       className={`rounded-xl border transition-all duration-300 overflow-hidden ${open ? "border-[#2563eb]/30 shadow-md shadow-blue-500/5" : "border-gray-200"
@@ -212,6 +213,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen((v) => !v)}
         className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-gray-50/80 transition-colors"
         aria-expanded={open}
+        aria-controls={panelId}
       >
         <span className="text-base font-semibold text-gray-900 leading-snug">{question}</span>
         <span
@@ -229,6 +231,9 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         </span>
       </button>
       <div
+        id={panelId}
+        role="region"
+        aria-hidden={!open}
         className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"}`}
       >
         <div className="px-6 pb-5 pt-0 bg-white">
@@ -236,7 +241,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
           {question.includes("Bloomerang") && (
             <Link
               href="/kindora/vs-competitors"
-              className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-[#2563eb] hover:underline"
+              className="inline-flex items-center gap-1 mt-3 py-2 text-sm font-semibold text-[#2563eb] hover:underline"
             >
               See full comparison →
             </Link>
@@ -513,7 +518,7 @@ export default function PricingPage() {
                         href="https://cad.spaceaiapp.com/kindora"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex px-5 py-2 rounded-full text-sm font-semibold text-[#2563eb] border-2 border-[#2563eb]/30 hover:border-[#2563eb] transition-colors"
+                        className="inline-flex px-6 py-3 rounded-full text-sm font-semibold text-[#2563eb] border-2 border-[#2563eb]/30 hover:border-[#2563eb] transition-colors"
                       >
                         Start Free
                       </a>
@@ -521,7 +526,7 @@ export default function PricingPage() {
                     <td className="py-5 px-6 text-center bg-blue-50/40">
                       <Link
                         href="/kindora/contact"
-                        className="inline-flex px-5 py-2 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] shadow-md shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow"
+                        className="inline-flex px-6 py-3 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] shadow-md shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow"
                       >
                         Contact Sales
                       </Link>
@@ -529,7 +534,7 @@ export default function PricingPage() {
                     <td className="py-5 px-6 text-center">
                       <Link
                         href="/kindora/contact"
-                        className="inline-flex px-5 py-2 rounded-full text-sm font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors"
+                        className="inline-flex px-6 py-3 rounded-full text-sm font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors"
                       >
                         Contact Sales
                       </Link>
@@ -542,7 +547,7 @@ export default function PricingPage() {
 
           <p className="text-center text-sm text-gray-500 mt-6">
             Compare Kindora to competitors →{" "}
-            <Link href="/kindora/vs-competitors" className="text-[#2563eb] font-semibold hover:underline">
+            <Link href="/kindora/vs-competitors" className="inline-block py-2 text-[#2563eb] font-semibold hover:underline">
               See full comparison
             </Link>
           </p>
@@ -563,8 +568,8 @@ export default function PricingPage() {
           </div>
 
           <div className="space-y-3">
-            {faqs.map((faq) => (
-              <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
+            {faqs.map((faq, i) => (
+              <FaqItem key={faq.question} question={faq.question} answer={faq.answer} index={i} />
             ))}
           </div>
         </div>

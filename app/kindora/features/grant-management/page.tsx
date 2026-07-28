@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Grant Management Software & Tracking for Nonprofits — Kindora",
+  title: "Grant Management Software & Tracking for Nonprofits",
   description:
     "Track grants from prospect to close, manage grantors, process receipts, and generate compliance-ready reports with Kindora's grant management tools.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/grant-management",
   },
   openGraph: {
-    title: "Grant Management Software & Tracking for Nonprofits — Kindora",
+    title: "Grant Management Software & Tracking for Nonprofits",
     description:
       "Full-lifecycle grant management software: track applications, manage grantors, process receipts, and generate compliance reports — built for nonprofits.",
     url: "https://spacenexus.net/kindora/features/grant-management",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grant Management Software & Tracking for Nonprofits — Kindora",
+    title: "Grant Management Software & Tracking for Nonprofits",
     description:
       "Track grants from prospect to close with Kindora's nonprofit grant management software. Compliance reports included.",
   },

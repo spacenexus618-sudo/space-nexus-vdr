@@ -1,6 +1,13 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Kindora Social Media",
+    description: "Follow Kindora on YouTube, Instagram, Twitter/X, LinkedIn, and Facebook for nonprofit management tips, product updates, and industry insights.",
+    alternates: {
+        canonical: "/kindora/social-media",
+    },
+};
 
 const platforms = [
   { name: "YouTube", href: "https://www.youtube.com/@KindoraNGOOS", color: "hover:bg-[#FF0000]" },

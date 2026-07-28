@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Bonterra Alternative | Better Case & Donor Management | Kindora",
+  title: "Bonterra Alternative | Better Case & Donor Management",
   description:
     "Looking for a Bonterra alternative? Kindora offers everything Bonterra Apricot does for case management — plus donor CRM, grant tracking, nonprofit accounting, and more. Try it free.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/bonterra-alternative",
   },
   openGraph: {
-    title: "Bonterra Alternative — Kindora",
+    title: "Bonterra Alternative",
     description:
       "Kindora offers everything Bonterra does for case management — plus donor CRM, grant tracking, and nonprofit accounting. The all-in-one alternative.",
     url: "https://spacenexus.net/kindora/bonterra-alternative",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bonterra Alternative — Kindora",
+    title: "Bonterra Alternative",
     description:
       "Everything Bonterra does for case management — plus donor CRM, grants, accounting, and volunteers. Try Kindora free.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
@@ -417,7 +417,7 @@ export default function BonterraAlternativePage() {
                         {row.feature}
                       </span>
                       <div className="flex items-center gap-4">
-                        <span className="text-xs text-gray-400 w-16 text-right">
+                        <span className="text-xs text-gray-500 w-16 text-right">
                           Kindora
                         </span>
                         <span
@@ -453,7 +453,7 @@ export default function BonterraAlternativePage() {
                             </svg>
                           )}
                         </span>
-                        <span className="text-xs text-gray-400 w-20 text-right">
+                        <span className="text-xs text-gray-500 w-20 text-right">
                           Bonterra
                         </span>
                         <span
@@ -499,7 +499,7 @@ export default function BonterraAlternativePage() {
                     Kindora:{" "}
                     <span className="font-bold text-[#2563eb]">8/8</span>{" "}
                     features · Bonterra:{" "}
-                    <span className="font-bold text-gray-400">2/8</span>{" "}
+                    <span className="font-bold text-gray-500">2/8</span>{" "}
                     features
                   </span>
                 </div>
@@ -842,7 +842,7 @@ export default function BonterraAlternativePage() {
               </ul>
               <div className="border-t border-gray-100 pt-5 space-y-3">
                 <div className="flex items-start gap-2">
-                  <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider w-24 shrink-0 mt-0.5">
+                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider w-24 shrink-0 mt-0.5">
                     Bonterra best for:
                   </span>
                   <span className="text-sm text-gray-600">
@@ -915,7 +915,7 @@ export default function BonterraAlternativePage() {
                     {faq.question}
                   </span>
                   <svg
-                    className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    className="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

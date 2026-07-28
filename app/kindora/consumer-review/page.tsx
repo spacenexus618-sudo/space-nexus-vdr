@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 
 const reviews = [
   {
@@ -46,8 +47,34 @@ const reviews = [
 ];
 
 export default function ConsumerReviewPage() {
+  const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Kindora NGO OS",
+    description:
+      "All-in-one nonprofit management platform with donor management, grant tracking, program delivery, financial reporting, and volunteer coordination.",
+    url: "https://spacenexus.net/kindora",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avgRating.toFixed(1),
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: reviews.length,
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: "5" },
+      reviewBody: r.text,
+    })),
+  };
+
   return (
-    <main className="min-h-screen bg-[#f8f9fa]">
+    <>
+      <Script id="consumer-review-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <main className="min-h-screen bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Kindora Consumer Reviews</h1>
@@ -82,5 +109,6 @@ export default function ConsumerReviewPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Volunteer Hours Tracking Software | Hour Logging | Kindora",
+  title: "Volunteer Hours Tracking Software | Hour Logging",
   description:
     "Kindora volunteer hours tracking software lets nonprofits log, track, and report volunteer hours with clock-in/out, mobile check-in, and auto-calculated totals — perfect for grant reporting and impact measurement.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/volunteer-hours-tracking-software",
   },
   openGraph: {
-    title: "Volunteer Hours Tracking Software — Kindora",
+    title: "Volunteer Hours Tracking Software",
     description: "Track volunteer hours with clock-in/out, mobile check-in, and auto-calculated totals for reporting.",
     url: "https://spacenexus.net/kindora/volunteer-hours-tracking-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volunteer Hours Tracking Software — Kindora",
+    title: "Volunteer Hours Tracking Software",
     description: "Log and report volunteer hours with clock-in/out, mobile check-in, and auto-calculated totals.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

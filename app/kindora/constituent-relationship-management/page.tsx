@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title:
-    "Constituent Relationship Management Software | CRM for Nonprofits | Kindora",
+    "Constituent Relationship Management Software | CRM for Nonprofits",
   description:
     "Kindora constituent relationship management software helps nonprofits manage donors, volunteers, grantors, and stakeholders in one unified platform with engagement scoring, communication tools, and impact reporting.",
   alternates: {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Constituent Relationship Management Software — Kindora",
+      "Constituent Relationship Management Software",
     description:
       "Manage donors, volunteers, grantors, and stakeholders in one unified nonprofit CRM with engagement scoring, communication tools, and impact reporting.",
     url: "https://spacenexus.net/kindora/constituent-relationship-management",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Constituent Relationship Management — Kindora",
+      "Constituent Relationship Management",
     description:
       "Manage donors, volunteers, grantors, and stakeholders in one unified nonprofit CRM.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Grant Compliance Software | Stay Funder-Ready | Kindora",
+  title: "Grant Compliance Software | Stay Funder-Ready",
   description:
     "Grant compliance software for nonprofits — track reporting requirements, meet deadlines, and maintain audit-ready documentation. Never lose funding to compliance issues.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/grant-compliance-software",
   },
   openGraph: {
-    title: "Grant Compliance Software — Kindora",
+    title: "Grant Compliance Software",
     description:
       "Stay funder-ready with automated compliance tracking, deadline reminders, and audit-ready documentation.",
     url: "https://spacenexus.net/kindora/grant-compliance-software",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grant Compliance Software — Kindora",
+    title: "Grant Compliance Software",
     description:
       "Automated grant compliance software. Track requirements, meet deadlines, and stay audit-ready.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Nonprofit CRM Software | All-in-One Nonprofit CRM | Kindora",
+  title: "Nonprofit CRM Software | All-in-One Nonprofit CRM",
   description:
     "Kindora nonprofit CRM software helps you track donors, manage grants, coordinate volunteers, and run programmes — all from one integrated platform built for nonprofits.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-crm",
   },
   openGraph: {
-    title: "Nonprofit CRM Software — Kindora",
+    title: "Nonprofit CRM Software",
     description: "Track donors, manage grants, coordinate volunteers, and run programmes — all from one integrated nonprofit CRM.",
     url: "https://spacenexus.net/kindora/nonprofit-crm",
     siteName: "Kindora by Space Nexus",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit CRM Software — Kindora",
+    title: "Nonprofit CRM Software",
     description: "Track donors, manage grants, coordinate volunteers, and run programmes — all from one integrated nonprofit CRM.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

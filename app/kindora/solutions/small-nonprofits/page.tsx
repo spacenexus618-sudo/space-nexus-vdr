@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Nonprofit Software for Small Organizations | Kindora",
+    title: "Nonprofit Software for Small Organizations",
     description:
         "Kindora is the all-in-one nonprofit management software built for small nonprofits. Manage donors, grants, clients, and finances — without the enterprise price tag.",
     keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/solutions/small-nonprofits",
     },
     openGraph: {
-        title: "Nonprofit Software for Small Organizations | Kindora",
+        title: "Nonprofit Software for Small Organizations",
         description:
             "Kindora gives small nonprofits the tools of an enterprise — donor management, grant tracking, client services, and financial reporting in one platform.",
         url: "https://spacenexus.net/kindora/solutions/small-nonprofits",

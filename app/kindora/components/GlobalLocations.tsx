@@ -106,6 +106,7 @@ export default function GlobalLocations() {
           <div className="flex-1 relative h-[500px] lg:h-[580px] rounded-xl overflow-hidden border border-gray-800 shadow-2xl shadow-[#2563eb]/10">
             <iframe
               key={loc.id}
+              title={`Map showing ${loc.name} office location`}
               loading="lazy"
               allowFullScreen
               src={`https://www.google.com/maps?q=${getMapQuery(loc)}&z=14&output=embed`}

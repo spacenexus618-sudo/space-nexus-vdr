@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Workflow Automation | Automate Nonprofit Processes | Kindora",
+  title: "Nonprofit Workflow Automation | Automate Nonprofit Processes",
   description:
     "Kindora nonprofit workflow automation helps organisations automate repetitive tasks, streamline operations, and free staff time to focus on mission-critical work.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-workflow-automation",
   },
   openGraph: {
-    title: "Nonprofit Workflow Automation — Kindora",
+    title: "Nonprofit Workflow Automation",
     description: "Automate nonprofit processes and streamline operations with Kindora's workflow automation platform.",
     url: "https://spacenexus.net/kindora/nonprofit-workflow-automation",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Workflow Automation — Kindora",
+    title: "Nonprofit Workflow Automation",
     description: "Automate nonprofit processes and streamline operations with Kindora's workflow automation platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

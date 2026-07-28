@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Volunteer Portal | Self-Service Volunteer Management | Kindora",
+  title: "Volunteer Portal | Self-Service Volunteer Management",
   description:
     "Kindora's volunteer portal lets volunteers view schedules, sign up for shifts, log hours, update profiles, and track their impact — all from one self-service platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/volunteer-portal",
   },
   openGraph: {
-    title: "Volunteer Portal — Kindora",
+    title: "Volunteer Portal",
     description:
       "Give your volunteers a self-service portal to manage schedules, log hours, and track their impact.",
     url: "https://spacenexus.net/kindora/volunteer-portal",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volunteer Portal — Kindora",
+    title: "Volunteer Portal",
     description:
       "Self-service volunteer portal for scheduling, hour logging, and impact tracking.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

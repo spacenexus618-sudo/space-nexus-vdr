@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Dashboard Software | Nonprofit Reporting Software | Kindora",
+  title: "Nonprofit Dashboard Software | Nonprofit Reporting Software",
   description:
     "Kindora nonprofit dashboard software gives you real-time dashboards for donors, fundraising, grants, and programmes — one system for complete organisational visibility.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-dashboard-software",
   },
   openGraph: {
-    title: "Nonprofit Dashboard Software — Kindora",
+    title: "Nonprofit Dashboard Software",
     description: "Real-time nonprofit dashboards for donors, fundraising, grants, and programme outcomes.",
     url: "https://spacenexus.net/kindora/nonprofit-dashboard-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Dashboard Software — Kindora",
+    title: "Nonprofit Dashboard Software",
     description: "Real-time nonprofit dashboards for donors, fundraising, grants, and programme outcomes.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

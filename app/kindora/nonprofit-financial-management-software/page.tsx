@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Financial Management Software | Nonprofit Accounting | Kindora",
+  title: "Nonprofit Financial Management Software | Nonprofit Accounting",
   description:
     "Kindora nonprofit financial management software — chart of accounts, budget tracking, expense management, cost allocation, and board-ready financial reports. Built for nonprofits.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-financial-management-software",
   },
   openGraph: {
-    title: "Nonprofit Financial Management Software — Kindora",
+    title: "Nonprofit Financial Management Software",
     description:
       "Manage your nonprofit's finances with chart of accounts, budgets, expense tracking, cost allocation, and financial reporting — all in one platform.",
     url: "https://spacenexus.net/kindora/nonprofit-financial-management-software",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Financial Management Software — Kindora",
+    title: "Nonprofit Financial Management Software",
     description:
       "Nonprofit accounting, budgets, expense tracking, and financial reporting in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

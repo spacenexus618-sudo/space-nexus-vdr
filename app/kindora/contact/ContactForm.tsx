@@ -11,6 +11,24 @@ const primaryNeeds = [
   "All of the Above",
 ];
 
+interface FormErrors {
+  organizationName?: string;
+  contactName?: string;
+  email?: string;
+}
+
+function validate(formData: { organizationName: string; contactName: string; email: string }): FormErrors {
+  const errors: FormErrors = {};
+  if (!formData.organizationName.trim()) errors.organizationName = "Organization name is required";
+  if (!formData.contactName.trim()) errors.contactName = "Contact name is required";
+  if (!formData.email.trim()) {
+    errors.email = "Email is required";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    errors.email = "Enter a valid email address";
+  }
+  return errors;
+}
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     organizationName: "",
@@ -22,6 +40,8 @@ export default function ContactForm() {
     needs: [] as string[],
     message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Set<string>>(new Set());
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -34,10 +54,18 @@ export default function ContactForm() {
     }));
   };
 
+  const handleBlur = (field: string) => {
+    setTouched((prev) => new Set(prev).add(field));
+    setErrors(validate(formData));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const validationErrors = validate(formData);
+    setErrors(validationErrors);
+    setTouched(new Set(["organizationName", "contactName", "email"]));
+    if (Object.keys(validationErrors).length > 0) return;
     setIsSubmitting(true);
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -128,16 +156,21 @@ export default function ContactForm() {
                       type="text"
                       id="organizationName"
                       required
+                      aria-required="true"
+                      aria-invalid={touched.has("organizationName") && !!errors.organizationName}
+                      aria-describedby={errors.organizationName ? "orgName-error" : undefined}
                       value={formData.organizationName}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          organizationName: e.target.value,
-                        })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
+                      onChange={(e) => {
+                        setFormData({ ...formData, organizationName: e.target.value });
+                        if (touched.has("organizationName")) setErrors(validate({ ...formData, organizationName: e.target.value }));
+                      }}
+                      onBlur={() => handleBlur("organizationName")}
+                      className={`w-full px-4 py-3.5 rounded-xl border outline-none transition-all ${touched.has("organizationName") && errors.organizationName ? "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-500/20" : "border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20"}`}
                       placeholder="Your nonprofit name"
                     />
+                    {touched.has("organizationName") && errors.organizationName && (
+                      <p id="orgName-error" role="alert" className="text-red-600 text-xs mt-1">{errors.organizationName}</p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -150,16 +183,21 @@ export default function ContactForm() {
                       type="text"
                       id="contactName"
                       required
+                      aria-required="true"
+                      aria-invalid={touched.has("contactName") && !!errors.contactName}
+                      aria-describedby={errors.contactName ? "contactName-error" : undefined}
                       value={formData.contactName}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          contactName: e.target.value,
-                        })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
+                      onChange={(e) => {
+                        setFormData({ ...formData, contactName: e.target.value });
+                        if (touched.has("contactName")) setErrors(validate({ ...formData, contactName: e.target.value }));
+                      }}
+                      onBlur={() => handleBlur("contactName")}
+                      className={`w-full px-4 py-3.5 rounded-xl border outline-none transition-all ${touched.has("contactName") && errors.contactName ? "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-500/20" : "border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20"}`}
                       placeholder="Your name"
                     />
+                    {touched.has("contactName") && errors.contactName && (
+                      <p id="contactName-error" role="alert" className="text-red-600 text-xs mt-1">{errors.contactName}</p>
+                    )}
                   </div>
                 </div>
 
@@ -175,13 +213,21 @@ export default function ContactForm() {
                       type="email"
                       id="email"
                       required
+                      aria-required="true"
+                      aria-invalid={touched.has("email") && !!errors.email}
+                      aria-describedby={errors.email ? "email-error" : undefined}
                       value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
+                      onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
+                        if (touched.has("email")) setErrors(validate({ ...formData, email: e.target.value }));
+                      }}
+                      onBlur={() => handleBlur("email")}
+                      className={`w-full px-4 py-3.5 rounded-xl border outline-none transition-all ${touched.has("email") && errors.email ? "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-500/20" : "border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20"}`}
                       placeholder="email@organization.org"
                     />
+                    {touched.has("email") && errors.email && (
+                      <p id="email-error" role="alert" className="text-red-600 text-xs mt-1">{errors.email}</p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -197,7 +243,7 @@ export default function ContactForm() {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -247,7 +293,7 @@ export default function ContactForm() {
                           currentTools: e.target.value,
                         })
                       }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all"
                       placeholder="e.g., Spreadsheets, QuickBooks"
                     />
                   </div>
@@ -263,7 +309,7 @@ export default function ContactForm() {
                         key={need}
                         type="button"
                         onClick={() => handleNeedToggle(need)}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${formData.needs.includes(need)
+                        className={`px-4 py-3 rounded-lg text-sm font-medium border transition-all ${formData.needs.includes(need)
                             ? "bg-[#2563eb] text-white border-[#2563eb]"
                             : "bg-white text-gray-700 border-gray-300 hover:border-[#2563eb] hover:text-[#2563eb]"
                           }`}
@@ -288,7 +334,7 @@ export default function ContactForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 outline-none transition-all resize-none"
                     placeholder="Tell us about your organization and what you're looking for..."
                   />
                 </div>
@@ -296,7 +342,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

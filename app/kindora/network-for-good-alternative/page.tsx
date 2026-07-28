@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Network for Good Alternative | Better Donor Management | Kindora",
+  title: "Network for Good Alternative | Better Donor Management",
   description:
     "Looking for a Network for Good alternative? Kindora offers everything Network for Good does for donor management — plus grant tracking, case management, nonprofit accounting, and more. Try it free.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/network-for-good-alternative",
   },
   openGraph: {
-    title: "Network for Good Alternative — Kindora",
+    title: "Network for Good Alternative",
     description:
       "Kindora offers everything Network for Good does for donor management — plus grant tracking, case management, and nonprofit accounting. The all-in-one alternative.",
     url: "https://spacenexus.net/kindora/network-for-good-alternative",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Network for Good Alternative — Kindora",
+    title: "Network for Good Alternative",
     description:
       "Everything Network for Good does for donors — plus grants, case management, and nonprofit accounting. Try Kindora free.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

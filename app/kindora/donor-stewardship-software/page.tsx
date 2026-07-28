@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Donor Stewardship Software | Donor Retention Software | Kindora",
+  title: "Donor Stewardship Software | Donor Retention Software",
   description:
     "Kindora donor stewardship software helps you build lasting donor relationships, automate thank-yous, track engagement, and increase retention — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-stewardship-software",
   },
   openGraph: {
-    title: "Donor Stewardship Software — Kindora",
+    title: "Donor Stewardship Software",
     description: "Build lasting donor relationships and increase retention with Kindora donor stewardship software.",
     url: "https://spacenexus.net/kindora/donor-stewardship-software",
     siteName: "Kindora by Space Nexus",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Stewardship Software — Kindora",
+    title: "Donor Stewardship Software",
     description: "Build lasting donor relationships and increase retention with Kindora donor stewardship software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Donation Management Software | Donation Tracking System | Kindora",
+  title: "Donation Management Software | Donation Tracking System",
   description:
     "Kindora donation management software helps you track donations, process gifts, and generate receipts automatically — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donation-management-software",
   },
   openGraph: {
-    title: "Donation Management Software — Kindora",
+    title: "Donation Management Software",
     description: "Track donations, process gifts, and generate receipts automatically with Kindora donation management software.",
     url: "https://spacenexus.net/kindora/donation-management-software",
     siteName: "Kindora by Space Nexus",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donation Management Software — Kindora",
+    title: "Donation Management Software",
     description: "Track donations, process gifts, and generate receipts automatically with Kindora donation management software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

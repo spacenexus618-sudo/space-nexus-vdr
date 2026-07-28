@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Membership Management Software | Member Management | Kindora",
+  title: "Membership Management Software | Member Management",
   description:
     "Kindora membership management software helps nonprofits manage member records, renewals, dues, communications, and engagement — from sign-up to renewal and beyond.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/membership-management-software",
   },
   openGraph: {
-    title: "Membership Management Software — Kindora",
+    title: "Membership Management Software",
     description: "Manage member records, renewals, dues, and engagement with Kindora membership management software.",
     url: "https://spacenexus.net/kindora/membership-management-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Membership Management Software — Kindora",
+    title: "Membership Management Software",
     description: "Manage members, renewals, dues, and engagement with Kindora membership software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -251,7 +251,7 @@ export default function MembershipManagementSoftwarePage() {
                         <div className="w-2 h-2 rounded-full bg-pink-400" />
                         <div>
                           <span className="text-sm font-semibold text-gray-900">{m.name}</span>
-                          <span className="text-xs text-gray-400 ml-2">{m.level}</span>
+                          <span className="text-xs text-gray-500 ml-2">{m.level}</span>
                         </div>
                       </div>
                       <span className="text-xs text-gray-500">{m.renews}</span>

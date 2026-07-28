@@ -350,7 +350,7 @@ export default function VsCompetitorsPage() {
             <section className="py-6 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
-                        <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider shrink-0 mr-2">
+                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider shrink-0 mr-2">
                             Jump to:
                         </span>
                         {[
@@ -401,7 +401,7 @@ export default function VsCompetitorsPage() {
                                             className={`px-4 py-5 text-center min-w-[120px] ${c.name === "Kindora" ? "bg-[#2563eb]" : "bg-gray-50"}`}
                                         >
                                             <div className="flex flex-col items-center gap-1">
-                                                <span className={`text-xs font-semibold uppercase tracking-wider ${c.name === "Kindora" ? "text-blue-200" : "text-gray-400"}`}>
+                                                <span className={`text-xs font-semibold uppercase tracking-wider ${c.name === "Kindora" ? "text-blue-200" : "text-gray-500"}`}>
                                                     {c.tagline}
                                                 </span>
                                                 <span className={`text-sm font-bold ${c.name === "Kindora" ? "text-white" : "text-gray-700"}`}>
@@ -439,7 +439,7 @@ export default function VsCompetitorsPage() {
                                         return (
                                             <td
                                                 key={c.name}
-                                                className={`px-4 py-4 text-center font-black text-lg ${c.name === "Kindora" ? "text-[#2563eb] bg-blue-50/60" : "text-gray-400"}`}
+                                                className={`px-4 py-4 text-center font-black text-lg ${c.name === "Kindora" ? "text-[#2563eb] bg-blue-50/60" : "text-gray-500"}`}
                                             >
                                                 {count}/{features.length}
                                             </td>
@@ -460,7 +460,7 @@ export default function VsCompetitorsPage() {
                                                     Try Free
                                                 </a>
                                             ) : (
-                                                <span className="text-xs text-gray-400">Limited</span>
+                                                <span className="text-xs text-gray-500">Limited</span>
                                             )}
                                         </td>
                                     ))}
@@ -577,7 +577,7 @@ export default function VsCompetitorsPage() {
                                 </ul>
                                 <div className="border-t border-gray-100 pt-5 space-y-3">
                                     <div className="flex items-start gap-2">
-                                        <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider w-24 shrink-0 mt-0.5">
+                                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider w-24 shrink-0 mt-0.5">
                                             {comp.name} best for:
                                         </span>
                                         <span className="text-sm text-gray-600">{comp.bestFor}</span>
@@ -714,7 +714,7 @@ export default function VsCompetitorsPage() {
                                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
                                     <span className="text-base font-semibold text-gray-900">{faq.q}</span>
                                     <svg
-                                        className="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180"
+                                        className="w-5 h-5 text-gray-500 shrink-0 transition-transform duration-300 group-open:rotate-180"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"

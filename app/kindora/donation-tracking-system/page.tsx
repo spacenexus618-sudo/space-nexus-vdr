@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Donation Tracking System | Track Every Donation | Kindora",
+  title: "Donation Tracking System | Track Every Donation",
   description:
     "Kindora donation tracking system records every one-time, recurring, pledge, and in-kind gift in real time with automated receipting and campaign attribution.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donation-tracking-system",
   },
   openGraph: {
-    title: "Donation Tracking System — Kindora",
+    title: "Donation Tracking System",
     description: "Track every donation in real time with Kindora's all-in-one donation tracking system for nonprofits.",
     url: "https://spacenexus.net/kindora/donation-tracking-system",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donation Tracking System — Kindora",
+    title: "Donation Tracking System",
     description: "Track every donation in real time with Kindora — one-time, recurring, pledges, and in-kind gifts.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -252,7 +252,7 @@ export default function DonationTrackingSystemPage() {
                         <p className="text-sm font-semibold text-gray-900">{item.donor}</p>
                         <p className="text-xs text-gray-500">{item.campaign} — {item.amount}</p>
                       </div>
-                      <span className="text-[10px] text-gray-400 whitespace-nowrap">{item.time}</span>
+                      <span className="text-[10px] text-gray-500 whitespace-nowrap">{item.time}</span>
                     </div>
                   ))}
                 </div>

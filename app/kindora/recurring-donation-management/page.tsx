@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Recurring Donation Management | Monthly Giving Software | Kindora",
+  title: "Recurring Donation Management | Monthly Giving Software",
   description:
     "Kindora recurring donation management helps nonprofits build predictable revenue with automated monthly giving, donor self-service, and smart retention tools.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/recurring-donation-management",
   },
   openGraph: {
-    title: "Recurring Donation Management — Kindora",
+    title: "Recurring Donation Management",
     description: "Build predictable revenue with automated monthly giving and donor self-service management.",
     url: "https://spacenexus.net/kindora/recurring-donation-management",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Recurring Donation Management — Kindora",
+    title: "Recurring Donation Management",
     description: "Automate monthly giving, manage recurring donors, and build predictable revenue with Kindora.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

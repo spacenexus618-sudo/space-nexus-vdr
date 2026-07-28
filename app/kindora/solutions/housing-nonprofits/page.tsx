@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Housing Nonprofit Management Software | Kindora",
+    title: "Housing Nonprofit Management Software",
     description:
         "Kindora is the all-in-one platform for housing nonprofits. Manage housing clients, case files, grants, and program reporting in one place. Built for housing and homelessness service organizations.",
     keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/solutions/housing-nonprofits",
     },
     openGraph: {
-        title: "Housing Nonprofit Management Software | Kindora",
+        title: "Housing Nonprofit Management Software",
         description:
             "Manage housing clients, case files, HUD grant reporting, and program operations in one platform. Built for housing nonprofits and homelessness services.",
         url: "https://spacenexus.net/kindora/solutions/housing-nonprofits",

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Major Gift Management Software | Manage Major Donors | Kindora",
+  title: "Major Gift Management Software | Manage Major Donors",
   description:
     "Kindora major gift management software helps nonprofits identify, cultivate, and track major gift donors with pipeline management, ask tracking, and stewardship workflows.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/major-gift-management-software",
   },
   openGraph: {
-    title: "Major Gift Management Software — Kindora",
+    title: "Major Gift Management Software",
     description: "Identify, cultivate, and close major gifts with Kindora's all-in-one major gift management software.",
     url: "https://spacenexus.net/kindora/major-gift-management-software",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Major Gift Management Software — Kindora",
+    title: "Major Gift Management Software",
     description: "Identify, cultivate, and close major gifts with Kindora — pipeline, ask tracking, and stewardship.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

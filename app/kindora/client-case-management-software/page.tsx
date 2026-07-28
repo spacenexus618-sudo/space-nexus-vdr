@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Client Case Management Software for Nonprofits | Kindora",
+  title: "Client Case Management Software for Nonprofits",
   description:
     "Client case management software for nonprofits — track enrollment, manage case notes, monitor outcomes, and report program impact. Built for social services, youth programs, and community organizations.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/client-case-management-software",
   },
   openGraph: {
-    title: "Client Case Management Software — Kindora",
+    title: "Client Case Management Software",
     description:
       "Track client enrollment, manage case notes, monitor outcomes, and report program impact — all from one unified platform.",
     url: "https://spacenexus.net/kindora/client-case-management-software",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Client Case Management Software — Kindora",
+    title: "Client Case Management Software",
     description:
       "Client case management software for nonprofits. Track enrollment, manage case notes, and report outcomes.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

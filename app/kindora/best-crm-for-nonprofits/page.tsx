@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Best CRM for Nonprofits | Donor CRM Software | Kindora",
+  title: "Best CRM for Nonprofits | Donor CRM Software",
   description:
     "Kindora is the best CRM for nonprofits — donor management, fundraising, grants, volunteers, and reporting in one easy-to-use platform built specifically for nonprofits.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-crm-for-nonprofits",
   },
   openGraph: {
-    title: "Best CRM for Nonprofits — Kindora",
+    title: "Best CRM for Nonprofits",
     description: "The best CRM for nonprofits — all-in-one donor management, fundraising, grants, volunteers, and reporting.",
     url: "https://spacenexus.net/kindora/best-crm-for-nonprofits",
     siteName: "Kindora by Space Nexus",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best CRM for Nonprofits — Kindora",
+    title: "Best CRM for Nonprofits",
     description: "The best CRM for nonprofits — donor management, fundraising, grants, volunteers, and reporting.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -244,7 +244,7 @@ export default function BestCrmForNonprofitsPage() {
                     { label: "Programmes", value: "5", change: "Active", color: "text-amber-600" },
                   ].map((stat) => (
                     <div key={stat.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100">
-                      <p className="text-[10px] text-gray-500">{stat.label}</p>
+                       <p className="text-[10px] text-gray-600">{stat.label}</p>
                       <p className="text-lg font-black text-gray-900">{stat.value}</p>
                       <p className={`text-[10px] font-medium ${stat.color}`}>{stat.change}</p>
                     </div>
@@ -266,7 +266,7 @@ export default function BestCrmForNonprofitsPage() {
                       <div className="flex-1 min-w-0">
                         <p className="text-xs font-medium text-gray-900 truncate">{activity.action}</p>
                       </div>
-                      <span className="text-[10px] text-gray-400 whitespace-nowrap">{activity.time}</span>
+                       <span className="text-[10px] text-gray-600 whitespace-nowrap">{activity.time}</span>
                     </div>
                   ))}
                 </div>
