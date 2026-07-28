@@ -114,6 +114,7 @@ export default function AboutPage() {
                                 Built by dealmakers,{" "}
                                 <span className="text-[#2563eb]">for dealmakers</span>
                             </h1>
+                            
                             <p className="text-lg text-gray-600 mb-6">
                                 Space Nexus was founded by a team with deep roots in M&A advisory,
                                 private equity, and enterprise software. We&apos;ve been on both sides
