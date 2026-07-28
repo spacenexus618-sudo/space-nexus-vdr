@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Best Fundraising Software for Nonprofits 2026 | Kindora",
+  title: "Best Fundraising Software for Nonprofits 2026",
   description:
     "Find the best fundraising software for your nonprofit. Kindora helps you run campaigns, accept donations, manage donors, and track impact — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-fundraising-software",
   },
   openGraph: {
-    title: "Best Fundraising Software 2026 — Kindora",
+    title: "Best Fundraising Software 2026",
     description: "The best fundraising software for nonprofits — campaigns, donations, donors, and impact tracking in one platform.",
     url: "https://spacenexus.net/kindora/best-fundraising-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Fundraising Software 2026 — Kindora",
+    title: "Best Fundraising Software 2026",
     description: "Run campaigns, accept donations, and raise more with the best fundraising software for nonprofits.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -236,7 +236,7 @@ export default function BestFundraisingSoftwarePage() {
                   ].map((s) => (
                     <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
                       <p className="text-lg font-bold text-gray-900">{s.value}</p>
-                      <p className="text-xs text-gray-500">{s.label}</p>
+                       <p className="text-xs text-gray-600">{s.label}</p>
                     </div>
                   ))}
                 </div>
@@ -254,12 +254,12 @@ export default function BestFundraisingSoftwarePage() {
                           <div className="w-2 h-2 rounded-full bg-amber-400" />
                           <span className="text-sm font-semibold text-gray-900">{c.name}</span>
                         </div>
-                        <span className="text-xs text-gray-500">{c.progress}</span>
+                         <span className="text-xs text-gray-600">{c.progress}</span>
                       </div>
                       <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style={{ width: c.progress }} />
                       </div>
-                      <p className="text-xs text-gray-400 mt-1">{c.channel}</p>
+                       <p className="text-xs text-gray-600 mt-1">{c.channel}</p>
                     </div>
                   ))}
                 </div>
@@ -331,7 +331,7 @@ export default function BestFundraisingSoftwarePage() {
                   {item.step}
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>

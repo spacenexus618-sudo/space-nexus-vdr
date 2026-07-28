@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Programs — Client Services & Enrollment Management | Kindora",
+  title: "Programs — Client Services & Enrollment Management",
   description:
     "Kindora Programs helps nonprofits manage client services, track enrollments, and monitor program performance. Organize service offerings, manage client participation, and measure community impact.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/client-management",
   },
   openGraph: {
-    title: "Programs — Client Services & Enrollment Management | Kindora",
+    title: "Programs — Client Services & Enrollment Management",
     description:
       "Manage client profiles, service programs, enrollment tracking, and program outcomes — all in one centralized system for nonprofit service delivery.",
     url: "https://spacenexus.net/kindora/features/client-management",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Programs — Client Services & Enrollment Management | Kindora",
+    title: "Programs — Client Services & Enrollment Management",
     description:
       "Client intake, service programs, enrollment tracking, and program analytics for nonprofit service delivery.",
   },
@@ -172,14 +173,14 @@ export default function ProgramsPage() {
                   app.kindora.com / programs
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/Programs/Programs(1).png"
                   alt="Kindora Programs — client services and enrollment management"
-                  width={1911}
-                  height={906}
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>
@@ -238,14 +239,13 @@ export default function ProgramsPage() {
                     app.kindora.com / programs
                   </div>
                 </div>
-                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg">
-                  <img
+                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg aspect-[16/9] relative">
+                  <Image
                     src={screenshot.src}
                     alt={`Kindora Programs — ${screenshot.caption}`}
-                    width={1914}
-                    height={910}
-                    className="w-full h-auto"
-                    loading="lazy"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />
                 </div>
                 <p className="text-xs text-gray-500 text-center mt-2">{screenshot.caption}</p>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -17,8 +18,10 @@ export default function KindoraNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -29,6 +32,7 @@ export default function KindoraNav() {
   useEffect(() => {
     setProductsOpen(false);
     setContactOpen(false);
+    setMobileOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -44,13 +48,26 @@ export default function KindoraNav() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    if (mobileOpen) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
         ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_4px_30px_rgba(0,0,0,0.08)]"
         : "bg-gradient-to-b from-white via-white to-white/95"
         }`}
-      role="banner"
     >
       {/* Premium top accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#2563eb] to-transparent opacity-80" />
@@ -61,20 +78,18 @@ export default function KindoraNav() {
       >
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a
+          <Link
             href="/kindora"
-            target="_blank"
-            rel="noopener noreferrer"
             className="flex items-center gap-2.5 group"
             aria-label="Kindora Home"
           >
             <div className="relative w-10 h-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
-              <img
+              <Image
                 src="/icononly_transparent_nobuffer.png"
                 alt="Kindora"
-                width={40}
-                height={40}
-                className="object-contain drop-shadow-md w-full h-full"
+                fill
+                className="object-contain drop-shadow-md"
+                priority
               />
             </div>
             <div className="flex items-baseline gap-1.5">
@@ -85,7 +100,7 @@ export default function KindoraNav() {
                 KINDORA
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -95,8 +110,19 @@ export default function KindoraNav() {
               ref={dropdownRef}
               onMouseEnter={() => setProductsOpen(true)}
               onMouseLeave={() => setProductsOpen(false)}
+              onBlurCapture={(e) => {
+                if (dropdownRef.current && !dropdownRef.current.contains(e.relatedTarget as Node)) {
+                  setProductsOpen(false);
+                }
+              }}
             >
-              <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group">
+              <button
+                onFocus={() => setProductsOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") { e.stopPropagation(); setProductsOpen(false); }
+                }}
+                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group"
+              >
                 Products
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${productsOpen ? "rotate-180" : ""}`}
@@ -176,8 +202,19 @@ export default function KindoraNav() {
               ref={contactRef}
               onMouseEnter={() => setContactOpen(true)}
               onMouseLeave={() => setContactOpen(false)}
+              onBlurCapture={(e) => {
+                if (contactRef.current && !contactRef.current.contains(e.relatedTarget as Node)) {
+                  setContactOpen(false);
+                }
+              }}
             >
-              <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group">
+              <button
+                onFocus={() => setContactOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") { e.stopPropagation(); setContactOpen(false); }
+                }}
+                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group"
+              >
                 Contact
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${contactOpen ? "rotate-180" : ""}`}
@@ -256,7 +293,60 @@ export default function KindoraNav() {
               </a>
             </div>
           </div>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMobileOpen((v) => !v)}
+            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 transition-colors"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+          >
+            <svg className="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Drawer */}
+        {mobileOpen && (
+          <div
+            ref={mobileRef}
+            className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 overflow-y-auto"
+          >
+            <div className="px-4 py-6 space-y-1">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-3 px-4 text-base font-medium text-gray-700 hover:text-[#2563eb] hover:bg-blue-50 rounded-xl transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="border-t border-gray-100 my-4" />
+              <Link
+                href="/kindora/demo"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center py-3 px-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full"
+              >
+                Request a Demo
+              </Link>
+              <a
+                href="https://cad.spaceaiapp.com/kindora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center py-3 px-4 text-base font-semibold text-[#2563eb] bg-blue-50 rounded-full"
+              >
+                Try for Free
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

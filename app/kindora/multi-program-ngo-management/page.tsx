@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Multi-Program NGO Management 2026 | Unified Operations | Kindora",
+  title: "Multi-Program NGO Management 2026 | Unified Operations",
   description:
     "Manage multiple programs, grants, and teams from one unified platform. Kindora multi-program NGO management provides cross-program visibility, shared resources, and consolidated reporting.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/multi-program-ngo-management",
   },
   openGraph: {
-    title: "Multi-Program NGO Management 2026 — Kindora",
+    title: "Multi-Program NGO Management 2026",
     description:
       "Manage multiple programs, grants, and teams from one unified platform. The complete guide for NGO operations leaders.",
     url: "https://spacenexus.net/kindora/multi-program-ngo-management",
@@ -381,7 +381,7 @@ export default function MultiProgramNGOManagementPage() {
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+              <nav className="flex items-center justify-center gap-2 text-xs text-gray-500 mb-6">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <Link href="/kindora" className="hover:text-[#2563eb] transition-colors">Kindora</Link>
@@ -401,7 +401,7 @@ export default function MultiProgramNGOManagementPage() {
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 Manage multiple programs, grants, and teams from one unified platform. This guide covers the differences between spreadsheet tracking, single-program tools, and purpose-built multi-program NGO management — plus the features, best practices, and selection framework operations teams need in 2026.
               </p>
-              <p className="text-sm text-gray-400 mb-10">
+              <p className="text-sm text-gray-500 mb-10">
                 16-minute read &nbsp;·&nbsp; Last updated: July 1, 2026 &nbsp;·&nbsp; Covers: comparison, features, best practices, FAQ
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -638,7 +638,7 @@ export default function MultiProgramNGOManagementPage() {
                 See Pricing
               </Link>
             </div>
-            <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption · Unlimited programs · No credit card required</p>
+            <p className="text-sm text-gray-500 mt-6">SOC 2 Type II · AES-256 encryption · Unlimited programs · No credit card required</p>
           </div>
         </section>
 

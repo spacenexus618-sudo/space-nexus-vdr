@@ -4,7 +4,7 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Space AI Product Ecosystem | Kindora Nonprofit Software",
+  title: "Space AI Product Ecosystem",
   description:
     "Kindora is one of 8 products built by Space AI — a suite of AI-powered business software covering nonprofit management, virtual data rooms, project management, CRM, HR, scheduling, e-signatures, and more.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "https://spacenexus.net/kindora/ecosystem",
   },
   openGraph: {
-    title: "Space AI Product Ecosystem | Kindora",
+    title: "Space AI Product Ecosystem",
     description:
       "Kindora is part of the Space AI product family — 8 AI-powered tools built by one team for nonprofits, construction, infrastructure, and deal-driven organizations.",
     url: "https://spacenexus.net/kindora/ecosystem",
@@ -337,7 +337,7 @@ export default function KindoraEcosystemPage() {
                     {product.name}
                   </h3>
                   <p className="mb-3 text-sm font-medium text-gray-500">{product.tagline}</p>
-                  <p className="text-sm text-gray-400 line-clamp-2 flex-1">{product.description}</p>
+                  <p className="text-sm text-gray-500 line-clamp-2 flex-1">{product.description}</p>
                   <div className="mt-5 flex items-center text-sm font-medium text-blue-500 group-hover:text-blue-600 transition-colors">
                     {isInternal ? "Learn more" : "Visit website"}
                     <svg className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -366,17 +366,17 @@ export default function KindoraEcosystemPage() {
               <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
                 <div className="mb-3 text-2xl font-bold text-blue-600">8</div>
                 <div className="text-sm font-medium text-gray-900">Products in the suite</div>
-                <div className="mt-1 text-xs text-gray-400">All built by Space AI</div>
+                <div className="mt-1 text-xs text-gray-500">All built by Space AI</div>
               </div>
               <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
                 <div className="mb-3 text-2xl font-bold text-blue-600">1</div>
                 <div className="text-sm font-medium text-gray-900">Company behind them all</div>
-                <div className="mt-1 text-xs text-gray-400">One team, one vision</div>
+                <div className="mt-1 text-xs text-gray-500">One team, one vision</div>
               </div>
               <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
                 <div className="mb-3 text-2xl font-bold text-blue-600">AI</div>
                 <div className="text-sm font-medium text-gray-900">First in every product</div>
-                <div className="mt-1 text-xs text-gray-400">Not bolted on after the fact</div>
+                <div className="mt-1 text-xs text-gray-500">Not bolted on after the fact</div>
               </div>
             </div>
           </div>

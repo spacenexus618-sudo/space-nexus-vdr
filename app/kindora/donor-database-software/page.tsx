@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Database Software | Donor Database System | Kindora",
+  title: "Donor Database Software | Donor Database System",
   description:
     "Kindora donor database software centralises donor records, giving history, and communication logs — one secure database for your entire team.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-database-software",
   },
   openGraph: {
-    title: "Donor Database Software — Kindora",
+    title: "Donor Database Software",
     description: "Centralise donor records, giving history, and communication logs in one secure database.",
     url: "https://spacenexus.net/kindora/donor-database-software",
     siteName: "Kindora by Space Nexus",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Database Software — Kindora",
+    title: "Donor Database Software",
     description: "Centralise donor records, giving history, and communication logs in one secure database.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

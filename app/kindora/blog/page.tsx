@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { blogPosts, blogCategories, categoryColors } from "./data/posts";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+    title: "Nonprofit Blog — Tips, Guides & Insights",
     description:
         "Expert articles on nonprofit management, donor retention, grant writing, case management, and program outcomes. Practical guides for nonprofit professionals.",
     keywords: [
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/blog",
     },
     openGraph: {
-        title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+        title: "Nonprofit Blog — Tips, Guides & Insights",
         description:
             "Practical articles on nonprofit management, donor retention, grant writing, and program outcomes.",
         url: "https://spacenexus.net/kindora/blog",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+        title: "Nonprofit Blog — Tips, Guides & Insights",
         description:
             "The Kindora blog delivers practical guides on donor management, grant writing, volunteer coordination, and nonprofit financial reporting.",
     },
@@ -67,10 +68,21 @@ export default function BlogPage() {
     const featured = blogPosts.find((p) => p.featured)!;
     const rest = blogPosts.filter((p) => !p.featured);
 
+    const collectionPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://spacenexus.net/kindora/blog",
+        name: "Nonprofit Blog — Tips, Guides & Insights",
+        description:
+            "Expert articles on nonprofit management, donor retention, grant writing, case management, and program outcomes.",
+        publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
+        url: "https://spacenexus.net/kindora/blog",
+    };
+
     return (
-        <main className="pt-20 lg:pt-24">
-            <Script id="kindora-blog-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
-            <Script id="kindora-blog-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadcrumbSchema) }} />
+        <>
+            <Script id="blog-collectionpage-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+            <main className="pt-20 lg:pt-24">
             {/* ── Hero / Header ─────────────────────────────────────────────────── */}
             <section className="py-14 lg:py-20 bg-gradient-to-b from-[#f8f9fa] to-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +119,7 @@ export default function BlogPage() {
             <section className="sticky top-16 z-20 bg-white border-b border-gray-100 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-2 py-3 overflow-x-auto scrollbar-hide">
-                        <span className="text-xs font-medium text-gray-400 uppercase tracking-wider whitespace-nowrap pr-2">
+                        <span className="text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap pr-2">
                             Filter:
                         </span>
                         <Link
@@ -184,8 +196,7 @@ export default function BlogPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm font-semibold text-gray-900">{featured.author.name}</p>
-                                        <p className="text-xs text-gray-400">{featured.author.role}</p>
-                                        <p className="text-xs text-gray-400 leading-relaxed max-w-xs mt-0.5">{featured.author.bio}</p>
+                                        <p className="text-xs text-gray-500">{featured.author.role}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2 text-[#2563eb] text-sm font-semibold">
@@ -201,7 +212,7 @@ export default function BlogPage() {
 
                 {/* ── Post Grid ─────────────────────────────────────────────────── */}
                 <div className="mb-6">
-                    <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                    <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
                         All Articles
                     </h2>
                 </div>
@@ -230,7 +241,7 @@ export default function BlogPage() {
                                         <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${c.bg} ${c.text}`}>
                                             {post.category}
                                         </span>
-                                        <span className="text-xs text-gray-400">{formatDate(post.publishedAt)}</span>
+                                        <span className="text-xs text-gray-500">{formatDate(post.publishedAt)}</span>
                                     </div>
                                     <h3 className="font-bold text-gray-900 text-lg leading-snug mb-3 group-hover:text-[#2563eb] transition-colors flex-1">
                                         {post.title}
@@ -276,9 +287,11 @@ export default function BlogPage() {
                         <input
                             type="email"
                             placeholder="your@organization.org"
+                            aria-label="Email address for newsletter"
+                            required
                             className="px-5 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 text-sm outline-none focus:bg-white/20 transition-colors min-w-[240px]"
                         />
-                        <button className="px-6 py-3 bg-white text-[#2563eb] font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap">
+                        <button className="px-6 py-4 bg-white text-[#2563eb] font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap">
                             Subscribe Free
                         </button>
                     </div>
@@ -289,5 +302,6 @@ export default function BlogPage() {
                 <LastUpdated date="2026-07-19" />
             </div></div>
         </main>
+        </>
     );
 }

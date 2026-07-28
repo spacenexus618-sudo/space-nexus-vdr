@@ -520,12 +520,10 @@ export default function KindoraHomePage() {
                   muted
                   loop
                   playsInline
-                  preload="metadata"
-                  poster="/videos/kindora-demo-video.gif"
-                  className="w-full h-full object-cover block"
+                  className="absolute inset-0 w-full h-full object-cover"
                 >
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
-
+                  Your browser does not support the video tag.
                 </video>
                 {/* Bottom fade */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />
@@ -859,7 +857,7 @@ export default function KindoraHomePage() {
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <Link
               href="/kindora/contact"
-              className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-colors"
+              className="inline-flex items-center px-6 py-4 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-colors"
             >
               Contact Us
             </Link>

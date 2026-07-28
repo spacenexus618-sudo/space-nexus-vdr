@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Community Organization Management Software | Kindora",
+    title: "Community Organization Management Software",
     description:
         "Kindora helps community organizations manage volunteers, donors, programs, and grants in one platform. Purpose-built nonprofit software for community-focused organizations.",
     keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/solutions/community-organizations",
     },
     openGraph: {
-        title: "Community Organization Management Software | Kindora",
+        title: "Community Organization Management Software",
         description:
             "Run your community organization with confidence. Kindora manages volunteers, programs, donors, and reporting — all in one place.",
         url: "https://spacenexus.net/kindora/solutions/community-organizations",

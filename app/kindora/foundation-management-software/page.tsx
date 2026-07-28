@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Foundation Management Software 2026 | Grant & Fund Tracking | Kindora",
+  title: "Foundation Management Software 2026 | Grant & Fund Tracking",
   description:
     "Manage foundation grants, donor funds, and philanthropic programs from one platform. Kindora foundation management software tracks grants, fund allocations, compliance, and impact reporting.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/foundation-management-software",
   },
   openGraph: {
-    title: "Foundation Management Software 2026 — Kindora",
+    title: "Foundation Management Software 2026",
     description:
       "Manage foundation grants, donor funds, and philanthropic programs from one unified platform. The complete guide for foundation operations leaders.",
     url: "https://spacenexus.net/kindora/foundation-management-software",
@@ -381,7 +381,7 @@ export default function FoundationManagementSoftwarePage() {
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+              <nav className="flex items-center justify-center gap-2 text-xs text-gray-500 mb-6">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <Link href="/kindora" className="hover:text-[#2563eb] transition-colors">Kindora</Link>
@@ -638,7 +638,7 @@ export default function FoundationManagementSoftwarePage() {
                 See Pricing
               </Link>
             </div>
-            <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption · Fund accounting · No credit card required</p>
+            <p className="text-sm text-gray-500 mt-6">SOC 2 Type II · AES-256 encryption · Fund accounting · No credit card required</p>
           </div>
         </section>
 

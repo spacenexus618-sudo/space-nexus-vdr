@@ -5,7 +5,7 @@ import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title:
-    "Donor Relationship Management Software | Build Stronger Donor Bonds | Kindora",
+    "Donor Relationship Management Software | Build Stronger Donor Bonds",
   description:
     "Kindora donor relationship management software helps nonprofits build lasting donor relationships with personalized communication, engagement scoring, giving history tracking, and automated stewardship workflows.",
   alternates: {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "https://spacenexus.net/kindora/donor-relationship-management",
   },
   openGraph: {
-    title: "Donor Relationship Management Software — Kindora",
+    title: "Donor Relationship Management Software",
     description:
       "Build lasting donor relationships with personalized communication, engagement scoring, and automated stewardship workflows.",
     url: "https://spacenexus.net/kindora/donor-relationship-management",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Relationship Management — Kindora",
+    title: "Donor Relationship Management",
     description:
       "Build lasting donor relationships with personalized communication, engagement scoring, and automated stewardship.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
@@ -443,7 +443,7 @@ export default function DonorRelationshipManagementPage() {
                           <span className="text-sm font-semibold text-gray-900">
                             {r.name}
                           </span>
-                          <span className="text-xs text-gray-400 ml-2">
+                          <span className="text-xs text-gray-500 ml-2">
                             {r.count}
                           </span>
                         </div>

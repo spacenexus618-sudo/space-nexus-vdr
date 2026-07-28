@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Best CRM for Small Nonprofits | Affordable Donor Management | Kindora",
+  title: "Best CRM for Small Nonprofits | Affordable Donor Management",
   description:
     "Looking for the best CRM for small nonprofits? Kindora offers affordable donor management, grant tracking, and reporting — designed for small teams with big missions.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-crm-for-small-nonprofits",
   },
   openGraph: {
-    title: "Best CRM for Small Nonprofits — Kindora",
+    title: "Best CRM for Small Nonprofits",
     description: "The best CRM for small nonprofits — affordable, easy to use, and built for teams with big missions.",
     url: "https://spacenexus.net/kindora/best-crm-for-small-nonprofits",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best CRM for Small Nonprofits — Kindora",
+    title: "Best CRM for Small Nonprofits",
     description: "The best CRM for small nonprofits — affordable donor management and grant tracking in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

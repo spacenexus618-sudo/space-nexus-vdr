@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Grant Lifecycle Management | End-to-End Grant Management | Kindora",
+  title: "Grant Lifecycle Management | End-to-End Grant Management",
   description:
     "Complete grant lifecycle management for nonprofits — from discovery and application through award, reporting, and closeout. Track every stage in one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/grant-lifecycle-management",
   },
   openGraph: {
-    title: "Grant Lifecycle Management — Kindora",
+    title: "Grant Lifecycle Management",
     description:
       "Manage every stage of the grant lifecycle — discovery, application, award, reporting, and closeout — from one unified platform.",
     url: "https://spacenexus.net/kindora/grant-lifecycle-management",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grant Lifecycle Management — Kindora",
+    title: "Grant Lifecycle Management",
     description:
       "Complete grant lifecycle management. From discovery to closeout — track every stage in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

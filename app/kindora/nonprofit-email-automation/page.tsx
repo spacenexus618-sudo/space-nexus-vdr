@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Email Automation | Automated Email Sequences | Kindora",
+  title: "Nonprofit Email Automation | Automated Email Sequences",
   description:
     "Kindora nonprofit email automation helps you create triggered email sequences for welcome series, donation thank-yous, lapsed donor re-engagement, and more — all integrated with your donor data.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-email-automation",
   },
   openGraph: {
-    title: "Nonprofit Email Automation — Kindora",
+    title: "Nonprofit Email Automation",
     description: "Automated email sequences for welcome series, thank-yous, lapsed donor re-engagement, and more.",
     url: "https://spacenexus.net/kindora/nonprofit-email-automation",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Email Automation — Kindora",
+    title: "Nonprofit Email Automation",
     description: "Triggered email sequences for welcome series, thank-yous, lapsed donor re-engagement, and more.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

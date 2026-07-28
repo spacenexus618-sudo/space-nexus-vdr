@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Text-to-Give Software | Mobile Donations | Kindora",
+  title: "Text-to-Give Software | Mobile Donations",
   description:
     "Kindora text-to-give software enables nonprofits to accept donations via SMS. Set up text-to-donate keywords, receive mobile gifts instantly, and engage donors on their phones.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/text-to-give-software",
   },
   openGraph: {
-    title: "Text-to-Give Software — Kindora",
+    title: "Text-to-Give Software",
     description: "Accept mobile donations via SMS with Kindora text-to-give software. Simple setup, instant donations.",
     url: "https://spacenexus.net/kindora/text-to-give-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Text-to-Give Software — Kindora",
+    title: "Text-to-Give Software",
     description: "Accept mobile donations via SMS. Easy setup, instant giving, and donor engagement tools.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donation Tracking Software | Monitor & Analyze Gifts | Kindora",
+  title: "Donation Tracking Software | Monitor & Analyze Gifts",
   description:
     "Kindora donation tracking software helps nonprofits monitor every gift, analyze giving trends, track campaign performance, and generate real-time reports — all in one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donation-tracking-software",
   },
   openGraph: {
-    title: "Donation Tracking Software — Kindora",
+    title: "Donation Tracking Software",
     description: "Monitor every gift with Kindora's donation tracking software — real-time dashboards, trend analysis, and campaign performance.",
     url: "https://spacenexus.net/kindora/donation-tracking-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donation Tracking Software — Kindora",
+    title: "Donation Tracking Software",
     description: "Track, monitor, and analyze every donation with Kindora's real-time tracking platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -256,7 +256,7 @@ export default function DonationTrackingSoftwarePage() {
                           className="w-full rounded-sm bg-gradient-to-t from-blue-400 to-blue-500"
                           style={{ height: `${20 + Math.sin(i * 0.8) * 30 + 25}%` }}
                         />
-                        <span className="text-[8px] text-gray-400">{month}</span>
+                        <span className="text-[8px] text-gray-500">{month}</span>
                       </div>
                     ))}
                   </div>

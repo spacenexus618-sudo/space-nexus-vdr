@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Charity Management Software | Kindora by SpaceNexus",
+  title: "Charity Management Software",
   description:
     "Purpose-built charity management software for donor tracking, grant management, fundraising campaigns, and financial reporting. Replace spreadsheets with one unified platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/charity-management-software",
   },
   openGraph: {
-    title: "Charity Management Software — Kindora",
+    title: "Charity Management Software",
     description:
       "Streamline your charity operations with Kindora's management software. Donor CRM, grant tracking, volunteer management, and financial reporting.",
     url: "https://spacenexus.net/kindora/charity-management-software",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Charity Management Software — Kindora",
+    title: "Charity Management Software",
     description:
       "All-in-one charity management software for donor tracking, grant management, and impact reporting. Try free.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

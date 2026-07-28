@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Youth Nonprofit Management Software | Kindora",
+    title: "Youth Nonprofit Management Software",
     description:
         "Kindora is the all-in-one software platform for youth nonprofits. Manage youth programs, client cases, volunteers, donor relationships, and grant reporting in one place.",
     keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/solutions/youth-nonprofits",
     },
     openGraph: {
-        title: "Youth Nonprofit Management Software | Kindora",
+        title: "Youth Nonprofit Management Software",
         description:
             "Manage youth programs, participants, volunteers, grants, and impact reporting in one platform. Kindora is built for youth-serving nonprofits.",
         url: "https://spacenexus.net/kindora/solutions/youth-nonprofits",

@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Online Giving Software | Accept Donations Online | Kindora",
+  title: "Online Giving Software | Accept Donations Online",
   description:
     "Kindora online giving software helps nonprofits accept donations online, manage donors, run campaigns, and track impact — all from one integrated system.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/online-giving-software",
   },
   openGraph: {
-    title: "Online Giving Software — Kindora",
+    title: "Online Giving Software",
     description: "Accept donations online with Kindora's all-in-one online giving software for nonprofits.",
     url: "https://spacenexus.net/kindora/online-giving-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Online Giving Software — Kindora",
+    title: "Online Giving Software",
     description: "Accept donations online with Kindora's online giving software for nonprofits.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

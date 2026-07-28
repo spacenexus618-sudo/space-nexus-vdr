@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "NGO Management Software | NGO Management Platform | Kindora",
+  title: "NGO Management Software | NGO Management Platform",
   description:
     "Kindora NGO management software helps international and domestic NGOs manage donors, grants, volunteers, programs, and reporting — one system for your global team.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/ngo-management-software",
   },
   openGraph: {
-    title: "NGO Management Software — Kindora",
+    title: "NGO Management Software",
     description: "Manage all NGO operations in one integrated platform with Kindora.",
     url: "https://spacenexus.net/kindora/ngo-management-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NGO Management Software — Kindora",
+    title: "NGO Management Software",
     description: "Manage all NGO operations in one integrated platform with Kindora.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

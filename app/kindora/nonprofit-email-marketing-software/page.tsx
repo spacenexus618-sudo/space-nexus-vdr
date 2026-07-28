@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Email Marketing Software | Email Marketing for Nonprofits | Kindora",
+  title: "Nonprofit Email Marketing Software | Email Marketing for Nonprofits",
   description:
     "Kindora nonprofit email marketing software helps you send personalised donor communications, automate campaigns, and track engagement — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-email-marketing-software",
   },
   openGraph: {
-    title: "Nonprofit Email Marketing Software — Kindora",
+    title: "Nonprofit Email Marketing Software",
     description: "Send personalised emails, automate campaigns, and track engagement with Kindora email marketing for nonprofits.",
     url: "https://spacenexus.net/kindora/nonprofit-email-marketing-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Email Marketing Software — Kindora",
+    title: "Nonprofit Email Marketing Software",
     description: "Send personalised emails, automate campaigns, and track engagement with Kindora email marketing for nonprofits.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

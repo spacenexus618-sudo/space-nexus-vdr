@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Management Software | Donor CRM Software | Kindora",
+  title: "Donor Management Software | Donor CRM Software",
   description:
     "Kindora donor management software helps you track donors, manage giving history, automate thank-yous, and build lasting relationships — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-management-software",
   },
   openGraph: {
-    title: "Donor Management Software — Kindora",
+    title: "Donor Management Software",
     description: "Track donors, manage giving history, and build lasting relationships with Kindora donor management software.",
     url: "https://spacenexus.net/kindora/donor-management-software",
     siteName: "Kindora by Space Nexus",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Management Software — Kindora",
+    title: "Donor Management Software",
     description: "Track donors, manage giving history, and build lasting relationships with Kindora donor management software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

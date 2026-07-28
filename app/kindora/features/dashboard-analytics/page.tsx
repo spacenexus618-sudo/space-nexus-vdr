@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Dashboard & Analytics — Mission Impact in One Powerful View | Kindora",
+  title: "Dashboard & Analytics — Mission Impact in One Powerful View",
   description:
     "Kindora's Dashboard & Analytics provides a centralized overview combining financial data, donor insights, campaign progress, and operational activity into one intuitive interface for data-driven nonprofit decisions.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/dashboard-analytics",
   },
   openGraph: {
-    title: "Dashboard & Analytics — Mission Impact in One Powerful View | Kindora",
+    title: "Dashboard & Analytics — Mission Impact in One Powerful View",
     description:
       "View high-level metrics, donation trends, donor distribution, active campaigns, and pending grant applications — all in one centralized nonprofit dashboard.",
     url: "https://spacenexus.net/kindora/features/dashboard-analytics",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dashboard & Analytics — Mission Impact in One Powerful View | Kindora",
+    title: "Dashboard & Analytics — Mission Impact in One Powerful View",
     description:
       "Centralized nonprofit dashboard: KPIs, donation trends, campaign progress, and donor insights for data-driven decisions.",
   },
@@ -175,14 +176,14 @@ export default function DashboardAnalyticsPage() {
                   app.kindora.com / dashboard
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.png"
                   alt="Kindora Dashboard & Analytics — centralized nonprofit performance overview"
-                  width={1572}
-                  height={542}
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>
@@ -241,14 +242,13 @@ export default function DashboardAnalyticsPage() {
                     app.kindora.com / dashboard
                   </div>
                 </div>
-                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg">
-                  <img
+                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg aspect-[16/9] relative">
+                  <Image
                     src={screenshot.src}
                     alt={`Kindora Dashboard — ${screenshot.caption}`}
-                    width={1865}
-                    height={892}
-                    className="w-full h-auto"
-                    loading="lazy"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />
                 </div>
                 <p className="text-xs text-gray-500 text-center mt-2">{screenshot.caption}</p>

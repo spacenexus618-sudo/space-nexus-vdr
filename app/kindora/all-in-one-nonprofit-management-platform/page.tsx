@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "All-in-One Nonprofit Management Platform | Nonprofit Software | Kindora",
+  title: "All-in-One Nonprofit Management Platform | Nonprofit Software",
   description:
     "Kindora all-in-one nonprofit management platform combines donor management, fundraising, grants, volunteers, and reporting — one system for your entire organisation.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/all-in-one-nonprofit-management-platform",
   },
   openGraph: {
-    title: "All-in-One Nonprofit Management Platform — Kindora",
+    title: "All-in-One Nonprofit Management Platform",
     description: "One platform for donor management, fundraising, grants, volunteers, and reporting.",
     url: "https://spacenexus.net/kindora/all-in-one-nonprofit-management-platform",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "All-in-One Nonprofit Management Platform — Kindora",
+    title: "All-in-One Nonprofit Management Platform",
     description: "One platform for donor management, fundraising, grants, volunteers, and reporting.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -257,7 +257,7 @@ export default function AllInOneNonprofitManagementPlatformPage() {
                   ].map((item) => (
                     <div key={item.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
                       <p className="text-sm font-bold text-gray-900">{item.value}</p>
-                      <p className="text-[10px] text-gray-500">{item.label}</p>
+                       <p className="text-[10px] text-gray-600">{item.label}</p>
                     </div>
                   ))}
                 </div>

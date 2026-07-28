@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Program Outcome Tracking Software | Measure Your Impact | Kindora",
+  title: "Program Outcome Tracking Software | Measure Your Impact",
   description:
     "Program outcome tracking software for nonprofits — define outcomes, track participant progress, measure program effectiveness, and report impact to funders.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/solutions/program-outcome-tracking",
   },
   openGraph: {
-    title: "Program Outcome Tracking — Kindora",
+    title: "Program Outcome Tracking",
     description:
       "Define outcomes, track participant progress, measure program effectiveness, and report impact — all from one unified platform.",
     url: "https://spacenexus.net/kindora/solutions/program-outcome-tracking",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Program Outcome Tracking — Kindora",
+    title: "Program Outcome Tracking",
     description:
       "Program outcome tracking software. Define outcomes, track progress, and measure impact.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

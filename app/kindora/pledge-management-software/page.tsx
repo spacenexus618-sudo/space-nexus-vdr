@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Pledge Management Software | Pledge Tracking & Collections | Kindora",
+  title: "Pledge Management Software | Pledge Tracking & Collections",
   description:
     "Kindora pledge management software helps nonprofits track pledges, automate payment reminders, manage collections, and convert pledges into donations with ease.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/pledge-management-software",
   },
   openGraph: {
-    title: "Pledge Management Software — Kindora",
+    title: "Pledge Management Software",
     description: "Track pledges, automate reminders, and manage collections with Kindora pledge management software.",
     url: "https://spacenexus.net/kindora/pledge-management-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pledge Management Software — Kindora",
+    title: "Pledge Management Software",
     description: "Track and collect pledges with automated reminders and seamless payment integration.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Retention Software | Keep Nonprofit Donors Engaged | Kindora",
+  title: "Donor Retention Software | Keep Nonprofit Donors Engaged",
   description:
     "Kindora donor retention software helps nonprofits keep donors engaged with smart segmentation, automated follow-ups, engagement tracking, and personalized communication.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-retention-software",
   },
   openGraph: {
-    title: "Donor Retention Software — Kindora",
+    title: "Donor Retention Software",
     description: "Keep your donors coming back. Kindora helps nonprofits track engagement, automate follow-ups, and build lasting relationships.",
     url: "https://spacenexus.net/kindora/donor-retention-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Retention Software — Kindora",
+    title: "Donor Retention Software",
     description: "Retain more donors with smart engagement tools. Kindora helps nonprofits build lasting supporter relationships.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

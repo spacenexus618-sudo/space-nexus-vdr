@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Tracking Software | Donor Engagement Tracking | Kindora",
+  title: "Donor Tracking Software | Donor Engagement Tracking",
   description:
     "Kindora donor tracking software tracks donor engagement, giving history, and builds lasting relationships — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-tracking-software",
   },
   openGraph: {
-    title: "Donor Tracking Software — Kindora",
+    title: "Donor Tracking Software",
     description: "Track donor engagement, giving history, and build lasting relationships with Kindora donor tracking software.",
     url: "https://spacenexus.net/kindora/donor-tracking-software",
     siteName: "Kindora by Space Nexus",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Tracking Software — Kindora",
+    title: "Donor Tracking Software",
     description: "Track donor engagement, giving history, and build lasting relationships with Kindora donor tracking software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

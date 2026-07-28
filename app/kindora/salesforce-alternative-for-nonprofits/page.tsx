@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Salesforce Alternative for Nonprofits | Kindora",
+  title: "Salesforce Alternative for Nonprofits",
   description:
     "Kindora is the all-in-one Salesforce alternative for nonprofits — donor management, fundraising, grants, volunteers, and reporting without the complexity or consulting fees.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/salesforce-alternative-for-nonprofits",
   },
   openGraph: {
-    title: "Salesforce Alternative for Nonprofits — Kindora",
+    title: "Salesforce Alternative for Nonprofits",
     description: "All-in-one nonprofit software without Salesforce complexity — donor management, fundraising, grants, and volunteers.",
     url: "https://spacenexus.net/kindora/salesforce-alternative-for-nonprofits",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Salesforce Alternative for Nonprofits — Kindora",
+    title: "Salesforce Alternative for Nonprofits",
     description: "All-in-one nonprofit software without Salesforce complexity — donor management, fundraising, grants, and volunteers.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

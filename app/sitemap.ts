@@ -209,83 +209,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  // Kindora static pages
-  const kindoraStaticPages = [
-    { route: "/kindora", priority: 1.0, changeFrequency: "weekly" as const },
-    { route: "/kindora/features", priority: 0.9, changeFrequency: "weekly" as const },
-    { route: "/kindora/pricing", priority: 0.9, changeFrequency: "monthly" as const },
-    { route: "/kindora/solutions", priority: 0.8, changeFrequency: "monthly" as const },
-    { route: "/kindora/contact", priority: 0.8, changeFrequency: "monthly" as const },
-    { route: "/kindora/demo", priority: 0.9, changeFrequency: "monthly" as const },
-    { route: "/kindora/vs-competitors", priority: 0.9, changeFrequency: "monthly" as const },
-    { route: "/kindora/ecosystem", priority: 0.8, changeFrequency: "monthly" as const },
-    { route: "/kindora/bonterra-alternative", priority: 0.9, changeFrequency: "monthly" as const },
-    { route: "/kindora/kindora-vs-bonterra", priority: 0.9, changeFrequency: "monthly" as const },
-    { route: "/kindora/better-alternative-to-bonterra", priority: 0.9, changeFrequency: "monthly" as const },
-    { route: "/kindora/nonprofit-operations-platform", priority: 0.9, changeFrequency: "monthly" as const },
-  ];
-
-  // Kindora feature pages
-  const kindoraFeaturePages = [
-    "donor-management",
-    "grant-management",
-    "client-management",
-    "financial-management",
-    "campaign-management",
-    "communications",
-    "dashboard-analytics",
-    "expense-management",
-    "file-management",
-    "people-management",
-    "reporting",
-    "settings",
-    "user-management",
-    "financials",
-  ].map((feature) => ({
-    route: `/kindora/features/${feature}`,
-    priority: 0.8,
-    changeFrequency: "monthly" as const,
-  }));
-
-  // Kindora blog posts
-  const kindoraBlogPosts = [
-    "complete-guide-nonprofit-management-software",
-    "how-to-choose-donor-management-software",
-    "grant-management-101-track-win-more-grants",
-    "why-nonprofits-are-ditching-spreadsheets",
-    "nonprofit-client-intake-best-practices",
-    "how-to-measure-nonprofit-program-outcomes",
-    "nonprofit-fundraising-campaign-guide",
-    "year-end-giving-strategy-nonprofits",
-    "kindora-nonprofit-os-launch",
-    "nonprofit-annual-report-guide",
-    "best-nonprofit-crm-software",
-    "grant-management-software-guide",
-    "donor-management-software-nonprofits",
-    "volunteer-management-system-2025",
-    "all-in-one-nonprofit-software",
-    "nonprofit-financial-reporting-tips",
-  ].map((slug) => ({
-    route: `/kindora/blog/${slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }));
-
-  // Kindora solution pages
-  const kindoraSolutionPages = [
-    "youth-nonprofits",
-    "small-nonprofits",
-    "community-organizations",
-    "social-services",
-    "housing-nonprofits",
-    "program-management-software",
-    "program-outcome-tracking",
-  ].map((solution) => ({
-    route: `/kindora/solutions/${solution}`,
-    priority: 0.8,
-    changeFrequency: "monthly" as const,
-  }));
-
   // Ecosystem hub + individual product pages
   const ecosystemPages = [
     { route: "/ecosystem", priority: 0.9, changeFrequency: "monthly" as const },
@@ -306,10 +229,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...ibPracticePages,
     ...pePracticePages,
     ...vcPracticePages,
-    ...kindoraStaticPages,
-    ...kindoraFeaturePages,
-    ...kindoraBlogPosts,
-    ...kindoraSolutionPages,
     ...ecosystemPages,
   ];
 

@@ -1,17 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Expense Management Software | Nonprofit Expense Tracking | Kindora",
+  title: "Expense Management Software | Nonprofit Expense Tracking",
   description:
     "Kindora expense management software for nonprofits. Track, categorize, and reconcile expenses across programs, grants, and departments with automated receipt capture and approval workflows.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/expense-management-software",
   },
   openGraph: {
-    title: "Expense Management Software — Kindora",
+    title: "Expense Management Software",
     description: "Track, categorize, and reconcile expenses across programs, grants, and departments with automated approval workflows.",
     url: "https://spacenexus.net/kindora/expense-management-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Expense Management Software — Kindora",
+    title: "Expense Management Software",
     description: "Track, categorize, and reconcile expenses with automated approval workflows.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -253,8 +254,8 @@ export default function KindoraExpenseManagementPage() {
                   <div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-yellow-400" /><div className="w-3 h-3 rounded-full bg-green-400" />
                   <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.kindora.com / expenses</div>
                 </div>
-                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                  <img src="/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.png" alt="Kindora expense management dashboard" width={1572} height={542} className="w-full h-auto" loading="lazy" />
+                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                  <Image src="/spacenexus/screenshots/vdr-dashboard.png" alt="Kindora expense management dashboard" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px" priority />
                 </div>
                 <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
               </div>
@@ -294,7 +295,7 @@ export default function KindoraExpenseManagementPage() {
               <Link href="/kindora/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">Request a Demo</Link>
               <Link href="/kindora/pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">View Pricing</Link>
             </div>
-            <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
+            <p className="text-sm text-gray-500 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
           </div>
         </section>
 
