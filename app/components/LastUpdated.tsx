@@ -11,7 +11,7 @@ export default function LastUpdated({ date, className = "" }: LastUpdatedProps) 
   });
 
   return (
-    <div className={`text-sm text-gray-500 ${className}`}>
+    <div className={`text-sm text-gray-600 ${className}`}>
       <span className="inline-flex items-center gap-1.5">
         <svg
           className="w-4 h-4"

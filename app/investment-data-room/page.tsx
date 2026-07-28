@@ -185,7 +185,7 @@ export default function InvestmentDataRoomPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Investment Data Room</span>
@@ -203,7 +203,7 @@ export default function InvestmentDataRoomPage() {
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 An investment data room is the central hub for sharing confidential documents with investors during fundraising, due diligence, and portfolio management. This guide covers everything you need to know.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 Last updated: July 2026 &nbsp;·&nbsp; Covers features, use cases, security, and best practices
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -356,7 +356,7 @@ export default function InvestmentDataRoomPage() {
                                             </span>
                                             <div>
                                                 <p className="text-xs font-semibold text-gray-900">{item.label}</p>
-                                                <p className="text-xs text-gray-500">{item.desc}</p>
+                                                <p className="text-xs text-gray-600">{item.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -376,7 +376,7 @@ export default function InvestmentDataRoomPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / dashboard</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
                                     <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus investment data room dashboard" className="w-full h-auto" loading="lazy" />
@@ -436,7 +436,7 @@ export default function InvestmentDataRoomPage() {
                                 View Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

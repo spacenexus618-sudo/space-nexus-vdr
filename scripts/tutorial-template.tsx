@@ -1,13 +1,13 @@
-ï»¿import Link from "next/link";
+import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-    title: "TITLE â€” SpaceNexus Video Tutorial | SpaceNexus",
+    title: "TITLE — SpaceNexus Video Tutorial | SpaceNexus",
     description: "DESCRIPTION",
     alternates: { canonical: "https://spacenexus.net/tutorials/SLUG" },
     keywords: ["KEYWORDS"],
-    openGraph: { title: "TITLE â€” SpaceNexus Video Tutorial", description: "DESCRIPTION", url: "https://spacenexus.net/tutorials/SLUG" },
+    openGraph: { title: "TITLE — SpaceNexus Video Tutorial", description: "DESCRIPTION", url: "https://spacenexus.net/tutorials/SLUG" },
 };
 
 const videoSchema = { "@context": "https://schema.org", "@type": "VideoObject", name: "TITLE", description: "DESCRIPTION", thumbnailUrl: "https://spacenexus.net/tutorials/SLUG/thumbnail.png", uploadDate: "DATE", duration: "PTDURATIONM", contentUrl: "https://spacenexus.net/tutorials/SLUG", embedUrl: "https://spacenexus.net/tutorials/SLUG", publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" } };
@@ -22,17 +22,17 @@ export default function Page() {
             <Script id="tut-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
-                        <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>â€º</span>
-                        <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>â€º</span>
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
+                        <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
+                        <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">TITLE</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">Â·</span>
-                        <span className="text-gray-500">DURATION min</span>
-                        <span className="text-gray-500">Â·</span>
-                        <span className="text-gray-500">LEVEL</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">DURATION min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">LEVEL</span>
                     </div>
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">TITLE</h1>
                     <p className="text-xl text-gray-600">DESCRIPTION_SHORT</p>
@@ -47,7 +47,7 @@ export default function Page() {
                                 <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                             </div>
                             <p className="text-white/80 text-sm font-medium">Video tutorial</p>
-                            <p className="text-white/60 text-xs mt-1">DURATION min Â· SpaceNexus platform</p>
+                            <p className="text-white/60 text-xs mt-1">DURATION min · SpaceNexus platform</p>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Page() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-bold text-white mb-4">See SpaceNexus live</h2>
                     <p className="text-blue-100 mb-6">Book a personalized demo with our team.</p>
-                    <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo â†’</Link>
+                    <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo ?</Link>
                 </div>
             </section>
         </div>

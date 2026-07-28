@@ -600,7 +600,7 @@ export default function FeaturesPage() {
                       </li>
                     ))}
                     {feature.features.length > 3 && (
-                      <li className="text-sm text-gray-400">
+                      <li className="text-sm text-gray-600">
                         +{feature.features.length - 3} more
                       </li>
                     )}
@@ -679,7 +679,7 @@ export default function FeaturesPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / dashboard
                 </div>
               </div>

@@ -239,7 +239,7 @@ export default function MAVDRPage() {
                                 {capabilities.map((cap) => (
                                     <div key={cap.title} className="p-4 bg-gray-50 rounded-xl border border-gray-100">
                                         <p className="text-sm font-bold text-gray-900 mb-1">{cap.title}</p>
-                                        <p className="text-xs text-gray-500 leading-relaxed">{cap.desc}</p>
+                                        <p className="text-xs text-gray-600 leading-relaxed">{cap.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -253,7 +253,7 @@ export default function MAVDRPage() {
                         <div className="relative">
                             <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
                                 <div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-yellow-400" /><div className="w-3 h-3 rounded-full bg-green-400" />
-                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / deals</div>
+                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / deals</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                 <img src="/spacenexus/screenshots/vdr-deals.png" alt="SpaceNexus M&A deal pipeline" className="w-full h-auto" loading="lazy" />
@@ -297,7 +297,7 @@ export default function MAVDRPage() {
                         <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">Request a Demo</Link>
                         <Link href="/pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">View Pricing</Link>
                     </div>
-                    <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
+                    <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
                 </div>
             </section>
                     {/* Related VDR Resources */}

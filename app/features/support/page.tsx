@@ -200,7 +200,7 @@ export default function SupportPage() {
             <div>
               <Link
                 href="/features"
-                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -287,7 +287,7 @@ export default function SupportPage() {
                           {service.name}
                         </span>
                       </div>
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-gray-600">
                         {service.uptime}
                       </span>
                     </div>

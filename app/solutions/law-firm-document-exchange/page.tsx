@@ -433,16 +433,16 @@ export default function LawFirmDocumentExchangePage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b-2 border-gray-200">
-                  <th className="text-left py-4 pr-8 text-sm font-semibold text-gray-500 uppercase tracking-wider w-2/5">
+                  <th className="text-left py-4 pr-8 text-sm font-semibold text-gray-600 uppercase tracking-wider w-2/5">
                     Feature
                   </th>
                   <th className="text-center py-4 px-4 text-sm font-bold text-[#2563eb]">
                     SpaceNexus
                   </th>
-                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-500">
+                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-600">
                     Email
                   </th>
-                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-500">
+                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-600">
                     Dropbox / GDrive
                   </th>
                 </tr>
@@ -460,10 +460,10 @@ export default function LawFirmDocumentExchangePage() {
                       {row.spacenexus === true ? <Check /> : <span className="text-sm text-gray-600">{String(row.spacenexus)}</span>}
                     </td>
                     <td className="py-3 px-4 text-center">
-                      {row.email === true ? <Check /> : row.email === false ? <Cross /> : <span className="text-sm text-gray-500">{String(row.email)}</span>}
+                      {row.email === true ? <Check /> : row.email === false ? <Cross /> : <span className="text-sm text-gray-600">{String(row.email)}</span>}
                     </td>
                     <td className="py-3 px-4 text-center">
-                      {row.consumer === true ? <Check /> : row.consumer === false ? <Cross /> : <span className="text-sm text-gray-500">{String(row.consumer)}</span>}
+                      {row.consumer === true ? <Check /> : row.consumer === false ? <Cross /> : <span className="text-sm text-gray-600">{String(row.consumer)}</span>}
                     </td>
                   </tr>
                 ))}
@@ -519,7 +519,7 @@ export default function LawFirmDocumentExchangePage() {
                   <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">
                     {link.title}
                   </p>
-                  <p className="text-xs text-gray-500">{link.desc}</p>
+                  <p className="text-xs text-gray-600">{link.desc}</p>
                 </div>
               </Link>
             ))}

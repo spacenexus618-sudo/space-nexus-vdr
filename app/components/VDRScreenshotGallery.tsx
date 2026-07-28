@@ -244,7 +244,7 @@ export default function VDRScreenshotGallery() {
                                 <div className="w-3 h-3 rounded-full bg-red-400" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                                     app.spacenexus.net
                                 </div>
                             </div>
@@ -270,7 +270,7 @@ export default function VDRScreenshotGallery() {
 
                 {/* Bottom CTA */}
                 <div className="mt-14 text-center">
-                    <p className="text-sm text-gray-500 mb-4">
+                    <p className="text-sm text-gray-600 mb-4">
                         Ready to see it live with your own documents?
                     </p>
                     <Link

@@ -48,17 +48,17 @@ export default function StructuredQAWorkflowPage() {
             <Script id="tut-qa-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">Structured Q&amp;A Workflow</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">15 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Intermediate</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">15 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Intermediate</span>
                     </div>
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Structured Q&amp;A Workflow</h1>
                     <p className="text-xl text-gray-600">Set up and manage the structured Q&amp;A workflow. Routing rules, SLAs, escalation paths, and pre-prepared FAQ strategies.</p>

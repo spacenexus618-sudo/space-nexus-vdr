@@ -363,7 +363,7 @@ export default function BoardPortalsPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Board Portals</span>
@@ -381,7 +381,7 @@ export default function BoardPortalsPage() {
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Board portals are secure platforms for distributing board materials, managing meetings, capturing minutes, and signing resolutions — replacing email and paper with auditable governance workflows. This guide covers what board portals are, how they compare to traditional methods, the features that matter, and how to choose the right one for your organization.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 18-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Covers: comparison framework, board types, implementation, FAQ
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -496,8 +496,8 @@ export default function BoardPortalsPage() {
                                         <tr>
                                             <th className="text-left font-semibold text-gray-300 px-4 py-4">Capability</th>
                                             <th className="text-center font-semibold text-[#60a5fa] px-3 py-4">Board Portal</th>
-                                            <th className="text-center font-semibold text-gray-400 px-3 py-4">Email</th>
-                                            <th className="text-center font-semibold text-gray-400 px-3 py-4">Paper</th>
+                                            <th className="text-center font-semibold text-gray-600 px-3 py-4">Email</th>
+                                            <th className="text-center font-semibold text-gray-600 px-3 py-4">Paper</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -505,8 +505,8 @@ export default function BoardPortalsPage() {
                                             <tr key={row.capability} className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"} border-t border-gray-100`}>
                                                 <td className="px-4 py-3.5 text-sm font-medium text-gray-800">{row.capability}</td>
                                                 <td className="px-3 py-3.5 text-xs text-center text-gray-700">{row.boardPortal}</td>
-                                                <td className="px-3 py-3.5 text-xs text-center text-gray-500">{row.email}</td>
-                                                <td className="px-3 py-3.5 text-xs text-center text-gray-500">{row.paper}</td>
+                                                <td className="px-3 py-3.5 text-xs text-center text-gray-600">{row.email}</td>
+                                                <td className="px-3 py-3.5 text-xs text-center text-gray-600">{row.paper}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -653,7 +653,7 @@ export default function BoardPortalsPage() {
                                 See Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · GDPR Compliant · No credit card required · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · ISO 27001 · GDPR Compliant · No credit card required · Cancel anytime</p>
                     </div>
                 </section>
                         {/* Related VDR Resources */}

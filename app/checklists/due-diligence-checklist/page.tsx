@@ -607,7 +607,7 @@ export default function DueDiligenceChecklistPage() {
                 <section className="py-14 lg:py-20 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <Link href="/checklists" className="hover:text-[#2563eb] transition-colors">Checklists</Link>
@@ -639,7 +639,7 @@ export default function DueDiligenceChecklistPage() {
                                 ].map((s) => (
                                     <div key={s.label} className="bg-white border border-gray-200 rounded-xl p-4">
                                         <p className="text-2xl font-bold text-[#2563eb]">{s.value}</p>
-                                        <p className="text-xs text-gray-500 mt-0.5">{s.label}</p>
+                                        <p className="text-xs text-gray-600 mt-0.5">{s.label}</p>
                                     </div>
                                 ))}
                             </div>
@@ -688,7 +688,7 @@ export default function DueDiligenceChecklistPage() {
                                     <div className="flex items-start justify-between gap-3 mb-3">
                                         <div>
                                             <h3 className="text-base font-bold text-gray-900">{dd.type}</h3>
-                                            <p className="text-xs text-gray-400 italic">{dd.aka}</p>
+                                            <p className="text-xs text-gray-600 italic">{dd.aka}</p>
                                         </div>
                                     </div>
                                     <p className="text-sm text-gray-600 leading-relaxed mb-4">{dd.description}</p>
@@ -741,7 +741,7 @@ export default function DueDiligenceChecklistPage() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={s.icon} />
                                             </svg>
                                             <span>{s.title.split(" Due Diligence")[0].split(" & ")[0]}</span>
-                                            <span className="ml-auto text-xs font-normal text-gray-400">{itemCount}</span>
+                                            <span className="ml-auto text-xs font-normal text-gray-600">{itemCount}</span>
                                         </a>
                                     );
                                 })}
@@ -768,7 +768,7 @@ export default function DueDiligenceChecklistPage() {
                                                         <h3 className="text-xl font-bold text-gray-900">{section.title}</h3>
                                                         <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${c.badge}`}>{sectionTotal} items</span>
                                                     </div>
-                                                    <p className="text-sm text-gray-500">{section.description}</p>
+                                                    <p className="text-sm text-gray-600">{section.description}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -838,12 +838,12 @@ export default function DueDiligenceChecklistPage() {
                                                     <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${phase.side === "sell" ? "bg-blue-100 text-blue-700" : phase.side === "buy" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-600"}`}>
                                                         {phase.side === "sell" ? "Sell-side" : phase.side === "buy" ? "Buy-side" : "Both parties"}
                                                     </span>
-                                                    <span className="text-xs text-gray-400 sm:hidden">{phase.week}</span>
+                                                    <span className="text-xs text-gray-600 sm:hidden">{phase.week}</span>
                                                 </div>
                                                 <ul className="space-y-1.5">
                                                     {phase.items.map((item) => (
                                                         <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                                                            <svg className="w-3.5 h-3.5 text-gray-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                                            <svg className="w-3.5 h-3.5 text-gray-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                                                             {item}
                                                         </li>
                                                     ))}
@@ -935,7 +935,7 @@ export default function DueDiligenceChecklistPage() {
                                 More Free Checklists
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

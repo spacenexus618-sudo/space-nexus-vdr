@@ -92,7 +92,7 @@ export default function FAQIndexPage() {
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <span className="text-gray-900">FAQ</span>

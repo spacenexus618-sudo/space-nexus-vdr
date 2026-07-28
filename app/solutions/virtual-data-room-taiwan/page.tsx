@@ -146,7 +146,7 @@ export default function TaiwanVDRPage() {
               查看方案價格
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-600 uppercase tracking-wider">
             <span>SOC 2 Type II</span><span>ISO 27001</span><span>AES-256</span><span>個資法合規</span>
           </div>
         </div>

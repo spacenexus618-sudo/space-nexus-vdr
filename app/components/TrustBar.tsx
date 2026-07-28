@@ -115,7 +115,7 @@ export default function TrustBar() {
 
         {/* Certifications */}
         <div className="mt-12 pt-12 border-t border-gray-200">
-          <p className="text-center text-sm text-gray-500 mb-6">
+          <p className="text-center text-sm text-gray-600 mb-6">
             Certified & Compliant
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">

@@ -61,7 +61,7 @@ export default function IBPrivateCapitalPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link>
@@ -169,17 +169,17 @@ export default function IBPrivateCapitalPage() {
                         <Link href="/industries/private-equity" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for private equity →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Buy-side, sell-side, and LP workflows for PE.</p>
+                            <p className="text-xs text-gray-600 mt-2">Buy-side, sell-side, and LP workflows for PE.</p>
                         </Link>
                         <Link href="/industries/investment-banking" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for investment banking →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The full IB VDR solution overview.</p>
+                            <p className="text-xs text-gray-600 mt-2">The full IB VDR solution overview.</p>
                         </Link>
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&amp;A virtual data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">For portfolio company capital raises.</p>
+                            <p className="text-xs text-gray-600 mt-2">For portfolio company capital raises.</p>
                         </Link>
                     </div>
                 </div>

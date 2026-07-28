@@ -206,7 +206,7 @@ export default function CanadaVDRPage() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-600 uppercase tracking-wider">
             <span>PIPEDA</span>
             <span>SOC 2 Type II</span>
             <span>ISO 27001</span>
@@ -256,7 +256,7 @@ export default function CanadaVDRPage() {
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="text-left p-4 font-semibold text-gray-900">Requirement</th>
                   <th className="text-center p-4 font-semibold text-[#2563eb]">SpaceNexus</th>
-                  <th className="text-center p-4 font-semibold text-gray-500">Generic Tools</th>
+                  <th className="text-center p-4 font-semibold text-gray-600">Generic Tools</th>
                 </tr>
               </thead>
               <tbody>
@@ -264,7 +264,7 @@ export default function CanadaVDRPage() {
                   <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="p-4 text-gray-700">{row.feature}</td>
                     <td className="p-4 text-center">{row.spacenexus ? "✅" : "❌"}</td>
-                    <td className="p-4 text-center text-gray-500">{row.generic}</td>
+                    <td className="p-4 text-center text-gray-600">{row.generic}</td>
                   </tr>
                 ))}
               </tbody>

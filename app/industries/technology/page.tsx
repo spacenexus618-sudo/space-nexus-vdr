@@ -256,7 +256,7 @@ export default function TechnologyPage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -327,7 +327,7 @@ export default function TechnologyPage() {
                     <h3 className="font-semibold text-gray-900">
                       Tech Transactions
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Built for speed and security
                     </p>
                   </div>

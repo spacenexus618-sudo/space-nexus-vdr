@@ -336,7 +336,7 @@ const breadcrumbSchema = {
 
 const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Guide",
+    "@type": "Article",
     headline: "Virtual Data Room Provider Guide 2026 — Complete Resource",
     description:
         "The ultimate guide to selecting, implementing, and maximizing virtual data room providers. Includes evaluation criteria, pricing analysis, security, use cases, and best practices.",
@@ -364,7 +364,7 @@ export default function VDRGuidePage() {
             <Script id="vdr-guide-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
             <main className="pt-20 lg:pt-24">
-                <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                     <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                     <span className="text-gray-600">VDR Guide</span>
@@ -407,7 +407,7 @@ export default function VDRGuidePage() {
                 {/* Table of Contents */}
                 <section className="py-12 bg-[#f8f9fa] border-y border-gray-100 sticky top-[80px] z-40">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">On This Page</p>
+                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">On This Page</p>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                             {tableOfContents.map((item) => (
                                 <Link
@@ -550,12 +550,12 @@ export default function VDRGuidePage() {
                                                 </span>
                                             )}
                                         </div>
-                                        <p className="text-xs text-gray-500 mb-3">{provider.tagline}</p>
+                                        <p className="text-xs text-gray-600 mb-3">{provider.tagline}</p>
                                     </div>
                                     <div className="mb-4 pb-4 border-b border-gray-100">
                                         <p className="text-sm text-[#2563eb] font-semibold mb-1">{provider.verdict}</p>
-                                        <p className="text-xs text-gray-500">Pricing: {provider.pricing}</p>
-                                        <p className="text-xs text-gray-500">Setup: {provider.setup}</p>
+                                        <p className="text-xs text-gray-600">Pricing: {provider.pricing}</p>
+                                        <p className="text-xs text-gray-600">Setup: {provider.setup}</p>
                                     </div>
                                     <div className="mb-6 flex-grow">
                                         <p className="text-xs font-semibold text-green-700 mb-2 uppercase">Key Strengths</p>
@@ -710,7 +710,7 @@ export default function VDRGuidePage() {
                                     </div>
                                     <p className="text-gray-600 mb-4">{useCase.description}</p>
                                     <div>
-                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Key Requirements:</p>
+                                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Key Requirements:</p>
                                         <ul className="grid sm:grid-cols-2 gap-2">
                                             {useCase.key_requirements.map((req) => (
                                                 <li key={req} className="text-sm text-gray-600 flex gap-2">
@@ -777,7 +777,7 @@ export default function VDRGuidePage() {
                                 View Provider Comparison →
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

@@ -294,7 +294,7 @@ export default function PricingPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">Pricing</span>
@@ -342,12 +342,12 @@ export default function PricingPage() {
 
                                 <div className="mb-6">
                                     <h2 className="text-xl font-bold text-gray-900 mb-1">{plan.name}</h2>
-                                    <p className="text-sm text-gray-500">{plan.tagline}</p>
+                                    <p className="text-sm text-gray-600">{plan.tagline}</p>
                                 </div>
 
                                 <div className="mb-8">
                                     <p className="text-3xl font-black text-gray-900">{plan.price}</p>
-                                    <p className="text-xs text-gray-400 mt-1">{plan.priceNote}</p>
+                                    <p className="text-xs text-gray-600 mt-1">{plan.priceNote}</p>
                                 </div>
 
                                 <ul className="space-y-3 mb-8 grow">
@@ -383,7 +383,7 @@ export default function PricingPage() {
                         <table className="w-full text-sm">
                             <thead>
                                 <tr className="border-b border-gray-200">
-                                    <th className="text-left py-4 pr-8 font-medium text-gray-500 w-1/3">
+                                    <th className="text-left py-4 pr-8 font-medium text-gray-600 w-1/3">
                                         Feature
                                     </th>
                                     {plans.map((p) => (

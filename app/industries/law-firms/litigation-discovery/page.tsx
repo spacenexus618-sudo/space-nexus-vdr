@@ -96,7 +96,7 @@ export default function LawFirmLitigationPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link>
@@ -229,17 +229,17 @@ export default function LawFirmLitigationPage() {
                         <Link href="/solutions/secure-document-sharing-for-legal" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure document sharing for legal →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Encrypted legal file sharing with court-admissible audit trails.</p>
+                            <p className="text-xs text-gray-600 mt-2">Encrypted legal file sharing with court-admissible audit trails.</p>
                         </Link>
                         <Link href="/blog/secure-platforms-for-legal-due-diligence" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure platforms for legal DD →</h3>
-                            <p className="text-xs text-gray-500 mt-2">What attorneys need in 2026 secure platforms.</p>
+                            <p className="text-xs text-gray-600 mt-2">What attorneys need in 2026 secure platforms.</p>
                         </Link>
                         <Link href="/checklists" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free due diligence checklists →</h3>
-                            <p className="text-xs text-gray-500 mt-2">M&A and Series A checklists.</p>
+                            <p className="text-xs text-gray-600 mt-2">M&A and Series A checklists.</p>
                         </Link>
                     </div>
                 </div>

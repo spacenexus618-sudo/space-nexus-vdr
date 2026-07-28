@@ -275,7 +275,7 @@ export default function ActivityAnalyticsPage() {
             <div>
               <Link
                 href="/features"
-                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -365,7 +365,7 @@ export default function ActivityAnalyticsPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / analytics
                 </div>
               </div>
@@ -443,7 +443,7 @@ export default function ActivityAnalyticsPage() {
                     loading="lazy"
                   />
                 </div>
-                <p className="text-sm text-gray-500 text-center mt-3">
+                <p className="text-sm text-gray-600 text-center mt-3">
                   {shot.caption}
                 </p>
               </div>
@@ -479,7 +479,7 @@ export default function ActivityAnalyticsPage() {
                   {link.title}
                 </p>
                 <svg
-                  className="w-4 h-4 text-gray-400 group-hover:text-cyan-600 transition-colors shrink-0 ml-2"
+                  className="w-4 h-4 text-gray-600 group-hover:text-cyan-600 transition-colors shrink-0 ml-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

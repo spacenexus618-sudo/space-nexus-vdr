@@ -171,6 +171,7 @@ body {
 .card-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.15);
+  will-change: transform;
 }
 
 /* Focus states */
@@ -195,11 +196,6 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-
-/* Promote card hover to compositor layer to avoid paint on hover */
-.card-hover {
-  will-change: transform;
 }
 
 /* Contain layout reflow on isolated sections */

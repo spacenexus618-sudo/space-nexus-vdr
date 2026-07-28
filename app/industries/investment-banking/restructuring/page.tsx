@@ -61,7 +61,7 @@ export default function IBRestructuringPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link>
@@ -173,17 +173,17 @@ export default function IBRestructuringPage() {
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">For distressed M&amp;A and special situations.</p>
+                            <p className="text-xs text-gray-600 mt-2">For distressed M&amp;A and special situations.</p>
                         </Link>
                         <Link href="/industries/investment-banking" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for investment banking →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The full IB VDR solution overview.</p>
+                            <p className="text-xs text-gray-600 mt-2">The full IB VDR solution overview.</p>
                         </Link>
                         <Link href="/checklists/due-diligence-checklist" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A due diligence checklist →</h3>
-                            <p className="text-xs text-gray-500 mt-2">200+ items across every workstream.</p>
+                            <p className="text-xs text-gray-600 mt-2">200+ items across every workstream.</p>
                         </Link>
                     </div>
                 </div>

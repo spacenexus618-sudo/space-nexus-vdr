@@ -281,7 +281,7 @@ export default function VDRDataRoomPage() {
                         <div>
                             <Link
                                 href="/features"
-                                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                                className="inline-flex mr-7 items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
                             >
                                 <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -334,7 +334,7 @@ export default function VDRDataRoomPage() {
                                 <div className="w-3 h-3 rounded-full bg-red-400" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                                     app.spacenexus.net / data-room
                                 </div>
                             </div>
@@ -482,8 +482,8 @@ export default function VDRDataRoomPage() {
                     <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white">
                         <div className="grid grid-cols-3 bg-gray-900 text-white">
                             <div className="px-5 py-4 text-sm font-semibold text-gray-300">Capability</div>
-                            <div className="px-5 py-4 text-sm font-bold text-center text-[#60a5fa] border-l border-gray-700">VDR Data Room<br /><span className="text-xs font-normal text-gray-400">(Space Nexus)</span></div>
-                            <div className="px-5 py-4 text-sm font-semibold text-center text-gray-400 border-l border-gray-700">Generic Cloud Storage<br /><span className="text-xs font-normal text-gray-500">(Drive / SharePoint)</span></div>
+                            <div className="px-5 py-4 text-sm font-bold text-center text-[#60a5fa] border-l border-gray-700">VDR Data Room<br /><span className="text-xs font-normal text-gray-600">(Space Nexus)</span></div>
+                            <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Generic Cloud Storage<br /><span className="text-xs font-normal text-gray-600">(Drive / SharePoint)</span></div>
                         </div>
                         {[
                             { feature: "NDA click-through enforcement", vdr: "✓ Built-in", generic: "✗ Manual" },
@@ -527,7 +527,7 @@ export default function VDRDataRoomPage() {
                                 <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors">
                                     {link.title}
                                 </p>
-                                <svg className="w-4 h-4 text-gray-400 group-hover:text-[#2563eb] transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg className="w-4 h-4 text-gray-600 group-hover:text-[#2563eb] transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                             </Link>

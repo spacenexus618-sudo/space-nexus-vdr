@@ -91,7 +91,7 @@ export default function TestimonialsSection() {
                                 </div>
                                 <div>
                                     <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                                    <p className="text-xs text-gray-500">
+                                    <p className="text-xs text-gray-600">
                                         {t.title} · {t.company}
                                     </p>
                                 </div>
@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Trust strip */}
-                <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400">
+                <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-600">
                     {[
                         "Investment Banking",
                         "Private Equity",
@@ -115,7 +115,7 @@ export default function TestimonialsSection() {
                         </span>
                     ))}
                 </div>
-                <p className="text-center text-xs text-gray-400 mt-4">
+                <p className="text-center text-xs text-gray-600 mt-4">
                     Trusted across 20+ industries globally
                 </p>
             </div>

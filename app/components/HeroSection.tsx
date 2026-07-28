@@ -68,17 +68,17 @@ export default function HeroSection() {
 
             {/* Trust Indicator */}
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <p className="text-sm text-gray-500 mb-3">
+              <p className="text-sm text-gray-600 mb-3">
                 Built by a team from:
               </p>
               <div className="flex items-center gap-6">
-                <div className="text-gray-400 font-semibold text-sm">
+                <div className="text-gray-600 font-semibold text-sm">
                   Fortune 500
                 </div>
-                <div className="text-gray-400 font-semibold text-sm">
+                <div className="text-gray-600 font-semibold text-sm">
                   Big 4 Consulting
                 </div>
-                <div className="text-gray-400 font-semibold text-sm">
+                <div className="text-gray-600 font-semibold text-sm">
                   Top Investment Banks
                 </div>
               </div>
@@ -238,7 +238,7 @@ export default function HeroSection() {
                     <span className="text-xs font-semibold text-gray-900">
                       Seller
                     </span>
-                    <span className="text-[10px] text-gray-500">
+                    <span className="text-[10px] text-gray-600">
                       Target Company
                     </span>
                   </div>
@@ -263,7 +263,7 @@ export default function HeroSection() {
                     <span className="text-xs font-semibold text-gray-900">
                       Buyer
                     </span>
-                    <span className="text-[10px] text-gray-500">
+                    <span className="text-[10px] text-gray-600">
                       Acquiring Party
                     </span>
                   </div>
@@ -302,7 +302,7 @@ export default function HeroSection() {
                     Secure Data Room
                   </span>
                   <div className="flex items-center justify-center gap-3 mt-1">
-                    <span className="text-[10px] text-gray-500 flex items-center gap-1">
+                    <span className="text-[10px] text-gray-600 flex items-center gap-1">
                       <svg
                         className="w-3 h-3 text-green-500"
                         fill="none"
@@ -318,7 +318,7 @@ export default function HeroSection() {
                       </svg>
                       256-bit Encrypted
                     </span>
-                    <span className="text-[10px] text-gray-500 flex items-center gap-1">
+                    <span className="text-[10px] text-gray-600 flex items-center gap-1">
                       <svg
                         className="w-3 h-3 text-blue-500"
                         fill="none"
@@ -365,7 +365,7 @@ export default function HeroSection() {
                     <span className="text-xs font-semibold text-gray-900">
                       Legal
                     </span>
-                    <span className="text-[10px] text-gray-500">Advisors</span>
+                    <span className="text-[10px] text-gray-600">Advisors</span>
                   </div>
 
                   {/* Financial Advisors */}
@@ -388,7 +388,7 @@ export default function HeroSection() {
                     <span className="text-xs font-semibold text-gray-900">
                       Financial
                     </span>
-                    <span className="text-[10px] text-gray-500">Advisors</span>
+                    <span className="text-[10px] text-gray-600">Advisors</span>
                   </div>
                 </div>
               </div>
@@ -398,17 +398,17 @@ export default function HeroSection() {
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center">
                     <div className="text-lg font-bold text-gray-900">2,847</div>
-                    <div className="text-[10px] text-gray-500">Documents</div>
+                    <div className="text-[10px] text-gray-600">Documents</div>
                   </div>
                   <div className="text-center">
                     <div className="text-lg font-bold text-gray-900">156</div>
-                    <div className="text-[10px] text-gray-500">
+                    <div className="text-[10px] text-gray-600">
                       Active Users
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="text-lg font-bold text-gray-900">99.9%</div>
-                    <div className="text-[10px] text-gray-500">Uptime</div>
+                    <div className="text-[10px] text-gray-600">Uptime</div>
                   </div>
                 </div>
               </div>

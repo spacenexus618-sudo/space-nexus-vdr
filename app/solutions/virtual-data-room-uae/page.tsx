@@ -138,7 +138,7 @@ export default function UAEVDRPage() {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
             The Secure Virtual Data Room for UAE Transactions
           </p>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             SOC 2 Type II certified, DIFC and ADGM compliant — built for M&A, capital markets,
             real estate, and family office transactions across the UAE and GCC.
           </p>
@@ -150,7 +150,7 @@ export default function UAEVDRPage() {
               View Pricing
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-600 uppercase tracking-wider">
             <span>SOC 2 Type II</span><span>DIFC</span><span>ADGM</span><span>UAE PDPL</span><span>ISO 27001</span>
           </div>
         </div>

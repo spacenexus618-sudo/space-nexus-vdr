@@ -265,7 +265,7 @@ export default function SecureDocumentSharingLegalPage() {
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 SpaceNexus provides secure document sharing purpose-built for law firms and legal teams. Protect attorney-client privilege, manage structured due diligence Q&amp;A workflows, and maintain tamper-evident audit logs — all within a SOC 2 Type II certified Virtual Data Room platform that courts and regulators accept.
                             </p>
-                            <p className="text-base text-gray-500 mb-10 leading-relaxed">
+                            <p className="text-base text-gray-600 mb-10 leading-relaxed">
                                 Whether your firm handles M&amp;A transactions, litigation discovery, corporate restructuring, or IPO preparation, SpaceNexus delivers the security infrastructure and compliance certifications that legal oversight committees demand.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -286,7 +286,7 @@ export default function SecureDocumentSharingLegalPage() {
                 {/* Compliance Badges */}
                 <section className="py-10 bg-white border-b border-gray-100">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <p className="text-center text-sm font-medium text-gray-500 mb-6">
+                        <p className="text-center text-sm font-medium text-gray-600 mb-6">
                             Trusted by law firms worldwide — certified and compliant
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -303,7 +303,7 @@ export default function SecureDocumentSharingLegalPage() {
                                         </svg>
                                     </div>
                                     <span className="text-sm font-bold text-gray-900">{badge.label}</span>
-                                    <span className="text-xs text-gray-500 mt-0.5">{badge.detail}</span>
+                                    <span className="text-xs text-gray-600 mt-0.5">{badge.detail}</span>
                                 </div>
                             ))}
                         </div>
@@ -397,7 +397,7 @@ export default function SecureDocumentSharingLegalPage() {
                             <div className="relative">
                                 <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
                                     <div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-yellow-400" /><div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / qa</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / qa</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                     <img src="/spacenexus/screenshots/vdr-qa.png" alt="SpaceNexus Q&A management interface for legal due diligence workflows" className="w-full h-auto" loading="lazy" />
@@ -425,8 +425,8 @@ export default function SecureDocumentSharingLegalPage() {
                                     <tr className="bg-gray-50">
                                         <th className="text-left px-6 py-4 font-semibold text-gray-900 border-b border-gray-200">Feature</th>
                                         <th className="text-center px-6 py-4 font-semibold text-[#2563eb] border-b border-gray-200">SpaceNexus</th>
-                                        <th className="text-center px-6 py-4 font-semibold text-gray-500 border-b border-gray-200">Generic Cloud Storage</th>
-                                        <th className="text-center px-6 py-4 font-semibold text-gray-500 border-b border-gray-200">Legacy Data Rooms</th>
+                                        <th className="text-center px-6 py-4 font-semibold text-gray-600 border-b border-gray-200">Generic Cloud Storage</th>
+                                        <th className="text-center px-6 py-4 font-semibold text-gray-600 border-b border-gray-200">Legacy Data Rooms</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -559,7 +559,7 @@ export default function SecureDocumentSharingLegalPage() {
                                 Security Details
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · GDPR · AES-256 · TLS 1.3 · Dynamic watermarking · NDA gate</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · ISO 27001 · GDPR · AES-256 · TLS 1.3 · Dynamic watermarking · NDA gate</p>
                     </div>
                 </section>
                         {/* Related VDR Resources */}

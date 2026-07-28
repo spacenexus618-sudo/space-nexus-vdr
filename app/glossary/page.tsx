@@ -230,7 +230,7 @@ export default function GlossaryPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <span className="text-gray-900">Glossary</span>
@@ -242,7 +242,7 @@ export default function GlossaryPage() {
                         {categories.map(c => (
                             <a key={c.id} href={`#${c.id}`} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-[#2563eb] hover:text-[#2563eb] transition-colors">
                                 {c.title}
-                                <span className="text-xs text-gray-500">({c.terms.length})</span>
+                                <span className="text-xs text-gray-600">({c.terms.length})</span>
                             </a>
                         ))}
                     </div>
@@ -272,7 +272,7 @@ export default function GlossaryPage() {
                                         <div className="px-5 pb-5 -mt-2 text-sm text-gray-600 leading-relaxed whitespace-pre-line">{term.definition}</div>
                                         {term.relatedLinks && term.relatedLinks.length > 0 && (
                                             <div className="px-5 pb-5 pt-2 border-t border-gray-100">
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Related</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Related</p>
                                                 <div className="flex flex-wrap gap-2">
                                                     {term.relatedLinks.map((l, i) => (
                                                         <Link key={i} href={l.href} className="text-sm text-[#2563eb] hover:underline">{l.label} →</Link>
@@ -311,17 +311,17 @@ export default function GlossaryPage() {
                         <Link href="/glossary/financial" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Glossary</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Financial Glossary →</h3>
-                            <p className="text-xs text-gray-500 mt-2">100+ finance and investment terms defined.</p>
+                            <p className="text-xs text-gray-600 mt-2">100+ finance and investment terms defined.</p>
                         </Link>
                         <Link href="/checklists" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Due diligence checklists →</h3>
-                            <p className="text-xs text-gray-500 mt-2">M&amp;A and Series A checklists with 200+ items.</p>
+                            <p className="text-xs text-gray-600 mt-2">M&amp;A and Series A checklists with 200+ items.</p>
                         </Link>
                         <Link href="/blog/what-is-a-virtual-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">What is a virtual data room? →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Complete guide to VDR fundamentals.</p>
+                            <p className="text-xs text-gray-600 mt-2">Complete guide to VDR fundamentals.</p>
                         </Link>
                     </div>
                 </div>

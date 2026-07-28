@@ -96,7 +96,7 @@ export default function KeywordTrackingPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/resources" className="hover:text-[#2563eb] transition-colors">Resources</Link>
@@ -256,7 +256,7 @@ export default function KeywordTrackingPage() {
                                     <h3 className="text-base font-semibold text-gray-900 mb-2">{row.tier}</h3>
                                     <p className="text-sm text-gray-600 mb-1"><strong>Target:</strong> {row.target}</p>
                                     <p className="text-sm text-gray-600 mb-1"><strong>Realistic:</strong> {row.current}</p>
-                                    <p className="text-sm text-gray-500"><strong>Notes:</strong> {row.notes}</p>
+                                    <p className="text-sm text-gray-600"><strong>Notes:</strong> {row.notes}</p>
                                 </div>
                             ))}
                         </div>
@@ -287,17 +287,17 @@ export default function KeywordTrackingPage() {
                         <Link href="/resources/backlink-strategy" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Strategy</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Backlink outreach strategy →</h3>
-                            <p className="text-xs text-gray-500 mt-2">VDR link building playbook.</p>
+                            <p className="text-xs text-gray-600 mt-2">VDR link building playbook.</p>
                         </Link>
                         <Link href="/glossary" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Reference</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR &amp; M&amp;A glossary →</h3>
-                            <p className="text-xs text-gray-500 mt-2">100+ terms defined.</p>
+                            <p className="text-xs text-gray-600 mt-2">100+ terms defined.</p>
                         </Link>
                         <Link href="/blog" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Blog & resources →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Guides, templates, and tools.</p>
+                            <p className="text-xs text-gray-600 mt-2">Guides, templates, and tools.</p>
                         </Link>
                     </div>
                 </div>

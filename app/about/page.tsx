@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { authorProfiles } from "../blog/data/posts";
+import LastUpdated from "../components/LastUpdated";
 //above code is importing necessary modules and types from Next.j, as well as author profile data from a local file. The Metadata type is used for defining metadata for the page, Link is used for client-side navigation, Script is used for injecting scripts into the page, and authorProfiles contains information about the authors to be displayed on the About page.
 const teamMembers = Object.values(authorProfiles);
 export const metadata: Metadata = {
@@ -94,7 +95,7 @@ export default function AboutPage() {
                     }),
                 }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">About</span>
@@ -144,7 +145,7 @@ export default function AboutPage() {
                                 >
                                     <div className="text-3xl mb-2">{item.icon}</div>
                                     <p className="text-sm font-bold text-gray-900">{item.label}</p>
-                                    <p className="text-xs text-gray-500 mt-0.5">{item.detail}</p>
+                                    <p className="text-xs text-gray-600 mt-0.5">{item.detail}</p>
                                 </div>
                             ))}
                         </div>
@@ -219,7 +220,7 @@ export default function AboutPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900">{member.name}</h3>
-                                        <p className="text-sm text-gray-500">{member.role}</p>
+                                        <p className="text-sm text-gray-600">{member.role}</p>
                                     </div>
                                 </div>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>

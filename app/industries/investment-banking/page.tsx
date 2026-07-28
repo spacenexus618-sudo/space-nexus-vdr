@@ -262,7 +262,7 @@ export default function InvestmentBankingPage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -334,7 +334,7 @@ export default function InvestmentBankingPage() {
                     <h3 className="font-semibold text-gray-900">
                       IB Deal Execution
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Full transaction support
                     </p>
                   </div>
@@ -468,7 +468,7 @@ export default function InvestmentBankingPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / deals
                 </div>
               </div>

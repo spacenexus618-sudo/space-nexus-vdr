@@ -233,7 +233,7 @@ export default function TemplatesPage() {
             {/* Hero */}
             <section className="pt-28 pb-16 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/checklists" className="hover:text-[#2563eb] transition-colors">Checklists</Link>
@@ -299,7 +299,7 @@ export default function TemplatesPage() {
                                             <h2 className="text-lg font-bold text-gray-900 leading-snug mb-1.5">
                                                 {t.title}
                                             </h2>
-                                            <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                                            <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
                                                 <span className="font-mono bg-gray-100 text-gray-600 px-2 py-0.5 rounded">CSV</span>
                                                 <span>·</span>
                                                 <span>{t.fileSize}</span>
@@ -312,7 +312,7 @@ export default function TemplatesPage() {
                                     <p className="text-sm text-gray-600 leading-relaxed mb-5">{t.description}</p>
 
                                     <div className="mb-5">
-                                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Sections</p>
+                                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Sections</p>
                                         <div className="flex flex-wrap gap-1.5">
                                             {t.sections.map((s) => (
                                                 <span key={s} className={`text-xs font-medium px-2 py-0.5 rounded-full ${accent.badge}`}>
@@ -346,7 +346,7 @@ export default function TemplatesPage() {
                                         </a>
                                     </div>
 
-                                    <p className="text-xs text-gray-400 mt-4 italic">
+                                    <p className="text-xs text-gray-600 mt-4 italic">
                                         Best for: {t.bestFor}
                                     </p>
                                 </article>

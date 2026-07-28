@@ -49,7 +49,7 @@ export default function SystemStatus() {
         <div className="w-px h-4 bg-gray-300" />
 
         {/* Uptime */}
-        <span className="text-sm text-gray-500 min-w-[5.5rem] text-right">{uptime} uptime</span>
+        <span className="text-sm text-gray-600 min-w-[5.5rem] text-right">{uptime} uptime</span>
       </div>
     </div>
   );

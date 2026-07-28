@@ -235,14 +235,14 @@ export default function IntralinksAlternativePage() {
                             <div className="px-6 py-4 text-sm font-bold text-center border-l border-gray-700">
                                 <span className="text-[#60a5fa]">Space Nexus</span>
                             </div>
-                            <div className="px-6 py-4 text-sm font-semibold text-center text-gray-400 border-l border-gray-700">
+                            <div className="px-6 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">
                                 Intralinks
                             </div>
                         </div>
                         {comparisonRows.map((row, i) => (
                             <div key={row.feature} className={`grid grid-cols-3 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"} border-t border-gray-100`}>
                                 <div className="px-6 py-4 text-sm font-medium text-gray-800">{row.feature}</div>
-                                <div className={`px-6 py-4 text-sm text-center border-l border-gray-100 font-medium ${row.spacenexus.positive ? "text-green-700" : "text-gray-500"}`}>
+                                <div className={`px-6 py-4 text-sm text-center border-l border-gray-100 font-medium ${row.spacenexus.positive ? "text-green-700" : "text-gray-600"}`}>
                                     {row.spacenexus.positive && (
                                         <span className="inline-flex items-center gap-1">
                                             <svg className="w-3.5 h-3.5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -259,7 +259,7 @@ export default function IntralinksAlternativePage() {
                             </div>
                         ))}
                     </div>
-                    <p className="text-xs text-gray-400 mt-4 text-center">Based on publicly available information. Last updated February 2026.</p>
+                    <p className="text-xs text-gray-600 mt-4 text-center">Based on publicly available information. Last updated February 2026.</p>
                 </div>
             </section>
 
@@ -272,7 +272,7 @@ export default function IntralinksAlternativePage() {
                                 <div className="w-3 h-3 rounded-full bg-red-400" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
+                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
                                 <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus buyer analytics — Intralinks alternative" className="w-full h-auto" loading="lazy" />
@@ -346,7 +346,7 @@ export default function IntralinksAlternativePage() {
                             See Pricing
                         </Link>
                     </div>
-                    <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                    <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

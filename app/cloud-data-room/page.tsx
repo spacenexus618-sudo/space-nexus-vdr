@@ -183,7 +183,7 @@ export default function CloudDataRoomPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Cloud Data Room</span>
@@ -201,7 +201,7 @@ export default function CloudDataRoomPage() {
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Not all cloud data rooms are built the same. This guide covers what to look for, what separates purpose-built cloud data rooms from generic file-sharing, and which platform leads in 2026.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 Last updated: July 2026 &nbsp;·&nbsp; Covers features, pricing, security, cloud architecture, and top platforms
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -321,7 +321,7 @@ export default function CloudDataRoomPage() {
                                             </span>
                                             <div>
                                                 <p className="text-xs font-semibold text-gray-900">{item.label}</p>
-                                                <p className="text-xs text-gray-500">{item.desc}</p>
+                                                <p className="text-xs text-gray-600">{item.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -341,7 +341,7 @@ export default function CloudDataRoomPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / dashboard</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
                                     <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus cloud data room dashboard" className="w-full h-auto" loading="lazy" />
@@ -366,8 +366,8 @@ export default function CloudDataRoomPage() {
                             <div className="grid grid-cols-4 bg-gray-900 text-white">
                                 <div className="px-5 py-4 text-sm font-semibold text-gray-300">Feature</div>
                                 <div className="px-5 py-4 text-sm font-bold text-center text-[#60a5fa] border-l border-gray-700">SpaceNexus</div>
-                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-400 border-l border-gray-700">Legacy VDR<br /><span className="text-xs font-normal text-gray-500">(Datasite / Intralinks)</span></div>
-                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-400 border-l border-gray-700">Cloud Storage<br /><span className="text-xs font-normal text-gray-500">(Drive / Dropbox)</span></div>
+                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Legacy VDR<br /><span className="text-xs font-normal text-gray-600">(Datasite / Intralinks)</span></div>
+                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Cloud Storage<br /><span className="text-xs font-normal text-gray-600">(Drive / Dropbox)</span></div>
                             </div>
                             {comparisonRows.map((row, i) => (
                                 <div key={row.feature} className={`grid grid-cols-4 border-t border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
@@ -381,7 +381,7 @@ export default function CloudDataRoomPage() {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
+                        <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
                     </div>
                 </section>
 
@@ -435,7 +435,7 @@ export default function CloudDataRoomPage() {
                                 View Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

@@ -143,7 +143,7 @@ export default function LeadGenerationPage() {
             <div className="lg:sticky lg:top-32">
               <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
                 <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-1 text-center">Get Started Today</p>
-                <p className="text-xs text-gray-500 mb-6 text-center">Fill in your details and start generating more leads.</p>
+                <p className="text-xs text-gray-600 mb-6 text-center">Fill in your details and start generating more leads.</p>
                 <DemoRequest />
               </div>
             </div>

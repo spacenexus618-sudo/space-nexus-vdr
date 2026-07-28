@@ -412,7 +412,7 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Investor Due Diligence</span>
@@ -430,7 +430,7 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Fundraising is the process by which startups raise capital from investors. Investor due diligence is the verification phase that follows. This guide covers the full journey from pre-seed pitch deck through Series C closing — including what investors look for, the diligence process, data room setup, and best practices for closing rounds faster.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 20-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Covers: stages, process, areas, best practices, FAQ
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -484,23 +484,23 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                                             <div className="text-xs font-bold text-[#2563eb] uppercase tracking-wider mb-1">Stage</div>
                                             <h3 className="text-2xl font-bold text-gray-900 mb-2">{s.stage}</h3>
                                             <p className="text-sm font-semibold text-gray-700 mb-3">{s.raiseRange}</p>
-                                            <p className="text-xs text-gray-500">{s.timeline}</p>
+                                            <p className="text-xs text-gray-600">{s.timeline}</p>
                                         </div>
                                         <div className="flex-1 space-y-4">
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Lead Investors</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Lead Investors</p>
                                                 <p className="text-sm text-gray-700">{s.leadInvestors}</p>
                                             </div>
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Investor Focus</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Investor Focus</p>
                                                 <p className="text-sm text-gray-700">{s.focus}</p>
                                             </div>
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Diligence Depth</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Diligence Depth</p>
                                                 <p className="text-sm text-gray-700">{s.diligenceDepth}</p>
                                             </div>
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Documents Needed</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Documents Needed</p>
                                                 <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1.5">
                                                     {s.documentsNeeded.map((d) => (
                                                         <li key={d} className="flex items-start gap-2 text-sm text-gray-700">
@@ -533,7 +533,7 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                                     <div className="text-3xl font-black text-[#2563eb] mb-3">{p.phase}</div>
                                     <div className="flex items-center gap-2 mb-3">
                                         <h3 className="text-lg font-bold text-gray-900">{p.title}</h3>
-                                        <span className="text-xs text-gray-500">· {p.duration}</span>
+                                        <span className="text-xs text-gray-600">· {p.duration}</span>
                                     </div>
                                     <p className="text-sm text-gray-600 leading-relaxed">{p.description}</p>
                                 </div>
@@ -556,7 +556,7 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                                 <div key={area.area} className="bg-white rounded-2xl border border-gray-200 p-6 lg:p-7 shadow-sm">
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">{area.area}</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed mb-4">{area.description}</p>
-                                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Key Investor Questions</p>
+                                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Key Investor Questions</p>
                                     <ul className="space-y-2">
                                         {area.keyQuestions.map((q) => (
                                             <li key={q} className="flex items-start gap-2 text-sm text-gray-700">
@@ -655,7 +655,7 @@ export default function FundraisingAndInvestorDueDiligencePage() {
                                 See Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · GDPR Compliant · No credit card required · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · ISO 27001 · GDPR Compliant · No credit card required · Cancel anytime</p>
                     </div>
                 </section>
                         {/* Related VDR Resources */}

@@ -324,7 +324,7 @@ function DemoRequestForm() {
         )}
       </button>
 
-      <p className="mt-4 text-xs text-gray-500 text-center">
+      <p className="mt-4 text-xs text-gray-600 text-center">
         By submitting this form, you agree to our{" "}
         <Link href="/privacy" className="text-[#2563eb] hover:underline">
           Privacy Policy

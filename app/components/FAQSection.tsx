@@ -89,7 +89,7 @@ export default function FAQSection() {
                                 <span
                                     className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 ${openIndex === i
                                             ? "bg-[#2563eb] text-white rotate-45"
-                                            : "bg-gray-100 text-gray-500"
+                                            : "bg-gray-100 text-gray-600"
                                         }`}
                                 >
                                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

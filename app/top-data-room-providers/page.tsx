@@ -174,7 +174,7 @@ function CheckIcon() {
 }
 
 function MinusIcon() {
-    return <svg className="w-3.5 h-3.5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M20 12H4" /></svg>;
+    return <svg className="w-3.5 h-3.5 text-gray-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M20 12H4" /></svg>;
 }
 
 export default function TopDataRoomProvidersPage() {
@@ -189,7 +189,7 @@ export default function TopDataRoomProvidersPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Top Data Room Providers</span>
@@ -207,7 +207,7 @@ export default function TopDataRoomProvidersPage() {
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 The definitive ranking of the top data room providers for 2026. We evaluated every major VDR platform on AI capabilities, pricing transparency, security certifications, deal-specific features, and user experience.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 Last updated: July 2026 &nbsp;·&nbsp; Covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and more
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -261,7 +261,7 @@ export default function TopDataRoomProvidersPage() {
                             {topProviders.map((provider) => (
                                 <div key={provider.name} className={`bg-white rounded-2xl border ${provider.rank === 1 ? "border-[#2563eb] ring-2 ring-[#2563eb]/20" : "border-gray-200"} p-6 lg:p-8 hover:shadow-lg transition-all duration-300`}>
                                     <div className="flex items-start gap-4 lg:gap-6">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl font-black ${provider.rank === 1 ? "bg-[#2563eb] text-white" : "bg-gray-100 text-gray-500"}`}>
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl font-black ${provider.rank === 1 ? "bg-[#2563eb] text-white" : "bg-gray-100 text-gray-600"}`}>
                                             #{provider.rank}
                                         </div>
                                         <div className="flex-1 min-w-0">
@@ -274,8 +274,8 @@ export default function TopDataRoomProvidersPage() {
                                                     </span>
                                                 )}
                                             </div>
-                                            <p className="text-sm text-gray-500 mb-1">{provider.tagline}</p>
-                                            <p className="text-xs text-gray-400 mb-4">{provider.highlight}</p>
+                                            <p className="text-sm text-gray-600 mb-1">{provider.tagline}</p>
+                                            <p className="text-xs text-gray-600 mb-4">{provider.highlight}</p>
                                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-6 text-xs">
                                                 <div><span className="font-semibold text-gray-700">Best for:</span> <span className="text-gray-600">{provider.bestFor}</span></div>
                                                 <div><span className="font-semibold text-gray-700">Pricing:</span> <span className="text-gray-600">{provider.pricing}</span></div>
@@ -320,10 +320,10 @@ export default function TopDataRoomProvidersPage() {
                                         <tr className="bg-gray-900 text-white">
                                             <th className="px-4 py-3.5 text-left font-semibold">Feature</th>
                                             <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-[#60a5fa]">SpaceNexus</th>
-                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-400">Datasite</th>
-                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-400">Intralinks</th>
-                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-400">Firmex</th>
-                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-400">iDeals</th>
+                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-600">Datasite</th>
+                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-600">Intralinks</th>
+                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-600">Firmex</th>
+                                            <th className="px-4 py-3.5 text-center font-semibold border-l border-gray-700 text-gray-600">iDeals</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -333,7 +333,7 @@ export default function TopDataRoomProvidersPage() {
                                                 if (val === false) return <span className="text-red-400"><MinusIcon /></span>;
                                                 if (val === "Add-on") return <span className="text-amber-600 text-xs font-medium">Add-on</span>;
                                                 if (val === "Partial") return <span className="text-amber-600 text-xs font-medium">Partial</span>;
-                                                return <span className="text-gray-400">{val}</span>;
+                                                return <span className="text-gray-600">{val}</span>;
                                             };
                                             return (
                                                 <tr key={row.feature} className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"} border-t border-gray-100`}>
@@ -350,7 +350,7 @@ export default function TopDataRoomProvidersPage() {
                                 </table>
                             </div>
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
+                        <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
                     </div>
                 </section>
 
@@ -386,7 +386,7 @@ export default function TopDataRoomProvidersPage() {
                                             </span>
                                             <div>
                                                 <p className="text-xs font-semibold text-gray-900">{item.label}</p>
-                                                <p className="text-xs text-gray-500">{item.desc}</p>
+                                                <p className="text-xs text-gray-600">{item.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -406,7 +406,7 @@ export default function TopDataRoomProvidersPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / dashboard</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
                                     <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus — top data room provider dashboard" className="w-full h-auto" loading="lazy" />
@@ -474,7 +474,7 @@ export default function TopDataRoomProvidersPage() {
                                 View Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

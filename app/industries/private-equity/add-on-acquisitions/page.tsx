@@ -31,7 +31,7 @@ export default function PEAddOnAcquisitionsPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link><span>›</span>
                         <Link href="/industries/private-equity" className="hover:text-[#2563eb] transition-colors">Private Equity</Link><span>›</span>
@@ -124,17 +124,17 @@ export default function PEAddOnAcquisitionsPage() {
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&amp;A virtual data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">For platform and add-on M&amp;A.</p>
+                            <p className="text-xs text-gray-600 mt-2">For platform and add-on M&amp;A.</p>
                         </Link>
                         <Link href="/industries/private-equity" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for private equity →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The full PE VDR solution overview.</p>
+                            <p className="text-xs text-gray-600 mt-2">The full PE VDR solution overview.</p>
                         </Link>
                         <Link href="/industries/private-equity/portfolio-management" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Practice</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Portfolio management →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Pre and post-add-on management.</p>
+                            <p className="text-xs text-gray-600 mt-2">Pre and post-add-on management.</p>
                         </Link>
                     </div>
                 </div>

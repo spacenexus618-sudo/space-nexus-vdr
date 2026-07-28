@@ -111,7 +111,7 @@ export default function VentureCapitalPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Link href="/industries" className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors">
+                <Link href="/industries" className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors">
                   <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                   All Industries
                 </Link>
@@ -132,7 +132,7 @@ export default function VentureCapitalPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">VC Deal Management</h3>
-                      <p className="text-sm text-gray-500">Full investment lifecycle</p>
+                      <p className="text-sm text-gray-600">Full investment lifecycle</p>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -187,7 +187,7 @@ export default function VentureCapitalPage() {
               {vcSubPages.map((page) => (
                 <Link key={page.href} href={page.href} className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200">
                   <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">{page.title} →</h3>
-                  <p className="text-xs text-gray-500 mt-2">{page.description}</p>
+                  <p className="text-xs text-gray-600 mt-2">{page.description}</p>
                 </Link>
               ))}
             </div>

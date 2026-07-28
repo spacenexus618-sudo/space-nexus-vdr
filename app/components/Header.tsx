@@ -427,7 +427,7 @@ export default function Header() {
                 <span className="text-xl font-black tracking-tight text-[#2563eb] transition-colors duration-300 group-hover:text-[#1d4ed8]">
                   KINDORA
                 </span>
-                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
                   NGO OS
                 </span>
               </div>
@@ -486,7 +486,7 @@ export default function Header() {
               {productsOpen && (
                 <div className="absolute top-full left-0 pt-3 w-[340px]">
                   <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-4 animate-fade-in ring-1 ring-gray-100">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 mb-2">
+                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider px-3 mb-2">
                       Our Products
                     </p>
                     <Link
@@ -512,7 +512,7 @@ export default function Header() {
                         <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors">
                           Space Nexus VDR
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600">
                           Virtual Data Room for M&A & due diligence
                         </p>
                       </div>
@@ -542,7 +542,7 @@ export default function Header() {
                         <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors">
                           Kindora NGO OS
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600">
                           Complete operating system for nonprofits
                         </p>
                       </div>
@@ -618,7 +618,7 @@ export default function Header() {
                                 <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors">
                                   {feature.name}
                                 </p>
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-gray-600">
                                   {feature.description}
                                 </p>
                               </div>
@@ -723,7 +723,7 @@ export default function Header() {
                                 <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors">
                                   {industry.name}
                                 </p>
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-gray-600">
                                   {industry.description}
                                 </p>
                               </div>
@@ -764,7 +764,7 @@ export default function Header() {
                 onMouseEnter={() => setContactOpen(true)}
                 onMouseLeave={() => setContactOpen(false)}
               >
-                <button className="p-2.5 text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors" aria-label="Contact Us">
+                <button className="p-2.5 text-gray-600 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors" aria-label="Contact Us">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -778,49 +778,49 @@ export default function Header() {
                         <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+1 646 421 5740</p>
-                          <p className="text-gray-500 text-[11px]">USA</p>
+                          <p className="text-gray-600 text-[11px]">USA</p>
                         </div>
                       </a>
                       <a href="tel:+19793269493" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
                         <img src="https://flagcdn.com/w40/ca.png" alt="Canada" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+1 (979) 326-9493</p>
-                          <p className="text-gray-500 text-[11px]">Canada</p>
+                          <p className="text-gray-600 text-[11px]">Canada</p>
                         </div>
                       </a>
                       <a href="tel:+971562567509" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
                         <img src="https://flagcdn.com/w40/ae.png" alt="UAE" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+971 56 256 7509</p>
-                          <p className="text-gray-500 text-[11px]">UAE</p>
+                          <p className="text-gray-600 text-[11px]">UAE</p>
                         </div>
                       </a>
                       <a href="tel:+966562081999" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
                         <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+966 56 208 1999</p>
-                          <p className="text-gray-500 text-[11px]">Saudi Arabia</p>
+                          <p className="text-gray-600 text-[11px]">Saudi Arabia</p>
                         </div>
                       </a>
                       <a href="tel:+96597243755" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
                         <img src="https://flagcdn.com/w40/kw.png" alt="Kuwait" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+965 9724 3755</p>
-                          <p className="text-gray-500 text-[11px]">Kuwait</p>
+                          <p className="text-gray-600 text-[11px]">Kuwait</p>
                         </div>
                       </a>
                       <a href="tel:+6586111900" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
                         <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+65 86 111 900</p>
-                          <p className="text-gray-500 text-[11px]">Singapore</p>
+                          <p className="text-gray-600 text-[11px]">Singapore</p>
                         </div>
                       </a>
                       <a href="tel:+60106607357" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
                         <img src="https://flagcdn.com/w40/my.png" alt="Malaysia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+60 10660 7357</p>
-                          <p className="text-gray-500 text-[11px]">Malaysia</p>
+                          <p className="text-gray-600 text-[11px]">Malaysia</p>
                         </div>
                       </a>
                     </div>
@@ -843,14 +843,14 @@ export default function Header() {
                 onMouseEnter={() => setEcosystemOpen(true)}
                 onMouseLeave={() => setEcosystemOpen(false)}
               >
-                <button className="p-2.5 text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors" aria-label="Ecosystem">
+                <button className="p-2.5 text-gray-600 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors" aria-label="Ecosystem">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" /></svg>
                 </button>
 
                 {ecosystemOpen && (
                   <div className="absolute top-full right-0 pt-3 w-[420px]">
                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-5 animate-fade-in ring-1 ring-gray-100">
-                      <p className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest px-1 mb-4">Space AI Ecosystem</p>
+                      <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-widest px-1 mb-4">Space AI Ecosystem</p>
                       <div className="grid grid-cols-2 gap-3">
                         {[
                           { name: "PMSpace", desc: "Construction Management", href: "https://pmspace.ai/", icon: (
@@ -885,12 +885,12 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                           >
-                            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 text-gray-500 group-hover:text-gray-700 group-hover:bg-gray-200 transition-colors">
+                            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 text-gray-600 group-hover:text-gray-700 group-hover:bg-gray-200 transition-colors">
                               {product.icon}
                             </div>
                             <div className="min-w-0">
                               <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors truncate">{product.name}</p>
-                              <p className="text-xs text-gray-500 truncate">{product.desc}</p>
+                              <p className="text-xs text-gray-600 truncate">{product.desc}</p>
                             </div>
                           </a>
                         ))}
@@ -905,7 +905,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100"
+            className="lg:hidden p-2 text-gray-600 hover:text-gray-700 rounded-lg hover:bg-gray-100"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
