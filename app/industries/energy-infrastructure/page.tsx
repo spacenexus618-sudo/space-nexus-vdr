@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Energy & Infrastructure | SpaceNexus",
@@ -183,6 +184,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is an energy data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An energy data room is a secure platform for sharing project documentation, environmental assessments, regulatory filings, and financial models during energy project transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus support energy deals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides industry-specific templates for energy project finance, infrastructure M&A, and regulatory compliance with granular access controls for multiple stakeholder groups.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can energy companies use SpaceNexus for regulatory compliance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus supports audit trail export, compliance reporting, and document retention policies aligned with energy industry regulatory requirements.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is an energy data room?",
+    answer: "An energy data room is a secure platform for sharing project documentation, environmental assessments, regulatory filings, and financial models during energy project transactions.",
+  },
+  {
+    question: "How does SpaceNexus support energy deals?",
+    answer: "SpaceNexus provides industry-specific templates for energy project finance, infrastructure M&A, and regulatory compliance with granular access controls for multiple stakeholder groups.",
+  },
+  {
+    question: "Can energy companies use SpaceNexus for regulatory compliance?",
+    answer: "Yes. SpaceNexus supports audit trail export, compliance reporting, and document retention policies aligned with energy industry regulatory requirements.",
+  },
+];
+
 export default function EnergyInfrastructurePage() {
   return (
     <>
@@ -197,6 +244,11 @@ export default function EnergyInfrastructurePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="energy-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -465,7 +517,26 @@ export default function EnergyInfrastructurePage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

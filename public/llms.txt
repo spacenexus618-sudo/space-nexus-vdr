@@ -1,0 +1,151 @@
+<<<<<<< HEAD
+# Kindora — All-in-One Nonprofit Management Software
+
+> Kindora is a modern nonprofit management platform for small to mid-sized nonprofits. It combines donor CRM, grant lifecycle management, client case management, nonprofit accounting, volunteer management, and campaign tools in one unified platform — replacing 3-4 separate tools.
+
+## Who it's for
+
+- Nonprofit organizations (community service, social services, youth programs, housing nonprofits)
+- NGOs and charitable foundations
+- Fundraising-focused organizations
+- Grant-dependent organizations
+- Multi-program social enterprises
+
+## Key Pages
+
+- Homepage: https://spacenexus.net/kindora
+- Features: https://spacenexus.net/kindora/features
+- Pricing: https://spacenexus.net/kindora/pricing
+- Demo: https://spacenexus.net/kindora/demo
+- Solutions: https://spacenexus.net/kindora/solutions
+- Vs Competitors: https://spacenexus.net/kindora/vs-competitors
+- Why Kindora Over Bloomerang: https://spacenexus.net/kindora/why-kindora-over-bloomerang
+- Consumer Reviews: https://spacenexus.net/kindora/consumer-review
+- Ecosystem: https://spacenexus.net/kindora/ecosystem
+- Blog: https://spacenexus.net/kindora/blog
+
+## Top Blog Articles
+
+- The Complete Guide to Nonprofit Management Software: https://spacenexus.net/kindora/blog/complete-guide-nonprofit-management-software
+- How to Choose Donor Management Software: https://spacenexus.net/kindora/blog/how-to-choose-donor-management-software
+- Grant Management 101: https://spacenexus.net/kindora/blog/grant-management-101-track-win-more-grants
+- Why Nonprofits Are Ditching Spreadsheets: https://spacenexus.net/kindora/blog/why-nonprofits-are-ditching-spreadsheets
+- Nonprofit Fundraising Campaign Guide: https://spacenexus.net/kindora/blog/nonprofit-fundraising-campaign-guide
+
+## Key Features
+
+- Donor CRM with giving history, engagement scoring, and receipt tracking
+- Grant lifecycle management from prospect to close with compliance reporting
+- Client case management with intake, enrollment, and outcome tracking
+- Nonprofit accounting with cost allocation and Statement of Activities
+- Volunteer management with hours tracking and skill matching
+- Campaign management with goal tracking
+- Board-ready PDF and Excel reporting
+- Role-based access control (Admin, Manager, Staff, Viewer)
+
+## Pricing
+
+- Starter: Free (up to 5 team members, core modules)
+- Professional: Custom pricing (full modules, advanced reporting)
+- Enterprise: Custom pricing (custom integrations, dedicated support)
+
+## Contact
+
+- Email: contact@spacenexus.net
+- Phone: +1 646 421 5740
+- Address: 2500 Marconi Ave, Ste 101, Sacramento, CA 95821 USA
+=======
+# SpaceNexus
+
+> SpaceNexus is an AI-powered virtual data room (VDR) platform for M&A due diligence, fundraising, and secure document sharing. Trusted by 500+ enterprises including law firms, investment banks, and private equity firms.
+
+SpaceNexus provides encrypted document management, deal room collaboration, Q&A workflows, real-time buyer analytics, and compliance-grade audit trails. Setup in under 24 hours with no software installation required.
+
+## Key Features
+
+- AI-powered document processing and auto-redaction
+- AES-256 encryption (at rest) and TLS 1.3 (in transit)
+- Granular role-based access controls and permissions
+- Dynamic watermarking on all documents
+- Real-time activity analytics and buyer intelligence
+- Structured due diligence Q&A workflows
+- SOC 2 Type II, ISO 27001, GDPR, HIPAA, SEC 17a-4 compliance
+- Drag-and-drop bulk upload with AI auto-indexing
+- Mobile access from any browser
+- 99.9% uptime SLA
+
+## Products
+
+- **SpaceNexus VDR** — Secure virtual data room for M&A, fundraising, legal deals, and enterprise transactions
+- **Kindora NGO OS** — Nonprofit management platform with donor tracking, grants, and program outcomes
+
+## Key Pages
+
+- Home: https://spacenexus.net/
+- Features: https://spacenexus.net/features
+- Pricing: https://spacenexus.net/pricing
+- Security: https://spacenexus.net/security
+- Solutions: https://spacenexus.net/solutions
+- Industries: https://spacenexus.net/industries
+- About: https://spacenexus.net/about
+- Blog: https://spacenexus.net/blog
+- Case Studies: https://spacenexus.net/case-studies
+- FAQ: https://spacenexus.net/faq
+- Glossary: https://spacenexus.net/glossary
+- Demo Request: https://spacenexus.net/demo
+- Get Started (Free Trial): https://spacenexus.net/get-started
+
+## Solutions
+
+- M&A Virtual Data Room: https://spacenexus.net/solutions/mergers-and-acquisitions-vdr
+- Investor Data Room: https://spacenexus.net/solutions/investor-data-room
+- Startup Fundraising Data Room: https://spacenexus.net/solutions/startup-data-room
+- Secure Document Sharing for Legal: https://spacenexus.net/solutions/secure-document-sharing-for-legal
+- Law Firm Document Exchange: https://spacenexus.net/solutions/law-firm-document-exchange
+- Private Credit: https://spacenexus.net/solutions/private-credit
+- Virtual Data Room Canada: https://spacenexus.net/solutions/virtual-data-room-canada
+- Virtual Data Room UAE: https://spacenexus.net/solutions/virtual-data-room-uae
+
+## Industries
+
+- Investment Banking
+- Private Equity & Venture Capital
+- Law Firms & Legal
+- Real Estate
+- Life Sciences & Healthcare
+- Energy & Mining
+- Corporate Development
+
+## Pricing
+
+Plans available: Starter (per deal), Professional (monthly or annual), Enterprise (custom volume pricing).
+
+- Pricing page: https://spacenexus.net/pricing
+- Pricing comparison: https://spacenexus.net/pricing-comparison
+- Data room pricing guide: https://spacenexus.net/data-room-pricing
+
+Free 14-day trial available. No credit card required. No per-page fees. No mandatory annual contracts.
+
+## Competitors & Comparisons
+
+- VDR Alternatives 2026: https://spacenexus.net/competitors/vdr-alternatives
+- Datasite Alternative: https://spacenexus.net/competitors/datasite-alternative
+- Intralinks Alternative: https://spacenexus.net/competitors/intralinks-alternative
+- iDeals Alternative: https://spacenexus.net/competitors/ideals-alternative
+
+## Resources
+
+- Blog: https://spacenexus.net/blog
+- Tutorials: https://spacenexus.net/tutorials
+- Checklists: https://spacenexus.net/checklists
+- Due Diligence Checklist: https://spacenexus.net/checklists/due-diligence-checklist
+- VDR Guide: https://spacenexus.net/vdr-guide
+- VDR Comparison: https://spacenexus.net/vdr-comparison
+
+## Contact
+
+- Website: https://spacenexus.net
+- Demo: https://spacenexus.net/demo
+- Free Trial: https://spacenexus.net/get-started
+- Phone numbers available on the website for USA, Canada, UAE, Saudi Arabia, Kuwait, Singapore, and Malaysia
+>>>>>>> origin/main

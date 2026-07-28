@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { authorProfiles } from "../blog/data/posts";
-//above code is importing necessary modules and types from Next.js, as well as author profile data from a local file. The Metadata type is used for defining metadata for the page, Link is used for client-side navigation, Script is used for injecting scripts into the page, and authorProfiles contains information about the authors to be displayed on the About page.
+import LastUpdated from "../components/LastUpdated";
+//above code is importing necessary modules and types from Next.j, as well as author profile data from a local file. The Metadata type is used for defining metadata for the page, Link is used for client-side navigation, Script is used for injecting scripts into the page, and authorProfiles contains information about the authors to be displayed on the About page.
 const teamMembers = Object.values(authorProfiles);
-
 export const metadata: Metadata = {
     title: "About Space Nexus — Enterprise Virtual Data Room",
     description:
@@ -57,10 +57,12 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "About", item: "https://spacenexus.net/about" },
     ],
-};
+}; 
+
 
 export default function AboutPage() {
     return (
+        
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
                 id="about-breadcrumb"
@@ -183,7 +185,8 @@ export default function AboutPage() {
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
                         Our journey
-                    </h2>
+                    </h2> 
+                    
                     <div className="space-y-6">
                         {milestones.map((m, i) => (
                             <div key={i} className="flex gap-6 items-start">
@@ -270,6 +273,11 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div>
         </div>
     );
 }

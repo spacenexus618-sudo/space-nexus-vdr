@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "DonorDock Alternative | Better Donor & Nonprofit Management",
@@ -978,7 +979,11 @@ export default function DonorDockAlternativePage() {
           <p className="mt-6 text-sm text-gray-500">
             Free trial · No credit card · Setup in 30 minutes · Cancel anytime
           </p>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </>
   );

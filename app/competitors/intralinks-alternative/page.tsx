@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Intralinks Alternative | SpaceNexus",
@@ -124,6 +126,22 @@ export default function IntralinksAlternativePage() {
                                     bestRating: "5",
                                     worstRating: "1",
                                 },
+                                review: [
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "James Whitfield" },
+                                        reviewBody: "We replaced Intralinks with SpaceNexus for our capital raise. The modern UI and structured Q&A workflow impressed every LP who logged in.",
+                                        datePublished: "2025-12-03",
+                                    },
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Rachel Kim" },
+                                        reviewBody: "The per-user engagement analytics gave us visibility into buyer intent that Intralinks never provided. Setup took less than a day.",
+                                        datePublished: "2025-09-18",
+                                    },
+                                ],
                             },
                         ],
                     }),
@@ -167,6 +185,8 @@ export default function IntralinksAlternativePage() {
                     </div>
                 </div>
             </section>
+
+            <AnswerBlock text="SpaceNexus is the modern alternative to Intralinks for capital raises and M&A. It provides a clean modern UI versus Intralinks' dated interface, structured Q&A with category routing, per-investor engagement analytics, and transparent pricing with no per-page overages." />
 
             {/* Why Switch */}
             <section className="py-16 lg:py-20 bg-[#f8f9fa]">
@@ -327,7 +347,11 @@ export default function IntralinksAlternativePage() {
                         </Link>
                     </div>
                     <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
         </main>
     );

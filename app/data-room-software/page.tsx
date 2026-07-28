@@ -1,36 +1,36 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
-    title: "Data Room Software 2026 | SpaceNexus",
-    description: "Compare the best data room software and virtual deal room platforms. AI features, security, pricing, and which one fits your deal.",
+    title: "Data Room Software Comparison 2026 — Features, Pricing & Top Picks | SpaceNexus",
+    description: "Compare the best data room software platforms side by side. AI features, security certifications, pricing, and use cases — find the right data room for your deal.",
     alternates: {
         canonical: "https://spacenexus.net/data-room-software",
     },
     openGraph: {
-        title: "Data Room Software 2026 | SpaceNexus",
+        title: "Data Room Software Comparison 2026 | SpaceNexus",
         description:
-            "Compare the best data room software and virtual deal room platforms. AI features, security, pricing, and which one fits your deal.",
+            "Compare the best data room software platforms side by side. AI features, security, pricing, and use cases.",
         url: "https://spacenexus.net/data-room-software",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Data Room Software 2026 — Features, Pricing & Top Picks | SpaceNexus",
+        title: "Data Room Software Comparison 2026 — Side-by-Side | SpaceNexus",
         description:
-            "Complete guide to data room software. Compare features, pricing, and security certifications across the top platforms.",
+            "Compare data room software features, pricing, and security certifications across the top platforms.",
     },
     keywords: [
-        "data room software",
-        "best data room software",
-        "virtual deal room",
         "data room software comparison",
+        "best data room software",
         "data room software 2026",
+        "compare data room software",
         "M&A data room software",
         "secure data room software",
         "due diligence software",
-        "virtual data room software",
         "online data room software",
         "data room platform",
         "deal room software",
@@ -337,7 +337,7 @@ const softwareSchema = {
     description: "AI-powered data room software for M&A due diligence, fundraising, and secure document sharing. SOC 2 Type II certified, with transparent published pricing.",
     offers: {
         "@type": "Offer",
-        price: "149",
+        price: "Contact for pricing",
         priceCurrency: "USD",
         description: "Transparent, published pricing",
     },
@@ -400,6 +400,8 @@ export default function DataRoomSoftwarePage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is AI-powered virtual data room software for M&A due diligence, capital raising, and secure document collaboration. It provides automatic document indexing, structured Q&A, buyer engagement heatmaps, and bank-grade security with SOC 2 Type II and ISO 27001 compliance." />
 
                 {/* What is data room software */}
                 <section className="py-14 bg-white">
@@ -749,7 +751,11 @@ export default function DataRoomSoftwarePage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

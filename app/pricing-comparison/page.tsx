@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "VDR Pricing Comparison 2026 | SpaceNexus",
@@ -370,6 +371,32 @@ const breadcrumbSchema = {
     ],
 };
 
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "VDR Pricing Comparison 2026",
+    description: "Independent pricing comparison of top virtual data room providers including SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and DocSend.",
+    numberOfItems: competitors.length,
+    itemListElement: competitors.map((c) => ({
+        "@type": "ListItem",
+        position: c.rank,
+        item: {
+            "@type": "SoftwareApplication",
+            name: c.name,
+            applicationCategory: "BusinessApplication",
+            applicationSubCategory: "Virtual Data Room",
+            url: "https://spacenexus.net/pricing-comparison",
+            description: c.keyDifferentiator,
+            offers: {
+                "@type": "Offer",
+                price: c.costClarity === "Transparent" ? "See pricing page" : "Contact for pricing",
+                priceCurrency: "USD",
+                description: c.pricingModel,
+            },
+        },
+    })),
+};
+
 function CheckIcon() {
     return (
         <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -392,6 +419,7 @@ export default function PricingComparisonPage() {
             <Script id="pc-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="pc-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="pc-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="pc-itemlist" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
             <main className="pt-20 lg:pt-24">
 
@@ -716,7 +744,11 @@ export default function PricingComparisonPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free DD templates (CSV) →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

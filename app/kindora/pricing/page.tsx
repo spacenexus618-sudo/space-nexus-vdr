@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import LastUpdated from "../../components/LastUpdated";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -175,6 +176,41 @@ const faqs = [
   },
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kindora - Nonprofit Management Software Pricing",
+  "description": "Affordable pricing plans for nonprofits: Free Starter plan, Professional plan, and Enterprise plan with donor CRM, grant tracking, case management, accounting, and volunteer management.",
+  "brand": { "@type": "Brand", "name": "Kindora" },
+  "offers": [
+    { "@type": "Offer", "name": "Starter", "price": "0", "priceCurrency": "USD", "description": "Free forever for up to 5 members" },
+    { "@type": "Offer", "name": "Professional", "price": "0", "priceCurrency": "USD", "description": "Custom pricing for growing nonprofits" },
+    { "@type": "Offer", "name": "Enterprise", "price": "0", "priceCurrency": "USD", "description": "Custom pricing for large organizations" },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What types of nonprofits is Kindora designed for?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora is designed for nonprofits of all sizes — community service organizations, charitable foundations, NGOs, social enterprises, and any mission-driven organization." } },
+    { "@type": "Question", "name": "Can I export data for board reports?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora supports comprehensive exports including Excel (XLSX), branded PDF reports, and JSON data backups. You can generate Statement of Activities reports and custom dashboards tailored for board presentations in one click." } },
+    { "@type": "Question", "name": "Does Kindora support grant compliance reporting?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Kindora includes full grant lifecycle tracking (prospect to close), cost allocation across grants and programs, and compliance-ready financial reporting to meet any grantor's requirements." } },
+    { "@type": "Question", "name": "Is there a free plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Starter plan is completely free, forever. No credit card required. It covers core modules for small nonprofits getting started." } },
+    { "@type": "Question", "name": "How does Kindora compare to Bloomerang or Salesforce?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora uniquely combines donor management, grant tracking, case management, nonprofit accounting, and team tools in one affordable platform." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
+    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
+    { "@type": "ListItem", "position": 3, "name": "Pricing", "item": "https://spacenexus.net/kindora/pricing" },
+  ],
+};
+
 const trustItems = [
   { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "No credit card required" },
   { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Set up in under 30 min" },
@@ -254,9 +290,13 @@ function FaqItem({ question, answer, index }: { question: string; answer: string
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const lastUpdated = "May 15, 2026";
 export default function PricingPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
@@ -280,10 +320,14 @@ export default function PricingPage() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Start free, scale as you grow. No hidden fees, no surprises — just
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+            Start Kindora free, scale as your nonprofit grows. No hidden fees, no surprises — just
             tools that help you do more mission.
           </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
+            According to NTEN&apos;s 2024 Nonprofit Technology Staffing &amp; Investments Report, 58% of nonprofits reported their technology budget increased year over year. Kindora&apos;s free Starter plan and flexible paid tiers ensure nonprofits of every size can access professional management tools without straining their budget.
+          </p>
+          <p className="text-xs text-gray-400 mb-6">Last updated: {lastUpdated}</p>
 
           {/* Trust strip */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
@@ -473,41 +517,38 @@ export default function PricingPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {featureCategories.map((cat) => (
-                    <>
-                      {/* Category row */}
-                      <tr key={cat.name} className="bg-gray-50 border-t border-gray-200">
-                        <td
-                          colSpan={4}
-                          className="py-2.5 px-6 text-xs font-bold text-gray-400 uppercase tracking-widest"
-                        >
-                          {cat.name}
-                        </td>
+                  {featureCategories.flatMap((cat, catIdx) => [
+                    <tr key={`cat-${catIdx}`} className="bg-gray-50 border-t border-gray-200">
+                      <td
+                        colSpan={4}
+                        className="py-2.5 px-6 text-xs font-bold text-gray-400 uppercase tracking-widest"
+                      >
+                        {cat.name}
+                      </td>
+                    </tr>,
+                    ...cat.rows.map((row, idx) => (
+                      <tr
+                        key={row.feature}
+                        className={`border-t border-gray-100 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/30"}`}
+                      >
+                        <td className="py-3.5 px-6 text-gray-700 font-medium">{row.feature}</td>
+                        {([row.starter, row.professional, row.enterprise] as (boolean | string)[]).map(
+                          (value, i) => (
+                            <td
+                              key={i}
+                              className={`text-center py-3.5 px-6 ${i === 1 ? "bg-blue-50/40" : ""}`}
+                            >
+                              {typeof value === "boolean" ? (
+                                value ? <CheckIcon /> : <XIcon />
+                              ) : (
+                                <span className="text-sm text-gray-600 font-medium">{value}</span>
+                              )}
+                            </td>
+                          ),
+                        )}
                       </tr>
-                      {cat.rows.map((row, idx) => (
-                        <tr
-                          key={row.feature}
-                          className={`border-t border-gray-100 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/30"}`}
-                        >
-                          <td className="py-3.5 px-6 text-gray-700 font-medium">{row.feature}</td>
-                          {([row.starter, row.professional, row.enterprise] as (boolean | string)[]).map(
-                            (value, i) => (
-                              <td
-                                key={i}
-                                className={`text-center py-3.5 px-6 ${i === 1 ? "bg-blue-50/40" : ""}`}
-                              >
-                                {typeof value === "boolean" ? (
-                                  value ? <CheckIcon /> : <XIcon />
-                                ) : (
-                                  <span className="text-sm text-gray-600 font-medium">{value}</span>
-                                )}
-                              </td>
-                            ),
-                          )}
-                        </tr>
-                      ))}
-                    </>
-                  ))}
+                    )),
+                  ])}
                 </tbody>
                 {/* Footer CTA row */}
                 <tfoot>
@@ -741,7 +782,11 @@ export default function PricingPage() {
               </span>
             ))}
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
 
     </main>

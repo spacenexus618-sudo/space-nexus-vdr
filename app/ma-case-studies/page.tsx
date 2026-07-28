@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "M&A Case Studies | SpaceNexus",
@@ -528,7 +529,11 @@ export default function MACaseStudiesPage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · SEC/FINRA ready · No credit card required · Cancel anytime</p>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>

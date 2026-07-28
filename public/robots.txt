@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /_next/
+Disallow: /seo/
+Disallow: /templates/
+
+Sitemap: https://spacenexus.net/sitemap.xml

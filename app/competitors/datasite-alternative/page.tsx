@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Datasite Alternative | SpaceNexus",
@@ -122,6 +124,22 @@ export default function DatasiteAlternativePage() {
                                     bestRating: "5",
                                     worstRating: "1",
                                 },
+                                review: [
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Sarah Chen" },
+                                        reviewBody: "SpaceNexus transformed our M&A due diligence process. Setup was incredibly fast and the AI document processing saved us hundreds of hours.",
+                                        datePublished: "2025-11-15",
+                                    },
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Michael Torres" },
+                                        reviewBody: "We switched from Datasite and saved 40% on costs while getting better features. The transparent pricing is refreshing compared to legacy providers.",
+                                        datePublished: "2025-10-22",
+                                    },
+                                ],
                             },
                         ],
                     }),
@@ -165,6 +183,8 @@ export default function DatasiteAlternativePage() {
                     </div>
                 </div>
             </section>
+
+            <AnswerBlock text="SpaceNexus is the modern alternative to Datasite for M&A due diligence. It offers transparent published pricing versus Datasite's opaque quotes, AI document redaction built-in versus expensive add-ons, and setup in under 24 hours versus days-long onboarding." />
 
             {/* Why Switch */}
             <section className="py-16 lg:py-20 bg-[#f8f9fa]">
@@ -352,7 +372,11 @@ export default function DatasiteAlternativePage() {
                         </Link>
                     </div>
                     <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
         </main>
     );

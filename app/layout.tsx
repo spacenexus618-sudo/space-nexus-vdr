@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import AppFooter from "./components/AppFooter";
 import SystemStatus from "./components/SystemStatus";
 import JsonLd from "./components/JsonLd";
+import SiteNavigationSchema from "./components/SiteNavigationSchema";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const inter = Inter({
@@ -33,25 +34,14 @@ export const metadata: Metadata = {
   keywords: [
     "virtual data room software",
     "VDR software",
-    "virtual data room platform",
-    "M&A software",
-    "deal room software",
-    "secure document sharing software",
     "SpaceNexus",
     "Space Nexus",
     "virtual data rooms",
     "virtual data room",
     "VDR",
-    "virtual data rooms for M&A",
-    "best virtual data rooms",
-    "online virtual data rooms",
-    "virtual data room providers",
-    "data room providers",
     "M&A Due Diligence Software",
     "AI Due Diligence Software",
-    "VDR Comparison",
     "Secure Virtual Data Room",
-    "Data Room Software",
     "Due Diligence Platform",
     "Capital Raising Software",
     "IPO Data Room",
@@ -147,6 +137,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
 
         <JsonLd />
+        <SiteNavigationSchema />
 
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="google43f4a543c8cb4c24" />

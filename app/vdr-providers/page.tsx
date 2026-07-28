@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "VDR Providers 2026 | SpaceNexus",
@@ -375,6 +377,8 @@ export default function VdrProvidersPage() {
                     </div>
                 </section>
 
+                <AnswerBlock text="SpaceNexus is a top virtual data room provider offering AI-powered document processing, transparent pricing, and setup in under 24 hours. Compared to legacy providers like Datasite and Intralinks, SpaceNexus delivers modern UX, built-in AI features, and no per-page fees." />
+
                 {/* Provider Cards */}
                 <section id="providers" className="py-16 lg:py-20 bg-[#f8f9fa] scroll-mt-24">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -657,7 +661,11 @@ export default function VdrProvidersPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data room software →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

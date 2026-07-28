@@ -10,6 +10,9 @@ import BenefitsSection from "./components/BenefitsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
 import KindoraCallout from "./components/KindoraCallout";
+import GlobalPresence from "./components/GlobalPresence";
+import LastUpdated from "./components/LastUpdated";
+import AnswerBlock from "./components/AnswerBlock";
 
 export const metadata: Metadata = {
   title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
@@ -132,6 +135,9 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* AI Answer Block */}
+      <AnswerBlock text="SpaceNexus is an AI-powered virtual data room platform for M&A due diligence, capital raising, and secure document sharing. It offers transparent pricing, AI document redaction, structured Q&A workflows, and real-time buyer analytics with SOC 2 Type II certification." />
+
       {/* Trust Bar - Security Features */}
       <TrustBar />
 
@@ -173,6 +179,11 @@ export default function Home() {
       {/* FAQ Section */}
       <div className="content-auto">
         <FAQSection />
+      </div>
+
+      {/* Global Presence - Office Locations */}
+      <div className="content-auto">
+        <GlobalPresence />
       </div>
 
       {/* SEO Content Block - Virtual Data Room Software Focus */}
@@ -234,7 +245,11 @@ export default function Home() {
               Intralinks Alternative →
             </a>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </>
   );

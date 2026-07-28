@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Secure Document Exchange for Law Firms | SpaceNexus",
@@ -621,7 +622,11 @@ export default function LawFirmDocumentExchangePage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Legal document management →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>
