@@ -132,7 +132,7 @@ export default function UAEVDRPage() {
       <section className="relative py-20 lg:py-28 bg-gradient-to-b from-[#f0f4ff] to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">🇦🇪 United Arab Emirates</p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             غرفة البيانات الافتراضية الآمنة للإمارات
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">

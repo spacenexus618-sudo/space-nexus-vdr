@@ -282,7 +282,7 @@ export default function InvestmentBankingPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
                 Investment Banking
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Enterprise Data Rooms for Investment Banks
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -512,7 +512,7 @@ export default function InvestmentBankingPage() {
               </ul>
               <a
                 href="/demo"
-                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20"
+                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 See the full platform
                 <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

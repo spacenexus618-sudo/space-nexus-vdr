@@ -303,7 +303,7 @@ export default function MACaseStudiesPage() {
                                 </svg>
                                 6 Real Deal Stories
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 M&amp;A Case Studies{" "}
                                 <span className="text-[#2563eb]">— Real Deal Room Wins</span>
                             </h1>
@@ -314,13 +314,13 @@ export default function MACaseStudiesPage() {
                                 15-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Anonymized client data, real outcomes
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#case-studies" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#case-studies" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Read the Case Studies
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#patterns" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#patterns" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Common Patterns
                                 </a>
                             </div>
@@ -333,7 +333,7 @@ export default function MACaseStudiesPage() {
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">The Transactions</p>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Six M&amp;A transactions, six different challenges</h2>
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">Six M&amp;A transactions, six different challenges</h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
                                 Each case study has been anonymized for client confidentiality. Deal sizes, industry verticals, and outcome metrics reflect the actual transactions.
                             </p>
@@ -420,7 +420,7 @@ export default function MACaseStudiesPage() {
                                     { value: "Zero", label: "Ethical wall breaches" },
                                 ].map((stat) => (
                                     <div key={stat.label}>
-                                        <div className="text-3xl lg:text-4xl font-black mb-2">{stat.value}</div>
+                                        <div className="text-2xl lg:text-3xl xl:text-4xl font-black mb-2">{stat.value}</div>
                                         <div className="text-xs text-blue-200 leading-snug">{stat.label}</div>
                                     </div>
                                 ))}

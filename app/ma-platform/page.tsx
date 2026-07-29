@@ -194,7 +194,7 @@ export default function MaPlatformPage() {
                                 </svg>
                                 2026 M&A Platform Guide
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 M&A Platform{" "}
                                 <span className="text-[#2563eb]">— The 2026 Complete Guide</span>
                             </h1>
@@ -211,7 +211,7 @@ export default function MaPlatformPage() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </Link>
-                                <a href="#features" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#features" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     See All Features
                                 </a>
                             </div>

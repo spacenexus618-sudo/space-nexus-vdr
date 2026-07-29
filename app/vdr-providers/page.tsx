@@ -348,7 +348,7 @@ export default function VdrProvidersPage() {
                                 </svg>
                                 2026 VDR Provider Comparison
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 VDR Providers{" "}
                                 <span className="text-[#2563eb]">Compared for 2026</span>
                             </h1>
@@ -363,13 +363,13 @@ export default function VdrProvidersPage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#providers" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#providers" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Compare All Providers
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Compare Pricing
                                 </a>
                             </div>
@@ -458,7 +458,8 @@ export default function VdrProvidersPage() {
                                 Pricing is where VDR providers differ most dramatically. Legacy platforms hide true costs behind per-page fees and mandatory add-ons.
                             </p>
                         </div>
-                        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+                        {/* Desktop Table */}
+                        <div className="hidden md:block overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
                             <table className="w-full text-sm min-w-[720px]">
                                 <thead>
                                     <tr className="bg-gray-900 text-white">
@@ -484,6 +485,36 @@ export default function VdrProvidersPage() {
                                 </tbody>
                             </table>
                         </div>
+                        {/* Mobile Card Layout */}
+                        <div className="md:hidden space-y-4">
+                            {pricingRows.map((row) => (
+                                <div key={row.label} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+                                    <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">{row.label}</h3>
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-blue-50/50">
+                                            <span className="text-xs font-medium text-[#2563eb]">SpaceNexus</span>
+                                            <span className="text-xs font-semibold text-green-700">{row.spacenexus}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Datasite</span>
+                                            <span className="text-xs text-red-500">{row.datasite}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Intralinks</span>
+                                            <span className="text-xs text-red-500">{row.intralinks}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Firmex</span>
+                                            <span className="text-xs text-gray-600">{row.firmex}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">iDeals</span>
+                                            <span className="text-xs text-gray-600">{row.ideals}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                         <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated June 2026.</p>
                     </div>
                 </section>
@@ -497,7 +528,8 @@ export default function VdrProvidersPage() {
                                 Side-by-side view of the features that matter most when choosing a VDR provider.
                             </p>
                         </div>
-                        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm bg-white">
+                        {/* Desktop Table */}
+                        <div className="hidden md:block overflow-x-auto rounded-2xl border border-gray-200 shadow-sm bg-white">
                             <table className="w-full text-sm min-w-[720px]">
                                 <thead>
                                     <tr className="bg-gray-50 border-b border-gray-200">
@@ -532,6 +564,36 @@ export default function VdrProvidersPage() {
                                     ))}
                                 </tbody>
                             </table>
+                        </div>
+                        {/* Mobile Card Layout */}
+                        <div className="md:hidden space-y-4">
+                            {featureComparison.map((row) => {
+                                const providerNames = ["SpaceNexus", "Datasite", "Intralinks", "Firmex", "iDeals", "Ansarada"];
+                                const values = [row.spacenexus, row.datasite, row.intralinks, row.firmex, row.ideals, row.ansarada];
+                                return (
+                                    <div key={row.feature} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+                                        <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">{row.feature}</h3>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            {values.map((val, ci) => (
+                                                <div key={ci} className={`flex items-center justify-between px-3 py-2 rounded-lg ${ci === 0 ? "bg-blue-50/50" : "bg-gray-50"}`}>
+                                                    <span className={`text-xs font-medium ${ci === 0 ? "text-[#2563eb]" : "text-gray-600"}`}>{providerNames[ci]}</span>
+                                                    {val === "✓" ? (
+                                                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-50 text-green-600">
+                                                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                                                        </span>
+                                                    ) : val === "✗" ? (
+                                                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-50 text-red-400">
+                                                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                                                        </span>
+                                                    ) : (
+                                                        <span className="text-xs text-gray-600 font-medium">{val}</span>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>

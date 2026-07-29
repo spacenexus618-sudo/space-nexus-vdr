@@ -38,7 +38,7 @@ export default function VCEarlyStageDiligencePage() {
                         <span className="text-gray-900">Early-Stage Diligence</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Venture Capital Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Early-Stage Diligence Data Room for VC Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Early-Stage Diligence Data Room for VC Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for VC early-stage diligence. Seed through Series B evaluation, founder references, product demos, and rapid IC cycles.</p>
                 </div>
             </section>

@@ -116,7 +116,7 @@ export default function VentureCapitalPage() {
                   All Industries
                 </Link>
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">Venture Capital</div>
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Data Rooms Built for VC Workflows</h1>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Data Rooms Built for VC Workflows</h1>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">From early-stage diligence to portfolio exits, SpaceNexus provides venture capital firms with the secure, efficient platform they need to evaluate opportunities, communicate with LPs, and support portfolio companies.</p>
                 <Link href="/demo" className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
                   Request a Demo

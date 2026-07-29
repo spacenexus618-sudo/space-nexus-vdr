@@ -42,7 +42,7 @@ export default function PEPortfolioManagementPage() {
                         <span className="text-gray-900">Portfolio Management</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Private Equity Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Portfolio Management Data Room for PE Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Portfolio Management Data Room for PE Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for PE portfolio monitoring. Board materials, quarterly reporting, KPI tracking, and 100-day plans for portfolio companies.</p>
                 </div>
             </section>

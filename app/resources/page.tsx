@@ -114,7 +114,7 @@ export default function ResourcesIndexPage() {
                         <span className="text-gray-900">Resources</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Knowledge Hub</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Resources</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Resources</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Free guides, downloadable templates, and industry research for M&A, due diligence, and VDR professionals. Use these resources to run better deals, faster.</p>
                 </div>
             </section>

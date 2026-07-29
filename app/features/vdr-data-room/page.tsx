@@ -291,7 +291,7 @@ export default function VDRDataRoomPage() {
                             <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] text-sm font-medium mb-4">
                                 Virtual Data Room
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                                 VDR Data Room
                             </h1>
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed">

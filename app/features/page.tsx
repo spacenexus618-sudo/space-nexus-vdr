@@ -509,7 +509,7 @@ export default function FeaturesPage() {
             <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
               Platform Features
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Everything You Need for{" "}
               <span className="text-gradient">Secure Deals</span>
             </h1>
@@ -639,7 +639,7 @@ export default function FeaturesPage() {
               <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
                 Live Product
               </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-5">
                 Your deal command center — on day one
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">

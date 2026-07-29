@@ -34,7 +34,7 @@ export default function Page() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">LEVEL</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">TITLE</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">TITLE</h1>
                     <p className="text-xl text-gray-600">DESCRIPTION_SHORT</p>
                 </div>
             </section>

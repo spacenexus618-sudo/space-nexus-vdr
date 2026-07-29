@@ -126,7 +126,7 @@ export default function SocialMediaPlatformsPage() {
             </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-6">
             SpaceNexus Social Media
             <br />
             Platforms

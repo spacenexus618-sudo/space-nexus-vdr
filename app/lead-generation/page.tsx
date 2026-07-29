@@ -102,7 +102,7 @@ export default function LeadGenerationPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-200/20 text-blue-200 text-sm font-medium mb-6">
                 Close More Deals Faster
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 Generate More M&A &<br />
                 <span className="text-blue-200">Fundraising Leads</span>
               </h1>
@@ -156,7 +156,7 @@ export default function LeadGenerationPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s, i) => (
               <div key={i} className="text-center">
-                <p className="text-4xl font-bold text-[#2563eb] mb-1">{s.value}</p>
+                <p className="text-3xl sm:text-4xl font-bold text-[#2563eb] mb-1">{s.value}</p>
                 <p className="text-sm text-gray-600">{s.label}</p>
               </div>
             ))}

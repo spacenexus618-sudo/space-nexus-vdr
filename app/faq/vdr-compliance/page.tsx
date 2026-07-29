@@ -256,7 +256,7 @@ export default function VDRComplianceFAQPage() {
                         <span className="text-gray-900">VDR Compliance</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">FAQ</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">VDR Compliance FAQ: SOC 2, ISO 27001, GDPR & More</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">VDR Compliance FAQ: SOC 2, ISO 27001, GDPR & More</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mb-8">
                         The most comprehensive FAQ on virtual data room compliance — {flatFaqs.length} questions covering SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4, FINRA, and more.
                     </p>

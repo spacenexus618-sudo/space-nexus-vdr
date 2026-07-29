@@ -188,7 +188,7 @@ export default function ProgramManagementSoftwarePage() {
                                 </svg>
                                 Program Delivery Solution
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Program Management Software for{" "}
                                 <span className="text-[#2563eb]">Complex, Multi-Project Delivery</span>
                             </h1>

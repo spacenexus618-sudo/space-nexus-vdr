@@ -438,7 +438,7 @@ export default function PricingComparisonPage() {
                                 </svg>
                                 2026 Independent Comparison
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 SpaceNexus Pricing{" "}
                                 <span className="text-[#2563eb]">vs Competitors</span>
                             </h1>
@@ -449,13 +449,13 @@ export default function PricingComparisonPage() {
                                 14-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Based on publicly available pricing information
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#competitors" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#competitors" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     See the Comparison
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#hidden-costs" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#hidden-costs" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Hidden Costs to Watch
                                 </a>
                             </div>
@@ -492,7 +492,7 @@ export default function PricingComparisonPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">The Comparison</p>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">7 VDR providers compared</h2>
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">7 VDR providers compared</h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
                                 Each provider evaluated on pricing model, cost transparency, per-page fees, AI features, setup time, and best-fit use case.
                             </p>
@@ -609,7 +609,8 @@ export default function PricingComparisonPage() {
                                 How pricing models compare across common deal scenarios.
                             </p>
                         </div>
-                        <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white">
+                        {/* Desktop Table */}
+                        <div className="hidden md:block rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm min-w-[900px]">
                                     <thead className="bg-gray-900 text-white">
@@ -634,6 +635,32 @@ export default function PricingComparisonPage() {
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+                        {/* Mobile Card Layout */}
+                        <div className="md:hidden space-y-4">
+                            {totalCostComparison.map((row) => (
+                                <div key={row.scenario} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+                                    <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">{row.scenario}</h3>
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-blue-50/50">
+                                            <span className="text-xs font-medium text-[#2563eb]">SpaceNexus</span>
+                                            <span className="text-xs font-medium text-gray-700">{row.spacenexus}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Legacy VDR</span>
+                                            <span className="text-xs text-gray-600">{row.legacy}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Mid-Market</span>
+                                            <span className="text-xs text-gray-600">{row.midmarket}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Cheap Options</span>
+                                            <span className="text-xs text-gray-600">{row.cheap}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>

@@ -60,7 +60,7 @@ export default function EngagementAnalyticsPage() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">Intermediate</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Engagement Analytics for Sell-Side</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Engagement Analytics for Sell-Side</h1>
                     <p className="text-xl text-gray-600">Use engagement analytics to identify the most serious bidders. Read heatmaps, time-on-document metrics, and bidder comparison dashboards.</p>
                 </div>
             </section>

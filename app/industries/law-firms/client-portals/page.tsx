@@ -106,7 +106,7 @@ export default function LawFirmClientPortalsPage() {
                         <span className="text-gray-900">Client Portals</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Law Firm Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Client Portals for Law Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Client Portals for Law Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">
                         Secure client collaboration portals for ongoing legal matters. Document sharing, signature workflows, and matter status — all with privilege protection and audit trails.
                     </p>

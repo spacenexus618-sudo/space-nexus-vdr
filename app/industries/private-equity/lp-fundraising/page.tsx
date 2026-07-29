@@ -38,7 +38,7 @@ export default function PELPFundraisingPage() {
                         <span className="text-gray-900">LP Fundraising</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Private Equity Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">LP Fundraising Data Room for PE Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">LP Fundraising Data Room for PE Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for PE fund fundraising. PPM and LPA management, LP due diligence, side letter coordination, and capital call documentation throughout the fund lifecycle.</p>
                 </div>
             </section>

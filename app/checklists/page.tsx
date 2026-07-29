@@ -275,7 +275,7 @@ export default function ChecklistsPage() {
                         <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
                             Free Resources
                         </p>
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-5">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
                             Free Due Diligence{" "}
                             <span className="text-[#2563eb]">Checklists</span>
                         </h1>

@@ -596,7 +596,7 @@ export default function DealRoomSoftwarePage() {
                                 </svg>
                                 2026 Comparison &amp; Ranking
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Best Deal Room Software{" "}
                                 <span className="text-[#2563eb]">— 2026 Comparison</span>
                             </h1>
@@ -613,7 +613,7 @@ export default function DealRoomSoftwarePage() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </Link>
-                                <a href="#deal-room-vs-data-room" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#deal-room-vs-data-room" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Deal Room vs Data Room
                                 </a>
                             </div>
@@ -706,7 +706,7 @@ export default function DealRoomSoftwarePage() {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">The Full Ranking</p>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                                 Best deal room software, ranked
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">

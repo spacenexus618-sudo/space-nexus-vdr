@@ -107,7 +107,7 @@ export default function LawFirmMADiligencePage() {
                         <span className="text-gray-900">M&A Due Diligence</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Law Firm Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">M&A Due Diligence for Law Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">M&A Due Diligence for Law Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mb-8">
                         The virtual data room built for M&A counsel. Privilege-protected document sharing, ethical wall enforcement, court-admissible audit trails, and structured Q&A — used by Am Law 100 firms for buy-side and sell-side diligence.
                     </p>

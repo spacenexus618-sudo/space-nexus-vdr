@@ -94,7 +94,7 @@ export default function BacklinkStrategyPage() {
                         <span className="text-gray-900">Backlink Strategy</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">SEO Resource</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">VDR Backlink Outreach Strategy</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">VDR Backlink Outreach Strategy</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">The complete VDR backlink outreach playbook. Target publication list, email templates, linkable asset ideas, and measurement framework for building domain authority around VDR keywords.</p>
                 </div>
             </section>

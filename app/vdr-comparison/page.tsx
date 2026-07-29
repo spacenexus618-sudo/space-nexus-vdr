@@ -526,7 +526,7 @@ export default function VDRComparisonPage() {
                                 </svg>
                                 Side-by-Side Comparison
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Data Room Comparison{" "}
                                 <span className="text-[#2563eb]">2026</span>
                             </h1>
@@ -732,7 +732,7 @@ export default function VDRComparisonPage() {
                 {/* CTA Section */}
                 <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-3xl mx-auto px-4 text-center">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to choose your VDR?</h2>
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">Ready to choose your VDR?</h2>
                         <p className="text-gray-600 mb-8 text-lg">
                             See the top-rated VDR provider in action. Request a personalized demo and compare features directly.
                         </p>

@@ -120,7 +120,7 @@ export default function TutorialsIndexPage() {
                         <span className="text-gray-900">Tutorials</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Video Library</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">SpaceNexus Video Tutorials</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">SpaceNexus Video Tutorials</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Step-by-step video tutorials for SpaceNexus VDR features. From initial data room setup to advanced security configuration — learn the platform through hands-on walkthroughs.</p>
                 </div>
             </section>

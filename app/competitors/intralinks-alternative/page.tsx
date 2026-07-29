@@ -157,7 +157,7 @@ export default function IntralinksAlternativePage() {
                             </svg>
                             Intralinks Alternative
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                             The Modern{" "}
                             <span className="text-[#2563eb]">Intralinks Alternative</span>{" "}
                             for Capital Raising

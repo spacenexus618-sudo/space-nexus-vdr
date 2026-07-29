@@ -262,7 +262,7 @@ export default function StartupDataRoomPage() {
                                 </svg>
                                 For Startups &amp; Founders
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 The Data Room Built for{" "}
                                 <span className="text-[#2563eb]">Founders Raising Capital</span>
                             </h1>

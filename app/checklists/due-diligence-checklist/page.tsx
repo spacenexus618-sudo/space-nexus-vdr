@@ -620,7 +620,7 @@ export default function DueDiligenceChecklistPage() {
                                 </svg>
                                 Updated June 2026 · {totalItems}+ checklist items
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 The Complete{" "}
                                 <span className="text-[#2563eb]">Due Diligence Checklist</span>
                                 {" "}for 2026
@@ -645,7 +645,7 @@ export default function DueDiligenceChecklistPage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="#checklist" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#checklist" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     View Full Checklist
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                                 </a>

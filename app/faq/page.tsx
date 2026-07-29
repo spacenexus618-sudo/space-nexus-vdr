@@ -98,7 +98,7 @@ export default function FAQIndexPage() {
                         <span className="text-gray-900">FAQ</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Frequently Asked Questions</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Virtual Data Room FAQ: Answers for M&A, Fundraising & Legal Teams</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Virtual Data Room FAQ: Answers for M&A, Fundraising & Legal Teams</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mb-8">
                         {totalQuestions}+ questions on virtual data rooms, security, and compliance — answered by M&A and security practitioners.
                     </p>

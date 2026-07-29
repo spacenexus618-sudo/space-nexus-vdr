@@ -341,7 +341,7 @@ export default function IndustriesPage() {
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] text-sm font-medium mb-6">
             Industry Solutions
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Built for Your Industry
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">

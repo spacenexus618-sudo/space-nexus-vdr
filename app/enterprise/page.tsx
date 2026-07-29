@@ -153,7 +153,7 @@ export default function EnterprisePage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
                 Enterprise
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Enterprise virtual data room for the world's most demanding deal teams
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
@@ -208,7 +208,7 @@ export default function EnterprisePage() {
         <section className="py-16 lg:py-24 bg-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                 Enterprise-grade capabilities
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -238,7 +238,7 @@ export default function EnterprisePage() {
         <section className="py-16 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                 Trusted across regulated industries
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -267,19 +267,19 @@ export default function EnterprisePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">500+</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">500+</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Enterprise Customers</p>
               </div>
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">99.99%</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">99.99%</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Uptime SLA</p>
               </div>
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">Multi-Billion</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">Multi-Billion</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Deal Value Secured</p>
               </div>
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">24/7</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">24/7</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Dedicated Support</p>
               </div>
             </div>
@@ -289,7 +289,7 @@ export default function EnterprisePage() {
         {/* CTA */}
         <section className="py-16 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
               Ready to upgrade to enterprise VDR?
             </h2>
             <p className="text-lg text-gray-600 mb-8">

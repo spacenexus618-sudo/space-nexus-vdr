@@ -71,7 +71,7 @@ export default function IBRestructuringPage() {
                         <span className="text-gray-900">Restructuring</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Investment Banking Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Restructuring Data Room for Investment Banks</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Restructuring Data Room for Investment Banks</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">
                         Virtual data room for distressed M&amp;A, Chapter 11, and creditor negotiations. Information barrier enforcement, creditor group access, and court-admissible audit trails.
                     </p>

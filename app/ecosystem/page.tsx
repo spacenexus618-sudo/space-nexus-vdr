@@ -171,7 +171,7 @@ export default function EcosystemPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
               Space AI Product Family
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-3xl sm:text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               One Company.{" "}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Eight Products.
@@ -313,7 +313,7 @@ export default function EcosystemPage() {
                 href="https://pmspace.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg border border-gray-600 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:border-gray-400 hover:text-white"
+                className="rounded-lg border border-gray-600 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:border-gray-400 hover:text-white min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 Visit Space AI
               </a>

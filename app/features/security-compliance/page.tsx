@@ -166,7 +166,7 @@ export default function SecurityCompliancePage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-100 text-red-700 text-sm font-medium mb-4">
                 Enterprise Security
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Security & Compliance
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">

@@ -191,7 +191,7 @@ export default function FinancialGlossaryPage() {
                         <span className="text-gray-900">Financial Glossary</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Reference</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Financial Glossary</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Financial Glossary</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mb-8">{allTerms.length}+ financial terms defined across {categories.length} categories. Covering valuation metrics, debt and lending, deal structures, accounting, investment analysis, and financial regulations.</p>
                     <div className="flex flex-wrap gap-2">
                         {categories.map(c => (

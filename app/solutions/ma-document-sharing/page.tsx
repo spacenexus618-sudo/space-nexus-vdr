@@ -198,7 +198,7 @@ export default function MADocumentSharingPage() {
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
             M&A Document Sharing
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             Share Deal Documents Securely — From Teaser to Close
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">

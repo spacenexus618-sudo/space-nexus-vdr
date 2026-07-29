@@ -79,7 +79,7 @@ export default function FAQSection() {
                                 }`}
                         >
                             <button
-                                className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
+                                className="w-full flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 text-left gap-4 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
                                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                                 aria-expanded={openIndex === i}
                             >

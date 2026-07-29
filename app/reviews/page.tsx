@@ -220,7 +220,7 @@ export default function ReviewsPage() {
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
             Customer Reviews
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             Trusted by Deal Teams Worldwide
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
@@ -346,7 +346,7 @@ export default function ReviewsPage() {
                 rel="noopener noreferrer"
                 className="group flex flex-col sm:flex-row sm:items-center gap-4 bg-[#f8f9fa] rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors"
               >
-                <div className="text-4xl shrink-0">{platform.icon}</div>
+                <div className="text-3xl sm:text-4xl shrink-0">{platform.icon}</div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#2563eb]">

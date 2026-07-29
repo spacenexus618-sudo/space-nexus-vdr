@@ -183,7 +183,7 @@ export default function CanadaVDRPage() {
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
             🇨🇦 Canada
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             The Virtual Data Room for Canadian Transactions
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">

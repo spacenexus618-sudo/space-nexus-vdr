@@ -58,7 +58,7 @@ export default function SSOMFAConfigPage() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">Advanced</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">SSO and MFA Configuration</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">SSO and MFA Configuration</h1>
                     <p className="text-xl text-gray-600">Configure single sign-on with Okta, Azure AD, or Google Workspace. Enable phishing-resistant MFA for enterprise security.</p>
                 </div>
             </section>

@@ -210,7 +210,7 @@ export default function DemoPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] text-sm font-medium mb-6">
                 Get Started Today
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Book a Free <br className="hidden sm:block" />
                 <span className="text-[#2563eb]">SpaceNexus VDR Demo</span>
               </h1>

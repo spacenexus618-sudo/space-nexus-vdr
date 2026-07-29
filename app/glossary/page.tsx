@@ -236,7 +236,7 @@ export default function GlossaryPage() {
                         <span className="text-gray-900">Glossary</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Reference</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">VDR &amp; M&amp;A Glossary</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">VDR &amp; M&amp;A Glossary</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mb-8">{allTerms.length}+ terms defined across {categories.length} categories. The most comprehensive free glossary of virtual data room, M&amp;A, due diligence, fundraising, security, and legal technology terms.</p>
                     <div className="flex flex-wrap gap-2">
                         {categories.map(c => (

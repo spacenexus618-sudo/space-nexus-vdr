@@ -344,7 +344,7 @@ export default function VdrAlternativesPage() {
                                 </svg>
                                 2026 Comparison Guide
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Best Virtual Data Room Providers{" "}
                                 <span className="text-[#2563eb]">Compared for 2026</span>
                             </h1>
@@ -355,7 +355,7 @@ export default function VdrAlternativesPage() {
                                 Last updated: June 2026. This guide covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Jump to Comparison Table
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

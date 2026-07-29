@@ -104,7 +104,7 @@ export default function KeywordTrackingPage() {
                         <span className="text-gray-900">Keyword Tracking</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">SEO Resource</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">VDR Keyword Tracking &amp; Quarterly Content Updates</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">VDR Keyword Tracking &amp; Quarterly Content Updates</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">The VDR keyword tracking methodology, target keyword list, quarterly content update process, and performance benchmarks for ranking on virtual data room and M&amp;A search terms.</p>
                 </div>
             </section>

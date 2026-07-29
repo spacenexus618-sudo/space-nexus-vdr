@@ -258,7 +258,7 @@ export default function SecureDocumentSharingLegalPage() {
                                 </svg>
                                 Legal Solution
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Secure Document Sharing{" "}
                                 <span className="text-[#2563eb]">Built for Law Firms</span>
                             </h1>

@@ -140,7 +140,7 @@ export default function SecurityPage() {
                         </svg>
                         Enterprise Security & Compliance
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                         Bank-grade security for your most sensitive deals
                     </h1>
                     <p className="text-xl text-blue-200 max-w-2xl mx-auto">

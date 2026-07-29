@@ -138,7 +138,7 @@ export default function NPLGuidePage() {
                         <span className="text-gray-900">NPL Guide</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Industry Guide</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">NPL Due Diligence Guide</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">NPL Due Diligence Guide</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">The complete playbook for non-performing loan portfolio due diligence. Loan-level data validation, collateral valuation, legal document review, and portfolio aggregation — everything you need to evaluate and price an NPL pool.</p>
                 </div>
             </section>
@@ -180,7 +180,7 @@ export default function NPLGuidePage() {
                         <a
                             href="/templates/npl-due-diligence-checklist.csv"
                             download
-                            className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors gap-2"
+                            className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors gap-2 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
                         >
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />

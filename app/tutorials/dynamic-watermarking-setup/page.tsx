@@ -58,7 +58,7 @@ export default function DynamicWatermarkingPage() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">Beginner</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Dynamic Watermarking Setup</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Dynamic Watermarking Setup</h1>
                     <p className="text-xl text-gray-600">Configure dynamic watermarks with viewer identity, IP, and timestamp. Best practices for document protection in M&amp;A and legal workflows.</p>
                 </div>
             </section>

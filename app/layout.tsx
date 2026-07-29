@@ -20,6 +20,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -147,7 +148,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased bg-[#f8f9fa] text-gray-900`}
       >
-        <a href="#main-content" className="sr-only focus:not-sr-only">
+        <a href="#main-content" className="sr-only focus:not-sr-only min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
           Skip to content
         </a>
         <Header />

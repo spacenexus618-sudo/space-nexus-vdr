@@ -38,7 +38,7 @@ export default function PEExitSellSidePage() {
                         <span className="text-gray-900">Exit &amp; Sell-Side</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Private Equity Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Exit &amp; Sell-Side Data Room for PE Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Exit &amp; Sell-Side Data Room for PE Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for PE exit preparation. Portfolio company sale processes, exit readiness assessments, and multi-party buyer management throughout the exit lifecycle.</p>
                 </div>
             </section>

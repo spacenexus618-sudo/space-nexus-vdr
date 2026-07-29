@@ -341,7 +341,7 @@ export default function WhatIsAVirtualDataRoomPage() {
             <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
               Definitive Guide
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               What is a <span className="text-[#2563eb]">Virtual Data Room</span>?
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -377,7 +377,7 @@ export default function WhatIsAVirtualDataRoomPage() {
                     {section.title}
                   </a>
                 ))}
-                <a href="#faq" className="flex items-center gap-3 text-sm text-gray-600 hover:text-[#2563eb] transition-colors py-1">
+                <a href="#faq" className="flex items-center gap-3 text-sm text-gray-600 hover:text-[#2563eb] transition-colors py-1 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] shrink-0" />
                   Frequently Asked Questions
                 </a>

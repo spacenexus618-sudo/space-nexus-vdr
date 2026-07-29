@@ -169,7 +169,7 @@ export default function MAVDRPage() {
                             </svg>
                             M&amp;A Solution
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                             The Virtual Data Room Built for{" "}
                             <span className="text-[#2563eb]">Mergers &amp; Acquisitions</span>
                         </h1>

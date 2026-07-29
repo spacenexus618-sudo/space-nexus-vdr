@@ -379,7 +379,7 @@ export default function VDRGuidePage() {
                                 </svg>
                                 Complete 2026 Guide
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 The Complete{" "}
                                 <span className="text-[#2563eb]">Virtual Data Room Provider</span> Guide
                             </h1>
@@ -759,7 +759,7 @@ export default function VDRGuidePage() {
                 {/* Next Steps CTA */}
                 <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-3xl mx-auto px-4 text-center">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to select your VDR provider?</h2>
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">Ready to select your VDR provider?</h2>
                         <p className="text-gray-600 mb-8 text-lg">
                             See the leading VDR provider in action. AI-powered features, transparent pricing, and setup in under 24 hours.
                         </p>

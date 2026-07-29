@@ -61,7 +61,7 @@ export default function PermissionManagementPage() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">Advanced</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Permission Management Deep Dive</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Permission Management Deep Dive</h1>
                     <p className="text-xl text-gray-600">Master granular permission controls. Per-user, per-group, per-folder, and per-document permissions. Time-limited and IP-restricted access.</p>
                 </div>
             </section>

@@ -71,7 +71,7 @@ export default function IBSellSideProcessPage() {
                         <span className="text-gray-900">Sell-Side Process</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Investment Banking Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Sell-Side M&amp;A Process Data Room</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Sell-Side M&amp;A Process Data Room</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">
                         Virtual data room purpose-built for sell-side M&amp;A. The 5-phase process from CIM to closing, with bidder management, Q&amp;A workflows, and engagement analytics throughout.
                     </p>

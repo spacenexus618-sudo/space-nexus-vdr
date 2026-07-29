@@ -290,7 +290,7 @@ export default function LawFirmDocumentExchangePage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-sm font-medium text-blue-700 mb-6">
               <span>⚖️</span> Legal Document Exchange
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Secure Document Exchange{" "}
               <span className="text-[#2563eb]">for Law Firms</span>
             </h1>

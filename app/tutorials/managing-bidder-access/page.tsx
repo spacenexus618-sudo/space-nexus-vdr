@@ -61,7 +61,7 @@ export default function ManagingBidderAccessPage() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">Intermediate</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Managing Bidder Access</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Managing Bidder Access</h1>
                     <p className="text-xl text-gray-600">Configure tiered bidder permissions for sell-side M&amp;A processes. Initial bidders, shortlisted bidders, and final-round access management.</p>
                 </div>
             </section>

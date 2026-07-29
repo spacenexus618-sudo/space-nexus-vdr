@@ -62,7 +62,7 @@ export default function TestimonialsSection() {
                             className="relative bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
                         >
                             {/* Quote mark */}
-                            <div className="text-5xl font-serif text-[#2563eb]/20 leading-none mb-4">&ldquo;</div>
+                            <div className="text-3xl sm:text-5xl font-serif text-[#2563eb]/20 leading-none mb-4">&ldquo;</div>
 
                             {/* Deal badge */}
                             <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#2563eb] mb-4 self-start">

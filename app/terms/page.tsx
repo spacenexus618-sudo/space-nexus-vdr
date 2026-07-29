@@ -20,7 +20,7 @@ export default function TermsPage() {
             </svg>
             Back to Home
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
           <p className="text-gray-500 mb-8">Last updated: July 19, 2026</p>
 
           <div className="prose prose-lg max-w-none text-gray-600 space-y-8">
@@ -94,7 +94,7 @@ export default function TermsPage() {
 
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Contact Us</h2>
-              <p>If you have any questions about these Terms, please contact us at <a href="mailto:legal@spacenexus.net" className="text-[#2563eb] hover:underline">legal@spacenexus.net</a>.</p>
+              <p>If you have any questions about these Terms, please contact us at <a href="mailto:legal@spacenexus.net" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">legal@spacenexus.net</a>.</p>
             </div>
           </div>
         </div>

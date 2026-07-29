@@ -11,9 +11,9 @@ export default function HeroSection() {
           {/* Left Content */}
           <div>
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-8 animate-fade-in">
-              <span className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse" />
-              <span className="text-sm text-gray-600">
+            <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-8 animate-fade-in">
+              <span className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse flex-shrink-0" />
+              <span className="text-xs sm:text-sm text-gray-600">
                 Virtual Data Room Software · Trusted by 500+ enterprises
               </span>
             </div>
@@ -21,7 +21,7 @@ export default function HeroSection() {
             {/* Main Headline */}
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-6"
             >
               AI-Powered Virtual Data Room Software
               <br />
@@ -71,14 +71,14 @@ export default function HeroSection() {
               <p className="text-sm text-gray-600 mb-3">
                 Built by a team from:
               </p>
-              <div className="flex items-center gap-6">
-                <div className="text-gray-600 font-semibold text-sm">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-6">
+                <div className="text-gray-600 font-semibold text-xs sm:text-sm">
                   Fortune 500
                 </div>
-                <div className="text-gray-600 font-semibold text-sm">
+                <div className="text-gray-600 font-semibold text-xs sm:text-sm">
                   Big 4 Consulting
                 </div>
-                <div className="text-gray-600 font-semibold text-sm">
+                <div className="text-gray-600 font-semibold text-xs sm:text-sm">
                   Top Investment Banks
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function HeroSection() {
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl" />
 
             {/* Main Card - Deal Flow Visualization */}
-            <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-8 overflow-hidden">
+            <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-5 sm:p-8 overflow-hidden">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-2">

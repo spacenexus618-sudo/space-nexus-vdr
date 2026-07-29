@@ -68,7 +68,7 @@ export default function PEBuySideDiligencePage() {
                         <span className="text-gray-900">Buy-Side Diligence</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Private Equity Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Buy-Side Diligence Data Room for PE Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Buy-Side Diligence Data Room for PE Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for PE buy-side due diligence. Multi-fund coordination, IC packages, expert network integration, and engagement analytics for target evaluation.</p>
                 </div>
             </section>

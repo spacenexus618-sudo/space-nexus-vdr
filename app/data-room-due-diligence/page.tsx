@@ -407,7 +407,7 @@ export default function DataRoomDueDiligencePage() {
                                 </svg>
                                 Complete Guide · Updated June 2026
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Data Room{" "}
                                 <span className="text-[#2563eb]">Due Diligence</span>
                                 <br />Setup & Best Practices
@@ -416,7 +416,7 @@ export default function DataRoomDueDiligencePage() {
                                 How to set up, organize, and run a due diligence data room that closes deals faster — not one that creates more work. Covers folder structure, access permissions, Q&A workflow, buyer analytics, and the 8 best practices every sell-side team should follow.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="#setup" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#setup" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     6-Step Setup Guide
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                                 </a>

@@ -121,7 +121,7 @@ export default function AskForSummary() {
 
               <button
                 onClick={handleCopy}
-                className="mt-4 text-xs text-gray-600 hover:text-gray-700 transition-colors flex items-center gap-1.5"
+                className="mt-4 text-xs text-gray-600 hover:text-gray-700 transition-colors flex items-center gap-1.5 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
                 type="button"
               >
                 <svg

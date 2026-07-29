@@ -81,7 +81,7 @@ export default function DataRoomSetupWalkthroughPage() {
                         <span className="text-gray-600">·</span>
                         <span className="text-gray-600">Beginner</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Data Room Setup Walkthrough</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Data Room Setup Walkthrough</h1>
                     <p className="text-xl text-gray-600">Set up a new virtual data room from scratch. Folder structure, document upload, AI auto-indexing, and initial permissions configuration.</p>
                 </div>
             </section>

@@ -106,7 +106,7 @@ export default function LawFirmLitigationPage() {
                         <span className="text-gray-900">Litigation & E-Discovery</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Law Firm Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Litigation & E-Discovery for Law Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Litigation & E-Discovery for Law Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">
                         Secure document review, e-discovery production, and privilege protection for litigation teams. Rule 26 compliant, court-admissible audit trails, and redaction tools built for trial work.
                     </p>

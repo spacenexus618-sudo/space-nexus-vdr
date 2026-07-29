@@ -93,7 +93,7 @@ export default function GetStartedPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-200/20 text-blue-200 text-sm font-medium mb-6">
                 Free 14-Day Trial
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 Get Started with <br className="hidden sm:block" />
                 <span className="text-blue-200">SpaceNexus VDR</span>
               </h1>
