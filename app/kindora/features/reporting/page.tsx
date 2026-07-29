@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Reports — Financial & Program Analytics | Kindora",
+  title: "Reports — Financial & Program Analytics",
   description:
     "Kindora Reports provides a comprehensive overview of organizational performance combining financial data and program analytics. Monitor revenue, expenses, donations, and service outcomes for better decision-making.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/reporting",
   },
   openGraph: {
-    title: "Reports — Financial & Program Analytics | Kindora",
+    title: "Reports — Financial & Program Analytics",
     description:
       "View key financial metrics, analyze income vs expenses, track donation trends, monitor program outcomes, and export reports — all in one reporting module.",
     url: "https://spacenexus.net/kindora/features/reporting",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reports — Financial & Program Analytics | Kindora",
+    title: "Reports — Financial & Program Analytics",
     description:
       "Financial reports, program analytics, donation trends, and export tools — built for nonprofit transparency and decision-making.",
   },
@@ -164,12 +165,14 @@ export default function ReportsPage() {
                   app.kindora.com / reports
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/Reports/Reports%20(1).png"
                   alt="Kindora Reports — financial and program analytics overview"
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>
@@ -226,12 +229,13 @@ export default function ReportsPage() {
                 app.kindora.com / reports / financials
               </div>
             </div>
-            <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10">
-              <img
+            <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10 aspect-[16/9] relative">
+              <Image
                 src="/kindora/screenshots/Reports/Reports%20(2).png"
                 alt="Kindora Reports — financial analytics and visual charts"
-                className="w-full h-auto"
-                loading="lazy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
               />
             </div>
           </div>

@@ -5,7 +5,7 @@ import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title:
-    "Salesforce CRM for Nonprofits — A Better Alternative | Kindora",
+    "Salesforce CRM for Nonprofits — A Better Alternative",
   description:
     "Looking for Salesforce CRM for nonprofits? Get the same donor management, fundraising, and reporting features with Kindora — without Salesforce complexity, consultants, or enterprise pricing.",
   alternates: {

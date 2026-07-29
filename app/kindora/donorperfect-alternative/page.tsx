@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "DonorPerfect Alternative | Better Nonprofit Software | Kindora",
+  title: "DonorPerfect Alternative | Better Nonprofit Software",
   description:
     "Looking for a DonorPerfect alternative? Kindora offers everything DonorPerfect does for donor management — plus grant tracking, volunteer management, programme tracking, and more. Try it free.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donorperfect-alternative",
   },
   openGraph: {
-    title: "DonorPerfect Alternative — Kindora",
+    title: "DonorPerfect Alternative",
     description:
       "Everything DonorPerfect does for donors — plus grants, volunteers, programmes, and communications. The all-in-one alternative.",
     url: "https://spacenexus.net/kindora/donorperfect-alternative",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DonorPerfect Alternative — Kindora",
+    title: "DonorPerfect Alternative",
     description:
       "Everything DonorPerfect does for donors — plus grants, volunteers, programmes, and communications. Try Kindora free.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

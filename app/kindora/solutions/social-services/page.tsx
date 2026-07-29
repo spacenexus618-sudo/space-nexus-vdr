@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Social Services Case Management Software | Kindora",
+    title: "Social Services Case Management Software",
     description:
         "Kindora is the all-in-one social services management platform for nonprofits. Handle client intake, case management, service enrollment, and grant-compliant reporting in one place.",
     keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/solutions/social-services",
     },
     openGraph: {
-        title: "Social Services Case Management Software | Kindora",
+        title: "Social Services Case Management Software",
         description:
             "Manage clients, cases, services, and grants in one place. Kindora is built for social services organizations delivering community impact.",
         url: "https://spacenexus.net/kindora/solutions/social-services",

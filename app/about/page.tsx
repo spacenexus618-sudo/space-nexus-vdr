@@ -57,10 +57,12 @@ const breadcrumbSchema = {
         { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
         { "@type": "ListItem", position: 2, name: "About", item: "https://spacenexus.net/about" },
     ],
-};
+}; 
+
 
 export default function AboutPage() {
     return (
+        
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script
                 id="about-breadcrumb"
@@ -112,6 +114,7 @@ export default function AboutPage() {
                                 Built by dealmakers,{" "}
                                 <span className="text-[#2563eb]">for dealmakers</span>
                             </h1>
+                            
                             <p className="text-lg text-gray-600 mb-6">
                                 Space Nexus was founded by a team with deep roots in M&A advisory,
                                 private equity, and enterprise software. We&apos;ve been on both sides
@@ -183,7 +186,8 @@ export default function AboutPage() {
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
                         Our journey
-                    </h2>
+                    </h2> 
+                    
                     <div className="space-y-6">
                         {milestones.map((m, i) => (
                             <div key={i} className="flex gap-6 items-start">

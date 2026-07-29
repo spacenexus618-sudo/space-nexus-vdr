@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Volunteer Recruitment Software | Find & Attract Volunteers | Kindora",
+  title: "Volunteer Recruitment Software | Find & Attract Volunteers",
   description:
     "Kindora volunteer recruitment software helps nonprofits attract, screen, and onboard volunteers with customizable sign-up forms, automated workflows, and engagement tracking.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/volunteer-recruitment-software",
   },
   openGraph: {
-    title: "Volunteer Recruitment Software — Kindora",
+    title: "Volunteer Recruitment Software",
     description: "Attract, screen, and onboard volunteers with Kindora recruitment software — sign-up forms, automated workflows, and tracking.",
     url: "https://spacenexus.net/kindora/volunteer-recruitment-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volunteer Recruitment Software — Kindora",
+    title: "Volunteer Recruitment Software",
     description: "Attract, screen, and onboard volunteers with sign-up forms and automated workflows.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -251,7 +251,7 @@ export default function VolunteerRecruitmentSoftwarePage() {
                         <div className="w-2 h-2 rounded-full bg-sky-400" />
                         <div>
                           <span className="text-sm font-semibold text-gray-900">{a.name}</span>
-                          <span className="text-xs text-gray-400 ml-2">{a.role}</span>
+                          <span className="text-xs text-gray-500 ml-2">{a.role}</span>
                         </div>
                       </div>
                       <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${

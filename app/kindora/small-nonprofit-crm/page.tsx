@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Small Nonprofit CRM | Affordable CRM for Small Nonprofits | Kindora",
+  title: "Small Nonprofit CRM | Affordable CRM for Small Nonprofits",
   description:
     "Kindora small nonprofit CRM is an affordable, easy-to-use platform designed for small teams. Manage donors, track donations, send emails, and grow your impact without the complexity.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/small-nonprofit-crm",
   },
   openGraph: {
-    title: "Small Nonprofit CRM — Kindora",
+    title: "Small Nonprofit CRM",
     description: "Affordable, easy-to-use CRM designed for small nonprofit teams. Manage donors and grow your impact.",
     url: "https://spacenexus.net/kindora/small-nonprofit-crm",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Small Nonprofit CRM — Kindora",
+    title: "Small Nonprofit CRM",
     description: "Affordable CRM for small nonprofits — manage donors, track donations, and grow your impact.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -338,15 +338,16 @@ export default function SmallNonprofitCrmPage() {
                 </div>
               </div>
 
-              <div className="relative bg-[#f0f4ff]">
+              <div className="relative bg-[#f0f4ff] aspect-video">
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="w-full h-auto object-cover block"
+                  className="absolute inset-0 w-full h-full object-cover"
                 >
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />
               </div>

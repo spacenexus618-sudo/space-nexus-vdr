@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Campaign Management Software | Fundraising Campaigns | Kindora",
+  title: "Campaign Management Software | Fundraising Campaigns",
   description:
     "Kindora campaign management software helps nonprofits plan, launch, track, and optimize fundraising campaigns across channels — with goal tracking, donor segmentation, and real-time analytics.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/campaign-management-software",
   },
   openGraph: {
-    title: "Campaign Management Software — Kindora",
+    title: "Campaign Management Software",
     description: "Plan, launch, and optimize fundraising campaigns with Kindora campaign management software.",
     url: "https://spacenexus.net/kindora/campaign-management-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Campaign Management Software — Kindora",
+    title: "Campaign Management Software",
     description: "Plan, launch, and optimize fundraising campaigns with goal tracking and real-time analytics.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -235,7 +235,7 @@ export default function CampaignManagementSoftwarePage() {
                   ].map((s) => (
                     <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100 text-center">
                       <p className="text-lg font-bold text-gray-900">{s.value}</p>
-                      <p className="text-xs text-gray-500">{s.label}</p>
+                       <p className="text-xs text-gray-600">{s.label}</p>
                     </div>
                   ))}
                 </div>
@@ -253,12 +253,12 @@ export default function CampaignManagementSoftwarePage() {
                           <div className="w-2 h-2 rounded-full bg-teal-400" />
                           <span className="text-sm font-semibold text-gray-900">{c.name}</span>
                         </div>
-                        <span className="text-xs text-gray-500">{c.progress}</span>
+                         <span className="text-xs text-gray-600">{c.progress}</span>
                       </div>
                       <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-teal-400 to-emerald-500 rounded-full" style={{ width: c.progress }} />
                       </div>
-                      <p className="text-xs text-gray-400 mt-1">{c.channel}</p>
+                       <p className="text-xs text-gray-600 mt-1">{c.channel}</p>
                     </div>
                   ))}
                 </div>
@@ -330,7 +330,7 @@ export default function CampaignManagementSoftwarePage() {
                   {item.step}
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>

@@ -176,6 +176,41 @@ const faqs = [
   },
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kindora - Nonprofit Management Software Pricing",
+  "description": "Affordable pricing plans for nonprofits: Free Starter plan, Professional plan, and Enterprise plan with donor CRM, grant tracking, case management, accounting, and volunteer management.",
+  "brand": { "@type": "Brand", "name": "Kindora" },
+  "offers": [
+    { "@type": "Offer", "name": "Starter", "price": "0", "priceCurrency": "USD", "description": "Free forever for up to 5 members" },
+    { "@type": "Offer", "name": "Professional", "price": "0", "priceCurrency": "USD", "description": "Custom pricing for growing nonprofits" },
+    { "@type": "Offer", "name": "Enterprise", "price": "0", "priceCurrency": "USD", "description": "Custom pricing for large organizations" },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What types of nonprofits is Kindora designed for?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora is designed for nonprofits of all sizes — community service organizations, charitable foundations, NGOs, social enterprises, and any mission-driven organization." } },
+    { "@type": "Question", "name": "Can I export data for board reports?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora supports comprehensive exports including Excel (XLSX), branded PDF reports, and JSON data backups. You can generate Statement of Activities reports and custom dashboards tailored for board presentations in one click." } },
+    { "@type": "Question", "name": "Does Kindora support grant compliance reporting?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Kindora includes full grant lifecycle tracking (prospect to close), cost allocation across grants and programs, and compliance-ready financial reporting to meet any grantor's requirements." } },
+    { "@type": "Question", "name": "Is there a free plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Starter plan is completely free, forever. No credit card required. It covers core modules for small nonprofits getting started." } },
+    { "@type": "Question", "name": "How does Kindora compare to Bloomerang or Salesforce?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora uniquely combines donor management, grant tracking, case management, nonprofit accounting, and team tools in one affordable platform." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
+    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
+    { "@type": "ListItem", "position": 3, "name": "Pricing", "item": "https://spacenexus.net/kindora/pricing" },
+  ],
+};
+
 const trustItems = [
   { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "No credit card required" },
   { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", text: "Set up in under 30 min" },
@@ -202,8 +237,9 @@ function XIcon() {
 
 // ─── FAQ Item ─────────────────────────────────────────────────────────────────
 
-function FaqItem({ question, answer }: { question: string; answer: string }) {
+function FaqItem({ question, answer, index }: { question: string; answer: string; index: number }) {
   const [open, setOpen] = useState(false);
+  const panelId = `faq-panel-${index}`;
   return (
     <div
       className={`rounded-xl border transition-all duration-300 overflow-hidden ${open ? "border-[#2563eb]/30 shadow-md shadow-blue-500/5" : "border-gray-200"
@@ -213,6 +249,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen((v) => !v)}
         className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-gray-50/80 transition-colors"
         aria-expanded={open}
+        aria-controls={panelId}
       >
         <span className="text-base font-semibold text-gray-900 leading-snug">{question}</span>
         <span
@@ -230,6 +267,9 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         </span>
       </button>
       <div
+        id={panelId}
+        role="region"
+        aria-hidden={!open}
         className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"}`}
       >
         <div className="px-6 pb-5 pt-0 bg-white">
@@ -237,7 +277,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
           {question.includes("Bloomerang") && (
             <Link
               href="/kindora/vs-competitors"
-              className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-[#2563eb] hover:underline"
+              className="inline-flex items-center gap-1 mt-3 py-2 text-sm font-semibold text-[#2563eb] hover:underline"
             >
               See full comparison →
             </Link>
@@ -250,9 +290,13 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const lastUpdated = "May 15, 2026";
 export default function PricingPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
@@ -276,10 +320,14 @@ export default function PricingPage() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Start free, scale as you grow. No hidden fees, no surprises — just
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+            Start Kindora free, scale as your nonprofit grows. No hidden fees, no surprises — just
             tools that help you do more mission.
           </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
+            According to NTEN&apos;s 2024 Nonprofit Technology Staffing &amp; Investments Report, 58% of nonprofits reported their technology budget increased year over year. Kindora&apos;s free Starter plan and flexible paid tiers ensure nonprofits of every size can access professional management tools without straining their budget.
+          </p>
+          <p className="text-xs text-gray-400 mb-6">Last updated: {lastUpdated}</p>
 
           {/* Trust strip */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
@@ -469,41 +517,38 @@ export default function PricingPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {featureCategories.map((cat) => (
-                    <>
-                      {/* Category row */}
-                      <tr key={cat.name} className="bg-gray-50 border-t border-gray-200">
-                        <td
-                          colSpan={4}
-                          className="py-2.5 px-6 text-xs font-bold text-gray-400 uppercase tracking-widest"
-                        >
-                          {cat.name}
-                        </td>
+                  {featureCategories.flatMap((cat, catIdx) => [
+                    <tr key={`cat-${catIdx}`} className="bg-gray-50 border-t border-gray-200">
+                      <td
+                        colSpan={4}
+                        className="py-2.5 px-6 text-xs font-bold text-gray-400 uppercase tracking-widest"
+                      >
+                        {cat.name}
+                      </td>
+                    </tr>,
+                    ...cat.rows.map((row, idx) => (
+                      <tr
+                        key={row.feature}
+                        className={`border-t border-gray-100 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/30"}`}
+                      >
+                        <td className="py-3.5 px-6 text-gray-700 font-medium">{row.feature}</td>
+                        {([row.starter, row.professional, row.enterprise] as (boolean | string)[]).map(
+                          (value, i) => (
+                            <td
+                              key={i}
+                              className={`text-center py-3.5 px-6 ${i === 1 ? "bg-blue-50/40" : ""}`}
+                            >
+                              {typeof value === "boolean" ? (
+                                value ? <CheckIcon /> : <XIcon />
+                              ) : (
+                                <span className="text-sm text-gray-600 font-medium">{value}</span>
+                              )}
+                            </td>
+                          ),
+                        )}
                       </tr>
-                      {cat.rows.map((row, idx) => (
-                        <tr
-                          key={row.feature}
-                          className={`border-t border-gray-100 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/30"}`}
-                        >
-                          <td className="py-3.5 px-6 text-gray-700 font-medium">{row.feature}</td>
-                          {([row.starter, row.professional, row.enterprise] as (boolean | string)[]).map(
-                            (value, i) => (
-                              <td
-                                key={i}
-                                className={`text-center py-3.5 px-6 ${i === 1 ? "bg-blue-50/40" : ""}`}
-                              >
-                                {typeof value === "boolean" ? (
-                                  value ? <CheckIcon /> : <XIcon />
-                                ) : (
-                                  <span className="text-sm text-gray-600 font-medium">{value}</span>
-                                )}
-                              </td>
-                            ),
-                          )}
-                        </tr>
-                      ))}
-                    </>
-                  ))}
+                    )),
+                  ])}
                 </tbody>
                 {/* Footer CTA row */}
                 <tfoot>
@@ -514,7 +559,7 @@ export default function PricingPage() {
                         href="https://cad.spaceaiapp.com/kindora"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex px-5 py-2 rounded-full text-sm font-semibold text-[#2563eb] border-2 border-[#2563eb]/30 hover:border-[#2563eb] transition-colors"
+                        className="inline-flex px-6 py-3 rounded-full text-sm font-semibold text-[#2563eb] border-2 border-[#2563eb]/30 hover:border-[#2563eb] transition-colors"
                       >
                         Start Free
                       </a>
@@ -522,7 +567,7 @@ export default function PricingPage() {
                     <td className="py-5 px-6 text-center bg-blue-50/40">
                       <Link
                         href="/kindora/contact"
-                        className="inline-flex px-5 py-2 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] shadow-md shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow"
+                        className="inline-flex px-6 py-3 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] shadow-md shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow"
                       >
                         Contact Sales
                       </Link>
@@ -530,7 +575,7 @@ export default function PricingPage() {
                     <td className="py-5 px-6 text-center">
                       <Link
                         href="/kindora/contact"
-                        className="inline-flex px-5 py-2 rounded-full text-sm font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors"
+                        className="inline-flex px-6 py-3 rounded-full text-sm font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors"
                       >
                         Contact Sales
                       </Link>
@@ -543,7 +588,7 @@ export default function PricingPage() {
 
           <p className="text-center text-sm text-gray-500 mt-6">
             Compare Kindora to competitors →{" "}
-            <Link href="/kindora/vs-competitors" className="text-[#2563eb] font-semibold hover:underline">
+            <Link href="/kindora/vs-competitors" className="inline-block py-2 text-[#2563eb] font-semibold hover:underline">
               See full comparison
             </Link>
           </p>
@@ -564,8 +609,8 @@ export default function PricingPage() {
           </div>
 
           <div className="space-y-3">
-            {faqs.map((faq) => (
-              <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
+            {faqs.map((faq, i) => (
+              <FaqItem key={faq.question} question={faq.question} answer={faq.answer} index={i} />
             ))}
           </div>
         </div>

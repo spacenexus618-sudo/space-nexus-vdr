@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Grant Management Software | Grant Tracking & Reporting | Kindora",
+  title: "Grant Management Software | Grant Tracking & Reporting",
   description:
     "Kindora grant management software helps nonprofits track applications, manage deadlines, automate reporting, and streamline the entire grant lifecycle from discovery to closeout.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/grant-management-software",
   },
   openGraph: {
-    title: "Grant Management Software — Kindora",
+    title: "Grant Management Software",
     description: "Streamline your grant lifecycle with Kindora — track applications, manage deadlines, and automate reporting.",
     url: "https://spacenexus.net/kindora/grant-management-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grant Management Software — Kindora",
+    title: "Grant Management Software",
     description: "Track applications, manage deadlines, and automate reporting with Kindora grant management software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -255,7 +255,7 @@ export default function GrantManagementSoftwarePage() {
                       </div>
                       <div className="text-right text-xs">
                         <span className="text-gray-500">{d.type}</span>
-                        <span className="text-gray-400 ml-2">{d.due}</span>
+                        <span className="text-gray-500 ml-2">{d.due}</span>
                       </div>
                     </div>
                   ))}

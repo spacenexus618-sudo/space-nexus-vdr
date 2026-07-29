@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Finance — Chart of Accounts & Budget Management | Kindora",
+  title: "Finance — Chart of Accounts & Budget Management",
   description:
     "Kindora Finance helps nonprofits manage their financial structure and budgeting processes. Organize a structured chart of accounts, track financial categories, and create budgets for programs and operations.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/financial-management",
   },
   openGraph: {
-    title: "Finance — Chart of Accounts & Budget Management | Kindora",
+    title: "Finance — Chart of Accounts & Budget Management",
     description:
       "Manage a structured chart of accounts, create and monitor budgets, and track financial allocations — all built for nonprofit financial planning and accountability.",
     url: "https://spacenexus.net/kindora/features/financial-management",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Finance — Chart of Accounts & Budget Management | Kindora",
+    title: "Finance — Chart of Accounts & Budget Management",
     description:
       "Chart of accounts, budget tracking, and financial structure management built for nonprofits.",
   },
@@ -164,12 +165,14 @@ export default function FinancePage() {
                   app.kindora.com / finance
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/Finance/Finance%20(1).png"
                   alt="Kindora Finance — chart of accounts and budget management"
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>
@@ -226,12 +229,13 @@ export default function FinancePage() {
                 app.kindora.com / finance / budgets
               </div>
             </div>
-            <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10">
-              <img
+            <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-xl shadow-gray-900/10 aspect-[16/9] relative">
+              <Image
                 src="/kindora/screenshots/Finance/Finance%20(2).png"
                 alt="Kindora Finance — budget planning and tracking"
-                className="w-full h-auto"
-                loading="lazy"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
               />
             </div>
           </div>

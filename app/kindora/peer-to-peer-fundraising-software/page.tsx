@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Peer-to-Peer Fundraising Software | P2P Fundraising | Kindora",
+  title: "Peer-to-Peer Fundraising Software | P2P Fundraising",
   description:
     "Kindora peer-to-peer fundraising software helps nonprofits launch supporter-driven campaigns with personal fundraising pages, team fundraising, social sharing, and real-time leaderboards.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/peer-to-peer-fundraising-software",
   },
   openGraph: {
-    title: "Peer-to-Peer Fundraising Software — Kindora",
+    title: "Peer-to-Peer Fundraising Software",
     description: "Launch supporter-driven fundraising campaigns with personal pages, team fundraising, and social sharing.",
     url: "https://spacenexus.net/kindora/peer-to-peer-fundraising-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Peer-to-Peer Fundraising Software — Kindora",
+    title: "Peer-to-Peer Fundraising Software",
     description: "Launch supporter-driven campaigns with personal pages, teams, and social sharing tools.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

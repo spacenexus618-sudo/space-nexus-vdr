@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Volunteer Management Software | Volunteer Tracking System | Kindora",
+  title: "Volunteer Management Software | Volunteer Tracking System",
   description:
     "Kindora volunteer management software helps you track volunteers, schedule shifts, manage programmes, and maximise every hour — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/volunteer-management-software",
   },
   openGraph: {
-    title: "Volunteer Management Software — Kindora",
+    title: "Volunteer Management Software",
     description: "Track volunteers, schedule shifts, and manage programmes with Kindora volunteer management software.",
     url: "https://spacenexus.net/kindora/volunteer-management-software",
     siteName: "Kindora by Space Nexus",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volunteer Management Software — Kindora",
+    title: "Volunteer Management Software",
     description: "Track volunteers, schedule shifts, and manage programmes with Kindora volunteer management software.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },

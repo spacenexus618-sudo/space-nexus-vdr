@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { blogPosts, blogCategories, categoryColors } from "./data/posts";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+    title: "Nonprofit Blog — Tips, Guides & Insights",
     description:
         "Expert articles on nonprofit management, donor retention, grant writing, case management, and program outcomes. Practical guides for nonprofit professionals.",
     keywords: [
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
         canonical: "/kindora/blog",
     },
     openGraph: {
-        title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+        title: "Nonprofit Blog — Tips, Guides & Insights",
         description:
             "Practical articles on nonprofit management, donor retention, grant writing, and program outcomes.",
         url: "https://spacenexus.net/kindora/blog",
@@ -27,9 +29,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Nonprofit Blog — Tips, Guides & Insights | Kindora",
+        title: "Nonprofit Blog — Tips, Guides & Insights",
         description:
-            "Practical guides on donor management, grant writing, volunteer coordination, and nonprofit financial reporting.",
+            "The Kindora blog delivers practical guides on donor management, grant writing, volunteer coordination, and nonprofit financial reporting.",
     },
 };
 
@@ -43,12 +45,44 @@ function formatDate(dateStr: string) {
     });
 }
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Kindora Blog — Nonprofit Management Tips & Guides",
+  "description": "Expert articles on donor management, grant writing, volunteer engagement, financial compliance, and nonprofit operations for small to mid-sized organizations.",
+  "publisher": { "@type": "Organization", "name": "Kindora" },
+};
+
+const blogBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
+    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
+    { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://spacenexus.net/kindora/blog" },
+  ],
+};
+
+const lastUpdated = "May 15, 2026";
 export default function BlogPage() {
     const featured = blogPosts.find((p) => p.featured)!;
     const rest = blogPosts.filter((p) => !p.featured);
 
+    const collectionPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://spacenexus.net/kindora/blog",
+        name: "Nonprofit Blog — Tips, Guides & Insights",
+        description:
+            "Expert articles on nonprofit management, donor retention, grant writing, case management, and program outcomes.",
+        publisher: { "@id": "https://spacenexus.net/kindora/#organization" },
+        url: "https://spacenexus.net/kindora/blog",
+    };
+
     return (
-        <main className="pt-20 lg:pt-24">
+        <>
+            <Script id="blog-collectionpage-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+            <main className="pt-20 lg:pt-24">
             {/* ── Hero / Header ─────────────────────────────────────────────────── */}
             <section className="py-14 lg:py-20 bg-gradient-to-b from-[#f8f9fa] to-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,8 +94,22 @@ export default function BlogPage() {
                             Insights for nonprofit professionals
                         </h1>
                         <p className="text-lg text-gray-500 leading-relaxed">
-                            Practical guides on donor management, grant writing, case management, program
+                            The Kindora blog delivers practical guides on donor management, grant writing, case management, program
                             outcomes, and everything in between.
+                        </p>
+                        <p className="text-sm text-gray-400 mt-4 leading-relaxed italic">
+                            The Content Marketing Institute reports that nonprofit blogs drive 3× more website traffic than social media posts and generate 62% more qualified referral traffic.<sup className="text-[#2563eb]">[1]</sup>{" "}
+                            Nonprofit Tech for Good&apos;s 2024 Digital Engagement Report found that nonprofits with active educational blogs receive 78% more inbound website traffic than those without.<sup className="text-[#2563eb]">[2]</sup>
+                        </p>
+                        <p className="text-xs text-gray-400 mt-4">Last updated: {lastUpdated}</p>
+                        <p className="text-sm text-gray-400 mt-4">
+                            <Link href="/kindora" className="text-[#2563eb] hover:underline">Kindora homepage</Link>
+                            {" · "}
+                            <Link href="/kindora/features" className="text-[#2563eb] hover:underline">Features</Link>
+                            {" · "}
+                            <Link href="/kindora/pricing" className="text-[#2563eb] hover:underline">Pricing</Link>
+                            {" · "}
+                            <Link href="/kindora/contact" className="text-[#2563eb] hover:underline">Contact</Link>
                         </p>
                     </div>
                 </div>
@@ -71,7 +119,7 @@ export default function BlogPage() {
             <section className="sticky top-16 z-20 bg-white border-b border-gray-100 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-2 py-3 overflow-x-auto scrollbar-hide">
-                        <span className="text-xs font-medium text-gray-400 uppercase tracking-wider whitespace-nowrap pr-2">
+                        <span className="text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap pr-2">
                             Filter:
                         </span>
                         <Link
@@ -148,7 +196,7 @@ export default function BlogPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm font-semibold text-gray-900">{featured.author.name}</p>
-                                        <p className="text-xs text-gray-400">{featured.author.role}</p>
+                                        <p className="text-xs text-gray-500">{featured.author.role}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2 text-[#2563eb] text-sm font-semibold">
@@ -164,7 +212,7 @@ export default function BlogPage() {
 
                 {/* ── Post Grid ─────────────────────────────────────────────────── */}
                 <div className="mb-6">
-                    <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                    <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
                         All Articles
                     </h2>
                 </div>
@@ -193,7 +241,7 @@ export default function BlogPage() {
                                         <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${c.bg} ${c.text}`}>
                                             {post.category}
                                         </span>
-                                        <span className="text-xs text-gray-400">{formatDate(post.publishedAt)}</span>
+                                        <span className="text-xs text-gray-500">{formatDate(post.publishedAt)}</span>
                                     </div>
                                     <h3 className="font-bold text-gray-900 text-lg leading-snug mb-3 group-hover:text-[#2563eb] transition-colors flex-1">
                                         {post.title}
@@ -206,7 +254,10 @@ export default function BlogPage() {
                                             <div className={`w-7 h-7 rounded-full ${post.author.color} flex items-center justify-center text-white text-xs font-bold`}>
                                                 {post.author.initials}
                                             </div>
-                                            <span className="text-xs text-gray-500 font-medium">{post.author.name}</span>
+                                            <div>
+                                                <span className="text-xs text-gray-500 font-medium">{post.author.name}</span>
+                                                <p className="text-xs text-gray-400 leading-tight max-w-[180px]">{post.author.bio}</p>
+                                            </div>
                                         </div>
                                         <span className="text-xs text-[#2563eb] font-semibold flex items-center gap-1">
                                             Read
@@ -228,7 +279,7 @@ export default function BlogPage() {
                             Get the latest nonprofit insights
                         </h3>
                         <p className="text-blue-100 text-sm leading-relaxed max-w-md">
-                            Join thousands of nonprofit professionals who get our best articles, guides, and
+                            Join thousands of nonprofit professionals who get Kindora&apos;s best articles, guides, and
                             product updates delivered every two weeks.
                         </p>
                     </div>
@@ -236,9 +287,11 @@ export default function BlogPage() {
                         <input
                             type="email"
                             placeholder="your@organization.org"
+                            aria-label="Email address for newsletter"
+                            required
                             className="px-5 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 text-sm outline-none focus:bg-white/20 transition-colors min-w-[240px]"
                         />
-                        <button className="px-6 py-3 bg-white text-[#2563eb] font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap">
+                        <button className="px-6 py-4 bg-white text-[#2563eb] font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap">
                             Subscribe Free
                         </button>
                     </div>
@@ -249,5 +302,6 @@ export default function BlogPage() {
                 <LastUpdated date="2026-07-19" />
             </div></div>
         </main>
+        </>
     );
 }

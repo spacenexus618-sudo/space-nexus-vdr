@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donation Reporting Software | Track & Analyze Giving | Kindora",
+  title: "Donation Reporting Software | Track & Analyze Giving",
   description:
     "Kindora donation reporting software gives you real-time donation analytics, campaign performance reports, donor giving summaries, and tax receipt generation — all in one place.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donation-reporting-software",
   },
   openGraph: {
-    title: "Donation Reporting Software — Kindora",
+    title: "Donation Reporting Software",
     description:
       "Real-time donation analytics, campaign reports, donor giving summaries, and tax receipt generation with Kindora donation reporting software.",
     url: "https://spacenexus.net/kindora/donation-reporting-software",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donation Reporting Software — Kindora",
+    title: "Donation Reporting Software",
     description:
       "Real-time donation analytics, campaign reports, and donor giving summaries for nonprofits.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

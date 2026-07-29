@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Management Software for Nonprofits — Kindora",
+  title: "Donor Management Software for Nonprofits",
   description:
     "Manage donor profiles, track donations, monitor giving history, and build lasting donor relationships with Kindora's comprehensive donor management system.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/donor-management",
   },
   openGraph: {
-    title: "Donor Management Software for Nonprofits — Kindora",
+    title: "Donor Management Software for Nonprofits",
     description:
       "Kindora's donor management software helps nonprofits track donations, manage donor relationships, and grow recurring giving — all in one place.",
     url: "https://spacenexus.net/kindora/features/donor-management",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Management Software for Nonprofits — Kindora",
+    title: "Donor Management Software for Nonprofits",
     description:
       "Track donations, manage donor profiles, and grow recurring giving with Kindora's nonprofit donor management software.",
   },

@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Database Software | Nonprofit Data Management | Kindora",
+  title: "Nonprofit Database Software | Nonprofit Data Management",
   description:
     "Kindora nonprofit database software centralises donor, volunteer, grant, and programme data in one secure database — clean data, instant access, total control.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/nonprofit-database-software",
   },
   openGraph: {
-    title: "Nonprofit Database Software — Kindora",
+    title: "Nonprofit Database Software",
     description:
       "Centralise donor, volunteer, grant, and programme data in one secure database.",
     url: "https://spacenexus.net/kindora/nonprofit-database-software",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nonprofit Database Software — Kindora",
+    title: "Nonprofit Database Software",
     description:
       "Centralise donor, volunteer, grant, and programme data in one secure database.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

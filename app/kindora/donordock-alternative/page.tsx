@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "DonorDock Alternative | Better Donor & Nonprofit Management | Kindora",
+  title: "DonorDock Alternative | Better Donor & Nonprofit Management",
   description:
     "Looking for a DonorDock alternative? Kindora offers everything DonorDock does for donor management — plus grant tracking, case management, nonprofit accounting, and more. Try it free.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donordock-alternative",
   },
   openGraph: {
-    title: "DonorDock Alternative — Kindora",
+    title: "DonorDock Alternative",
     description:
       "Kindora offers everything DonorDock does for donor management — plus grant tracking, case management, and nonprofit accounting. The all-in-one alternative.",
     url: "https://spacenexus.net/kindora/donordock-alternative",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DonorDock Alternative — Kindora",
+    title: "DonorDock Alternative",
     description:
       "Everything DonorDock does for donors — plus grants, case management, and nonprofit accounting. Try Kindora free.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

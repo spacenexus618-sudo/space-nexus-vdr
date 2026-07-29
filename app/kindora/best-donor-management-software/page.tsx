@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Best Donor Management Software | Top Rated Donor Software | Kindora",
+  title: "Best Donor Management Software | Top Rated Donor Software",
   description:
     "Kindora is the best donor management software for nonprofits. Top-rated donor tracking, fundraising automation, reporting, and engagement tools — all in one affordable platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-donor-management-software",
   },
   openGraph: {
-    title: "Best Donor Management Software — Kindora",
+    title: "Best Donor Management Software",
     description: "Top-rated donor management software with fundraising automation, reporting, and engagement tools. Trusted by nonprofits.",
     url: "https://spacenexus.net/kindora/best-donor-management-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Donor Management Software — Kindora",
+    title: "Best Donor Management Software",
     description: "Top-rated donor management software for nonprofits. Track donors, automate fundraising, and grow retention.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
@@ -259,7 +259,7 @@ export default function BestDonorManagementSoftwarePage() {
                   ].map((s) => (
                     <div key={s.label} className="p-3 rounded-xl bg-gray-50 border border-gray-100">
                       <p className="text-lg font-bold text-gray-900">{s.value}</p>
-                      <p className="text-xs text-gray-500">{s.label}</p>
+                       <p className="text-xs text-gray-600">{s.label}</p>
                     </div>
                   ))}
                 </div>
@@ -331,15 +331,16 @@ export default function BestDonorManagementSoftwarePage() {
                     <span className="truncate">cad.spaceaiapp.com/kindora</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-1.5 text-[10px] text-gray-400 hidden sm:flex">
+                <div className="flex items-center gap-1.5 text-[10px] text-gray-600 hidden sm:flex">
                   <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
                   Secure
                 </div>
               </div>
 
-              <div className="relative bg-[#f0f4ff]">
-                <video autoPlay muted loop playsInline className="w-full h-auto object-cover block">
+              <div className="relative bg-[#f0f4ff] aspect-video">
+                <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
                   <source src="/videos/kindora-demo-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/60 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -436,7 +437,7 @@ export default function BestDonorManagementSoftwarePage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-gray-200">
-                  <th className="text-left px-6 py-4 text-gray-500 font-medium bg-gray-50 w-48">Feature</th>
+                  <th className="text-left px-6 py-4 text-gray-600 font-medium bg-gray-50 w-48">Feature</th>
                   <th className="px-6 py-4 bg-indigo-500 text-white font-bold text-center min-w-[130px]">
                     <div className="flex flex-col items-center gap-1">
                       <span className="text-xs font-semibold uppercase tracking-wider opacity-80">Best Choice</span>
@@ -488,7 +489,7 @@ export default function BestDonorManagementSoftwarePage() {
               <tfoot>
                 <tr className="bg-gray-50 border-t border-gray-200">
                   <td colSpan={5} className="px-6 py-3">
-                    <div className="flex items-center gap-6 text-xs text-gray-500">
+                    <div className="flex items-center gap-6 text-xs text-gray-600">
                       <span className="flex items-center gap-1.5">
                         <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-indigo-500 text-white">
                           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>

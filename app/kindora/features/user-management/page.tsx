@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Users — Access Control & System User Management | Kindora",
+  title: "Users — Access Control & System User Management",
   description:
     "Kindora Users allows organizations to manage system users and define access levels within the platform. Assign roles, control permissions, and ensure team members have appropriate access to different modules.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/user-management",
   },
   openGraph: {
-    title: "Users — Access Control & System User Management | Kindora",
+    title: "Users — Access Control & System User Management",
     description:
       "Create user accounts, assign role-based access levels, control module permissions, and manage active or inactive users — all from a centralized interface.",
     url: "https://spacenexus.net/kindora/features/user-management",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Users — Access Control & System User Management | Kindora",
+    title: "Users — Access Control & System User Management",
     description:
       "Role-based access control, user management, and secure module permissions for nonprofit platforms.",
   },
@@ -207,12 +208,14 @@ export default function UsersPage() {
                   app.kindora.com / users
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/Users/Screenshot%202026-03-17%20123550.png"
                   alt="Kindora Users — user management and access control interface"
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>

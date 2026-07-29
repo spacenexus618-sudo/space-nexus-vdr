@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { getPostBySlug, blogPosts } from "../data/posts";
 import BlogPostContent from "./BlogPostContent";
 import LastUpdated from "../../../components/LastUpdated";
@@ -17,13 +18,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!post) {
     return {
-      title: "Article Not Found | Kindora Blog",
+      title: "Article Not Found",
       description: "The article you are looking for could not be found.",
     };
   }
 
   return {
-    title: `${post.title} | Kindora Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
@@ -49,44 +50,40 @@ export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
-  const articleSchema = post
+  const blogPostingSchema = post
     ? {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
         datePublished: post.publishedAt,
         author: {
           "@type": "Person",
           name: post.author.name,
-          jobTitle: post.author.role,
         },
         publisher: {
           "@type": "Organization",
-          name: "SpaceNexus",
-          url: "https://spacenexus.net",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://spacenexus.net/logo.png",
-          },
+          "@id": "https://spacenexus.net/kindora/#organization",
+          name: "Kindora",
         },
         url: `https://spacenexus.net/kindora/blog/${slug}`,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://spacenexus.net/kindora/blog/${slug}`,
+        },
       }
     : null;
 
   return (
     <>
-      {articleSchema && (
-        <script
+      {blogPostingSchema && (
+        <Script
+          id={`blog-${slug}-jsonld`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
         />
       )}
       <BlogPostContent slug={slug} />
-      {/* Last Updated */}
-      <div className="py-6 text-center border-t border-gray-100 mt-8">
-        <LastUpdated date="2026-07-19" />
-      </div>
     </>
   );
 }

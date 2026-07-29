@@ -5,7 +5,7 @@ import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title:
-    "Salesforce Nonprofit Cloud Alternative | Affordable Nonprofit Software | Kindora",
+    "Salesforce Nonprofit Cloud Alternative | Affordable Nonprofit Software",
   description:
     "Looking for a Salesforce Nonprofit Cloud alternative? Kindora offers donor CRM, grant tracking, case management, accounting, and more — without the Salesforce complexity or cost. Try it free.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Salesforce Nonprofit Cloud Alternative — Kindora",
+      "Salesforce Nonprofit Cloud Alternative",
     description:
       "Everything Salesforce Nonprofit Cloud does for nonprofits — without the complexity, consultants, or enterprise pricing. The all-in-one alternative.",
     url: "https://spacenexus.net/kindora/salesforce-nonprofit-cloud-alternative",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Salesforce Nonprofit Cloud Alternative — Kindora",
+    title: "Salesforce Nonprofit Cloud Alternative",
     description:
       "Donor CRM, grants, case management, and accounting — without Salesforce complexity. Try Kindora free.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

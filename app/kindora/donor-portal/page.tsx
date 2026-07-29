@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Portal | Self-Service Donor Engagement | Kindora",
+  title: "Donor Portal | Self-Service Donor Engagement",
   description:
     "Kindora donor portal gives your supporters a personalized self-service experience — view giving history, download tax receipts, manage recurring donations, and track their impact.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-portal",
   },
   openGraph: {
-    title: "Donor Portal — Kindora",
+    title: "Donor Portal",
     description:
       "A personalized self-service portal for donors to view giving history, download receipts, manage recurring gifts, and track their impact.",
     url: "https://spacenexus.net/kindora/donor-portal",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Portal — Kindora",
+    title: "Donor Portal",
     description:
       "Personalized self-service portal for donors to manage giving, view history, and track impact.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

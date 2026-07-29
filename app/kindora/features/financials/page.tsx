@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Financials — Complete Nonprofit Financial Management | Kindora",
+  title: "Financials — Complete Nonprofit Financial Management",
   description:
     "Kindora Financials centralizes all financial operations: donor management, donation tracking, campaign fundraising, grant management, vendor records, expense tracking, and financial reporting in one unified platform.",
   keywords: [
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: "/kindora/features/financials",
   },
   openGraph: {
-    title: "Financials — Complete Nonprofit Financial Management | Kindora",
+    title: "Financials — Complete Nonprofit Financial Management",
     description:
       "Manage donors, donations, campaigns, grants, vendors, expenses, and financial reports — all in one unified financial platform built for nonprofits.",
     url: "https://spacenexus.net/kindora/features/financials",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Financials — Complete Nonprofit Financial Management | Kindora",
+    title: "Financials — Complete Nonprofit Financial Management",
     description:
       "Donors, donations, grants, campaigns, expenses, and reports — every financial operation for your nonprofit in one place.",
   },
@@ -242,12 +243,14 @@ export default function FinancialsPage() {
                   app.kindora.com / financials / donors
                 </div>
               </div>
-              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+              <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
+                <Image
                   src="/kindora/screenshots/Financials/Donors.png"
                   alt="Kindora Financials — donor management and financial overview"
-                  className="w-full h-auto"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
+                  priority
                 />
               </div>
             </div>
@@ -324,12 +327,13 @@ export default function FinancialsPage() {
                     app.kindora.com / financials
                   </div>
                 </div>
-                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg">
-                  <img
+                <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-lg aspect-[16/9] relative">
+                  <Image
                     src={screenshot.src}
                     alt={`Kindora Financials — ${screenshot.caption}`}
-                    className="w-full h-auto"
-                    loading="lazy"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />
                 </div>
                 <p className="text-xs text-gray-500 text-center mt-2">

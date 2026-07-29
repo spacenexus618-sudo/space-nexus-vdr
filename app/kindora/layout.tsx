@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
+import KindoraJsonLd from "./components/KindoraJsonLd";
 import KindoraNav from "./components/KindoraNav";
 
 export const metadata: Metadata = {
@@ -78,9 +79,18 @@ export default function KindoraLayout({
 }) {
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#2563eb] focus:text-white focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white"
+      >
+        Skip to main content
+      </a>
+      <KindoraJsonLd />
       <BreadcrumbSchema />
       <KindoraNav />
-      {children}
+      <div id="main-content">
+        {children}
+      </div>
     </>
   );
 }

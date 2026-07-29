@@ -217,7 +217,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
                                 <div>
                                     <p className="font-bold text-gray-900">{post.author.name}</p>
                                     <p className="text-sm text-gray-500 mb-1">{post.author.role} · Kindora</p>
-                                    <p className="text-xs text-gray-400">
+                                    <p className="text-xs text-gray-500">
                                         Writing about nonprofit technology, fundraising strategy, and organizational effectiveness.
                                     </p>
                                 </div>
@@ -259,7 +259,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
                             <div className="sticky top-24 space-y-6">
                                 {/* Table of Contents */}
                                 <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
                                         In this article
                                     </p>
                                     <nav className="space-y-1">
@@ -353,7 +353,7 @@ export default function BlogPostContent({ slug }: BlogPostContentProps) {
                                                     <div className={`w-6 h-6 rounded-full ${rp.author.color} flex items-center justify-center text-white text-xs font-bold`}>
                                                         {rp.author.initials}
                                                     </div>
-                                                    <span className="text-xs text-gray-400">{rp.author.name}</span>
+                                                    <span className="text-xs text-gray-500">{rp.author.name}</span>
                                                 </div>
                                             </div>
                                         </Link>

@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Program Management Software for Nonprofits | Kindora",
+  title: "Program Management Software for Nonprofits",
   description:
     "Program management software for nonprofits — track enrollment, manage program delivery, monitor outcomes, and report impact. Built for every type of nonprofit program.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/program-management-software",
   },
   openGraph: {
-    title: "Program Management Software — Kindora",
+    title: "Program Management Software",
     description:
       "Track enrollment, manage program delivery, monitor outcomes, and report impact — all from one unified platform.",
     url: "https://spacenexus.net/kindora/program-management-software",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Program Management Software — Kindora",
+    title: "Program Management Software",
     description:
       "Program management software for nonprofits. Track enrollment, manage delivery, and report outcomes.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],

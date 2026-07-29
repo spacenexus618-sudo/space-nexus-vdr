@@ -4,14 +4,14 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Donor Communication Software | Donor Communication Tools | Kindora",
+  title: "Donor Communication Software | Donor Communication Tools",
   description:
     "Kindora donor communication software helps you send personalised thank-yous, automate follow-ups, and build lasting donor relationships — all from one integrated platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/donor-communication-software",
   },
   openGraph: {
-    title: "Donor Communication Software — Kindora",
+    title: "Donor Communication Software",
     description: "Build stronger donor relationships with personalised communication, automated thank-yous, and engagement tracking.",
     url: "https://spacenexus.net/kindora/donor-communication-software",
     siteName: "Kindora by Space Nexus",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donor Communication Software — Kindora",
+    title: "Donor Communication Software",
     description: "Build stronger donor relationships with personalised communication, automated thank-yous, and engagement tracking.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
