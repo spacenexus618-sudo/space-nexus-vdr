@@ -369,7 +369,7 @@ function XIcon() {
 function Pill({ label, value, positive }: { label: string; value: string; positive: boolean }) {
     return (
         <div className="bg-white rounded-lg border border-gray-200 px-3 py-2">
-            <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">{label}</p>
+            <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider">{label}</p>
             <p className={`text-xs font-bold mt-0.5 ${positive ? "text-green-700" : "text-gray-700"}`}>
                 {value}
             </p>
@@ -408,7 +408,7 @@ function ProviderCard({ provider }: { provider: Provider }) {
                 </div>
 
                 <div className="bg-[#f8f9fa] rounded-xl border border-gray-100 p-4 mb-6">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Standout</p>
+                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Standout</p>
                     <p className="text-sm text-gray-800 leading-relaxed">{provider.standout}</p>
                 </div>
 
@@ -476,7 +476,7 @@ export default function BestDataRoomForStartupsPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Best Data Room for Startups</span>
@@ -487,14 +487,14 @@ export default function BestDataRoomForStartupsPage() {
                                 </svg>
                                 Independent Ranking · Updated June 2026
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 7 Best Data Rooms for{" "}
                                 <span className="text-[#2563eb]">Startups</span> in 2026
                             </h1>
                             <p className="text-xl text-gray-600 mb-4 leading-relaxed">
                                 We ranked 2026&apos;s top virtual data rooms for startup fundraising on pricing, AI features, NDA controls, setup speed, and founder experience. Here&apos;s who made the list — and which one founders actually pick.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 12-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Pricing verified monthly
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -504,7 +504,7 @@ export default function BestDataRoomForStartupsPage() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </Link>
-                                <a href="#ranking" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#ranking" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Jump to Full Ranking
                                 </a>
                             </div>
@@ -554,7 +554,7 @@ export default function BestDataRoomForStartupsPage() {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">The Full Ranking</p>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                                 Best data rooms for startups, ranked
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -609,7 +609,7 @@ export default function BestDataRoomForStartupsPage() {
                                 </table>
                             </div>
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">
+                        <p className="text-xs text-gray-600 mt-3 text-center">
                             Comparison based on publicly available information as of June 2026. Always confirm current details with the vendor.
                         </p>
                     </div>
@@ -724,7 +724,7 @@ export default function BestDataRoomForStartupsPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / analytics</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                     <img
@@ -805,7 +805,7 @@ export default function BestDataRoomForStartupsPage() {
                                 See Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular per-VC access control · No credit card required</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular per-VC access control · No credit card required</p>
                     </div>
                 </section>
                         {/* Related VDR Resources */}

@@ -511,7 +511,7 @@ export default function VDRComparisonPage() {
             <Script id="vdr-comparison-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
             <main className="pt-20 lg:pt-24">
-                <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+                <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                     <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                     <span className="text-gray-600">Data Room Comparison</span>
@@ -526,7 +526,7 @@ export default function VDRComparisonPage() {
                                 </svg>
                                 Side-by-Side Comparison
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Data Room Comparison{" "}
                                 <span className="text-[#2563eb]">2026</span>
                             </h1>
@@ -732,7 +732,7 @@ export default function VDRComparisonPage() {
                 {/* CTA Section */}
                 <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-3xl mx-auto px-4 text-center">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to choose your VDR?</h2>
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">Ready to choose your VDR?</h2>
                         <p className="text-gray-600 mb-8 text-lg">
                             See the top-rated VDR provider in action. Request a personalized demo and compare features directly.
                         </p>
@@ -750,7 +750,7 @@ export default function VDRComparisonPage() {
                                 See Pricing →
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · Compare live · SOC 2 Type II certified</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · Compare live · SOC 2 Type II certified</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

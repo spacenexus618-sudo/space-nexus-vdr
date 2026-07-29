@@ -249,10 +249,10 @@ export default function StartupDataRoomPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                <span className="text-gray-500">Solutions</span>
+                                <span className="text-gray-600">Solutions</span>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Startup Data Room</span>
                             </nav>
@@ -262,7 +262,7 @@ export default function StartupDataRoomPage() {
                                 </svg>
                                 For Startups &amp; Founders
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 The Data Room Built for{" "}
                                 <span className="text-[#2563eb]">Founders Raising Capital</span>
                             </h1>
@@ -280,7 +280,7 @@ export default function StartupDataRoomPage() {
                                     See Pricing
                                 </Link>
                             </div>
-                            <p className="text-xs text-gray-400 mt-6">Transparent monthly pricing · No per-page fees · Setup in under 24 hours</p>
+                            <p className="text-xs text-gray-600 mt-6">Transparent monthly pricing · No per-page fees · Setup in under 24 hours</p>
                         </div>
                     </div>
                 </section>
@@ -390,7 +390,7 @@ export default function StartupDataRoomPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / analytics</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                     <img
@@ -448,19 +448,19 @@ export default function StartupDataRoomPage() {
                         </div>
                         <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
                             <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
-                                <div className="px-5 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Feature</div>
+                                <div className="px-5 py-4 text-xs font-semibold text-gray-600 uppercase tracking-wider">Feature</div>
                                 <div className="px-5 py-4 text-sm font-bold text-[#2563eb] text-center border-l border-gray-200">SpaceNexus</div>
-                                <div className="px-5 py-4 text-sm font-bold text-gray-500 text-center border-l border-gray-200">Legacy Enterprise VDR</div>
+                                <div className="px-5 py-4 text-sm font-bold text-gray-600 text-center border-l border-gray-200">Legacy Enterprise VDR</div>
                             </div>
                             {comparisonRows.map((row, i) => (
                                 <div key={row.feature} className={`grid grid-cols-3 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"} ${i < comparisonRows.length - 1 ? "border-b border-gray-100" : ""}`}>
                                     <div className="px-5 py-4 text-sm text-gray-700 font-medium">{row.feature}</div>
                                     <div className="px-5 py-4 text-sm text-gray-900 text-center border-l border-gray-100 font-medium">{row.spacenexus}</div>
-                                    <div className="px-5 py-4 text-sm text-gray-500 text-center border-l border-gray-100">{row.enterprise}</div>
+                                    <div className="px-5 py-4 text-sm text-gray-600 text-center border-l border-gray-100">{row.enterprise}</div>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">
+                        <p className="text-xs text-gray-600 mt-3 text-center">
                             Comparison based on publicly available information for Datasite, Intralinks, and similar legacy providers.
                         </p>
                     </div>
@@ -485,7 +485,7 @@ export default function StartupDataRoomPage() {
                                     { label: "Contract", value: "Monthly" },
                                 ].map((stat) => (
                                     <div key={stat.label} className="bg-white rounded-xl border border-gray-200 p-5">
-                                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{stat.label}</p>
+                                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">{stat.label}</p>
                                         <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                                     </div>
                                 ))}
@@ -549,7 +549,7 @@ export default function StartupDataRoomPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / data-room</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / data-room</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                     <img
@@ -628,7 +628,7 @@ export default function StartupDataRoomPage() {
                                 Free Founder Prep Checklist
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular per-VC access control</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular per-VC access control</p>
                     </div>
                 </section>
                         {/* Related VDR Resources */}

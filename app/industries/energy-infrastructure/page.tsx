@@ -256,7 +256,7 @@ export default function EnergyInfrastructurePage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -276,7 +276,7 @@ export default function EnergyInfrastructurePage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-4">
                 Energy & Infrastructure
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Enterprise Data Rooms for Energy & Infrastructure
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -327,7 +327,7 @@ export default function EnergyInfrastructurePage() {
                     <h3 className="font-semibold text-gray-900">
                       Energy & Infrastructure
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Complex transaction support
                     </p>
                   </div>

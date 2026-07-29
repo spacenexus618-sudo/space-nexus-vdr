@@ -67,7 +67,7 @@ export default function DataRoomSetupWalkthroughPage() {
 
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link>
@@ -76,12 +76,12 @@ export default function DataRoomSetupWalkthroughPage() {
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">12 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Beginner</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">12 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Beginner</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Data Room Setup Walkthrough</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Data Room Setup Walkthrough</h1>
                     <p className="text-xl text-gray-600">Set up a new virtual data room from scratch. Folder structure, document upload, AI auto-indexing, and initial permissions configuration.</p>
                 </div>
             </section>
@@ -151,11 +151,11 @@ export default function DataRoomSetupWalkthroughPage() {
                     <div className="grid md:grid-cols-2 gap-4">
                         <Link href="/tutorials/managing-bidder-access" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Managing bidder access →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Configure tiered bidder permissions for sell-side processes.</p>
+                            <p className="text-xs text-gray-600 mt-2">Configure tiered bidder permissions for sell-side processes.</p>
                         </Link>
                         <Link href="/tutorials/structured-qa-workflow" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Structured Q&amp;A workflow →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Set up routing, SLAs, and pre-prepared FAQs.</p>
+                            <p className="text-xs text-gray-600 mt-2">Set up routing, SLAs, and pre-prepared FAQs.</p>
                         </Link>
                     </div>
                 </div>

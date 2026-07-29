@@ -183,7 +183,7 @@ export default function FinancialGlossaryPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/glossary" className="hover:text-[#2563eb] transition-colors">Glossary</Link>
@@ -191,13 +191,13 @@ export default function FinancialGlossaryPage() {
                         <span className="text-gray-900">Financial Glossary</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Reference</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Financial Glossary</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Financial Glossary</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mb-8">{allTerms.length}+ financial terms defined across {categories.length} categories. Covering valuation metrics, debt and lending, deal structures, accounting, investment analysis, and financial regulations.</p>
                     <div className="flex flex-wrap gap-2">
                         {categories.map(c => (
                             <a key={c.id} href={`#${c.id}`} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-[#2563eb] hover:text-[#2563eb] transition-colors">
                                 {c.title}
-                                <span className="text-xs text-gray-500">({c.terms.length})</span>
+                                <span className="text-xs text-gray-600">({c.terms.length})</span>
                             </a>
                         ))}
                     </div>
@@ -227,7 +227,7 @@ export default function FinancialGlossaryPage() {
                                         <div className="px-5 pb-5 -mt-2 text-sm text-gray-600 leading-relaxed whitespace-pre-line">{term.definition}</div>
                                         {term.relatedLinks && term.relatedLinks.length > 0 && (
                                             <div className="px-5 pb-5 pt-2 border-t border-gray-100">
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Related</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Related</p>
                                                 <div className="flex flex-wrap gap-2">
                                                     {term.relatedLinks.map((l, i) => (
                                                         <Link key={i} href={l.href} className="text-sm text-[#2563eb] hover:underline">{l.label} →</Link>
@@ -251,17 +251,17 @@ export default function FinancialGlossaryPage() {
                         <Link href="/glossary" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Glossary</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR & M&A Glossary →</h3>
-                            <p className="text-xs text-gray-500 mt-2">100+ VDR and M&A terms defined.</p>
+                            <p className="text-xs text-gray-600 mt-2">100+ VDR and M&A terms defined.</p>
                         </Link>
                         <Link href="/resources/npl-guide" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">NPL Due Diligence Guide →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Complete NPL portfolio analysis playbook.</p>
+                            <p className="text-xs text-gray-600 mt-2">Complete NPL portfolio analysis playbook.</p>
                         </Link>
                         <Link href="/checklists" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Due diligence checklists →</h3>
-                            <p className="text-xs text-gray-500 mt-2">M&A and Series A checklists with 200+ items.</p>
+                            <p className="text-xs text-gray-600 mt-2">M&A and Series A checklists with 200+ items.</p>
                         </Link>
                     </div>
                 </div>

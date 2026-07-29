@@ -48,19 +48,19 @@ export default function EngagementAnalyticsPage() {
             <Script id="tut-ea-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">Engagement Analytics</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">11 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Intermediate</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">11 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Intermediate</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Engagement Analytics for Sell-Side</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Engagement Analytics for Sell-Side</h1>
                     <p className="text-xl text-gray-600">Use engagement analytics to identify the most serious bidders. Read heatmaps, time-on-document metrics, and bidder comparison dashboards.</p>
                 </div>
             </section>

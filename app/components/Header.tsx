@@ -427,7 +427,7 @@ export default function Header() {
                 <span className="text-xl font-black tracking-tight text-[#2563eb] transition-colors duration-300 group-hover:text-[#1d4ed8]">
                   KINDORA
                 </span>
-                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
                   NGO OS
                 </span>
               </div>
@@ -466,7 +466,7 @@ export default function Header() {
               onMouseEnter={() => setProductsOpen(true)}
               onMouseLeave={() => setProductsOpen(false)}
             >
-              <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group">
+              <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                 Products
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${productsOpen ? "rotate-180" : ""}`}
@@ -484,9 +484,9 @@ export default function Header() {
               </button>
 
               {productsOpen && (
-                <div className="absolute top-full left-0 pt-3 w-[340px]">
+                <div className="absolute top-full left-0 pt-3 w-[calc(100vw-2rem)] sm:w-[340px] max-w-[340px]">
                   <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-4 animate-fade-in ring-1 ring-gray-100">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 mb-2">
+                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider px-3 mb-2">
                       Our Products
                     </p>
                     <Link
@@ -512,7 +512,7 @@ export default function Header() {
                         <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors">
                           Space Nexus VDR
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600">
                           Virtual Data Room for M&A & due diligence
                         </p>
                       </div>
@@ -542,7 +542,7 @@ export default function Header() {
                         <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors">
                           Kindora NGO OS
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600">
                           Complete operating system for nonprofits
                         </p>
                       </div>
@@ -560,7 +560,7 @@ export default function Header() {
                   onMouseEnter={() => setKindoraFeaturesOpen(true)}
                   onMouseLeave={() => setKindoraFeaturesOpen(false)}
                 >
-                  <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group">
+                  <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                     Features
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${kindoraFeaturesOpen ? "rotate-180" : ""}`}
@@ -578,7 +578,7 @@ export default function Header() {
                   </button>
 
                   {kindoraFeaturesOpen && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[600px]">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[calc(100vw-2rem)] sm:w-[600px] max-w-[600px]">
                       <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-6 animate-fade-in ring-1 ring-gray-100">
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-sm font-semibold text-gray-900">
@@ -618,7 +618,7 @@ export default function Header() {
                                 <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors">
                                   {feature.name}
                                 </p>
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-gray-600">
                                   {feature.description}
                                 </p>
                               </div>
@@ -664,7 +664,7 @@ export default function Header() {
                   onMouseEnter={() => setIndustriesOpen(true)}
                   onMouseLeave={() => setIndustriesOpen(false)}
                 >
-                  <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group">
+                  <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                     Industries
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${industriesOpen ? "rotate-180" : ""}`}
@@ -683,7 +683,7 @@ export default function Header() {
 
                   {/* Dropdown Menu */}
                   {industriesOpen && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[600px]">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[calc(100vw-2rem)] sm:w-[600px] max-w-[600px]">
                       <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-6 animate-fade-in ring-1 ring-gray-100">
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-sm font-semibold text-gray-900">
@@ -723,7 +723,7 @@ export default function Header() {
                                 <p className="text-sm font-medium text-gray-900 group-hover:text-[#2563eb] transition-colors">
                                   {industry.name}
                                 </p>
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-gray-600">
                                   {industry.description}
                                 </p>
                               </div>
@@ -764,68 +764,68 @@ export default function Header() {
                 onMouseEnter={() => setContactOpen(true)}
                 onMouseLeave={() => setContactOpen(false)}
               >
-                <button className="p-2.5 text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors" aria-label="Contact Us">
+                <button className="p-2.5 text-gray-600 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto" aria-label="Contact Us">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </button>
 
               {contactOpen && (
-                <div className="absolute top-full right-0 pt-3 w-[400px]">
+                <div className="absolute top-full right-0 pt-3 w-[calc(100vw-2rem)] sm:w-[400px] max-w-[400px]">
                   <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-5 animate-fade-in ring-1 ring-gray-100">
                     <div className="grid grid-cols-2 gap-2.5">
-                      <a href="tel:+16464215740" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+16464215740" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+1 646 421 5740</p>
-                          <p className="text-gray-500 text-[11px]">USA</p>
+                          <p className="text-gray-600 text-[11px]">USA</p>
                         </div>
                       </a>
-                      <a href="tel:+19793269493" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+19793269493" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/ca.png" alt="Canada" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+1 (979) 326-9493</p>
-                          <p className="text-gray-500 text-[11px]">Canada</p>
+                          <p className="text-gray-600 text-[11px]">Canada</p>
                         </div>
                       </a>
-                      <a href="tel:+971562567509" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+971562567509" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/ae.png" alt="UAE" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+971 56 256 7509</p>
-                          <p className="text-gray-500 text-[11px]">UAE</p>
+                          <p className="text-gray-600 text-[11px]">UAE</p>
                         </div>
                       </a>
-                      <a href="tel:+966562081999" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+966562081999" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+966 56 208 1999</p>
-                          <p className="text-gray-500 text-[11px]">Saudi Arabia</p>
+                          <p className="text-gray-600 text-[11px]">Saudi Arabia</p>
                         </div>
                       </a>
-                      <a href="tel:+96597243755" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+96597243755" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/kw.png" alt="Kuwait" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+965 9724 3755</p>
-                          <p className="text-gray-500 text-[11px]">Kuwait</p>
+                          <p className="text-gray-600 text-[11px]">Kuwait</p>
                         </div>
                       </a>
-                      <a href="tel:+6586111900" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+6586111900" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/sg.png" alt="Singapore" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+65 86 111 900</p>
-                          <p className="text-gray-500 text-[11px]">Singapore</p>
+                          <p className="text-gray-600 text-[11px]">Singapore</p>
                         </div>
                       </a>
-                      <a href="tel:+60106607357" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group">
+                      <a href="tel:+60106607357" className="flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-3 py-2.5 transition-colors group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         <img src="https://flagcdn.com/w40/my.png" alt="Malaysia" className="w-6 h-auto rounded-sm flex-shrink-0" loading="lazy" />
                         <div className="min-w-0">
                           <p className="text-gray-900 text-sm font-semibold group-hover:text-[#2563eb] transition-colors truncate">+60 10660 7357</p>
-                          <p className="text-gray-500 text-[11px]">Malaysia</p>
+                          <p className="text-gray-600 text-[11px]">Malaysia</p>
                         </div>
                       </a>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-200">
-                      <a href="tel:+16464215740" className="flex items-center justify-center gap-2 w-full py-2.5 text-sm font-medium text-[#2563eb] hover:bg-gray-50 rounded-xl transition-colors">
+                      <a href="tel:+16464215740" className="flex items-center justify-center gap-2 w-full py-2.5 text-sm font-medium text-[#2563eb] hover:bg-gray-50 rounded-xl transition-colors min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                         Call main office
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -843,14 +843,14 @@ export default function Header() {
                 onMouseEnter={() => setEcosystemOpen(true)}
                 onMouseLeave={() => setEcosystemOpen(false)}
               >
-                <button className="p-2.5 text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors" aria-label="Ecosystem">
+                <button className="p-2.5 text-gray-600 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-200 rounded-lg transition-colors min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto" aria-label="Ecosystem">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3" /><line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" /></svg>
                 </button>
 
                 {ecosystemOpen && (
-                  <div className="absolute top-full right-0 pt-3 w-[420px]">
+                  <div className="absolute top-full right-0 pt-3 w-[calc(100vw-2rem)] sm:w-[420px] max-w-[420px]">
                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-200 p-5 animate-fade-in ring-1 ring-gray-100">
-                      <p className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest px-1 mb-4">Space AI Ecosystem</p>
+                      <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-widest px-1 mb-4">Space AI Ecosystem</p>
                       <div className="grid grid-cols-2 gap-3">
                         {[
                           { name: "PMSpace", desc: "Construction Management", href: "https://pmspace.ai/", icon: (
@@ -885,12 +885,12 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                           >
-                            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 text-gray-500 group-hover:text-gray-700 group-hover:bg-gray-200 transition-colors">
+                            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 text-gray-600 group-hover:text-gray-700 group-hover:bg-gray-200 transition-colors">
                               {product.icon}
                             </div>
                             <div className="min-w-0">
                               <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors truncate">{product.name}</p>
-                              <p className="text-xs text-gray-500 truncate">{product.desc}</p>
+                              <p className="text-xs text-gray-600 truncate">{product.desc}</p>
                             </div>
                           </a>
                         ))}
@@ -905,7 +905,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100"
+            className="lg:hidden p-2 text-gray-600 hover:text-gray-700 rounded-lg hover:bg-gray-100 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
@@ -942,151 +942,79 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Slide-in Panel */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4 animate-fade-in bg-white">
-            <div className="space-y-1">
-              {/* Mobile Products Accordion */}
-              <div>
-                <button
-                  className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                  onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                >
-                  Products
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+          <>
+            {/* Backdrop */}
+            <div
+              className="lg:hidden fixed inset-0 bg-black/50 z-40 animate-fade-in"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            {/* Panel */}
+            <div className="lg:hidden fixed top-0 right-0 h-full w-[85vw] max-w-[400px] bg-white z-50 shadow-2xl animate-slide-in-right overflow-y-auto">
+              <div className="p-4">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-lg font-bold text-gray-900">Menu</span>
+                  <button
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg"
+                    aria-label="Close menu"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {mobileProductsOpen && (
-                  <div className="pl-4 space-y-1 mt-1">
-                    <Link
-                      href="/"
-                      className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${!isKindora ? "bg-blue-100 text-[#2563eb]" : "text-gray-700 hover:bg-gray-100"}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-sm font-medium">
-                        Space Nexus VDR
-                      </span>
-                    </Link>
-                    <Link
-                      href="/kindora"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${isKindora ? "bg-blue-100 text-[#2563eb]" : "text-gray-700 hover:bg-gray-100"}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-sm font-medium">
-                        Kindora NGO OS
-                      </span>
-                    </Link>
-                  </div>
-                )}
-              </div>
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
 
-              {isKindora ? (
-                <>
-                  {/* Kindora Mobile Features Accordion */}
+                <div className="space-y-1">
+                  {/* Mobile Products Accordion */}
                   <div>
-                <button
-                  className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                  onClick={() =>
-                    setMobileKindoraFeaturesOpen(!mobileKindoraFeaturesOpen)
-                  }
-                >
-                      Features
+                    <button
+                      className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
+                      onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                    >
+                      Products
                       <svg
-                        className={`w-4 h-4 transition-transform duration-200 ${mobileKindoraFeaturesOpen ? "rotate-180" : ""}`}
+                        className={`w-4 h-4 transition-transform duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    {mobileKindoraFeaturesOpen && (
+                    {mobileProductsOpen && (
                       <div className="pl-4 space-y-1 mt-1">
-                        {kindoraFeatures.map((feature) => (
-                          <Link
-                            key={feature.name}
-                            href={feature.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {feature.name}
-                          </Link>
-                        ))}
                         <Link
-                          href="/kindora/features"
-                          className="block px-4 py-2 text-sm font-medium text-[#2563eb] hover:bg-blue-100 rounded-lg transition-colors"
+                          href="/"
+                          className="flex items-center gap-3 px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-gray-100"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          View All Features →
+                          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center flex-shrink-0">
+                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                            </svg>
+                          </div>
+                          <span className="text-sm font-medium">Space Nexus VDR</span>
+                        </Link>
+                        <Link
+                          href="/kindora"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 px-4 py-2 rounded-lg transition-colors text-gray-700 hover:bg-gray-100"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
+                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                          </div>
+                          <span className="text-sm font-medium">Kindora NGO OS</span>
                         </Link>
                       </div>
                     )}
                   </div>
 
-                  {/* Kindora Mobile Links */}
-                  {kindoraNavLinks
-                    .filter((link) => link.name !== "Features")
-                    .map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                </>
-              ) : (
-                <>
                   {/* VDR Mobile Nav Links */}
                   {vdrNavLinks.map((link) => (
                     <Link
@@ -1101,12 +1029,10 @@ export default function Header() {
 
                   {/* Mobile Industries Accordion */}
                   <div>
-                <button
-                  className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                  onClick={() =>
-                    setMobileIndustriesOpen(!mobileIndustriesOpen)
-                  }
-                >
+                    <button
+                      className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
+                      onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                    >
                       Industries
                       <svg
                         className={`w-4 h-4 transition-transform duration-200 ${mobileIndustriesOpen ? "rotate-180" : ""}`}
@@ -1114,12 +1040,7 @@ export default function Header() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     {mobileIndustriesOpen && (
@@ -1144,19 +1065,19 @@ export default function Header() {
                       </div>
                     )}
                   </div>
-                </>
-              )}
 
-              <hr className="border-gray-200 my-4" />
-              <Link
-                href={isKindora ? "/kindora/demo" : "/demo"}
-                className="block mx-4 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full text-center transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Request a Demo
-              </Link>
+                  <hr className="border-gray-200 my-4" />
+                  <Link
+                    href="/demo"
+                    className="block mx-4 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full text-center transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Request a Demo
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
     </header>

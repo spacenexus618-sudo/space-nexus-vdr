@@ -401,10 +401,10 @@ export default function InvestorDataRoomPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                                <span className="text-gray-500">Solutions</span>
+                                <span className="text-gray-600">Solutions</span>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Investor Data Room</span>
                             </nav>
@@ -414,24 +414,24 @@ export default function InvestorDataRoomPage() {
                                 </svg>
                                 2026 Investor Data Room Guide
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Investor Data Room Software{" "}
                                 <span className="text-[#2563eb]">— The 2026 Guide</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Not all investor data rooms are built the same. This guide covers what an investor data room is, how to evaluate platforms, and which solutions lead the market in 2026 — across pricing, security, AI features, and investor analytics.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 Last updated: June 2026 &nbsp;·&nbsp; Covers: SpaceNexus, Datasite, Intralinks, iDeals, Firmex, Google Drive
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#platforms" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#platforms" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     See All Platforms
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Jump to Comparison
                                 </a>
                             </div>
@@ -486,16 +486,16 @@ export default function InvestorDataRoomPage() {
                                         )}
                                     </div>
                                     {p.founded !== "—" && (
-                                        <p className="text-xs text-gray-400 mb-4">Est. {p.founded} &nbsp;·&nbsp; {p.hq}</p>
+                                        <p className="text-xs text-gray-600 mb-4">Est. {p.founded} &nbsp;·&nbsp; {p.hq}</p>
                                     )}
-                                    <p className="text-sm text-gray-500 mb-4">{p.tagline}</p>
+                                    <p className="text-sm text-gray-600 mb-4">{p.tagline}</p>
                                     <div className="mb-3">
                                         <span className="text-2xl font-bold text-gray-900">{p.pricing}</span>
-                                        <span className="text-xs text-gray-500 ml-2">{p.pricingNote}</span>
+                                        <span className="text-xs text-gray-600 ml-2">{p.pricingNote}</span>
                                     </div>
-                                    <p className="text-xs font-medium text-gray-500 mb-3">Best for: {p.bestFor}</p>
+                                    <p className="text-xs font-medium text-gray-600 mb-3">Best for: {p.bestFor}</p>
                                     <div className="mb-3">
-                                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Certifications</p>
+                                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Certifications</p>
                                         <div className="flex flex-wrap gap-1.5">
                                             {p.certifications.map((cert) => (
                                                 <span key={cert} className="text-xs bg-green-50 text-green-700 border border-green-100 px-2 py-0.5 rounded-full font-medium">{cert}</span>
@@ -562,7 +562,7 @@ export default function InvestorDataRoomPage() {
                                         {platformNames.map((name, i) => (
                                             <th
                                                 key={name}
-                                                className={`text-center px-3 py-4 font-semibold border-b border-gray-200 min-w-[100px] ${i === 0 ? "text-[#2563eb] bg-blue-50/50" : "text-gray-500"}`}
+                                                className={`text-center px-3 py-4 font-semibold border-b border-gray-200 min-w-[100px] ${i === 0 ? "text-[#2563eb] bg-blue-50/50" : "text-gray-600"}`}
                                             >
                                                 {name}
                                             </th>
@@ -584,7 +584,7 @@ export default function InvestorDataRoomPage() {
                                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                                                         </span>
                                                     ) : (
-                                                        <span className="text-xs text-gray-500 font-medium">{val}</span>
+                                                        <span className="text-xs text-gray-600 font-medium">{val}</span>
                                                     )}
                                                 </td>
                                             ))}
@@ -593,7 +593,7 @@ export default function InvestorDataRoomPage() {
                                 </tbody>
                             </table>
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">
+                        <p className="text-xs text-gray-600 mt-3 text-center">
                             Based on publicly available information. Last updated June 2026.
                         </p>
                     </div>
@@ -714,7 +714,7 @@ export default function InvestorDataRoomPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / analytics</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                     <img
@@ -792,7 +792,7 @@ export default function InvestorDataRoomPage() {
                                 View Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     </div>
                 </section>
 

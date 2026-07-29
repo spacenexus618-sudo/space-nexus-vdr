@@ -226,7 +226,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             {/* Breadcrumb */}
             <div className="bg-white border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">
                             Home
                         </Link>
@@ -249,7 +249,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                     <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                         {post.title}
                     </h1>
-                    <p className="text-lg text-gray-500 mb-8">{post.description}</p>
+                    <p className="text-lg text-gray-600 mb-8">{post.description}</p>
                     <div className="flex items-center gap-4">
                         <div
                             className={`w-11 h-11 rounded-full bg-gradient-to-br ${post.author.color} flex items-center justify-center text-white text-sm font-bold shrink-0`}
@@ -264,7 +264,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                                     </a>
                                 ) : post.author.name}
                             </p>
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-gray-600">
                                 {post.author.role} ·{" "}
                                 {new Date(post.publishedAt).toLocaleDateString("en-US", {
                                     month: "long",
@@ -300,7 +300,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             {authorProfile && (
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
                     <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
-                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">About the Author</p>
+                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">About the Author</p>
                         <div className="flex flex-col sm:flex-row gap-5">
                             <div
                                 className={`w-16 h-16 rounded-full bg-gradient-to-br ${authorProfile.color} flex items-center justify-center text-white text-xl font-bold shrink-0`}
@@ -321,7 +321,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                                         LinkedIn →
                                     </a>
                                 </div>
-                                <p className="text-sm font-medium text-gray-500 mb-3">{authorProfile.role}, SpaceNexus</p>
+                                <p className="text-sm font-medium text-gray-600 mb-3">{authorProfile.role}, SpaceNexus</p>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{authorProfile.bio}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {authorProfile.credentials.map((cred, i) => (
@@ -375,7 +375,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                                     <h3 className="font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors text-sm leading-snug mb-3">
                                         {r.title}
                                     </h3>
-                                    <p className="text-xs text-gray-400 mt-auto">{r.readTime}</p>
+                                    <p className="text-xs text-gray-500 mt-auto">{r.readTime}</p>
                                 </Link>
                             ))}
                         </div>

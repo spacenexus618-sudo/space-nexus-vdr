@@ -126,7 +126,7 @@ export default function SocialMediaPlatformsPage() {
             </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-6">
             SpaceNexus Social Media
             <br />
             Platforms
@@ -167,7 +167,7 @@ export default function SocialMediaPlatformsPage() {
                 <span className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors">
                   Open profile
                 </span>
-                <span className="text-gray-400 group-hover:text-[#2563eb] transition-colors">
+                <span className="text-gray-600 group-hover:text-[#2563eb] transition-colors">
                   <ExternalIcon />
                 </span>
               </div>
@@ -211,7 +211,7 @@ export default function SocialMediaPlatformsPage() {
                 </div>
                 <p className="text-xs text-gray-600 line-clamp-2">{platform.description}</p>
               </div>
-              <span className="text-gray-400 group-hover:text-[#2563eb] transition-colors mt-1">
+              <span className="text-gray-600 group-hover:text-[#2563eb] transition-colors mt-1">
                 <ExternalIcon />
               </span>
             </a>

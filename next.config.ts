@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Disable source maps in production builds to prevent source code exposure
+  productionBrowserSourceMaps: false,
+
   // Enforce no trailing slash for consistent canonical URLs
   trailingSlash: false,
 

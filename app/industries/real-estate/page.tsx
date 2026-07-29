@@ -261,7 +261,7 @@ export default function RealEstatePage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -281,7 +281,7 @@ export default function RealEstatePage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
                 Real Estate
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Real Estate Data Room
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -333,7 +333,7 @@ export default function RealEstatePage() {
                     <h3 className="font-semibold text-gray-900">
                       Real Estate Transactions
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Complete asset management
                     </p>
                   </div>

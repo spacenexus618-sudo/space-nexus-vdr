@@ -109,9 +109,24 @@ body {
   }
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
   will-change: opacity, transform;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+  will-change: transform;
 }
 
 /* Defer rendering of off-screen content for faster LCP */
@@ -171,6 +186,7 @@ body {
 .card-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.15);
+  will-change: transform;
 }
 
 /* Focus states */
@@ -195,11 +211,6 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-
-/* Promote card hover to compositor layer to avoid paint on hover */
-.card-hover {
-  will-change: transform;
 }
 
 /* Contain layout reflow on isolated sections */
@@ -230,4 +241,23 @@ section {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* =============================================
+   iPhone Safe Area Classes
+   ============================================= */
+
+.safe-area-padding {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
 }

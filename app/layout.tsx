@@ -7,7 +7,7 @@ import AppFooter from "./components/AppFooter";
 import SystemStatus from "./components/SystemStatus";
 import JsonLd from "./components/JsonLd";
 import SiteNavigationSchema from "./components/SiteNavigationSchema";
-import WhatsAppButton from "./components/WhatsAppButton";
+import LazyWhatsAppButton from "./components/LazyWhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,6 +20,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -133,6 +134,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://spaceaiapp.com" />
+        <link rel="preconnect" href="https://spaceaiapp.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
 
@@ -145,12 +150,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased bg-[#f8f9fa] text-gray-900`}
       >
+        <a href="#main-content" className="sr-only focus:not-sr-only min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
+          Skip to content
+        </a>
         <Header />
         <main id="main-content" role="main">
           {children}
         </main>
         <AppFooter />
-        <WhatsAppButton />
+        <LazyWhatsAppButton />
         <SystemStatus />
 
         {/* Google Analytics */}

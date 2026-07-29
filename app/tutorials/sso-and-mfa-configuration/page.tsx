@@ -46,19 +46,19 @@ export default function SSOMFAConfigPage() {
             <Script id="tut-sso-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">SSO and MFA</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">13 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Advanced</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">13 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Advanced</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">SSO and MFA Configuration</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">SSO and MFA Configuration</h1>
                     <p className="text-xl text-gray-600">Configure single sign-on with Okta, Azure AD, or Google Workspace. Enable phishing-resistant MFA for enterprise security.</p>
                 </div>
             </section>

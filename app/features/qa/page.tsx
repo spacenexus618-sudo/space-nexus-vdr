@@ -234,7 +234,7 @@ export default function QAPage() {
             <div>
               <Link
                 href="/features"
-                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -254,7 +254,7 @@ export default function QAPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-violet-100 text-violet-700 text-sm font-medium mb-4">
                 Due Diligence Communication
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Virtual Data Room Q&A Management
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -322,7 +322,7 @@ export default function QAPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / qa
                 </div>
               </div>
@@ -458,7 +458,7 @@ export default function QAPage() {
                   {link.title}
                 </p>
                 <svg
-                  className="w-4 h-4 text-gray-400 group-hover:text-violet-600 transition-colors shrink-0 ml-2"
+                  className="w-4 h-4 text-gray-600 group-hover:text-violet-600 transition-colors shrink-0 ml-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

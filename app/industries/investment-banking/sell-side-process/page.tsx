@@ -61,7 +61,7 @@ export default function IBSellSideProcessPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link>
@@ -71,7 +71,7 @@ export default function IBSellSideProcessPage() {
                         <span className="text-gray-900">Sell-Side Process</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Investment Banking Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Sell-Side M&amp;A Process Data Room</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Sell-Side M&amp;A Process Data Room</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">
                         Virtual data room purpose-built for sell-side M&amp;A. The 5-phase process from CIM to closing, with bidder management, Q&amp;A workflows, and engagement analytics throughout.
                     </p>
@@ -179,17 +179,17 @@ export default function IBSellSideProcessPage() {
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&amp;A virtual data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The platform built for the full sell-side process.</p>
+                            <p className="text-xs text-gray-600 mt-2">The platform built for the full sell-side process.</p>
                         </Link>
                         <Link href="/blog/ma-due-diligence-checklist-2026" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Seller 14-day prep checklist →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The countdown to launching your data room.</p>
+                            <p className="text-xs text-gray-600 mt-2">The countdown to launching your data room.</p>
                         </Link>
                         <Link href="/checklists/due-diligence-checklist" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&amp;A due diligence checklist →</h3>
-                            <p className="text-xs text-gray-500 mt-2">200+ items across every workstream.</p>
+                            <p className="text-xs text-gray-600 mt-2">200+ items across every workstream.</p>
                         </Link>
                     </div>
                 </div>

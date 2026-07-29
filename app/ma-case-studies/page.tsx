@@ -292,7 +292,7 @@ export default function MACaseStudiesPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">M&A Case Studies</span>
@@ -303,24 +303,24 @@ export default function MACaseStudiesPage() {
                                 </svg>
                                 6 Real Deal Stories
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 M&A Case Studies{" "}
                                 <span className="text-[#2563eb]">— Real Deal Room Wins</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Six real M&amp;A transactions, anonymized for confidentiality, showing how deal teams used SpaceNexus to compress timelines, enforce ethical walls, and close faster. From growth rounds to leveraged buyouts — across technology, healthcare, PE, and real estate.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 15-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Anonymized client data, real outcomes
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#case-studies" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#case-studies" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Read the Case Studies
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#patterns" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#patterns" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Common Patterns
                                 </a>
                             </div>
@@ -333,7 +333,7 @@ export default function MACaseStudiesPage() {
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">The Transactions</p>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Six M&amp;A transactions, six different challenges</h2>
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">Six M&amp;A transactions, six different challenges</h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
                                 Each case study has been anonymized for client confidentiality. Deal sizes, industry verticals, and outcome metrics reflect the actual transactions.
                             </p>
@@ -346,29 +346,29 @@ export default function MACaseStudiesPage() {
                                             <div className="text-xs font-bold text-[#2563eb] uppercase tracking-wider mb-1">Case Study {String(i + 1).padStart(2, "0")}</div>
                                             <h3 className="text-2xl font-bold text-gray-900 mb-2">{cs.industry}</h3>
                                             <p className="text-sm font-semibold text-gray-700 mb-1">{cs.dealSize}</p>
-                                            <p className="text-xs text-gray-500 mb-3">{cs.dealType}</p>
-                                            <div className="text-xs text-gray-500 space-y-1">
+                                            <p className="text-xs text-gray-600 mb-3">{cs.dealType}</p>
+                                            <div className="text-xs text-gray-600 space-y-1">
                                                 <p><span className="font-semibold">Duration:</span> {cs.duration}</p>
                                                 <p><span className="font-semibold">Parties:</span> {cs.parties}</p>
                                             </div>
                                         </div>
                                         <div className="flex-1 space-y-4">
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Scenario</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Scenario</p>
                                                 <p className="text-sm text-gray-700 leading-relaxed">{cs.scenario}</p>
                                             </div>
                                             {cs.challenge && (
                                                 <div>
-                                                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Challenge</p>
+                                                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Challenge</p>
                                                     <p className="text-sm text-gray-700 leading-relaxed">{cs.challenge}</p>
                                                 </div>
                                             )}
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Solution</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">Solution</p>
                                                 <p className="text-sm text-gray-700 leading-relaxed">{cs.solution}</p>
                                             </div>
                                             <div>
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Results</p>
+                                                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Results</p>
                                                 <ul className="space-y-1.5">
                                                     {cs.results.map((r) => (
                                                         <li key={r} className="flex items-start gap-2 text-sm text-gray-700">
@@ -420,7 +420,7 @@ export default function MACaseStudiesPage() {
                                     { value: "Zero", label: "Ethical wall breaches" },
                                 ].map((stat) => (
                                     <div key={stat.label}>
-                                        <div className="text-3xl lg:text-4xl font-black mb-2">{stat.value}</div>
+                                        <div className="text-2xl lg:text-3xl xl:text-4xl font-black mb-2">{stat.value}</div>
                                         <div className="text-xs text-blue-200 leading-snug">{stat.label}</div>
                                     </div>
                                 ))}
@@ -528,7 +528,7 @@ export default function MACaseStudiesPage() {
                                 See Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · SEC/FINRA ready · No credit card required · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · ISO 27001 · SEC/FINRA ready · No credit card required · Cancel anytime</p>
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">

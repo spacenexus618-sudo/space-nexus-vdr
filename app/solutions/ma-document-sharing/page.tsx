@@ -198,7 +198,7 @@ export default function MADocumentSharingPage() {
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
             M&A Document Sharing
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             Share Deal Documents Securely — From Teaser to Close
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
@@ -222,7 +222,7 @@ export default function MADocumentSharingPage() {
           </div>
 
           {/* Trust Strip */}
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-600 uppercase tracking-wider">
             <span>SOC 2 Type II</span>
             <span>ISO 27001</span>
             <span>AES-256</span>
@@ -285,9 +285,9 @@ export default function MADocumentSharingPage() {
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="text-left p-4 font-semibold text-gray-900">Feature</th>
                   <th className="text-center p-4 font-semibold text-[#2563eb]">SpaceNexus</th>
-                  <th className="text-center p-4 font-semibold text-gray-500">Email</th>
-                  <th className="text-center p-4 font-semibold text-gray-500">Dropbox</th>
-                  <th className="text-center p-4 font-semibold text-gray-500">SharePoint</th>
+                  <th className="text-center p-4 font-semibold text-gray-600">Email</th>
+                  <th className="text-center p-4 font-semibold text-gray-600">Dropbox</th>
+                  <th className="text-center p-4 font-semibold text-gray-600">SharePoint</th>
                 </tr>
               </thead>
               <tbody>

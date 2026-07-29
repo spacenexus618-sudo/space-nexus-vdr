@@ -97,7 +97,7 @@ export default function LawFirmMADiligencePage() {
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link>
@@ -107,7 +107,7 @@ export default function LawFirmMADiligencePage() {
                         <span className="text-gray-900">M&A Due Diligence</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Law Firm Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">M&A Due Diligence for Law Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">M&A Due Diligence for Law Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mb-8">
                         The virtual data room built for M&A counsel. Privilege-protected document sharing, ethical wall enforcement, court-admissible audit trails, and structured Q&A — used by Am Law 100 firms for buy-side and sell-side diligence.
                     </p>
@@ -231,17 +231,17 @@ export default function LawFirmMADiligencePage() {
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A virtual data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The complete M&A VDR platform for buy-side and sell-side workflows.</p>
+                            <p className="text-xs text-gray-600 mt-2">The complete M&A VDR platform for buy-side and sell-side workflows.</p>
                         </Link>
                         <Link href="/industries/law-firms" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Data rooms for law firms →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The full law firm data room solution overview.</p>
+                            <p className="text-xs text-gray-600 mt-2">The full law firm data room solution overview.</p>
                         </Link>
                         <Link href="/checklists/due-diligence-checklist" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklist</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&A due diligence checklist →</h3>
-                            <p className="text-xs text-gray-500 mt-2">200+ items across every workstream.</p>
+                            <p className="text-xs text-gray-600 mt-2">200+ items across every workstream.</p>
                         </Link>
                     </div>
                 </div>

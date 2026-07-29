@@ -190,7 +190,7 @@ function ChecklistCard({ checklist }: { checklist: typeof maChecklist }) {
                 </span>
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">{checklist.title}</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">{checklist.description}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500">
+                <div className="flex items-center gap-4 text-sm text-gray-600">
                     <span className="flex items-center gap-1.5">
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -229,7 +229,7 @@ function ChecklistCard({ checklist }: { checklist: typeof maChecklist }) {
 
             {/* CTA */}
             <div className="px-8 pb-8 pt-2 border-t border-gray-100 mt-2">
-                <p className="text-sm text-gray-500 mb-4">
+                <p className="text-sm text-gray-600 mb-4">
                     Execute this checklist securely inside Space Nexus — track progress, share documents, and manage due diligence Q&A in one platform.
                 </p>
                 <Link
@@ -263,7 +263,7 @@ export default function ChecklistsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">Checklists</span>
@@ -275,14 +275,14 @@ export default function ChecklistsPage() {
                         <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
                             Free Resources
                         </p>
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-5">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
                             Free Due Diligence{" "}
                             <span className="text-[#2563eb]">Checklists</span>
                         </h1>
                         <p className="text-lg text-gray-600 mb-8">
                             Comprehensive, field-tested checklists for M&amp;A due diligence and Series A fundraising. Use them as-is, or execute them directly inside Space Nexus for a fully tracked, auditable process.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
                             {[
                                 "✓ 40+ item M&A checklist",
                                 "✓ 25-item Series A checklist",

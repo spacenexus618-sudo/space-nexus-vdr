@@ -196,52 +196,52 @@ export default function Home() {
             SpaceNexus is the leading{" "}
             <strong>virtual data room software</strong>
             {" "}platform trusted by 500+ enterprises for secure document collaboration during high-stakes business transactions. Our advanced{" "}
-            <a href="/features/data-room" className="text-[#2563eb] hover:underline">
+            <a href="/features/data-room" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               virtual data room software
             </a>{" "}
             features AI-powered document processing, real-time buyer analytics, granular permission controls, and tamper-evident audit trails. Unlike legacy{" "}
-            <a href="/competitors/vdr-alternatives" className="text-[#2563eb] hover:underline">
+            <a href="/competitors/vdr-alternatives" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               virtual data room providers
             </a>
             , our software delivers{" "}
-            <a href="/features/security-compliance" className="text-[#2563eb] hover:underline">
+            <a href="/features/security-compliance" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               bank-grade AES-256 encryption
             </a>
             , SOC 2 Type II compliance, and transparent published pricing with no per-page fees.
           </p>
           <p className="text-gray-600 leading-relaxed mb-6">
             The SpaceNexus <strong>virtual data room software</strong> is purpose-built for deal teams across investment banking, private equity, law firms, and corporate development. Our{" "}
-            <a href="/features/data-room" className="text-[#2563eb] hover:underline">
+            <a href="/features/data-room" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               secure document sharing software
             </a>{" "}
             eliminates the friction of traditional VDR platforms — set up in under 24 hours, no installation required, accessible from any browser. Whether you need{" "}
-            <a href="/solutions/mergers-and-acquisitions-vdr" className="text-[#2563eb] hover:underline">
+            <a href="/solutions/mergers-and-acquisitions-vdr" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               M&amp;A data room software
             </a>
             ,{" "}
-            <a href="/solutions/series-a-fundraising-data-room" className="text-[#2563eb] hover:underline">
+            <a href="/solutions/series-a-fundraising-data-room" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               fundraising platform software
             </a>
             , or{" "}
-            <a href="/industries/law-firms" className="text-[#2563eb] hover:underline">
+            <a href="/industries/law-firms" className="text-[#2563eb] hover:underline min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               legal document management software
             </a>
             , SpaceNexus delivers enterprise-grade security, deal-specific workflows, and competitive advantages that close deals faster. Experience why leading law firms, investment banks, and PE firms choose SpaceNexus virtual data room software.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <a href="/virtual-data-room-providers" className="text-[#2563eb] hover:underline font-medium">
+            <a href="/virtual-data-room-providers" className="text-[#2563eb] hover:underline font-medium min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               Virtual Data Room Providers →
             </a>
-            <a href="/data-room-providers" className="text-[#2563eb] hover:underline font-medium">
+            <a href="/data-room-providers" className="text-[#2563eb] hover:underline font-medium min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               Data Room Providers →
             </a>
-            <a href="/competitors/vdr-alternatives" className="text-[#2563eb] hover:underline font-medium">
+            <a href="/competitors/vdr-alternatives" className="text-[#2563eb] hover:underline font-medium min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               VDR Comparison 2026 →
             </a>
-            <a href="/competitors/datasite-alternative" className="text-[#2563eb] hover:underline font-medium">
+            <a href="/competitors/datasite-alternative" className="text-[#2563eb] hover:underline font-medium min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               Datasite Alternative →
             </a>
-            <a href="/competitors/intralinks-alternative" className="text-[#2563eb] hover:underline font-medium">
+            <a href="/competitors/intralinks-alternative" className="text-[#2563eb] hover:underline font-medium min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
               Intralinks Alternative →
             </a>
           </div>

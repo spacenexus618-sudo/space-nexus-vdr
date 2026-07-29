@@ -31,14 +31,14 @@ export default function VCExitsSecondariesPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link><span>›</span>
                         <Link href="/industries/venture-capital" className="hover:text-[#2563eb] transition-colors">Venture Capital</Link><span>›</span>
                         <span className="text-gray-900">Exits &amp; Secondaries</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Venture Capital Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Exits &amp; Secondaries Data Room for VC Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Exits &amp; Secondaries Data Room for VC Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for VC exit preparation. IPO readiness, M&amp;A exits, secondary sales, tender offers, and GP-led continuation vehicles for venture-backed companies.</p>
                 </div>
             </section>
@@ -111,17 +111,17 @@ export default function VCExitsSecondariesPage() {
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">M&amp;A virtual data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">For portfolio company strategic exits.</p>
+                            <p className="text-xs text-gray-600 mt-2">For portfolio company strategic exits.</p>
                         </Link>
                         <Link href="/industries/venture-capital" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for venture capital →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The full VC VDR solution overview.</p>
+                            <p className="text-xs text-gray-600 mt-2">The full VC VDR solution overview.</p>
                         </Link>
                         <Link href="/industries/venture-capital/portfolio-support" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Practice</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Portfolio support →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Pre-exit value creation and monitoring.</p>
+                            <p className="text-xs text-gray-600 mt-2">Pre-exit value creation and monitoring.</p>
                         </Link>
                     </div>
                 </div>

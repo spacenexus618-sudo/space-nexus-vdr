@@ -337,7 +337,7 @@ export default function VdrProvidersPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">VDR Providers</span>
@@ -348,7 +348,7 @@ export default function VdrProvidersPage() {
                                 </svg>
                                 2026 VDR Provider Comparison
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 VDR Providers{" "}
                                 <span className="text-[#2563eb]">Compared for 2026</span>
                             </h1>
@@ -363,13 +363,13 @@ export default function VdrProvidersPage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#providers" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#providers" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Compare All Providers
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Compare Pricing
                                 </a>
                             </div>
@@ -391,14 +391,14 @@ export default function VdrProvidersPage() {
                                 <div key={p.name} className={`rounded-2xl border p-7 flex flex-col transition-all duration-300 ${p.highlight ? "bg-white border-[#2563eb] shadow-lg shadow-blue-500/10 ring-1 ring-[#2563eb]/20" : "bg-white border-gray-200 hover:shadow-md hover:border-gray-300"}`}>
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-2">
-                                            <span className="text-xs font-bold text-gray-400">#{p.rank}</span>
+                                            <span className="text-xs font-bold text-gray-600">#{p.rank}</span>
                                             <h3 className="text-lg font-bold text-gray-900">{p.name}</h3>
                                         </div>
                                         {p.badge && (
                                             <span className="text-xs font-semibold bg-[#2563eb] text-white px-2.5 py-1 rounded-full">{p.badge}</span>
                                         )}
                                     </div>
-                                    <p className="text-xs text-gray-500 italic mb-1">{p.tagline}</p>
+                                    <p className="text-xs text-gray-600 italic mb-1">{p.tagline}</p>
                                     <p className="text-xs font-semibold text-[#2563eb] mb-4">{p.verdict}</p>
 
                                     {/* Quick stats */}
@@ -410,7 +410,7 @@ export default function VdrProvidersPage() {
                                             { label: "AI Features", value: p.aiFeatures ? "Included" : "Limited / None" },
                                         ].map((stat) => (
                                             <div key={stat.label} className="bg-gray-50 rounded-lg px-3 py-2">
-                                                <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">{stat.label}</p>
+                                                <p className="text-[10px] text-gray-600 font-medium uppercase tracking-wide">{stat.label}</p>
                                                 <p className={`text-xs font-semibold ${stat.label === "AI Features" && !p.aiFeatures ? "text-red-500" : stat.label === "AI Features" && p.aiFeatures ? "text-green-700" : "text-gray-800"}`}>{stat.value}</p>
                                             </div>
                                         ))}
@@ -458,16 +458,17 @@ export default function VdrProvidersPage() {
                                 Pricing is where VDR providers differ most dramatically. Legacy platforms hide true costs behind per-page fees and mandatory add-ons.
                             </p>
                         </div>
-                        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+                        {/* Desktop Table */}
+                        <div className="hidden md:block overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
                             <table className="w-full text-sm min-w-[720px]">
                                 <thead>
                                     <tr className="bg-gray-900 text-white">
                                         <th className="text-left px-5 py-4 font-semibold text-gray-300 min-w-[160px]"></th>
                                         <th className="text-center px-4 py-4 font-bold text-[#60a5fa] border-l border-gray-700">SpaceNexus</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-gray-400 border-l border-gray-700 text-xs">Datasite</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-gray-400 border-l border-gray-700 text-xs">Intralinks</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-gray-400 border-l border-gray-700 text-xs">Firmex</th>
-                                        <th className="text-center px-4 py-4 font-semibold text-gray-400 border-l border-gray-700 text-xs">iDeals</th>
+                                        <th className="text-center px-4 py-4 font-semibold text-gray-600 border-l border-gray-700 text-xs">Datasite</th>
+                                        <th className="text-center px-4 py-4 font-semibold text-gray-600 border-l border-gray-700 text-xs">Intralinks</th>
+                                        <th className="text-center px-4 py-4 font-semibold text-gray-600 border-l border-gray-700 text-xs">Firmex</th>
+                                        <th className="text-center px-4 py-4 font-semibold text-gray-600 border-l border-gray-700 text-xs">iDeals</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -484,7 +485,37 @@ export default function VdrProvidersPage() {
                                 </tbody>
                             </table>
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">Based on publicly available information. Last updated June 2026.</p>
+                        {/* Mobile Card Layout */}
+                        <div className="md:hidden space-y-4">
+                            {pricingRows.map((row) => (
+                                <div key={row.label} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+                                    <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">{row.label}</h3>
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-blue-50/50">
+                                            <span className="text-xs font-medium text-[#2563eb]">SpaceNexus</span>
+                                            <span className="text-xs font-semibold text-green-700">{row.spacenexus}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Datasite</span>
+                                            <span className="text-xs text-red-500">{row.datasite}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Intralinks</span>
+                                            <span className="text-xs text-red-500">{row.intralinks}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Firmex</span>
+                                            <span className="text-xs text-gray-600">{row.firmex}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">iDeals</span>
+                                            <span className="text-xs text-gray-600">{row.ideals}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated June 2026.</p>
                     </div>
                 </section>
 
@@ -497,13 +528,14 @@ export default function VdrProvidersPage() {
                                 Side-by-side view of the features that matter most when choosing a VDR provider.
                             </p>
                         </div>
-                        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm bg-white">
+                        {/* Desktop Table */}
+                        <div className="hidden md:block overflow-x-auto rounded-2xl border border-gray-200 shadow-sm bg-white">
                             <table className="w-full text-sm min-w-[720px]">
                                 <thead>
                                     <tr className="bg-gray-50 border-b border-gray-200">
                                         <th className="text-left px-5 py-4 font-semibold text-gray-900 min-w-[185px]">Feature</th>
                                         {["SpaceNexus", "Datasite", "Intralinks", "Firmex", "iDeals", "Ansarada"].map((name, i) => (
-                                            <th key={name} className={`text-center px-3 py-4 font-semibold border-l border-gray-100 min-w-[90px] ${i === 0 ? "text-[#2563eb] bg-blue-50/50" : "text-gray-500"}`}>
+                                            <th key={name} className={`text-center px-3 py-4 font-semibold border-l border-gray-100 min-w-[90px] ${i === 0 ? "text-[#2563eb] bg-blue-50/50" : "text-gray-600"}`}>
                                                 {name}
                                             </th>
                                         ))}
@@ -524,7 +556,7 @@ export default function VdrProvidersPage() {
                                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                                                         </span>
                                                     ) : (
-                                                        <span className="text-xs text-gray-500 font-medium">{val}</span>
+                                                        <span className="text-xs text-gray-600 font-medium">{val}</span>
                                                     )}
                                                 </td>
                                             ))}
@@ -532,6 +564,36 @@ export default function VdrProvidersPage() {
                                     ))}
                                 </tbody>
                             </table>
+                        </div>
+                        {/* Mobile Card Layout */}
+                        <div className="md:hidden space-y-4">
+                            {featureComparison.map((row) => {
+                                const providerNames = ["SpaceNexus", "Datasite", "Intralinks", "Firmex", "iDeals", "Ansarada"];
+                                const values = [row.spacenexus, row.datasite, row.intralinks, row.firmex, row.ideals, row.ansarada];
+                                return (
+                                    <div key={row.feature} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+                                        <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">{row.feature}</h3>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            {values.map((val, ci) => (
+                                                <div key={ci} className={`flex items-center justify-between px-3 py-2 rounded-lg ${ci === 0 ? "bg-blue-50/50" : "bg-gray-50"}`}>
+                                                    <span className={`text-xs font-medium ${ci === 0 ? "text-[#2563eb]" : "text-gray-600"}`}>{providerNames[ci]}</span>
+                                                    {val === "✓" ? (
+                                                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-50 text-green-600">
+                                                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                                                        </span>
+                                                    ) : val === "✗" ? (
+                                                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-50 text-red-400">
+                                                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                                                        </span>
+                                                    ) : (
+                                                        <span className="text-xs text-gray-600 font-medium">{val}</span>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
@@ -548,7 +610,7 @@ export default function VdrProvidersPage() {
                         <div className="grid md:grid-cols-2 gap-5">
                             {quickPicks.map((pick) => (
                                 <div key={pick.scenario} className="bg-[#f8f9fa] rounded-2xl border border-gray-100 p-6 hover:border-[#2563eb]/20 hover:shadow-sm transition-all duration-300">
-                                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{pick.scenario}</p>
+                                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1">{pick.scenario}</p>
                                     <p className="text-base font-bold text-[#2563eb] mb-2">→ {pick.pick}</p>
                                     <p className="text-sm text-gray-600 leading-relaxed mb-3">{pick.reason}</p>
                                     {pick.link && (
@@ -615,7 +677,7 @@ export default function VdrProvidersPage() {
                                 View Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
                     </div>
                 </section>
 

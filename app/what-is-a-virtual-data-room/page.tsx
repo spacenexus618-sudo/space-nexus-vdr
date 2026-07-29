@@ -333,7 +333,7 @@ export default function WhatIsAVirtualDataRoomPage() {
         {/* Hero */}
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+            <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8">
               <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
               <span>›</span>
               <span className="text-gray-900">What is a Virtual Data Room?</span>
@@ -341,13 +341,13 @@ export default function WhatIsAVirtualDataRoomPage() {
             <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
               Definitive Guide
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               What is a <span className="text-[#2563eb]">Virtual Data Room</span>?
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               A comprehensive guide explaining what a virtual data room is, how it works, key features, security requirements, pricing models, and how to choose the right VDR provider for your transaction.
             </p>
-            <div className="flex items-center gap-4 text-sm text-gray-500">
+            <div className="flex items-center gap-4 text-sm text-gray-600">
               <span>By Alex Thornton, Head of Product</span>
               <span>·</span>
               <span>Updated July 2026</span>
@@ -365,7 +365,7 @@ export default function WhatIsAVirtualDataRoomPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Table of Contents */}
             <div className="bg-[#f8f9fa] rounded-2xl border border-gray-200 p-6 mb-12">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">In this guide</p>
+              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">In this guide</p>
               <nav className="space-y-2">
                 {sections.map((section) => (
                   <a
@@ -377,7 +377,7 @@ export default function WhatIsAVirtualDataRoomPage() {
                     {section.title}
                   </a>
                 ))}
-                <a href="#faq" className="flex items-center gap-3 text-sm text-gray-600 hover:text-[#2563eb] transition-colors py-1">
+                <a href="#faq" className="flex items-center gap-3 text-sm text-gray-600 hover:text-[#2563eb] transition-colors py-1 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#2563eb] shrink-0" />
                   Frequently Asked Questions
                 </a>

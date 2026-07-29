@@ -108,13 +108,13 @@ export default function ResourcesIndexPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <span className="text-gray-900">Resources</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Knowledge Hub</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Resources</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Resources</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Free guides, downloadable templates, and industry research for M&A, due diligence, and VDR professionals. Use these resources to run better deals, faster.</p>
                 </div>
             </section>
@@ -124,7 +124,7 @@ export default function ResourcesIndexPage() {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-2">{cat.title}</p>
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">{cat.title}</h2>
-                        <p className="text-sm text-gray-500 mb-8">{cat.description}</p>
+                        <p className="text-sm text-gray-600 mb-8">{cat.description}</p>
                         <div className="grid md:grid-cols-2 gap-6">
                             {cat.resources.map((r, ri) => (
                                 <Link
@@ -165,17 +165,17 @@ export default function ResourcesIndexPage() {
                         <Link href="/blog" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Read our blog →</h3>
-                            <p className="text-xs text-gray-500 mt-2">M&A insights, industry trends, and guides.</p>
+                            <p className="text-xs text-gray-600 mt-2">M&A insights, industry trends, and guides.</p>
                         </Link>
                         <Link href="/tutorials" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Tutorials</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Watch tutorials →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Step-by-step platform walkthroughs.</p>
+                            <p className="text-xs text-gray-600 mt-2">Step-by-step platform walkthroughs.</p>
                         </Link>
                         <Link href="/checklists" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Checklists</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Browse checklists →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Due diligence checklists and templates.</p>
+                            <p className="text-xs text-gray-600 mt-2">Due diligence checklists and templates.</p>
                         </Link>
                     </div>
                 </div>

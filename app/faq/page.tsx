@@ -92,13 +92,13 @@ export default function FAQIndexPage() {
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <span className="text-gray-900">FAQ</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Frequently Asked Questions</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Virtual Data Room FAQ: Answers for M&A, Fundraising & Legal Teams</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Virtual Data Room FAQ: Answers for M&A, Fundraising & Legal Teams</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mb-8">
                         {totalQuestions}+ questions on virtual data rooms, security, and compliance — answered by M&A and security practitioners.
                     </p>

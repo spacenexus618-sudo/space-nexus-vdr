@@ -248,7 +248,7 @@ export default function VDRComplianceFAQPage() {
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/faq" className="hover:text-[#2563eb] transition-colors">FAQ</Link>
@@ -256,7 +256,7 @@ export default function VDRComplianceFAQPage() {
                         <span className="text-gray-900">VDR Compliance</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">FAQ</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">VDR Compliance FAQ: SOC 2, ISO 27001, GDPR & More</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">VDR Compliance FAQ: SOC 2, ISO 27001, GDPR & More</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mb-8">
                         The most comprehensive FAQ on virtual data room compliance — {flatFaqs.length} questions covering SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4, FINRA, and more.
                     </p>
@@ -277,7 +277,7 @@ export default function VDRComplianceFAQPage() {
             {/* Table of contents */}
             <section className="py-10 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Jump to framework</h2>
+                    <h2 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-4">Jump to framework</h2>
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
                         {categories.map(c => (
                             <a
@@ -286,7 +286,7 @@ export default function VDRComplianceFAQPage() {
                                 className="block p-4 rounded-xl border border-gray-200 hover:border-[#2563eb]/40 hover:shadow-sm transition-all"
                             >
                                 <h3 className="text-sm font-semibold text-gray-900">{c.title}</h3>
-                                <p className="text-xs text-gray-500 mt-1">{c.items.length} questions</p>
+                                <p className="text-xs text-gray-600 mt-1">{c.items.length} questions</p>
                             </a>
                         ))}
                     </div>
@@ -334,17 +334,17 @@ export default function VDRComplianceFAQPage() {
                         <Link href="/faq/vdr-security" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security FAQ →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Encryption, access controls, watermarking, audit logs, and 35+ more security questions answered.</p>
+                            <p className="text-xs text-gray-600 mt-2">Encryption, access controls, watermarking, audit logs, and 35+ more security questions answered.</p>
                         </Link>
                         <Link href="/blog/vdr-security-what-to-look-for" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR compliance guide →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The 22-minute definitive guide to SOC 2, ISO 27001, GDPR, HIPAA, SEC, and FINRA standards.</p>
+                            <p className="text-xs text-gray-600 mt-2">The 22-minute definitive guide to SOC 2, ISO 27001, GDPR, HIPAA, SEC, and FINRA standards.</p>
                         </Link>
                         <Link href="/blog/secure-file-sharing-for-lawyers" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">UK law firm compliance →</h3>
-                            <p className="text-xs text-gray-500 mt-2">FCA, Companies Act 2006, SRA, and UK GDPR requirements for law firms.</p>
+                            <p className="text-xs text-gray-600 mt-2">FCA, Companies Act 2006, SRA, and UK GDPR requirements for law firms.</p>
                         </Link>
                     </div>
                 </div>

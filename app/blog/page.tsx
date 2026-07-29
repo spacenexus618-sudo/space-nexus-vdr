@@ -100,7 +100,7 @@ function PostCard({ post, size = "default" }: { post: (typeof blogPosts)[0]; siz
                             </div>
                             <div>
                                 <p className="text-sm font-semibold text-gray-900">{post.author.name}</p>
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-gray-600">
                                     {new Date(post.publishedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })} · {post.readTime}
                                 </p>
                             </div>
@@ -127,7 +127,7 @@ function PostCard({ post, size = "default" }: { post: (typeof blogPosts)[0]; siz
             <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#2563eb] transition-colors mb-2 grow">
                 {post.title}
             </h3>
-            <p className="text-sm text-gray-500 line-clamp-2 mb-5">
+            <p className="text-sm text-gray-600 line-clamp-2 mb-5">
                 {post.description}
             </p>
             <div className="flex items-center gap-3 mt-auto">
@@ -138,7 +138,7 @@ function PostCard({ post, size = "default" }: { post: (typeof blogPosts)[0]; siz
                 </div>
                 <div>
                     <p className="text-xs font-semibold text-gray-900">{post.author.name}</p>
-                    <p className="text-xs text-gray-400">
+                    <p className="text-xs text-gray-600">
                         {new Date(post.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} · {post.readTime}
                     </p>
                 </div>
@@ -195,7 +195,7 @@ export default function BlogPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">Blog</span>
@@ -207,7 +207,7 @@ export default function BlogPage() {
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
                         SpaceNexus Blog
                     </p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                         Virtual Data Room Insights &amp; M&amp;A Guides
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl">
@@ -238,7 +238,7 @@ export default function BlogPage() {
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Featured Post */}
                     <div id="featured" className="mb-16 scroll-mt-24">
-                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                        <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">
                             Featured Article
                         </p>
                         <PostCard post={featured} size="featured" />
@@ -253,7 +253,7 @@ export default function BlogPage() {
                                 <div className="flex items-center gap-3 mb-6">
                                     <span className="text-2xl">{cluster.icon}</span>
                                     <h2 className="text-2xl font-bold text-gray-900">{cluster.label}</h2>
-                                    <span className="text-sm text-gray-400 font-medium">({posts.length} {posts.length === 1 ? "article" : "articles"})</span>
+                                    <span className="text-sm text-gray-600 font-medium">({posts.length} {posts.length === 1 ? "article" : "articles"})</span>
                                 </div>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {posts.map((post) => (
@@ -272,28 +272,28 @@ export default function BlogPage() {
                                 <span className="text-xl">📋</span>
                                 <div>
                                     <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">Due Diligence Checklists</p>
-                                    <p className="text-xs text-gray-500">M&amp;A &amp; Series A</p>
+                                    <p className="text-xs text-gray-600">M&amp;A &amp; Series A</p>
                                 </div>
                             </Link>
                             <Link href="/glossary" className="group flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-[#2563eb]/30 hover:bg-blue-50/50 transition-all">
                                 <span className="text-xl">📖</span>
                                 <div>
                                     <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">M&amp;A Glossary</p>
-                                    <p className="text-xs text-gray-500">100+ terms</p>
+                                    <p className="text-xs text-gray-600">100+ terms</p>
                                 </div>
                             </Link>
                             <Link href="/competitors/vdr-alternatives" className="group flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-[#2563eb]/30 hover:bg-blue-50/50 transition-all">
                                 <span className="text-xl">⚖️</span>
                                 <div>
                                     <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">VDR Comparison 2026</p>
-                                    <p className="text-xs text-gray-500">6 providers ranked</p>
+                                    <p className="text-xs text-gray-600">6 providers ranked</p>
                                 </div>
                             </Link>
                             <Link href="/features/security-compliance" className="group flex items-center gap-3 p-4 rounded-xl border border-gray-100 hover:border-[#2563eb]/30 hover:bg-blue-50/50 transition-all">
                                 <span className="text-xl">🛡️</span>
                                 <div>
                                     <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">Security &amp; Compliance</p>
-                                    <p className="text-xs text-gray-500">SOC 2, ISO 27001</p>
+                                    <p className="text-xs text-gray-600">SOC 2, ISO 27001</p>
                                 </div>
                             </Link>
                         </div>

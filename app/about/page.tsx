@@ -97,7 +97,7 @@ export default function AboutPage() {
                     }),
                 }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">About</span>
@@ -110,7 +110,7 @@ export default function AboutPage() {
                             <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
                                 About Space Nexus
                             </p>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                                 Built by dealmakers,{" "}
                                 <span className="text-[#2563eb]">for dealmakers</span>
                             </h1>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                                 >
                                     <div className="text-3xl mb-2">{item.icon}</div>
                                     <p className="text-sm font-bold text-gray-900">{item.label}</p>
-                                    <p className="text-xs text-gray-500 mt-0.5">{item.detail}</p>
+                                    <p className="text-xs text-gray-600 mt-0.5">{item.detail}</p>
                                 </div>
                             ))}
                         </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900">{member.name}</h3>
-                                        <p className="text-sm text-gray-500">{member.role}</p>
+                                        <p className="text-sm text-gray-600">{member.role}</p>
                                     </div>
                                 </div>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>
