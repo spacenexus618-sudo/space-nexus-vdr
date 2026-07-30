@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
-import Script from "next/script";
 import KindoraDemoRequest from "../components/KindoraDemoRequest";
 import LastUpdated from "../../components/LastUpdated";
 
