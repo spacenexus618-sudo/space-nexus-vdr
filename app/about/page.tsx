@@ -5,7 +5,7 @@ import { authorProfiles } from "../blog/data/posts";
 import LastUpdated from "../components/LastUpdated";
 //above code is importing necessary modules and types from Next.j, as well as author profile data from a local file. The Metadata type is used for defining metadata for the page, Link is used for client-side navigation, Script is used for injecting scripts into the page, and authorProfiles contains information about the authors to be displayed on the About page.
 const teamMembers = Object.values(authorProfiles);
-export const metadata: Metadata = {
+export const metadata: Metadata =  {
     title: "About Space Nexus — Enterprise Virtual Data Room",
     description:
         "Built by a team from Fortune 500 companies, Big 4 consulting firms, and top investment banks. Space Nexus is purpose-built for M&A professionals who need speed, security, and reliability.",
