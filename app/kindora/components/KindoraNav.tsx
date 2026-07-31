@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -6,11 +6,40 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const quickLinks = [
-  { label: "Features", href: "/kindora/features", num: "01" },
-  { label: "Solutions", href: "/kindora/solutions", num: "02" },
-  { label: "Pricing", href: "/kindora/pricing", num: "03" },
-  { label: "Blog", href: "/kindora/blog", num: "04" },
-  { label: "Reviews", href: "/kindora/consumer-review", num: "05" },
+  {
+    label: "Features",
+    href: "/kindora/features",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+  },
+  {
+    label: "Solutions",
+    href: "/kindora/solutions",
+    icon: "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055zM20.45 11A9.06 9.06 0 0013 3.55V11h7.45z",
+  },
+  {
+    label: "Pricing",
+    href: "/kindora/pricing",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+  {
+    label: "Blog",
+    href: "/kindora/blog",
+    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+  },
+  {
+    label: "Reviews",
+    href: "/kindora/consumer-review",
+    icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z",
+  },
+];
+
+const offices = [
+  { flag: "🇺🇸", country: "USA", phone: "+1 646 421 5740", tel: "+16464215740", email: "usa@pmspace.ai", address: "2500 Marconi Ave, Ste 101, Sacramento, CA 95821" },
+  { flag: "🇨🇦", country: "Canada", phone: "+1 (979) 326-9493", tel: "+19793269493", email: "ca@pmspace.ai", address: "North America Regional Office, Toronto, ON" },
+  { flag: "🇦🇪", country: "UAE", phone: "+971 56 256 7509", tel: "+971562567509", email: "uae@pmspace.ai", address: "Middle East Regional Office, Dubai" },
+  { flag: "🇸🇦", country: "Saudi Arabia", phone: "+966 56 208 1999", tel: "+966562081999", email: "sa@pmspace.ai", address: "Riyadh, Kingdom of Saudi Arabia" },
+  { flag: "🇰🇼", country: "Kuwait", phone: "+965 9724 3755", tel: "+96597243755", email: "kw@pmspace.ai", address: "Kuwait City, Gulf Region Partner" },
+  { flag: "🇸🇬", country: "Singapore", phone: "+65 86 111 900", tel: "+6586111900", email: "sg@pmspace.ai", address: "7 Soon Lee St, #04-39 ISPACE Building" },
 ];
 
 export default function KindoraNav() {
@@ -19,13 +48,14 @@ export default function KindoraNav() {
   const [productsOpen, setProductsOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const mobileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,6 +63,7 @@ export default function KindoraNav() {
     setProductsOpen(false);
     setContactOpen(false);
     setMobileOpen(false);
+    setMobileProductsOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -62,12 +93,16 @@ export default function KindoraNav() {
     };
   }, [mobileOpen]);
 
+  const isActive = (href: string) =>
+    pathname === href || pathname?.startsWith(`${href}/`);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_4px_30px_rgba(0,0,0,0.08)]"
-        : "bg-gradient-to-b from-white via-white to-white/95"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-xl border-b border-gray-200/60 shadow-[0_4px_30px_rgba(0,0,0,0.08)]"
+          : "bg-gradient-to-b from-white via-white to-white/95"
+      }`}
     >
       {/* Premium top accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#2563eb] to-transparent opacity-80" />
@@ -83,7 +118,7 @@ export default function KindoraNav() {
             className="flex items-center gap-2.5 group"
             aria-label="Kindora Home"
           >
-            <div className="relative w-10 h-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-10 h-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
               <Image
                 src="/icononly_transparent_nobuffer.png"
                 alt="Kindora"
@@ -96,7 +131,7 @@ export default function KindoraNav() {
               <span className="text-xl font-black tracking-tight text-gray-900 transition-colors duration-300 group-hover:text-gray-700">
                 SPACE
               </span>
-              <span className="text-xl font-black tracking-tight text-[#2563eb] transition-colors duration-300 group-hover:text-[#1d4ed8]">
+              <span className="text-xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#2563eb] to-[#7c3aed] transition-opacity duration-300 group-hover:opacity-80">
                 KINDORA
               </span>
             </div>
@@ -121,7 +156,11 @@ export default function KindoraNav() {
                 onKeyDown={(e) => {
                   if (e.key === "Escape") { e.stopPropagation(); setProductsOpen(false); }
                 }}
-                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group"
+                className={`relative flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                  productsOpen
+                    ? "text-[#2563eb] bg-blue-50"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
+                }`}
               >
                 Products
                 <svg
@@ -145,7 +184,7 @@ export default function KindoraNav() {
                       className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                       onClick={() => setProductsOpen(false)}
                     >
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
                         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                         </svg>
@@ -166,7 +205,7 @@ export default function KindoraNav() {
                       className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                       onClick={() => setProductsOpen(false)}
                     >
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
                         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
@@ -189,10 +228,20 @@ export default function KindoraNav() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group"
+                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                  isActive(link.href)
+                    ? "text-[#2563eb]"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
+                }`}
               >
                 {link.label}
-                <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#2563eb] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                <span
+                  className={`absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-[#2563eb] to-[#7c3aed] transition-transform duration-300 origin-left rounded-full ${
+                    isActive(link.href)
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </Link>
             ))}
 
@@ -213,7 +262,11 @@ export default function KindoraNav() {
                 onKeyDown={(e) => {
                   if (e.key === "Escape") { e.stopPropagation(); setContactOpen(false); }
                 }}
-                className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-50/80 group"
+                className={`relative flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                  contactOpen
+                    ? "text-[#2563eb] bg-blue-50"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
+                }`}
               >
                 Contact
                 <svg
@@ -231,18 +284,11 @@ export default function KindoraNav() {
                       Global Offices
                     </p>
                     <div className="grid grid-cols-2 gap-2">
-                      {[
-                        { flag: "🇺🇸", phone: "+1 646 421 5740", email: "usa@pmspace.ai", address: "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821 USA" },
-                        { flag: "🇨🇦", phone: "+1 (979) 326-9493", email: "ca@pmspace.ai", address: "North America - Regional Office, Toronto, ON, Canada" },
-                        { flag: "🇦🇪", phone: "+971 56 256 7509", email: "uae@pmspace.ai", address: "Middle East Regional Office, Dubai, UAE" },
-                        { flag: "🇸🇦", phone: "+966 56 208 1999", email: "sa@pmspace.ai", address: "Saudi Arabia Office, Riyadh, Kingdom of Saudi Arabia" },
-                        { flag: "🇰🇼", phone: "+965 9724 3755", email: "kw@pmspace.ai", address: "Kuwait City, Strategic Partner for Gulf Region" },
-                        { flag: "🇸🇬", phone: "+65 86 111 900", email: "sg@pmspace.ai", address: "7 Soon Lee St, #04-39 ISPACE BUILDING, Singapore 627608" },
-                      ].map((office) => (
+                      {offices.map((office) => (
                         <div key={office.flag} className="p-3 rounded-xl hover:bg-gray-50 transition-colors border border-gray-50">
                           <div className="flex items-center gap-2 mb-1.5">
-                            <span className="text-lg">{office.flag}</span>
-                            <a href={`tel:${office.phone.replace(/[\s()\-]/g, "")}`} className="text-sm font-semibold text-gray-900 hover:text-[#2563eb] transition-colors">
+                            <span className="text-lg leading-none">{office.flag}</span>
+                            <a href={`tel:${office.tel}`} className="text-sm font-semibold text-gray-900 hover:text-[#2563eb] transition-colors">
                               {office.phone}
                             </a>
                           </div>
@@ -256,6 +302,7 @@ export default function KindoraNav() {
                     <div className="border-t border-gray-100 mt-3 pt-3 px-1">
                       <Link
                         href="/kindora/contact"
+                        onClick={() => setContactOpen(false)}
                         className="flex items-center justify-between w-full py-1.5 text-sm font-medium text-[#2563eb] hover:text-[#1d4ed8] transition-colors"
                       >
                         Send us a message
@@ -277,7 +324,7 @@ export default function KindoraNav() {
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
             >
               Request a Demo
-              <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -297,7 +344,7 @@ export default function KindoraNav() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 transition-colors"
+            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 active:bg-gray-200 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -310,26 +357,37 @@ export default function KindoraNav() {
             </svg>
           </button>
         </div>
-
       </nav>
 
       {/* Mobile Drawer — sibling of <nav> to avoid WebKit backdrop-filter compositing bug */}
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden animate-fade-in"
             onClick={() => setMobileOpen(false)}
             aria-hidden="true"
           />
           <div
             ref={mobileRef}
-            className="lg:hidden fixed inset-y-0 right-0 w-full max-w-sm z-50 bg-white shadow-2xl border-l border-gray-100 overflow-y-auto"
+            className="lg:hidden fixed inset-y-0 right-0 w-full max-w-sm z-50 bg-white shadow-2xl border-l border-gray-100 overflow-y-auto animate-slide-in-right"
           >
-            <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-100">
-              <span className="text-lg font-bold text-gray-900">Menu</span>
+            <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-100 bg-gradient-to-r from-white to-blue-50/60">
+              <div className="flex items-center gap-2.5">
+                <div className="relative w-8 h-8">
+                  <Image
+                    src="/icononly_transparent_nobuffer.png"
+                    alt="Kindora"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-lg font-bold bg-gradient-to-r from-[#2563eb] to-[#7c3aed] bg-clip-text text-transparent">
+                  Kindora
+                </span>
+              </div>
               <button
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 transition-colors"
+                className="flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 active:bg-gray-200 transition-colors"
                 aria-label="Close menu"
               >
                 <svg className="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -338,17 +396,99 @@ export default function KindoraNav() {
               </button>
             </div>
             <nav className="px-4 py-6 space-y-1">
+              {/* Mobile Products Accordion */}
+              <div>
+                <button
+                  onClick={() => setMobileProductsOpen((v) => !v)}
+                  className={`flex items-center justify-between w-full py-3.5 px-4 text-base font-medium rounded-xl transition-colors ${
+                    mobileProductsOpen
+                      ? "text-[#2563eb] bg-blue-50"
+                      : "text-gray-700 hover:text-[#2563eb] hover:bg-blue-50"
+                  }`}
+                  aria-expanded={mobileProductsOpen}
+                >
+                  <span className="flex items-center gap-4">
+                    <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#7c3aed] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </span>
+                    <span>Products</span>
+                  </span>
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`}
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {mobileProductsOpen && (
+                  <div className="ml-6 pl-5 mt-1 border-l-2 border-blue-100 space-y-1">
+                    <a
+                      href="/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 p-3 rounded-xl text-gray-700 hover:text-[#2563eb] hover:bg-blue-50 transition-colors"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold">Space Nexus VDR</p>
+                        <p className="text-xs text-gray-500">Virtual Data Room for M&A & due diligence</p>
+                      </div>
+                    </a>
+                    <Link
+                      href="/kindora"
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 p-3 rounded-xl text-gray-700 hover:text-[#2563eb] hover:bg-blue-50 transition-colors"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold">Kindora NGO OS</p>
+                        <p className="text-xs text-gray-500">Complete operating system for nonprofits</p>
+                      </div>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               {quickLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="group flex items-center gap-4 py-3.5 px-4 text-base font-medium text-gray-700 hover:text-[#2563eb] hover:bg-blue-50 rounded-xl transition-colors"
+                  className={`group flex items-center gap-4 py-3.5 px-4 text-base font-medium rounded-xl transition-colors ${
+                    isActive(link.href)
+                      ? "text-[#2563eb] bg-blue-50"
+                      : "text-gray-700 hover:text-[#2563eb] hover:bg-blue-50"
+                  }`}
                 >
-                  <span className="text-xs font-bold text-gray-400 group-hover:text-[#2563eb] transition-colors w-6">
-                    {link.num}
+                  <span
+                    className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
+                      isActive(link.href)
+                        ? "bg-gradient-to-br from-[#2563eb] to-[#7c3aed] text-white"
+                        : "bg-blue-50 text-[#2563eb] group-hover:bg-gradient-to-br group-hover:from-[#2563eb] group-hover:to-[#7c3aed] group-hover:text-white"
+                    }`}
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={link.icon} />
+                    </svg>
                   </span>
                   <span>{link.label}</span>
+                  <svg
+                    className="ml-auto w-4 h-4 text-gray-300 group-hover:text-[#2563eb] group-hover:translate-x-0.5 transition-all"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               ))}
             </nav>
@@ -368,16 +508,19 @@ export default function KindoraNav() {
               <Link
                 href="/kindora/demo"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center py-3.5 px-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full"
+                className="flex items-center justify-center gap-2 py-3.5 px-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300"
               >
                 Request a Demo
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
               <a
                 href="https://cad.spaceaiapp.com/kindora"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center py-3.5 px-4 text-base font-semibold text-[#2563eb] bg-blue-50 rounded-full"
+                className="flex items-center justify-center py-3.5 px-4 text-base font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300"
               >
                 Try for Free
               </a>
