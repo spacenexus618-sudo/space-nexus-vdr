@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const quickLinks = [
-  { label: "Features", href: "/kindora/features" },
-  { label: "Solutions", href: "/kindora/solutions" },
-  { label: "Pricing", href: "/kindora/pricing" },
-  { label: "Blog", href: "/kindora/blog" },
-  { label: "Reviews", href: "/kindora/consumer-review" },
+  { label: "Features", href: "/kindora/features", num: "01" },
+  { label: "Solutions", href: "/kindora/solutions", num: "02" },
+  { label: "Pricing", href: "/kindora/pricing", num: "03" },
+  { label: "Blog", href: "/kindora/blog", num: "04" },
+  { label: "Reviews", href: "/kindora/consumer-review", num: "05" },
 ];
 
 export default function KindoraNav() {
@@ -311,28 +311,64 @@ export default function KindoraNav() {
           </button>
         </div>
 
-        {/* Mobile Drawer */}
-        {mobileOpen && (
+      </nav>
+
+      {/* Mobile Drawer — sibling of <nav> to avoid WebKit backdrop-filter compositing bug */}
+      {mobileOpen && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"
+            onClick={() => setMobileOpen(false)}
+            aria-hidden="true"
+          />
           <div
             ref={mobileRef}
-            className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 overflow-y-auto"
+            className="lg:hidden fixed inset-y-0 right-0 w-full max-w-sm z-50 bg-white shadow-2xl border-l border-gray-100 overflow-y-auto"
           >
-            <div className="px-4 py-6 space-y-1">
+            <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-100">
+              <span className="text-lg font-bold text-gray-900">Menu</span>
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 transition-colors"
+                aria-label="Close menu"
+              >
+                <svg className="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <nav className="px-4 py-6 space-y-1">
               {quickLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-3 px-4 text-base font-medium text-gray-700 hover:text-[#2563eb] hover:bg-blue-50 rounded-xl transition-colors"
+                  className="group flex items-center gap-4 py-3.5 px-4 text-base font-medium text-gray-700 hover:text-[#2563eb] hover:bg-blue-50 rounded-xl transition-colors"
                 >
-                  {link.label}
+                  <span className="text-xs font-bold text-gray-400 group-hover:text-[#2563eb] transition-colors w-6">
+                    {link.num}
+                  </span>
+                  <span>{link.label}</span>
                 </Link>
               ))}
-              <div className="border-t border-gray-100 my-4" />
+            </nav>
+            <div className="px-4 pb-6 space-y-3">
+              <div className="border-t border-gray-100 pt-4">
+                <a
+                  href="tel:+16464215740"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-3 py-3 px-4 text-sm font-medium text-gray-600 hover:text-[#2563eb] hover:bg-blue-50 rounded-xl transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  +1 646 421 5740
+                </a>
+              </div>
               <Link
                 href="/kindora/demo"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center py-3 px-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full"
+                className="flex items-center justify-center py-3.5 px-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-full"
               >
                 Request a Demo
               </Link>
@@ -340,14 +376,15 @@ export default function KindoraNav() {
                 href="https://cad.spaceaiapp.com/kindora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center py-3 px-4 text-base font-semibold text-[#2563eb] bg-blue-50 rounded-full"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center py-3.5 px-4 text-base font-semibold text-[#2563eb] bg-blue-50 rounded-full"
               >
                 Try for Free
               </a>
             </div>
           </div>
-        )}
-      </nav>
+        </>
+      )}
     </header>
   );
 }
