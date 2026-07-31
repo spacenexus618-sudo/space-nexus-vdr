@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ecosystemProducts, getProductBySlug } from "../data";
+import LastUpdated from "../../components/LastUpdated";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -95,7 +96,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
       <main className="min-h-screen bg-gray-950 text-white">
         {/* Breadcrumb */}
         <div className="border-b border-gray-800 bg-gray-900/50">
-          <div className="mx-auto max-w-5xl px-6 py-3 text-sm text-gray-500">
+          <div className="mx-auto max-w-5xl px-6 py-3 text-sm text-gray-600">
             <Link href="/" className="hover:text-gray-300 transition-colors">SpaceNexus</Link>
             <span className="mx-2">/</span>
             <Link href="/ecosystem" className="hover:text-gray-300 transition-colors">Space AI Ecosystem</Link>
@@ -108,7 +109,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
         <section className="relative overflow-hidden border-b border-gray-800">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none" />
           <div className="relative mx-auto max-w-5xl px-6 py-16">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-700 bg-gray-800 px-4 py-1.5 text-sm text-gray-400">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-700 bg-gray-800 px-4 py-1.5 text-sm text-gray-500">
               <span
                 className="h-2 w-2 rounded-full"
                 style={{ backgroundColor: product.color }}
@@ -129,7 +130,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
             <p className="mb-3 text-lg font-medium" style={{ color: product.color }}>
               {product.tagline}
             </p>
-            <p className="mb-8 max-w-2xl text-gray-400">
+            <p className="mb-8 max-w-2xl text-gray-500">
               {product.longDescription}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -184,7 +185,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
             <h2 className="mb-3 text-2xl font-bold text-white">
               Why SpaceNexus Users Also Use {product.name}
             </h2>
-            <p className="mb-8 text-gray-500 text-sm">
+            <p className="mb-8 text-gray-600 text-sm">
               These are independent products — each works on its own. Here is
               why organizations that use SpaceNexus often find {product.name}{" "}
               useful too.
@@ -244,7 +245,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
 
               <Link
                 href="/ecosystem"
-                className="text-sm text-gray-500 transition hover:text-gray-300"
+                className="text-sm text-gray-600 transition hover:text-gray-300"
               >
                 All products
               </Link>
@@ -272,7 +273,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
             <h2 className="mb-3 text-2xl font-bold text-white">
               Interested in SpaceNexus?
             </h2>
-            <p className="mb-8 text-gray-400">
+            <p className="mb-8 text-gray-500">
               SpaceNexus is the virtual data room in the Space AI family. Request
               a demo to see how it handles secure deal management and due
               diligence.
@@ -285,6 +286,11 @@ export default async function EcosystemProductPage({ params }: PageProps) {
             </Link>
           </div>
         </section>
+
+        {/* Last Updated */}
+        <div className="py-6 text-center border-t border-gray-100 mt-8 bg-gray-900/50">
+          <LastUpdated date="2026-07-19" />
+        </div>
       </main>
     </>
   );

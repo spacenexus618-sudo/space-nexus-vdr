@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
   title: "Enterprise Virtual Data Room Solutions | SpaceNexus",
@@ -139,7 +141,7 @@ export default function EnterprisePage() {
         {JSON.stringify(enterpriseSchema)}
       </Script>
       <main className="pt-20 lg:pt-24">
-        <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+        <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           <span className="text-gray-600">Enterprise</span>
@@ -151,7 +153,7 @@ export default function EnterprisePage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
                 Enterprise
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Enterprise virtual data room for the world's most demanding deal teams
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
@@ -175,10 +177,12 @@ export default function EnterprisePage() {
           </div>
         </section>
 
+        <AnswerBlock text="SpaceNexus Enterprise includes unlimited storage and users, SSO/SAML integration, custom branding and white-label options, API access, dedicated account management, 99.99% SLA uptime guarantee, on-premise deployment options, and 24/7 phone support with compliance reporting." />
+
         {/* Trust Badges */}
         <section className="py-12 bg-white border-y border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest text-center mb-8">
+            <p className="text-xs font-semibold text-gray-600 uppercase tracking-widest text-center mb-8">
               Certified, audited, and aligned with global standards
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
@@ -193,7 +197,7 @@ export default function EnterprisePage() {
                     </svg>
                   </div>
                   <p className="text-sm font-bold text-gray-900 text-center">{badge.name}</p>
-                  <p className="text-xs text-gray-500 text-center mt-0.5">{badge.desc}</p>
+                  <p className="text-xs text-gray-600 text-center mt-0.5">{badge.desc}</p>
                 </div>
               ))}
             </div>
@@ -204,7 +208,7 @@ export default function EnterprisePage() {
         <section className="py-16 lg:py-24 bg-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                 Enterprise-grade capabilities
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -234,7 +238,7 @@ export default function EnterprisePage() {
         <section className="py-16 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                 Trusted across regulated industries
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -251,7 +255,7 @@ export default function EnterprisePage() {
                   <p className="text-base font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors">
                     {ind.name} →
                   </p>
-                  <p className="text-sm text-gray-500 mt-1">{ind.desc}</p>
+                  <p className="text-sm text-gray-600 mt-1">{ind.desc}</p>
                 </Link>
               ))}
             </div>
@@ -263,19 +267,19 @@ export default function EnterprisePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">500+</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">500+</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Enterprise Customers</p>
               </div>
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">99.99%</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">99.99%</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Uptime SLA</p>
               </div>
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">Multi-Billion</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">Multi-Billion</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Deal Value Secured</p>
               </div>
               <div>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2563eb] mb-2">24/7</p>
+                <p className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2563eb] mb-2">24/7</p>
                 <p className="text-sm text-gray-600 uppercase tracking-wider">Dedicated Support</p>
               </div>
             </div>
@@ -285,7 +289,7 @@ export default function EnterprisePage() {
         {/* CTA */}
         <section className="py-16 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
               Ready to upgrade to enterprise VDR?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
@@ -305,7 +309,11 @@ export default function EnterprisePage() {
                 View Enterprise Pricing
               </Link>
             </div>
-          </div>
+          
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
         </section>
       </main>
     </>

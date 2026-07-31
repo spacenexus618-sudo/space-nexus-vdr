@@ -1,24 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { gql, useMutation, ApolloProvider } from "@apollo/client";
-import { apolloClient } from "@/lib/apollo-client";
 
-const CREATE_DEMO_REQUEST_MUTATION = gql`
-  mutation CreateDemoRequest($input: CreateDemoRequestInput!) {
-    createDemoRequest(input: $input) {
-      _id
-      firstName
-      lastName
-      email
-      company
-      phoneNumber
-      companySize
-      projectDetails
-      formType
-    }
-  }
-`;
 
 interface FormData {
   firstName: string;
@@ -30,7 +13,7 @@ interface FormData {
   projectDetails: string;
 }
 
-function KindoraDemoRequestForm() {
+export default function KindoraDemoRequest() {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -45,23 +28,9 @@ function KindoraDemoRequestForm() {
   const [touched, setTouched] = useState<Set<string>>(new Set());
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  const [createDemoRequest, { loading }] = useMutation(
-    CREATE_DEMO_REQUEST_MUTATION,
-    {
-      onCompleted: (data) => {
-        if (data.createDemoRequest?._id) {
-          setIsSubmitted(true);
-          setError(null);
-        } else {
-          setError("Something went wrong. Please try again.");
-        }
-      },
-      onError: (err) => {
-        setError(err.message || "Something went wrong. Please try again.");
-      },
-    },
-  );
+
 
   const validate = (data: FormData): Record<string, string> => {
     const errs: Record<string, string> = {};
@@ -99,22 +68,43 @@ function KindoraDemoRequestForm() {
     if (Object.keys(validationErrors).length > 0) return;
 
     try {
-      await createDemoRequest({
-        variables: {
-          input: {
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            company: formData.company,
-            phoneNumber: formData.phoneNumber,
-            companySize: formData.companySize,
-            projectDetails: formData.projectDetails,
-            formType: "Kindora",
-          },
+      setSubmitting(true);
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_GRAPHQL_URL || "https://spaceaiapp.com/backend/graphql",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            query: `mutation CreateDemoRequest($input: CreateDemoRequestInput!) {
+              createDemoRequest(input: $input) { _id }
+            }`,
+            variables: {
+              input: {
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                company: formData.company,
+                phoneNumber: formData.phoneNumber,
+                companySize: formData.companySize,
+                projectDetails: formData.projectDetails,
+                formType: "Kindora",
+              },
+            },
+          }),
         },
-      });
-    } catch {
-      // Error is handled in onError callback
+      );
+
+      const json = await res.json();
+
+      if (json.data?.createDemoRequest?._id) {
+        setIsSubmitted(true);
+      } else {
+        setError(json.errors?.[0]?.message || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -349,10 +339,10 @@ function KindoraDemoRequestForm() {
 
       <button
         type="submit"
-        disabled={loading}
+        disabled={submitting}
         className="w-full px-6 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
-        {loading ? (
+        {submitting ? (
           <>
             <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
               <circle
@@ -389,13 +379,5 @@ function KindoraDemoRequestForm() {
         .
       </p>
     </form>
-  );
-}
-
-export default function KindoraDemoRequest() {
-  return (
-    <ApolloProvider client={apolloClient}>
-      <KindoraDemoRequestForm />
-    </ApolloProvider>
   );
 }

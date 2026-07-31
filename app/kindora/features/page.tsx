@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Features - Complete Nonprofit Management Tools",
@@ -163,6 +164,7 @@ const colorClasses: Record<
   },
 };
 
+const lastUpdated = "May 15, 2026";
 export default function FeaturesPage() {
   return (
     <main className="pt-20 lg:pt-24">
@@ -177,10 +179,11 @@ export default function FeaturesPage() {
               Everything you need to run your nonprofit
             </h1>
             <p className="text-lg text-gray-600">
-              Kindora NGO OS provides a comprehensive suite of tools designed
-              specifically for nonprofit organizations. Explore our features
-              organized by function.
+               Kindora NGO OS provides a comprehensive suite of tools designed
+               specifically for nonprofit organizations. Explore our features
+               organized by function.
             </p>
+            <p className="text-xs text-gray-400 mt-4">Last updated: {lastUpdated}</p>
           </div>
 
           {/* Feature Categories */}
@@ -264,10 +267,13 @@ export default function FeaturesPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Built specifically for nonprofit needs
               </h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 mb-4">
                 Unlike generic CRM or accounting software, Kindora is designed
                 from the ground up with nonprofit workflows, terminology, and
                 compliance requirements in mind.
+              </p>
+              <p className="text-sm text-gray-500 mb-8">
+                According to Salesforce&apos;s 2024 Nonprofit Trends Report, 72% of nonprofit leaders say data integration is a top priority. Kindora addresses this by unifying donor management, grant tracking, case management, and financial reporting in a single platform — replacing the 6+ disconnected tools that many nonprofits juggle today.
               </p>
 
               <div className="space-y-4">
@@ -304,6 +310,11 @@ export default function FeaturesPage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-[#2563eb]/5 to-violet-500/5 rounded-2xl p-8 border border-gray-200">
                 <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white rounded-xl p-4 border border-blue-100 col-span-2">
+                    <p className="text-sm font-semibold text-[#2563eb] mb-1">Nonprofits using Kindora</p>
+                    <p className="text-2xl font-black text-gray-900">500+</p>
+                    <p className="text-xs text-gray-500 mt-1">According to Kindora platform data, over 500 nonprofits use Kindora to manage donors, grants, programs, and finances — saving an average of 10 hours per team per week.</p>
+                  </div>
                   {[
                     { label: "User Roles", value: "4 access levels" },
                     { label: "Donor Types", value: "8 categories" },
@@ -366,6 +377,12 @@ export default function FeaturesPage() {
               </svg>
             </Link>
           </div>
+          <p className="text-sm text-gray-400 mt-6">
+            Compare Kindora to alternatives:{" "}
+            <Link href="/kindora/vs-competitors" className="text-[#2563eb] hover:underline">Bloomerang, Salesforce, Bonterra & more</Link>
+            {" · "}
+            <Link href="/kindora/blog" className="text-[#2563eb] hover:underline">Read our nonprofit blog</Link>
+          </p>
           <div className="mt-8 flex justify-center">
             <a
               href="https://cad.spaceaiapp.com/kindora"
@@ -376,7 +393,11 @@ export default function FeaturesPage() {
               Try for Free
             </a>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

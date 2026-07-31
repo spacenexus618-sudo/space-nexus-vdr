@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import DemoRequest from "@/app/components/DemoRequest";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Get Started with SpaceNexus — Free Virtual Data Room Trial | SpaceNexus",
@@ -70,6 +71,13 @@ const faqSchema = {
       url: "https://spacenexus.net",
       aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500", bestRating: "5", worstRating: "1" },
     },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" },
+        { "@type": "ListItem", position: 2, name: "Get Started", item: "https://spacenexus.net/get-started" },
+      ],
+    },
   ],
 };
 
@@ -85,7 +93,7 @@ export default function GetStartedPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-200/20 text-blue-200 text-sm font-medium mb-6">
                 Free 14-Day Trial
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 Get Started with <br className="hidden sm:block" />
                 <span className="text-blue-200">SpaceNexus VDR</span>
               </h1>
@@ -126,7 +134,7 @@ export default function GetStartedPage() {
             <div className="lg:sticky lg:top-32">
               <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
                 <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-1 text-center">Start Your Free Trial</p>
-                <p className="text-xs text-gray-500 mb-6 text-center">Fill in your details and get started in minutes.</p>
+                <p className="text-xs text-gray-600 mb-6 text-center">Fill in your details and get started in minutes.</p>
                 <DemoRequest />
               </div>
             </div>
@@ -148,7 +156,11 @@ export default function GetStartedPage() {
               </div>
             ))}
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Reports — Financial & Program Analytics",
@@ -270,7 +271,11 @@ export default function ReportsPage() {
               </Link>
             </div>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

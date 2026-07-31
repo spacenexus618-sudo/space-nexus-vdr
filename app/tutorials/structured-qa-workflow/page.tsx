@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Structured Q&A Workflow — SpaceNexus Video Tutorial | SpaceNexus",
@@ -12,6 +13,22 @@ export const metadata: Metadata = {
 
 const videoSchema = { "@context": "https://schema.org", "@type": "VideoObject", name: "Structured Q&A Workflow", description: "Tutorial on setting up and managing the structured Q&A workflow.", thumbnailUrl: "https://spacenexus.net/tutorials/structured-qa-workflow/thumbnail.png", uploadDate: "2026-06-15", duration: "PT15M", contentUrl: "https://spacenexus.net/tutorials/structured-qa-workflow", embedUrl: "https://spacenexus.net/tutorials/structured-qa-workflow", publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" } };
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" }, { "@type": "ListItem", position: 2, name: "Tutorials", item: "https://spacenexus.net/tutorials" }, { "@type": "ListItem", position: 3, name: "Structured Q&A Workflow", item: "https://spacenexus.net/tutorials/structured-qa-workflow" }] };
+
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Set Up a Structured Q&A Workflow",
+    description: "Configure category-based Q&A routing, response SLAs, escalation paths, and pre-prepared FAQ strategies for due diligence processes.",
+    totalTime: "PT15M",
+    step: [
+        { "@type": "HowToStep", name: "Design Q&A categories", text: "Create category-based routing so legal questions go to GC, financial to CFO, and technical to CTO automatically." },
+        { "@type": "HowToStep", name: "Set response SLAs", text: "Configure service-level agreements by question type — 4 hours for simple, 24 hours for complex, 3-5 days for cross-functional." },
+        { "@type": "HowToStep", name: "Build pre-prepared FAQ", text: "Create the pre-prepared FAQ document with the 30-50 most likely buyer questions and prepared answers before launch." },
+        { "@type": "HowToStep", name: "Configure escalation paths", text: "Set up automatic escalation when SLAs are missed. Add notifications to deal leads and senior team members." },
+        { "@type": "HowToStep", name: "Enable buyer Q&A submission", text: "Configure how buyers submit questions through the workflow, with document linking and follow-up question support." },
+        { "@type": "HowToStep", name: "Review Q&A analytics", text: "Track question volume, response times, and patterns. Use analytics to identify buyers most engaged with the process." },
+    ],
+};
 
 const steps = [
     { time: "0:00", title: "Why structured Q&A matters", desc: "The difference between chaotic email-based Q&A and a structured workflow that accelerates deals." },
@@ -28,21 +45,22 @@ export default function StructuredQAWorkflowPage() {
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="tut-qa-video" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
             <Script id="tut-qa-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="tut-qa-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">Structured Q&amp;A Workflow</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">15 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Intermediate</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">15 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Intermediate</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Structured Q&amp;A Workflow</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Structured Q&amp;A Workflow</h1>
                     <p className="text-xl text-gray-600">Set up and manage the structured Q&amp;A workflow. Routing rules, SLAs, escalation paths, and pre-prepared FAQ strategies.</p>
                 </div>
             </section>
@@ -96,6 +114,10 @@ export default function StructuredQAWorkflowPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

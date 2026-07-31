@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Permission Management Deep Dive — SpaceNexus Video Tutorial | SpaceNexus",
@@ -12,6 +13,23 @@ export const metadata: Metadata = {
 
 const videoSchema = { "@context": "https://schema.org", "@type": "VideoObject", name: "Permission Management Deep Dive", description: "Tutorial on granular permission management in SpaceNexus VDR.", thumbnailUrl: "https://spacenexus.net/tutorials/permission-management/thumbnail.png", uploadDate: "2026-06-08", duration: "PT14M", contentUrl: "https://spacenexus.net/tutorials/permission-management", embedUrl: "https://spacenexus.net/tutorials/permission-management", publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" } };
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" }, { "@type": "ListItem", position: 2, name: "Tutorials", item: "https://spacenexus.net/tutorials" }, { "@type": "ListItem", position: 3, name: "Permission Management", item: "https://spacenexus.net/tutorials/permission-management" }] };
+
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Manage Granular Permissions in a VDR",
+    description: "Configure per-user, per-group, per-folder, and per-document permissions with time-limited and IP-restricted access.",
+    totalTime: "PT14M",
+    step: [
+        { "@type": "HowToStep", name: "Understand permission hierarchy", text: "Learn how permissions cascade from workspace to group to user to document, and why this matters for security." },
+        { "@type": "HowToStep", name: "Create group permissions", text: "Create and configure permission groups for different bidder types, advisors, and internal users." },
+        { "@type": "HowToStep", name: "Set folder permissions", text: "Apply different access levels to different folders — full access for some, view-only for others." },
+        { "@type": "HowToStep", name: "Configure document overrides", text: "When folder-level permissions are not enough, set per-document overrides for the most sensitive materials." },
+        { "@type": "HowToStep", name: "Enable time-limited access", text: "Set access to expire at specific dates — useful for round deadlines and engagement period endings." },
+        { "@type": "HowToStep", name: "Set up IP whitelisting", text: "Restrict access to specific IP addresses or pre-registered devices for the highest-security transactions." },
+        { "@type": "HowToStep", name: "Use bulk operations", text: "Manage permissions across hundreds of users and documents efficiently with bulk operations." },
+    ],
+};
 
 const steps = [
     { time: "0:00", title: "The permission hierarchy", desc: "How SpaceNexus permissions cascade from workspace to group to user to document, and why this matters for security." },
@@ -27,22 +45,23 @@ export default function PermissionManagementPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="tut-pm-video" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
+            <Script id="tut-pm-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <Script id="tut-pm-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">Permission Management</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">14 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Advanced</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">14 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Advanced</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Permission Management Deep Dive</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Permission Management Deep Dive</h1>
                     <p className="text-xl text-gray-600">Master granular permission controls. Per-user, per-group, per-folder, and per-document permissions. Time-limited and IP-restricted access.</p>
                 </div>
             </section>
@@ -95,6 +114,10 @@ export default function PermissionManagementPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

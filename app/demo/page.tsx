@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import DemoRequest from "@/app/components/DemoRequest";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Book a Free SpaceNexus Demo — Secure Virtual Data Room for Legal & M&A Teams",
@@ -195,7 +196,7 @@ export default function DemoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+      <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
         <span className="text-gray-600">Book a Demo</span>
@@ -209,7 +210,7 @@ export default function DemoPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] text-sm font-medium mb-6">
                 Get Started Today
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Book a Free <br className="hidden sm:block" />
                 <span className="text-[#2563eb]">SpaceNexus VDR Demo</span>
               </h1>
@@ -330,7 +331,11 @@ export default function DemoPage() {
               </div>
             ))}
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Data Room Pricing 2026 | SpaceNexus",
@@ -233,7 +234,7 @@ export default function DataRoomPricingPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Data Room Pricing</span>
@@ -244,24 +245,24 @@ export default function DataRoomPricingPage() {
                                 </svg>
                                 2026 Pricing Guide
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Data Room Pricing{" "}
                                 <span className="text-[#2563eb]">— The 2026 Complete Guide</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 How much does a data room cost? This guide breaks down every pricing model — flat-rate, per-page, per-project, and quote-only — so you can compare providers on total cost, not just the headline number.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 Last updated: July 2026 &nbsp;·&nbsp; Covers pricing models, hidden costs, and provider comparisons
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#pricing-models" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#pricing-models" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Compare Pricing Models
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#hidden-costs" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#hidden-costs" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Hidden Costs to Watch
                                 </a>
                             </div>
@@ -306,15 +307,15 @@ export default function DataRoomPricingPage() {
                                     <p className="text-sm text-gray-600 leading-relaxed mb-4">{pm.description}</p>
                                     <div className="space-y-2 text-sm">
                                         <div className="flex items-start gap-2">
-                                            <span className="text-xs font-semibold text-gray-500 shrink-0 w-20">Providers:</span>
+                                            <span className="text-xs font-semibold text-gray-600 shrink-0 w-20">Providers:</span>
                                             <span className="text-gray-700">{pm.providers}</span>
                                         </div>
                                         <div className="flex items-start gap-2">
-                                            <span className="text-xs font-semibold text-gray-500 shrink-0 w-20">Transparency:</span>
+                                            <span className="text-xs font-semibold text-gray-600 shrink-0 w-20">Transparency:</span>
                                             <span className="text-gray-700">{pm.transparency}</span>
                                         </div>
                                         <div className="flex items-start gap-2">
-                                            <span className="text-xs font-semibold text-gray-500 shrink-0 w-20">Best for:</span>
+                                            <span className="text-xs font-semibold text-gray-600 shrink-0 w-20">Best for:</span>
                                             <span className="text-gray-700">{pm.bestFor}</span>
                                         </div>
                                     </div>
@@ -386,7 +387,7 @@ export default function DataRoomPricingPage() {
                                 </table>
                             </div>
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
+                        <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
                     </div>
                 </section>
 
@@ -422,7 +423,7 @@ export default function DataRoomPricingPage() {
                                             </span>
                                             <div>
                                                 <p className="text-xs font-semibold text-gray-900">{item.label}</p>
-                                                <p className="text-xs text-gray-500">{item.desc}</p>
+                                                <p className="text-xs text-gray-600">{item.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -442,7 +443,7 @@ export default function DataRoomPricingPage() {
                                     <div className="w-3 h-3 rounded-full bg-red-400" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / dashboard</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
                                     <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus data room pricing dashboard" className="w-full h-auto" loading="lazy" />
@@ -538,8 +539,12 @@ export default function DataRoomPricingPage() {
                                 Request a Demo
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     </section>
             </main>
         </>

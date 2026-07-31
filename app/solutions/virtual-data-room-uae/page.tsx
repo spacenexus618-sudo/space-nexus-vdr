@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Virtual Data Room for UAE | SpaceNexus",
@@ -131,13 +132,13 @@ export default function UAEVDRPage() {
       <section className="relative py-20 lg:py-28 bg-gradient-to-b from-[#f0f4ff] to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">🇦🇪 United Arab Emirates</p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             غرفة البيانات الافتراضية الآمنة للإمارات
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
             The Secure Virtual Data Room for UAE Transactions
           </p>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             SOC 2 Type II certified, DIFC and ADGM compliant — built for M&A, capital markets,
             real estate, and family office transactions across the UAE and GCC.
           </p>
@@ -149,7 +150,7 @@ export default function UAEVDRPage() {
               View Pricing
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-600 uppercase tracking-wider">
             <span>SOC 2 Type II</span><span>DIFC</span><span>ADGM</span><span>UAE PDPL</span><span>ISO 27001</span>
           </div>
         </div>
@@ -255,7 +256,11 @@ export default function UAEVDRPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </>

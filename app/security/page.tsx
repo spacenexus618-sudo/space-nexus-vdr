@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "VDR Security & Compliance | SpaceNexus",
@@ -123,7 +125,7 @@ export default function SecurityPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(securityFaqSchema) }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">Security</span>
@@ -138,7 +140,7 @@ export default function SecurityPage() {
                         </svg>
                         Enterprise Security & Compliance
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                         Bank-grade security for your most sensitive deals
                     </h1>
                     <p className="text-xl text-blue-200 max-w-2xl mx-auto">
@@ -149,6 +151,8 @@ export default function SecurityPage() {
                 </div>
             </section>
 
+            <AnswerBlock text="SpaceNexus security includes SOC 2 Type II certification, ISO 27001 compliance, AES-256 encryption at rest and in transit, dynamic watermarking, granular role-based permissions, immutable audit logs, IP whitelisting, and SSO/SAML integration with FIDO2 MFA support." />
+
             {/* Certifications strip */}
             <section className="py-8 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,7 +160,7 @@ export default function SecurityPage() {
                         {certifications.map((cert) => (
                             <div key={cert.name} className="flex flex-col items-center text-center p-4">
                                 <p className="text-sm font-bold text-gray-900">{cert.name}</p>
-                                <p className="text-xs text-gray-500 mt-0.5">{cert.description}</p>
+                                <p className="text-xs text-gray-600 mt-0.5">{cert.description}</p>
                             </div>
                         ))}
                     </div>
@@ -275,16 +279,20 @@ export default function SecurityPage() {
                         <Link href="/faq/vdr-security" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security FAQ →</h3>
-                            <p className="text-xs text-gray-500 mt-2">40+ questions on encryption, access controls, watermarking, MFA, SSO, and more.</p>
+                            <p className="text-xs text-gray-600 mt-2">40+ questions on encryption, access controls, watermarking, MFA, SSO, and more.</p>
                         </Link>
                         <Link href="/faq/vdr-compliance" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR compliance FAQ →</h3>
-                            <p className="text-xs text-gray-500 mt-2">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4, FINRA — all compliance questions answered.</p>
+                            <p className="text-xs text-gray-600 mt-2">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4, FINRA — all compliance questions answered.</p>
                         </Link>
                     </div>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

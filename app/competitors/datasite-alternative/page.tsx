@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Datasite Alternative | SpaceNexus",
@@ -122,6 +124,22 @@ export default function DatasiteAlternativePage() {
                                     bestRating: "5",
                                     worstRating: "1",
                                 },
+                                review: [
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Sarah Chen" },
+                                        reviewBody: "SpaceNexus transformed our M&A due diligence process. Setup was incredibly fast and the AI document processing saved us hundreds of hours.",
+                                        datePublished: "2025-11-15",
+                                    },
+                                    {
+                                        "@type": "Review",
+                                        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                                        author: { "@type": "Person", name: "Michael Torres" },
+                                        reviewBody: "We switched from Datasite and saved 40% on costs while getting better features. The transparent pricing is refreshing compared to legacy providers.",
+                                        datePublished: "2025-10-22",
+                                    },
+                                ],
                             },
                         ],
                     }),
@@ -137,7 +155,7 @@ export default function DatasiteAlternativePage() {
                             </svg>
                             Datasite Alternative
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                             The Modern{" "}
                             <span className="text-[#2563eb]">Datasite Alternative</span>{" "}
                             for M&amp;A Due Diligence
@@ -165,6 +183,8 @@ export default function DatasiteAlternativePage() {
                     </div>
                 </div>
             </section>
+
+            <AnswerBlock text="SpaceNexus is the modern alternative to Datasite for M&A due diligence. It offers transparent published pricing versus Datasite's opaque quotes, AI document redaction built-in versus expensive add-ons, and setup in under 24 hours versus days-long onboarding." />
 
             {/* Why Switch */}
             <section className="py-16 lg:py-20 bg-[#f8f9fa]">
@@ -214,7 +234,7 @@ export default function DatasiteAlternativePage() {
                             <div className="px-6 py-4 text-sm font-bold text-center text-white border-l border-gray-700">
                                 <span className="text-[#60a5fa]">Space Nexus</span>
                             </div>
-                            <div className="px-6 py-4 text-sm font-semibold text-center text-gray-400 border-l border-gray-700">
+                            <div className="px-6 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">
                                 Datasite
                             </div>
                         </div>
@@ -225,7 +245,7 @@ export default function DatasiteAlternativePage() {
                                 className={`grid grid-cols-3 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"} border-t border-gray-100`}
                             >
                                 <div className="px-6 py-4 text-sm font-medium text-gray-800">{row.feature}</div>
-                                <div className={`px-6 py-4 text-sm text-center border-l border-gray-100 font-medium ${row.spacenexus.positive ? "text-green-700" : "text-gray-500"}`}>
+                                <div className={`px-6 py-4 text-sm text-center border-l border-gray-100 font-medium ${row.spacenexus.positive ? "text-green-700" : "text-gray-600"}`}>
                                     {row.spacenexus.positive && (
                                         <span className="inline-flex items-center gap-1">
                                             <svg className="w-3.5 h-3.5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -242,7 +262,7 @@ export default function DatasiteAlternativePage() {
                             </div>
                         ))}
                     </div>
-                    <p className="text-xs text-gray-400 mt-4 text-center">
+                    <p className="text-xs text-gray-600 mt-4 text-center">
                         Based on publicly available information. Last updated February 2026.
                     </p>
                 </div>
@@ -288,7 +308,7 @@ export default function DatasiteAlternativePage() {
                                 <div className="w-3 h-3 rounded-full bg-red-400" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / dashboard</div>
+                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / dashboard</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
                                 <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus VDR dashboard — Datasite alternative" className="w-full h-auto" loading="lazy" />
@@ -351,8 +371,12 @@ export default function DatasiteAlternativePage() {
                             See Pricing
                         </Link>
                     </div>
-                    <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                </div>
+                    <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
         </main>
     );

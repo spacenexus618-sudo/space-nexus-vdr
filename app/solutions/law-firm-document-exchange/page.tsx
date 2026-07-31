@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Secure Document Exchange for Law Firms | SpaceNexus",
@@ -289,7 +290,7 @@ export default function LawFirmDocumentExchangePage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-sm font-medium text-blue-700 mb-6">
               <span>⚖️</span> Legal Document Exchange
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Secure Document Exchange{" "}
               <span className="text-[#2563eb]">for Law Firms</span>
             </h1>
@@ -432,16 +433,16 @@ export default function LawFirmDocumentExchangePage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b-2 border-gray-200">
-                  <th className="text-left py-4 pr-8 text-sm font-semibold text-gray-500 uppercase tracking-wider w-2/5">
+                  <th className="text-left py-4 pr-8 text-sm font-semibold text-gray-600 uppercase tracking-wider w-2/5">
                     Feature
                   </th>
                   <th className="text-center py-4 px-4 text-sm font-bold text-[#2563eb]">
                     SpaceNexus
                   </th>
-                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-500">
+                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-600">
                     Email
                   </th>
-                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-500">
+                  <th className="text-center py-4 px-4 text-sm font-bold text-gray-600">
                     Dropbox / GDrive
                   </th>
                 </tr>
@@ -459,10 +460,10 @@ export default function LawFirmDocumentExchangePage() {
                       {row.spacenexus === true ? <Check /> : <span className="text-sm text-gray-600">{String(row.spacenexus)}</span>}
                     </td>
                     <td className="py-3 px-4 text-center">
-                      {row.email === true ? <Check /> : row.email === false ? <Cross /> : <span className="text-sm text-gray-500">{String(row.email)}</span>}
+                      {row.email === true ? <Check /> : row.email === false ? <Cross /> : <span className="text-sm text-gray-600">{String(row.email)}</span>}
                     </td>
                     <td className="py-3 px-4 text-center">
-                      {row.consumer === true ? <Check /> : row.consumer === false ? <Cross /> : <span className="text-sm text-gray-500">{String(row.consumer)}</span>}
+                      {row.consumer === true ? <Check /> : row.consumer === false ? <Cross /> : <span className="text-sm text-gray-600">{String(row.consumer)}</span>}
                     </td>
                   </tr>
                 ))}
@@ -518,7 +519,7 @@ export default function LawFirmDocumentExchangePage() {
                   <p className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb]">
                     {link.title}
                   </p>
-                  <p className="text-xs text-gray-500">{link.desc}</p>
+                  <p className="text-xs text-gray-600">{link.desc}</p>
                 </div>
               </Link>
             ))}
@@ -621,7 +622,11 @@ export default function LawFirmDocumentExchangePage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Legal document management →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

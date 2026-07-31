@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Investment Banking | SpaceNexus",
@@ -189,6 +190,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is an investment banking data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An investment banking data room is a secure virtual workspace used to share confidential deal documents with bidders, advisors, and regulatory parties during M&A and capital markets transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus support IB workflows?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides structured Q&A workflows, bidder engagement analytics, dynamic watermarking, and tiered access controls designed for sell-side M&A and capital raising processes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is SpaceNexus used by investment banks?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus is used by boutique and mid-market investment banks for M&A advisory, capital raising, restructuring, and private capital transactions.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is an investment banking data room?",
+    answer: "An investment banking data room is a secure virtual workspace used to share confidential deal documents with bidders, advisors, and regulatory parties during M&A and capital markets transactions.",
+  },
+  {
+    question: "How does SpaceNexus support IB workflows?",
+    answer: "SpaceNexus provides structured Q&A workflows, bidder engagement analytics, dynamic watermarking, and tiered access controls designed for sell-side M&A and capital raising processes.",
+  },
+  {
+    question: "Is SpaceNexus used by investment banks?",
+    answer: "Yes. SpaceNexus is used by boutique and mid-market investment banks for M&A advisory, capital raising, restructuring, and private capital transactions.",
+  },
+];
+
 export default function InvestmentBankingPage() {
   return (
     <>
@@ -203,6 +250,11 @@ export default function InvestmentBankingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="ib-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,7 +262,7 @@ export default function InvestmentBankingPage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -230,7 +282,7 @@ export default function InvestmentBankingPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
                 Investment Banking
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Enterprise Data Rooms for Investment Banks
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -282,7 +334,7 @@ export default function InvestmentBankingPage() {
                     <h3 className="font-semibold text-gray-900">
                       IB Deal Execution
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Full transaction support
                     </p>
                   </div>
@@ -416,7 +468,7 @@ export default function InvestmentBankingPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / deals
                 </div>
               </div>
@@ -460,7 +512,7 @@ export default function InvestmentBankingPage() {
               </ul>
               <a
                 href="/demo"
-                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20"
+                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 See the full platform
                 <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -583,7 +635,26 @@ export default function InvestmentBankingPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR pricing comparison →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

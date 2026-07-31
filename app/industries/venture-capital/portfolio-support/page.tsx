@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Portfolio Support Data Room for VC Firms | SpaceNexus",
@@ -30,14 +31,14 @@ export default function VCPortfolioSupportPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/industries" className="hover:text-[#2563eb] transition-colors">Industries</Link><span>›</span>
                         <Link href="/industries/venture-capital" className="hover:text-[#2563eb] transition-colors">Venture Capital</Link><span>›</span>
                         <span className="text-gray-900">Portfolio Support</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Venture Capital Practice</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Portfolio Support Data Room for VC Firms</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Portfolio Support Data Room for VC Firms</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Virtual data room for VC portfolio company support. Board materials, follow-on funding coordination, founder onboarding, and value creation tracking.</p>
                 </div>
             </section>
@@ -113,17 +114,17 @@ export default function VCPortfolioSupportPage() {
                         <Link href="/solutions/investor-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Solution</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Investor data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">For portfolio company fundraising rounds.</p>
+                            <p className="text-xs text-gray-600 mt-2">For portfolio company fundraising rounds.</p>
                         </Link>
                         <Link href="/industries/venture-capital" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Industry</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR for venture capital →</h3>
-                            <p className="text-xs text-gray-500 mt-2">The full VC VDR solution overview.</p>
+                            <p className="text-xs text-gray-600 mt-2">The full VC VDR solution overview.</p>
                         </Link>
                         <Link href="/industries/venture-capital/early-stage-diligence" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Practice</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Early-stage diligence →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Pre-investment evaluation.</p>
+                            <p className="text-xs text-gray-600 mt-2">Pre-investment evaluation.</p>
                         </Link>
                     </div>
                 </div>
@@ -136,6 +137,10 @@ export default function VCPortfolioSupportPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

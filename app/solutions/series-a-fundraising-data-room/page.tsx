@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Series A Fundraising Data Room | SpaceNexus",
@@ -160,7 +161,7 @@ export default function SeriesADataRoomPage() {
                             </svg>
                             Startup Fundraising
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                             The Data Room That Helps Startups{" "}
                             <span className="text-[#2563eb]">Close Series A</span>
                         </h1>
@@ -245,7 +246,7 @@ export default function SeriesADataRoomPage() {
                         <div className="relative">
                             <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
                                 <div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-yellow-400" /><div className="w-3 h-3 rounded-full bg-green-400" />
-                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / analytics</div>
+                                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                 <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus investor engagement analytics for Series A" className="w-full h-auto" loading="lazy" />
@@ -311,7 +312,7 @@ export default function SeriesADataRoomPage() {
                         <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">Request a Demo</Link>
                         <Link href="/checklists" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">Free Series A Checklist</Link>
                     </div>
-                    <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular access control</p>
+                    <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · AES-256 encryption at rest · Granular access control</p>
                 </div>
             </section>
                     {/* Related VDR Resources */}
@@ -363,7 +364,11 @@ export default function SeriesADataRoomPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For technology companies →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

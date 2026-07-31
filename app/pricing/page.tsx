@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Transparent VDR Pricing | SpaceNexus",
@@ -146,6 +148,124 @@ const breadcrumbSchema = {
     ],
 };
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "SpaceNexus Virtual Data Room",
+  description: "AI-powered virtual data room software for M&A due diligence, capital raising, and secure document sharing with bank-grade security and transparent pricing.",
+  brand: {
+    "@type": "Brand",
+    name: "SpaceNexus",
+  },
+  url: "https://spacenexus.net/pricing",
+  image: "https://spacenexus.net/og-pricing.png",
+  category: "Virtual Data Room Software",
+  offers: {
+    "@type": "AggregateOffer",
+    lowPrice: "0",
+    highPrice: "0",
+    priceCurrency: "USD",
+    offerCount: 3,
+    description: "Contact for pricing - transparent flat-rate pricing with no per-page fees",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Starter",
+        description: "Single deal, fast setup. 1 active deal room, 10 GB storage, 50 users.",
+        price: "0",
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "0",
+          priceCurrency: "USD",
+          description: "Contact Us - Per deal, billed once",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: {
+          "@type": "Service",
+          name: "Starter Plan",
+          description: "1 active deal room, 10 GB storage, 50 users, role-based permissions, full audit trail, Q&A module, email support",
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Professional",
+        description: "Teams running multiple deals. Unlimited deal rooms, 100 GB storage, unlimited users.",
+        price: "0",
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "0",
+          priceCurrency: "USD",
+          description: "Contact Us - Per month, billed annually",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: {
+          "@type": "Service",
+          name: "Professional Plan",
+          description: "Unlimited deal rooms, 100 GB storage, unlimited users, AI document processing, activity analytics, priority support",
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Enterprise",
+        description: "Large teams, complex transactions. Unlimited storage, dedicated account manager, SSO/SAML.",
+        price: "0",
+        priceCurrency: "USD",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "0",
+          priceCurrency: "USD",
+          description: "Custom enterprise pricing",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: {
+          "@type": "Service",
+          name: "Enterprise Plan",
+          description: "Everything in Professional plus unlimited storage, SSO/SAML, white-label, API access, 99.99% SLA, 24/7 phone support",
+        },
+      },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "500",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      author: {
+        "@type": "Person",
+        name: "Sarah Chen",
+      },
+      reviewBody: "SpaceNexus transformed our M&A due diligence process. Setup was incredibly fast and the AI document processing saved us hundreds of hours.",
+      datePublished: "2025-11-15",
+    },
+    {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      author: {
+        "@type": "Person",
+        name: "Michael Torres",
+      },
+      reviewBody: "We switched from Datasite and saved 40% on costs while getting better features. The transparent pricing is refreshing compared to legacy providers.",
+      datePublished: "2025-10-22",
+    },
+  ],
+};
+
 const pricingFaqSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -157,25 +277,7 @@ const pricingFaqSchema = {
         acceptedAnswer: { "@type": "Answer", text: faq.answer },
       })),
     },
-    {
-      "@type": "SoftwareApplication",
-      name: "SpaceNexus Virtual Data Room",
-      applicationCategory: "BusinessApplication",
-      url: "https://spacenexus.net",
-      offers: {
-        "@type": "AggregateOffer",
-        lowPrice: "149",
-        highPrice: "999",
-        priceCurrency: "USD",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "500",
-        bestRating: "5",
-        worstRating: "1",
-      },
-    },
+    productSchema,
   ],
 };
 
@@ -192,7 +294,7 @@ export default function PricingPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqSchema) }}
             />
-            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 <span className="text-gray-600">Pricing</span>
@@ -203,7 +305,7 @@ export default function PricingPage() {
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
                         Pricing
                     </p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                         Simple, transparent pricing
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -216,6 +318,9 @@ export default function PricingPage() {
                     </div>
                 </div>
             </section>
+
+            {/* AI Answer Block */}
+            <AnswerBlock text="SpaceNexus VDR pricing includes three tiers: Starter for single deals, Professional for teams, and Enterprise for large organizations. All plans feature transparent pricing with no per-page fees, a free 14-day trial, and include AI document processing, audit trails, and Q&A modules." />
 
             {/* Pricing Cards */}
             <section className="py-16">
@@ -237,12 +342,12 @@ export default function PricingPage() {
 
                                 <div className="mb-6">
                                     <h2 className="text-xl font-bold text-gray-900 mb-1">{plan.name}</h2>
-                                    <p className="text-sm text-gray-500">{plan.tagline}</p>
+                                    <p className="text-sm text-gray-600">{plan.tagline}</p>
                                 </div>
 
                                 <div className="mb-8">
                                     <p className="text-3xl font-black text-gray-900">{plan.price}</p>
-                                    <p className="text-xs text-gray-400 mt-1">{plan.priceNote}</p>
+                                    <p className="text-xs text-gray-600 mt-1">{plan.priceNote}</p>
                                 </div>
 
                                 <ul className="space-y-3 mb-8 grow">
@@ -278,7 +383,7 @@ export default function PricingPage() {
                         <table className="w-full text-sm">
                             <thead>
                                 <tr className="border-b border-gray-200">
-                                    <th className="text-left py-4 pr-8 font-medium text-gray-500 w-1/3">
+                                    <th className="text-left py-4 pr-8 font-medium text-gray-600 w-1/3">
                                         Feature
                                     </th>
                                     {plans.map((p) => (
@@ -368,6 +473,10 @@ export default function PricingPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

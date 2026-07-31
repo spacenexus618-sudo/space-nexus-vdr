@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Venture Capital | VC Data Room | SpaceNexus",
@@ -49,22 +50,73 @@ const vcSubPages = [
 const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: "Venture Capital Virtual Data Room", description: "Virtual data room for venture capital firms — early-stage diligence, LP communications, portfolio support, and exit preparation.", url: "https://spacenexus.net/industries/venture-capital", serviceType: "Virtual Data Room", provider: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" }, areaServed: { "@type": "Place", name: "Worldwide" }, audience: { "@type": "BusinessAudience", audienceType: "Venture capital investment teams" } };
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" }, { "@type": "ListItem", position: 2, name: "Industries", item: "https://spacenexus.net/industries" }, { "@type": "ListItem", position: 3, name: "Venture Capital", item: "https://spacenexus.net/industries/venture-capital" }] };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a VC data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A VC data room is a secure virtual repository where venture capital firms and startups share confidential documents during fundraising, due diligence, and portfolio management workflows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus help VC firms?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides LP reporting dashboards, portfolio company document management, deal pipeline tracking, and investor engagement analytics for VC fund operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can startups use SpaceNexus for fundraising?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus offers startup-friendly templates for Series A through Series C fundraising with automated NDA workflows and investor Q&A management.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is a VC data room?",
+    answer: "A VC data room is a secure virtual repository where venture capital firms and startups share confidential documents during fundraising, due diligence, and portfolio management workflows.",
+  },
+  {
+    question: "How does SpaceNexus help VC firms?",
+    answer: "SpaceNexus provides LP reporting dashboards, portfolio company document management, deal pipeline tracking, and investor engagement analytics for VC fund operations.",
+  },
+  {
+    question: "Can startups use SpaceNexus for fundraising?",
+    answer: "Yes. SpaceNexus offers startup-friendly templates for Series A through Series C fundraising with automated NDA workflows and investor Q&A management.",
+  },
+];
+
 export default function VentureCapitalPage() {
   return (
     <>
       <Script id="vc-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="vc-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main className="pt-20 lg:pt-24">
+        <Script
+          id="vc-faq"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Link href="/industries" className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors">
+                <Link href="/industries" className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors">
                   <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
                   All Industries
                 </Link>
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">Venture Capital</div>
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Data Rooms Built for VC Workflows</h1>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Data Rooms Built for VC Workflows</h1>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">From early-stage diligence to portfolio exits, SpaceNexus provides venture capital firms with the secure, efficient platform they need to evaluate opportunities, communicate with LPs, and support portfolio companies.</p>
                 <Link href="/demo" className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
                   Request a Demo
@@ -80,7 +132,7 @@ export default function VentureCapitalPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">VC Deal Management</h3>
-                      <p className="text-sm text-gray-500">Full investment lifecycle</p>
+                      <p className="text-sm text-gray-600">Full investment lifecycle</p>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -135,7 +187,7 @@ export default function VentureCapitalPage() {
               {vcSubPages.map((page) => (
                 <Link key={page.href} href={page.href} className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all duration-200">
                   <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">{page.title} →</h3>
-                  <p className="text-xs text-gray-500 mt-2">{page.description}</p>
+                  <p className="text-xs text-gray-600 mt-2">{page.description}</p>
                 </Link>
               ))}
             </div>
@@ -147,7 +199,26 @@ export default function VentureCapitalPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Set up your VC data room</h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Stage-appropriate diligence, fast Q&A, LP portals. Most teams are live in under 24 hours.</p>
             <Link href="/demo" className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
+          
+        {/* FAQ */}
+        <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                  <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
         </section>
       </main>
     </>

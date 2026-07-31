@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "VDR Keyword Tracking & Quarterly Content Update Process | SpaceNexus",
@@ -95,7 +96,7 @@ export default function KeywordTrackingPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/resources" className="hover:text-[#2563eb] transition-colors">Resources</Link>
@@ -103,7 +104,7 @@ export default function KeywordTrackingPage() {
                         <span className="text-gray-900">Keyword Tracking</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">SEO Resource</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">VDR Keyword Tracking &amp; Quarterly Content Updates</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">VDR Keyword Tracking &amp; Quarterly Content Updates</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">The VDR keyword tracking methodology, target keyword list, quarterly content update process, and performance benchmarks for ranking on virtual data room and M&amp;A search terms.</p>
                 </div>
             </section>
@@ -255,7 +256,7 @@ export default function KeywordTrackingPage() {
                                     <h3 className="text-base font-semibold text-gray-900 mb-2">{row.tier}</h3>
                                     <p className="text-sm text-gray-600 mb-1"><strong>Target:</strong> {row.target}</p>
                                     <p className="text-sm text-gray-600 mb-1"><strong>Realistic:</strong> {row.current}</p>
-                                    <p className="text-sm text-gray-500"><strong>Notes:</strong> {row.notes}</p>
+                                    <p className="text-sm text-gray-600"><strong>Notes:</strong> {row.notes}</p>
                                 </div>
                             ))}
                         </div>
@@ -286,17 +287,17 @@ export default function KeywordTrackingPage() {
                         <Link href="/resources/backlink-strategy" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Strategy</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Backlink outreach strategy →</h3>
-                            <p className="text-xs text-gray-500 mt-2">VDR link building playbook.</p>
+                            <p className="text-xs text-gray-600 mt-2">VDR link building playbook.</p>
                         </Link>
                         <Link href="/glossary" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Reference</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR &amp; M&amp;A glossary →</h3>
-                            <p className="text-xs text-gray-500 mt-2">100+ terms defined.</p>
+                            <p className="text-xs text-gray-600 mt-2">100+ terms defined.</p>
                         </Link>
                         <Link href="/blog" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Blog</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Blog & resources →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Guides, templates, and tools.</p>
+                            <p className="text-xs text-gray-600 mt-2">Guides, templates, and tools.</p>
                         </Link>
                     </div>
                 </div>
@@ -309,6 +310,10 @@ export default function KeywordTrackingPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Talk to our team →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

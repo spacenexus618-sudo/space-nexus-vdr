@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import ContactForm from "./ContactForm";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Contact Kindora — Request a Demo",

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
   title: "Industries — VDR Solutions by Sector | SpaceNexus",
@@ -268,6 +270,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What industries does SpaceNexus serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, technology, real estate, and energy infrastructure teams with industry-specific VDR templates and compliance features.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does SpaceNexus offer industry-specific data room templates?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus provides pre-built folder structures and workflow templates for M&A deals, capital raises, legal due diligence, and industry-specific transactions across 10+ verticals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is SpaceNexus compliant with industry regulations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus is SOC 2 Type II certified, ISO 27001 compliant, and supports SEC/FINRA, HIPAA, and GDPR requirements across regulated industries.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What industries does SpaceNexus serve?",
+    answer: "SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, technology, real estate, and energy infrastructure teams with industry-specific VDR templates and compliance features.",
+  },
+  {
+    question: "Does SpaceNexus offer industry-specific data room templates?",
+    answer: "Yes. SpaceNexus provides pre-built folder structures and workflow templates for M&A deals, capital raises, legal due diligence, and industry-specific transactions across 10+ verticals.",
+  },
+  {
+    question: "Is SpaceNexus compliant with industry regulations?",
+    answer: "SpaceNexus is SOC 2 Type II certified, ISO 27001 compliant, and supports SEC/FINRA, HIPAA, and GDPR requirements across regulated industries.",
+  },
+];
+
 export default function IndustriesPage() {
   return (
     <>
@@ -282,13 +330,18 @@ export default function IndustriesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <main className="pt-20 lg:pt-24">
+      <Script
+        id="ind-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-[#2563eb] text-sm font-medium mb-6">
             Industry Solutions
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Built for Your Industry
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -299,6 +352,8 @@ export default function IndustriesPage() {
           </p>
         </div>
       </section>
+
+      <AnswerBlock text="SpaceNexus serves investment banking, private equity, venture capital, law firms, and corporate development teams. Industry-specific features include deal workflow templates, compliance reporting for regulated industries, and configurable permission structures for complex multi-party transactions." />
 
       {/* Industries Grid */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">
@@ -517,7 +572,26 @@ export default function IndustriesPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

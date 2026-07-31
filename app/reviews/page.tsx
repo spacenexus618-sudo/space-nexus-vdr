@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR Reviews & Testimonials | SpaceNexus",
@@ -219,7 +220,7 @@ export default function ReviewsPage() {
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
             Customer Reviews
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             Trusted by Deal Teams Worldwide
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
@@ -313,7 +314,7 @@ export default function ReviewsPage() {
                   <p className="text-sm font-semibold text-gray-900">
                     {review.author}
                   </p>
-                  <p className="text-xs text-gray-500">{review.company}</p>
+                  <p className="text-xs text-gray-600">{review.company}</p>
                   <span className="inline-block mt-2 text-xs font-medium text-[#2563eb] bg-blue-50 px-2 py-1 rounded-full">
                     {review.useCase}
                   </span>
@@ -345,13 +346,13 @@ export default function ReviewsPage() {
                 rel="noopener noreferrer"
                 className="group flex flex-col sm:flex-row sm:items-center gap-4 bg-[#f8f9fa] rounded-xl border border-gray-200 p-6 hover:border-[#2563eb] transition-colors"
               >
-                <div className="text-4xl shrink-0">{platform.icon}</div>
+                <div className="text-3xl sm:text-4xl shrink-0">{platform.icon}</div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#2563eb]">
                       {platform.name}
                     </h3>
-                    <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+                    <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">
                       {platform.category}
                     </span>
                   </div>
@@ -388,7 +389,7 @@ export default function ReviewsPage() {
               <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">
                 SpaceNexus vs Datasite
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Feature comparison, pricing, and migration guide
               </p>
             </Link>
@@ -399,7 +400,7 @@ export default function ReviewsPage() {
               <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">
                 SpaceNexus vs Intralinks
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Feature comparison, pricing, and migration guide
               </p>
             </Link>
@@ -410,7 +411,7 @@ export default function ReviewsPage() {
               <h3 className="font-bold text-gray-900 group-hover:text-[#2563eb] mb-2">
                 VDR Alternatives 2026
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-600">
                 Compare 6 providers side-by-side
               </p>
             </Link>
@@ -468,7 +469,11 @@ export default function ReviewsPage() {
               View Pricing
             </Link>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </>
   );

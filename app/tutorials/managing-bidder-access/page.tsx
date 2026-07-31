@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Managing Bidder Access — SpaceNexus Video Tutorial | SpaceNexus",
@@ -12,6 +13,23 @@ export const metadata: Metadata = {
 
 const videoSchema = { "@context": "https://schema.org", "@type": "VideoObject", name: "Managing Bidder Access", description: "Tutorial on configuring tiered bidder permissions for sell-side M&A processes.", thumbnailUrl: "https://spacenexus.net/tutorials/managing-bidder-access/thumbnail.png", uploadDate: "2026-06-18", duration: "PT10M", contentUrl: "https://spacenexus.net/tutorials/managing-bidder-access", embedUrl: "https://spacenexus.net/tutorials/managing-bidder-access", publisher: { "@type": "Organization", name: "SpaceNexus", url: "https://spacenexus.net" } };
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://spacenexus.net" }, { "@type": "ListItem", position: 2, name: "Tutorials", item: "https://spacenexus.net/tutorials" }, { "@type": "ListItem", position: 3, name: "Managing Bidder Access", item: "https://spacenexus.net/tutorials/managing-bidder-access" }] };
+
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Manage Bidder Access in a Virtual Data Room",
+    description: "Configure tiered bidder permissions for sell-side M&A processes, including initial bidders, shortlisted bidders, and final-round access management.",
+    totalTime: "PT10M",
+    step: [
+        { "@type": "HowToStep", name: "Design the bidder tier model", text: "Determine the tiered access structure to maintain competitive tension in the auction while controlling information disclosure." },
+        { "@type": "HowToStep", name: "Create permission groups", text: "Set up groups for Initial Bidders, Shortlisted Bidders, Final Round, Counsel, and Advisors — each with separate access." },
+        { "@type": "HowToStep", name: "Configure group-level access", text: "Apply folder and document-level permissions to each group. Hide confidential materials from initial bidders." },
+        { "@type": "HowToStep", name: "Set up NDA click-through", text: "Require bidders to accept your NDA before accessing the data room. Track NDA acceptance in the audit log." },
+        { "@type": "HowToStep", name: "Configure time-limited access", text: "Set access to expire at round deadlines. Stage disclosure as the process advances through rounds." },
+        { "@type": "HowToStep", name: "Advance bidders between rounds", text: "Move bidders from Initial to Shortlisted to Final Round with bulk permission changes." },
+        { "@type": "HowToStep", name: "Monitor bidder activity", text: "Use engagement analytics to identify the most active and serious bidders before advancing them." },
+    ],
+};
 
 const steps = [
     { time: "0:00", title: "The bidder tier model", desc: "Why tiered access matters — controlling information disclosure to maintain competitive tension in the auction." },
@@ -28,21 +46,22 @@ export default function ManagingBidderAccessPage() {
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="tut-bidder-video" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
             <Script id="tut-bidder-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="tut-bidder-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link><span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">Managing Bidder Access</span>
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">10 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Intermediate</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">10 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Intermediate</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Managing Bidder Access</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Managing Bidder Access</h1>
                     <p className="text-xl text-gray-600">Configure tiered bidder permissions for sell-side M&amp;A processes. Initial bidders, shortlisted bidders, and final-round access management.</p>
                 </div>
             </section>
@@ -95,6 +114,10 @@ export default function ManagingBidderAccessPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

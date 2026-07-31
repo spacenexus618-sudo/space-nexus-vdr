@@ -30,26 +30,26 @@ export default function SystemStatus() {
 
   return (
     <div className="fixed bottom-6 left-4 md:left-6 z-50">
-      <div className="bg-white rounded-full px-4 py-2 shadow-lg border border-gray-200 flex items-center gap-3 hover:shadow-xl transition-shadow">
+      <div className="bg-white rounded-full px-3 sm:px-4 py-2 shadow-lg border border-gray-200 flex items-center gap-2 sm:gap-3 hover:shadow-xl transition-shadow max-w-[calc(100vw-2rem)]">
         {/* Status Indicator */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
           <span
-            className={`w-2.5 h-2.5 rounded-full ${
+            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full flex-shrink-0 ${
               allOperational
                 ? "bg-green-500 animate-pulse"
                 : "bg-yellow-500 animate-pulse"
             }`}
           />
-          <span className="text-sm font-medium text-gray-700">
+          <span className="text-xs sm:text-sm font-medium text-gray-700 truncate">
             {allOperational ? "All Systems Operational" : "Partial Outage"}
           </span>
         </div>
 
         {/* Separator */}
-        <div className="w-px h-4 bg-gray-300" />
+        <div className="w-px h-4 bg-gray-300 flex-shrink-0" />
 
         {/* Uptime */}
-        <span className="text-sm text-gray-500 min-w-[5.5rem] text-right">{uptime} uptime</span>
+        <span className="text-xs sm:text-sm text-gray-600 text-right flex-shrink-0 whitespace-nowrap">{uptime} uptime</span>
       </div>
     </div>
   );

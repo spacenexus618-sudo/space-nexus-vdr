@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
+import AnswerBlock from "../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Data Room for Due Diligence | SpaceNexus",
@@ -394,7 +396,7 @@ export default function DataRoomDueDiligencePage() {
                 <section className="py-14 lg:py-20 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Data Room Due Diligence</span>
@@ -405,7 +407,7 @@ export default function DataRoomDueDiligencePage() {
                                 </svg>
                                 Complete Guide · Updated June 2026
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Data Room{" "}
                                 <span className="text-[#2563eb]">Due Diligence</span>
                                 <br />Setup & Best Practices
@@ -414,7 +416,7 @@ export default function DataRoomDueDiligencePage() {
                                 How to set up, organize, and run a due diligence data room that closes deals faster — not one that creates more work. Covers folder structure, access permissions, Q&A workflow, buyer analytics, and the 8 best practices every sell-side team should follow.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="#setup" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#setup" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     6-Step Setup Guide
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                                 </a>
@@ -425,6 +427,8 @@ export default function DataRoomDueDiligencePage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus streamlines M&A due diligence with AI-powered document categorization, structured Q&A workflows with SLA tracking, real-time buyer engagement analytics, and tiered bidder access controls. Setup takes under 24 hours with pre-built folder templates for common deal types." />
 
                 {/* What is a due diligence data room */}
                 <section className="py-14 bg-white border-t border-gray-100">
@@ -588,7 +592,7 @@ export default function DataRoomDueDiligencePage() {
                                     {securityRequirements.map((req, i) => (
                                         <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
                                             <td className="px-5 py-3.5 font-semibold text-gray-800 text-sm border-b border-gray-100">{req.requirement}</td>
-                                            <td className="px-5 py-3.5 text-xs text-gray-500 border-b border-gray-100 leading-relaxed max-w-xs">{req.why}</td>
+                                            <td className="px-5 py-3.5 text-xs text-gray-600 border-b border-gray-100 leading-relaxed max-w-xs">{req.why}</td>
                                             <td className="px-4 py-3.5 text-center border-b border-gray-100">
                                                 {req.mustHave ? (
                                                     <span className="inline-flex items-center gap-1 text-xs font-semibold text-green-700 bg-green-50 px-2.5 py-1 rounded-full">
@@ -596,7 +600,7 @@ export default function DataRoomDueDiligencePage() {
                                                         Must-have
                                                     </span>
                                                 ) : (
-                                                    <span className="text-xs text-gray-400 font-medium">Deal-specific</span>
+                                                    <span className="text-xs text-gray-600 font-medium">Deal-specific</span>
                                                 )}
                                             </td>
                                         </tr>
@@ -604,7 +608,7 @@ export default function DataRoomDueDiligencePage() {
                                 </tbody>
                             </table>
                         </div>
-                        <p className="text-xs text-gray-400 mt-3 text-center">SpaceNexus meets all must-have requirements and supports all deal-specific requirements.</p>
+                        <p className="text-xs text-gray-600 mt-3 text-center">SpaceNexus meets all must-have requirements and supports all deal-specific requirements.</p>
                     </div>
                 </section>
 
@@ -775,8 +779,12 @@ export default function DataRoomDueDiligencePage() {
                                 Download the Checklist
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    </div>
+                        <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
 
             </main>

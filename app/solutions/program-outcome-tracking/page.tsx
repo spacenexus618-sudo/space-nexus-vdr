@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Program Outcome Tracking Software | SpaceNexus",
@@ -198,7 +199,7 @@ export default function ProgramOutcomeTrackingPage() {
             <main className="pt-20 lg:pt-24">
                 {/* Breadcrumb */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>/</span>
                         <Link href="/solutions/mergers-and-acquisitions-vdr" className="hover:text-[#2563eb] transition-colors">Solutions</Link>
@@ -217,7 +218,7 @@ export default function ProgramOutcomeTrackingPage() {
                                 </svg>
                                 Impact Measurement Solution
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Program Outcome Tracking That{" "}
                                 <span className="text-[#2563eb]">Proves What Works</span>
                             </h1>
@@ -301,7 +302,7 @@ export default function ProgramOutcomeTrackingPage() {
                                     {features.map((f) => (
                                         <div key={f.title} className="p-4 bg-gray-50 rounded-xl border border-gray-100">
                                             <p className="text-sm font-bold text-gray-900 mb-1">{f.title}</p>
-                                            <p className="text-xs text-gray-500 leading-relaxed">{f.desc}</p>
+                                            <p className="text-xs text-gray-600 leading-relaxed">{f.desc}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -315,7 +316,7 @@ export default function ProgramOutcomeTrackingPage() {
                             <div className="relative">
                                 <div className="bg-gray-800 rounded-t-xl px-4 py-3 flex items-center gap-2">
                                     <div className="w-3 h-3 rounded-full bg-red-400" /><div className="w-3 h-3 rounded-full bg-yellow-400" /><div className="w-3 h-3 rounded-full bg-green-400" />
-                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.spacenexus.net / outcomes</div>
+                                    <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / outcomes</div>
                                 </div>
                                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
                                     <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus program outcome tracking dashboard" className="w-full h-auto" loading="lazy" />
@@ -363,7 +364,7 @@ export default function ProgramOutcomeTrackingPage() {
                                 <details key={faq.q} className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
                                     <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:text-[#2563eb] transition-colors flex items-center justify-between">
                                         {faq.q}
-                                        <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-5 h-5 text-gray-600 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </summary>
@@ -383,7 +384,7 @@ export default function ProgramOutcomeTrackingPage() {
                             <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">Request a Demo</Link>
                             <Link href="/pricing" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">View Pricing</Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · AES-256 encryption · Tamper-evident audit logs</p>
                     </div>
                 </section>
 
@@ -418,7 +419,11 @@ export default function ProgramOutcomeTrackingPage() {
                                 <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">View Pricing →</h3>
                             </Link>
                         </div>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>

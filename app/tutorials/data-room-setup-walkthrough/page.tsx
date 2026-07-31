@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Data Room Setup Walkthrough — SpaceNexus Video Tutorial | SpaceNexus",
@@ -37,15 +38,36 @@ const breadcrumbSchema = {
     ],
 };
 
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Set Up a Virtual Data Room",
+    description: "Step-by-step guide to setting up a SpaceNexus virtual data room, from creation to initial document upload and permission configuration.",
+    totalTime: "PT12M",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "0" },
+    supply: ["Documents to upload", "User list for permissions"],
+    tool: ["SpaceNexus VDR"],
+    step: [
+        { "@type": "HowToStep", name: "Create a new data room", text: "Click New Data Room, choose the deal type template (M&A, fundraising, legal, real estate), and enter the basic details." },
+        { "@type": "HowToStep", name: "Set up folder structure", text: "Apply the 8-folder structure (Corporate, Financial, Commercial, Tech & IP, People & HR, Legal, Real Estate, Management Presentation) and customize for your deal." },
+        { "@type": "HowToStep", name: "Upload documents", text: "Drag and drop thousands of files at once. AI auto-indexing categorizes documents into the right folders automatically." },
+        { "@type": "HowToStep", name: "Configure permission groups", text: "Create permission tiers for full bidders, shortlisted bidders, counsel, and advisors. Set document-level permissions where needed." },
+        { "@type": "HowToStep", name: "Set up NDA and invitations", text: "Set up NDA click-through workflows and customize the email invitation template." },
+        { "@type": "HowToStep", name: "Configure Q&A", text: "Configure category routing, response SLAs, and pre-prepared FAQ documents for the most likely buyer questions." },
+        { "@type": "HowToStep", name: "Test and launch", text: "Run a test with a mock bidder, verify all workflows, and launch the data room." },
+    ],
+};
+
 export default function DataRoomSetupWalkthroughPage() {
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="tut-setup-video" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
             <Script id="tut-setup-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="tut-setup-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
             <section className="pt-28 pb-12 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link>
@@ -54,12 +76,12 @@ export default function DataRoomSetupWalkthroughPage() {
                     </nav>
                     <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
                         <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">12 min</span>
-                        <span className="text-gray-500">·</span>
-                        <span className="text-gray-500">Beginner</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">12 min</span>
+                        <span className="text-gray-600">·</span>
+                        <span className="text-gray-600">Beginner</span>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Data Room Setup Walkthrough</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Data Room Setup Walkthrough</h1>
                     <p className="text-xl text-gray-600">Set up a new virtual data room from scratch. Folder structure, document upload, AI auto-indexing, and initial permissions configuration.</p>
                 </div>
             </section>
@@ -129,11 +151,11 @@ export default function DataRoomSetupWalkthroughPage() {
                     <div className="grid md:grid-cols-2 gap-4">
                         <Link href="/tutorials/managing-bidder-access" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Managing bidder access →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Configure tiered bidder permissions for sell-side processes.</p>
+                            <p className="text-xs text-gray-600 mt-2">Configure tiered bidder permissions for sell-side processes.</p>
                         </Link>
                         <Link href="/tutorials/structured-qa-workflow" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Structured Q&amp;A workflow →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Set up routing, SLAs, and pre-prepared FAQs.</p>
+                            <p className="text-xs text-gray-600 mt-2">Set up routing, SLAs, and pre-prepared FAQs.</p>
                         </Link>
                     </div>
                 </div>
@@ -146,6 +168,10 @@ export default function DataRoomSetupWalkthroughPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

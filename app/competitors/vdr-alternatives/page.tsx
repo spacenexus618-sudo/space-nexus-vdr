@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "VDR Alternatives 2026 | SpaceNexus",
@@ -236,11 +238,101 @@ const breadcrumbSchema = {
     ],
 };
 
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Best Virtual Data Room Providers 2026",
+    description: "Side-by-side comparison of the top virtual data room providers for M&A due diligence, fundraising, and secure document sharing.",
+    numberOfItems: 6,
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "SpaceNexus",
+                applicationCategory: "BusinessApplication",
+                url: "https://spacenexus.net",
+                description: "AI-powered VDR for modern deal teams with transparent pricing, AI document redaction, and setup in under 24 hours.",
+                offers: {
+                    "@type": "AggregateOffer",
+                    lowPrice: "0",
+                    highPrice: "Custom",
+                    priceCurrency: "USD",
+                    offerCount: 3,
+                },
+                aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "4.9",
+                    reviewCount: "500",
+                    bestRating: "5",
+                },
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Datasite",
+                applicationCategory: "BusinessApplication",
+                url: "https://datasite.com",
+                description: "Legacy enterprise VDR for large-cap M&A with opaque quote-only pricing and days-long setup.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Intralinks (SS&C)",
+                applicationCategory: "BusinessApplication",
+                url: "https://intralinks.com",
+                description: "Capital markets-focused VDR with complex interface and expensive per-deal pricing.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 4,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Firmex",
+                applicationCategory: "BusinessApplication",
+                url: "https://firmex.com",
+                description: "Mid-market Canadian VDR with reasonable pricing for smaller teams and basic document management.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 5,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "iDeals",
+                applicationCategory: "BusinessApplication",
+                url: "https://idealsvdr.com",
+                description: "European VDR with multi-language support for cross-border deals and modern interface.",
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 6,
+            item: {
+                "@type": "SoftwareApplication",
+                name: "Ansarada",
+                applicationCategory: "BusinessApplication",
+                url: "https://ansarada.com",
+                description: "Australia-based VDR with built-in deal workflow management and board governance modules.",
+            },
+        },
+    ],
+};
+
 export default function VdrAlternativesPage() {
     return (
         <>
             <Script id="vdr-alt-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="vdr-alt-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="vdr-alt-itemlist" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
             <main className="pt-20 lg:pt-24">
                 {/* Hero */}
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
@@ -252,18 +344,18 @@ export default function VdrAlternativesPage() {
                                 </svg>
                                 2026 Comparison Guide
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 Best Virtual Data Room Providers{" "}
                                 <span className="text-[#2563eb]">Compared for 2026</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 Choosing the right VDR can make or break your deal timeline. We compared pricing, security, AI features, and compliance across the six most-used virtual data room providers — so you don&apos;t have to request six demo calls to find out.
                             </p>
-                            <p className="text-base text-gray-500 mb-10 leading-relaxed">
+                            <p className="text-base text-gray-600 mb-10 leading-relaxed">
                                 Last updated: June 2026. This guide covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Jump to Comparison Table
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -276,6 +368,8 @@ export default function VdrAlternativesPage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is the top alternative to legacy VDR providers in 2026. It offers AI-powered document redaction, transparent pricing, structured Q&A workflows, and real-time buyer analytics. Setup takes under 24 hours with no onboarding calls, and all features are included in every plan." />
 
                 {/* Provider Cards */}
                 <section className="py-16 lg:py-20 bg-[#f8f9fa]">
@@ -297,12 +391,12 @@ export default function VdrAlternativesPage() {
                                             <span className="text-xs font-semibold bg-[#2563eb] text-white px-2.5 py-1 rounded-full">Recommended</span>
                                         )}
                                     </div>
-                                    <p className="text-sm text-gray-500 mb-4">{p.tagline}</p>
+                                    <p className="text-sm text-gray-600 mb-4">{p.tagline}</p>
                                     <div className="mb-4">
                                         <span className="text-2xl font-bold text-gray-900">{p.pricing}</span>
-                                        <span className="text-xs text-gray-500 ml-2">{p.pricingNote}</span>
+                                        <span className="text-xs text-gray-600 ml-2">{p.pricingNote}</span>
                                     </div>
-                                    <p className="text-xs font-medium text-gray-500 mb-3">Best for: {p.bestFor}</p>
+                                    <p className="text-xs font-medium text-gray-600 mb-3">Best for: {p.bestFor}</p>
                                     <div className="mb-4">
                                         <p className="text-xs font-semibold text-green-700 mb-1.5">Strengths</p>
                                         <ul className="space-y-1">
@@ -353,7 +447,7 @@ export default function VdrAlternativesPage() {
                                     <tr className="bg-gray-50">
                                         <th className="text-left px-4 py-4 font-semibold text-gray-900 border-b border-gray-200 sticky left-0 bg-gray-50 z-10">Feature</th>
                                         {providerNames.map((name, i) => (
-                                            <th key={name} className={`text-center px-3 py-4 font-semibold border-b border-gray-200 min-w-[100px] ${i === 0 ? "text-[#2563eb] bg-blue-50/50" : "text-gray-500"}`}>
+                                            <th key={name} className={`text-center px-3 py-4 font-semibold border-b border-gray-200 min-w-[100px] ${i === 0 ? "text-[#2563eb] bg-blue-50/50" : "text-gray-600"}`}>
                                                 {name}
                                             </th>
                                         ))}
@@ -374,7 +468,7 @@ export default function VdrAlternativesPage() {
                                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                                                         </span>
                                                     ) : (
-                                                        <span className="text-xs text-gray-500 font-medium">{val}</span>
+                                                        <span className="text-xs text-gray-600 font-medium">{val}</span>
                                                     )}
                                                 </td>
                                             ))}
@@ -534,7 +628,11 @@ export default function VdrAlternativesPage() {
                                 View Pricing
                             </Link>
                         </div>
-                    </div>
+                    
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
                 </section>
             </main>
         </>

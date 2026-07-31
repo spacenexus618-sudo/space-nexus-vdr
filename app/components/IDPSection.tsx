@@ -152,7 +152,7 @@ export default function IDPSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">IDP Engine</p>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-600">
                       Real-time processing
                     </p>
                   </div>
@@ -178,7 +178,7 @@ export default function IDPSection() {
                   >
                     <div className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center">
                       <svg
-                        className="w-4 h-4 text-gray-400"
+                        className="w-4 h-4 text-gray-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -226,7 +226,7 @@ export default function IDPSection() {
                     <p className="text-xl lg:text-2xl font-bold text-[#2563eb]">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-gray-500">{stat.label}</p>
+                    <p className="text-xs text-gray-600">{stat.label}</p>
                   </div>
                 ))}
               </div>

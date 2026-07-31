@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "VDR for Technology Companies | SpaceNexus",
@@ -183,6 +184,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a tech M&A data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A technology M&A data room is a secure virtual workspace for sharing source code, IP documentation, customer data, and financial records during tech company acquisitions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus handle tech due diligence?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides AI-powered document categorization for technical documents, IP portfolio management, and structured Q&A for engineering and product due diligence questions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can tech companies use SpaceNexus for IPO preparation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus offers IPO-ready data room templates with compliance reporting, SEC-ready document structures, and auditor-friendly access controls.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is a tech M&A data room?",
+    answer: "A technology M&A data room is a secure virtual workspace for sharing source code, IP documentation, customer data, and financial records during tech company acquisitions.",
+  },
+  {
+    question: "How does SpaceNexus handle tech due diligence?",
+    answer: "SpaceNexus provides AI-powered document categorization for technical documents, IP portfolio management, and structured Q&A for engineering and product due diligence questions.",
+  },
+  {
+    question: "Can tech companies use SpaceNexus for IPO preparation?",
+    answer: "Yes. SpaceNexus offers IPO-ready data room templates with compliance reporting, SEC-ready document structures, and auditor-friendly access controls.",
+  },
+];
+
 export default function TechnologyPage() {
   return (
     <>
@@ -197,6 +244,11 @@ export default function TechnologyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="tech-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,7 +256,7 @@ export default function TechnologyPage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -224,7 +276,7 @@ export default function TechnologyPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 text-sm font-medium mb-4">
                 Technology
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Data Rooms Built for Tech Speed
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -275,7 +327,7 @@ export default function TechnologyPage() {
                     <h3 className="font-semibold text-gray-900">
                       Tech Transactions
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Built for speed and security
                     </p>
                   </div>
@@ -468,7 +520,26 @@ export default function TechnologyPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Best data rooms for startups →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

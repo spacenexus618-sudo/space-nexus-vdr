@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "Virtual Data Room FAQ — 30+ Questions Answered | SpaceNexus",
@@ -180,16 +181,27 @@ export default function DataRoomFAQPage() {
         areaServed: { "@type": "Place", name: "Worldwide" },
     };
 
+    const speakableSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Virtual Data Room FAQ",
+        speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: [".faq-question", ".faq-answer"],
+        },
+    };
+
     return (
         <div className="min-h-screen bg-[#f8f9fa]">
             <Script id="data-room-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="data-room-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <Script id="data-room-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <Script id="data-room-speakable-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
             {/* Hero */}
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <Link href="/faq" className="hover:text-[#2563eb] transition-colors">FAQ</Link>
@@ -197,7 +209,7 @@ export default function DataRoomFAQPage() {
                         <span className="text-gray-900">Data Room</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">FAQ</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Virtual Data Room FAQ: What a VDR Is, How It Works, and When to Use One</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Virtual Data Room FAQ: What a VDR Is, How It Works, and When to Use One</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mb-8">
                         The most comprehensive FAQ on virtual data rooms — {flatFaqs.length} questions covering what a VDR is, how it works, when to use one, pricing, setup, and more.
                     </p>
@@ -218,7 +230,7 @@ export default function DataRoomFAQPage() {
             {/* Table of contents */}
             <section className="py-10 bg-white border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Jump to category</h2>
+                    <h2 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-4">Jump to category</h2>
                     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
                         {categories.map(c => (
                             <a
@@ -227,7 +239,7 @@ export default function DataRoomFAQPage() {
                                 className="block p-4 rounded-xl border border-gray-200 hover:border-[#2563eb]/40 hover:shadow-sm transition-all"
                             >
                                 <h3 className="text-sm font-semibold text-gray-900">{c.title}</h3>
-                                <p className="text-xs text-gray-500 mt-1">{c.items.length} questions</p>
+                                <p className="text-xs text-gray-600 mt-1">{c.items.length} questions</p>
                             </a>
                         ))}
                     </div>
@@ -275,17 +287,17 @@ export default function DataRoomFAQPage() {
                         <Link href="/faq/vdr-security" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR security FAQ →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Encryption, access controls, watermarking, and 35+ more questions answered.</p>
+                            <p className="text-xs text-gray-600 mt-2">Encryption, access controls, watermarking, and 35+ more questions answered.</p>
                         </Link>
                         <Link href="/faq/vdr-compliance" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">FAQ</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR compliance FAQ →</h3>
-                            <p className="text-xs text-gray-500 mt-2">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4 — all compliance questions answered.</p>
+                            <p className="text-xs text-gray-600 mt-2">SOC 2, ISO 27001, GDPR, HIPAA, SEC 17a-4 — all compliance questions answered.</p>
                         </Link>
                         <Link href="/blog/what-is-a-virtual-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR vs physical data room →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Side-by-side comparison of VDRs and physical data rooms in 2026.</p>
+                            <p className="text-xs text-gray-600 mt-2">Side-by-side comparison of VDRs and physical data rooms in 2026.</p>
                         </Link>
                     </div>
                 </div>
@@ -310,6 +322,10 @@ export default function DataRoomFAQPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

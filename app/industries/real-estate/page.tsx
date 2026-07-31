@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Real Estate Data Room 2026 | SpaceNexus",
@@ -188,6 +189,52 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a real estate data room?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A real estate data room is a secure platform for sharing property documents, title records, lease agreements, environmental reports, and financial models during transactions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus support real estate deals?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus provides property-specific folder templates, bulk document upload for large portfolios, and structured Q&A for buyer due diligence questions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is SpaceNexus used for real estate M&A?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. SpaceNexus is used by real estate firms, REITs, and property developers for acquisitions, dispositions, joint ventures, and portfolio transactions.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What is a real estate data room?",
+    answer: "A real estate data room is a secure platform for sharing property documents, title records, lease agreements, environmental reports, and financial models during transactions.",
+  },
+  {
+    question: "How does SpaceNexus support real estate deals?",
+    answer: "SpaceNexus provides property-specific folder templates, bulk document upload for large portfolios, and structured Q&A for buyer due diligence questions.",
+  },
+  {
+    question: "Is SpaceNexus used for real estate M&A?",
+    answer: "Yes. SpaceNexus is used by real estate firms, REITs, and property developers for acquisitions, dispositions, joint ventures, and portfolio transactions.",
+  },
+];
+
 export default function RealEstatePage() {
   return (
     <>
@@ -202,6 +249,11 @@ export default function RealEstatePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <main className="pt-20 lg:pt-24">
+      <Script
+        id="re-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,7 +261,7 @@ export default function RealEstatePage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -229,7 +281,7 @@ export default function RealEstatePage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
                 Real Estate
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Real Estate Data Room
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -281,7 +333,7 @@ export default function RealEstatePage() {
                     <h3 className="font-semibold text-gray-900">
                       Real Estate Transactions
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Complete asset management
                     </p>
                   </div>
@@ -461,7 +513,26 @@ export default function RealEstatePage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & compliance →</h3>
                         </Link>
                     </div>
+                
+            {/* FAQ */}
+            <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="bg-[#f8f9fa] rounded-xl border border-gray-200 p-6">
+                      <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </section>
+
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

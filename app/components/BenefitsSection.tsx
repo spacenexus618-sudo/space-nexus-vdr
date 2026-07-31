@@ -173,7 +173,7 @@ export default function BenefitsSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="/demo"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 Talk to Our Team
                 <svg
@@ -192,7 +192,7 @@ export default function BenefitsSection() {
               </a>
               <a
                 href="/pricing"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 View Pricing
               </a>

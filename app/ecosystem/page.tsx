@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { ecosystemProducts } from "./data";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Space AI Product Ecosystem | SpaceNexus VDR",
@@ -157,7 +158,7 @@ export default function EcosystemPage() {
       />
 
       <main className="min-h-screen bg-gray-950 text-white">
-        <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6" aria-label="Breadcrumb">
+        <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           <span className="text-gray-600">Ecosystem</span>
@@ -170,18 +171,18 @@ export default function EcosystemPage() {
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
               Space AI Product Family
             </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-3xl sm:text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               One Company.{" "}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Eight Products.
               </span>
             </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-400">
+            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600">
               SpaceNexus is part of the Space AI ecosystem — a family of
               AI-powered business software products built by the same team for
               construction, infrastructure, and deal-driven organizations.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-500">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
               <span className="flex items-center gap-1.5">
                 <svg className="h-4 w-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -210,7 +211,7 @@ export default function EcosystemPage() {
             <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
               Explore the Full Space AI Suite
             </h2>
-            <p className="text-gray-400">
+            <p className="text-gray-600">
               Each product works independently. Together they cover the complete operational stack.
             </p>
           </div>
@@ -241,8 +242,8 @@ export default function EcosystemPage() {
                 <h3 className="mb-1.5 text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
                   {product.name}
                 </h3>
-                <p className="mb-3 text-sm text-gray-400">{product.tagline}</p>
-                <p className="text-sm text-gray-500 line-clamp-2">
+                <p className="mb-3 text-sm text-gray-600">{product.tagline}</p>
+                <p className="text-sm text-gray-600 line-clamp-2">
                   {product.description}
                 </p>
 
@@ -263,7 +264,7 @@ export default function EcosystemPage() {
             <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
               All Products. One Company. One Vision.
             </h2>
-            <p className="mb-8 text-gray-400">
+            <p className="mb-8 text-gray-600">
               Space AI builds AI-powered software for construction,
               infrastructure, and financial services organizations. Every
               product in the suite is built and maintained by the same team,
@@ -274,17 +275,17 @@ export default function EcosystemPage() {
               <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-5">
                 <div className="mb-3 text-2xl font-bold text-blue-400">8</div>
                 <div className="text-sm font-medium text-white">Products in the suite</div>
-                <div className="mt-1 text-xs text-gray-500">All built by Space AI</div>
+                <div className="mt-1 text-xs text-gray-600">All built by Space AI</div>
               </div>
               <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-5">
                 <div className="mb-3 text-2xl font-bold text-blue-400">1</div>
                 <div className="text-sm font-medium text-white">Company behind them all</div>
-                <div className="mt-1 text-xs text-gray-500">One team, one vision</div>
+                <div className="mt-1 text-xs text-gray-600">One team, one vision</div>
               </div>
               <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-5">
                 <div className="mb-3 text-2xl font-bold text-blue-400">AI</div>
                 <div className="text-sm font-medium text-white">First in every product</div>
-                <div className="mt-1 text-xs text-gray-500">Not bolted on after the fact</div>
+                <div className="mt-1 text-xs text-gray-600">Not bolted on after the fact</div>
               </div>
             </div>
           </div>
@@ -296,7 +297,7 @@ export default function EcosystemPage() {
             <h2 className="mb-4 text-2xl font-bold text-white">
               Start with SpaceNexus
             </h2>
-            <p className="mb-8 text-gray-400">
+            <p className="mb-8 text-gray-600">
               See how SpaceNexus handles secure due diligence and deal
               management — and explore the rest of the Space AI suite at your
               own pace.
@@ -312,12 +313,16 @@ export default function EcosystemPage() {
                 href="https://pmspace.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg border border-gray-600 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:border-gray-400 hover:text-white"
+                className="rounded-lg border border-gray-600 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:border-gray-400 hover:text-white min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 Visit Space AI
               </a>
             </div>
-          </div>
+          
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
         </section>
       </main>
     </>

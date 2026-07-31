@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "SpaceNexus Video Tutorials — Platform Feature Walkthroughs | SpaceNexus",
@@ -113,13 +114,13 @@ export default function TutorialsIndexPage() {
 
             <section className="pt-28 pb-16 bg-gradient-to-b from-white to-[#f8f9fa] border-b border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
                         <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                         <span>›</span>
                         <span className="text-gray-900">Tutorials</span>
                     </nav>
                     <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">Video Library</p>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">SpaceNexus Video Tutorials</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">SpaceNexus Video Tutorials</h1>
                     <p className="text-xl text-gray-600 max-w-3xl">Step-by-step video tutorials for SpaceNexus VDR features. From initial data room setup to advanced security configuration — learn the platform through hands-on walkthroughs.</p>
                 </div>
             </section>
@@ -141,7 +142,7 @@ export default function TutorialsIndexPage() {
                                         <h2 className="text-lg font-bold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug mb-1.5">
                                             {t.title}
                                         </h2>
-                                        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                                        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
                                             <span className="font-mono bg-gray-100 text-gray-600 px-2 py-0.5 rounded">VIDEO</span>
                                             <span>·</span>
                                             <span>{t.duration}</span>
@@ -166,17 +167,17 @@ export default function TutorialsIndexPage() {
                         <Link href="/demo" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Demo</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Request a personalized demo →</h3>
-                            <p className="text-xs text-gray-500 mt-2">See SpaceNexus in action with your deal scenario.</p>
+                            <p className="text-xs text-gray-600 mt-2">See SpaceNexus in action with your deal scenario.</p>
                         </Link>
                         <Link href="/features" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Features</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Browse all features →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Complete feature catalog.</p>
+                            <p className="text-xs text-gray-600 mt-2">Complete feature catalog.</p>
                         </Link>
                         <Link href="/blog/ma-due-diligence-checklist-2026" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
                             <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Guide</p>
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">14-day prep checklist →</h3>
-                            <p className="text-xs text-gray-500 mt-2">Practical launch timeline.</p>
+                            <p className="text-xs text-gray-600 mt-2">Practical launch timeline.</p>
                         </Link>
                     </div>
                 </div>
@@ -189,6 +190,10 @@ export default function TutorialsIndexPage() {
                     <Link href="/demo" className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">Request a demo →</Link>
                 </div>
             </section>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
     );
 }

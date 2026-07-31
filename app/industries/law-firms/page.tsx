@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Virtual Data Room for Law Firms | SpaceNexus",
@@ -266,7 +267,7 @@ export default function LawFirmsPage() {
             <div>
               <Link
                 href="/industries"
-                className="inline-flex items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -286,7 +287,7 @@ export default function LawFirmsPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
                 Law Firms
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Data Rooms for Law Firms
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -339,7 +340,7 @@ export default function LawFirmsPage() {
                     <h3 className="font-semibold text-gray-900">
                       Legal Practice Support
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600">
                       Complete matter management
                     </p>
                   </div>
@@ -382,7 +383,7 @@ export default function LawFirmsPage() {
       {/* Compliance Badges */}
       <section className="py-10 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-medium text-gray-500 mb-6">
+          <p className="text-center text-sm font-medium text-gray-600 mb-6">
             Security certifications that satisfy law firm oversight committees
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -399,7 +400,7 @@ export default function LawFirmsPage() {
                   </svg>
                 </div>
                 <span className="text-sm font-bold text-gray-900">{badge.label}</span>
-                <span className="text-xs text-gray-500 mt-0.5">{badge.detail}</span>
+                <span className="text-xs text-gray-600 mt-0.5">{badge.detail}</span>
               </div>
             ))}
           </div>
@@ -517,7 +518,7 @@ export default function LawFirmsPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / qa
                 </div>
               </div>
@@ -561,7 +562,7 @@ export default function LawFirmsPage() {
               </ul>
               <a
                 href="/demo"
-                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20"
+                className="inline-flex items-center px-7 py-3 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/20 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
               >
                 See the Q&amp;A module live
                 <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -701,7 +702,11 @@ export default function LawFirmsPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Secure file sharing for lawyers →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

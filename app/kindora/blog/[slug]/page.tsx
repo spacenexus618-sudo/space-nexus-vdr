@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getPostBySlug, blogPosts } from "../data/posts";
 import BlogPostContent from "./BlogPostContent";
+import LastUpdated from "../../../components/LastUpdated";
 
 interface PageProps {
   params: Promise<{ slug: string }>;

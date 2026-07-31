@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Virtual Data Room for Canada | SpaceNexus",
@@ -182,7 +183,7 @@ export default function CanadaVDRPage() {
           <p className="text-sm font-semibold text-[#2563eb] tracking-wide uppercase mb-4">
             🇨🇦 Canada
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
             The Virtual Data Room for Canadian Transactions
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
@@ -205,7 +206,7 @@ export default function CanadaVDRPage() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 mt-12 text-xs font-semibold text-gray-600 uppercase tracking-wider">
             <span>PIPEDA</span>
             <span>SOC 2 Type II</span>
             <span>ISO 27001</span>
@@ -255,7 +256,7 @@ export default function CanadaVDRPage() {
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="text-left p-4 font-semibold text-gray-900">Requirement</th>
                   <th className="text-center p-4 font-semibold text-[#2563eb]">SpaceNexus</th>
-                  <th className="text-center p-4 font-semibold text-gray-500">Generic Tools</th>
+                  <th className="text-center p-4 font-semibold text-gray-600">Generic Tools</th>
                 </tr>
               </thead>
               <tbody>
@@ -263,7 +264,7 @@ export default function CanadaVDRPage() {
                   <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="p-4 text-gray-700">{row.feature}</td>
                     <td className="p-4 text-center">{row.spacenexus ? "✅" : "❌"}</td>
-                    <td className="p-4 text-center text-gray-500">{row.generic}</td>
+                    <td className="p-4 text-center text-gray-600">{row.generic}</td>
                   </tr>
                 ))}
               </tbody>
@@ -376,7 +377,11 @@ export default function CanadaVDRPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">For energy & infrastructure →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </>

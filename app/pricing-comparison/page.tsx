@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
     title: "VDR Pricing Comparison 2026 | SpaceNexus",
@@ -370,6 +371,32 @@ const breadcrumbSchema = {
     ],
 };
 
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "VDR Pricing Comparison 2026",
+    description: "Independent pricing comparison of top virtual data room providers including SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and DocSend.",
+    numberOfItems: competitors.length,
+    itemListElement: competitors.map((c) => ({
+        "@type": "ListItem",
+        position: c.rank,
+        item: {
+            "@type": "SoftwareApplication",
+            name: c.name,
+            applicationCategory: "BusinessApplication",
+            applicationSubCategory: "Virtual Data Room",
+            url: "https://spacenexus.net/pricing-comparison",
+            description: c.keyDifferentiator,
+            offers: {
+                "@type": "Offer",
+                price: c.costClarity === "Transparent" ? "See pricing page" : "Contact for pricing",
+                priceCurrency: "USD",
+                description: c.pricingModel,
+            },
+        },
+    })),
+};
+
 function CheckIcon() {
     return (
         <svg className="w-4 h-4 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -392,6 +419,7 @@ export default function PricingComparisonPage() {
             <Script id="pc-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <Script id="pc-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Script id="pc-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <Script id="pc-itemlist" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
             <main className="pt-20 lg:pt-24">
 
@@ -399,7 +427,7 @@ export default function PricingComparisonPage() {
                 <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto text-center">
-                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-400 mb-6">
+                            <nav className="flex items-center justify-center gap-2 text-xs text-gray-600 mb-6">
                                 <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 <span className="text-gray-600">Pricing Comparison</span>
@@ -410,24 +438,24 @@ export default function PricingComparisonPage() {
                                 </svg>
                                 2026 Independent Comparison
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 SpaceNexus Pricing{" "}
                                 <span className="text-[#2563eb]">vs Competitors</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                                 An honest, side-by-side pricing comparison of SpaceNexus vs Datasite, Intralinks, Firmex, iDeals, and other virtual data room providers. Transparent flat-rate pricing vs quote-only enterprise contracts, per-page fees, and hidden costs.
                             </p>
-                            <p className="text-sm text-gray-400 mb-10">
+                            <p className="text-sm text-gray-600 mb-10">
                                 14-minute read &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Based on publicly available pricing information
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#competitors" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
+                                <a href="#competitors" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     See the Comparison
                                     <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                 </a>
-                                <a href="#hidden-costs" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200">
+                                <a href="#hidden-costs" className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 border border-gray-200 hover:border-[#2563eb]/40 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
                                     Hidden Costs to Watch
                                 </a>
                             </div>
@@ -464,7 +492,7 @@ export default function PricingComparisonPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <p className="text-xs font-semibold text-[#2563eb] uppercase tracking-wider mb-3">The Comparison</p>
-                            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">7 VDR providers compared</h2>
+                            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">7 VDR providers compared</h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
                                 Each provider evaluated on pricing model, cost transparency, per-page fees, AI features, setup time, and best-fit use case.
                             </p>
@@ -484,17 +512,17 @@ export default function PricingComparisonPage() {
                                                 <p className="text-sm text-gray-600 leading-relaxed">{c.bestFor}</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Pricing Model</p>
+                                                <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Pricing Model</p>
                                                 <p className="text-sm text-gray-700">{c.pricingModel}</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Cost Clarity</p>
+                                                <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Cost Clarity</p>
                                                 <p className={`text-sm font-semibold ${c.costClarity === "Transparent" ? "text-green-700" : c.costClarity === "Partial" ? "text-amber-700" : "text-red-600"}`}>
                                                     {c.costClarity}
                                                 </p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Per-Page Fees</p>
+                                                <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Per-Page Fees</p>
                                                 <p className={`text-sm font-semibold ${c.perPageFees === "None" ? "text-green-700" : c.perPageFees === "Common" ? "text-red-600" : "text-amber-700"}`}>
                                                     {c.perPageFees}
                                                 </p>
@@ -530,15 +558,15 @@ export default function PricingComparisonPage() {
                                             <p className="text-sm text-gray-700">{d.spacenexus}</p>
                                         </div>
                                         <div className="bg-gray-50 border border-gray-100 rounded-lg p-3">
-                                            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Legacy VDR</p>
+                                            <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Legacy VDR</p>
                                             <p className="text-sm text-gray-700">{d.legacy}</p>
                                         </div>
                                         <div className="bg-gray-50 border border-gray-100 rounded-lg p-3">
-                                            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Mid-Market</p>
+                                            <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Mid-Market</p>
                                             <p className="text-sm text-gray-700">{d.midmarket}</p>
                                         </div>
                                         <div className="bg-gray-50 border border-gray-100 rounded-lg p-3">
-                                            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">Cheap Options</p>
+                                            <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Cheap Options</p>
                                             <p className="text-sm text-gray-700">{d.cheap}</p>
                                         </div>
                                     </div>
@@ -581,16 +609,17 @@ export default function PricingComparisonPage() {
                                 How pricing models compare across common deal scenarios.
                             </p>
                         </div>
-                        <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white">
+                        {/* Desktop Table */}
+                        <div className="hidden md:block rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm min-w-[900px]">
                                     <thead className="bg-gray-900 text-white">
                                         <tr>
                                             <th className="text-left font-semibold text-gray-300 px-4 py-4">Scenario</th>
                                             <th className="text-center font-semibold text-[#60a5fa] px-3 py-4">SpaceNexus</th>
-                                            <th className="text-center font-semibold text-gray-400 px-3 py-4">Legacy VDR</th>
-                                            <th className="text-center font-semibold text-gray-400 px-3 py-4">Mid-Market</th>
-                                            <th className="text-center font-semibold text-gray-400 px-3 py-4">Cheap Options</th>
+                                            <th className="text-center font-semibold text-gray-600 px-3 py-4">Legacy VDR</th>
+                                            <th className="text-center font-semibold text-gray-600 px-3 py-4">Mid-Market</th>
+                                            <th className="text-center font-semibold text-gray-600 px-3 py-4">Cheap Options</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -598,14 +627,40 @@ export default function PricingComparisonPage() {
                                             <tr key={row.scenario} className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"} border-t border-gray-100`}>
                                                 <td className="px-4 py-3.5 text-sm font-medium text-gray-800 min-w-[240px]">{row.scenario}</td>
                                                 <td className="px-3 py-3.5 text-xs text-center text-gray-700 font-medium">{row.spacenexus}</td>
-                                                <td className="px-3 py-3.5 text-xs text-center text-gray-500">{row.legacy}</td>
-                                                <td className="px-3 py-3.5 text-xs text-center text-gray-500">{row.midmarket}</td>
-                                                <td className="px-3 py-3.5 text-xs text-center text-gray-500">{row.cheap}</td>
+                                                <td className="px-3 py-3.5 text-xs text-center text-gray-600">{row.legacy}</td>
+                                                <td className="px-3 py-3.5 text-xs text-center text-gray-600">{row.midmarket}</td>
+                                                <td className="px-3 py-3.5 text-xs text-center text-gray-600">{row.cheap}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+                        {/* Mobile Card Layout */}
+                        <div className="md:hidden space-y-4">
+                            {totalCostComparison.map((row) => (
+                                <div key={row.scenario} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
+                                    <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">{row.scenario}</h3>
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-blue-50/50">
+                                            <span className="text-xs font-medium text-[#2563eb]">SpaceNexus</span>
+                                            <span className="text-xs font-medium text-gray-700">{row.spacenexus}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Legacy VDR</span>
+                                            <span className="text-xs text-gray-600">{row.legacy}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Mid-Market</span>
+                                            <span className="text-xs text-gray-600">{row.midmarket}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-gray-50">
+                                            <span className="text-xs font-medium text-gray-600">Cheap Options</span>
+                                            <span className="text-xs text-gray-600">{row.cheap}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -671,7 +726,7 @@ export default function PricingComparisonPage() {
                                 See Published Pricing
                             </Link>
                         </div>
-                        <p className="text-sm text-gray-400 mt-6">SOC 2 Type II · ISO 27001 · SEC/FINRA ready · No credit card required · Cancel anytime</p>
+                        <p className="text-sm text-gray-600 mt-6">SOC 2 Type II · ISO 27001 · SEC/FINRA ready · No credit card required · Cancel anytime</p>
                     </div>
                 </section>
                         {/* Related VDR Resources */}
@@ -716,7 +771,11 @@ export default function PricingComparisonPage() {
                             <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Free DD templates (CSV) →</h3>
                         </Link>
                     </div>
-                </div>
+                
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
             </section>
 
 </main>

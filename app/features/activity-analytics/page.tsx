@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
+import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
   title: "Activity & Engagement Analytics | SpaceNexus",
@@ -274,7 +275,7 @@ export default function ActivityAnalyticsPage() {
             <div>
               <Link
                 href="/features"
-                className="inline-flex mr-7 items-center text-sm text-gray-500 hover:text-[#2563eb] mb-6 transition-colors"
+                className="inline-flex mr-7 items-center text-sm text-gray-600 hover:text-[#2563eb] mb-6 transition-colors"
               >
                 <svg
                   className="w-4 h-4 mr-1"
@@ -294,7 +295,7 @@ export default function ActivityAnalyticsPage() {
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 text-sm font-medium mb-4">
                 Buyer Intelligence
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Activity & Analytics
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -364,7 +365,7 @@ export default function ActivityAnalyticsPage() {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">
+                <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">
                   app.spacenexus.net / analytics
                 </div>
               </div>
@@ -442,7 +443,7 @@ export default function ActivityAnalyticsPage() {
                     loading="lazy"
                   />
                 </div>
-                <p className="text-sm text-gray-500 text-center mt-3">
+                <p className="text-sm text-gray-600 text-center mt-3">
                   {shot.caption}
                 </p>
               </div>
@@ -478,7 +479,7 @@ export default function ActivityAnalyticsPage() {
                   {link.title}
                 </p>
                 <svg
-                  className="w-4 h-4 text-gray-400 group-hover:text-cyan-600 transition-colors shrink-0 ml-2"
+                  className="w-4 h-4 text-gray-600 group-hover:text-cyan-600 transition-colors shrink-0 ml-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -535,7 +536,11 @@ export default function ActivityAnalyticsPage() {
               </Link>
             </div>
           </div>
-        </div>
+        
+            {/* Last Updated */}
+            <div className="py-6 text-center border-t border-gray-100 mt-8">
+                <LastUpdated date="2026-07-19" />
+            </div></div>
       </section>
     </main>
   );
