@@ -162,6 +162,7 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
                         What we stand for
                     </h2>
+                    
                     <div className="grid md:grid-cols-3 gap-6">
                         {values.map((v) => (
                             <div
