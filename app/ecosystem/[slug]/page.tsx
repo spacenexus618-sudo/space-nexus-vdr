@@ -289,7 +289,7 @@ export default async function EcosystemProductPage({ params }: PageProps) {
 
         {/* Last Updated */}
         <div className="py-6 text-center border-t border-gray-100 mt-8 bg-gray-900/50">
-          <LastUpdated date="2026-07-19" />
+          <LastUpdated date="2026-08-01" />
         </div>
       </main>
     </>

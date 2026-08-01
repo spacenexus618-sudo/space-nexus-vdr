@@ -115,7 +115,7 @@ export default function DynamicWatermarkingPage() {
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <LastUpdated date="2026-08-01" />
             </div></div>
     );
 }
