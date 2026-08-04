@@ -211,6 +211,7 @@ export default function KindoraFooter() {
                   <span className="text-[10px] font-medium text-blue-400 uppercase tracking-wider -mt-1">NGO OS</span>
                 </div>
               </Link>
+              
             </div>
             <p className="text-sm text-gray-400 mb-4">The Complete Operating System for Nonprofits</p>
             <p className="text-xs text-gray-500 mb-4">Version 1.0 (Kindora-V1.0)</p>
