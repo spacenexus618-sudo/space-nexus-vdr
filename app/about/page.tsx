@@ -225,6 +225,7 @@ export default function AboutPage() {
                                     >
                                         {member.initials}
                                     </div>
+                                    
                                     <div>
                                         <h3 className="font-bold text-gray-900">{member.name}</h3>
                                         <p className="text-sm text-gray-600">{member.role}</p>
