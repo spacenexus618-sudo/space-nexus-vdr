@@ -190,6 +190,7 @@ export default function AboutPage() {
                         Our journey
                     </h2> 
                     
+                    
                     <div className="space-y-6">
                         {milestones.map((m, i) => (
                             <div key={i} className="flex gap-6 items-start">
