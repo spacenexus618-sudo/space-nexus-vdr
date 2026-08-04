@@ -176,6 +176,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
                                 <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>
+                                
                             </div>
                         ))}
                     </div>
