@@ -178,6 +178,7 @@ export default function KindoraNav() {
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 mb-2">
                       Our Products
                     </p>
+                    
                     <a
                       href="/"
                       target="_blank"
