@@ -218,6 +218,7 @@ export default function KindoraNav() {
                         <p className="text-xs text-gray-500">
                           Complete operating system for nonprofits
                         </p>
+                        
                       </div>
                     </a>
                   </div>
