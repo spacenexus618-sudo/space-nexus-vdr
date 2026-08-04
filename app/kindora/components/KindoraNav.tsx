@@ -238,6 +238,7 @@ export default function KindoraNav() {
                 }`}
               >
                 {link.label}
+                
                 <span
                   className={`absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-[#2563eb] to-[#7c3aed] transition-transform duration-300 origin-left rounded-full ${
                     isActive(link.href)
