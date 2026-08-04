@@ -231,6 +231,7 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>
+                                
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {member.credentials.map((cred, i) => (
                                         <span key={i} className="text-xs font-medium text-gray-600 bg-gray-50 border border-gray-100 px-2.5 py-1 rounded-full">
