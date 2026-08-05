@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Best Fundraising Software 2026",
-    description: "The best fundraising software for nonprofits — campaigns, donations, donors, and impact tracking in one platform.",
+    description: "Fundraising software for nonprofits — campaigns, donations, donors, and impact tracking all in one platform.",
     url: "https://spacenexus.net/kindora/best-fundraising-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best Fundraising Software 2026",
-    description: "Run campaigns, accept donations, and raise more with the best fundraising software for nonprofits.",
+    description: "Run campaigns, accept donations, and manage donors — all in one fundraising platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
@@ -224,7 +224,7 @@ export default function BestFundraisingSoftwarePage() {
                     <span className="text-sm font-semibold text-gray-900">Fundraising Dashboard</span>
                   </div>
                   <span className="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">
-                    Live
+                    Sample
                   </span>
                 </div>
 

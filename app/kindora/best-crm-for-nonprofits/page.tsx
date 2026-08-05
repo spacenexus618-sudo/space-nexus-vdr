@@ -6,13 +6,13 @@ import LastUpdated from "../../components/LastUpdated";
 export const metadata: Metadata = {
   title: "Best CRM for Nonprofits | Donor CRM Software",
   description:
-    "Kindora is the best CRM for nonprofits — donor management, fundraising, grants, volunteers, and reporting in one easy-to-use platform built specifically for nonprofits.",
+    "See how Kindora compares for nonprofit CRM — donor management, fundraising, grants, volunteers, and reporting in one platform built specifically for nonprofits.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-crm-for-nonprofits",
   },
   openGraph: {
     title: "Best CRM for Nonprofits",
-    description: "The best CRM for nonprofits — all-in-one donor management, fundraising, grants, volunteers, and reporting.",
+    description: "All-in-one CRM for nonprofits — donor management, fundraising, grants, volunteers, and reporting in one platform.",
     url: "https://spacenexus.net/kindora/best-crm-for-nonprofits",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best CRM for Nonprofits",
-    description: "The best CRM for nonprofits — donor management, fundraising, grants, volunteers, and reporting.",
+    description: "CRM for nonprofits — donor management, fundraising, grants, volunteers, and reporting.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
@@ -104,7 +104,7 @@ const faqs = [
       "The best CRM for nonprofits depends on your needs, but the ideal solution includes donor management, fundraising tools, grant management, volunteer tracking, and reporting — all in one platform. Kindora provides all of this in an easy-to-use, affordable system built specifically for nonprofits.",
   },
   {
-    question: "Why is Kindora considered the best CRM for nonprofits?",
+    question: "Why do nonprofits choose Kindora?",
     answer:
       "Kindora combines donor management, fundraising, grants, volunteers, programmes, and financials in one platform. Unlike general-purpose CRMs, it's purpose-built for nonprofit workflows with no consulting fees and 30-minute setup.",
   },
@@ -131,7 +131,7 @@ const faqs = [
 ];
 
 const platformStats = [
-  { metric: "#1", label: "All-in-one CRM" },
+  { metric: "5-in-1", label: "All-in-one CRM" },
   { metric: "30 min", label: "Setup time" },
   { metric: "All", label: "Nonprofit operations" },
   { metric: "0", label: "Consulting fees" },
