@@ -161,7 +161,6 @@ const jsonLd = {
         "Affordable, easy-to-use CRM for small nonprofits -- manage donors, track donations, and grow your impact.",
       url: "https://spacenexus.net/kindora/small-nonprofit-crm",
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "180" },
     },
     {
       "@type": "FAQPage",

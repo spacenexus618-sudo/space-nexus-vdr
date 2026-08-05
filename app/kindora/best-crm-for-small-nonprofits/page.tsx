@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Best CRM for Small Nonprofits",
-    description: "The best CRM for small nonprofits — affordable, easy to use, and built for teams with big missions.",
+    description: "Affordable, easy-to-use CRM for small nonprofits — donor management, grant tracking, and reporting in one platform.",
     url: "https://spacenexus.net/kindora/best-crm-for-small-nonprofits",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best CRM for Small Nonprofits",
-    description: "The best CRM for small nonprofits — affordable donor management and grant tracking in one platform.",
+    description: "Affordable donor management and grant tracking for small nonprofits — all in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
 
 const benefits = [
   {
-    metric: "#1",
-    title: "Rated for Small Nonprofits",
+    metric: "5-in-1",
+    title: "Built for Small Nonprofits",
     description: "Designed specifically for small teams — no enterprise complexity, no expensive consultants, no steep learning curve.",
   },
   {
@@ -151,7 +151,7 @@ const faqs = [
 ];
 
 const platformStats = [
-  { metric: "#1", label: "For small nonprofits" },
+  { metric: "5-in-1", label: "For small nonprofits" },
   { metric: "30min", label: "Setup time" },
   { metric: "Unlimited", label: "Users included" },
   { metric: "All-in-One", label: "Platform" },

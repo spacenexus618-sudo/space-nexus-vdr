@@ -4,15 +4,15 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Best Donor Management Software | Top Rated Donor Software",
+  title: "Best Donor Management Software | Donor Software Comparison",
   description:
-    "Kindora is the best donor management software for nonprofits. Top-rated donor tracking, fundraising automation, reporting, and engagement tools — all in one affordable platform.",
+    "See how Kindora compares for donor management software — donor tracking, fundraising automation, reporting, and engagement tools in one affordable platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-donor-management-software",
   },
   openGraph: {
     title: "Best Donor Management Software",
-    description: "Top-rated donor management software with fundraising automation, reporting, and engagement tools. Trusted by nonprofits.",
+    description: "Donor management software with fundraising automation, reporting, and engagement tools — all in one platform. See how Kindora compares.",
     url: "https://spacenexus.net/kindora/best-donor-management-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best Donor Management Software",
-    description: "Top-rated donor management software for nonprofits. Track donors, automate fundraising, and grow retention.",
+    description: "Donor management software for nonprofits. Track donors, automate fundraising, and grow retention — in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
@@ -100,17 +100,17 @@ const features = [
 ];
 
 const stats = [
-  { metric: "#1 Rated", label: "Donor Software" },
-  { metric: "4.9/5", label: "User rating" },
+  { metric: "5-in-1", label: "Donor + Grants + Programs + Accounting + Volunteers" },
   { metric: "30 min", label: "Setup time" },
-  { metric: "Free", label: "Trial available" },
+  { metric: "Free", label: "Plan available" },
+  { metric: "1 platform", label: "Replaces 3–4 tools" },
 ];
 
 const faqs = [
   {
     question: "What is the best donor management software?",
     answer:
-      "The best donor management software combines donor tracking, fundraising automation, email marketing, reporting, and affordability in one platform. Kindora is rated #1 because it includes all these features with no enterprise bloat, no consultants required, and transparent pricing.",
+      "The best donor management software combines donor tracking, fundraising automation, email marketing, reporting, and affordability in one platform. Kindora includes all these features with no enterprise bloat, no consultants required, and transparent pricing.",
   },
   {
     question: "How does Kindora compare to Bloomerang?",
@@ -143,9 +143,9 @@ const faqs = [
       "Yes. Kindora generates donor tax receipts, year-end statements, and impact summaries ready for distribution to your supporters.",
   },
   {
-    question: "Why is Kindora rated the best donor management software?",
+    question: "Why choose Kindora for donor management?",
     answer:
-      "Kindora combines ease of use, comprehensive features (donor CRM, fundraising, email, grants, volunteers, accounting), affordable pricing, and excellent support — all in one purpose-built platform for nonprofits.",
+      "Kindora combines ease of use, comprehensive features (donor CRM, fundraising, email, grants, volunteers, accounting), affordable pricing, and support — all in one purpose-built platform for nonprofits.",
   },
 ];
 
@@ -161,7 +161,6 @@ const jsonLd = {
         "Best donor management software for nonprofits -- donor tracking, fundraising automation, reporting, and engagement tools.",
       url: "https://spacenexus.net/kindora/best-donor-management-software",
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "220" },
     },
     {
       "@type": "FAQPage",
@@ -191,7 +190,7 @@ export default function BestDonorManagementSoftwarePage() {
             <div>
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-6">
                 <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse mr-2" />
-                <span className="text-sm font-medium text-indigo-600">#1 Rated Donor Software</span>
+                <span className="text-sm font-medium text-indigo-600">All-in-One Donor Software</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
@@ -200,7 +199,7 @@ export default function BestDonorManagementSoftwarePage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Stop juggling spreadsheets and disconnected tools. Kindora is the all-in-one donor management software trusted by thousands to track donors, automate fundraising, and grow retention.
+                Stop juggling spreadsheets and disconnected tools. Kindora is an all-in-one donor management platform for tracking donors, automating fundraising, and growing retention.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
@@ -247,13 +246,13 @@ export default function BestDonorManagementSoftwarePage() {
                     </div>
                     <span className="text-sm font-semibold text-gray-900">Best Donor Software</span>
                   </div>
-                  <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-full">4.9/5 Rating</span>
+                  <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-full">All-in-One</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {[
-                    { label: "Overall Rating", value: "4.9/5" },
-                    { label: "Active Nonprofits", value: "10K+" },
+                    { label: "Modules", value: "7-in-1" },
+                    { label: "Free Plan", value: "Yes" },
                     { label: "Setup Time", value: "30 min" },
                     { label: "Free Trial", value: "Yes" },
                   ].map((s) => (
@@ -309,7 +308,7 @@ export default function BestDonorManagementSoftwarePage() {
             <p className="text-sm font-semibold text-indigo-500 uppercase tracking-wider mb-3">See It In Action</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The donor software nonprofits love</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Watch why thousands rate Kindora as the best donor management software.
+              Watch how Kindora brings donor, grant, program, and financial management together.
             </p>
           </div>
 

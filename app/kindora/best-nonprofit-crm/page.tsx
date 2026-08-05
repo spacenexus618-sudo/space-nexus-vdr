@@ -4,15 +4,15 @@ import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
 
 export const metadata: Metadata = {
-  title: "Best Nonprofit CRM | Top Rated Nonprofit CRM Software",
+  title: "Best Nonprofit CRM | Nonprofit CRM Comparison",
   description:
-    "Kindora is the best nonprofit CRM software. Top-rated donor management, fundraising tools, reporting, and automation — all in one affordable platform. Trusted by nonprofits worldwide.",
+    "See how Kindora compares for nonprofit CRM software — donor management, fundraising tools, reporting, and automation in one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora/best-nonprofit-crm",
   },
   openGraph: {
     title: "Best Nonprofit CRM",
-    description: "Top-rated nonprofit CRM with donor management, fundraising, reporting, and automation. Trusted by nonprofits worldwide.",
+    description: "Nonprofit CRM with donor management, fundraising, reporting, and automation — all in one platform. See how Kindora compares.",
     url: "https://spacenexus.net/kindora/best-nonprofit-crm",
     siteName: "Kindora by Space Nexus",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best Nonprofit CRM",
-    description: "Top-rated nonprofit CRM with donor management, fundraising, reporting, and automation.",
+    description: "Nonprofit CRM with donor management, fundraising, reporting, and automation — all in one platform.",
     images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
   },
   keywords: [
@@ -100,15 +100,15 @@ const bestCrmFeatures = [
 ];
 
 const stats = [
-  { metric: "#1 Rated", label: "Nonprofit CRM" },
+  { metric: "All-in-One", label: "Donor + Grants + Programs + Accounting + Volunteers" },
   { metric: "99.9%", label: "Uptime" },
   { metric: "30 min", label: "Setup time" },
-  { metric: "4.9/5", label: "User rating" },
+  { metric: "Free", label: "Plan available" },
 ];
 
 const faqs = [
   {
-    question: "What makes Kindora the best nonprofit CRM?",
+    question: "What makes Kindora a strong nonprofit CRM?",
     answer:
       "Kindora combines donor management, fundraising automation, email marketing, volunteer management, and reporting in one affordable platform. Purpose-built for nonprofits with no enterprise bloat, no consultants required, and transparent pricing.",
   },
@@ -135,7 +135,7 @@ const faqs = [
   {
     question: "Is there a free trial?",
     answer:
-      "Yes. You can try Kindora free with no credit card required. See why we are rated the best nonprofit CRM.",
+      "Yes. You can try Kindora free with no credit card required. Start with a free plan and upgrade as your team grows.",
   },
   {
     question: "What makes a nonprofit CRM the best?",
@@ -158,10 +158,9 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "Top-rated nonprofit CRM with donor management, fundraising, reporting, and automation. Trusted by nonprofits worldwide.",
+        "Nonprofit CRM with donor management, fundraising, reporting, and automation — all in one platform.",
       url: "https://spacenexus.net/kindora/best-nonprofit-crm",
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free trial available" },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "250" },
     },
     {
       "@type": "FAQPage",
@@ -191,7 +190,7 @@ export default function BestNonprofitCrmPage() {
             <div>
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
                 <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse mr-2" />
-                <span className="text-sm font-medium text-purple-600">#1 Rated Nonprofit CRM</span>
+                <span className="text-sm font-medium text-purple-600">All-in-One Nonprofit CRM</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
@@ -200,7 +199,7 @@ export default function BestNonprofitCrmPage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Stop juggling spreadsheets and disconnected tools. Kindora is the all-in-one nonprofit CRM trusted by thousands of organizations to manage donors, run campaigns, and grow their impact — with no enterprise complexity.
+                Stop juggling spreadsheets and disconnected tools. Kindora is an all-in-one nonprofit CRM for managing donors, running campaigns, and growing impact — without enterprise complexity.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
@@ -224,7 +223,7 @@ export default function BestNonprofitCrmPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-                {["No credit card required", "Set up in 30 minutes", "4.9/5 rating"].map((text) => (
+                {["No credit card required", "Set up in 30 minutes", "Free plan available"].map((text) => (
                   <span key={text} className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -248,14 +247,14 @@ export default function BestNonprofitCrmPage() {
                     <span className="text-sm font-semibold text-gray-900">Best Nonprofit CRM</span>
                   </div>
                   <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
-                    4.9/5 Rating
+                    All-in-One
                   </span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {[
-                    { label: "Overall Rating", value: "4.9/5" },
-                    { label: "Active Users", value: "10K+" },
+                    { label: "Modules", value: "7-in-1" },
+                    { label: "Free Plan", value: "Yes" },
                     { label: "Setup Time", value: "30 min" },
                     { label: "Free Trial", value: "Yes" },
                   ].map((s) => (
@@ -309,9 +308,9 @@ export default function BestNonprofitCrmPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold text-purple-500 uppercase tracking-wider mb-3">See It In Action</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The platform nonprofits love</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The platform nonprofits can run on</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Watch why thousands of organizations rate Kindora as the best nonprofit CRM.
+              See Kindora in action and how it brings donor, grant, program, and financial management together.
             </p>
           </div>
 
