@@ -172,6 +172,7 @@ export default function KindoraNav() {
                 </svg>
               </button>
               
+              
 
               {productsOpen && (
                 <div className="absolute top-full left-0 pt-3 w-[340px]">
