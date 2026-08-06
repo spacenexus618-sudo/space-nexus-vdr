@@ -57,6 +57,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const indexAndRoundupPages = [
+    "alternatives",
+    "best-salesforce-alternatives",
+    "best-bloomerang-alternatives",
+    "best-donorperfect-alternatives",
+  ].map((slug) => ({
+    route: `/${slug}`,
+    priority: 0.9,
+  }));
+
   const seoLandingPages = [
     "affordable-nonprofit-crm",
     "all-in-one-nonprofit-management-platform",
@@ -184,6 +194,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...featurePages,
     ...solutionPages,
     ...blogPages,
+    ...indexAndRoundupPages,
     ...seoLandingPages,
   ];
 

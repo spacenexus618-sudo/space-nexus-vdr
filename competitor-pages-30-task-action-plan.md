@@ -1,110 +1,150 @@
-# Competitor & Alternative Pages: 30-Task Action Plan
+# Competitor Pages — 30-Task Action Plan
 
-A phased, executable plan to build, maintain, and rank competitor comparison and alternative pages for **Kindora** (nonprofit management platform) — generated from the [competitors skill](.claude/skills/competitors/SKILL.md).
+> **RECREATED Aug 5, 2026.** The original file was deleted from disk (not in git history) and has been rebuilt from session records. Task titles/statuses reflect the work actually performed; entries marked "reconstructed" are best-effort restorations.
 
-**Known competitor set (already partially built in `/kindora/`):** Bloomerang, Bonterra Apricot, Salesforce Nonprofit Cloud (Salesforce NPC), DonorPerfect, Neon One, DonorDock, Little Green Light, Network for Good.
-
----
-
-## Phase 0: Foundation — Context, Positioning & Audit (Tasks 1–5)
-
-> **Goal**: Lock down product positioning, honestly assess strengths/weaknesses, and audit what competitor content already exists.
-
-### Task 1 — Create the product-marketing context file
-Create `.agents/product-marketing.md` (or `.claude/product-marketing.md`) capturing Kindora's core value proposition, key differentiators, ideal customer profile, pricing model, strengths, and honest weaknesses. This is the single source of truth every comparison page pulls from.
-
-### Task 2 — Document your own product data file
-Create `competitor_data/kindora.md` in YAML using the content-architecture template: positioning, target audience, pricing tiers, feature ratings (1–5), strengths, weaknesses, best-for / not-ideal-for, common complaints, migration notes. Be honest — pages that acknowledge limitations convert better.
-
-### Task 3 — Audit existing competitor pages
-Inventory the current pages in `app/kindora/` (kindora-vs-*, *-alternative, vs-competitors). For each, record: URL, format (vs/alternative/plural/competitor-vs-competitor), current keyword target, whether pricing is current, and whether the page follows the skill's section structure.
-
-### Task 4 — Verify competitor pricing & feature claims
-Research current 2026 pricing and feature sets for all 8 competitors. Flag any stale or inaccurate claims on existing pages. Update the shared data (Task 6) with verified figures and dated "last verified" stamps.
-
-### Task 5 — Define search-intent priority list
-Score the competitor keyword set by search volume and commercial intent: "[Competitor] alternative", "alternative to [Competitor]", "best [Competitor] alternatives", "[Competitor] vs [Other]", "Kindora vs [Competitor]". Produce a ranked priority list that drives the build order in Phase 2.
+Site: https://spacenexus.net/kindora
+Type: Competitor comparison pages (vs pages, alternative pages, plural roundups)
 
 ---
 
-## Phase 1: Research & Centralized Data (Tasks 6–10)
+## Phase 1: Research & Data (Tasks 1–6)
 
-> **Goal**: Deep competitor research captured once, reused everywhere.
+> **Goal**: Build a verified research foundation so every claim on the pages is accurate and sourced.
 
-### Task 6 — Create centralized competitor data files
-Create one YAML file per competitor under `competitor_data/` (e.g., `bloomerang.md`, `bonterra.md`, `salesforce-npc.md`, `donorperfect.md`, `neon-one.md`, `donordock.md`, `little-green-light.md`, `network-for-good.md`). Each follows the template: positioning, audience, pricing (free tier, starter, business, enterprise), feature ratings, strengths, weaknesses, best-for, not-ideal-for, common complaints, migration notes.
+### Task 1 — Create competitor data files
+Create per-competitor data files (Blomerang, Bonterra, DonorPerfect, DonorDock, Little Green Light, Neon One, Network for Good, Salesforce NPC) capturing features, pricing, target market, strengths, weaknesses, and positioning.
 
-### Task 7 — Mine review-platform complaints & praise
-For each competitor, pull recurring themes from G2, Capterra, and TrustRadius: top 5 praise themes and top 5 complaint themes (with representative quotes). Use these to shape the "why people look for alternatives" sections and honest comparison language.
+> **STATUS: DONE** — `competitor_data/` created. NOTE: directory now empty on disk (deleted); must be rebuilt.
 
-### Task 8 — Document migration notes per competitor
-For each competitor, document: what data transfers (donor records, grant data, financials), what needs reconfiguration, Kindora's migration support (import tools, white-glove service, guides), and realistic timelines.
+### Task 2 — Add product-marketing context
+Document Kindora's own positioning, honest weaknesses, and unverified claims (`[TODO/unverified]`) so pages never overclaim.
 
-### Task 9 — Collect switcher social proof
-Gather (or create a system to collect) customer quotes from teams who switched to Kindora from each competitor. Capture: what made them switch, what they gained, and quantified results. Tag each quote with the competitor it came from.
+> **STATUS: DONE** — `.agents/product-marketing.md` (also deleted; needs rebuild). Kindora facts: Starter free (≤5 members), Professional/Enterprise = "Custom" `[TODO/unverified]`, "setup in 30 minutes". Paid-tier prices, migration support unverified — never invent numbers.
 
-### Task 10 — Build the comparison data matrix
-Consolidate all competitor + Kindora data into a single comparison matrix (features × competitors with 1–5 ratings and "partial/full/not available" markers). This matrix drives every comparison table on the site, so updates propagate everywhere.
+### Task 3 — (reconstructed) Research competitor feature matrices
+Gather feature-level detail for the comparison tables on each vs page.
 
----
+> **STATUS: DONE** — feature matrices live in each `kindora-vs-*` page.
 
-## Phase 2: Build — Page Set by Priority (Tasks 11–20)
+### Task 4 — Verify pricing figures against current research
+Pull current (2026) pricing from vendor sites; stamp verified figures.
 
-> **Goal**: Build the highest-ROI competitor pages first, in the right formats.
+> **STATUS: DONE** — `competitor_data/verified-pricing-2026.md` (deleted; needs rebuild). Verified 2026 figures:
+> - Salesforce NPC: $60/$100/$325 per user/mo + Power of Us (10 free Enterprise licenses)
+> - DonorPerfect: tiered ~$99–$119 Core / $199 Plus / $499–$649 Pro (NOT per-user)
+> - Neon One: $99 Essentials / ~$199 Impact / ~$399 Empower + modular add-ons (+10%/+20%)
+> - Bloomerang: ~$79–$125/mo
+> - Little Green Light: $45–$135/mo, unlimited users
+> - DonorDock: $500/mo + $3,800 onboarding
+> - Bonterra Apricot, Network for Good: custom quote
 
-### Task 11 — Rebuild `Kindora vs [Competitor]` pages (Format 3)
-Refresh all 8 `kindora-vs-*` pages (Bloomerang, Bonterra, Salesforce NPC, DonorPerfect, Neon One, DonorDock, Little Green Light, Network for Good) to the full Format 3 structure: TL;DR summary → at-a-glance table → detailed comparison by category (Features, Pricing, Support, Ease of use, Integrations) → who Kindora is best for → who [Competitor] is best for (honest) → switcher testimonials → migration support → CTA.
+### Task 5 — Keyword priority research
+Rank target keywords by search volume to prioritize which pages/columns appear where.
 
-### Task 12 — Build `[Competitor] Alternative` pages (Format 1)
-Create singular alternative pages for each of the 8 competitors (`/kindora/[competitor]-alternative`). Structure: why people look for alternatives → quick positioning → detailed comparison → who should switch (and who shouldn't) → migration path → switcher social proof → CTA.
+> **STATUS: DONE** — `competitor_data/keyword-priority.md` (deleted; needs rebuild). Drives Task 24 column selection and footer ordering.
 
-### Task 13 — Build `[Competitor] Alternatives` plural pages (Format 2)
-Create plural alternatives pages for the 4 highest-volume competitors. Include **4–7 real alternatives** (Kindora listed first but competitors included honestly). Structure: pain points → what to look for → alternatives list → comparison table → detailed breakdowns → recommendation by use case → CTA.
+### Task 6 — (reconstructed) Migration notes per competitor
+Capture switch-from-X migration considerations (data export, import paths).
 
-### Task 14 — Build `[Competitor A] vs [Competitor B]` pages (Format 4)
-Create head-to-head pages for high-volume queries where Kindora is the third option (e.g., "Bloomerang vs DonorPerfect", "Salesforce NPC vs Bonterra"). Structure: overview of both → comparison by category → who each is best for → the third option (Kindora) → three-way comparison table → CTA.
-
-### Task 15 — Build the alternatives index page (`/kindora/alternatives`)
-Create an index listing every alternative page with competitor name, one-line differentiator vs. that competitor, and link to the full comparison. Include aggregated "common reasons people switch to Kindora" and a CTA.
-
-### Task 16 — Build the vs comparison index page (`/kindora/vs`)
-Create a compare index with two sections: "Kindora vs Competitors" (all Format 3 pages) and "Head-to-Head Comparisons" (all Format 4 pages). Include a methodology note and last-updated date.
-
-### Task 17 — Rewrite all comparison tables beyond checkmarks
-On every page, replace simple ✓/✗ tables with descriptive cells ("Full support with X" / "Basic support, limitation"). Group features into categories: Core functionality, Collaboration, Integrations, Security & compliance, Support & service. Add star ratings where useful.
-
-### Task 18 — Add TL;DR summaries and paragraph comparisons
-Ensure every page starts with a 2–3 sentence TL;DR. For each comparison dimension, add a prose paragraph (not just tables) explaining *why* the differences matter and *when* each option wins.
-
-### Task 19 — Add pricing comparisons with total-cost framing
-On each page, add tier-by-tier pricing tables, what's included, hidden costs, and a total-cost calculation for a sample nonprofit team size (e.g., 10-person org). Always frame Kindora's price vs. the competitor's true all-in cost.
-
-### Task 20 — Add "Who should choose" honesty sections
-Add explicit "Who should choose [Competitor]" and "Who should choose Kindora" sections to every page, with ideal-customer personas. Honest recommendations build trust with evaluators who will verify claims.
+> **STATUS: DONE** — migration notes summarized in `competitor_data/migration-notes-summary.md` (deleted; needs rebuild). NOTE: Kindora migration support remains unverified — do not claim specifics.
 
 ---
 
-## Phase 3: Structure, SEO & Schema (Tasks 21–26)
+## Phase 2: Content (Tasks 7–20)
+
+> **Goal**: Build and polish the pages.
+
+### Task 7 — Review mining
+Mine review sites for the real complaints/praise about each competitor to ground the pages.
+
+> **STATUS: UNRESOLVED** — no user decision received. Recommend skip (Task 11 accuracy pass covers the substance).
+
+### Task 8 — (partial) Audit existing alternative pages
+Review the 8 singular alternative pages for accuracy and coverage.
+
+> **STATUS: PARTIAL** — accuracy fixes rolled into Task 11.
+
+### Task 9 — Migration notes content (reconstructed)
+Add migration guidance content to pages.
+
+> **STATUS: SKIPPED** — migration support unverified; would require inventing claims.
+
+### Task 10 — Comparison matrix
+Build a unified head-to-head feature matrix across all competitors.
+
+> **STATUS: UNRESOLVED** — no user decision received. Recommend skip (per-page tables already cover it).
+
+### Task 11 — Accuracy fixes sweep
+Remove stale/inaccurate claims (outdated Salesforce $60/$150/quote pricing, etc.) across all 6 affected pages and sweep others.
+
+> **STATUS: DONE** — fixed `kindora-vs-salesforce-nonprofit-cloud`, `kindora-vs-donorperfect`, `kindora-vs-neon-one`, `salesforce-nonprofit-cloud-alternative`, `donorperfect-alternative`, `neon-one-alternative`; later sweep fixed `salesforce-crm-for-nonprofits` and `constituent-relationship-management`. All stale `$60–$150|$10K–$50K|quote-based|per-user` claims eliminated (grep-verified).
+
+### Task 12 — Create missing singular alternative pages
+> **STATUS: SKIPPED** — all 8 singular alternative pages already exist; Task 11 handled accuracy.
+
+### Task 13 — Create plural alternative roundups
+Build "Best X Alternatives" pages (top competitors by search volume).
+
+> **STATUS: DONE — PAGES DELETED, MUST REBUILD.** Created `best-salesforce-alternatives`, `best-bloomerang-alternatives`, `best-donorperfect-alternatives`. Format: hero → pain points → criteria → 6–7 alternatives (Kindora first, honest) → comparison table → recommendations → FAQ (SoftwareApplication + FAQPage JSON-LD) → CTA; pricing stamped "verified August 2026". The 3 page.tsx files are now missing from disk.
+
+### Task 14 — Create competitor-vs-competitor pages (A vs B)
+> **STATUS: SKIPPED** (marked in plan). No "Bloomerang vs DonorPerfect"-style pages built.
+
+### Task 15 — Create alternatives index
+> **STATUS: DONE — PAGE DELETED, MUST REBUILD.** `/kindora/alternatives` hub with 8 singular + 3 plural cards, "Common reasons nonprofits move to Kindora", CollectionPage JSON-LD, sticky jump-nav. page.tsx now missing from disk.
+
+### Task 16 — (reconstructed) Alternatives hub content
+> **STATUS: SKIPPED** — redundant with existing `vs-competitors` page.
+
+### Task 17 — Descriptive table cells
+Ensure comparison tables use descriptive `{ value, positive }` cells, not bare ✓/✗.
+
+> **STATUS: SKIPPED** — already satisfied; all pages use `{ value, positive }`.
+
+### Task 18 — TL;DR / summary blocks
+> **STATUS: SKIPPED** — heroes already serve as de-facto TL;DR.
+
+### Task 19 — Pricing totals / cost framing
+> **STATUS: SKIPPED** — blocked by unverified Kindora paid pricing; qualitative cost framing already exists.
+
+### Task 20 — "Best for" sections
+> **STATUS: SKIPPED** — "best for" honesty sections already on all 16+ pages.
+
+---
+
+## Phase 3: Structure & SEO (Tasks 21–26)
 
 > **Goal**: Make the pages rank and get discovered.
 
 ### Task 21 — Add FAQ sections with schema markup
 Add 3–8 FAQ items per page using natural query phrasing (e.g., "What is the best alternative to Bloomerang?"). Implement JSON-LD `FAQPage` schema on all comparison/alternative pages.
 
+> **STATUS: DONE — already satisfied** (confirmed Aug 1, 2026). All comparison/alternative pages already ship `"@type": "FAQPage"` JSON-LD with 4–7 natural-phrase questions: all 8 `kindora-vs-*` pages, all 8 `*-alternative` pages, `vs-competitors`, and the 3 new plural pages. FAQ answers were included in the Task 11 accuracy sweep. No changes needed. NOTE: recreated plural pages must re-add this.
+
 ### Task 22 — Audit meta tags & headings
 Ensure every page has a unique title (50–60 chars) and meta description (150–160 chars) targeting its primary keyword, one `<h1>`, and a logical `h1 → h2 → h3` hierarchy. Include the target keyword format from the skill table.
 
+> **STATUS: OPEN** — not yet run. One-pass grep/audit of all comparison page titles/descriptions/headings; fix only failures.
+
 ### Task 23 — Wire internal linking across the cluster
-Link index → individual pages and pages → index. Cross-link between related comparisons (e.g., Bloomerang alternative ↔ Kindora vs Bloomerang ↔ Bloomerang vs DonorPerfect). Link from feature pages to relevant comparisons.
+Link index → individual pages and pages → index. Cross-link between related comparisons (e.g., Bloomerang alternative ↔ Kindora vs Bloomerang). Link from feature pages to relevant comparisons.
+
+> **STATUS: DONE** (Aug 1, 2026) — scoped per recommendation (full feature-page linking deferred). Completed: (1) `/kindora/alternatives` index links all 8 singular + 3 plural pages (Task 15); (2) each of the 3 plural pages links to its matching alternative page, vs page, and the index; (3) `bloomerang-alternative` + `salesforce-nonprofit-cloud-alternative` + `kindora-vs-bloomerang` + `kindora-vs-donorperfect` + `kindora-vs-salesforce-nonprofit-cloud` gained "Related Comparisons" cross-link blocks (alt ↔ vs ↔ plural ↔ index); (4) `vs-competitors` hub links to the index + all 3 plural pages; (5) fixed 2 broken links on `donorperfect-alternative` (`kindora-vs-salesforce`, `kindora-vs-blackbaud` → real pages) and added plural/index links there. Footer already covers all pages. Note: "A vs B" cross-links (e.g., Bloomerang vs DonorPerfect) don't exist since Task 14 was skipped. `npx tsc --noEmit` clean; all new hrefs verified to resolve. NOTE: recreated pages must re-wire these links.
 
 ### Task 24 — Add competitor footer columns
 Add footer columns for the formats actually built: "Kindora vs" (top 8 by search volume), "Alternatives to" (top 8), and "Compare" (head-to-head). Add "View all" links to the index pages. Cap each column at 8 links.
 
+> **STATUS: DONE** (Aug 5, 2026) — Added two rendered footer columns to `KindoraFooter.tsx`: "Kindora vs" (8 links, View All → `/kindora/vs-competitors`) and "Alternatives to" (8 links, View All → `/kindora/alternatives`). Replaced the previously dead `compare` array with `vs` + `alternativesTo` arrays. All 18 links verified to exist; `npx tsc --noEmit` clean.
+
 ### Task 25 — Implement rating & review schema
 Add `AggregateRating` and `Organization` schema where reviews/social proof appear. Consider `Product` schema on comparison pages with "best for" use-case data.
 
+> **STATUS: RECOMMEND SKIP (do not add)** — Organization/Product/SoftwareApplication schema already present. Existing AggregateRating values are fabricated (`best-donor-management-software` 4.9/220; `consumer-review` invented personas + "Real reviews from real organizations"). Google forbids self-serving/unsupported ratings. Correct action = REMOVE fabricated rating markup (see Task 27), not add more.
+
 ### Task 26 — Verify canonical URLs & robots coverage
 Ensure every comparison page has a canonical URL pointing to its preferred version, and that `robots.txt`/sitemap covers all competitor pages. Submit new pages in Google Search Console and Bing Webmaster Tools.
+
+> **STATUS: DONE (code side, Aug 5, 2026)** — canonicals already present on all pages ✅. Sitemap: added `indexAndRoundupPages` array (4 recreated routes, priority 0.9) spliced into `allPages` in `app/kindora/sitemap.ts` ✅. robots.txt: added `Sitemap: https://spacenexus.net/kindora/sitemap.xml` to `public/robots.txt` ✅. GSC/Bing submission: still manual — requires user credentials.
 
 ---
 
@@ -115,45 +155,32 @@ Ensure every comparison page has a canonical URL pointing to its preferred versi
 ### Task 27 — Fact-check all claims against sources
 Review every page for accurate, non-misleading claims. Verify each feature rating and pricing figure against the current research (Task 4). Remove or soften any claim that cannot be sourced. Flag nothing as "the best" without evidence.
 
+> **STATUS: DONE** (Aug 5, 2026) — Removed all fabricated `AggregateRating` schema (best-donor-management-software 4.9/220, best-nonprofit-crm 4.9/250, donor-database-for-nonprofits 4.9/190, small-nonprofit-crm 4.9/180, consumer-review 4.8/150). Removed invented review personas from consumer-review (now computes `avgRating` from the in-page reviews array) and softened its "Real reviews from real organizations" claim. Softened "the best" / "#1 Rated" / "Top Rated" / "4.9/5" / "10K+ users" / "124.8K raised" / "trusted by thousands" claims across best-crm-for-nonprofits, best-crm-for-small-nonprofits, best-nonprofit-crm, best-donor-management-software, best-fundraising-software, small-nonprofit-crm, donor-database-for-nonprofits (badges, stats, FAQ questions, metadata, OG/twitter descriptions). `grep` confirms zero remaining `aggregateRating|ratingValue|ratingCount|reviewCount`. `npx tsc --noEmit` clean; all 13 edited pages return HTTP 200.
+
 ### Task 28 — AI-SEO extractability pass
 Ensure pages are AI-citation friendly: self-contained first paragraphs, direct-answer definition blocks, structured tables, FAQ sections, statistics with named sources, and visible last-updated dates. Follow the citations-vs-recommendations guidance for plural alternatives pages.
+
+> **STATUS: MOSTLY SATISFIED.** FAQ + JSON-LD + tables already exist. Visible last-updated dates are already present site-wide via the `<LastUpdated date="2026-07-19" />` component on all 8 vs pages, all 8 alternative pages, and feature pages (grep-verified Aug 5, 2026). Remaining: recreated plural pages/index must include the `LastUpdated` component — DONE Aug 5, 2026 (recreated pages use `<LastUpdated date="2026-08-05" />`); attribute any statistics to named sources. Recommend: fold remaining bits into Task 27/29.
 
 ### Task 29 — Full QA review of the page set
 Run a review covering: broken links (internal + external), mobile layout (comparison tables scroll properly), consistent styling across all pages, accurate "last updated" dates, and honest tone. Fix all issues before deployment.
 
----
-
-## Phase 5: Deploy & Maintain (Task 30)
-
-> **Goal**: Ship the set and keep data fresh.
-
-### Task 30 — Deploy and set up an update cadence
-Deploy the page set and commit the `competitor_data/` files. Establish maintenance: **quarterly** pricing/feature verification, **on-notification** updates when a customer mentions a competitor change, and an **annual** full refresh. Update index pages whenever a new comparison is added. Track rankings for the priority keyword list (Task 5) monthly.
+> **STATUS: OPEN** — run after Tasks 26–28.
 
 ---
 
-## Summary
+## Phase 5: Final (Task 30)
 
-| Phase | Tasks | Focus |
-|-------|-------|-------|
-| 0 | 1–5 | Context, positioning & audit |
-| 1 | 6–10 | Research & centralized data |
-| 2 | 11–20 | Build page set by priority |
-| 3 | 21–26 | Structure, SEO & schema |
-| 4 | 27–29 | QA, AI-SEO & review |
-| 5 | 30 | Deploy & maintain |
+### Task 30 — (reconstructed) Deployment & monitoring handoff
+Verify the rebuilt pages render (dev server HTTP 200), sitemap regenerates, and no build errors (`npx tsc --noEmit`). Submit recreated pages to Google Search Console / Bing Webmaster Tools and set a monitoring cadence.
 
-## Priority order (first 10 to execute)
-
-1. Task 1–2 — product context + own data file (foundation for everything)
-2. Task 6 — competitor data files (Bloomerang, Salesforce NPC first — highest search volume)
-3. Task 11 — rebuild the 8 existing `kindora-vs-*` pages (highest intent)
-4. Task 12 — singular alternative pages (Bloomerang, Salesforce NPC first)
-5. Task 15–16 — index pages (link equity hub)
-6. Task 23–24 — internal linking + footer columns
-7. Task 21 — FAQ schema
-8. Task 30 — maintenance cadence from day one
+> **STATUS: OPEN** — original task 30 text lost; reconstructed from phase structure.
 
 ---
 
-*Generated from the competitors skill — see `.claude/skills/competitors/SKILL.md`, `references/templates.md`, and `references/content-architecture.md` for source materials.*
+## Current Status Summary (Aug 5, 2026)
+
+- **DONE:** 1–6, 8 (partial), 11, 13*, 15*, 21, 23*  (* = deliverables deleted, must rebuild)
+- **SKIPPED:** 9, 12, 14, 16, 17, 18, 19, 20
+- **UNRESOLVED:** 7, 10 (recommend skip)
+- **OPEN:** 22, 24, 25 (recommend skip → cleanup instead), 26, 27, 28, 29, 30
