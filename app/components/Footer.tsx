@@ -134,11 +134,29 @@ const footerColumns: FooterColumn[] = [
     links: [
       { name: "VDR Alternatives", href: "/competitors/vdr-alternatives" },
       { name: "Datasite Alternative", href: "/competitors/datasite-alternative" },
+      { name: "Firmex Alternative", href: "/competitors/firmex-alternative" },
       { name: "Intralinks Alternative", href: "/competitors/intralinks-alternative" },
       { name: "iDeals Alternative", href: "/competitors/ideals-alternative" },
       { name: "Drooms Alternative", href: "/competitors/drooms-alternative" },
+      { name: "ShareFile Alternative", href: "/competitors/sharefile-alternative" },
+      { name: "Box Alternative", href: "/competitors/box-alternative" },
+      { name: "Onehub Alternative", href: "/competitors/onehub-alternative" },
+      { name: "SecureDocs Alternative", href: "/competitors/securedocs-alternative" },
+      { name: "Ansarada Alternative", href: "/competitors/ansarada-alternative" },
+      { name: "Dealroom Alternative", href: "/competitors/dealroom-alternative" },
       { name: "Pricing Comparison", href: "/pricing-comparison" },
       { name: "VDR Comparison", href: "/vdr-comparison" },
+      { name: "SpaceNexus vs Firmex", href: "/compare/spacenexus-vs-firmex" },
+      { name: "SpaceNexus vs ShareFile", href: "/compare/spacenexus-vs-sharefile" },
+      { name: "SpaceNexus vs Box", href: "/compare/spacenexus-vs-box" },
+      { name: "SpaceNexus vs Onehub", href: "/compare/spacenexus-vs-onehub" },
+      { name: "SpaceNexus vs SecureDocs", href: "/compare/spacenexus-vs-securedocs" },
+      { name: "SpaceNexus vs Ansarada", href: "/compare/spacenexus-vs-ansarada" },
+      { name: "SpaceNexus vs Intralinks", href: "/compare/spacenexus-vs-intralinks" },
+      { name: "SpaceNexus vs Datasite", href: "/compare/spacenexus-vs-datasite" },
+      { name: "SpaceNexus vs iDeals", href: "/compare/spacenexus-vs-ideals" },
+      { name: "SpaceNexus vs Drooms", href: "/compare/spacenexus-vs-drooms" },
+      { name: "SpaceNexus vs Dealroom", href: "/compare/spacenexus-vs-dealroom" },
       { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
     ],
   },
@@ -294,11 +312,13 @@ export default function Footer() {
                 <svg className="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <p><span className="font-semibold text-gray-900">Canada</span> <span className="text-gray-600">+1 (979) 326-9493</span></p>
+                <p>
+                  <span className="font-semibold text-gray-900">Canada</span> <span className="text-gray-600">+1 (979) 326-9493</span></p>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-5 h-5 text-gray-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                
                 </svg>
                 <p><span className="font-semibold text-gray-900">UAE</span> <span className="text-gray-600">+971 56 256 7509</span></p>
               </div>

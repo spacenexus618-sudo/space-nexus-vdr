@@ -136,6 +136,7 @@ export default function KindoraNav() {
               </span>
             </div>
           </Link>
+          
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -170,6 +171,8 @@ export default function KindoraNav() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              
+              
 
               {productsOpen && (
                 <div className="absolute top-full left-0 pt-3 w-[340px]">
@@ -177,6 +180,7 @@ export default function KindoraNav() {
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-3 mb-2">
                       Our Products
                     </p>
+
                     <a
                       href="/"
                       target="_blank"
@@ -217,6 +221,7 @@ export default function KindoraNav() {
                         <p className="text-xs text-gray-500">
                           Complete operating system for nonprofits
                         </p>
+                        
                       </div>
                     </a>
                   </div>
@@ -235,6 +240,7 @@ export default function KindoraNav() {
                 }`}
               >
                 {link.label}
+                
                 <span
                   className={`absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-[#2563eb] to-[#7c3aed] transition-transform duration-300 origin-left rounded-full ${
                     isActive(link.href)
@@ -243,6 +249,7 @@ export default function KindoraNav() {
                   }`}
                 />
               </Link>
+              
             ))}
 
             {/* Contact Dropdown */}

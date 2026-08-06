@@ -330,6 +330,34 @@ export default function DatasiteAlternativePage() {
                         <Link href="/competitors/intralinks-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
                             SpaceNexus vs Intralinks →
                         </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/firmex-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Firmex →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/sharefile-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs ShareFile →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/box-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Box →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/onehub-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Onehub →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/securedocs-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs SecureDocs →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/ansarada-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Ansarada →
+                        </Link>
+                        <span className="hidden sm:inline text-gray-300">|</span>
+                        <Link href="/competitors/dealroom-alternative" className="text-sm font-semibold text-[#2563eb] hover:underline">
+                            SpaceNexus vs Dealroom →
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -375,7 +403,7 @@ export default function DatasiteAlternativePage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-07-19" />
+                <LastUpdated date="2026-08-01" />
             </div></div>
             </section>
         </main>

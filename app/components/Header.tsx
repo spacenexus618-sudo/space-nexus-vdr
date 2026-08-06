@@ -362,6 +362,7 @@ export default function Header() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [ecosystemOpen, setEcosystemOpen] = useState(false);
+  const [mobileContactOpen, setMobileContactOpen] = useState(false);
 
   const scrollToPhone = () => {
     const phoneSection = document.getElementById('footer-phones');
@@ -386,6 +387,7 @@ export default function Header() {
     setProductsOpen(false);
     setContactOpen(false);
     setEcosystemOpen(false);
+    setMobileContactOpen(false);
   }, [pathname]);
 
   // Kindora has its own KindoraNav rendered in kindora/layout.tsx
@@ -1062,6 +1064,49 @@ export default function Header() {
                         >
                           View All Industries →
                         </Link>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Mobile Contact Numbers Accordion */}
+                  <div>
+                    <button
+                      className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors min-h-[44px]"
+                      onClick={() => setMobileContactOpen(!mobileContactOpen)}
+                    >
+                      Contact Us
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${mobileContactOpen ? "rotate-180" : ""}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {mobileContactOpen && (
+                      <div className="pl-4 pr-4 space-y-2 mt-1">
+                        {[
+                          { country: "USA", phone: "+1 646 421 5740", flag: "us", tel: "+16464215740" },
+                          { country: "Canada", phone: "+1 (979) 326-9493", flag: "ca", tel: "+19793269493" },
+                          { country: "UAE", phone: "+971 56 256 7509", flag: "ae", tel: "+971562567509" },
+                          { country: "Saudi Arabia", phone: "+966 56 208 1999", flag: "sa", tel: "+966562081999" },
+                          { country: "Kuwait", phone: "+965 9724 3755", flag: "kw", tel: "+96597243755" },
+                          { country: "Singapore", phone: "+65 86 111 900", flag: "sg", tel: "+6586111900" },
+                          { country: "Malaysia", phone: "+60 10660 7357", flag: "my", tel: "+60106607357" },
+                        ].map((item) => (
+                          <a
+                            key={item.country}
+                            href={`tel:${item.tel}`}
+                            className="flex items-center gap-2 p-2.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors"
+                          >
+                            <img src={`https://flagcdn.com/w40/${item.flag}.png`} alt={item.country} className="w-5 h-auto rounded-sm flex-shrink-0" loading="lazy" />
+                            <div className="min-w-0">
+                              <p className="text-xs font-semibold text-gray-900 truncate">{item.phone}</p>
+                              <p className="text-[10px] text-gray-500">{item.country}</p>
+                            </div>
+                          </a>
+                        ))}
                       </div>
                     )}
                   </div>
