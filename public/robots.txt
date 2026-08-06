@@ -7,3 +7,4 @@ Disallow: /seo/
 Disallow: /templates/
 
 Sitemap: https://spacenexus.net/sitemap.xml
+Sitemap: https://spacenexus.net/kindora/sitemap.xml
