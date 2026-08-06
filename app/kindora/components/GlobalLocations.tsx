@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { MapPin, ExternalLink, Phone, ChevronRight } from "lucide-react";
@@ -11,7 +11,7 @@ const locations = [
     address: "2500 Marconi Ave, Ste 101,\nSacramento, CA 95821 USA",
     lat: 38.61512,
     lng: -121.38384,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/us.svg",
+    flag: "https://flagcdn.com/us.svg",
     phone: "+1 646 421 5740",
     mapUrl: "https://www.google.com/maps?q=38.61512,-121.38384",
   },
@@ -21,7 +21,7 @@ const locations = [
     address: "PMSPACE AI, #04-39,\n7 Soon Lee Street,\nSingapore 627608",
     lat: 1.32151,
     lng: 103.73999,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/sg.svg",
+    flag: "https://flagcdn.com/sg.svg",
     phone: "+65 86 111 900",
     mapQuery: "PMSPACE AI, 7 Soon Lee Street, Singapore 627608",
     mapUrl: "https://www.google.com/maps?q=1.32151,103.73999",
@@ -32,7 +32,7 @@ const locations = [
     address: "Dubai, United Arab Emirates",
     lat: 25.2048,
     lng: 55.2708,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/ae.svg",
+    flag: "https://flagcdn.com/ae.svg",
     phone: "+971 56 256 7509",
     mapUrl: "https://www.google.com/maps?q=25.2048,55.2708",
   },
@@ -42,7 +42,7 @@ const locations = [
     address: "New Delhi, India",
     lat: 28.6139,
     lng: 77.209,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/in.svg",
+    flag: "https://flagcdn.com/in.svg",
     phone: "+91 22 1234 5678",
     mapUrl: "https://www.google.com/maps?q=28.6139,77.209",
   },
@@ -52,7 +52,7 @@ const locations = [
     address: "Kuwait City, Kuwait",
     lat: 29.3759,
     lng: 47.9774,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/kw.svg",
+    flag: "https://flagcdn.com/kw.svg",
     phone: "+965 9724 3755",
     mapUrl: "https://www.google.com/maps?q=29.3759,47.9774",
   },
@@ -62,7 +62,7 @@ const locations = [
     address: "Toronto, Ontario, Canada",
     lat: 43.6532,
     lng: -79.3832,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/ca.svg",
+    flag: "https://flagcdn.com/ca.svg",
     phone: "+1 (979) 326-9493",
     mapUrl: "https://www.google.com/maps?q=43.6532,-79.3832",
   },
@@ -72,7 +72,7 @@ const locations = [
     address: "Hong Kong",
     lat: 22.3193,
     lng: 114.1694,
-    flag: "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/hk.svg",
+    flag: "https://flagcdn.com/hk.svg",
     phone: "+852 1234 5678",
     mapUrl: "https://www.google.com/maps?q=22.3193,114.1694",
   },
