@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../components/LastUpdated";
 import AnswerBlock from "../components/AnswerBlock";

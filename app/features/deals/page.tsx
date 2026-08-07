@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
@@ -331,9 +332,11 @@ export default function DealsPage() {
                 </div>
               </div>
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+                <Image
                   src="/spacenexus/screenshots/vdr-deals.png"
                   alt="SpaceNexus VDR Deals — transaction management workspace"
+                  width={1280}
+                  height={800}
                   className="w-full h-auto"
                   loading="lazy"
                 />

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
@@ -370,9 +371,11 @@ export default function ActivityAnalyticsPage() {
                 </div>
               </div>
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+                <Image
                   src="/spacenexus/screenshots/aneletics-overview.jpeg"
                   alt="SpaceNexus VDR Activity & Analytics — engagement overview dashboard"
+                  width={1280}
+                  height={800}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -436,9 +439,11 @@ export default function ActivityAnalyticsPage() {
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
                 </div>
                 <div className="border border-gray-200 border-t-0 rounded-b-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                  <img
+                  <Image
                     src={shot.src}
                     alt={`Space Nexus Analytics — ${shot.caption}`}
+                    width={1280}
+                    height={800}
                     className="w-full h-auto"
                     loading="lazy"
                   />

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
@@ -224,9 +225,11 @@ export default function DataRoomPage() {
                 </div>
               </div>
               <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                <img
+                <Image
                   src="/spacenexus/screenshots/secure%20data%20room.jpeg"
                   alt="SpaceNexus VDR Secure Data Room — document management workspace"
+                  width={1280}
+                  height={800}
                   className="w-full h-auto"
                   loading="lazy"
                 />

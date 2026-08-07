@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 import AnswerBlock from "../../components/AnswerBlock";
@@ -381,7 +382,7 @@ export default function FirmexAlternativePage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / dashboard</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl">
-                                <img src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus VDR dashboard — Firmex alternative" className="w-full h-auto" loading="lazy" />
+                                <Image src="/spacenexus/screenshots/vdr-dashboard.png" alt="SpaceNexus VDR dashboard — Firmex alternative" width={1200} height={675} className="w-full h-auto" />
                             </div>
                         </div>
                     </div>

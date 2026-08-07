@@ -29,22 +29,7 @@ export default function KindoraDemoRequest() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [createDemoRequest, { loading }] = useMutation(
-    CREATE_DEMO_REQUEST_MUTATION,
-    {
-      onCompleted: (data) => {
-        if (data.createDemoRequest?._id) {
-          setIsSubmitted(true);
-          setError(null);
-        } else {
-          setError("Something went wrong. Please try again.");
-        }
-      },
-      onError: (err) => {
-        setError(err.message || "Something went wrong. Please try again.");
-      },
-    },
-  );
+
 
   const validate = (data: FormData): Record<string, string> => {
     const errs: Record<string, string> = {};
