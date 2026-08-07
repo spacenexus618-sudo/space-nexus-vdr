@@ -133,7 +133,7 @@ const footerLinks = {
     { name: "Best CRM for Small Nonprofits", href: "/kindora/best-crm-for-small-nonprofits" },
     { name: "Cloud CRM for Nonprofits", href: "/kindora/cloud-crm-for-nonprofits" },
   ],
-  compare: [
+  vs: [
     { name: "Kindora vs Bloomerang", href: "/kindora/kindora-vs-bloomerang" },
     { name: "Kindora vs Bonterra", href: "/kindora/kindora-vs-bonterra" },
     { name: "Kindora vs Salesforce NPC", href: "/kindora/kindora-vs-salesforce-nonprofit-cloud" },
@@ -142,17 +142,15 @@ const footerLinks = {
     { name: "Kindora vs DonorDock", href: "/kindora/kindora-vs-donordock" },
     { name: "Kindora vs Little Green Light", href: "/kindora/kindora-vs-little-green-light" },
     { name: "Kindora vs Network for Good", href: "/kindora/kindora-vs-network-for-good" },
-    { name: "Why Kindora over Bloomerang", href: "/kindora/why-kindora-over-bloomerang" },
-    { name: "Vs Competitors", href: "/kindora/vs-competitors" },
+  ],
+  alternativesTo: [
     { name: "Bloomerang Alternative", href: "/kindora/bloomerang-alternative" },
     { name: "Bonterra Alternative", href: "/kindora/bonterra-alternative" },
-    { name: "Better Alternative to Bonterra", href: "/kindora/better-alternative-to-bonterra" },
     { name: "DonorPerfect Alternative", href: "/kindora/donorperfect-alternative" },
     { name: "DonorDock Alternative", href: "/kindora/donordock-alternative" },
     { name: "Little Green Light Alternative", href: "/kindora/little-green-light-alternative" },
     { name: "Neon One Alternative", href: "/kindora/neon-one-alternative" },
     { name: "Network for Good Alternative", href: "/kindora/network-for-good-alternative" },
-    { name: "Salesforce Alternative for Nonprofits", href: "/kindora/salesforce-alternative-for-nonprofits" },
     { name: "Salesforce NPC Alternative", href: "/kindora/salesforce-nonprofit-cloud-alternative" },
   ],
   solutions: [
@@ -211,6 +209,7 @@ export default function KindoraFooter() {
                   <span className="text-[10px] font-medium text-blue-400 uppercase tracking-wider -mt-1">NGO OS</span>
                 </div>
               </Link>
+              
             </div>
             <p className="text-sm text-gray-400 mb-4">The Complete Operating System for Nonprofits</p>
             <p className="text-xs text-gray-500 mb-4">Version 1.0 (Kindora-V1.0)</p>
@@ -344,6 +343,31 @@ export default function KindoraFooter() {
                   <a href={item.href} className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">{item.value}</a>
                 </li>
               ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Row 4: Comparisons + Alternatives */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6">
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Kindora vs</h4>
+            <ul className="space-y-2">
+              {footerLinks.vs.map((link) => (
+                <li key={link.name}><Link href={link.href} className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">{link.name}</Link></li>
+              ))}
+              <li><Link href="/kindora/vs-competitors" className="block py-2 text-sm font-medium text-[#60a5fa] hover:text-white transition-colors">View All Comparisons →</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Alternatives to</h4>
+            <ul className="space-y-2">
+              {footerLinks.alternativesTo.map((link) => (
+                <li key={link.name}><Link href={link.href} className="block py-2 text-sm text-gray-400 hover:text-white transition-colors">{link.name}</Link></li>
+              ))}
+              <li><Link href="/kindora/alternatives" className="block py-2 text-sm font-medium text-[#60a5fa] hover:text-white transition-colors">View All Alternatives →</Link></li>
             </ul>
           </div>
         </div>

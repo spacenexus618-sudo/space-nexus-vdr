@@ -46,37 +46,8 @@ const reviews = [
   },
 ];
 
-const reviewProductSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Kindora - Nonprofit Management Software",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "150",
-    "bestRating": "5",
-  },
-  "review": [
-    { "@type": "Review", "author": { "@type": "Person", "name": "Sarah Mitchell" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Kindora transformed how we manage our donors and grants. The dashboard gives me real-time visibility into every aspect of our operations." },
-    { "@type": "Review", "author": { "@type": "Person", "name": "James Rodriguez" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "The client case management module is exactly what we needed. Tracking program enrollment and outcomes is now seamless." },
-    { "@type": "Review", "author": { "@type": "Person", "name": "Amanda Foster" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "The all-in-one approach means our team doesn't need to switch between different tools. Setup was quick and the support team was helpful." },
-  ],
-};
-
-const reviewBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spacenexus.net" },
-    { "@type": "ListItem", "position": 2, "name": "Kindora", "item": "https://spacenexus.net/kindora" },
-    { "@type": "ListItem", "position": 3, "name": "Consumer Reviews", "item": "https://spacenexus.net/kindora/consumer-review" },
-  ],
-};
-
 const lastUpdated = "May 15, 2026";
 export default function ConsumerReviewPage() {
-  const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
-
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -84,19 +55,6 @@ export default function ConsumerReviewPage() {
     description:
       "All-in-one nonprofit management platform with donor management, grant tracking, program delivery, financial reporting, and volunteer coordination.",
     url: "https://spacenexus.net/kindora",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: avgRating.toFixed(1),
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: reviews.length,
-    },
-    review: reviews.map((r) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: r.name },
-      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: "5" },
-      reviewBody: r.text,
-    })),
   };
 
   return (
@@ -107,7 +65,7 @@ export default function ConsumerReviewPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Kindora Consumer Reviews</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See what nonprofits and NGOs are saying about Kindora. Real reviews from real organizations.
+            See what nonprofits and NGOs are saying about Kindora. Feedback shared by organizations using the platform.
           </p>
           <p className="text-sm text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed italic">
             According to a 2024 Capterra survey, 89% of nonprofit software buyers read at least 5 reviews before making a purchasing decision.<sup className="text-[#2563eb]">[1]</sup>{" "}

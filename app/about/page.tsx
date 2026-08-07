@@ -5,7 +5,7 @@ import { authorProfiles } from "../blog/data/posts";
 import LastUpdated from "../components/LastUpdated";
 //above code is importing necessary modules and types from Next.j, as well as author profile data from a local file. The Metadata type is used for defining metadata for the page, Link is used for client-side navigation, Script is used for injecting scripts into the page, and authorProfiles contains information about the authors to be displayed on the About page.
 const teamMembers = Object.values(authorProfiles);
-export const metadata: Metadata = {
+export const metadata: Metadata =  {
     title: "About Space Nexus — Enterprise Virtual Data Room",
     description:
         "Built by a team from Fortune 500 companies, Big 4 consulting firms, and top investment banks. Space Nexus is purpose-built for M&A professionals who need speed, security, and reliability.",
@@ -162,6 +162,7 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
                         What we stand for
                     </h2>
+                    
                     <div className="grid md:grid-cols-3 gap-6">
                         {values.map((v) => (
                             <div
@@ -175,6 +176,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
                                 <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>
+                                
                             </div>
                         ))}
                     </div>
@@ -187,6 +189,7 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
                         Our journey
                     </h2> 
+                    
                     
                     <div className="space-y-6">
                         {milestones.map((m, i) => (
@@ -222,12 +225,14 @@ export default function AboutPage() {
                                     >
                                         {member.initials}
                                     </div>
+                                    
                                     <div>
                                         <h3 className="font-bold text-gray-900">{member.name}</h3>
                                         <p className="text-sm text-gray-600">{member.role}</p>
                                     </div>
                                 </div>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>
+                                
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {member.credentials.map((cred, i) => (
                                         <span key={i} className="text-xs font-medium text-gray-600 bg-gray-50 border border-gray-100 px-2.5 py-1 rounded-full">
