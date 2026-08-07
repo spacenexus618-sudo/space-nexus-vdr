@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
 
@@ -249,7 +250,7 @@ export default function SeriesADataRoomPage() {
                                 <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-600 ml-3">app.spacenexus.net / analytics</div>
                             </div>
                             <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10">
-                                <img src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus investor engagement analytics for Series A" className="w-full h-auto" loading="lazy" />
+                                <Image src="/spacenexus/screenshots/vdr-analytics.png" alt="SpaceNexus investor engagement analytics for Series A" width={1200} height={675} className="w-full h-auto" />
                             </div>
                         </div>
                         <div>

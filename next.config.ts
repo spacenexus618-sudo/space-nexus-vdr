@@ -137,6 +137,26 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Cache favicon for 30 days
+        source: "/favicon.ico",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        // Cache manifest for 1 day
+        source: "/manifest.webmanifest",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=3600",
+          },
+        ],
+      },
+      {
         // Add security headers on all routes (improves Core Web Vitals trust signals)
         source: "/:path*",
         headers: [

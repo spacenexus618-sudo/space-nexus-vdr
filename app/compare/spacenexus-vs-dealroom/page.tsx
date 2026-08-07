@@ -4,16 +4,23 @@ import LastUpdated from '@/app/components/LastUpdated'
 import AnswerBlock from '@/app/components/AnswerBlock'
 
 export const metadata: Metadata = {
-  title: 'SpaceNexus vs Dealroom — Comparison',
+  title: 'SpaceNexus vs Dealroom | Feature Comparison 2026',
   description: 'SpaceNexus vs Dealroom side-by-side. Compare features, security, pricing, and fit for fundraising, M&A, and portfolio management in the space industry.',
   openGraph: {
-    title: 'SpaceNexus vs Dealroom',
+    title: 'SpaceNexus vs Dealroom | Feature Comparison 2026',
     description: 'Compare SpaceNexus and Dealroom for deal management in the space sector.',
-    type: 'website'
+    url: 'https://spacenexus.net/compare/spacenexus-vs-dealroom',
   },
   alternates: {
-    canonical: '/compare/spacenexus-vs-dealroom'
-  }
+    canonical: 'https://spacenexus.net/compare/spacenexus-vs-dealroom'
+  },
+  keywords: [
+    'spacenexus vs dealroom',
+    'dealroom vs spacenexus',
+    'spacenexus dealroom comparison',
+    'best VDR 2026',
+    'virtual data room comparison',
+  ],
 }
 
 export default function CompareSpaceNexusVsDealroom() {
@@ -63,7 +70,7 @@ export default function CompareSpaceNexusVsDealroom() {
   ]
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="pt-20 lg:pt-24 min-h-screen bg-white text-gray-900">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
