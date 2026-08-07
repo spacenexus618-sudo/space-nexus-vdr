@@ -8,6 +8,7 @@ const teamMembers = Object.values(authorProfiles);
 export const metadata: Metadata =  {
     title: "About Space Nexus — Enterprise Virtual Data Room",
     description:
+    
         "Built by a team from Fortune 500 companies, Big 4 consulting firms, and top investment banks. Space Nexus is purpose-built for M&A professionals who need speed, security, and reliability.",
     alternates: { canonical: "https://spacenexus.net/about" },
     openGraph: {
