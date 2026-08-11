@@ -488,7 +488,6 @@ export function AnimatedScreenshotGallery() {
                                     height={720}
                                     className="w-full h-auto object-cover object-top"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 900px"
-                                    priority
                                 />
                                 {/* Caption overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 pb-3 pt-8">
