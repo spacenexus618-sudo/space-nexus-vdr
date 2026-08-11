@@ -121,25 +121,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        {/* Preload the logo — it's the first meaningful paint above the fold */}
-        <link
-          rel="preload"
-          href="/icononly_transparent_nobuffer.png"
-          as="image"
-          type="image/png"
-        />
-
         {/* DNS prefetch + preconnect for third-party origins */}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://spaceaiapp.com" />
         <link rel="preconnect" href="https://spaceaiapp.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
 
         <JsonLd />
         <SiteNavigationSchema />
@@ -161,12 +147,12 @@ export default function RootLayout({
         <LazyWhatsAppButton />
         <SystemStatus />
 
-        {/* Google Analytics */}
+        {/* Google Analytics — lazy-load after interaction so it never blocks content */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-18DD7WWPHE"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

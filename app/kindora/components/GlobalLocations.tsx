@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { MapPin, ExternalLink, Phone, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -125,7 +126,14 @@ export default function GlobalLocations() {
               >
                 <div className="flex items-start justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2.5">
-                    <img src={loc.flag} alt={loc.name} className="w-8 h-6 rounded-sm object-cover shadow-sm" />
+                    <Image
+                      src={loc.flag}
+                      alt={loc.name}
+                      width={64}
+                      height={48}
+                      loading="lazy"
+                      className="w-8 h-6 rounded-sm object-cover shadow-sm"
+                    />
                     <div>
                       <h3 className="text-white font-semibold text-sm">{loc.name}</h3>
                       {loc.phone && <p className="text-gray-500 text-[11px]">{loc.phone}</p>}
@@ -170,7 +178,14 @@ export default function GlobalLocations() {
                     : "bg-gray-800/50 border-gray-700/50 text-gray-400 hover:bg-gray-700/50 hover:text-white hover:border-gray-600"
                   }`}
               >
-                <img src={l.flag} alt={l.name} className="w-6 h-[18px] rounded-sm object-cover shadow-sm" />
+                <Image
+                  src={l.flag}
+                  alt={l.name}
+                  width={48}
+                  height={36}
+                  loading="lazy"
+                  className="w-6 h-[18px] rounded-sm object-cover shadow-sm"
+                />
                 <span>{l.name}</span>
                 <ChevronRight className={`w-3.5 h-3.5 ml-auto hidden lg:block transition-transform duration-300 ${i === active ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
                   }`} />
