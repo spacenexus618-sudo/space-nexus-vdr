@@ -111,6 +111,7 @@ export default function AboutPage() {
                             <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
                                 About Space Nexus
                             </p>
+                            
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                                 Built by dealmakers,{" "}
                                 <span className="text-[#2563eb]">for dealmakers</span>
