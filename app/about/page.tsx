@@ -123,6 +123,7 @@ export default function AboutPage() {
                                 private equity, and enterprise software. We&apos;ve been on both sides
                                 of the deal table — and we built the tool we always wished existed.
                             </p>
+                            
                             <p className="text-gray-600">
                                 Our mission is simple: eliminate the friction from high-stakes
                                 transactions so deal teams can focus on what matters — closing deals.
