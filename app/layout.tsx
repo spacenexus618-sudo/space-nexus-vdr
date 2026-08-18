@@ -8,6 +8,7 @@ import SystemStatus from "./components/SystemStatus";
 import JsonLd from "./components/JsonLd";
 import SiteNavigationSchema from "./components/SiteNavigationSchema";
 import LazyWhatsAppButton from "./components/LazyWhatsAppButton";
+import { AuthProvider } from "../lib/auth-context";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -153,11 +154,13 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
           Skip to content
         </a>
-        <Header />
-        <main id="main-content" role="main">
-          {children}
-        </main>
-        <AppFooter />
+        <AuthProvider>
+          <Header />
+          <main id="main-content" role="main">
+            {children}
+          </main>
+          <AppFooter />
+        </AuthProvider>
         <LazyWhatsAppButton />
         <SystemStatus />
 

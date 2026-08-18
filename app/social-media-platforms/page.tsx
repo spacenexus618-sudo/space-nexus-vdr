@@ -46,7 +46,7 @@ const officialProfiles = [
   {
     name: "LinkedIn",
     handle: "SpaceNexus",
-    href: "https://www.linkedin.com/in/space-nexus/",
+    href: "https://www.linkedin.com/company/space-nexus",
     description:
       "Company news, virtual data room thought leadership, hiring updates, and enterprise announcements.",
     iconPath:
