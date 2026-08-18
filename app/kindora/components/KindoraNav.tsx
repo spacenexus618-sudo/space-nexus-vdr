@@ -139,7 +139,7 @@ export default function KindoraNav() {
           
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden xl:flex items-center space-x-1">
             {/* Products Dropdown */}
             <div
               className="relative"
@@ -252,6 +252,24 @@ export default function KindoraNav() {
               
             ))}
 
+            <Link
+              href="/kindora/free-tools"
+              className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                isActive("/kindora/free-tools")
+                  ? "text-[#2563eb]"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
+              }`}
+            >
+              Tools
+              <span
+                className={`absolute bottom-1 left-4 right-4 h-0.5 bg-gradient-to-r from-[#2563eb] to-[#7c3aed] transition-transform duration-300 origin-left rounded-full ${
+                  isActive("/kindora/free-tools")
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              />
+            </Link>
+
             {/* Contact Dropdown */}
             <div
               className="relative"
@@ -325,7 +343,7 @@ export default function KindoraNav() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden xl:flex items-center space-x-3">
             <Link
               href="/kindora/demo"
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
@@ -351,7 +369,7 @@ export default function KindoraNav() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 active:bg-gray-200 transition-colors"
+            className="xl:hidden flex items-center justify-center w-12 h-12 rounded-xl hover:bg-gray-100 active:bg-gray-200 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -370,13 +388,13 @@ export default function KindoraNav() {
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden animate-fade-in"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 xl:hidden animate-fade-in"
             onClick={() => setMobileOpen(false)}
             aria-hidden="true"
           />
           <div
             ref={mobileRef}
-            className="lg:hidden fixed inset-y-0 right-0 w-full max-w-sm z-50 bg-white shadow-2xl border-l border-gray-100 overflow-y-auto animate-slide-in-right"
+            className="xl:hidden fixed inset-y-0 right-0 w-full max-w-sm z-50 bg-white shadow-2xl border-l border-gray-100 overflow-y-auto animate-slide-in-right"
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-100 bg-gradient-to-r from-white to-blue-50/60">
               <div className="flex items-center gap-2.5">
@@ -467,6 +485,35 @@ export default function KindoraNav() {
                 )}
               </div>
 
+<Link
+                href="/kindora/free-tools"
+                onClick={() => setMobileOpen(false)}
+                className={`group flex items-center gap-4 py-3.5 px-4 text-base font-medium rounded-xl transition-colors ${
+                  isActive("/kindora/free-tools")
+                    ? "text-[#2563eb] bg-blue-50"
+                    : "text-gray-700 hover:text-[#2563eb] hover:bg-blue-50"
+                }`}
+              >
+                <span
+                  className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
+                    isActive("/kindora/free-tools")
+                      ? "bg-gradient-to-br from-[#2563eb] to-[#7c3aed] text-white"
+                      : "bg-blue-50 text-[#2563eb] group-hover:bg-gradient-to-br group-hover:from-[#2563eb] group-hover:to-[#7c3aed] group-hover:text-white"
+                  }`}
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                  </svg>
+                </span>
+                <span>Tools</span>
+                <svg
+                  className="ml-auto w-4 h-4 text-gray-300 group-hover:text-[#2563eb] group-hover:translate-x-0.5 transition-all"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+
               {quickLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -512,25 +559,27 @@ export default function KindoraNav() {
                   +1 646 421 5740
                 </a>
               </div>
-              <Link
-                href="/kindora/demo"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center gap-2 py-3.5 px-4 text-base font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300"
-              >
-                Request a Demo
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <a
-                href="https://cad.spaceaiapp.com/kindora"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center py-3.5 px-4 text-base font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300"
-              >
-                Try for Free
-              </a>
+              <div className="flex gap-3">
+                <Link
+                  href="/kindora/demo"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 flex items-center justify-center gap-2 py-3.5 px-4 text-sm font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300"
+                >
+                  Request a Demo
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <a
+                  href="https://cad.spaceaiapp.com/kindora"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 inline-flex items-center justify-center py-3.5 px-4 text-sm font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300"
+                >
+                  Try for Free
+                </a>
+              </div>
             </div>
           </div>
         </>

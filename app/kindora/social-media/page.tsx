@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Kindora Social Media",
-    description: "Follow Kindora on YouTube, Instagram, Twitter/X, LinkedIn, and Facebook for nonprofit management tips, product updates, and industry insights. Find Kindora on G2, Crunchbase, and Capterra.",
+    description: "Find Kindora across the web — G2, SoftwareSuggest, AlternativeTo, SourceForge, and SaaSHub — and follow us on YouTube, Instagram, Twitter/X, and LinkedIn for nonprofit management tips, product updates, and industry insights.",
     alternates: {
         canonical: "/kindora/social-media",
     },
 };
 
-const platforms = [
+const socialPlatforms = [
   {
     name: "YouTube",
-    handle: "@KindoraNGOOS",
-    href: "https://www.youtube.com/@KindoraNGOOS",
+    handle: "@KindoraNGOOS1",
+    href: "https://www.youtube.com/@KindoraNGOOS1",
     description: "Product walkthroughs, nonprofit management tips, and industry insights.",
     gradient: "from-red-500 to-red-700",
     shadow: "shadow-red-500/30",
@@ -22,7 +22,7 @@ const platforms = [
   {
     name: "Instagram",
     handle: "@space_kindora",
-    href: "https://www.instagram.com/space_kindora/",
+    href: "https://www.instagram.com/space_kindora_/",
     description: "Behind-the-scenes, community stories, and nonprofit spotlights.",
     gradient: "from-amber-500 via-pink-600 to-purple-600",
     shadow: "shadow-pink-500/30",
@@ -46,41 +46,53 @@ const platforms = [
     shadow: "shadow-blue-500/30",
     icon: <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />,
   },
-  {
-    name: "Facebook",
-    handle: "Kindora",
-    href: "https://www.facebook.com/kindora.ngo.os",
-    description: "Community engagement, event updates, and nonprofit resources.",
-    gradient: "from-blue-400 to-blue-700",
-    shadow: "shadow-blue-500/30",
-    icon: <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />,
-  },
 ];
 
-const morePlatforms = [
+const platforms = [
   {
     name: "G2",
-    href: "https://www.g2.com/products/kindora",
-    description: "Verified ratings and reviews from real nonprofit teams.",
+    handle: "g2.com/users/kindora",
+    href: "https://www.g2.com/users/kindora",
+    description: "Kindora user profile on G2 — read and share reviews from real nonprofit teams.",
     gradient: "from-orange-500 to-red-500",
     shadow: "shadow-orange-500/30",
-    icon: <path d="M12 1.5 21 6.75 12 24 3 6.75 12 1.5zM6.405 9.045l5.595-3.23 5.595 3.23-5.595 7.237-5.595-7.237z" />,
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
   },
   {
-    name: "Crunchbase",
-    href: "https://www.crunchbase.com/organization/kindora",
-    description: "Company profile, funding, and team information.",
+    name: "SoftwareSuggest",
+    handle: "softwaresuggest.com",
+    href: "https://www.softwaresuggest.com/vendorsportal/index.php?r=upgrade",
+    description: "Kindora vendor profile on SoftwareSuggest — software discovery and user reviews.",
+    gradient: "from-blue-500 to-indigo-600",
+    shadow: "shadow-blue-500/30",
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
+  },
+  {
+    name: "AlternativeTo",
+    handle: "alternativeto.net/user/space_kindora1",
+    href: "https://alternativeto.net/user/space_kindora1/",
+    description: "Kindora user profile on AlternativeTo — software alternatives and community recommendations.",
+    gradient: "from-emerald-500 to-teal-600",
+    shadow: "shadow-emerald-500/30",
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
+  },
+  {
+    name: "SourceForge",
+    handle: "sourceforge.net/u/space-kndora1",
+    href: "https://sourceforge.net/u/space-kndora1/profile",
+    description: "Kindora user profile on SourceForge — open source software discovery and downloads.",
+    gradient: "from-amber-500 to-orange-600",
+    shadow: "shadow-amber-500/30",
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
+  },
+  {
+    name: "SaaSHub",
+    handle: "saashub.com/u/spacenexus",
+    href: "https://www.saashub.com/u/spacenexus",
+    description: "Kindora user profile on SaaSHub — SaaS discovery, ratings, and reviews.",
     gradient: "from-sky-500 to-blue-600",
     shadow: "shadow-sky-500/30",
-    icon: <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18.5A8.5 8.5 0 1112 3.5a8.5 8.5 0 010 17z" />,
-  },
-  {
-    name: "Capterra",
-    href: "https://www.capterra.com/p/kindora",
-    description: "Compare features, pricing, and user reviews.",
-    gradient: "from-green-500 to-emerald-600",
-    shadow: "shadow-green-500/30",
-    icon: <path d="M11.5 2l1.2 6.8h3.4v8.3l2.6 3.5v-13.8L11.5 2zm-3 0v8.3h3L9 21.5l2.6-4.1-4.3-7.3H5.8V2h2.7z" />,
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
   },
 ];
 
@@ -95,11 +107,11 @@ export default function SocialMediaPage() {
             </svg>
           </div>
           <h1 className="text-4xl font-bold text-white mb-4">Connect With Kindora</h1>
-          <p className="text-lg text-gray-400">Join our nonprofit community across social platforms.</p>
+          <p className="text-lg text-gray-400">Find Kindora across the web — reviews, profiles, and software listings.</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {platforms.map((p) => (
+          {socialPlatforms.map((p) => (
             <a
               key={p.name}
               href={p.href}
@@ -132,27 +144,30 @@ export default function SocialMediaPage() {
             <p className="text-sm text-gray-400">Find Kindora listed and reviewed across the web.</p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
-            {morePlatforms.map((p) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {platforms.map((p) => (
               <a
                 key={p.name}
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex flex-col items-center justify-center gap-4 p-6 rounded-2xl bg-gray-800/60 border border-gray-700/50 hover:border-gray-500 hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${p.shadow} text-center`}
+                className={`group flex items-start gap-4 p-5 rounded-2xl bg-gray-800/60 border border-gray-700/50 hover:border-gray-500 hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${p.shadow}`}
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${p.gradient} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     {p.icon}
                   </svg>
                 </div>
-                <div>
-                  <div className="text-white font-semibold">{p.name}</div>
-                  <p className="text-xs text-gray-500 mt-1.5">{p.description}</p>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-semibold">{p.name}</span>
+                    <svg className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors duration-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">{p.handle}</p>
+                  <p className="text-sm text-gray-400 mt-2">{p.description}</p>
                 </div>
-                <svg className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
               </a>
             ))}
           </div>
