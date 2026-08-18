@@ -57,6 +57,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const freeToolPages = [
+    "free-tools",
+    "free-tools/grant-readiness-scorecard",
+    "free-tools/donor-retention-calculator",
+    "free-tools/indirect-cost-allocator",
+    "free-tools/chart-of-accounts-generator",
+    "free-tools/impact-matrix-builder",
+    "free-tools/nonprofit-kpi-calculator",
+    "free-tools/donation-receipt-generator",
+    "free-tools/volunteer-time-value-calculator",
+    "free-tools/nonprofit-software-roi-calculator",
+  ].map((slug) => ({
+    route: `/${slug}`,
+    priority: 0.8,
+  }));
+
   const indexAndRoundupPages = [
     "alternatives",
     "best-salesforce-alternatives",
@@ -194,6 +210,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...featurePages,
     ...solutionPages,
     ...blogPages,
+    ...freeToolPages,
     ...indexAndRoundupPages,
     ...seoLandingPages,
   ];
