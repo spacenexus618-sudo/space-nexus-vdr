@@ -31,6 +31,11 @@ const quickLinks = [
     href: "/kindora/consumer-review",
     icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z",
   },
+  {
+    label: "About",
+    href: "/kindora/about",
+    icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
 ];
 
 const offices = [
@@ -139,7 +144,7 @@ export default function KindoraNav() {
           
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center space-x-1">
+          <div className="hidden xl:flex items-center space-x-0.5 flex-shrink-0">
             {/* Products Dropdown */}
             <div
               className="relative"
@@ -157,7 +162,7 @@ export default function KindoraNav() {
                 onKeyDown={(e) => {
                   if (e.key === "Escape") { e.stopPropagation(); setProductsOpen(false); }
                 }}
-                className={`relative flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                className={`relative flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
                   productsOpen
                     ? "text-[#2563eb] bg-blue-50"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
@@ -233,7 +238,7 @@ export default function KindoraNav() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
                   isActive(link.href)
                     ? "text-[#2563eb]"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
@@ -254,7 +259,7 @@ export default function KindoraNav() {
 
             <Link
               href="/kindora/free-tools"
-              className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+              className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
                 isActive("/kindora/free-tools")
                   ? "text-[#2563eb]"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
@@ -287,7 +292,7 @@ export default function KindoraNav() {
                 onKeyDown={(e) => {
                   if (e.key === "Escape") { e.stopPropagation(); setContactOpen(false); }
                 }}
-                className={`relative flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                className={`relative flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
                   contactOpen
                     ? "text-[#2563eb] bg-blue-50"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-50/80"
@@ -343,27 +348,25 @@ export default function KindoraNav() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden xl:flex items-center space-x-3">
+          <div className="hidden xl:flex items-center space-x-2 flex-shrink-0">
             <Link
               href="/kindora/demo"
-              className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
+              className="inline-flex items-center whitespace-nowrap px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#1d4ed8] hover:to-[#1e40af] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
             >
               Request a Demo
-              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="ml-1.5 w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
 
-            <div className="flex justify-center">
-              <a
-                href="https://cad.spaceaiapp.com/kindora"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
-              >
-                Try for Free
-              </a>
-            </div>
+            <a
+              href="https://cad.spaceaiapp.com/kindora"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center whitespace-nowrap px-4 py-2 text-sm font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5"
+            >
+              Try for Free
+            </a>
           </div>
 
           {/* Mobile Hamburger */}
