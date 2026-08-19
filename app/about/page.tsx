@@ -179,7 +179,7 @@ export default function AboutPage() {
                                     </svg>
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
-                                
+
                                 <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>
                                 
                             </div>
@@ -217,6 +217,7 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
+                        
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             Built by deal professionals from Fortune 500 companies, Big 4 firms, and leading investment banks.
                         </p>
