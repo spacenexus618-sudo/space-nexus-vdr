@@ -40,7 +40,7 @@ const socialPlatforms = [
   {
     name: "LinkedIn",
     handle: "Kindora NGO OS",
-    href: "https://www.linkedin.com/company/kindora-ngo-os",
+    href: "https://www.linkedin.com/company/space-kindora/",
     description: "Company updates, thought leadership, and job opportunities.",
     gradient: "from-blue-500 to-blue-800",
     shadow: "shadow-blue-500/30",
