@@ -255,7 +255,7 @@ export default function KindoraExpenseManagementPage() {
                   <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.kindora.com / expenses</div>
                 </div>
                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
-                  <Image src="/spacenexus/screenshots/vdr-dashboard.png" alt="Kindora expense management dashboard" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px" priority />
+                  <Image src="/spacenexus/screenshots/vdr-dashboard.png" alt="Kindora expense management dashboard" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px" />
                 </div>
                 <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
               </div>

@@ -76,6 +76,12 @@ const nextConfig: NextConfig = {
         destination: "/case-studies/startup-fundraising",
         permanent: true,
       },
+      // Consolidate social media page (shorter URL → canonical)
+      {
+        source: "/social-media",
+        destination: "/social-media-platforms",
+        permanent: true,
+      },
     ];
   },
 

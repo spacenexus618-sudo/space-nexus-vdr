@@ -25,8 +25,8 @@ export default function KindoraJsonLd() {
       "Financial Management for Nonprofits",
     ],
     sameAs: [
-      "https://www.youtube.com/@KindoraNGOOS",
-      "https://www.instagram.com/space_kindora/",
+      "https://www.youtube.com/@KindoraNGOOS1",
+      "https://www.instagram.com/space_kindora_/",
       "https://x.com/space_kindora",
       "https://www.linkedin.com/company/kindora-ngo-os",
       "https://www.facebook.com/kindora.ngo.os",

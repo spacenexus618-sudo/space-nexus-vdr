@@ -8,6 +8,7 @@ const teamMembers = Object.values(authorProfiles);
 export const metadata: Metadata =  {
     title: "About Space Nexus — Enterprise Virtual Data Room",
     description:
+    
         "Built by a team from Fortune 500 companies, Big 4 consulting firms, and top investment banks. Space Nexus is purpose-built for M&A professionals who need speed, security, and reliability.",
     alternates: { canonical: "https://spacenexus.net/about" },
     openGraph: {
@@ -107,9 +108,11 @@ export default function AboutPage() {
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
+                            
                             <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-4">
                                 About Space Nexus
                             </p>
+                            
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                                 Built by dealmakers,{" "}
                                 <span className="text-[#2563eb]">for dealmakers</span>
@@ -120,6 +123,7 @@ export default function AboutPage() {
                                 private equity, and enterprise software. We&apos;ve been on both sides
                                 of the deal table — and we built the tool we always wished existed.
                             </p>
+                            
                             <p className="text-gray-600">
                                 Our mission is simple: eliminate the friction from high-stakes
                                 transactions so deal teams can focus on what matters — closing deals.
@@ -175,6 +179,7 @@ export default function AboutPage() {
                                     </svg>
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
+
                                 <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>
                                 
                             </div>
@@ -215,6 +220,8 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
                             The People Behind <span className="text-[#2563eb]">SpaceNexus</span>
                         </h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
+                        
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             We are a close-knit group of engineers, strategists, and creators. We value open dialogue, hands-on craft, and technology built to last.
                         </p>
