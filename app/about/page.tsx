@@ -212,50 +212,75 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Team */}
-            <section className="py-20 bg-[#f8f9fa] border-t border-gray-100">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Founders */}
+            <section className="py-20 bg-white border-t border-gray-100">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
+                        <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-2">OUR TEAM</p>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                            The People Behind <span className="text-[#2563eb]">SpaceNexus</span>
+                        </h2>
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
                         
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            Built by deal professionals from Fortune 500 companies, Big 4 firms, and leading investment banks.
+                            We are a close-knit group of engineers, strategists, and creators. We value open dialogue, hands-on craft, and technology built to last.
                         </p>
                     </div>
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        {teamMembers.map((member) => (
-                            <div key={member.slug} id={member.slug} className="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div
-                                        className={`w-14 h-14 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center text-white text-lg font-bold shrink-0`}
-                                    >
-                                        {member.initials}
-                                    </div>
-                                    
-                                    <div>
-                                        <h3 className="font-bold text-gray-900">{member.name}</h3>
-                                        <p className="text-sm text-gray-600">{member.role}</p>
-                                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {/* Founders card */}
+                        <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div className="relative" style={{ paddingBottom: '133%' }}>
+                                <img src="/teams/founders.jpeg" alt="SpaceNexus Founders" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                                <div className="absolute top-4 left-4">
+                                    <span className="bg-white/95 text-gray-900 text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        Leadership
+                                    </span>
                                 </div>
-                                <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>
-                                
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {member.credentials.map((cred, i) => (
-                                        <span key={i} className="text-xs font-medium text-gray-600 bg-gray-50 border border-gray-100 px-2.5 py-1 rounded-full">
-                                            {cred}
-                                        </span>
-                                    ))}
+                                <div className="absolute bottom-0 left-0 right-0 p-5">
+                                    <h3 className="text-xl font-bold text-white mb-1">Our Founders</h3>
+                                    <p className="text-sm text-gray-200">Leading with vision, guiding innovation, and inspiring meaningful change</p>
                                 </div>
-                                <a
-                                    href={member.linkedin}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm font-medium text-[#2563eb] hover:underline"
-                                >
-                                    View LinkedIn Profile →
-                                </a>
                             </div>
-                        ))}
+                        </div>
+
+                        {/* Team card */}
+                        <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div className="relative" style={{ paddingBottom: '133%' }}>
+                                <img src="/teams/teammeetup.jpeg" alt="SpaceNexus Team" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                                <div className="absolute top-4 left-4">
+                                    <span className="bg-white/95 text-gray-900 text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        Culture
+                                    </span>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 p-5">
+                                    <h3 className="text-xl font-bold text-white mb-1">Our Team</h3>
+                                    <p className="text-sm text-gray-200">Working together to turn ideas into impactful solutions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Meetup card */}
+                        <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div className="relative" style={{ paddingBottom: '133%' }}>
+                                <img src="/teams/community_meetup.jpeg" alt="SpaceNexus Meetup" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                                <div className="absolute top-4 left-4">
+                                    <span className="bg-white/95 text-gray-900 text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        Events
+                                    </span>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 p-5">
+                                    <h3 className="text-xl font-bold text-white mb-1">Community Meetups</h3>
+                                    <p className="text-sm text-gray-200">Connecting, collaborating, and creating meaningful memories together</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
