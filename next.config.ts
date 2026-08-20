@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: "C:\\Users\\Anjana Krishna\\spacenexus\\spacenexus",
+    root: __dirname,
   },
 
   // Disable source maps in production builds to prevent source code exposure
