@@ -221,6 +221,7 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
                             The People Behind <span className="text-[#2563eb]">SpaceNexus</span>
                         </h2>
+                        
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
                         
                         <p className="text-gray-600 max-w-2xl mx-auto">
