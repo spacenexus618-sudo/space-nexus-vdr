@@ -43,6 +43,8 @@ const features = [
     "Export-Ready Board Reports",
     "Affordable for Small Nonprofits",
     "Ready in Minutes (No Consultants)",
+    "API & Integrations",
+    "Reporting & Analytics",
 ];
 
 type FeatureValue = true | false | "partial";
@@ -57,37 +59,37 @@ const competitors: {
             name: "Kindora",
             tagline: "All-in-one",
             color: "bg-[#2563eb] text-white",
-            values: [true, true, true, true, true, true, true, true, true, true],
+            values: [true, true, true, true, true, true, true, true, true, true, true, true],
         },
         {
             name: "Bloomerang",
             tagline: "Donor-only",
             color: "bg-gray-100 text-gray-700",
-            values: [true, false, false, false, "partial", true, "partial", "partial", true, true],
+            values: [true, false, false, false, "partial", true, "partial", "partial", true, true, true, "partial"],
         },
         {
             name: "Salesforce NPC",
             tagline: "Too complex",
             color: "bg-gray-100 text-gray-700",
-            values: [true, "partial", "partial", false, "partial", true, "partial", true, false, false],
+            values: [true, "partial", "partial", false, "partial", true, "partial", true, false, false, true, true],
         },
         {
             name: "Bonterra Apricot",
             tagline: "Case mgmt only",
             color: "bg-gray-100 text-gray-700",
-            values: [false, false, true, false, false, false, false, "partial", false, false],
+            values: [false, false, true, false, false, false, false, "partial", false, false, "partial", true],
         },
         {
             name: "Keela",
             tagline: "Limited scope",
             color: "bg-gray-100 text-gray-700",
-            values: [true, false, false, false, false, true, "partial", "partial", true, true],
+            values: [true, false, false, false, false, true, "partial", "partial", true, true, "partial", "partial"],
         },
         {
             name: "Spreadsheets",
             tagline: "Error-prone",
             color: "bg-gray-100 text-gray-700",
-            values: [false, false, false, false, false, false, false, false, true, true],
+            values: [false, false, false, false, false, false, false, false, true, true, false, false],
         },
     ];
 
@@ -148,6 +150,7 @@ const competitorDetails = [
         kindoraAdvantages: [
             "Ready in under 30 minutes — no consultants needed",
             "Built specifically for nonprofits, not adapted from a sales CRM",
+            "Open API and pre-built integrations — without needing an integration consultant",
             "Transparent, affordable pricing",
             "Includes nonprofit accounting and cost allocation out of the box",
         ],
@@ -319,6 +322,8 @@ const vsFaqSchema = {
     { "@type": "Question", "name": "How does Kindora compare to Salesforce Nonprofit Cloud in cost?", "acceptedAnswer": { "@type": "Answer", "text": "Salesforce Nonprofit Cloud typically requires large annual commitments once you factor in licenses, implementation consultants, and customization. Kindora is a fraction of that cost and is ready in under 30 minutes." } },
     { "@type": "Question", "name": "Can Kindora replace Bonterra Apricot for case management?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora includes full client intake, program enrollment, service delivery tracking, and outcome reporting — the core of what Bonterra Apricot does — plus donor CRM and grant management that Bonterra lacks." } },
     { "@type": "Question", "name": "Does Kindora offer a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can start a free trial with no credit card required and be fully set up in under 30 minutes." } },
+    { "@type": "Question", "name": "Does Kindora have API access like Salesforce or Bloomerang?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora provides an open API and pre-built integrations for email marketing, accounting, and payment processing. And because Kindora is all-in-one — donor CRM, grants, case management, accounting, and volunteers in one database — most nonprofits need far fewer integrations than they would with single-purpose tools." } },
+    { "@type": "Question", "name": "How does Kindora's reporting compare to enterprise platforms?", "acceptedAnswer": { "@type": "Answer", "text": "Kindora includes built-in financial and program analytics: revenue, expenses, net income, clients served, program enrollment charts, and donor analysis — exportable as board-ready PDF or Excel reports in one click. Most nonprofits get the reports they need without hiring a BI consultant, which enterprise platforms typically require." } },
   ],
 };
 
@@ -752,6 +757,14 @@ export default function VsCompetitorsPage() {
                             {
                                 q: "Does Kindora offer a free trial?",
                                 a: "Yes — you can start a free trial at cad.spaceaiapp.com/kindora with no credit card required. You can be fully set up in under 30 minutes.",
+                            },
+                            {
+                                q: "Does Kindora have API access like Salesforce or Bloomerang?",
+                                a: "Yes. Kindora provides an open API and pre-built integrations for email marketing, accounting, and payment processing. And because Kindora is all-in-one — donor CRM, grants, case management, accounting, and volunteers in one shared database — most nonprofits need far fewer integrations than they would with single-purpose tools that have to be stitched together.",
+                            },
+                            {
+                                q: "How does Kindora's reporting compare to enterprise platforms?",
+                                a: "Kindora includes built-in financial and program analytics — revenue, expenses, net income, clients served, program enrollment charts, and donor analysis — exportable as board-ready PDF or Excel reports in one click. Most nonprofits get the reports they need without hiring a BI consultant or buying a separate analytics add-on, which enterprise platforms typically require.",
                             },
                         ].map((faq, i) => (
                             <details

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Kindora Social Media",
-    description: "Find Kindora across the web — G2, SoftwareSuggest, AlternativeTo, SourceForge, and SaaSHub — and follow us on YouTube, Instagram, Twitter/X, and LinkedIn for nonprofit management tips, product updates, and industry insights.",
+    description: "Find Kindora across the web — G2, SoftwareSuggest, AlternativeTo, SourceForge, SaaSHub, SpotSaaS, and GetApp — and follow us on YouTube, Instagram, Twitter/X, and LinkedIn for nonprofit management tips, product updates, and industry insights.",
     alternates: {
         canonical: "/kindora/social-media",
     },
@@ -92,6 +92,24 @@ const platforms = [
     description: "Kindora user profile on SaaSHub — SaaS discovery, ratings, and reviews.",
     gradient: "from-sky-500 to-blue-600",
     shadow: "shadow-sky-500/30",
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
+  },
+  {
+    name: "SpotSaaS",
+    handle: "spotsaas.com/profile",
+    href: "https://www.spotsaas.com/profile",
+    description: "Kindora profile on SpotSaaS — SaaS discovery, comparisons, and user reviews.",
+    gradient: "from-violet-500 to-purple-600",
+    shadow: "shadow-violet-500/30",
+    icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
+  },
+  {
+    name: "GetApp",
+    handle: "getapp.com/profile/me",
+    href: "https://www.getapp.com/profile/me/",
+    description: "Kindora vendor profile on GetApp — software recommendations and verified reviews.",
+    gradient: "from-lime-500 to-green-600",
+    shadow: "shadow-green-500/30",
     icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
   },
 ];

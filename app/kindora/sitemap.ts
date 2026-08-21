@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/ecosystem", priority: 0.8 },
     { route: "/consumer-review", priority: 0.7 },
     { route: "/social-media", priority: 0.7 },
+    { route: "/about", priority: 0.8 },
   ];
 
   const featurePages = [
