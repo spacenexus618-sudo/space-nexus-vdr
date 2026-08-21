@@ -53,29 +53,8 @@ export default function StructuredQAWorkflowPage() {
                         <Link href="/tutorials" className="hover:text-[#2563eb] transition-colors">Tutorials</Link><span>›</span>
                         <span className="text-gray-900">Structured Q&amp;A Workflow</span>
                     </nav>
-                    <div className="flex flex-wrap items-center gap-2 text-xs mb-4">
-                        <span className="font-mono bg-blue-50 text-[#2563eb] px-2 py-0.5 rounded">VIDEO TUTORIAL</span>
-                        <span className="text-gray-600">·</span>
-                        <span className="text-gray-600">15 min</span>
-                        <span className="text-gray-600">·</span>
-                        <span className="text-gray-600">Intermediate</span>
-                    </div>
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Structured Q&amp;A Workflow</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Q&amp;A Workflow</h1>
                     <p className="text-xl text-gray-600">Set up and manage the structured Q&amp;A workflow. Routing rules, SLAs, escalation paths, and pre-prepared FAQ strategies.</p>
-                </div>
-            </section>
-            <section className="py-12">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl shadow-2xl flex items-center justify-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('/spacenexus/screenshots/qa.png')] bg-cover bg-center opacity-20"></div>
-                        <div className="relative z-10 text-center">
-                            <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur border-2 border-white/30 flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                            </div>
-                            <p className="text-white/80 text-sm font-medium">Video tutorial</p>
-                            <p className="text-white/60 text-xs mt-1">15 min · Q&amp;A workflow setup</p>
-                        </div>
-                    </div>
                 </div>
             </section>
             <section className="py-12">
