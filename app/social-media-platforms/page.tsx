@@ -58,6 +58,7 @@ const officialProfiles = [
 const registeredPlatforms = [
   { name: "ProvenExpert", href: "https://www.provenexpert.com/space-nexus/", description: "SpaceNexus verified business profile and customer reviews on ProvenExpert.", status: "Registered" },
   { name: "SaaSHub", href: "https://www.saashub.com/spacenexus", description: "SpaceNexus user profile on SaaSHub for software discovery and reviews.", status: "Registered" },
+  { name: "G2", href: "https://www.g2.com/products/spacenexus/", description: "SpaceNexus verified product listing and customer reviews on G2 under Virtual Data Room Software.", status: "Registered" },
   { name: "Uneed", href: "https://www.uneed.best/profile/spacenexus", description: "SpaceNexus profile on Uneed for software discovery and directory listings.", status: "Registered" },
   { name: "Crunchbase", href: "https://www.crunchbase.com/organization/space-nexus", description: "SpaceNexus company profile on Crunchbase for funding, investor, and company data.", status: "Registered" },
   { name: "SourceForge", href: "https://sourceforge.net/u/spacenexus/profile", description: "SpaceNexus user profile on SourceForge for software discovery and reviews.", status: "Registered" },
