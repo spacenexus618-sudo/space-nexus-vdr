@@ -226,6 +226,7 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
                         
                         <p className="text-gray-600 max-w-2xl mx-auto">
+                            
                             We are a close-knit group of engineers, strategists, and creators. We value open dialogue, hands-on craft, and technology built to last.
                         </p>
                     </div>
