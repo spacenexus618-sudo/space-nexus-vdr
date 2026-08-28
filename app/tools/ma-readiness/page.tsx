@@ -47,6 +47,129 @@ const maQuestions = [
 
 const categoryIcons: Record<string, string> = { "Financial Records": "💰", "Legal Compliance": "⚖️", "IP & Contracts": "📄", "Employee & HR": "👥", Governance: "🏛️", "Tax & Financial": "📊", "Data & Security": "🔒" };
 
+const improvementTips: Record<number, { title: string; tips: string[] }> = {
+  1: {
+    title: "Financial Records",
+    tips: [
+      "Hire a CPA firm to audit your last 2-3 years of financial statements",
+      "Standardize your P&L, balance sheet, and cash flow statements using GAAP/IFRS",
+      "Use accounting software (QuickBooks, Xero, NetSuite) with real-time reporting",
+      "Reconcile all bank accounts monthly and document any discrepancies",
+      "Prepare monthly financial packages for the last 12-24 months",
+    ],
+  },
+  2: {
+    title: "Cap Table & Equity",
+    tips: [
+      "Use a cap table platform (Carta, Pulley, AngelList) to track all equity holders",
+      "Get a fresh 409A valuation from an independent appraiser",
+      "Document all stock option grants, exercises, and vesting schedules",
+      "Reconcile your cap table against your corporate ledger and board approvals",
+      "Ensure all convertible notes and SAFEs are tracked with conversion terms",
+    ],
+  },
+  3: {
+    title: "Corporate Formation Documents",
+    tips: [
+      "Organize all incorporation documents (Certificate of Incorporation, Bylaws, Operating Agreement)",
+      "Create a virtual data room with indexed folders for all legal documents",
+      "Collect and organize all board meeting minutes and shareholder resolutions",
+      "Ensure all foreign qualifications and state registrations are current",
+      "Document all amendments to your articles of incorporation",
+    ],
+  },
+  4: {
+    title: "NDAs & Confidentiality",
+    tips: [
+      "Draft a standard NDA template reviewed by legal counsel",
+      "Require signed NDAs from all employees, contractors, and vendors before onboarding",
+      "Track NDA expiration dates and renewal requirements",
+      "Implement a confidentiality agreement tracking system",
+      "Include non-compete and non-solicitation clauses where appropriate",
+    ],
+  },
+  5: {
+    title: "IP Assignments",
+    tips: [
+      "Execute IP assignment agreements for all code, designs, and inventions",
+      "Ensure all employees and contractors sign invention assignment clauses",
+      "File provisional patents for any unpatented but valuable IP",
+      "Register trademarks for your brand names, logos, and slogans",
+      "Document the chain of title for all IP assets",
+    ],
+  },
+  6: {
+    title: "Contract Repository",
+    tips: [
+      "Centralize all customer contracts in a searchable repository",
+      "Extract and index key terms (pricing, renewal dates, termination clauses)",
+      "Flag any contracts with change-of-control provisions",
+      "Track all amendments, addendums, and side letters",
+      "Identify contracts requiring consent for assignment in an M&A transaction",
+    ],
+  },
+  7: {
+    title: "Employment Agreements",
+    tips: [
+      "Digitize and organize all employment agreements and offer letters",
+      "Document all equity grants and vesting schedules for each employee",
+      "Ensure all employees have signed IP assignment and non-compete agreements",
+      "Compile a complete list of contractors with their agreement terms",
+      "Review and update compensation and benefits documentation",
+    ],
+  },
+  8: {
+    title: "Org Chart & Personnel",
+    tips: [
+      "Create a detailed org chart with reporting lines and department structure",
+      "Document key personnel roles, responsibilities, and tenure",
+      "Identify key person dependencies and succession plans",
+      "Compile a list of all team members with their titles, locations, and start dates",
+      "Document any employment agreements with special terms or retention bonuses",
+    ],
+  },
+  9: {
+    title: "Board Governance",
+    tips: [
+      "Establish a regular board meeting cadence (at least quarterly)",
+      "Take detailed minutes for every board meeting and shareholder meeting",
+      "Document all board resolutions and corporate actions formally",
+      "Maintain a corporate governance manual with policies and procedures",
+      "Ensure all director and officer conflicts of interest are disclosed and documented",
+    ],
+  },
+  10: {
+    title: "Insurance Policies",
+    tips: [
+      "Obtain or update D&O (Directors & Officers) liability insurance",
+      "Ensure E&O (Errors & Omissions) coverage is current and adequate",
+      "Add or renew cyber liability insurance given increasing data risks",
+      "Compile all insurance certificates and policy summaries in one location",
+      "Review coverage limits and deductibles with your insurance broker",
+    ],
+  },
+  11: {
+    title: "Tax Filings",
+    tips: [
+      "File all outstanding federal, state, and local tax returns immediately",
+      "Engage a tax professional to review filings for the last 3-5 years",
+      "Document all tax credits, exemptions, and special filings (R&D credits, etc.)",
+      "Prepare a tax provision and identify any potential tax liabilities",
+      "Organize all receipts and supporting documentation for major deductions",
+    ],
+  },
+  12: {
+    title: "Data Security & Compliance",
+    tips: [
+      "Begin SOC 2 Type I or Type II certification process with a qualified auditor",
+      "Document all data security policies (access control, encryption, incident response)",
+      "Conduct a penetration test and address any critical vulnerabilities",
+      "Create a data processing agreement (DPA) template for customer contracts",
+      "Review GDPR, CCPA, and other applicable data privacy regulations for compliance gaps",
+    ],
+  },
+};
+
 const freeEmailProviders = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "aol.com", "icloud.com", "mail.com", "protonmail.com", "zoho.com", "yandex.com", "gmx.com", "live.com", "msn.com", "me.com", "inbox.com", "fastmail.com", "hey.com", "tutanota.com"];
 
 export default function MAReadinessPage() {
@@ -55,6 +178,7 @@ export default function MAReadinessPage() {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResult, setShowResult] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
+  const [showImprovements, setShowImprovements] = useState(false);
 
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -397,6 +521,57 @@ export default function MAReadinessPage() {
                 </ul>
               </div>
             )}
+
+            {percentage < 90 && (
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                <button
+                  onClick={() => setShowImprovements(!showImprovements)}
+                  className="w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">How to Improve Your Score</h3>
+                      <p className="text-sm text-gray-500">Get actionable steps to reach Deal Ready status</p>
+                    </div>
+                  </div>
+                  <svg className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${showImprovements ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                {showImprovements && (
+                  <div className="px-6 sm:px-8 pb-6 sm:pb-8 space-y-5 border-t border-gray-100">
+                    {Object.entries(answers)
+                      .filter(([, score]) => score < 10)
+                      .sort(([, a], [, b]) => a - b)
+                      .map(([qId]) => {
+                        const numId = Number(qId);
+                        const tip = improvementTips[numId];
+                        if (!tip) return null;
+                        return (
+                          <div key={numId} className="mt-5 first:mt-6">
+                            <div className="flex items-center gap-2 mb-3">
+                              <span className="text-lg">{categoryIcons[tip.title] || "📌"}</span>
+                              <h4 className="font-bold text-gray-900">{tip.title}</h4>
+                              <span className="ml-auto text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">
+                                Score: {answers[numId]}/10
+                              </span>
+                            </div>
+                            <ul className="space-y-2 ml-9">
+                              {tip.tips.map((t, i) => (
+                                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                                  <svg className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                  {t}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        );
+                      })}
+                  </div>
+                )}
+              </div>
+            )}
             <div className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-2xl shadow-xl p-8 text-center text-white">
               <h3 className="text-2xl font-bold mb-3">Ready to Close Your Gaps?</h3>
               <p className="text-blue-100 mb-6 max-w-lg mx-auto">Auto-index and store your files securely in a SpaceNexus AI Data Room.</p>
@@ -406,7 +581,7 @@ export default function MAReadinessPage() {
               </div>
             </div>
             <div className="text-center">
-              <button onClick={() => { setCurrentQ(0); setAnswers({}); setShowResult(false); setEmail(""); setAuthToken(null); setAuthStep("email"); }} className="text-sm font-medium text-gray-600 hover:text-[#2563eb] transition-colors">← Retake Assessment</button>
+              <button onClick={() => { setCurrentQ(0); setAnswers({}); setShowResult(false); setEmail(""); setAuthToken(null); setAuthStep("email"); setShowImprovements(false); }} className="text-sm font-medium text-gray-600 hover:text-[#2563eb] transition-colors">← Retake Assessment</button>
             </div>
           </div>
         )}
