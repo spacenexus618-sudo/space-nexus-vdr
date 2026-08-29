@@ -243,6 +243,7 @@ export default function AboutPage() {
                                         Leadership
                                     </span>
                                 </div>
+                                
                                 <div className="absolute bottom-0 left-0 right-0 p-5">
                                     <h3 className="text-xl font-bold text-white mb-1">Our Founders</h3>
                                     <p className="text-sm text-gray-200">Leading with vision, guiding innovation, and inspiring meaningful change</p>
