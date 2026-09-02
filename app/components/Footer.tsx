@@ -213,6 +213,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Demo", href: "/demo" },
       { name: "Get Started", href: "/get-started" },
       { name: "Ecosystem", href: "/ecosystem" },
+      { name: "Kindora – Nonprofit Software", href: "/kindora" },
       { name: "Social Media", href: "/social-media-platforms" },
       { name: "Try for Free", href: "https://cad.spaceaiapp.com/vdr", external: true },
     ],

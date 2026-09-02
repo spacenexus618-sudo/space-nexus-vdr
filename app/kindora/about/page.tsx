@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kindora/about",
   },
+  openGraph: {
+    title: "About Kindora — The Complete Operating System for Nonprofits",
+    description:
+      "Kindora is the all-in-one nonprofit management platform built to help NGOs, charities, and community organizations manage donors, grants, programs, finances, and volunteers from a single system.",
+    url: "https://spacenexus.net/kindora/about",
+    siteName: "Kindora by Space Nexus",
+    type: "website",
+  },
 };
 
 const stats = [
@@ -151,7 +159,7 @@ export default function AboutPage() {
         </div>
 
         {/* Meetups */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden" id="team">
           <div className="absolute inset-0 bg-gradient-to-b from-[#f0f4ff] via-white to-[#faf5ff]" />
           <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-3xl translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-100/50 rounded-full blur-3xl -translate-x-1/3" />
