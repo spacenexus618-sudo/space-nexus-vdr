@@ -22,7 +22,10 @@ const footerLinks = {
     { name: "Space AI Ecosystem", href: "/kindora/ecosystem" },
     { name: "Request Demo", href: "/kindora/demo" },
     { name: "Blog", href: "/kindora/blog" },
+    { name: "Our Team", href: "/kindora/about#team" },
     { name: "Contact", href: "/kindora/contact" },
+    { name: "Kindora for NGOs", href: "/kindora/kindora-for-ngos" },
+    { name: "How to Add Users", href: "/kindora/how-to-add-users" },
   ],
   crmDonor: [
     { name: "Nonprofit CRM", href: "/kindora/nonprofit-crm" },
