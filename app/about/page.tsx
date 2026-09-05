@@ -233,6 +233,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
+                        
                         {/* Founders card */}
                         <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div className="relative" style={{ paddingBottom: '133%' }}>
