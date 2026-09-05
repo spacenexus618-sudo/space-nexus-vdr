@@ -20,7 +20,9 @@ import {
 } from "./components/AnimatedSections";
 const lastUpdated = "May 15, 2026";
 export const metadata: Metadata = {
-  title: "Kindora | All-in-One Nonprofit Management Software",
+  title: {
+    absolute: "Kindora | All-in-One Nonprofit Management Software",
+  },
   description:
     "Kindora is the modern nonprofit management platform for donor tracking, grant management, client services, and financial reporting — all in one place. Built for small to mid-sized nonprofits.",
   alternates: {
@@ -31,14 +33,14 @@ export const metadata: Metadata = {
     description:
       "Manage donors, track grants, deliver programs, and report impact — all from a single platform built specifically for nonprofits.",
     url: "https://spacenexus.net/kindora",
-    siteName: "Kindora by Space Nexus",
+    siteName: "Kindora",
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Kindora Nonprofit Management Software",
+        alt: "Kindora — All-in-One Nonprofit Management Software",
       },
     ],
   },
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     title: "Kindora — Nonprofit Management Software",
     description:
       "Replace spreadsheets with one unified nonprofit platform. Donor CRM, grant tracking, client management, and more.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora/og-card.png"],
   },
   keywords: [
     "nonprofit management software",
@@ -106,6 +108,14 @@ const jsonLd = {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Kindora is an all-in-one nonprofit management software platform that replaces disconnected spreadsheets and siloed tools with a single unified web application. It manages donor relationships, grant tracking, client services, financial management, volunteer coordination, and team collaboration.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What does Kindora do?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora helps nonprofits run their entire organization in one platform: manage donors and donations, run fundraising campaigns, track grants from application to compliance reporting, deliver client programs and case management, oversee volunteers, and handle nonprofit accounting and financial reports.",
           },
         },
         {
@@ -320,6 +330,11 @@ const faqs = [
     question: "What is Kindora?",
     answer:
       "Kindora is an all-in-one nonprofit management software platform that replaces disconnected spreadsheets and siloed tools with a single unified web application. It manages donor relationships, grant tracking, client services, financial management, volunteer coordination, and team collaboration.",
+  },
+  {
+    question: "What does Kindora do?",
+    answer:
+      "Kindora helps nonprofits run their entire organization in one platform: manage donors and donations, run fundraising campaigns, track grants from application to compliance reporting, deliver client programs and case management, oversee volunteers, and handle nonprofit accounting and financial reports.",
   },
   {
     question: "Who is Kindora for?",
@@ -545,6 +560,55 @@ export default function KindoraHomePage() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What is Kindora? */}
+      <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm font-semibold text-[#2563eb] uppercase tracking-wider mb-3">
+            The Short Answer
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            What is Kindora?
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed mb-3">
+            Kindora is an all-in-one nonprofit management software that replaces
+            disconnected spreadsheets and siloed tools with a single unified
+            platform. It handles donor relationships, grant tracking, client
+            programs, finances, and volunteers — so your team runs the whole
+            organization from one place.
+          </p>
+          <p className="text-base text-gray-500">
+            Purpose-built for small to mid-sized nonprofits, Kindora removes the
+            need for 3–4 separate subscriptions and the manual data entry between
+            them.
+          </p>
+          <div className="flex flex-wrap justify-center gap-2.5 mt-7">
+            {[
+              "Donor CRM & Fundraising",
+              "Grant Lifecycle Tracking",
+              "Client Case Management",
+              "Nonprofit Accounting",
+              "Volunteer Management",
+              "Reports & Dashboards",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="px-4 py-1.5 rounded-full bg-[#2563eb]/10 text-[#2563eb] text-sm font-semibold"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm">
+            <Link href="/kindora/about#team" className="font-semibold text-[#2563eb] hover:text-[#1d4ed8] hover:underline">
+              Meet the Kindora team →
+            </Link>
+            <Link href="/kindora/about" className="text-gray-500 hover:text-[#2563eb] hover:underline">
+              About Kindora, Inc.
+            </Link>
           </div>
         </div>
       </section>
@@ -803,6 +867,18 @@ export default function KindoraHomePage() {
               </svg>
             </Link>
           </div>
+
+          {/* Instrumentl deep-dive link */}
+          <p className="mt-4 text-center text-sm text-gray-500">
+            Choosing a grant tool? See the{" "}
+            <Link
+              href="/kindora/kindora-vs-instrumentl"
+              className="font-semibold text-[#2563eb] hover:text-[#1d4ed8] underline underline-offset-4"
+            >
+              Kindora vs. Instrumentl comparison
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
@@ -854,13 +930,21 @@ export default function KindoraHomePage() {
           </div>
 
           <div className="text-center mt-10">
-            <p className="text-gray-600 mb-4">Still have questions?</p>
-            <Link
-              href="/kindora/contact"
-              className="inline-flex items-center px-6 py-4 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-colors"
-            >
-              Contact Us
-            </Link>
+            <p className="text-gray-600 mb-4">Getting started? See how to add your team.</p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/kindora/how-to-add-users"
+                className="inline-flex items-center px-6 py-4 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-colors"
+              >
+                How to Add Users in Kindora
+              </Link>
+              <Link
+                href="/kindora/contact"
+                className="inline-flex items-center px-6 py-4 text-sm font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -1045,6 +1129,12 @@ export default function KindoraHomePage() {
               className="inline-flex items-center px-8 py-4 text-base font-semibold text-[#2563eb] bg-blue-50 hover:bg-blue-100 rounded-full transition-all duration-300"
             >
               Try for Free
+            </a>
+            <a
+              href="/kindora/kindora-for-ngos"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
+            >
+              Kindora for NGOs →
             </a>
           </div>
         </div>

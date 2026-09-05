@@ -213,6 +213,7 @@ export default function AboutPage() {
             </section>
 
             {/* Founders */}
+            
             <section className="py-20 bg-white border-t border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -220,11 +221,15 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
                             The People Behind <span className="text-[#2563eb]">SpaceNexus</span>
                         </h2>
+                        
+                        
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the team</h2>
                         
                         <p className="text-gray-600 max-w-2xl mx-auto">
+                            
                             We are a close-knit group of engineers, strategists, and creators. We value open dialogue, hands-on craft, and technology built to last.
                         </p>
+                        
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
@@ -239,6 +244,7 @@ export default function AboutPage() {
                                         Leadership
                                     </span>
                                 </div>
+                                
                                 <div className="absolute bottom-0 left-0 right-0 p-5">
                                     <h3 className="text-xl font-bold text-white mb-1">Our Founders</h3>
                                     <p className="text-sm text-gray-200">Leading with vision, guiding innovation, and inspiring meaningful change</p>

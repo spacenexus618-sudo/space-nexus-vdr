@@ -17,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/ecosystem", priority: 0.8 },
     { route: "/consumer-review", priority: 0.7 },
     { route: "/social-media", priority: 0.7 },
+    { route: "/about", priority: 0.8 },
+    { route: "/how-to-add-users", priority: 0.7 },
+    { route: "/kindora-for-ngos", priority: 0.9 },
   ];
 
   const featurePages = [
@@ -146,6 +149,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "kindora-vs-bonterra",
     "kindora-vs-donordock",
     "kindora-vs-donorperfect",
+    "kindora-vs-instrumentl",
     "kindora-vs-little-green-light",
     "kindora-vs-neon-one",
     "kindora-vs-network-for-good",
