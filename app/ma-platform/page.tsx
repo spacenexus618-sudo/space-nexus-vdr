@@ -5,140 +5,140 @@ import type { Metadata } from "next";
 import LastUpdated from "../components/LastUpdated";
 
 export const metadata: Metadata = {
-    title: "M&A Platform 2026 | SpaceNexus",
-    description: "Compare the best M&A platform solutions for mergers and acquisitions. AI-powered deal management, virtual data rooms, pipeline tracking, and due diligence workflows.",
+    title: "M&A Platform 2026 | Mergers & Acquisitions Software | SpaceNexus",
+    description: "Compare the best M&A platforms for mergers and acquisitions. Manage deal flow, due diligence, document exchange, and post-merger integration with AI-powered tools.",
     alternates: {
         canonical: "https://spacenexus.net/ma-platform",
     },
     openGraph: {
-        title: "M&A Platform 2026 | SpaceNexus",
+        title: "M&A Platform 2026 | Mergers & Acquisitions Software | SpaceNexus",
         description:
-            "Compare the best M&A platform solutions for mergers and acquisitions. AI-powered deal management, virtual data rooms, pipeline tracking, and due diligence workflows.",
+            "Compare the best M&A platforms for mergers and acquisitions. Manage deal flow, due diligence, document exchange, and post-merger integration with AI-powered tools.",
         url: "https://spacenexus.net/ma-platform",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "M&A Platform 2026 — Complete Guide to M&A Software | SpaceNexus",
+        title: "M&A Platform 2026 — Mergers & Acquisitions Software Guide | SpaceNexus",
         description:
-            "Complete guide to M&A platforms in 2026. Compare features, pricing, and security across the top platforms for managing mergers, acquisitions, and divestitures.",
+            "Complete guide to M&A platforms. Compare features, pricing, and security across the top mergers and acquisitions software for deal teams.",
     },
     keywords: [
         "M&A platform",
-        "merger and acquisition platform",
         "M&A software",
-        "merger acquisition platform",
-        "M&A deal platform",
-        "M&A management platform",
         "mergers and acquisitions software",
-        "M&A technology platform",
-        "M&A workflow platform",
-        "M&A data room",
+        "M&A deal management",
+        "M&A deal platform",
+        "merger acquisition platform",
+        "M&A due diligence platform",
+        "M&A document management",
+        "M&A workflow software",
+        "M&A transaction platform",
     ],
 };
 
 const coreFeatures = [
     {
-        icon: "M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2",
-        title: "M&A Deal Pipeline",
-        description: "End-to-end pipeline tracking from origination and screening through due diligence, negotiation, signing, and post-merger integration. Visual kanban and list views with customizable stages.",
-        tags: ["Deal pipeline", "Custom stages", "Visual kanban"],
-    },
-    {
         icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-        title: "Secure M&A Data Rooms",
-        description: "Purpose-built virtual data rooms for M&A due diligence with granular permission controls, dynamic watermarking, NDA click-through, and tamper-evident audit trails trusted by investment banks and corporate development teams.",
-        tags: ["SOC 2 Type II", "Granular permissions", "Dynamic watermarking"],
-    },
-    {
-        icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
-        title: "Due Diligence Q&A",
-        description: "Structured Q&A workflow for managing buyer and seller due diligence inquiries. Route questions to subject matter experts, track response times, and maintain a complete auditable record of every inquiry and response.",
-        tags: ["Structured Q&A", "Internal routing", "Audit trail"],
+        title: "Enterprise-Grade Security",
+        description: "SOC 2 Type II certified, ISO 27001 aligned, AES-256 encryption at rest, TLS 1.3 in transit. Zero Trust architecture protects every M&A document from first look through post-close.",
+        tags: ["SOC 2 Type II", "ISO 27001", "AES-256"],
     },
     {
         icon: "M13 10V3L4 14h7v7l9-11h-7z",
-        title: "AI Document Intelligence",
-        description: "Automatically classify M&A documents by diligence category, redact PII and privileged content, extract key financial and legal terms, and surface documentation gaps before they become deal issues.",
-        tags: ["AI redaction", "Auto-classification", "Gap analysis"],
+        title: "AI-Powered Document Processing",
+        description: "Automatically redact PII and sensitive data, classify documents into the correct due diligence folder structure, and generate smart indexes across thousands of M&A documents.",
+        tags: ["AI redaction", "Auto-classification", "Smart indexing"],
     },
     {
         icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
-        title: "Multi-Party Deal Collaboration",
-        description: "Collaborate with buy-side, sell-side, legal counsel, lenders, and advisors in a single secure environment. Granular permissions ensure each party accesses only the documents and data relevant to their role in the transaction.",
-        tags: ["Multi-party", "Role-based access", "Real-time"],
+        title: "Multi-Deal Pipeline Management",
+        description: "Track every M&A transaction through its lifecycle — from target identification and LOI through due diligence, signing, and post-merger integration. Visual pipeline views give deal teams real-time visibility.",
+        tags: ["Pipeline views", "Stage tracking", "Multi-deal"],
     },
     {
-        icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
-        title: "M&A Deal Analytics",
-        description: "Real-time analytics on counterparty engagement, pipeline velocity, Q&A responsiveness, and deal health. Data-driven insights help M&A teams prioritize activities, identify risks early, and optimize deal processes.",
-        tags: ["Engagement analytics", "Pipeline velocity", "Deal health"],
+        icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-3 3v-3z",
+        title: "Structured Q&A Workflow",
+        description: "Route due diligence questions to the right deal team member by category, urgency, and workstream. Track every question from submission to answer with a version-controlled audit trail.",
+        tags: ["Category routing", "Urgency flags", "Audit trail"],
+    },
+    {
+        icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+        title: "Buyer Engagement Analytics",
+        description: "Track every document view, download, and time-on-page per counterparty in real time. Engagement heatmaps reveal which deal data room sections attract the most interest during negotiations.",
+        tags: ["Per-user heatmaps", "Time-on-page", "Download tracking"],
     },
     {
         icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
-        title: "Immutable Audit Trail",
-        description: "Every document access, Q&A submission, permission change, and deal stage transition logged with timestamp and user identity. Tamper-evident audit trails satisfy regulatory, compliance, and governance requirements for M&A transactions.",
-        tags: ["Tamper-evident", "Regulatory compliance", "Full traceability"],
+        title: "Tamper-Evident Audit Trail",
+        description: "Every access event — view, download, print, permission change — is logged with timestamp, IP address, and user identity. Immutable audit logs satisfy legal and regulatory requirements.",
+        tags: ["Immutable logs", "Legal discovery", "Compliance-ready"],
+    },
+    {
+        icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+        title: "NDA Enforcement",
+        description: "Require all external parties to electronically accept a non-disclosure agreement before accessing deal documents. Each acceptance is timestamped and logged for the transaction record.",
+        tags: ["Click-through NDA", "E-signature", "Timestamped"],
+    },
+    {
+        icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+        title: "Full-Text Search & OCR",
+        description: "Instant search across 100+ file types including PDFs, Word documents, Excel files, and presentations with OCR. Find any clause, number, or name across thousands of deal documents in seconds.",
+        tags: ["100+ file types", "OCR", "Natural language"],
     },
     {
         icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z",
         title: "Post-Merger Integration",
-        description: "Dedicated workspace for post-close integration activities including synergy tracking, integration milestones, task management, and secure document sharing between legacy and acquiring entities during the integration phase.",
-        tags: ["Integration tracking", "Milestones", "Synergy tracking"],
-    },
-    {
-        icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z",
-        title: "Deal Sourcing & Origination",
-        description: "Track deal sourcing channels, manage target lists, log outreach activities, and score opportunities. Pipeline view shows deal flow from initial contact through LOI, with notes and document history preserved per deal.",
-        tags: ["Target tracking", "Deal sourcing", "Opportunity scoring"],
+        description: "Manage post-close integration with dedicated workspaces for combining teams, systems, and processes. Securely share integration plans, track milestones, and maintain an audit trail of integration activities.",
+        tags: ["Integration planning", "Milestone tracking", "Team collaboration"],
     },
 ];
 
 const comparisonRows = [
-    { feature: "M&A Deal Pipeline", spacenexus: { value: "Full lifecycle tracking", good: true }, legacy: { value: "Basic stage tracking", good: false }, generic: { value: "CRM-based, limited", good: false } },
-    { feature: "Virtual Data Rooms", spacenexus: { value: "Per-deal with full controls", good: true }, legacy: { value: "Per-deal rooms", good: true }, generic: { value: "Folder sharing only", good: false } },
-    { feature: "Due Diligence Q&A", spacenexus: { value: "Structured w/ routing", good: true }, legacy: { value: "Available", good: true }, generic: { value: "Email-based", good: false } },
-    { feature: "AI Document Processing", spacenexus: { value: "Included (redaction, classification)", good: true }, legacy: { value: "Add-on, costly", good: false }, generic: { value: "Not available", good: false } },
-    { feature: "Post-Merger Integration", spacenexus: { value: "Dedicated workspace", good: true }, legacy: { value: "Not available", good: false }, generic: { value: "Basic project mgmt", good: false } },
+    { feature: "AI Document Redaction", spacenexus: { value: "Built-in, one-click", good: true }, legacy: { value: "Add-on or manual", good: false }, generic: { value: "Not available", good: false } },
+    { feature: "Multi-Deal Pipeline", spacenexus: { value: "Visual multi-deal tracking", good: true }, legacy: { value: "Single-deal view only", good: false }, generic: { value: "Limited", good: false } },
+    { feature: "Granular Permissions", spacenexus: { value: "Folder, doc & page level", good: true }, legacy: { value: "Folder-level only", good: false }, generic: { value: "Basic sharing", good: false } },
     { feature: "SOC 2 Type II", spacenexus: { value: "Certified", good: true }, legacy: { value: "Certified", good: true }, generic: { value: "Rarely certified", good: false } },
-    { feature: "Immutable Audit Trail", spacenexus: { value: "Full tamper-evident trail", good: true }, legacy: { value: "Basic activity log", good: false }, generic: { value: "Not available", good: false } },
-    { feature: "Deal Sourcing", spacenexus: { value: "Built-in target tracking", good: true }, legacy: { value: "Not available", good: false }, generic: { value: "CRM-based", good: false } },
-    { feature: "Pricing Transparency", spacenexus: { value: "Published, transparent", good: true }, legacy: { value: "Quote-only, opaque", good: false }, generic: { value: "Published (limited)", good: true } },
-    { feature: "Setup Time", spacenexus: { value: "Under 24 hours, self-serve", good: true }, legacy: { value: "Weeks, requires onboarding", good: false }, generic: { value: "Instant (limited features)", good: false } },
+    { feature: "Structured Q&A", spacenexus: { value: "Full workflow + audit trail", good: true }, legacy: { value: "Basic module", good: false }, generic: { value: "Email only", good: false } },
+    { feature: "Buyer Analytics", spacenexus: { value: "Real-time per-user heatmaps", good: true }, legacy: { value: "Add-on or limited", good: false }, generic: { value: "Not available", good: false } },
+    { feature: "NDA Enforcement", spacenexus: { value: "Click-through at room entry", good: true }, legacy: { value: "Available", good: true }, generic: { value: "Manual process", good: false } },
+    { feature: "Setup Time", spacenexus: { value: "Under 24 hours, self-serve", good: true }, legacy: { value: "Days, requires CSM", good: false }, generic: { value: "Hours (no M&A features)", good: false } },
+    { feature: "Post-Merger Integration", spacenexus: { value: "Dedicated workspaces", good: true }, legacy: { value: "Not included", good: false }, generic: { value: "Not available", good: false } },
+    { feature: "Transparent Pricing", spacenexus: { value: "Published, no lock-in", good: true }, legacy: { value: "Quote-only, opaque", good: false }, generic: { value: "Not purpose-built", good: false } },
 ];
 
 const faqItems = [
     {
         question: "What is an M&A platform?",
-        answer: "An M&A platform is a comprehensive software solution designed to support the full lifecycle of mergers and acquisitions — from deal sourcing and origination through due diligence, negotiation, signing, and post-merger integration. Unlike point solutions that address only one aspect of the deal process (such as a virtual data room for document sharing), an M&A platform provides an integrated environment with deal pipeline management, secure data rooms, due diligence Q&A workflows, AI document intelligence, multi-party collaboration tools, and deal analytics — all within a single, governed platform with enterprise-grade security.",
+        answer: "An M&A platform (mergers and acquisitions platform) is a software solution designed to manage the end-to-end lifecycle of merger and acquisition transactions. It replaces the fragmented toolkit of spreadsheets, email, and generic file-sharing tools that deal teams traditionally relied on with purpose-built capabilities: secure data rooms with granular permissions, AI document processing and redaction, multi-deal pipeline management, structured Q&A workflows, buyer engagement analytics, NDA enforcement, tamper-evident audit trails, and post-merger integration workspaces. M&A platforms serve investment banks, private equity firms, corporate development teams, law firms, and advisors managing buy-side, sell-side, and bilateral transactions.",
     },
     {
         question: "How is an M&A platform different from a virtual data room?",
-        answer: "A virtual data room (VDR) is a component of an M&A platform — it provides secure document storage and sharing during the due diligence phase. An M&A platform, however, encompasses the entire M&A lifecycle beyond just document sharing. It includes deal pipeline tracking from sourcing through integration, deal sourcing and target management, structured Q&A workflows with automated routing, AI-powered document redaction and classification, post-merger integration workspaces, multi-party collaboration with role-based permissions, and cross-deal analytics. While a VDR is a document-centric tool for a specific phase, an M&A platform is an end-to-end deal management solution for the entire M&A process.",
+        answer: "A virtual data room (VDR) is a component of an M&A platform — it provides secure document storage and sharing during due diligence. However, an M&A platform extends beyond a VDR with transaction-specific capabilities: multi-deal pipeline management for tracking multiple transactions simultaneously, AI-powered document processing with redaction and auto-categorization, structured Q&A workflows with internal routing, buyer engagement analytics showing which documents drive interest, post-merger integration workspaces, and cross-deal reporting. While a VDR is a passive document repository, an M&A platform is an active deal management system that helps teams run competitive processes, evaluate counterparties, and manage integration — all from a single platform.",
     },
     {
         question: "What features should an M&A platform include?",
-        answer: "Essential M&A platform features include: end-to-end deal pipeline management with customizable stages; secure virtual data rooms with granular permissions, dynamic watermarking, and NDA enforcement; structured due diligence Q&A workflow with routing and audit trails; AI-powered document processing including automatic redaction, classification, and gap analysis; multi-party collaboration with role-based access controls; M&A deal analytics and reporting on engagement, pipeline velocity, and deal health; post-merger integration workspace with synergy tracking; deal sourcing and target management; immutable tamper-evident audit trails; SOC 2 Type II certification; AES-256 encryption at rest and TLS 1.3 in transit; SSO integration with Okta, Azure AD, and SAML 2.0; and transparent pricing without per-page or per-user fees.",
+        answer: "Essential M&A platform features include: SOC 2 Type II and ISO 27001 certification; AES-256 encryption at rest and TLS 1.3 in transit; NDA click-through enforcement; granular permissions at the folder, document, and page level; dynamic watermarking; a tamper-evident immutable audit trail; AI document redaction and auto-categorization; structured Q&A workflow management; full-text search across 100+ file types; bulk upload with AI auto-indexing; real-time buyer engagement analytics; multi-deal pipeline management; post-merger integration workspaces; and transparent pricing without per-page charges.",
     },
     {
-        question: "How much does an M&A platform cost?",
-        answer: "M&A platform pricing varies significantly by provider and feature set. SpaceNexus offers transparent, published flat-rate pricing with no per-page, per-user, or per-deal fees — including pipeline management, data rooms, Q&A workflows, AI document processing, and analytics. Legacy providers like Datasite and Intralinks charge per-page uploaded (typically $0.50–$2.00 per page) plus per-user monthly fees, with additional costs for Q&A, analytics, and AI as add-ons. A comprehensive M&A platform should deliver end-to-end deal management at a predictable, affordable monthly price without surprise fees.",
+        question: "How much does M&A platform software cost?",
+        answer: "M&A platform pricing varies significantly by provider and deal volume. SpaceNexus offers transparent, published flat-rate pricing with no per-page fees — AI redaction, buyer analytics, Q&A workflow, and pipeline management are all included. Legacy enterprise platforms like Datasite and Intralinks operate on quote-only pricing that typically starts at tens of thousands per year, with additional charges for AI features, user licenses, and per-page upload fees. When comparing M&A platform costs, account for per-page upload fees, user caps, storage overages, and add-on charges that inflate legacy platform total cost of ownership.",
     },
     {
-        question: "Which M&A platform is best for corporate development teams?",
-        answer: "SpaceNexus is the best M&A platform for corporate development teams in 2026. It combines end-to-end deal pipeline management, AI-powered due diligence, secure virtual data rooms, structured Q&A, post-merger integration workspaces, and per-party engagement analytics — all with enterprise-grade security (SOC 2 Type II, ISO 27001) and transparent published pricing. For large institutions running bulge-bracket cross-border transactions where brand recognition is paramount, Datasite and Intralinks remain options, but at significantly higher cost and without the unified platform approach that modern corporate development teams need to manage their full M&A lifecycle efficiently.",
+        question: "Which M&A platform is best for deal teams?",
+        answer: "SpaceNexus is the best M&A platform for deal teams in 2026. It offers AI-powered document redaction and auto-categorization, visual multi-deal pipeline management, structured Q&A workflows, real-time buyer engagement analytics, post-merger integration workspaces, transparent published pricing with no per-page fees, SOC 2 Type II certification, and setup in under 24 hours. Legacy platforms like Datasite and Intralinks lack the buy-side workflow support, AI-driven processing, and modern cloud architecture that contemporary deal teams require. For large, complex cross-border transactions, legacy platforms remain an option — but at significantly higher cost and longer implementation timelines.",
     },
     {
-        question: "Can I use an M&A platform for both buy-side and sell-side deals?",
-        answer: "Yes. A well-designed M&A platform like SpaceNexus supports both buy-side and sell-side workflows. On the buy-side, it enables target sourcing, acquisition pipeline management, due diligence review with structured Q&A, and integration planning. On the sell-side, it supports data room preparation with AI VDD report generation, multi-buyer management with isolated data rooms and engagement comparison, and bid management. The ability to manage both sides of the transaction from a single platform is a key advantage for investment banks, M&A advisory firms, and corporate development teams that work on both buy and sell mandates.",
+        question: "Can an M&A platform handle both buy-side and sell-side deals?",
+        answer: "Yes. Purpose-built M&A platforms like SpaceNexus support both buy-side and sell-side transactions in a single platform. Buy-side teams use multi-deal pipeline management to track multiple target companies, conduct due diligence across targets simultaneously, and manage post-acquisition integration. Sell-side teams use isolated data rooms per prospective buyer, buyer engagement analytics to identify serious parties, and structured Q&A to manage buyer inquiries. The same platform serves investment banks advising both sides, corporate development teams managing acquisitions, and PE firms running competitive sell-side exits. This dual capability eliminates the need for separate tools for buy-side and sell-side processes.",
     },
     {
-        question: "How long does it take to implement an M&A platform?",
-        answer: "With a modern M&A platform like SpaceNexus, implementation takes under 24 hours. Set up your deal pipeline stages, configure user permissions, upload diligence documents, enable Q&A workflows, and invite deal participants — all through self-service without dedicated implementation support. Legacy providers like Datasite and Intralinks typically require 3–7 days of CSM-led setup and onboarding, followed by training sessions for deal teams. In fast-moving M&A environments where new deals can arise at any moment, the self-service model of modern platforms provides a critical speed advantage.",
+        question: "How quickly can an M&A platform be set up?",
+        answer: "Modern M&A platforms like SpaceNexus can be fully configured and operational in under 24 hours — without onboarding calls or dedicated implementation support. Set up your deal pipeline, upload target company documents via bulk drag-and-drop, configure permission groups, set NDAs, and invite deal participants within hours. Legacy platforms require multiple days and dedicated customer success manager involvement for initial setup, which can delay time-sensitive M&A timelines. In competitive deal situations where speed matters, the self-service model of modern platforms provides a meaningful advantage.",
     },
     {
-        question: "How does an M&A platform improve deal outcomes?",
-        answer: "An M&A platform improves deal outcomes through: (1) Faster deal cycles — AI document processing, structured workflows, and automated Q&A routing reduce average deal timelines by 30–50%; (2) Better deal intelligence — engagement analytics reveal which counterparties are most active and which documents attract attention, helping teams prioritize; (3) Reduced risk — granular permission controls, NDA enforcement, and immutable audit trails prevent data leaks and ensure compliance; (4) Improved collaboration — centralized platform eliminates email chaos and ensures all deal team members have real-time visibility into deal status; (5) Portfolio visibility — cross-deal dashboards give leadership real-time insight into all active transactions; (6) Seamless integration — post-merger workspaces ensure a smooth transition from due diligence to integration execution.",
+        question: "Is an M&A platform secure enough for confidential transactions?",
+        answer: "Yes. Purpose-built M&A platforms meet the highest security standards required for confidential transactions. SpaceNexus holds SOC 2 Type II certification, aligns with ISO 27001, and is SEC/FINRA ready. The platform uses AES-256 encryption at rest, TLS 1.3 in transit, Zero Trust architecture, and multi-factor authentication. Every document access event is logged in an immutable audit trail. Dynamic per-viewer watermarking, document expiration, print/download disable, and forward-blocking ensure deal documents remain protected. Generic file-sharing and project management tools do not meet these requirements and should not be used for confidential M&A activities.",
     },
 ];
 
@@ -164,15 +164,15 @@ const breadcrumbSchema = {
 const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "M&A Platform 2026 — Complete Guide to M&A Software",
-    description: "The complete guide to M&A platforms in 2026. Compare features, pricing, and security across the top platforms for managing mergers, acquisitions, and divestitures.",
+    headline: "M&A Platform 2026 — Complete Guide to Mergers & Acquisitions Software",
+    description: "The complete guide to M&A platforms in 2026. Compare features, pricing, and security across the top mergers and acquisitions software for deal teams.",
     author: { "@type": "Organization", name: "SpaceNexus" },
     publisher: { "@type": "Organization", "@id": "https://spacenexus.net/#organization", name: "SpaceNexus", url: "https://spacenexus.net" },
-    dateModified: "2026-07-01",
+    dateModified: "2026-09-01",
     mainEntityOfPage: "https://spacenexus.net/ma-platform",
 };
 
-export default function MaPlatformPage() {
+export default function MAPlatformPage() {
     return (
         <>
             <Script id="map-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -191,19 +191,19 @@ export default function MaPlatformPage() {
                             </nav>
                             <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-[#2563eb] text-xs font-semibold px-4 py-2 rounded-full mb-6">
                                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                 </svg>
-                                2026 M&A Platform Guide
+                                2026 M&A Software Guide
                             </div>
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                                 M&A Platform{" "}
                                 <span className="text-[#2563eb]">— The 2026 Complete Guide</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                                Not all M&A platforms are built the same. This guide covers what to look for, how an integrated platform transforms the M&A lifecycle, and which solution leads in 2026.
+                                Not all M&A platforms are built the same. This guide covers what to look for, how modern platforms differ from legacy VDRs, and which solution leads in 2026.
                             </p>
                             <p className="text-sm text-gray-600 mb-10">
-                                Last updated: July 2026 &nbsp;·&nbsp; Covers features, pricing, security, and top platforms
+                                Last updated: September 2026 &nbsp;·&nbsp; Covers features, pricing, security, pipeline management, and top platforms
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
@@ -226,13 +226,13 @@ export default function MaPlatformPage() {
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">What is an M&A platform?</h2>
                         <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-4">
                             <p>
-                                An M&A platform is a comprehensive software solution designed to manage the full lifecycle of mergers and acquisitions — from deal sourcing and origination through due diligence, negotiation, signing, and post-merger integration. It replaces the fragmented toolkit of email, spreadsheets, separate data rooms, and project management tools with a single, integrated environment where every aspect of the deal process is tracked, secured, and auditable.
+                                An M&A platform (mergers and acquisitions platform) is a secure, cloud-hosted software solution for managing the full lifecycle of merger and acquisition transactions — from target identification and pipeline tracking through due diligence, document exchange, Q&amp;A, signing, and post-merger integration. The category emerged to replace the fragmented toolkit of spreadsheets, email, and generic file-sharing that deal teams traditionally relied on.
                             </p>
                             <p>
-                                What distinguishes a true M&A platform from a collection of point solutions is its integrated approach to the deal lifecycle: deal pipeline management with sourcing and origination tracking, secure virtual data rooms with granular multi-party permissions, structured due diligence Q&A with automated routing, AI-powered document intelligence for redaction and classification, post-merger integration workspaces, real-time deal analytics, and cross-deal portfolio dashboards. These capabilities work together to eliminate data silos, reduce manual handoffs, and provide deal teams with a single source of truth for every transaction.
+                                What sets an M&A platform apart from standard virtual data rooms is its transaction-focused workflow: multi-deal pipeline management for tracking multiple targets simultaneously, AI-powered document processing with redaction and auto-categorization, structured Q&amp;A workflows with internal routing, buyer engagement analytics that reveal which documents drive deal interest, and post-merger integration workspaces for combining teams and systems. These capabilities are absent from standard VDRs built primarily as passive document repositories.
                             </p>
                             <p>
-                                In 2026, the M&A platform market is divided between legacy providers (Datasite, Intralinks) that offer fragmented tools with opaque quote-based pricing, and modern integrated platforms like SpaceNexus that deliver end-to-end M&A capabilities with AI, transparent pricing, and setup in under 24 hours — making professional M&A technology accessible to corporate development teams, investment banks, private equity firms, and M&A advisors of all sizes.
+                                In 2026, the M&A platform market is divided between legacy enterprise platforms (Datasite, Intralinks) built for single-deal M&amp;A that charge per-page and per-user with lengthy setups, and a new generation of AI-powered platforms like SpaceNexus that deliver purpose-built M&amp;A tools — multi-deal pipelines, AI document processing, buyer analytics, and integration planning — with transparent pricing and modern cloud architecture that setup in hours, not weeks.
                             </p>
                         </div>
                     </div>
@@ -244,9 +244,9 @@ export default function MaPlatformPage() {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
                             {[
                                 { value: "SOC 2 II", label: "Enterprise security certified" },
-                                { value: "< 24hrs", label: "Average M&A workspace setup" },
+                                { value: "< 24hrs", label: "Average M&A room setup" },
                                 { value: "100%", label: "Audit trail coverage" },
-                                { value: "500+", label: "Enterprise teams trust SpaceNexus" },
+                                { value: "500+", label: "Enterprise deal teams trust SpaceNexus" },
                             ].map((stat) => (
                                 <div key={stat.label}>
                                     <div className="text-3xl font-black mb-1">{stat.value}</div>
@@ -266,7 +266,7 @@ export default function MaPlatformPage() {
                                 What the best M&A platform must include
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
-                                These nine capabilities are the baseline for any serious M&A platform.
+                                These nine capabilities are the baseline for any serious mergers and acquisitions platform.
                             </p>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -300,17 +300,17 @@ export default function MaPlatformPage() {
                                     Recommended M&A Platform
                                 </div>
                                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                                    SpaceNexus — Integrated M&A platform with transparent pricing
+                                    SpaceNexus — AI-powered M&A platform with transparent pricing
                                 </h2>
                                 <p className="text-gray-600 leading-relaxed mb-6">
-                                    SpaceNexus is a purpose-built M&A platform for the full deal lifecycle. Every plan includes deal pipeline management, secure virtual data rooms, AI document intelligence, structured Q&A workflows, multi-party collaboration, post-merger integration tools, and deal analytics — all with enterprise-grade security and transparent, published pricing.
+                                    SpaceNexus is a purpose-built M&A platform for modern deal teams. Every plan includes AI document redaction, multi-deal pipeline management, buyer engagement analytics, structured Q&amp;A, and post-merger integration workspaces — features that legacy software charges as expensive add-ons or does not offer at all.
                                 </p>
                                 <div className="grid grid-cols-2 gap-3 mb-8">
                                     {[
-                                        { label: "Deal Pipeline", desc: "End-to-end lifecycle tracking" },
-                                        { label: "AI Document Intelligence", desc: "Redaction & classification included" },
-                                        { label: "Due Diligence Q&A", desc: "Built-in with routing" },
-                                        { label: "Post-Merger Integration", desc: "Dedicated workspace" },
+                                        { label: "AI Redaction", desc: "One-click, auto on upload" },
+                                        { label: "Deal Pipeline", desc: "Visual multi-deal tracking" },
+                                        { label: "Buyer Analytics", desc: "Real-time per-user heatmaps" },
+                                        { label: "Structured Q&A", desc: "Routed, tracked, audited" },
                                         { label: "SOC 2 Type II", desc: "Certified + ISO 27001" },
                                         { label: "Pricing", desc: "Transparent, no lock-in" },
                                     ].map((item) => (
@@ -357,18 +357,18 @@ export default function MaPlatformPage() {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                                M&A platform compared: SpaceNexus vs legacy providers vs generic tools
+                                M&A platform comparison: SpaceNexus vs legacy platforms vs generic tools
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
-                                How SpaceNexus compares to legacy M&A data room providers and generic productivity tools on the features that matter most for mergers and acquisitions.
+                                How SpaceNexus compares to legacy enterprise VDRs and generic project management tools on the features that matter most for M&A transactions.
                             </p>
                         </div>
                         <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white">
                             <div className="grid grid-cols-4 bg-gray-900 text-white">
                                 <div className="px-5 py-4 text-sm font-semibold text-gray-300">Feature</div>
                                 <div className="px-5 py-4 text-sm font-bold text-center text-[#60a5fa] border-l border-gray-700">SpaceNexus</div>
-                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Legacy VDR<br /><span className="text-xs font-normal text-gray-600">(Datasite / Intralinks)</span></div>
-                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Generic Tools<br /><span className="text-xs font-normal text-gray-600">(Email / Sheets / Drive)</span></div>
+                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Legacy Platforms<br /><span className="text-xs font-normal text-gray-600">(Datasite / Intralinks)</span></div>
+                                <div className="px-5 py-4 text-sm font-semibold text-center text-gray-600 border-l border-gray-700">Generic Tools<br /><span className="text-xs font-normal text-gray-600">(Asana / Drive)</span></div>
                             </div>
                             {comparisonRows.map((row, i) => (
                                 <div key={row.feature} className={`grid grid-cols-4 border-t border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
@@ -382,7 +382,7 @@ export default function MaPlatformPage() {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated July 2026.</p>
+                        <p className="text-xs text-gray-600 mt-3 text-center">Based on publicly available information. Last updated September 2026.</p>
                     </div>
                 </section>
 
@@ -408,13 +408,13 @@ export default function MaPlatformPage() {
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         <p className="text-sm font-semibold text-gray-700 mb-4">Related resources</p>
                         <div className="flex flex-wrap gap-3 justify-center">
-                            <Link href="/merger-acquisition-software" className="text-sm font-semibold text-[#2563eb] hover:underline">Merger & Acquisition Software →</Link>
+                            <Link href="/merger-acquisition-software" className="text-sm font-semibold text-[#2563eb] hover:underline">Merger &amp; Acquisition Software →</Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/m-a-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">M&A Data Room Providers →</Link>
+                            <Link href="/business-acquisition-software" className="text-sm font-semibold text-[#2563eb] hover:underline">Business Acquisition Software →</Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/deal-management-software" className="text-sm font-semibold text-[#2563eb] hover:underline">Deal Management Software →</Link>
+                            <Link href="/vendor-due-diligence-software" className="text-sm font-semibold text-[#2563eb] hover:underline">Vendor Due Diligence Software →</Link>
                             <span className="text-gray-300">|</span>
-                            <Link href="/virtual-data-room-providers" className="text-sm font-semibold text-[#2563eb] hover:underline">Virtual Data Room Providers →</Link>
+                            <Link href="/due-diligence-software" className="text-sm font-semibold text-[#2563eb] hover:underline">Due Diligence Software →</Link>
                         </div>
                     </div>
                 </section>
@@ -423,10 +423,10 @@ export default function MaPlatformPage() {
                 <section className="py-16 lg:py-20 bg-white">
                     <div className="max-w-3xl mx-auto px-4 text-center">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                            Try the M&A platform built for modern deal teams
+                            See the M&A platform built for modern deal teams
                         </h2>
                         <p className="text-gray-600 mb-8">
-                            Deal pipeline management. AI document intelligence. Due diligence Q&A. Post-merger integration. SOC 2 Type II certified. Transparent published pricing.
+                            AI-powered redaction. Multi-deal pipeline. Buyer engagement analytics. Post-merger integration. Transparent published pricing. Setup in under 24 hours.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/demo" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
@@ -437,11 +437,12 @@ export default function MaPlatformPage() {
                             </Link>
                         </div>
                         <p className="text-sm text-gray-600 mt-6">No credit card required · SOC 2 Type II certified · Cancel anytime</p>
-                    
-            {/* Last Updated */}
-            <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
-            </div></div>
+
+                        {/* Last Updated */}
+                        <div className="py-6 text-center border-t border-gray-100 mt-8">
+                            <LastUpdated date="2026-09-01" />
+                        </div>
+                    </div>
                 </section>
             </main>
         </>
