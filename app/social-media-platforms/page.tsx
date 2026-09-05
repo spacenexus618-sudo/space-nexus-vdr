@@ -56,12 +56,12 @@ const officialProfiles = [
 ];
 
 const registeredPlatforms = [
-  { name: "ProvenExpert", href: "https://www.provenexpert.com/space-nexus/", description: "SpaceNexus verified business profile and customer reviews on ProvenExpert.", status: "Registered" },
   { name: "SaaSHub", href: "https://www.saashub.com/spacenexus", description: "SpaceNexus user profile on SaaSHub for software discovery and reviews.", status: "Registered" },
   { name: "G2", href: "https://www.g2.com/products/spacenexus/", description: "SpaceNexus verified product listing and customer reviews on G2 under Virtual Data Room Software.", status: "Registered" },
   { name: "Uneed", href: "https://www.uneed.best/profile/spacenexus", description: "SpaceNexus profile on Uneed for software discovery and directory listings.", status: "Registered" },
   { name: "Crunchbase", href: "https://www.crunchbase.com/organization/space-nexus", description: "SpaceNexus company profile on Crunchbase for funding, investor, and company data.", status: "Registered" },
-  { name: "SourceForge", href: "https://sourceforge.net/u/spacenexus/profile", description: "SpaceNexus user profile on SourceForge for software discovery and reviews.", status: "Registered" },
+  { name: "ProvenExpert", href: "https://www.provenexpert.com/space-nexus/", description: "SpaceNexus verified business profile and customer reviews on ProvenExpert.", status: "Registered" },
+  { name: "SourceForge", href: "https://sourceforge.net/software/product/SpaceNexus/", description: "SpaceNexus user profile on SourceForge for software discovery and reviews.", status: "Registered" },
   { name: "Medium", href: "https://medium.com/@spacenexus618", description: "SpaceNexus Medium profile for articles on virtual data rooms, M&A insights, and industry trends.", status: "Registered" },
   { name: "Product Hunt", href: "https://www.producthunt.com/@space_nexus", description: "SpaceNexus Product Hunt profile for product launches, reviews, and community feedback.", status: "Registered" },
   { name: "StartupXplore", href: "https://startupxplore.com/en/startups/space-nexus-2", description: "SpaceNexus startup profile on StartupXplore for company discovery, funding info, and investor insights.", status: "Registered" },

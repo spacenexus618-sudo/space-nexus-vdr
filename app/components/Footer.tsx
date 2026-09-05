@@ -180,6 +180,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Best Data Room for Startups", href: "/best-data-room-for-startups" },
       { name: "VDR Software", href: "/vdr-software" },
       { name: "VDR Guide", href: "/vdr-guide" },
+      { name: "M&A Platform", href: "/ma-platform" },
     ],
   },
   {
@@ -189,7 +190,6 @@ const footerColumns: FooterColumn[] = [
       { name: "Deal Management Software", href: "/deal-management-software" },
       { name: "Deal Room Software", href: "/deal-room-software" },
       { name: "Deal Collaboration Platform", href: "/deal-collaboration-platform" },
-      { name: "M&A Platform", href: "/ma-platform" },
       { name: "Merger & Acquisition SW", href: "/merger-acquisition-software" },
       { name: "M&A Data Room Providers", href: "/m-a-data-room-providers" },
       { name: "Online Due Diligence", href: "/online-due-diligence-platform" },
@@ -213,6 +213,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Demo", href: "/demo" },
       { name: "Get Started", href: "/get-started" },
       { name: "Ecosystem", href: "/ecosystem" },
+      { name: "Careers", href: "/careers" },
       { name: "Kindora – Nonprofit Software", href: "/kindora" },
       { name: "Social Media", href: "/social-media-platforms" },
       { name: "Try for Free", href: "https://cad.spaceaiapp.com/vdr", external: true },
