@@ -23,6 +23,7 @@ const footerLinks = {
     { name: "Request Demo", href: "/kindora/demo" },
     { name: "Blog", href: "/kindora/blog" },
     { name: "Our Team", href: "/kindora/about#team" },
+    { name: "Careers", href: "/kindora/careers" },
     { name: "Contact", href: "/kindora/contact" },
     { name: "Kindora for NGOs", href: "/kindora/kindora-for-ngos" },
     { name: "How to Add Users", href: "/kindora/how-to-add-users" },
