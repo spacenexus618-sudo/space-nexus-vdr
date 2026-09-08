@@ -18,9 +18,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/consumer-review", priority: 0.7 },
     { route: "/social-media", priority: 0.7 },
     { route: "/about", priority: 0.8 },
+    { route: "/careers", priority: 0.8 },
     { route: "/how-to-add-users", priority: 0.7 },
     { route: "/kindora-for-ngos", priority: 0.9 },
   ];
+
+  const careerPages = [
+    "full-stack-developer",
+    "senior-full-stack-developer",
+    "python-developer-ai",
+  ].map((slug) => ({
+    route: `/careers/${slug}`,
+    priority: 0.7,
+  }));
 
   const featurePages = [
     "campaign-management",
@@ -211,6 +221,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const allPages = [
     ...staticPages,
+    ...careerPages,
     ...featurePages,
     ...solutionPages,
     ...blogPages,
