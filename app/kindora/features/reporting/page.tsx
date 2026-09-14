@@ -170,6 +170,7 @@ export default function ReportsPage() {
                   src="/kindora/screenshots/Reports/Reports%20(1).png"
                   alt="Kindora Reports — financial and program analytics overview"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
                   priority
@@ -234,6 +235,7 @@ export default function ReportsPage() {
                 src="/kindora/screenshots/Reports/Reports%20(2).png"
                 alt="Kindora Reports — financial analytics and visual charts"
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
               />

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora Constituent Relationship Management Software",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Constituent Relationship Management",
     description:
       "Manage donors, volunteers, grantors, and stakeholders in one unified nonprofit CRM.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "constituent relationship management",

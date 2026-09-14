@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/major-gift-management-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Major Gift Management Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Major Gift Management Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Major Gift Management Software",
     description: "Identify, cultivate, and close major gifts with Kindora — pipeline, ask tracking, and stewardship.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "major gift management software",

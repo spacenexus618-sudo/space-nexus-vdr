@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora — Bonterra Alternative",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Bonterra Alternative",
     description:
       "Everything Bonterra does for case management — plus donor CRM, grants, accounting, and volunteers. Try Kindora free.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "bonterra alternative",

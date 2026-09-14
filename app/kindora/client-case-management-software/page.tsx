@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Client Case Management Software — Kindora",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Client Case Management Software",
     description:
       "Client case management software for nonprofits. Track enrollment, manage case notes, and report outcomes.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "client case management software",

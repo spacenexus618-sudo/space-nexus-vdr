@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/donor-analytics-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Donor Analytics Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Donor Analytics Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Donor Analytics Software",
     description: "Understand donor behavior with giving patterns, lifetime value, and retention analysis.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "donor analytics software",

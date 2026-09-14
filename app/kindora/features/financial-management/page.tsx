@@ -170,6 +170,7 @@ export default function FinancePage() {
                   src="/kindora/screenshots/Finance/Finance%20(1).png"
                   alt="Kindora Finance — chart of accounts and budget management"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
                   priority
@@ -234,6 +235,7 @@ export default function FinancePage() {
                 src="/kindora/screenshots/Finance/Finance%20(2).png"
                 alt="Kindora Finance — budget planning and tracking"
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
               />

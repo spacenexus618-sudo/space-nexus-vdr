@@ -178,6 +178,7 @@ export default function ProgramsPage() {
                   src="/kindora/screenshots/Programs/Programs(1).png"
                   alt="Kindora Programs — client services and enrollment management"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
                   priority
@@ -244,6 +245,7 @@ export default function ProgramsPage() {
                     src={screenshot.src}
                     alt={`Kindora Programs — ${screenshot.caption}`}
                     fill
+                    loading="lazy"
                     className="object-cover"
                     sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />

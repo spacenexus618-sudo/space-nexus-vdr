@@ -36,12 +36,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://spacenexus.net/kindora/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post.dateModified ?? post.publishedAt,
       authors: [post.author.name],
+      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      images: [post.image],
     },
   };
 }
@@ -56,10 +59,16 @@ export default async function BlogPostPage({ params }: PageProps) {
         "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
+        image: post.image,
         datePublished: post.publishedAt,
+        dateModified: post.dateModified ?? post.publishedAt,
+        wordCount: Math.round(post.readingTime * 200),
+        inLanguage: "en-US",
+        articleSection: post.category,
         author: {
           "@type": "Person",
           name: post.author.name,
+          url: post.author.url ?? "https://spacenexus.net/kindora/about",
         },
         publisher: {
           "@type": "Organization",

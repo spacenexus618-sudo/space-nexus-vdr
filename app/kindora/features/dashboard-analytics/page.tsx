@@ -181,6 +181,7 @@ export default function DashboardAnalyticsPage() {
                   src="/kindora/screenshots/Dashboard/Screenshot%202026-03-17%20112749.png"
                   alt="Kindora Dashboard & Analytics — centralized nonprofit performance overview"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
                   priority
@@ -247,6 +248,7 @@ export default function DashboardAnalyticsPage() {
                     src={screenshot.src}
                     alt={`Kindora Dashboard — ${screenshot.caption}`}
                     fill
+                    loading="lazy"
                     className="object-cover"
                     sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />

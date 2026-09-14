@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 
@@ -9,6 +10,8 @@ export default function VolunteerTimeValueCalculatorPage() {
   const [hours, setHours] = useState("1000");
   const [volunteers, setVolunteers] = useState("40");
   const [rate, setRate] = useState("36.14");
+
+  useTrackFirstCalculation("volunteer-time-value-calculator", hours, volunteers, rate);
 
   const h = parseFloat(hours || "0");
   const v = parseInt(volunteers || "0");

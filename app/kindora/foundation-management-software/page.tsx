@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/foundation-management-software",
     siteName: "Kindora by Space Nexus",
     type: "article",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Foundation Management Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Foundation Management Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Foundation Management Software 2026 — Complete Guide",
     description:
       "The complete guide to foundation management software. Grant tracking, fund management, compliance, and impact reporting for foundations and philanthropic organizations.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "foundation management software",

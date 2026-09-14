@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const questions = [
   { id: "einz", question: "Is your organization registered as a 501(c)(3) public charity with the IRS?", weight: 20 },
@@ -26,6 +27,8 @@ const missingPolicyHints: Record<string, string[]> = {
 export default function GrantReadinessScorecardPage() {
   const [answers, setAnswers] = useState<Record<string, boolean | null>>({});
   const [showResult, setShowResult] = useState(false);
+
+  useTrackFirstCalculation("grant-readiness-scorecard", answers, showResult);
 
   const answered = Object.keys(answers).filter((k) => answers[k] !== null).length;
   const complete = answered === questions.length;

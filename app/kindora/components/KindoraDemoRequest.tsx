@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackDemoRequest } from "@/lib/analytics";
 
 
 interface FormData {
@@ -99,6 +100,7 @@ export default function KindoraDemoRequest() {
 
       if (json.data?.createDemoRequest?._id) {
         setIsSubmitted(true);
+        trackDemoRequest({ formType: "Kindora" });
       } else {
         setError(json.errors?.[0]?.message || "Something went wrong. Please try again.");
       }

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora Donor Management Software",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Donor Management Software",
     description: "Track donors, manage giving history, and build lasting relationships with Kindora donor management software.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "donor management software",

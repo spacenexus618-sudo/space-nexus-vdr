@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora Nonprofit Financial Management Software",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Nonprofit Financial Management Software",
     description:
       "Nonprofit accounting, budgets, expense tracking, and financial reporting in one platform.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "nonprofit financial management software",

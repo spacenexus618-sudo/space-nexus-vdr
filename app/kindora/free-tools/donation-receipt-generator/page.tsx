@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const fmtMoney = (n: number) => n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const fmtDate = (iso: string) => {
@@ -20,11 +21,15 @@ export default function DonationReceiptGeneratorPage() {
   const [dateRaw, setDateRaw] = useState("");
   const [exchange, setExchange] = useState(false);
   const [fmv, setFmv] = useState("0");
+  const [receiptNo] = useState(
+    () => `KND-${new Date().getFullYear()}${Math.floor(1000 + Math.random() * 9000)}`,
+  );
+
+  useTrackFirstCalculation("donation-receipt-generator", orgName, orgAddress, ein, donorName, amount, method, dateRaw, exchange, fmv);
 
   const amt = parseFloat(amount || "0");
   const fairValue = exchange ? parseFloat(fmv || "0") : 0;
   const deductible = Math.max(0, amt - fairValue);
-  const receiptNo = `KND-${new Date().getFullYear()}${Math.floor(1000 + Math.random() * 9000)}`;
 
   const ready = orgName.length > 0 && donorName.length > 0 && amt > 0 && dateRaw.length > 0;
 
