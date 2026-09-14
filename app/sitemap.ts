@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { ecosystemProducts } from "./ecosystem/data";
-import { spacenexusLastModified } from "./sitemap-dates";
+import { blogPosts as kindoraBlogPosts } from "./kindora/blog/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://spacenexus.net";

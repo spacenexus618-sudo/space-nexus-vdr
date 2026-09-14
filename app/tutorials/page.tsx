@@ -128,33 +128,34 @@ export default function TutorialsIndexPage() {
             <section className="py-16">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-6">
-                        {tutorials.map((t) => (
-                            <Link
-                                key={t.slug}
-                                href={`/tutorials/${t.slug}`}
-                                className="group block bg-white rounded-2xl border border-gray-200 p-6 hover:border-[#2563eb] hover:shadow-lg transition-all"
-                            >
-                                <div className="flex items-start gap-4 mb-4">
-                                    <div className="shrink-0 w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center text-3xl">
-                                        {t.icon}
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                        <h2 className="text-lg font-bold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug mb-1.5">
-                                            {t.title}
-                                        </h2>
-                                        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
-                                            <span className="font-mono bg-gray-100 text-gray-600 px-2 py-0.5 rounded">VIDEO</span>
-                                            <span>·</span>
-                                            <span>{t.duration}</span>
-                                            <span>·</span>
-                                            <span>{t.level}</span>
-                                        </div>
+                        <a href="https://youtu.be/Y-26yBbAINA?si=y_tWtiLTRk7u2hIV" target="_blank" rel="noopener noreferrer" className="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-[#2563eb] hover:shadow-lg transition-all">
+                            <div className="aspect-video relative">
+                                <img src="/spacenexus/tutorials/vdr-walkthrough-thumbnail.jpg" alt="SpaceNexus Enterprise Data Room" className="w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                    <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <svg className="w-6 h-6 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                                     </div>
                                 </div>
-                                <p className="text-sm text-gray-600 leading-relaxed">{t.description}</p>
-                                <p className="text-sm font-semibold text-[#2563eb] mt-4 group-hover:underline">Watch tutorial →</p>
-                            </Link>
-                        ))}
+                            </div>
+                            <div className="p-5">
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">SpaceNexus Enterprise Data Room (VDR) — Complete Product Walkthrough</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">Watch the complete product walkthrough covering our secure document collaboration platform for M&amp;A, fundraising, and legal transactions.</p>
+                            </div>
+                        </a>
+                        <a href="https://youtube.com/shorts/ZjQ9C1KNjB4?si=pNuRta-_MM5bhf25" target="_blank" rel="noopener noreferrer" className="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-[#2563eb] hover:shadow-lg transition-all">
+                            <div className="aspect-video relative">
+                                <img src="/spacenexus/tutorials/vdr-short-thumbnail.jpg" alt="Space AI Tutorial" className="w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                    <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <svg className="w-6 h-6 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-5">
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">Secure Your Documents with SpaceNexus VDR</h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">A comprehensive tutorial on Forms, Files, and User Management functionalities within SpaceNexus.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>

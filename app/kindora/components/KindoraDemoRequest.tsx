@@ -33,6 +33,7 @@ export default function KindoraDemoRequest() {
 
 
 
+
   const validate = (data: FormData): Record<string, string> => {
     const errs: Record<string, string> = {};
     if (!data.firstName.trim()) errs.firstName = "First name is required";

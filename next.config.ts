@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: __dirname,
+  },
+
   // Disable source maps in production builds to prevent source code exposure
   productionBrowserSourceMaps: false,
 
@@ -139,6 +143,26 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=604800, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        // Cache favicon for 30 days
+        source: "/favicon.ico",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        // Cache manifest for 1 day
+        source: "/manifest.webmanifest",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=3600",
           },
         ],
       },

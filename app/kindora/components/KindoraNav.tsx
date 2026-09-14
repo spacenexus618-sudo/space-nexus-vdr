@@ -178,6 +178,7 @@ export default function KindoraNav() {
               </button>
               
               
+              
 
               {productsOpen && (
                 <div className="absolute top-full left-0 pt-3 w-[340px]">
