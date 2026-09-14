@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora Cloud CRM for Nonprofits",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Cloud CRM for Nonprofits",
     description:
       "Cloud-based nonprofit CRM. Manage donors, campaigns, and grants from anywhere.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "cloud CRM for nonprofits",

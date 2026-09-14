@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora Donor Portal",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Donor Portal",
     description:
       "Personalized self-service portal for donors to manage giving, view history, and track impact.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "donor portal",

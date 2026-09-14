@@ -248,6 +248,7 @@ export default function FinancialsPage() {
                   src="/kindora/screenshots/Financials/Donors.png"
                   alt="Kindora Financials — donor management and financial overview"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
                   priority
@@ -332,6 +333,7 @@ export default function FinancialsPage() {
                     src={screenshot.src}
                     alt={`Kindora Financials — ${screenshot.caption}`}
                     fill
+                    loading="lazy"
                     className="object-cover"
                     sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />

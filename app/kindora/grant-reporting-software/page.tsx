@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Grant Reporting Software — Kindora",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Grant Reporting Software",
     description:
       "Automated grant reporting software. Generate funder reports, compliance reports, and financial statements with one click.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "grant reporting software",

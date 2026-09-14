@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora — DonorPerfect Alternative",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "DonorPerfect Alternative",
     description:
       "Everything DonorPerfect does for donors — plus grants, volunteers, programmes, and communications. Try Kindora free.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "donorperfect alternative",
@@ -170,7 +170,7 @@ const alternatives = [
   {
     name: "Bloomerang",
     description: "Good for donor retention but limited beyond that. Kindora adds grants, volunteers, programmes, and events.",
-    href: "/kindora/kindora-vs-bloomerang",
+    href: "/kindora/bloomerang-alternative",
   },
   {
     name: "Blackbaud",

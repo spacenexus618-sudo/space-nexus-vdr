@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/best-crm-for-small-nonprofits",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Best CRM for Small Nonprofits" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Best CRM for Small Nonprofits" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best CRM for Small Nonprofits",
     description: "Affordable donor management and grant tracking for small nonprofits — all in one platform.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "best crm for small nonprofits",

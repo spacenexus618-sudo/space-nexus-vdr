@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Grant Lifecycle Management — Kindora",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Grant Lifecycle Management",
     description:
       "Complete grant lifecycle management. From discovery to closeout — track every stage in one platform.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "grant lifecycle management",

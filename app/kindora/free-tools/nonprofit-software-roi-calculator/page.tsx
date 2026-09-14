@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 
@@ -11,6 +12,8 @@ export default function SoftwareRoiCalculatorPage() {
   const [hourlyRate, setHourlyRate] = useState("35");
   const [platformCost, setPlatformCost] = useState("2400");
   const [efficiency, setEfficiency] = useState("30");
+
+  useTrackFirstCalculation("roi-calculator", hoursWeek, staff, hourlyRate, platformCost, efficiency);
 
   const hrs = parseFloat(hoursWeek || "0");
   const st = parseInt(staff || "0");

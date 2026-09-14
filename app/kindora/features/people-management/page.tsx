@@ -175,6 +175,7 @@ export default function PeoplePage() {
                   src="/kindora/screenshots/People/People%20(1).png"
                   alt="Kindora People — employee and volunteer management overview"
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 92vw, 600px"
                   priority
@@ -241,6 +242,7 @@ export default function PeoplePage() {
                     src={screenshot.src}
                     alt={`Kindora People — ${screenshot.caption}`}
                     fill
+                    loading="lazy"
                     className="object-cover"
                     sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 560px"
                   />

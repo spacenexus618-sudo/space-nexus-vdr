@@ -290,7 +290,10 @@ export default function BlogPage() {
                             required
                             className="px-5 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 text-sm outline-none focus:bg-white/20 transition-colors min-w-[240px]"
                         />
-                        <button className="px-6 py-4 bg-white text-[#2563eb] font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap">
+                        <button
+                            data-analytics-event="newsletter-subscribe"
+                            className="px-6 py-4 bg-white text-[#2563eb] font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap"
+                        >
                             Subscribe Free
                         </button>
                     </div>

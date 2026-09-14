@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/nonprofit-email-automation",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Nonprofit Email Automation" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Nonprofit Email Automation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nonprofit Email Automation",
     description: "Triggered email sequences for welcome series, thank-yous, lapsed donor re-engagement, and more.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "nonprofit email automation",

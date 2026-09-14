@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 const pct = (n: number) => `${(n * 100).toFixed(1)}%`;
@@ -22,6 +23,8 @@ export default function NonprofitKpiCalculatorPage() {
   const [revenue, setRevenue] = useState("150000");
   const [gifts, setGifts] = useState("2800");
   const [expenses, setExpenses] = useState("20000");
+
+  useTrackFirstCalculation("nonprofit-kpi-calculator", donors, retained, newDonors, revenue, gifts, expenses);
 
   const prior = parseInt(donors || "0");
   const ret = parseInt(retained || "0");

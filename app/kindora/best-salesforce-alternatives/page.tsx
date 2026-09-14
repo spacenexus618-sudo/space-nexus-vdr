@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Best Salesforce Alternatives for Nonprofits",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Best Salesforce Alternatives for Nonprofits (2026)",
     description:
       "The top Salesforce Nonprofit Cloud alternatives compared — features, pricing, and honest best-for guidance.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "salesforce alternatives",
@@ -521,8 +521,8 @@ export default function BestSalesforceAlternativesPage() {
           <div className="flex flex-wrap items-center gap-2 text-sm">
             <span className="font-semibold text-gray-700 mr-1">Related:</span>
             <Link href="/kindora/salesforce-nonprofit-cloud-alternative" className="px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#2563eb] hover:border-blue-500/40 transition-colors">Salesforce NPC Alternative</Link>
-            <Link href="/kindora/salesforce-alternative-for-nonprofits" className="px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#2563eb] hover:border-blue-500/40 transition-colors">Salesforce Alternative for Nonprofits</Link>
-            <Link href="/kindora/kindora-vs-salesforce-nonprofit-cloud" className="px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#2563eb] hover:border-blue-500/40 transition-colors">Kindora vs Salesforce NPC</Link>
+            <Link href="/kindora/salesforce-nonprofit-cloud-alternative" className="px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#2563eb] hover:border-blue-500/40 transition-colors">Salesforce Alternative for Nonprofits</Link>
+            <Link href="/kindora/salesforce-nonprofit-cloud-alternative" className="px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#2563eb] hover:border-blue-500/40 transition-colors">Kindora vs Salesforce NPC</Link>
             <Link href="/kindora/alternatives" className="px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#2563eb] hover:border-blue-500/40 transition-colors">All Alternatives</Link>
           </div>
         </div>

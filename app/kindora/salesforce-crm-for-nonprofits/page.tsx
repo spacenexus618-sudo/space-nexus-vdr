@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora — Salesforce CRM for Nonprofits Alternative",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Salesforce CRM for Nonprofits — Switch to Kindora",
     description:
       "Donor CRM, campaigns, and reporting without Salesforce complexity. Start free.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "salesforce crm for nonprofits",

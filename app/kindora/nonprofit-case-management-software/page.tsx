@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/nonprofit-case-management-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Nonprofit Case Management Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Nonprofit Case Management Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nonprofit Case Management Software",
     description: "Track client cases, manage services, and measure outcomes with Kindora case management software.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "nonprofit case management software",

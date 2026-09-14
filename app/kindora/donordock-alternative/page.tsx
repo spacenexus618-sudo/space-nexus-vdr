@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora — DonorDock Alternative",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "DonorDock Alternative",
     description:
       "Everything DonorDock does for donors — plus grants, case management, and nonprofit accounting. Try Kindora free.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "donordock alternative",

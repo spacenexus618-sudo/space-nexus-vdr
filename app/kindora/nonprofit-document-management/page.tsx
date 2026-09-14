@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/nonprofit-document-management",
     siteName: "Kindora by Space Nexus",
     type: "article",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Nonprofit Document Management" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Nonprofit Document Management" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nonprofit Document Management 2026 — Complete Guide",
     description:
       "The complete guide to nonprofit document management. Secure storage, version control, compliance tracking, and best practices for operations teams.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "nonprofit document management",

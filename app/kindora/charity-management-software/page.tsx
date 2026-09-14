@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Charity Management Software — Kindora",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Charity Management Software",
     description:
       "All-in-one charity management software for donor tracking, grant management, and impact reporting. Try free.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "charity management software",

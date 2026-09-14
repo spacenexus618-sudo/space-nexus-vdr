@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Grant Tracking Software — Kindora",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Grant Tracking Software",
     description:
       "Track every grant from application to closeout. Manage deadlines, monitor budgets, and automate compliance reporting.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "grant tracking software",

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/all-in-one-nonprofit-management-platform",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora All-in-One Nonprofit Management Platform" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora All-in-One Nonprofit Management Platform" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "All-in-One Nonprofit Management Platform",
     description: "One platform for donor management, fundraising, grants, volunteers, and reporting.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "all-in-one nonprofit management platform",

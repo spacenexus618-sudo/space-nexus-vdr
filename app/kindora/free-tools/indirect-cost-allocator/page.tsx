@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 
@@ -10,6 +11,8 @@ export default function IndirectCostAllocatorPage() {
   const [personnel, setPersonnel] = useState("20000");
   const [subawards, setSubawards] = useState("10000");
   const [rate, setRate] = useState("10");
+
+  useTrackFirstCalculation("indirect-cost-allocator", direct, personnel, subawards, rate);
 
   const d = parseFloat(direct || "0");
   const p = parseFloat(personnel || "0");
