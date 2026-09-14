@@ -230,6 +230,7 @@ export default function AboutPage() {
                             We are a close-knit group of engineers, strategists, and creators. We value open dialogue, hands-on craft, and technology built to last.
                         </p>
                         
+                        
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
