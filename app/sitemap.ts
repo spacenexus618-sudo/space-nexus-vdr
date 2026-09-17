@@ -81,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/vdr-guide", priority: 0.9, changeFrequency: "monthly" as const },
     { route: "/enterprise", priority: 0.8, changeFrequency: "monthly" as const },
     { route: "/social-media-platforms", priority: 0.7, changeFrequency: "monthly" as const },
+    { route: "/knowledge-graph", priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
   // VDR blog posts

@@ -93,6 +93,29 @@ export default function KindoraJsonLd() {
     keywords: "nonprofit management software, NGO platform, donor CRM, grant management, nonprofit operating system",
   };
 
+  const veritasGraphSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Kindora NGO OS",
+    applicationCategory: "BusinessApplication",
+    url: "https://spacenexus.net/kindora",
+    description:
+      "Kindora AI search and answers are grounded by VeritasGraph, an open-source GraphRAG knowledge-graph framework that returns every answer with a verifiable citation and reasoning path.",
+    featureList: [
+      "AI search with source attribution",
+      "Knowledge graph reasoning",
+      "On-prem / 100% local processing",
+    ],
+    isBasedOn: {
+      "@type": "SoftwareSourceCode",
+      name: "VeritasGraph",
+      codeRepository: "https://github.com/bibinprathap/VeritasGraph",
+      url: "https://bibinprathap.github.io/VeritasGraph/index.html",
+    },
+    sameAs: ["https://github.com/bibinprathap/VeritasGraph"],
+    author: { "@type": "Person", name: "Bibin Prathap" },
+  };
+
   return (
     <>
       <script
@@ -106,6 +129,10 @@ export default function KindoraJsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(veritasGraphSchema) }}
       />
     </>
   );

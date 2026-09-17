@@ -17,6 +17,20 @@ SpaceNexus is a modern virtual data room platform purpose-built for M&A transact
 
 ---
 
+## Powered By VeritasGraph
+
+AI search and answers on SpaceNexus are grounded by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework. Every answer is returned with a verifiable citation and reasoning path, and the framework runs on-prem / 100% local so reserved deal data never leaves the environment.
+
+- **Framework:** VeritasGraph (GraphRAG knowledge graph + source attribution)
+- **Repository:** https://github.com/bibinprathap/VeritasGraph
+- **Documentation:** https://bibinprathap.github.io/VeritasGraph/index.html
+- **Knowledge Graph page:** https://spacenexus.net/knowledge-graph
+- **Kindora Knowledge Graph page:** https://spacenexus.net/kindora/knowledge-graph
+- **Kindora VeritasGraph page:** https://spacenexus.net/kindora/veritas-graph
+- **Kindora AI FAQ:** https://spacenexus.net/kindora/faq
+
+---
+
 ## Product Architecture
 
 ### Core Platform

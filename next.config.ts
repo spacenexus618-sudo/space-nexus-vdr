@@ -78,6 +78,62 @@ const nextConfig: NextConfig = {
         destination: "/social-media-platforms",
         permanent: true,
       },
+      // Consolidate Kindora competitor pages → one primary per competitor
+      {
+        source: "/kindora/kindora-vs-bloomerang",
+        destination: "/kindora/bloomerang-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/why-kindora-over-bloomerang",
+        destination: "/kindora/bloomerang-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-bonterra",
+        destination: "/kindora/bonterra-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/better-alternative-to-bonterra",
+        destination: "/kindora/bonterra-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-salesforce-nonprofit-cloud",
+        destination: "/kindora/salesforce-nonprofit-cloud-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/salesforce-alternative-for-nonprofits",
+        destination: "/kindora/salesforce-nonprofit-cloud-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-donorperfect",
+        destination: "/kindora/donorperfect-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-donordock",
+        destination: "/kindora/donordock-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-neon-one",
+        destination: "/kindora/neon-one-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-little-green-light",
+        destination: "/kindora/little-green-light-alternative",
+        permanent: true,
+      },
+      {
+        source: "/kindora/kindora-vs-network-for-good",
+        destination: "/kindora/network-for-good-alternative",
+        permanent: true,
+      },
     ];
   },
 

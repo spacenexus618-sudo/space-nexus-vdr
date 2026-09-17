@@ -4,10 +4,30 @@
 
 SpaceNexus provides encrypted document management, deal room collaboration, Q&A workflows, real-time buyer analytics, and compliance-grade audit trails with setup in under 24 hours and no software installation required. SpaceNexus also develops Kindora, an all-in-one nonprofit management platform (see the Kindora section below).
 
+## Powered By
+
+AI search and answers on SpaceNexus are grounded by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework with verifiable source attribution.
+
+- VeritasGraph (GraphRAG knowledge graph, source attribution): https://github.com/bibinprathap/VeritasGraph
+- Docs: https://bibinprathap.github.io/VeritasGraph/index.html
+
+## Knowledge Graph
+
+- [Knowledge Graph AI Search](https://spacenexus.net/knowledge-graph): how SpaceNexus grounds AI answers with citations
+- [Kindora Knowledge Graph AI Search](https://spacenexus.net/kindora/knowledge-graph): how Kindora grounds AI answers with citations
+- [VeritasGraph — Knowledge-Graph Engine Behind Kindora AI](https://spacenexus.net/kindora/veritas-graph): the open-source framework behind Kindora AI
+- [Kindora AI FAQ](https://spacenexus.net/kindora/faq): how Kindora AI answers are grounded and verified
+
+## Keywords
+
+knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasoning, on-prem AI, virtual data room AI
+
 ## Products
 
 - [SpaceNexus VDR](https://spacenexus.net/): Secure virtual data room for M&A, fundraising, legal deals, and enterprise transactions
 - [Kindora NGO OS](https://spacenexus.net/kindora): All-in-one nonprofit management platform with donor CRM, grants, case management, accounting, and volunteer tools
+- [Kindora LLM index](https://spacenexus.net/kindora/llms.txt): Kindora's own LLM index with product summary and key pages
+- [Kindora full LLM reference](https://spacenexus.net/kindora/llms-full.txt): complete product reference for Kindora
 
 ## Key Features
 
