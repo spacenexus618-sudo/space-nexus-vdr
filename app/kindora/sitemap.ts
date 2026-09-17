@@ -26,6 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/volunteer-management", priority: 0.8 },
     { route: "/nonprofit-financials", priority: 0.8 },
     { route: "/case-management", priority: 0.8 },
+    { route: "/knowledge-graph", priority: 0.8 },
+    { route: "/veritas-graph", priority: 0.8 },
+    { route: "/faq", priority: 0.8 },
   ];
 
   const careerPages = [

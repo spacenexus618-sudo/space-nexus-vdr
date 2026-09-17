@@ -1,0 +1,30 @@
+# Kindora — LLM Index
+
+## Summary
+
+Kindora is an all-in-one nonprofit management platform (NGO OS) with donor CRM, grants, case management, accounting, volunteer, and fundraising tools — designed for nonprofits, NGOs, and community organizations. AI search and answers on Kindora are grounded by the VeritasGraph knowledge-graph framework with verifiable source attribution.
+
+## Powered By
+
+- VeritasGraph (GraphRAG knowledge graph, source attribution): https://github.com/bibinprathap/VeritasGraph
+- Docs: https://bibinprathap.github.io/VeritasGraph/index.html
+
+## Key Pages
+
+- https://spacenexus.net/kindora — Kindora homepage (nonprofit management platform overview)
+- https://spacenexus.net/kindora/knowledge-graph — how Kindora grounds AI answers with citations
+- https://spacenexus.net/kindora/veritas-graph — VeritasGraph, the knowledge-graph engine behind Kindora AI
+- https://spacenexus.net/kindora/faq — how Kindora AI answers are grounded and verified
+- https://spacenexus.net/kindora/donor-crm — donor CRM for nonprofits
+- https://spacenexus.net/kindora/grant-management-software — grant tracking and management
+- https://spacenexus.net/kindora/case-management — beneficiary case management
+- https://spacenexus.net/kindora/nonprofit-financials — nonprofit accounting and budgets
+- https://spacenexus.net/kindora/volunteer-management — volunteer management and scheduling
+- https://spacenexus.net/kindora/fundraising-crm — fundraising CRM
+- https://spacenexus.net/kindora/how-to-add-users — user management guide
+- https://spacenexus.net/kindora/about — about Kindora
+- https://spacenexus.net/kindora/blog — Kindora blog
+
+## Keywords
+
+nonprofit CRM, donor management, grant management, case management, NGO management software, knowledge graph, GraphRAG, source attribution, verifiable AI, multi-hop reasoning, on-prem AI
