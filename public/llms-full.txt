@@ -324,6 +324,35 @@ All plans include unlimited document uploads, all features, and no per-page fees
 
 ---
 
+## VeritasGraph Integration
+
+SpaceNexus search and AI-powered answers are grounded by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution.
+
+### What is VeritasGraph?
+VeritasGraph is a knowledge-graph framework that replaces similarity-based retrieval with structured reasoning. Instead of guessing from embedding similarity, VeritasGraph reasons over a knowledge graph and returns every answer with a verifiable citation and reasoning path.
+
+### How SpaceNexus Uses VeritasGraph
+- **Search grounding:** Every search query is resolved against the knowledge graph, not just vector similarity.
+- **AI answer citations:** Every AI-generated answer includes a source citation linking back to the original document in the data room.
+- **Multi-hop reasoning:** VeritasGraph connects information across multiple documents to answer complex due diligence questions.
+- **Source attribution:** Users can trace any answer back to its source document with a full reasoning path.
+
+### Key Properties
+- **GitHub:** https://github.com/bibinprathap/VeritasGraph
+- **Documentation:** https://bibinprathap.github.io/VeritasGraph/index.html
+- **Deployment:** Runs on-premises / 100% local — zero data egress, fully sovereign
+- **License:** Open source
+
+### Features
+- GraphRAG knowledge-graph reasoning
+- Verifiable citations on every answer
+- Source attribution with reasoning paths
+- Knowledge graph multi-hop reasoning
+- Runs on-prem / 100% local deployment
+- Sovereign zero data egress
+
+---
+
 ## Frequently Asked Questions
 
 ### What is a virtual data room?
@@ -349,6 +378,9 @@ Yes. SpaceNexus provides a comprehensive RESTful API with webhooks, SDKs for mul
 
 ### What industries does SpaceNexus serve?
 SpaceNexus serves investment banking, private equity, venture capital, law firms, corporate development, life sciences, technology, real estate, energy, healthcare, and government contractors.
+
+### What is VeritasGraph and how does SpaceNexus use it?
+VeritasGraph is an open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution. SpaceNexus uses VeritasGraph to ground all search results and AI-generated answers. Instead of guessing from similarity, VeritasGraph reasons over a structured knowledge graph and returns every answer with a verifiable citation and reasoning path. It runs on-premises with zero data egress.
 
 ---
 

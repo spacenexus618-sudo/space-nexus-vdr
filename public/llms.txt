@@ -1,60 +1,3 @@
-<<<<<<< HEAD
-# Kindora — All-in-One Nonprofit Management Software
-
-> Kindora is a modern nonprofit management platform for small to mid-sized nonprofits. It combines donor CRM, grant lifecycle management, client case management, nonprofit accounting, volunteer management, and campaign tools in one unified platform — replacing 3-4 separate tools.
-
-## Who it's for
-
-- Nonprofit organizations (community service, social services, youth programs, housing nonprofits)
-- NGOs and charitable foundations
-- Fundraising-focused organizations
-- Grant-dependent organizations
-- Multi-program social enterprises
-
-## Key Pages
-
-- Homepage: https://spacenexus.net/kindora
-- Features: https://spacenexus.net/kindora/features
-- Pricing: https://spacenexus.net/kindora/pricing
-- Demo: https://spacenexus.net/kindora/demo
-- Solutions: https://spacenexus.net/kindora/solutions
-- Vs Competitors: https://spacenexus.net/kindora/vs-competitors
-- Why Kindora Over Bloomerang: https://spacenexus.net/kindora/why-kindora-over-bloomerang
-- Consumer Reviews: https://spacenexus.net/kindora/consumer-review
-- Ecosystem: https://spacenexus.net/kindora/ecosystem
-- Blog: https://spacenexus.net/kindora/blog
-
-## Top Blog Articles
-
-- The Complete Guide to Nonprofit Management Software: https://spacenexus.net/kindora/blog/complete-guide-nonprofit-management-software
-- How to Choose Donor Management Software: https://spacenexus.net/kindora/blog/how-to-choose-donor-management-software
-- Grant Management 101: https://spacenexus.net/kindora/blog/grant-management-101-track-win-more-grants
-- Why Nonprofits Are Ditching Spreadsheets: https://spacenexus.net/kindora/blog/why-nonprofits-are-ditching-spreadsheets
-- Nonprofit Fundraising Campaign Guide: https://spacenexus.net/kindora/blog/nonprofit-fundraising-campaign-guide
-
-## Key Features
-
-- Donor CRM with giving history, engagement scoring, and receipt tracking
-- Grant lifecycle management from prospect to close with compliance reporting
-- Client case management with intake, enrollment, and outcome tracking
-- Nonprofit accounting with cost allocation and Statement of Activities
-- Volunteer management with hours tracking and skill matching
-- Campaign management with goal tracking
-- Board-ready PDF and Excel reporting
-- Role-based access control (Admin, Manager, Staff, Viewer)
-
-## Pricing
-
-- Starter: Free (up to 5 team members, core modules)
-- Professional: Custom pricing (full modules, advanced reporting)
-- Enterprise: Custom pricing (custom integrations, dedicated support)
-
-## Contact
-
-- Email: contact@spacenexus.net
-- Phone: +1 646 421 5740
-- Address: 2500 Marconi Ave, Ste 101, Sacramento, CA 95821 USA
-=======
 # SpaceNexus
 
 > SpaceNexus is an AI-powered virtual data room (VDR) platform for M&A due diligence, fundraising, and secure document sharing. Trusted by 500+ enterprises including law firms, investment banks, and private equity firms.
@@ -142,10 +85,20 @@ Free 14-day trial available. No credit card required. No per-page fees. No manda
 - VDR Guide: https://spacenexus.net/vdr-guide
 - VDR Comparison: https://spacenexus.net/vdr-comparison
 
+## Technology — VeritasGraph
+
+SpaceNexus search and AI answers are powered by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution.
+
+- **How it works:** VeritasGraph reasons over a structured knowledge graph instead of guessing from similarity. Every answer includes a verifiable citation and reasoning path.
+- **Source attribution:** Every search result and AI-generated answer traces back to a specific source document.
+- **Knowledge graph multi-hop reasoning:** Connects information across documents to answer complex due diligence questions.
+- **Deployment:** Runs on-premises / 100% local — zero data egress, fully sovereign.
+- **GitHub:** https://github.com/bibinprathap/VeritasGraph
+- **Documentation:** https://bibinprathap.github.io/VeritasGraph/index.html
+
 ## Contact
 
 - Website: https://spacenexus.net
 - Demo: https://spacenexus.net/demo
 - Free Trial: https://spacenexus.net/get-started
 - Phone numbers available on the website for USA, Canada, UAE, Saudi Arabia, Kuwait, Singapore, and Malaysia
->>>>>>> origin/main

@@ -1,4 +1,34 @@
 export default function JsonLd() {
+  const veritasGraphSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://spacenexus.net/#veritasgraph",
+    name: "VeritasGraph",
+    alternateName: "Veritas Graph",
+    description:
+      "Open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution. Reasons over a structured knowledge graph and returns every answer with a verifiable citation and reasoning path.",
+    url: "https://github.com/bibinprathap/VeritasGraph",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Cross-platform",
+    isSourceCode: true,
+    codeRepository: "https://github.com/bibinprathap/VeritasGraph",
+    license: "https://github.com/bibinprathap/VeritasGraph/blob/main/LICENSE",
+    isPartOf: {
+      "@type": "SoftwareApplication",
+      name: "VeritasGraph Ecosystem",
+      url: "https://bibinprathap.github.io/VeritasGraph/index.html",
+    },
+    documentation: "https://bibinprathap.github.io/VeritasGraph/index.html",
+    featureList: [
+      "GraphRAG knowledge-graph reasoning",
+      "Verifiable citations on every answer",
+      "Source attribution with reasoning paths",
+      "Knowledge graph multi-hop reasoning",
+      "Runs on-prem / 100% local deployment",
+      "Sovereign zero data egress",
+    ],
+  };
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -96,6 +126,7 @@ export default function JsonLd() {
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": "https://spacenexus.net/#spacenexus-vdr",
     name: "SpaceNexus Virtual Data Room",
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Virtual Data Room",
@@ -103,6 +134,9 @@ export default function JsonLd() {
     url: "https://spacenexus.net",
     description:
       "Enterprise Virtual Data Room for secure M&A due diligence, capital raising, and document management. Built on Zero Trust architecture with AES-256 encryption and SOC 2 Type II compliance.",
+    isBasedOn: {
+      "@id": "https://spacenexus.net/#veritasgraph",
+    },
     offers: {
       "@type": "Offer",
       price: "Contact for pricing",
@@ -131,6 +165,7 @@ export default function JsonLd() {
       "Dynamic watermarking and print restrictions",
       "Full-text search across 100+ file types",
       "24/7 enterprise support",
+      "VeritasGraph-powered source attribution and verifiable AI answers",
     ],
     keywords: "virtual data room, VDR, M&A due diligence, secure data room, investment banking data room, private equity data room",
   };
@@ -178,6 +213,12 @@ export default function JsonLd() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(veritasGraphSchema),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

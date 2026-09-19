@@ -9,6 +9,7 @@ import TransformationTable from "./components/TransformationTable";
 import BenefitsSection from "./components/BenefitsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
+import VeritasGraphFAQ from "./components/VeritasGraphFAQ";
 import KindoraCallout from "./components/KindoraCallout";
 import GlobalPresence from "./components/GlobalPresence";
 import LastUpdated from "./components/LastUpdated";
@@ -118,6 +119,61 @@ const faqSchema = {
   ],
 };
 
+const veritasGraphFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is VeritasGraph and how does SpaceNexus use it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "VeritasGraph is an open-source GraphRAG knowledge-graph framework for verifiable AI with source attribution. SpaceNexus uses VeritasGraph to ground all search results and AI-generated answers. Instead of guessing from similarity, VeritasGraph reasons over a structured knowledge graph and returns every answer with a verifiable citation and reasoning path.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does source attribution work in SpaceNexus?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Every search result and AI-generated answer in SpaceNexus includes a source citation linking back to the original document in your data room. VeritasGraph traces each answer through a reasoning path, so you can verify exactly where the information came from — no black-box AI responses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is a knowledge graph and why does it matter for due diligence?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A knowledge graph structures information as entities and relationships, enabling multi-hop reasoning across documents. For due diligence, this means VeritasGraph can connect facts from different documents — linking a clause in a contract to a financial figure in a spreadsheet — and provide a verifiable reasoning path for every answer.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does SpaceNexus verify AI answers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SpaceNexus uses VeritasGraph's GraphRAG framework to verify AI answers. Every answer is grounded in the knowledge graph built from your data room documents. The system provides a citation and reasoning path for each response, allowing users to trace information back to its source document.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is VeritasGraph deployed on-premise or in the cloud?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "VeritasGraph runs on-premises / 100% local — zero data egress, fully sovereign. Your documents never leave your infrastructure. This is critical for M&A transactions, legal proceedings, and regulatory compliance where data sovereignty is required.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is GraphRAG and how is it different from regular AI search?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GraphRAG (Graph-based Retrieval-Augmented Generation) combines knowledge graphs with large language models. Unlike regular AI search that retrieves documents by similarity, GraphRAG reasons over structured entity relationships. This produces more accurate answers with verifiable citations instead of probabilistic guesses.",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
@@ -130,6 +186,11 @@ export default function Home() {
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id="veritasgraph-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(veritasGraphFaqSchema) }}
       />
 
       {/* Hero Section */}
@@ -179,6 +240,11 @@ export default function Home() {
       {/* FAQ Section */}
       <div className="content-auto">
         <FAQSection />
+      </div>
+
+      {/* VeritasGraph FAQ / GEO Section */}
+      <div className="content-auto">
+        <VeritasGraphFAQ />
       </div>
 
       {/* Global Presence - Office Locations */}

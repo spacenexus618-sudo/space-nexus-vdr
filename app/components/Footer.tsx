@@ -127,6 +127,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Startup Case Studies", href: "/startup-fundraising-case-studies" },
       { name: "Reviews", href: "/reviews" },
       { name: "NPL Guide", href: "/resources/npl-guide" },
+      { name: "Knowledge Graph", href: "/knowledge-graph" },
     ],
   },
   {
@@ -413,7 +414,55 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 border-t border-gray-200 pt-6 flex flex-col gap-3 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 border-t border-gray-200 pt-8">
+          <div className="rounded-xl bg-gray-50 border border-gray-200 p-6">
+            <p className="text-sm font-semibold text-gray-900 mb-2">
+              Driven by{" "}
+              <a
+                href="https://github.com/bibinprathap/VeritasGraph"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2563eb] hover:underline"
+              >
+                VeritasGraph
+              </a>{" "}
+              — Verifiable AI with Source Attribution
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Search and AI answers on SpaceNexus are grounded by{" "}
+              <a
+                href="https://github.com/bibinprathap/VeritasGraph"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2563eb] hover:underline"
+              >
+                VeritasGraph
+              </a>
+              , an open-source GraphRAG knowledge-graph framework. Instead of
+              guessing from similarity, VeritasGraph reasons over a structured
+              knowledge graph and returns every answer with a{" "}
+              <strong>verifiable citation and reasoning path</strong> — so you
+              can trust the source of every result.
+            </p>
+            <ul className="mt-3 space-y-1 text-sm text-gray-600">
+              <li>• Source attribution on every answer</li>
+              <li>• Knowledge graph multi-hop reasoning</li>
+              <li>• Runs on-prem / 100% local (sovereign, zero data egress)</li>
+            </ul>
+            <p className="mt-3 text-sm">
+              <a
+                href="https://bibinprathap.github.io/VeritasGraph/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2563eb] font-medium hover:underline"
+              >
+                Learn how it works → VeritasGraph docs
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 border-t border-gray-200 pt-6 flex flex-col gap-3 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <span>&copy; 2026 Space Nexus. All rights reserved.</span>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <span>Privacy Policy</span>

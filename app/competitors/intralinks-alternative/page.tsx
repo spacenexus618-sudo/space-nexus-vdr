@@ -314,6 +314,52 @@ export default function IntralinksAlternativePage() {
                 </div>
             </section>
 
+            {/* Migration Steps */}
+            <section className="py-16 lg:py-20 bg-white">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                            How to migrate from Intralinks
+                        </h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Most teams complete the switch in under a week. Our onboarding team handles the heavy lifting.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-4 gap-6">
+                        {[
+                            {
+                                step: "1",
+                                title: "Export your data",
+                                description: "Download documents and metadata from Intralinks. We provide a migration checklist.",
+                            },
+                            {
+                                step: "2",
+                                title: "Import to SpaceNexus",
+                                description: "Upload files directly or use our bulk import tool. AI auto-categorizes everything.",
+                            },
+                            {
+                                step: "3",
+                                title: "Verify permissions",
+                                description: "Review user access and Q&A settings. Most settings transfer over automatically.",
+                            },
+                            {
+                                step: "4",
+                                title: "Go live",
+                                description: "Invite investors and launch your data room. Average setup time: 4 hours.",
+                            },
+                        ].map((item) => (
+                            <div key={item.step} className="bg-gray-50 rounded-2xl border border-gray-200 p-6 text-center">
+                                <div className="w-10 h-10 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                                    {item.step}
+                                </div>
+                                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                                <p className="text-sm text-gray-600">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Related Comparisons */}
             <section className="py-10 bg-[#f8f9fa] border-t border-gray-100">
                 <div className="max-w-3xl mx-auto px-4 text-center">
