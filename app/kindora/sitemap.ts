@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "./blog/data/posts";
+import { kindoraLastModified } from "./sitemap-dates";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://spacenexus.net";
-  const currentDate = new Date();
 
   const staticPages = [
     { route: "", priority: 1.0 },
@@ -18,9 +18,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/consumer-review", priority: 0.7 },
     { route: "/social-media", priority: 0.7 },
     { route: "/about", priority: 0.8 },
+    { route: "/careers", priority: 0.8 },
     { route: "/how-to-add-users", priority: 0.7 },
     { route: "/kindora-for-ngos", priority: 0.9 },
+    { route: "/donor-management", priority: 0.8 },
+    { route: "/grant-management", priority: 0.8 },
+    { route: "/volunteer-management", priority: 0.8 },
+    { route: "/nonprofit-financials", priority: 0.8 },
+    { route: "/case-management", priority: 0.8 },
+    { route: "/knowledge-graph", priority: 0.8 },
+    { route: "/veritas-graph", priority: 0.8 },
+    { route: "/faq", priority: 0.8 },
   ];
+
+  const careerPages = [
+    "full-stack-developer",
+    "senior-full-stack-developer",
+    "python-developer-ai",
+  ].map((slug) => ({
+    route: `/careers/${slug}`,
+    priority: 0.7,
+  }));
 
   const featurePages = [
     "campaign-management",
@@ -95,7 +113,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "best-donor-management-software",
     "best-fundraising-software",
     "best-nonprofit-crm",
-    "better-alternative-to-bonterra",
     "bloomerang-alternative",
     "board-reporting-software",
     "bonterra-alternative",
@@ -145,15 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "grant-management-software",
     "grant-reporting-software",
     "grant-tracking-software",
-    "kindora-vs-bloomerang",
-    "kindora-vs-bonterra",
-    "kindora-vs-donordock",
-    "kindora-vs-donorperfect",
     "kindora-vs-instrumentl",
-    "kindora-vs-little-green-light",
-    "kindora-vs-neon-one",
-    "kindora-vs-network-for-good",
-    "kindora-vs-salesforce-nonprofit-cloud",
     "little-green-light-alternative",
     "major-gift-management-software",
     "membership-management-software",
@@ -189,7 +198,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "prospect-management-software",
     "recurring-donation-management",
     "recurring-donation-software",
-    "salesforce-alternative-for-nonprofits",
     "salesforce-crm-for-nonprofits",
     "salesforce-nonprofit-cloud-alternative",
     "small-nonprofit-crm",
@@ -203,14 +211,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "volunteer-portal",
     "volunteer-recruitment-software",
     "volunteer-scheduling-software",
-    "why-kindora-over-bloomerang",
   ].map((slug) => ({
     route: `/${slug}`,
     priority: 0.8,
   }));
 
+  const blogLastModified = Object.fromEntries(
+    blogPosts.map((post) => [
+      `/blog/${post.slug}`,
+      post.dateModified ?? post.publishedAt,
+    ])
+  );
+
   const allPages = [
     ...staticPages,
+    ...careerPages,
     ...featurePages,
     ...solutionPages,
     ...blogPages,
@@ -219,10 +234,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...seoLandingPages,
   ];
 
-  return allPages.map((page) => ({
-    url: `${baseUrl}/kindora${page.route}`,
-    lastModified: currentDate,
-    changeFrequency: "monthly" as const,
-    priority: page.priority,
-  }));
+  return allPages.map((page) => {
+    const route = page.route === "" ? "/" : page.route;
+    const lastModified = blogLastModified[route] ?? kindoraLastModified[route];
+    return {
+      url: `${baseUrl}/kindora${page.route}`,
+      ...(lastModified ? { lastModified } : {}),
+      changeFrequency: "monthly" as const,
+      priority: page.priority,
+    };
+  });
 }

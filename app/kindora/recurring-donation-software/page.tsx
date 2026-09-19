@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/recurring-donation-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Recurring Donation Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Recurring Donation Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Recurring Donation Software",
     description: "Build sustainable funding with recurring donations. Kindora helps you launch and manage monthly giving programs.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "recurring donation software",

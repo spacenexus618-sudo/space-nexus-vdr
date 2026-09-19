@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Program Management Software — Kindora",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Program Management Software",
     description:
       "Program management software for nonprofits. Track enrollment, manage delivery, and report outcomes.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "program management software",

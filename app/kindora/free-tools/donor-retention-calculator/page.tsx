@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 
@@ -10,6 +11,8 @@ export default function DonorRetentionCalculatorPage() {
   const [avgGift, setAvgGift] = useState("100");
   const [acqCost, setAcqCost] = useState("50");
   const [retention, setRetention] = useState("45");
+
+  useTrackFirstCalculation("donor-retention-calculator", donors, avgGift, acqCost, retention);
 
   const d = parseInt(donors || "0");
   const g = parseFloat(avgGift || "0");

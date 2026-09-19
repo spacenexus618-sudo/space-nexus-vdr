@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/volunteer-recruitment-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Volunteer Recruitment Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Volunteer Recruitment Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Volunteer Recruitment Software",
     description: "Attract, screen, and onboard volunteers with sign-up forms and automated workflows.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "volunteer recruitment software",

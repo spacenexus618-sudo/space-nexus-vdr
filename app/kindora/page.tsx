@@ -1140,6 +1140,68 @@ export default function KindoraHomePage() {
         </div>
       </section>
 
+      {/* Powered by VeritasGraph */}
+      <section className="bg-[#f8f9fa] border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 py-12 sm:px-12">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#2563eb]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+            <div className="relative z-10">
+              <p className="text-sm font-semibold text-[#93c5fd] uppercase tracking-widest">
+                Powered by VeritasGraph
+              </p>
+              <h2 className="mt-3 max-w-2xl text-2xl font-bold text-white sm:text-3xl">
+                Verifiable AI with source attribution
+              </h2>
+              <p className="mt-4 max-w-2xl text-gray-300 leading-7">
+                AI search and answers on Kindora are grounded by{" "}
+                <a
+                  href="https://github.com/bibinprathap/VeritasGraph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-white underline decoration-[#2563eb] underline-offset-4 hover:text-blue-300"
+                >
+                  VeritasGraph, the open-source GraphRAG knowledge-graph framework on GitHub
+                </a>
+                . Every answer returns with a verifiable citation and reasoning path, backed by the{" "}
+                <a
+                  href="https://bibinprathap.github.io/VeritasGraph/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-white underline decoration-[#2563eb] underline-offset-4 hover:text-blue-300"
+                >
+                  VeritasGraph documentation
+                </a>
+                .
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="https://github.com/bibinprathap/VeritasGraph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                >
+                  View VeritasGraph source code on GitHub
+                </a>
+                <a
+                  href="https://bibinprathap.github.io/VeritasGraph/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-gray-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+                >
+                  Read the VeritasGraph documentation
+                </a>
+                <Link
+                  href="/kindora/knowledge-graph"
+                  className="inline-flex items-center gap-2 rounded-full border border-gray-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+                >
+                  See how Kindora verifies AI answers
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SEO Content Block */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

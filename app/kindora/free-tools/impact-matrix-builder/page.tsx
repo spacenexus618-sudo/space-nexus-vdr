@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const missions = [
   "Food security & hunger relief",
@@ -22,6 +23,8 @@ export default function ImpactMatrixBuilderPage() {
 
   const setRow = (key: string, value: string) =>
     setRows((prev) => ({ ...prev, [key]: value }));
+
+  useTrackFirstCalculation("impact-matrix-builder", mission, rows);
 
   return (
     <div className="min-h-screen bg-gray-900">

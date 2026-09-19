@@ -230,9 +230,11 @@ export default function AboutPage() {
                             We are a close-knit group of engineers, strategists, and creators. We value open dialogue, hands-on craft, and technology built to last.
                         </p>
                         
+                        
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
+                        
                         {/* Founders card */}
                         <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div className="relative" style={{ paddingBottom: '133%' }}>
@@ -266,6 +268,7 @@ export default function AboutPage() {
                                 <div className="absolute bottom-0 left-0 right-0 p-5">
                                     <h3 className="text-xl font-bold text-white mb-1">Our Team</h3>
                                     <p className="text-sm text-gray-200">Working together to turn ideas into impactful solutions</p>
+                                
                                 </div>
                             </div>
                         </div>

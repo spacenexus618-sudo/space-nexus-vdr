@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
+import KindoraAnalytics from "./components/KindoraAnalytics";
 import KindoraJsonLd from "./components/KindoraJsonLd";
 import KindoraNav from "./components/KindoraNav";
 
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
       "The all-in-one platform for nonprofits. Manage donors, track grants, deliver programs, and report impact from a single platform.",
     images: [
       {
-        url: "/icononly_transparent_nobuffer.png",
+        url: "/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora — Nonprofit Management Software",
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     title: "Kindora — All-in-One Nonprofit Management Software",
     description:
       "The all-in-one platform for nonprofits. Manage donors, track grants, deliver programs, and report impact from a single platform.",
-    images: ["/icononly_transparent_nobuffer.png"],
+    images: ["/kindora-og.png"],
   },
 };
 
@@ -87,6 +88,7 @@ export default function KindoraLayout({
       </a>
       <KindoraJsonLd />
       <BreadcrumbSchema />
+      <KindoraAnalytics />
       <KindoraNav />
       <div id="main-content">
         {children}

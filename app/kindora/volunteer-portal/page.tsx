@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        url: "https://spacenexus.net/kindora-og.png",
         width: 1200,
         height: 630,
         alt: "Kindora Volunteer Portal",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Volunteer Portal",
     description:
       "Self-service volunteer portal for scheduling, hour logging, and impact tracking.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "volunteer portal",

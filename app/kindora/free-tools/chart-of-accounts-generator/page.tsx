@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTrackFirstCalculation } from "@/lib/analytics";
 
 const sectors: Record<string, string[]> = {
   "Food Bank": ["4000 Food & Grocery Distribution", "4100 Client Pantry Operations", "4200 Procurement & Logistics", "4300 Volunteer Coordination"],
@@ -20,6 +21,8 @@ export default function ChartOfAccountsGeneratorPage() {
   const [sector, setSector] = useState("Food Bank");
   const [budget, setBudget] = useState("$250K - $1M");
   const [digits, setDigits] = useState("4");
+
+  useTrackFirstCalculation("chart-of-accounts-generator", sector, budget, digits);
 
   const generated = sectors[sector] ?? sectors["Food Bank"];
 

@@ -26,8 +26,11 @@ export interface BlogPost {
     initials: string;
     color: string;
     bio: string;
+    url?: string;
   };
   publishedAt: string;
+  dateModified?: string;
+  image: string;
   readingTime: number; // minutes
   featured: boolean;
   coverGradient: string;
@@ -49,16 +52,19 @@ export const blogPosts: BlogPost[] = [
     slug: "complete-guide-nonprofit-management-software",
     title: "The Complete Guide to Nonprofit Management Software in 2025",
     excerpt:
-      "Everything your nonprofit needs to know about choosing, implementing, and getting the most out of a management platform — from donor CRM to grant tracking and financial reporting.",
+      "Everything your nonprofit needs to know about choosing, implementing, and getting the most out of a management platform â€” from donor CRM to grant tracking and financial reporting.",
     category: "Nonprofit Tips",
     author: {
       name: "Sarah Mitchell",
       role: "Nonprofit Strategy Lead",
       initials: "SM",
       color: "bg-violet-500",
+      url: "/kindora/about",
       bio: "Sarah Mitchell leads Kindora's nonprofit strategy practice with 10+ years of experience helping small to mid-sized nonprofits scale operations through technology. She has advised over 75 organizations on donor management, program delivery, and digital transformation.",
     },
     publishedAt: "2025-02-18",
+    dateModified: "2025-02-18",
+    image: "/kindora-og.png",
     readingTime: 12,
     featured: true,
     coverGradient: "from-violet-600 to-purple-700",
@@ -67,11 +73,11 @@ export const blogPosts: BlogPost[] = [
     tags: ["software selection", "nonprofit management", "digital transformation"],
     content: {
       intro:
-        "Managing a nonprofit organization has never been more complex. Between tracking donors, managing grants, running programs, coordinating volunteers, and ensuring financial compliance — the administrative burden can overwhelm even the most dedicated teams. The right nonprofit management software can be the difference between spending 70% of your time on administration versus spending 70% of your time on mission delivery.\n\nIn this guide, we cover everything you need to know: what to look for, how to evaluate options, common pitfalls, and what makes some platforms dramatically better than others for nonprofit workflows.",
+        "Managing a nonprofit organization has never been more complex. Between tracking donors, managing grants, running programs, coordinating volunteers, and ensuring financial compliance â€” the administrative burden can overwhelm even the most dedicated teams. The right nonprofit management software can be the difference between spending 70% of your time on administration versus spending 70% of your time on mission delivery.\n\nIn this guide, we cover everything you need to know: what to look for, how to evaluate options, common pitfalls, and what makes some platforms dramatically better than others for nonprofit workflows.",
       sections: [
         {
           heading: "Why Generic Software Falls Short for Nonprofits",
-          body: "Most organizations start with Excel, Google Sheets, or a generic CRM like Salesforce. While these tools work for early-stage operations, they create serious problems at scale:\n\nSalesforce requires expensive consultants and months of customization before it resembles a nonprofit workflow. Excel breaks under multi-user environments and has no audit trail. QuickBooks alone doesn't connect financial data to your program and grant reporting needs.\n\nNonprofits need software that understands their specific workflows — from cost allocation across grants, to client intake and service delivery, to donor relationship management.",
+          body: "Most organizations start with Excel, Google Sheets, or a generic CRM like Salesforce. While these tools work for early-stage operations, they create serious problems at scale:\n\nSalesforce requires expensive consultants and months of customization before it resembles a nonprofit workflow. Excel breaks under multi-user environments and has no audit trail. QuickBooks alone doesn't connect financial data to your program and grant reporting needs.\n\nNonprofits need software that understands their specific workflows â€” from cost allocation across grants, to client intake and service delivery, to donor relationship management.",
           listItems: [
             "No built-in grant compliance tracking in generic CRMs",
             "Spreadsheets have no audit trail for board or funder scrutiny",
@@ -81,16 +87,16 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "The 8 Core Modules Every Nonprofit Platform Should Have",
-          body: "When evaluating nonprofit software, look for these essential capabilities. A platform missing even two or three of these forces you to manage multiple systems — which defeats the purpose.",
+          body: "When evaluating nonprofit software, look for these essential capabilities. A platform missing even two or three of these forces you to manage multiple systems â€” which defeats the purpose.",
           listItems: [
-            "Donor & Donation Management — complete profiles, giving history, receipt tracking",
-            "Grant Lifecycle Management — prospect to close, including compliance reporting",
-            "Client & Case Management — intake, enrollment, service delivery, case notes",
-            "Financial Management — budgeting, cost allocation, Statement of Activities",
-            "Campaign Management — fundraising campaigns with goal tracking",
-            "Volunteer Management — profiles, hours tracking, skill matching",
-            "Reporting & Analytics — board reports, funder reports, program outcomes",
-            "User Management — role-based access control for staff and volunteers",
+            "Donor & Donation Management â€” complete profiles, giving history, receipt tracking",
+            "Grant Lifecycle Management â€” prospect to close, including compliance reporting",
+            "Client & Case Management â€” intake, enrollment, service delivery, case notes",
+            "Financial Management â€” budgeting, cost allocation, Statement of Activities",
+            "Campaign Management â€” fundraising campaigns with goal tracking",
+            "Volunteer Management â€” profiles, hours tracking, skill matching",
+            "Reporting & Analytics â€” board reports, funder reports, program outcomes",
+            "User Management â€” role-based access control for staff and volunteers",
           ],
         },
         {
@@ -101,38 +107,41 @@ export const blogPosts: BlogPost[] = [
             "All-in-one vs point solutions: Do you want one unified platform, or are you comfortable managing integrations?",
             "Setup complexity: How long does it take to get operational? Do you need an IT team?",
             "Grant compliance built in: Can the platform generate the reports your specific funders require?",
-            "Total cost of ownership: Include implementation, training, add-ons, and consulting — not just the license fee.",
+            "Total cost of ownership: Include implementation, training, add-ons, and consulting â€” not just the license fee.",
           ],
         },
         {
           heading: "Implementation Best Practices",
-          body: "Even the best platform fails if implementation is rushed. Set your team up for success by following these principles:\n\nStart with a data audit before migration. Know exactly what you're bringing in — donor records, grant history, client files — and clean duplicates before importing.\n\nInvolve frontline staff early. The people who will use the software daily know the workflows best. Include case workers, development officers, and finance staff in the selection and setup process.\n\nRun in parallel for the first 30 days. Keep your old system running alongside the new one for the first month so you can validate data accuracy before fully switching.",
+          body: "Even the best platform fails if implementation is rushed. Set your team up for success by following these principles:\n\nStart with a data audit before migration. Know exactly what you're bringing in â€” donor records, grant history, client files â€” and clean duplicates before importing.\n\nInvolve frontline staff early. The people who will use the software daily know the workflows best. Include case workers, development officers, and finance staff in the selection and setup process.\n\nRun in parallel for the first 30 days. Keep your old system running alongside the new one for the first month so you can validate data accuracy before fully switching.",
           listItems: [
             "Assign an internal champion who owns the implementation",
             "Set measurable success criteria before you start",
-            "Plan for at least 3–4 weeks of onboarding and training",
-            "Create a rollout schedule by module — don't enable everything at once",
+            "Plan for at least 3â€“4 weeks of onboarding and training",
+            "Create a rollout schedule by module â€” don't enable everything at once",
           ],
         },
       ],
       conclusion:
-        "Choosing the right nonprofit management platform is one of the highest-leverage decisions your organization can make. The right tool dramatically reduces administrative overhead, improves compliance, strengthens donor relationships, and gives leadership the data they need to make strategic decisions.\n\nKindora was built from day one as a nonprofit-native platform — not adapted from corporate software. It combines donor management, grant tracking, client services, financial reporting, and volunteer coordination in one unified system — so your team can stop switching between tools and start focusing on impact.",
+        "Choosing the right nonprofit management platform is one of the highest-leverage decisions your organization can make. The right tool dramatically reduces administrative overhead, improves compliance, strengthens donor relationships, and gives leadership the data they need to make strategic decisions.\n\nKindora was built from day one as a nonprofit-native platform â€” not adapted from corporate software. It combines donor management, grant tracking, client services, financial reporting, and volunteer coordination in one unified system â€” so your team can stop switching between tools and start focusing on impact.",
     },
   },
   {
     slug: "how-to-choose-donor-management-software",
     title: "How to Choose Donor Management Software for Your Nonprofit",
     excerpt:
-      "A practical guide to evaluating donor CRMs — what features actually matter, what to ignore, and how to avoid the most common mistakes nonprofits make when selecting donor software.",
+      "A practical guide to evaluating donor CRMs â€” what features actually matter, what to ignore, and how to avoid the most common mistakes nonprofits make when selecting donor software.",
     category: "Donor Management",
     author: {
       name: "James Carter",
       role: "Development Director",
       initials: "JC",
       color: "bg-rose-500",
+      url: "/kindora/about",
       bio: "James Carter has spent 8 years in nonprofit development, leading fundraising campaigns that raised over $5M annually for organizations in the human services and education sectors. He specializes in donor engagement strategy and CRM implementation.",
     },
     publishedAt: "2025-02-10",
+    dateModified: "2025-02-10",
+    image: "/kindora-og.png",
     readingTime: 8,
     featured: false,
     coverGradient: "from-rose-500 to-pink-600",
@@ -147,11 +156,11 @@ export const blogPosts: BlogPost[] = [
           heading: "The 5 Features That Actually Matter in Donor Software",
           body: "Vendors will show you 50 features in a demo. Most don't matter. Focus exclusively on these five when making your decision:",
           listItems: [
-            "Donor profiles with full giving history — can you see every gift, every communication, every note in one place?",
-            "Giving trends and RFM analysis — Recency, Frequency, Monetary value to identify your best donors",
-            "Communication logging — email, phone, personal notes all on one timeline",
-            "Acknowledgment and receipt management — automated thank-yous with customizable templates",
-            "Recurring donation tracking — monthly giving programs managed automatically",
+            "Donor profiles with full giving history â€” can you see every gift, every communication, every note in one place?",
+            "Giving trends and RFM analysis â€” Recency, Frequency, Monetary value to identify your best donors",
+            "Communication logging â€” email, phone, personal notes all on one timeline",
+            "Acknowledgment and receipt management â€” automated thank-yous with customizable templates",
+            "Recurring donation tracking â€” monthly giving programs managed automatically",
           ],
         },
         {
@@ -161,44 +170,47 @@ export const blogPosts: BlogPost[] = [
             "They can't show you how to run a report without a consultant's help",
             "Importing your existing donor data requires a paid data migration service",
             "Key features you need are available as paid add-ons",
-            "The UI looks like it was built in 2008 — modern nonprofits deserve modern software",
+            "The UI looks like it was built in 2008 â€” modern nonprofits deserve modern software",
             "They can't tell you how their system handles recurring donors differently from one-time donors",
           ],
         },
         {
           heading: "The Retention Connection: Why Your CRM Directly Affects Donor Retention",
-          body: "Nonprofit sector donor retention rates average around 45% — meaning half of your donors don't give again after their first gift. Donor management software is one of the highest-leverage tools for improving retention.\n\nSystems that surface 'at-risk' donors (those who gave last year but haven't given yet this year), automate personalized thank-you messages within 48 hours, and enable targeted outreach to lapsed donors have measurably better retention outcomes.\n\nWhen evaluating software, always ask: 'Show me how I would identify and reach out to donors who gave last year but haven't given yet this year.' The answer will tell you everything about the system's retention value.",
+          body: "Nonprofit sector donor retention rates average around 45% â€” meaning half of your donors don't give again after their first gift. Donor management software is one of the highest-leverage tools for improving retention.\n\nSystems that surface 'at-risk' donors (those who gave last year but haven't given yet this year), automate personalized thank-you messages within 48 hours, and enable targeted outreach to lapsed donors have measurably better retention outcomes.\n\nWhen evaluating software, always ask: 'Show me how I would identify and reach out to donors who gave last year but haven't given yet this year.' The answer will tell you everything about the system's retention value.",
         },
         {
           heading: "Pricing Reality Check",
-          body: "Donor management software pricing varies enormously — from free tiers to $1,000+/month for enterprise plans. Here's what to watch for:",
+          body: "Donor management software pricing varies enormously â€” from free tiers to $1,000+/month for enterprise plans. Here's what to watch for:",
           listItems: [
-            "Per-record pricing: Some vendors charge per donor record — can get expensive as you grow",
-            "Module pricing: Core features shouldn't be add-ons — watch for essential features priced separately",
-            "Implementation fees: Often 1–3x the annual license cost for enterprise systems",
+            "Per-record pricing: Some vendors charge per donor record â€” can get expensive as you grow",
+            "Module pricing: Core features shouldn't be add-ons â€” watch for essential features priced separately",
+            "Implementation fees: Often 1â€“3x the annual license cost for enterprise systems",
             "Training costs: Factor in staff time for onboarding your whole development team",
-            "Migration costs: Moving data from your old system may cost $500–$5,000+",
+            "Migration costs: Moving data from your old system may cost $500â€“$5,000+",
           ],
         },
       ],
       conclusion:
-        "The best donor management software is the one your development team will actually use every day. Prioritize usability, comprehensive donor profiles, and built-in retention tools over feature breadth. And don't overlook whether the platform integrates your donor data with your grant management and financial reporting — the organizations that win are the ones who connect all three into one unified view.",
+        "The best donor management software is the one your development team will actually use every day. Prioritize usability, comprehensive donor profiles, and built-in retention tools over feature breadth. And don't overlook whether the platform integrates your donor data with your grant management and financial reporting â€” the organizations that win are the ones who connect all three into one unified view.",
     },
   },
   {
     slug: "grant-management-101-track-win-more-grants",
     title: "Grant Management 101: How to Track and Win More Grants",
     excerpt:
-      "A step-by-step guide to managing your nonprofit's grant pipeline — from researching funders to tracking deadlines, writing compelling proposals, and maintaining compliance after award.",
+      "A step-by-step guide to managing your nonprofit's grant pipeline â€” from researching funders to tracking deadlines, writing compelling proposals, and maintaining compliance after award.",
     category: "Grant Management",
     author: {
       name: "Priya Kalani",
       role: "Grant Strategy Advisor",
       initials: "PK",
       color: "bg-blue-500",
+      url: "/kindora/about",
       bio: "Priya Kalani brings 12 years of experience in grant compliance and nonprofit financial management, having secured over $25M in grant funding for organizations across education, health, and social services. She previously led grants administration at a national foundation.",
     },
     publishedAt: "2025-02-03",
+    dateModified: "2025-02-03",
+    image: "/kindora-og.png",
     readingTime: 10,
     featured: false,
     coverGradient: "from-blue-500 to-indigo-600",
@@ -207,26 +219,26 @@ export const blogPosts: BlogPost[] = [
     tags: ["grant tracking", "grant writing", "nonprofit funding"],
     content: {
       intro:
-        "Grant funding is a cornerstone of most nonprofit revenue models — but managing a grant pipeline is notoriously difficult. Deadlines pile up. Reporting requirements vary by funder. Budget-to-actual compliance tracking gets complex. And a missed report can damage a funding relationship it took years to build.\n\nThis guide covers the full grant management lifecycle — from researching prospects to celebrating a close — plus the systems and workflows that help organizations win more grants and stay compliant after the win.",
+        "Grant funding is a cornerstone of most nonprofit revenue models â€” but managing a grant pipeline is notoriously difficult. Deadlines pile up. Reporting requirements vary by funder. Budget-to-actual compliance tracking gets complex. And a missed report can damage a funding relationship it took years to build.\n\nThis guide covers the full grant management lifecycle â€” from researching prospects to celebrating a close â€” plus the systems and workflows that help organizations win more grants and stay compliant after the win.",
       sections: [
         {
           heading: "The Grant Lifecycle: 5 Stages Every Program Officer Should Track",
           body: "Understanding the stages of a grant is the foundation of effective management. Every grant your organization pursues should be tracked through these five stages:",
           listItems: [
-            "Prospect — identified a potential funder, researching alignment and eligibility",
-            "Applied — proposal submitted, awaiting decision",
-            "Awarded — grant received, implementation and compliance phase begins",
-            "Declined — application rejected, document feedback for future attempts",
-            "Closed — grant period ended, final report submitted, relationship maintained",
+            "Prospect â€” identified a potential funder, researching alignment and eligibility",
+            "Applied â€” proposal submitted, awaiting decision",
+            "Awarded â€” grant received, implementation and compliance phase begins",
+            "Declined â€” application rejected, document feedback for future attempts",
+            "Closed â€” grant period ended, final report submitted, relationship maintained",
           ],
         },
         {
           heading: "Building Your Grant Calendar: Never Miss a Deadline Again",
-          body: "The most common grant management failure is a missed deadline — whether for an application, an interim report, or a final financial statement. Build your calendar around these key dates for every active grant:\n\nApplication deadline, report dates (interim and final), budget period end date, funder check-in dates, and any site visit windows.\n\nMost organizations track these in a spreadsheet — which works until you have more than 10 active grants. At that point, a dedicated grant management system pays for itself within the first missed deadline it prevents.",
+          body: "The most common grant management failure is a missed deadline â€” whether for an application, an interim report, or a final financial statement. Build your calendar around these key dates for every active grant:\n\nApplication deadline, report dates (interim and final), budget period end date, funder check-in dates, and any site visit windows.\n\nMost organizations track these in a spreadsheet â€” which works until you have more than 10 active grants. At that point, a dedicated grant management system pays for itself within the first missed deadline it prevents.",
         },
         {
           heading: "Grant Budget Management: The Cost Allocation Challenge",
-          body: "One of the most technically complex parts of grant management is cost allocation — how you fairly distribute shared expenses (like staff salaries, rent, and overhead) across multiple grants.\n\nGrantors require that expenses charged to their grant be 'reasonable, allowable, and allocable.' That means you need documentation showing how you calculated the portion of each shared expense charged to each grant. Common allocation methods include:",
+          body: "One of the most technically complex parts of grant management is cost allocation â€” how you fairly distribute shared expenses (like staff salaries, rent, and overhead) across multiple grants.\n\nGrantors require that expenses charged to their grant be 'reasonable, allowable, and allocable.' That means you need documentation showing how you calculated the portion of each shared expense charged to each grant. Common allocation methods include:",
           listItems: [
             "Direct allocation: Charge only expenses that are 100% for that grant's program",
             "Time-based allocation: Allocate staff costs based on time study percentages",
@@ -240,30 +252,33 @@ export const blogPosts: BlogPost[] = [
           listItems: [
             "Statement of need: Data-backed description of the problem you're solving",
             "Program design: Specific, measurable activities and clear theory of change",
-            "Evaluation plan: How you'll measure success — with specific outcomes and metrics",
+            "Evaluation plan: How you'll measure success â€” with specific outcomes and metrics",
             "Budget narrative: Line-by-line justification showing how every dollar serves the program",
             "Organizational capacity: Why your team is uniquely qualified to deliver this work",
           ],
         },
       ],
       conclusion:
-        "Grant management is ultimately about relationships — with your funders, with the communities you serve, and with your own data. Organizations that win the most grants consistently are the ones that treat grant management as a year-round discipline, not a sprint before each deadline. Invest in the systems, processes, and people to manage your grant pipeline professionally, and your funding base will grow.",
+        "Grant management is ultimately about relationships â€” with your funders, with the communities you serve, and with your own data. Organizations that win the most grants consistently are the ones that treat grant management as a year-round discipline, not a sprint before each deadline. Invest in the systems, processes, and people to manage your grant pipeline professionally, and your funding base will grow.",
     },
   },
   {
     slug: "why-nonprofits-are-ditching-spreadsheets",
     title: "Why Nonprofits Are Ditching Spreadsheets (And What They're Using Instead)",
     excerpt:
-      "Spreadsheets aren't evil — but they have hard limits. Here's why thousands of nonprofits are moving away from Excel and Google Sheets, and what modern platforms offer that spreadsheets never can.",
+      "Spreadsheets aren't evil â€” but they have hard limits. Here's why thousands of nonprofits are moving away from Excel and Google Sheets, and what modern platforms offer that spreadsheets never can.",
     category: "Nonprofit Tips",
     author: {
       name: "Sarah Mitchell",
       role: "Nonprofit Strategy Lead",
       initials: "SM",
       color: "bg-violet-500",
+      url: "/kindora/about",
       bio: "Sarah Mitchell leads Kindora's nonprofit strategy practice with 10+ years of experience helping small to mid-sized nonprofits scale operations through technology. She has advised over 75 organizations on donor management, program delivery, and digital transformation.",
     },
     publishedAt: "2025-01-27",
+    dateModified: "2025-01-27",
+    image: "/kindora-og.png",
     readingTime: 6,
     featured: false,
     coverGradient: "from-emerald-500 to-teal-600",
@@ -271,62 +286,65 @@ export const blogPosts: BlogPost[] = [
     tags: ["spreadsheets", "digital transformation", "nonprofit operations"],
     content: {
       intro:
-        "If your nonprofit was founded more than three years ago, there's a good chance you're still running some critical operations on spreadsheets. You're not alone — over 60% of small and mid-sized nonprofits rely heavily on Excel or Google Sheets for donor tracking, grant management, or financial reporting.\n\nSpreadsheets aren't bad. They're flexible, free, and your whole team probably knows how to use them. But they have hard limits — and those limits become mission-critical problems as your organization grows.",
+        "If your nonprofit was founded more than three years ago, there's a good chance you're still running some critical operations on spreadsheets. You're not alone â€” over 60% of small and mid-sized nonprofits rely heavily on Excel or Google Sheets for donor tracking, grant management, or financial reporting.\n\nSpreadsheets aren't bad. They're flexible, free, and your whole team probably knows how to use them. But they have hard limits â€” and those limits become mission-critical problems as your organization grows.",
       sections: [
         {
           heading: "The Real Problems Spreadsheets Create for Nonprofits",
-          body: "The problems with spreadsheet-based operations aren't always obvious at first. They creep in gradually — until one day you realize you've been making decisions based on bad data for months.",
+          body: "The problems with spreadsheet-based operations aren't always obvious at first. They creep in gradually â€” until one day you realize you've been making decisions based on bad data for months.",
           listItems: [
             "No audit trail: Anyone can modify a cell without a record of who changed what and when",
             "Multi-user chaos: When two people edit the same file, data gets overwritten or versioning creates confusion",
             "Manual reporting: Every board report and funder report requires hours of manual data compilation",
-            "Disconnected data: Your donor data is in one sheet, grant data in another, finances in a third — and they never talk",
+            "Disconnected data: Your donor data is in one sheet, grant data in another, finances in a third â€” and they never talk",
             "Fragility at scale: Complex spreadsheets with VLOOKUP chains and nested formulas break constantly",
             "Security risk: Sensitive donor and client data shared via email and Google Drive has no proper access control",
           ],
         },
         {
           heading: "What Modern Nonprofit Platforms Do Better",
-          body: "Purpose-built nonprofit management platforms address all of these issues — not by adding complexity, but by eliminating the manual work that creates it.",
+          body: "Purpose-built nonprofit management platforms address all of these issues â€” not by adding complexity, but by eliminating the manual work that creates it.",
           listItems: [
             "Structured data: Every donor record, grant, and client profile is stored consistently and searchably",
             "Real-time collaboration: Your whole team works in the same system simultaneously without conflict",
             "Automated reporting: Board reports and funder reports generate in minutes, not hours",
-            "Connected modules: Donor data links to campaign data links to financial data — in one view",
+            "Connected modules: Donor data links to campaign data links to financial data â€” in one view",
             "Role-based security: Each team member sees only what they need to see",
             "Audit history: Every change is timestamped and attributed to a specific user",
           ],
         },
         {
           heading: "When Is the Right Time to Make the Switch?",
-          body: "There's no single trigger moment — but these are the signs organizations report that precipitated their move away from spreadsheets:",
+          body: "There's no single trigger moment â€” but these are the signs organizations report that precipitated their move away from spreadsheets:",
           listItems: [
             "You spent more than 20% of a staff member's week compiling reports from multiple files",
             "A data entry error caused a significant mistake (missing a grant deadline, thanking a donor for the wrong amount)",
-            "A staff member left and took their 'system knowledge' with them — and the spreadsheets became unmanageable",
+            "A staff member left and took their 'system knowledge' with them â€” and the spreadsheets became unmanageable",
             "Your board started asking for real-time dashboards you couldn't provide",
             "You received funding for a new program and realized your current system couldn't handle the added complexity",
           ],
         },
       ],
       conclusion:
-        "Spreadsheets served nonprofits well for decades — and for the simplest organizations, they still can. But as your mission scales, your administrative infrastructure needs to scale with it. The organizations delivering the most impact in 2025 are the ones that freed their staff from manual data management, so they can devote their energy to the work that actually matters.",
+        "Spreadsheets served nonprofits well for decades â€” and for the simplest organizations, they still can. But as your mission scales, your administrative infrastructure needs to scale with it. The organizations delivering the most impact in 2025 are the ones that freed their staff from manual data management, so they can devote their energy to the work that actually matters.",
     },
   },
   {
     slug: "nonprofit-client-intake-best-practices",
     title: "Nonprofit Client Intake: Best Practices and Software Guide",
     excerpt:
-      "A comprehensive guide to designing client intake workflows for nonprofits — what to collect, how to structure it, and which tools help you do it efficiently while maintaining data quality.",
+      "A comprehensive guide to designing client intake workflows for nonprofits â€” what to collect, how to structure it, and which tools help you do it efficiently while maintaining data quality.",
     category: "Case Management",
     author: {
       name: "Marcus Lee",
       role: "Program Operations Manager",
       initials: "ML",
       color: "bg-emerald-500",
+      url: "/kindora/about",
       bio: "Marcus Lee oversees program delivery operations at Kindora, with prior experience managing multi-program portfolios at a $10M community services nonprofit. He specializes in client intake workflows, outcome measurement, and operational efficiency.",
     },
     publishedAt: "2025-01-20",
+    dateModified: "2025-01-20",
+    image: "/kindora-og.png",
     readingTime: 9,
     featured: false,
     coverGradient: "from-emerald-500 to-green-600",
@@ -335,11 +353,11 @@ export const blogPosts: BlogPost[] = [
     tags: ["client intake", "case management", "social services"],
     content: {
       intro:
-        "Client intake is the front door of your services — and the quality of that first interaction shapes everything that follows. A well-designed intake process collects the right information efficiently, treats clients with dignity, and generates the data you'll need for program management, grant reporting, and outcome measurement.\n\nA poorly designed intake, on the other hand, is slow, repetitive, inconsistent across case workers, and produces data that's too messy to use for reporting. This guide covers intake best practices from both a human-centered and operational standpoint.",
+        "Client intake is the front door of your services â€” and the quality of that first interaction shapes everything that follows. A well-designed intake process collects the right information efficiently, treats clients with dignity, and generates the data you'll need for program management, grant reporting, and outcome measurement.\n\nA poorly designed intake, on the other hand, is slow, repetitive, inconsistent across case workers, and produces data that's too messy to use for reporting. This guide covers intake best practices from both a human-centered and operational standpoint.",
       sections: [
         {
           heading: "What to Collect at Intake (And What to Skip)",
-          body: "The most common intake mistake is collecting too much information too early. Long intake forms slow the process, overwhelm clients in difficult circumstances, and often result in incomplete forms that are worse than shorter, fully-completed ones.\n\nDesign your intake in layers — collect essential eligibility information first, then detailed demographic data, then program-specific information in subsequent interactions.",
+          body: "The most common intake mistake is collecting too much information too early. Long intake forms slow the process, overwhelm clients in difficult circumstances, and often result in incomplete forms that are worse than shorter, fully-completed ones.\n\nDesign your intake in layers â€” collect essential eligibility information first, then detailed demographic data, then program-specific information in subsequent interactions.",
           listItems: [
             "Tier 1 (at first contact): Name, contact information, presenting need, geographic eligibility",
             "Tier 2 (at formal intake): Demographics, household composition, income, service history",
@@ -348,7 +366,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Data Standards That Make Reporting Possible",
-          body: "One of the biggest intake failures is inconsistent data entry — different case workers using different formats, abbreviations, or values for the same fields. This creates reporting nightmares downstream.\n\nEstablish these standards before you build your intake forms:",
+          body: "One of the biggest intake failures is inconsistent data entry â€” different case workers using different formats, abbreviations, or values for the same fields. This creates reporting nightmares downstream.\n\nEstablish these standards before you build your intake forms:",
           listItems: [
             "Use controlled drop-down lists for all categorical fields (gender, race, income range, household type)",
             "Standardize date formats and enforce them at the system level",
@@ -361,15 +379,15 @@ export const blogPosts: BlogPost[] = [
           body: "For nonprofits serving populations that have experienced trauma, the intake process itself can be re-traumatizing if done poorly. Apply these principles to make intake more humane:",
           listItems: [
             "Explain why each piece of information is needed before asking for it",
-            "Give clients control over the pace of the intake — it's not a race",
+            "Give clients control over the pace of the intake â€” it's not a race",
             "Offer to complete intake over multiple sessions for clients in crisis",
             "Be transparent about who will see their information and how it will be used",
-            "Train all intake staff in trauma-informed communication — not just frontline workers",
+            "Train all intake staff in trauma-informed communication â€” not just frontline workers",
           ],
         },
         {
           heading: "Choosing Intake Software That Works for Your Team",
-          body: "Your intake process is only as good as the tools your case workers use in practice. Software that's too complex will be bypassed — case workers will keep paper notes and enter data later (or not at all). Look for intake software that:",
+          body: "Your intake process is only as good as the tools your case workers use in practice. Software that's too complex will be bypassed â€” case workers will keep paper notes and enter data later (or not at all). Look for intake software that:",
           listItems: [
             "Can be completed on a tablet or laptop during a client meeting",
             "Requires minimal clicks to complete a full intake",
@@ -380,7 +398,7 @@ export const blogPosts: BlogPost[] = [
         },
       ],
       conclusion:
-        "Great client intake is the foundation of great service delivery. It's also the foundation of your grant reporting, outcome measurement, and organizational learning. Investing in a well-designed intake process — and the software to support it — pays dividends across every other part of your nonprofit operations.",
+        "Great client intake is the foundation of great service delivery. It's also the foundation of your grant reporting, outcome measurement, and organizational learning. Investing in a well-designed intake process â€” and the software to support it â€” pays dividends across every other part of your nonprofit operations.",
     },
   },
   {
@@ -394,9 +412,12 @@ export const blogPosts: BlogPost[] = [
       role: "Grant Strategy Advisor",
       initials: "PK",
       color: "bg-blue-500",
+      url: "/kindora/about",
       bio: "Priya Kalani brings 12 years of experience in grant compliance and nonprofit financial management, having secured over $25M in grant funding for organizations across education, health, and social services. She previously led grants administration at a national foundation.",
     },
     publishedAt: "2025-01-13",
+    dateModified: "2025-01-13",
+    image: "/kindora-og.png",
     readingTime: 7,
     featured: false,
     coverGradient: "from-amber-500 to-orange-600",
@@ -404,11 +425,11 @@ export const blogPosts: BlogPost[] = [
     tags: ["program outcomes", "impact measurement", "grant reporting"],
     content: {
       intro:
-        "Every nonprofit says they 'make a difference.' Funders have heard it thousands of times. What they're looking for — and what separates organizations that win competitive grants from those that don't — is specificity. Concrete metrics. Reliable data collection systems. And the ability to demonstrate progress over time.\n\nThis guide walks through outcome measurement from theory of change to data collection to funder reporting — in practical, implementable terms.",
+        "Every nonprofit says they 'make a difference.' Funders have heard it thousands of times. What they're looking for â€” and what separates organizations that win competitive grants from those that don't â€” is specificity. Concrete metrics. Reliable data collection systems. And the ability to demonstrate progress over time.\n\nThis guide walks through outcome measurement from theory of change to data collection to funder reporting â€” in practical, implementable terms.",
       sections: [
         {
           heading: "Outputs vs. Outcomes: The Critical Distinction",
-          body: "Many nonprofits confuse outputs with outcomes — and funders notice immediately.",
+          body: "Many nonprofits confuse outputs with outcomes â€” and funders notice immediately.",
           listItems: [
             "Output: 450 meals distributed in Q3",
             "Outcome: 78% of food-insecure households served reported improved food security at 90-day follow-up",
@@ -420,17 +441,17 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Building a Theory of Change",
-          body: "Before you can measure outcomes, you need a theory of change — a clear statement of what you believe causes the outcomes you're seeking. A good theory of change has three components:\n\nInputs → Activities → Outputs → Short-term Outcomes → Long-term Outcomes\n\nFor example: Staff time and grant funding (inputs) → job readiness workshops and employer connections (activities) → 200 completions (output) → employment at 6 months (short-term outcome) → sustained employment at 2 years and income stability (long-term outcome).",
+          body: "Before you can measure outcomes, you need a theory of change â€” a clear statement of what you believe causes the outcomes you're seeking. A good theory of change has three components:\n\nInputs â†’ Activities â†’ Outputs â†’ Short-term Outcomes â†’ Long-term Outcomes\n\nFor example: Staff time and grant funding (inputs) â†’ job readiness workshops and employer connections (activities) â†’ 200 completions (output) â†’ employment at 6 months (short-term outcome) â†’ sustained employment at 2 years and income stability (long-term outcome).",
         },
         {
           heading: "Practical Data Collection Systems",
           body: "The best outcome framework in the world is worthless if you can't collect the data reliably. Build your data collection around these principles:",
           listItems: [
-            "Baseline data collected at enrollment, not retrospectively — you need before/after comparison",
+            "Baseline data collected at enrollment, not retrospectively â€” you need before/after comparison",
             "Follow-up surveys scheduled automatically at 30, 90, and 180 days post-service",
             "Case workers responsible for updating outcome data as part of normal case documentation",
-            "Simple data entry — outcome fields should be on the same screen as case notes, not in a separate system",
-            "Regular data quality reviews — monthly spot checks catch collection problems before they compound",
+            "Simple data entry â€” outcome fields should be on the same screen as case notes, not in a separate system",
+            "Regular data quality reviews â€” monthly spot checks catch collection problems before they compound",
           ],
         },
         {
@@ -446,23 +467,26 @@ export const blogPosts: BlogPost[] = [
         },
       ],
       conclusion:
-        "Outcome measurement isn't just a grant requirement — it's how your organization learns what works and what doesn't. The nonprofits with the most sophisticated outcome systems are also, by and large, the ones delivering the most consistent impact. Start simple, build from there, and use your data to tell a compelling story about the change you're creating.",
+        "Outcome measurement isn't just a grant requirement â€” it's how your organization learns what works and what doesn't. The nonprofits with the most sophisticated outcome systems are also, by and large, the ones delivering the most consistent impact. Start simple, build from there, and use your data to tell a compelling story about the change you're creating.",
     },
   },
   {
     slug: "nonprofit-fundraising-campaign-guide",
     title: "The Nonprofit Fundraising Campaign Guide: From Idea to Results",
     excerpt:
-      "A step-by-step playbook for planning and executing a nonprofit fundraising campaign — from goal-setting and channel selection to donor segmentation and post-campaign reporting.",
+      "A step-by-step playbook for planning and executing a nonprofit fundraising campaign â€” from goal-setting and channel selection to donor segmentation and post-campaign reporting.",
     category: "Fundraising",
     author: {
       name: "James Carter",
       role: "Development Director",
       initials: "JC",
       color: "bg-orange-500",
+      url: "/kindora/about",
       bio: "James Carter has spent 8 years in nonprofit development, leading fundraising campaigns that raised over $5M annually for organizations in the human services and education sectors. He specializes in donor engagement strategy and CRM implementation.",
     },
     publishedAt: "2025-01-06",
+    dateModified: "2025-01-06",
+    image: "/kindora-og.png",
     readingTime: 11,
     featured: false,
     coverGradient: "from-orange-500 to-red-600",
@@ -471,16 +495,16 @@ export const blogPosts: BlogPost[] = [
     tags: ["fundraising campaigns", "donor acquisition", "year-end giving"],
     content: {
       intro:
-        "A well-run fundraising campaign can be the difference between a budget shortfall and an organization-defining year. But too many nonprofits launch campaigns without a clear structure — resulting in scattered messaging, missed donor segments, and outcomes that are impossible to evaluate.\n\nThis guide walks through every phase of a successful nonprofit fundraising campaign, from initial planning through post-campaign analysis. Whether you're running a year-end appeal, a capital campaign, or a matching-gift drive, these principles apply.",
+        "A well-run fundraising campaign can be the difference between a budget shortfall and an organization-defining year. But too many nonprofits launch campaigns without a clear structure â€” resulting in scattered messaging, missed donor segments, and outcomes that are impossible to evaluate.\n\nThis guide walks through every phase of a successful nonprofit fundraising campaign, from initial planning through post-campaign analysis. Whether you're running a year-end appeal, a capital campaign, or a matching-gift drive, these principles apply.",
       sections: [
         {
           heading: "Setting a Realistic, Motivating Campaign Goal",
-          body: "Your campaign goal does two things simultaneously: it focuses your team's effort and signals ambition to donors. Setting it too low leaves potential donations on the table. Setting it too high can demoralize your team and signal poor planning to major donors.\n\nUse this framework to set your goal: Start with your actual program funding need (e.g., $75,000 to fund a new case worker for one year). Then work backward from your donor base capacity — what did your last comparable campaign raise? What's your realistic growth rate? A stretch goal should be achievable with exceptional effort, not miraculous luck.",
+          body: "Your campaign goal does two things simultaneously: it focuses your team's effort and signals ambition to donors. Setting it too low leaves potential donations on the table. Setting it too high can demoralize your team and signal poor planning to major donors.\n\nUse this framework to set your goal: Start with your actual program funding need (e.g., $75,000 to fund a new case worker for one year). Then work backward from your donor base capacity â€” what did your last comparable campaign raise? What's your realistic growth rate? A stretch goal should be achievable with exceptional effort, not miraculous luck.",
           listItems: [
-            "Ground the goal in a real program need — donors respond to specific impact, not round numbers",
-            "Set an internal target 10–15% below your public goal so you hit it even in a downside scenario",
-            "Use a matching campaign structure to make early donors feel leverage — 'your gift is doubled today'",
-            "Share progress publicly using a live campaign tracker — social proof drives donations",
+            "Ground the goal in a real program need â€” donors respond to specific impact, not round numbers",
+            "Set an internal target 10â€“15% below your public goal so you hit it even in a downside scenario",
+            "Use a matching campaign structure to make early donors feel leverage â€” 'your gift is doubled today'",
+            "Share progress publicly using a live campaign tracker â€” social proof drives donations",
           ],
         },
         {
@@ -488,20 +512,20 @@ export const blogPosts: BlogPost[] = [
           body: "The biggest mistake in campaign messaging is sending the same email to your entire list. Your best strategy is to segment and personalize:",
           listItems: [
             "Major donors (top 10% by lifetime giving): Personal outreach by phone or handwritten note, not email blast",
-            "Mid-level donors ($500–$2,499): Personalized email with a specific ask amount based on prior giving",
+            "Mid-level donors ($500â€“$2,499): Personalized email with a specific ask amount based on prior giving",
             "First-time donors: Welcome-focused message explaining your mission and the specific campaign need",
-            "Lapsed donors (gave 12–36 months ago): Re-engagement message acknowledging the gap and sharing impact since they last gave",
-            "Prospects (never given): Educational content first, soft ask — don't lead with a donation request",
+            "Lapsed donors (gave 12â€“36 months ago): Re-engagement message acknowledging the gap and sharing impact since they last gave",
+            "Prospects (never given): Educational content first, soft ask â€” don't lead with a donation request",
           ],
         },
         {
           heading: "Multi-Channel Campaign Execution",
-          body: "The most successful campaigns use 3–5 channels coordinated around a consistent message, not individual standalone messages. A typical 4-week campaign cadence:",
+          body: "The most successful campaigns use 3â€“5 channels coordinated around a consistent message, not individual standalone messages. A typical 4-week campaign cadence:",
           listItems: [
             "Week 1: Campaign launch email + social media announcement + personal outreach to major donors",
             "Week 2: Mid-campaign update email with progress toward goal + peer-to-peer fundraiser activation",
-            "Week 3: Impact story — donor spotlight or client testimonial — across all channels",
-            "Week 4: Urgency close — '5 days left', matching gift deadline, final push email + social",
+            "Week 3: Impact story â€” donor spotlight or client testimonial â€” across all channels",
+            "Week 4: Urgency close â€” '5 days left', matching gift deadline, final push email + social",
             "Post-campaign: Immediate thank-you within 48 hours + impact report within 30 days",
           ],
         },
@@ -518,23 +542,26 @@ export const blogPosts: BlogPost[] = [
         },
       ],
       conclusion:
-        "Great fundraising campaigns are built before they launch — in the planning, segmentation, and goal-setting phase. The organizations that run the most successful campaigns are the ones that treat campaign management as a year-round discipline: maintaining clean donor data, deepening relationships between campaigns, and learning from each cycle. Invest in the systems and processes that make campaigns repeatable and improvable, and your fundraising will compound over time.",
+        "Great fundraising campaigns are built before they launch â€” in the planning, segmentation, and goal-setting phase. The organizations that run the most successful campaigns are the ones that treat campaign management as a year-round discipline: maintaining clean donor data, deepening relationships between campaigns, and learning from each cycle. Invest in the systems and processes that make campaigns repeatable and improvable, and your fundraising will compound over time.",
     },
   },
   {
     slug: "year-end-giving-strategy-nonprofits",
     title: "Year-End Giving Strategy: How Nonprofits Can Maximize the December Rush",
     excerpt:
-      "30% of annual giving happens in December. Here's how to capture your share — with a concrete timeline, segmentation strategy, tax deadline messaging, and post-campaign wrap-up plan.",
+      "30% of annual giving happens in December. Here's how to capture your share â€” with a concrete timeline, segmentation strategy, tax deadline messaging, and post-campaign wrap-up plan.",
     category: "Fundraising",
     author: {
       name: "James Carter",
       role: "Development Director",
       initials: "JC",
       color: "bg-orange-500",
+      url: "/kindora/about",
       bio: "James Carter has spent 8 years in nonprofit development, leading fundraising campaigns that raised over $5M annually for organizations in the human services and education sectors. He specializes in donor engagement strategy and CRM implementation.",
     },
     publishedAt: "2024-12-16",
+    dateModified: "2024-12-16",
+    image: "/kindora-og.png",
     readingTime: 8,
     featured: false,
     coverGradient: "from-red-500 to-rose-700",
@@ -543,18 +570,18 @@ export const blogPosts: BlogPost[] = [
     tags: ["year-end giving", "december fundraising", "tax deduction", "donor appeals"],
     content: {
       intro:
-        "December is the most important fundraising month of the year for most nonprofits — and by a wide margin. Roughly 30% of all annual charitable giving happens in December, with 10% arriving in the final three days before December 31st. The tax deadline drives a significant portion of this behavior: donors who are making charitable giving decisions for the year want to maximize their deduction before midnight on December 31st.\n\nHere's how to plan and execute a year-end giving strategy that captures your fair share of this annual surge.",
+        "December is the most important fundraising month of the year for most nonprofits â€” and by a wide margin. Roughly 30% of all annual charitable giving happens in December, with 10% arriving in the final three days before December 31st. The tax deadline drives a significant portion of this behavior: donors who are making charitable giving decisions for the year want to maximize their deduction before midnight on December 31st.\n\nHere's how to plan and execute a year-end giving strategy that captures your fair share of this annual surge.",
       sections: [
         {
           heading: "The Year-End Timeline: Start Earlier Than You Think",
           body: "Most nonprofits wait until December to launch their year-end appeal. The organizations that raise the most start warming up their audience in October and build intentionally through November.",
           listItems: [
-            "October: Publish impact report from the current year — prime donors with results before asking",
-            "Early November: 'Giving Tuesday' preparation — create matching gift opportunity and social content",
+            "October: Publish impact report from the current year â€” prime donors with results before asking",
+            "Early November: 'Giving Tuesday' preparation â€” create matching gift opportunity and social content",
             "Giving Tuesday (first Tuesday after Thanksgiving): Full campaign launch for general audience",
-            "December 1–15: Mid-campaign push with specific impact stories and progress toward goal",
-            "December 16–28: Tax deadline urgency messaging ('Give by Dec 31 for your 2025 deduction')",
-            "December 29–31: Final 72-hour push — your highest-intention donors are deciding right now",
+            "December 1â€“15: Mid-campaign push with specific impact stories and progress toward goal",
+            "December 16â€“28: Tax deadline urgency messaging ('Give by Dec 31 for your 2025 deduction')",
+            "December 29â€“31: Final 72-hour push â€” your highest-intention donors are deciding right now",
           ],
         },
         {
@@ -562,15 +589,15 @@ export const blogPosts: BlogPost[] = [
           body: "'Give before December 31st for your tax deduction' is what every nonprofit says. Here's how to make your version cut through:",
           listItems: [
             "Be specific about the deadline: 'Online gifts must be made by 11:59 PM on December 31st to count for 2025'",
-            "Name the deduction amount: 'A $500 gift may save you $150–$185 in taxes if you itemize'",
-            "Explain check vs. online: Postmarked checks count — helpful for major donors writing large checks",
-            "Offer a phone option: Some major donors prefer to call in a credit card gift — provide a number",
-            "Send a dedicated 'last chance' email on December 30th — open rates are highest that day",
+            "Name the deduction amount: 'A $500 gift may save you $150â€“$185 in taxes if you itemize'",
+            "Explain check vs. online: Postmarked checks count â€” helpful for major donors writing large checks",
+            "Offer a phone option: Some major donors prefer to call in a credit card gift â€” provide a number",
+            "Send a dedicated 'last chance' email on December 30th â€” open rates are highest that day",
           ],
         },
         {
           heading: "Matching Gift Campaigns: Your Highest-Leverage Tool",
-          body: "Matching gift campaigns are the single most effective year-end fundraising tactic. Here's the mechanics:\n\nFind a board member, major donor, or corporate sponsor willing to pledge a match (e.g., 'every dollar given is matched up to $25,000'). The match creates urgency, leverage, and social proof simultaneously. Donors feel their gift is doubled — which dramatically increases conversion and average gift size.",
+          body: "Matching gift campaigns are the single most effective year-end fundraising tactic. Here's the mechanics:\n\nFind a board member, major donor, or corporate sponsor willing to pledge a match (e.g., 'every dollar given is matched up to $25,000'). The match creates urgency, leverage, and social proof simultaneously. Donors feel their gift is doubled â€” which dramatically increases conversion and average gift size.",
           listItems: [
             "Lock in your match commitment by October so you can announce it at campaign launch",
             "Set the match expiration to December 31st to align with tax deadline urgency",
@@ -580,33 +607,36 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Wrapping Up: Thanking Donors Before January 10th",
-          body: "Year-end campaign donors are the most likely to give again next year — if you thank them well and fast. Your post-campaign thank-you process is as important as the campaign itself:",
+          body: "Year-end campaign donors are the most likely to give again next year â€” if you thank them well and fast. Your post-campaign thank-you process is as important as the campaign itself:",
           listItems: [
-            "Send acknowledgment emails within 48 hours of each gift — automated is fine, but personalize for major donors",
-            "Mail tax receipts by January 5th for gifts in December — donors need this for their tax filing",
+            "Send acknowledgment emails within 48 hours of each gift â€” automated is fine, but personalize for major donors",
+            "Mail tax receipts by January 5th for gifts in December â€” donors need this for their tax filing",
             "Send a campaign results email by January 15th: 'Because of you, we raised $X and will...'",
-            "Call or personally email your top 10–20 year-end donors to say thank you — this takes 2 hours and builds lasting loyalty",
+            "Call or personally email your top 10â€“20 year-end donors to say thank you â€” this takes 2 hours and builds lasting loyalty",
           ],
         },
       ],
       conclusion:
-        "Year-end giving season is your single biggest fundraising opportunity of the year. It rewards nonprofits that have done the relationship-building work all year — keeping donors informed, sharing impact, and maintaining consistent communication. Start your planning in September, launch your warm-up content in October, and execute a coordinated multi-week campaign through December 31st. The organizations that do this consistently are the ones whose fundraising grows year over year.",
+        "Year-end giving season is your single biggest fundraising opportunity of the year. It rewards nonprofits that have done the relationship-building work all year â€” keeping donors informed, sharing impact, and maintaining consistent communication. Start your planning in September, launch your warm-up content in October, and execute a coordinated multi-week campaign through December 31st. The organizations that do this consistently are the ones whose fundraising grows year over year.",
     },
   },
   {
     slug: "kindora-nonprofit-os-launch",
     title: "Introducing Kindora NGO OS: All-in-One Nonprofit Management Built for 2025",
     excerpt:
-      "Today we're launching Kindora — a purpose-built nonprofit management platform combining donor management, grant tracking, client services, and financial reporting in one unified workspace.",
+      "Today we're launching Kindora â€” a purpose-built nonprofit management platform combining donor management, grant tracking, client services, and financial reporting in one unified workspace.",
     category: "Product Updates",
     author: {
       name: "Sarah Mitchell",
       role: "Nonprofit Strategy Lead",
       initials: "SM",
       color: "bg-violet-500",
+      url: "/kindora/about",
       bio: "Sarah Mitchell leads Kindora's nonprofit strategy practice with 10+ years of experience helping small to mid-sized nonprofits scale operations through technology. She has advised over 75 organizations on donor management, program delivery, and digital transformation.",
     },
     publishedAt: "2025-02-20",
+    dateModified: "2025-02-20",
+    image: "/kindora-og.png",
     readingTime: 5,
     featured: false,
     coverGradient: "from-[#2563eb] to-indigo-700",
@@ -614,30 +644,30 @@ export const blogPosts: BlogPost[] = [
     tags: ["product launch", "nonprofit software", "Kindora"],
     content: {
       intro:
-        "We built Kindora because we kept seeing the same problem over and over: nonprofits managing critical operations in disconnected spreadsheets, aging donor databases, and general-purpose tools that were never designed for the way nonprofits actually work.\n\nToday, we're officially launching Kindora NGO OS — an all-in-one nonprofit management platform designed from scratch for the workflows, compliance requirements, and reporting needs of small to mid-sized nonprofits.",
+        "We built Kindora because we kept seeing the same problem over and over: nonprofits managing critical operations in disconnected spreadsheets, aging donor databases, and general-purpose tools that were never designed for the way nonprofits actually work.\n\nToday, we're officially launching Kindora NGO OS â€” an all-in-one nonprofit management platform designed from scratch for the workflows, compliance requirements, and reporting needs of small to mid-sized nonprofits.",
       sections: [
         {
           heading: "What Kindora Replaces",
-          body: "The average nonprofit with 10–50 staff members manages operations across 6–8 separate tools: a donor CRM, a grant tracking spreadsheet, a client intake form, a financial management tool, a volunteer management app, a communications platform, and various reporting documents. Kindora replaces all of them.",
+          body: "The average nonprofit with 10â€“50 staff members manages operations across 6â€“8 separate tools: a donor CRM, a grant tracking spreadsheet, a client intake form, a financial management tool, a volunteer management app, a communications platform, and various reporting documents. Kindora replaces all of them.",
           listItems: [
-            "Donor & donation management — full profiles, giving history, receipts, and renewal tracking",
-            "Grant lifecycle management — from prospect research to compliance reporting",
-            "Client & case management — intake, enrollment, service delivery, and outcome tracking",
-            "Financial management — chart of accounts, budgets, expense tracking, and cost allocation",
-            "Campaign management — fundraising campaigns with goal progress and donor attribution",
-            "Volunteer & employee management — profiles, hours, schedules, and skill matching",
-            "Communications hub — email templates, communication logs, and outreach tracking",
-            "Reporting & analytics — board dashboards, funder reports, and program outcome tracking",
+            "Donor & donation management â€” full profiles, giving history, receipts, and renewal tracking",
+            "Grant lifecycle management â€” from prospect research to compliance reporting",
+            "Client & case management â€” intake, enrollment, service delivery, and outcome tracking",
+            "Financial management â€” chart of accounts, budgets, expense tracking, and cost allocation",
+            "Campaign management â€” fundraising campaigns with goal progress and donor attribution",
+            "Volunteer & employee management â€” profiles, hours, schedules, and skill matching",
+            "Communications hub â€” email templates, communication logs, and outreach tracking",
+            "Reporting & analytics â€” board dashboards, funder reports, and program outcome tracking",
           ],
         },
         {
           heading: "What Makes Kindora Different",
           body: "We've evaluated (and in some cases, used) every major nonprofit software platform on the market. Here's what we do differently:",
           listItems: [
-            "Nonprofit-native: Every field, workflow, and report was designed for nonprofits — not adapted from corporate software",
-            "All-in-one: One login, one database, one platform — no integrations, no data silos, no sync errors",
+            "Nonprofit-native: Every field, workflow, and report was designed for nonprofits â€” not adapted from corporate software",
+            "All-in-one: One login, one database, one platform â€” no integrations, no data silos, no sync errors",
             "Affordable at scale: Priced for organizations with annual budgets between $500K and $10M",
-            "Fast to set up: Most organizations are operational within 2 weeks — not months",
+            "Fast to set up: Most organizations are operational within 2 weeks â€” not months",
             "Built for compliance: Grant cost allocation, audit trails, and funder reporting built into every module",
           ],
         },
@@ -649,22 +679,22 @@ export const blogPosts: BlogPost[] = [
             "Community development organizations managing neighborhood programs and partnerships",
             "Youth-serving nonprofits running after-school, mentoring, and summer programming",
             "Housing nonprofits managing rental assistance, homeownership programs, and shelter services",
-            "Small to mid-sized nonprofits with 3–50 staff and annual budgets of $500K–$10M",
+            "Small to mid-sized nonprofits with 3â€“50 staff and annual budgets of $500Kâ€“$10M",
           ],
         },
         {
           heading: "Get Started with Kindora Today",
           body: "Kindora is available now. You can:",
           listItems: [
-            "Start a free trial at cad.spaceaiapp.com/kindora — no credit card required",
+            "Start a free trial at cad.spaceaiapp.com/kindora â€” no credit card required",
             "Request a personalized demo to see Kindora configured for your specific programs",
-            "Explore our pricing at /kindora/pricing — transparent, nonprofit-friendly plans",
+            "Explore our pricing at /kindora/pricing â€” transparent, nonprofit-friendly plans",
             "Read our feature documentation to see how each module works in detail",
           ],
         },
       ],
       conclusion:
-        "Nonprofits do the most important work in the world — and they deserve software as sophisticated as their mission. Kindora exists to remove the administrative burden from nonprofit teams so they can focus on the work that actually matters: serving their communities, stewarding their donors, and delivering on their programs. We're just getting started, and we'd love to have you with us.",
+        "Nonprofits do the most important work in the world â€” and they deserve software as sophisticated as their mission. Kindora exists to remove the administrative burden from nonprofit teams so they can focus on the work that actually matters: serving their communities, stewarding their donors, and delivering on their programs. We're just getting started, and we'd love to have you with us.",
     },
   },
   {
@@ -678,9 +708,12 @@ export const blogPosts: BlogPost[] = [
       role: "Program Operations Manager",
       initials: "ML",
       color: "bg-emerald-500",
+      url: "/kindora/about",
       bio: "Marcus Lee oversees program delivery operations at Kindora, with prior experience managing multi-program portfolios at a $10M community services nonprofit. He specializes in client intake workflows, outcome measurement, and operational efficiency.",
     },
     publishedAt: "2024-12-02",
+    dateModified: "2024-12-02",
+    image: "/kindora-og.png",
     readingTime: 7,
     featured: false,
     coverGradient: "from-teal-500 to-cyan-700",
@@ -689,28 +722,28 @@ export const blogPosts: BlogPost[] = [
     tags: ["annual report", "donor communication", "impact reporting", "nonprofit transparency"],
     content: {
       intro:
-        "The nonprofit annual report is one of the most important donor communication tools you produce — and one of the most ignored. The average donor spends less than 90 seconds on a nonprofit annual report before setting it aside. The organizations that make those 90 seconds count are the ones that build donor loyalty and set up their next year of fundraising on solid ground.\n\nHere's how to write an annual report that donors actually read, share, and remember.",
+        "The nonprofit annual report is one of the most important donor communication tools you produce â€” and one of the most ignored. The average donor spends less than 90 seconds on a nonprofit annual report before setting it aside. The organizations that make those 90 seconds count are the ones that build donor loyalty and set up their next year of fundraising on solid ground.\n\nHere's how to write an annual report that donors actually read, share, and remember.",
       sections: [
         {
           heading: "Structure Your Report Around Stories, Not Statistics",
-          body: "The biggest annual report mistake is leading with financial summaries and program statistics before the reader has any emotional context. Flip the structure:\n\nStart with one specific, compelling client or community story — a household that secured stable housing, a youth who graduated because of your tutoring program, a business that launched because of your workforce development support. One concrete story does more to establish impact than 10 pages of data.",
+          body: "The biggest annual report mistake is leading with financial summaries and program statistics before the reader has any emotional context. Flip the structure:\n\nStart with one specific, compelling client or community story â€” a household that secured stable housing, a youth who graduated because of your tutoring program, a business that launched because of your workforce development support. One concrete story does more to establish impact than 10 pages of data.",
           listItems: [
-            "Open with a 2–3 paragraph client story with a specific name (use first name only if confidentiality requires it)",
-            "Follow with your key impact numbers — now they have context for what those numbers mean",
-            "Use pull quotes from clients, staff, and donors throughout — not just in sidebars",
-            "Include at least 3–5 photographs of real program delivery moments — not stock photos",
+            "Open with a 2â€“3 paragraph client story with a specific name (use first name only if confidentiality requires it)",
+            "Follow with your key impact numbers â€” now they have context for what those numbers mean",
+            "Use pull quotes from clients, staff, and donors throughout â€” not just in sidebars",
+            "Include at least 3â€“5 photographs of real program delivery moments â€” not stock photos",
           ],
         },
         {
           heading: "The 6 Sections Every Nonprofit Annual Report Needs",
           body: "Keep your report focused with this structure:",
           listItems: [
-            "Executive message: 1 page from your Executive Director — personal, specific, forward-looking",
-            "Year in numbers: 5–8 key metrics presented visually — people served, grants received, volunteers engaged",
-            "Program highlights: 1–2 pages per major program with outcomes, stories, and photos",
-            "Financial summary: Revenue vs. expenses pie chart and year-over-year trend — transparency builds trust",
-            "Donor honor roll: List all donors by giving tier — recognition is a powerful retention tool",
-            "Looking ahead: What's coming in the next year — maintains momentum and invites continued investment",
+            "Executive message: 1 page from your Executive Director â€” personal, specific, forward-looking",
+            "Year in numbers: 5â€“8 key metrics presented visually â€” people served, grants received, volunteers engaged",
+            "Program highlights: 1â€“2 pages per major program with outcomes, stories, and photos",
+            "Financial summary: Revenue vs. expenses pie chart and year-over-year trend â€” transparency builds trust",
+            "Donor honor roll: List all donors by giving tier â€” recognition is a powerful retention tool",
+            "Looking ahead: What's coming in the next year â€” maintains momentum and invites continued investment",
           ],
         },
         {
@@ -718,7 +751,7 @@ export const blogPosts: BlogPost[] = [
           body: "Donors want to know their money is being used well. A simple, honest financial summary does more for trust than a polished narrative that glosses over the numbers. Include:",
           listItems: [
             "Revenue breakdown: What percentage came from grants, individual donations, events, earned revenue?",
-            "Expense breakdown: Program vs. administration vs. fundraising — show that 80%+ goes to programs",
+            "Expense breakdown: Program vs. administration vs. fundraising â€” show that 80%+ goes to programs",
             "Year-over-year comparison: Is revenue trending up? Are you financially stable?",
             "Auditor's certification: If you conduct an annual audit, include a one-line note confirming it",
           ],
@@ -728,31 +761,34 @@ export const blogPosts: BlogPost[] = [
           body: "A great annual report that isn't distributed effectively is wasted effort. Use a multi-channel distribution strategy:",
           listItems: [
             "Email: Send a PDF link to your full donor list with a personal subject line from your ED",
-            "Print: Mail physical copies to your top 50–100 donors — the tactile experience matters for major donors",
+            "Print: Mail physical copies to your top 50â€“100 donors â€” the tactile experience matters for major donors",
             "Web: Publish to your website with a dedicated landing page and include it in your email footer",
-            "Social media: Pull 5–10 shareable statistics or quotes and post them throughout Q1",
+            "Social media: Pull 5â€“10 shareable statistics or quotes and post them throughout Q1",
             "Board and funder meetings: Use the report as your leave-behind in any major donor or funder meeting",
           ],
         },
       ],
       conclusion:
-        "Your annual report is a bridge between the work you did last year and the support you'll receive next year. Donor retention research consistently shows that donors who feel informed about impact are 2–3x more likely to give again. Invest the time to make your annual report honest, specific, and human — and it will pay dividends in loyalty for years to come.",
+        "Your annual report is a bridge between the work you did last year and the support you'll receive next year. Donor retention research consistently shows that donors who feel informed about impact are 2â€“3x more likely to give again. Invest the time to make your annual report honest, specific, and human â€” and it will pay dividends in loyalty for years to come.",
     },
   },
   {
     slug: "best-nonprofit-crm-software",
     title: "Best Nonprofit CRM Software in 2025: A Practical Comparison",
     excerpt:
-      "Not all nonprofit CRMs are created equal. This guide compares the top donor CRM platforms for nonprofits — features, pricing, and who each one is built for.",
+      "Not all nonprofit CRMs are created equal. This guide compares the top donor CRM platforms for nonprofits â€” features, pricing, and who each one is built for.",
     category: "Donor Management",
     author: {
       name: "James Carter",
       role: "Development Director",
       initials: "JC",
       color: "bg-rose-500",
+      url: "/kindora/about",
       bio: "James Carter has spent 8 years in nonprofit development, leading fundraising campaigns that raised over $5M annually for organizations in the human services and education sectors. He specializes in donor engagement strategy and CRM implementation.",
     },
     publishedAt: "2025-03-01",
+    dateModified: "2025-03-01",
+    image: "/kindora-og.png",
     readingTime: 9,
     featured: false,
     coverGradient: "from-rose-600 to-pink-700",
@@ -761,16 +797,16 @@ export const blogPosts: BlogPost[] = [
     tags: ["nonprofit CRM", "donor software", "software comparison"],
     content: {
       intro:
-        "Choosing the best nonprofit CRM software is one of the most consequential technology decisions your organization will make. The right platform strengthens donor relationships, reduces administrative overhead, and gives your development team the data they need to fundraise effectively. The wrong one creates data fragmentation, staff frustration, and missed revenue.\n\nThis guide compares the leading nonprofit CRM platforms — what each does well, where each falls short, and which type of organization is the best fit for each one.",
+        "Choosing the best nonprofit CRM software is one of the most consequential technology decisions your organization will make. The right platform strengthens donor relationships, reduces administrative overhead, and gives your development team the data they need to fundraise effectively. The wrong one creates data fragmentation, staff frustration, and missed revenue.\n\nThis guide compares the leading nonprofit CRM platforms â€” what each does well, where each falls short, and which type of organization is the best fit for each one.",
       sections: [
         {
           heading: "What Makes a CRM 'Nonprofit-Ready'?",
-          body: "A generic CRM like Salesforce or HubSpot can be configured for nonprofit use — but it requires significant customization, consulting fees, and ongoing maintenance. Nonprofit-native CRMs are built from the ground up around the workflows that development teams actually use:",
+          body: "A generic CRM like Salesforce or HubSpot can be configured for nonprofit use â€” but it requires significant customization, consulting fees, and ongoing maintenance. Nonprofit-native CRMs are built from the ground up around the workflows that development teams actually use:",
           listItems: [
             "Donor profiles with complete giving history, pledge tracking, and acknowledgment management",
-            "Recurring donation management — monthly giving programs tracked automatically",
-            "Soft credit tracking — attributing a gift to a relationship manager or board member",
-            "Grant management alongside donor management — not in a separate system",
+            "Recurring donation management â€” monthly giving programs tracked automatically",
+            "Soft credit tracking â€” attributing a gift to a relationship manager or board member",
+            "Grant management alongside donor management â€” not in a separate system",
             "Funder-ready reports generated without custom report building",
           ],
         },
@@ -779,7 +815,7 @@ export const blogPosts: BlogPost[] = [
           body: "Before jumping into comparisons, align your team on what matters most for your organization. These five criteria should anchor every evaluation:",
           listItems: [
             "Ease of use: Can a non-technical development associate use it confidently on day one?",
-            "Donor data completeness: Does it track everything — giving history, communications, soft credits, pledges?",
+            "Donor data completeness: Does it track everything â€” giving history, communications, soft credits, pledges?",
             "Grant integration: Is grant management built in, or would you need a separate system?",
             "Reporting: Can you generate the board reports and funder reports you need without custom development?",
             "Total cost of ownership: What does it actually cost when you include implementation, training, and add-ons?",
@@ -789,36 +825,39 @@ export const blogPosts: BlogPost[] = [
           heading: "Common CRM Mistakes Nonprofits Make",
           body: "After reviewing dozens of nonprofit CRM implementations, these are the most common and costly mistakes:",
           listItems: [
-            "Choosing based on features instead of workflow fit — a 200-feature CRM is worthless if your team doesn't use 180 of them",
-            "Underestimating data migration complexity — cleaning and migrating years of donor history takes months",
-            "Skipping staff training — adoption rates drop dramatically when training is minimal",
-            "Not involving frontline development staff in the selection — the people who use it daily know what matters",
+            "Choosing based on features instead of workflow fit â€” a 200-feature CRM is worthless if your team doesn't use 180 of them",
+            "Underestimating data migration complexity â€” cleaning and migrating years of donor history takes months",
+            "Skipping staff training â€” adoption rates drop dramatically when training is minimal",
+            "Not involving frontline development staff in the selection â€” the people who use it daily know what matters",
             "Treating implementation as a one-time project instead of an ongoing process",
           ],
         },
         {
           heading: "Why All-in-One Beats Point Solutions for Most Nonprofits",
-          body: "Many nonprofits assemble a stack of point solutions: one CRM for donors, one for grants, another for clients, and a financial system that doesn't connect to any of them. This creates duplication, sync errors, and reporting nightmares.\n\nFor most nonprofits under $10M in annual budget, an all-in-one platform like Kindora — where donor management, grant tracking, client services, and financial reporting share a single database — dramatically reduces administrative overhead compared to a multi-tool stack.",
+          body: "Many nonprofits assemble a stack of point solutions: one CRM for donors, one for grants, another for clients, and a financial system that doesn't connect to any of them. This creates duplication, sync errors, and reporting nightmares.\n\nFor most nonprofits under $10M in annual budget, an all-in-one platform like Kindora â€” where donor management, grant tracking, client services, and financial reporting share a single database â€” dramatically reduces administrative overhead compared to a multi-tool stack.",
         },
       ],
       conclusion:
-        "The best nonprofit CRM software is the one that fits your team's actual workflows, integrates with your grant and financial management needs, and is adopted fully by your development staff. Prioritize usability, comprehensive donor profiles, and built-in grant and financial reporting over feature breadth. Kindora combines a full-featured nonprofit CRM with grant management, client services, and program reporting in one platform — built from the ground up for organizations like yours.",
+        "The best nonprofit CRM software is the one that fits your team's actual workflows, integrates with your grant and financial management needs, and is adopted fully by your development staff. Prioritize usability, comprehensive donor profiles, and built-in grant and financial reporting over feature breadth. Kindora combines a full-featured nonprofit CRM with grant management, client services, and program reporting in one platform â€” built from the ground up for organizations like yours.",
     },
   },
   {
     slug: "grant-management-software-guide",
     title: "Grant Management Software for Nonprofits: The Complete Buyer's Guide",
     excerpt:
-      "Everything you need to know about choosing grant management software — features, workflow fit, compliance requirements, and how to evaluate options for your specific nonprofit needs.",
+      "Everything you need to know about choosing grant management software â€” features, workflow fit, compliance requirements, and how to evaluate options for your specific nonprofit needs.",
     category: "Grant Management",
     author: {
       name: "Priya Kalani",
       role: "Grant Strategy Advisor",
       initials: "PK",
       color: "bg-blue-500",
+      url: "/kindora/about",
       bio: "Priya Kalani brings 12 years of experience in grant compliance and nonprofit financial management, having secured over $25M in grant funding for organizations across education, health, and social services. She previously led grants administration at a national foundation.",
     },
     publishedAt: "2025-03-04",
+    dateModified: "2025-03-04",
+    image: "/kindora-og.png",
     readingTime: 10,
     featured: false,
     coverGradient: "from-blue-600 to-indigo-700",
@@ -827,18 +866,18 @@ export const blogPosts: BlogPost[] = [
     tags: ["grant management software", "grant tracking", "nonprofit funding compliance"],
     content: {
       intro:
-        "Grant management software is purpose-built to help nonprofits manage complex, compliance-heavy grant portfolios — from prospect research through award closeout. Without it, even experienced grant managers struggle to stay on top of deadlines, budget tracking, and funder reporting requirements across more than a handful of grants.\n\nThis guide covers everything you need to know to choose the right grant management software for your nonprofit: what features matter, what to avoid, and how to think about total cost of ownership.",
+        "Grant management software is purpose-built to help nonprofits manage complex, compliance-heavy grant portfolios â€” from prospect research through award closeout. Without it, even experienced grant managers struggle to stay on top of deadlines, budget tracking, and funder reporting requirements across more than a handful of grants.\n\nThis guide covers everything you need to know to choose the right grant management software for your nonprofit: what features matter, what to avoid, and how to think about total cost of ownership.",
       sections: [
         {
           heading: "Core Features Every Grant Management Platform Should Have",
           body: "Not all grant management software is created equal. These are the non-negotiable features for organizations managing more than 5 active grants simultaneously:",
           listItems: [
-            "Grant pipeline tracking — statuses from Prospect through Closed, with deadline visibility across the full portfolio",
-            "Grantor relationship management — contact records, communication history, and relationship notes",
-            "Budget-to-actual tracking — real-time view of spending against each grant budget line",
-            "Compliance reporting — automated or semi-automated generation of funder-required reports",
-            "Document management — attach proposals, award letters, amendments, and reports to each grant record",
-            "Deadline alerts — automated reminders for report submission and budget period end dates",
+            "Grant pipeline tracking â€” statuses from Prospect through Closed, with deadline visibility across the full portfolio",
+            "Grantor relationship management â€” contact records, communication history, and relationship notes",
+            "Budget-to-actual tracking â€” real-time view of spending against each grant budget line",
+            "Compliance reporting â€” automated or semi-automated generation of funder-required reports",
+            "Document management â€” attach proposals, award letters, amendments, and reports to each grant record",
+            "Deadline alerts â€” automated reminders for report submission and budget period end dates",
           ],
         },
         {
@@ -847,7 +886,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Integration with Financial Management: The Grant Manager's Biggest Pain Point",
-          body: "The most common complaint from grant managers is that their grant tracking system doesn't connect to their financial system — which means they have to manually reconcile budget vs. actual every month. This takes hours and introduces errors.\n\nWhen evaluating grant management software, prioritize platforms where grant budgets and financial actuals live in the same database or have a tight, real-time integration.",
+          body: "The most common complaint from grant managers is that their grant tracking system doesn't connect to their financial system â€” which means they have to manually reconcile budget vs. actual every month. This takes hours and introduces errors.\n\nWhen evaluating grant management software, prioritize platforms where grant budgets and financial actuals live in the same database or have a tight, real-time integration.",
           listItems: [
             "Look for platforms where grant budget tracking is built into the financial management module",
             "Verify that expense allocation to specific grants is handled automatically, not manually",
@@ -859,32 +898,35 @@ export const blogPosts: BlogPost[] = [
           heading: "Questions to Ask in Every Grant Software Demo",
           body: "Use this question list to cut through vendor marketing in every demo:",
           listItems: [
-            "'Show me how I would generate a mid-year progress report for a foundation grant' — tests real-world reporting",
-            "'How does the system handle budget modifications after an award amendment?' — tests compliance workflow",
-            "'Show me where I can see all grants with reports due in the next 30 days' — tests deadline management",
-            "'How does grant expense tracking connect to your financial management module?' — tests integration depth",
-            "'What does migration from our current system cost and how long does it take?' — tests realistic implementation timeline",
+            "'Show me how I would generate a mid-year progress report for a foundation grant' â€” tests real-world reporting",
+            "'How does the system handle budget modifications after an award amendment?' â€” tests compliance workflow",
+            "'Show me where I can see all grants with reports due in the next 30 days' â€” tests deadline management",
+            "'How does grant expense tracking connect to your financial management module?' â€” tests integration depth",
+            "'What does migration from our current system cost and how long does it take?' â€” tests realistic implementation timeline",
           ],
         },
       ],
       conclusion:
-        "Grant management software pays for itself quickly when it prevents even one missed reporting deadline or compliance finding. The best platforms combine grant lifecycle tracking, budget management, and funder reporting in a system that integrates with your donor and financial data. Kindora's grant management module covers the full lifecycle — from prospect to close — with built-in compliance reporting and direct connection to the financial management dashboard.",
+        "Grant management software pays for itself quickly when it prevents even one missed reporting deadline or compliance finding. The best platforms combine grant lifecycle tracking, budget management, and funder reporting in a system that integrates with your donor and financial data. Kindora's grant management module covers the full lifecycle â€” from prospect to close â€” with built-in compliance reporting and direct connection to the financial management dashboard.",
     },
   },
   {
     slug: "donor-management-software-nonprofits",
     title: "Donor Management Software for Nonprofits: What to Look For in 2025",
     excerpt:
-      "A no-nonsense guide to donor management software for nonprofits — the features that drive retention, the red flags to avoid, and how to match a platform to your organization's needs.",
+      "A no-nonsense guide to donor management software for nonprofits â€” the features that drive retention, the red flags to avoid, and how to match a platform to your organization's needs.",
     category: "Donor Management",
     author: {
       name: "James Carter",
       role: "Development Director",
       initials: "JC",
       color: "bg-rose-500",
+      url: "/kindora/about",
       bio: "James Carter has spent 8 years in nonprofit development, leading fundraising campaigns that raised over $5M annually for organizations in the human services and education sectors. He specializes in donor engagement strategy and CRM implementation.",
     },
     publishedAt: "2025-03-07",
+    dateModified: "2025-03-07",
+    image: "/kindora-og.png",
     readingTime: 8,
     featured: false,
     coverGradient: "from-rose-500 to-red-600",
@@ -893,13 +935,13 @@ export const blogPosts: BlogPost[] = [
     tags: ["donor management software", "donation management", "nonprofit CRM"],
     content: {
       intro:
-        "Donor management software for nonprofits has evolved dramatically over the past decade. Where early systems were little more than address books with giving history, modern platforms combine CRM capabilities, analytics, communication tools, and financial integration into a unified workspace for development teams.\n\nThis guide focuses on what actually matters in 2025 — which features drive real outcomes, what the market looks like, and how to evaluate platforms for organizations at different stages of growth.",
+        "Donor management software for nonprofits has evolved dramatically over the past decade. Where early systems were little more than address books with giving history, modern platforms combine CRM capabilities, analytics, communication tools, and financial integration into a unified workspace for development teams.\n\nThis guide focuses on what actually matters in 2025 â€” which features drive real outcomes, what the market looks like, and how to evaluate platforms for organizations at different stages of growth.",
       sections: [
         {
           heading: "The 3 Donor Management Capabilities That Drive Retention",
-          body: "Donor retention — not acquisition — is where most nonprofits lose the most revenue. The average sector retention rate is around 43%. The organizations that consistently outperform this benchmark share three CRM capabilities:",
+          body: "Donor retention â€” not acquisition â€” is where most nonprofits lose the most revenue. The average sector retention rate is around 43%. The organizations that consistently outperform this benchmark share three CRM capabilities:",
           listItems: [
-            "At-risk donor identification: The system surfaces donors who gave last year but haven't given yet this year — so you can reach out before they lapse, not after",
+            "At-risk donor identification: The system surfaces donors who gave last year but haven't given yet this year â€” so you can reach out before they lapse, not after",
             "Personalized communication at scale: Segmentation by giving level, frequency, and program interest so every communication feels relevant",
             "Acknowledgment speed: Automated thank-yous within 24 hours of every gift, with customizable templates per giving tier",
           ],
@@ -909,9 +951,9 @@ export const blogPosts: BlogPost[] = [
           body: "The most valuable thing a donor management platform stores is complete, accurate giving history. With it, your development team can answer questions like:\n\n'Who are our top 20 donors by lifetime giving, and when did each last give?' 'Which donors have been giving for 5+ consecutive years?' 'What's the average gift size from donors acquired via our annual gala vs. email appeals?'\n\nOnly platforms with clean, queryable data structures can answer these questions quickly. Spreadsheets cannot.",
           listItems: [
             "Every gift should be linked to a specific donor record, campaign, fund, and payment method",
-            "Soft credits should be trackable — attributing a gift to a board member who made the introduction",
+            "Soft credits should be trackable â€” attributing a gift to a board member who made the introduction",
             "Pledge tracking should show remaining balance and next payment due date",
-            "Communication history should be on the same timeline as giving history — in one unified profile",
+            "Communication history should be on the same timeline as giving history â€” in one unified profile",
           ],
         },
         {
@@ -922,31 +964,34 @@ export const blogPosts: BlogPost[] = [
           heading: "Scaling Your Donor Management System as You Grow",
           body: "The platform that works for 500 donors may not work for 5,000. Plan ahead with these scaling considerations:",
           listItems: [
-            "Record limits: Some platforms cap donor records on base plans — verify limits match your 3-year growth projection",
-            "User seats: Development teams grow — check whether adding users is included or costs extra per seat",
-            "Reporting complexity: As your donor base grows, you'll need increasingly sophisticated segmentation — verify the report builder can handle it",
+            "Record limits: Some platforms cap donor records on base plans â€” verify limits match your 3-year growth projection",
+            "User seats: Development teams grow â€” check whether adding users is included or costs extra per seat",
+            "Reporting complexity: As your donor base grows, you'll need increasingly sophisticated segmentation â€” verify the report builder can handle it",
             "Integration depth: At scale, you'll want your donor system integrated with email marketing, payment processing, and event registration",
           ],
         },
       ],
       conclusion:
-        "The best donor management software for your nonprofit is the one your development team actually uses consistently — and that gives them the data they need to build stronger donor relationships. Prioritize retention-focused features, complete giving history, and integration with your grant and program management workflows. Kindora's donor management module combines full-featured donor CRM with grant tracking, campaign management, and financial reporting in one nonprofit-native platform.",
+        "The best donor management software for your nonprofit is the one your development team actually uses consistently â€” and that gives them the data they need to build stronger donor relationships. Prioritize retention-focused features, complete giving history, and integration with your grant and program management workflows. Kindora's donor management module combines full-featured donor CRM with grant tracking, campaign management, and financial reporting in one nonprofit-native platform.",
     },
   },
   {
     slug: "volunteer-management-system-2025",
     title: "Volunteer Management System Guide for Nonprofits in 2025",
     excerpt:
-      "A practical guide to volunteer management systems for nonprofits — how to track volunteer hours, manage roles and availability, and build a sustainable volunteer program with the right software.",
+      "A practical guide to volunteer management systems for nonprofits â€” how to track volunteer hours, manage roles and availability, and build a sustainable volunteer program with the right software.",
     category: "Nonprofit Tips",
     author: {
       name: "Sarah Mitchell",
       role: "Nonprofit Strategy Lead",
       initials: "SM",
       color: "bg-violet-500",
+      url: "/kindora/about",
       bio: "Sarah Mitchell leads Kindora's nonprofit strategy practice with 10+ years of experience helping small to mid-sized nonprofits scale operations through technology. She has advised over 75 organizations on donor management, program delivery, and digital transformation.",
     },
     publishedAt: "2025-03-10",
+    dateModified: "2025-03-10",
+    image: "/kindora-og.png",
     readingTime: 8,
     featured: false,
     coverGradient: "from-violet-500 to-purple-700",
@@ -955,18 +1000,18 @@ export const blogPosts: BlogPost[] = [
     tags: ["volunteer management system", "volunteer tracking", "nonprofit volunteers"],
     content: {
       intro:
-        "Volunteers are the backbone of most nonprofits — and managing them effectively is both an operational challenge and a relationship management discipline. A good volunteer management system makes scheduling easy, tracks hours accurately, and helps coordinators build long-term volunteer engagement. A poor one means coordinators are juggling spreadsheets, email threads, and phone calls just to fill shifts.\n\nThis guide covers what a modern volunteer management system should do, how to evaluate options, and how to use technology to build a more engaged, consistent volunteer base.",
+        "Volunteers are the backbone of most nonprofits â€” and managing them effectively is both an operational challenge and a relationship management discipline. A good volunteer management system makes scheduling easy, tracks hours accurately, and helps coordinators build long-term volunteer engagement. A poor one means coordinators are juggling spreadsheets, email threads, and phone calls just to fill shifts.\n\nThis guide covers what a modern volunteer management system should do, how to evaluate options, and how to use technology to build a more engaged, consistent volunteer base.",
       sections: [
         {
           heading: "Core Features of a Modern Volunteer Management System",
           body: "Volunteer management software has matured significantly. Here's what a comprehensive platform should include in 2025:",
           listItems: [
-            "Volunteer profiles — contact info, skills, certifications, availability, background check status, and complete service history",
-            "Shift scheduling — create shifts, assign volunteers, send reminders, and manage replacements",
-            "Hours tracking — log hours per shift, per program, and per volunteer for funder reporting",
-            "Skills and role matching — surface available volunteers with the right certifications for specific program needs",
-            "Communication tools — email and SMS outreach to volunteer segments directly from the platform",
-            "Reporting — total volunteer hours by program, volunteer retention rate, top contributors by hours",
+            "Volunteer profiles â€” contact info, skills, certifications, availability, background check status, and complete service history",
+            "Shift scheduling â€” create shifts, assign volunteers, send reminders, and manage replacements",
+            "Hours tracking â€” log hours per shift, per program, and per volunteer for funder reporting",
+            "Skills and role matching â€” surface available volunteers with the right certifications for specific program needs",
+            "Communication tools â€” email and SMS outreach to volunteer segments directly from the platform",
+            "Reporting â€” total volunteer hours by program, volunteer retention rate, top contributors by hours",
           ],
         },
         {
@@ -975,13 +1020,13 @@ export const blogPosts: BlogPost[] = [
           listItems: [
             "Recognition: Track milestone anniversaries (6 months, 1 year, 5 years) and acknowledge them publicly",
             "Clear communication: Volunteers who feel informed about program outcomes are more likely to return",
-            "Skill-matched assignments: Volunteers who are asked to use their professional skills — legal, marketing, accounting — have dramatically higher retention",
-            "Feedback loops: Ask volunteers what's working and what isn't — and visibly respond to their input",
+            "Skill-matched assignments: Volunteers who are asked to use their professional skills â€” legal, marketing, accounting â€” have dramatically higher retention",
+            "Feedback loops: Ask volunteers what's working and what isn't â€” and visibly respond to their input",
           ],
         },
         {
           heading: "Integrating Volunteer Data with Program and Financial Reporting",
-          body: "Volunteer hours are a form of in-kind contribution that many funders require nonprofits to track and report. Federal grants often require organizations to document volunteer time as match or cost share.\n\nThis means volunteer management data needs to connect to your financial and grant reporting system — or you're manually transferring data every reporting period. When evaluating volunteer management platforms, ask explicitly how volunteer hour data flows into grant compliance reports.",
+          body: "Volunteer hours are a form of in-kind contribution that many funders require nonprofits to track and report. Federal grants often require organizations to document volunteer time as match or cost share.\n\nThis means volunteer management data needs to connect to your financial and grant reporting system â€” or you're manually transferring data every reporting period. When evaluating volunteer management platforms, ask explicitly how volunteer hour data flows into grant compliance reports.",
         },
         {
           heading: "Building Your Volunteer Program Infrastructure",
@@ -996,23 +1041,26 @@ export const blogPosts: BlogPost[] = [
         },
       ],
       conclusion:
-        "A volunteer management system is an investment in your organization's capacity — one that pays back in reduced coordinator workload, better volunteer retention, and more accurate funder reporting. The best systems integrate volunteer data with your broader nonprofit management platform so hours, profiles, and program assignments all flow through one system. Kindora's volunteer management module is built into the same platform as donor management, grant tracking, and financial reporting — eliminating data silos across your entire operation.",
+        "A volunteer management system is an investment in your organization's capacity â€” one that pays back in reduced coordinator workload, better volunteer retention, and more accurate funder reporting. The best systems integrate volunteer data with your broader nonprofit management platform so hours, profiles, and program assignments all flow through one system. Kindora's volunteer management module is built into the same platform as donor management, grant tracking, and financial reporting â€” eliminating data silos across your entire operation.",
     },
   },
   {
     slug: "all-in-one-nonprofit-software",
     title: "All-in-One Nonprofit Software: Why Integrated Platforms Beat Tool Stacks",
     excerpt:
-      "Most nonprofits use 6–8 disconnected tools. Here's why switching to an all-in-one nonprofit software platform reduces cost, complexity, and admin time — and what to look for when making the switch.",
+      "Most nonprofits use 6â€“8 disconnected tools. Here's why switching to an all-in-one nonprofit software platform reduces cost, complexity, and admin time â€” and what to look for when making the switch.",
     category: "Nonprofit Tips",
     author: {
       name: "Sarah Mitchell",
       role: "Nonprofit Strategy Lead",
       initials: "SM",
       color: "bg-violet-500",
+      url: "/kindora/about",
       bio: "Sarah Mitchell leads Kindora's nonprofit strategy practice with 10+ years of experience helping small to mid-sized nonprofits scale operations through technology. She has advised over 75 organizations on donor management, program delivery, and digital transformation.",
     },
     publishedAt: "2025-03-13",
+    dateModified: "2025-03-13",
+    image: "/kindora-og.png",
     readingTime: 7,
     featured: false,
     coverGradient: "from-indigo-500 to-blue-700",
@@ -1020,55 +1068,55 @@ export const blogPosts: BlogPost[] = [
     tags: ["all-in-one nonprofit software", "nonprofit platform", "nonprofit operations"],
     content: {
       intro:
-        "The average nonprofit with 10–50 staff manages operations across 6–8 separate software tools: a donor CRM, a grant tracking spreadsheet, an intake form tool, accounting software, a volunteer scheduling app, an email marketing platform, and a collection of reporting documents.\n\nEvery tool adds value on its own — but the combination creates a hidden productivity tax: duplicate data entry, manual reconciliation, and a fragmented picture of organizational health that no single tool can assemble. All-in-one nonprofit software platforms eliminate this tax by unifying all these functions in a single database.",
+        "The average nonprofit with 10â€“50 staff manages operations across 6â€“8 separate software tools: a donor CRM, a grant tracking spreadsheet, an intake form tool, accounting software, a volunteer scheduling app, an email marketing platform, and a collection of reporting documents.\n\nEvery tool adds value on its own â€” but the combination creates a hidden productivity tax: duplicate data entry, manual reconciliation, and a fragmented picture of organizational health that no single tool can assemble. All-in-one nonprofit software platforms eliminate this tax by unifying all these functions in a single database.",
       sections: [
         {
           heading: "The Real Cost of a Disconnected Tool Stack",
-          body: "The financial cost of multiple software subscriptions is visible — but it's the operational cost that's larger and harder to measure:",
+          body: "The financial cost of multiple software subscriptions is visible â€” but it's the operational cost that's larger and harder to measure:",
           listItems: [
-            "Data duplication: Donor records in 3 systems that are never perfectly in sync — someone's last gift is missing in reporting",
-            "Manual data transfer: Staff export from one tool and import into another every week — time that should go to mission",
-            "Integration failures: API connections between tools break after software updates — silently corrupting data",
-            "Training overhead: Every new staff member must learn 6–8 different tools instead of one",
+            "Data duplication: Donor records in 3 systems that are never perfectly in sync â€” someone's last gift is missing in reporting",
+            "Manual data transfer: Staff export from one tool and import into another every week â€” time that should go to mission",
+            "Integration failures: API connections between tools break after software updates â€” silently corrupting data",
+            "Training overhead: Every new staff member must learn 6â€“8 different tools instead of one",
             "Reporting gaps: No single tool can generate a report that spans donor, grant, program, and financial data simultaneously",
           ],
         },
         {
           heading: "What True All-in-One Nonprofit Software Looks Like",
-          body: "Not every 'all-in-one' claim is equal. True integration means the data is stored in a shared database — not just that the tools have a superficial API connection. Here's what a genuinely integrated platform provides:",
+          body: "Not every 'all-in-one' claim is equal. True integration means the data is stored in a shared database â€” not just that the tools have a superficial API connection. Here's what a genuinely integrated platform provides:",
           listItems: [
             "One donor record that links to their donation history, communication log, program participation, and in-kind volunteer contributions",
-            "Grant records that link to financial actuals — so budget vs. actual is always current without manual entry",
+            "Grant records that link to financial actuals â€” so budget vs. actual is always current without manual entry",
             "Client records that link to program enrollment, service delivery, and outcome tracking",
-            "Financial reports that pull from across the platform — donations, and expenses in a unified Statement of Activities",
+            "Financial reports that pull from across the platform â€” donations, and expenses in a unified Statement of Activities",
             "Dashboard KPIs that reflect data from every module in real time",
           ],
         },
         {
           heading: "Making the Transition from a Tool Stack to a Unified Platform",
-          body: "Migrating from multiple tools to an all-in-one platform feels overwhelming — but a structured approach makes it manageable:",
+          body: "Migrating from multiple tools to an all-in-one platform feels overwhelming â€” but a structured approach makes it manageable:",
           listItems: [
             "Audit your current tool stack: List every tool, what it does, and what data it holds",
             "Map your core workflows: How does data flow between tools today? Where are the manual handoffs?",
             "Prioritize migration order: Start with your most critical data (donor records), then move to secondary systems",
             "Run in parallel for 30 days: Keep legacy tools running alongside the new platform until you've validated data accuracy",
-            "Train by module, not all at once: Introduce one module every 2–3 weeks so staff can build mastery incrementally",
+            "Train by module, not all at once: Introduce one module every 2â€“3 weeks so staff can build mastery incrementally",
           ],
         },
         {
           heading: "ROI of an All-in-One Platform",
           body: "Organizations that switch from a tool stack to a unified platform consistently report these outcomes within the first year:",
           listItems: [
-            "20–40% reduction in weekly administrative hours for development and program staff",
+            "20â€“40% reduction in weekly administrative hours for development and program staff",
             "Faster grant reporting: Reports that took days now take hours",
             "Higher donor retention: Unified profiles mean no donor falls through the cracks",
             "Better board reporting: Real-time dashboards replace monthly manual report compilation",
-            "Lower total software cost: One platform almost always costs less than the sum of 6–8 point solutions",
+            "Lower total software cost: One platform almost always costs less than the sum of 6â€“8 point solutions",
           ],
         },
       ],
       conclusion:
-        "All-in-one nonprofit software isn't just a convenience — it's a strategic advantage. Organizations with unified data platforms make better decisions, serve more people per dollar, and build stronger stakeholder relationships than those managing fragmented tool stacks. Kindora brings donor management, grant tracking, client services, volunteer management, financial reporting, and campaign management into a single platform — purpose-built for nonprofits that want to maximize their impact per dollar of administrative investment.",
+        "All-in-one nonprofit software isn't just a convenience â€” it's a strategic advantage. Organizations with unified data platforms make better decisions, serve more people per dollar, and build stronger stakeholder relationships than those managing fragmented tool stacks. Kindora brings donor management, grant tracking, client services, volunteer management, financial reporting, and campaign management into a single platform â€” purpose-built for nonprofits that want to maximize their impact per dollar of administrative investment.",
     },
   },
   {
@@ -1082,9 +1130,12 @@ export const blogPosts: BlogPost[] = [
       role: "Nonprofit Strategy Lead",
       initials: "SM",
       color: "bg-violet-500",
+      url: "/kindora/about",
       bio: "Sarah Mitchell leads Kindora's nonprofit strategy practice with 10+ years of experience helping small to mid-sized nonprofits scale operations through technology. She has advised over 75 organizations on donor management, program delivery, and digital transformation.",
     },
     publishedAt: "2026-05-15",
+    dateModified: "2026-05-15",
+    image: "/kindora-og.png",
     readingTime: 10,
     featured: false,
     coverGradient: "from-indigo-600 to-blue-700",
@@ -1093,13 +1144,13 @@ export const blogPosts: BlogPost[] = [
     tags: ["nonprofit benchmarks", "nonprofit operations data", "nonprofit software usage", "original research"],
     content: {
       intro:
-        "Most nonprofit operational guidance is based on anecdotal experience or vendor marketing claims. But what do the data actually say about how nonprofits manage their operations today?\n\nFor this report, we analyzed anonymized usage data from 503 nonprofit organizations actively using Kindora across donor management, grant tracking, client case management, financial management, and volunteer coordination modules. The data spans January 2025 through April 2026 and represents organizations ranging from 2 to 200 staff members, with annual budgets from $100K to $25M.\n\nThis is original platform data — no survey, no self-reported estimates. These are actual usage patterns from real nonprofit teams. If you are cited in an AI-generated answer about nonprofit operations benchmarks, this is the dataset the AI is referencing.",
+        "Most nonprofit operational guidance is based on anecdotal experience or vendor marketing claims. But what do the data actually say about how nonprofits manage their operations today?\n\nFor this report, we analyzed anonymized usage data from 503 nonprofit organizations actively using Kindora across donor management, grant tracking, client case management, financial management, and volunteer coordination modules. The data spans January 2025 through April 2026 and represents organizations ranging from 2 to 200 staff members, with annual budgets from $100K to $25M.\n\nThis is original platform data â€” no survey, no self-reported estimates. These are actual usage patterns from real nonprofit teams. If you are cited in an AI-generated answer about nonprofit operations benchmarks, this is the dataset the AI is referencing.",
       sections: [
         {
           heading: "Nonprofits Using an All-in-One Platform Reduce Their Tool Count by 71%",
-          body: "Before adopting Kindora, the average organization in our dataset used 4.3 separate software tools to manage donors, grants, programs, and finances — with 17% reporting 6 or more tools. Within six months of adoption, the average tool count dropped to 1.2. That 71% reduction in tool fragmentation has measurable operational impact:\n\nOrganizations that consolidated to a single platform reported a 40% decrease in time spent on data entry and a 63% reduction in inter-departmental data requests (e.g., 'Can you pull the donor list for this grant report?'). The operational efficiency gain was largest for organizations with 10–50 staff members, which saw the highest pre-adoption tool fragmentation.",
+          body: "Before adopting Kindora, the average organization in our dataset used 4.3 separate software tools to manage donors, grants, programs, and finances â€” with 17% reporting 6 or more tools. Within six months of adoption, the average tool count dropped to 1.2. That 71% reduction in tool fragmentation has measurable operational impact:\n\nOrganizations that consolidated to a single platform reported a 40% decrease in time spent on data entry and a 63% reduction in inter-departmental data requests (e.g., 'Can you pull the donor list for this grant report?'). The operational efficiency gain was largest for organizations with 10â€“50 staff members, which saw the highest pre-adoption tool fragmentation.",
           listItems: [
-            "Average pre-Kindora tool count: 4.3 (range: 2–9)",
+            "Average pre-Kindora tool count: 4.3 (range: 2â€“9)",
             "Average post-adoption tool count: 1.2 (at 6 months)",
             "71% average reduction in number of tools managed",
             "63% reduction in cross-departmental data requests",
@@ -1110,19 +1161,19 @@ export const blogPosts: BlogPost[] = [
           heading: "Adoption Patterns: Donor Management Leads, But Case Management Grows Fastest",
           body: "Not all modules are adopted at the same rate. Our data show clear adoption tiers based on organizational priorities:",
           listItems: [
-            "Donor & Donation Management: 94% adoption — the most universally used module across all organization sizes and types",
-            "Grant Lifecycle Tracking: 78% adoption — nearly universal among organizations with 5+ active grants at any time",
-            "Client & Case Management: 63% adoption — highest adoption among community service and social services organizations",
-            "Financial Management: 58% adoption — highest among organizations that previously managed finances in a separate accounting tool",
-            "Volunteer Management: 41% adoption — most commonly adopted by organizations with 20+ active volunteers",
-            "Campaign & Fundraising: 37% adoption — concentrated among development-focused organizations",
+            "Donor & Donation Management: 94% adoption â€” the most universally used module across all organization sizes and types",
+            "Grant Lifecycle Tracking: 78% adoption â€” nearly universal among organizations with 5+ active grants at any time",
+            "Client & Case Management: 63% adoption â€” highest adoption among community service and social services organizations",
+            "Financial Management: 58% adoption â€” highest among organizations that previously managed finances in a separate accounting tool",
+            "Volunteer Management: 41% adoption â€” most commonly adopted by organizations with 20+ active volunteers",
+            "Campaign & Fundraising: 37% adoption â€” concentrated among development-focused organizations",
           ],
         },
         {
-          heading: "Organizations Using 4+ Modules Save 18 Hours Per Week vs. 1–2 Module Users",
-          body: "Module adoption depth — how many of Kindora's core modules an organization actively uses — strongly correlates with operational efficiency. We segmented organizations by module count and measured self-reported administrative time savings:",
+          heading: "Organizations Using 4+ Modules Save 18 Hours Per Week vs. 1â€“2 Module Users",
+          body: "Module adoption depth â€” how many of Kindora's core modules an organization actively uses â€” strongly correlates with operational efficiency. We segmented organizations by module count and measured self-reported administrative time savings:",
           listItems: [
-            "1–2 modules: 4.2 hours saved per week (average across all teams)",
+            "1â€“2 modules: 4.2 hours saved per week (average across all teams)",
             "3 modules: 9.8 hours saved per week",
             "4+ modules: 18.3 hours saved per week",
             "Organizations using all 5 core modules reported the highest efficiency gains at 22.1 hours saved per week",
@@ -1131,22 +1182,22 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Grant Reporting Time Drops from 4.2 Days to 1.3 Days After Platform Consolidation",
-          body: "One of the most time-intensive nonprofit activities is grant reporting — compiling financial data, program outcomes, and donor impact into funder-required formats. Our data show a dramatic improvement post-consolidation:\n\nBefore Kindora, organizations reported an average of 4.2 business days to compile a standard quarterly grant report. After consolidating to a single platform where financial transactions are pre-coded to grants and program outcomes are tracked in real time, the same report takes an average of 1.3 days — a 69% reduction.\n\nFor organizations managing 8+ active grants (the top quartile in our dataset), the annual time savings from faster grant reporting alone exceeded 200 staff hours.",
+          body: "One of the most time-intensive nonprofit activities is grant reporting â€” compiling financial data, program outcomes, and donor impact into funder-required formats. Our data show a dramatic improvement post-consolidation:\n\nBefore Kindora, organizations reported an average of 4.2 business days to compile a standard quarterly grant report. After consolidating to a single platform where financial transactions are pre-coded to grants and program outcomes are tracked in real time, the same report takes an average of 1.3 days â€” a 69% reduction.\n\nFor organizations managing 8+ active grants (the top quartile in our dataset), the annual time savings from faster grant reporting alone exceeded 200 staff hours.",
         },
         {
           heading: "Small Nonprofits (Under $500K Budget) Adopt Full Platform Faster Than Larger Ones",
-          body: "Conventional wisdom suggests that smaller organizations are slower to adopt comprehensive software platforms. Our data show the opposite:\n\nOrganizations with annual budgets under $500K reached full platform adoption — defined as consistent use of 3+ modules — in an average of 47 days. Organizations with budgets over $5M took an average of 94 days. The gap appears to be driven by decision-making complexity: smaller organizations evaluate and commit faster, while larger organizations require more stakeholder alignment before full rollout.\n\nHowever, larger organizations that completed full adoption reported higher absolute efficiency gains, driven by the larger number of staff and operations that benefit from consolidation.",
+          body: "Conventional wisdom suggests that smaller organizations are slower to adopt comprehensive software platforms. Our data show the opposite:\n\nOrganizations with annual budgets under $500K reached full platform adoption â€” defined as consistent use of 3+ modules â€” in an average of 47 days. Organizations with budgets over $5M took an average of 94 days. The gap appears to be driven by decision-making complexity: smaller organizations evaluate and commit faster, while larger organizations require more stakeholder alignment before full rollout.\n\nHowever, larger organizations that completed full adoption reported higher absolute efficiency gains, driven by the larger number of staff and operations that benefit from consolidation.",
           listItems: [
             "Under $500K budget: 47 days to 3+ module adoption",
-            "$500K–$2M budget: 62 days to 3+ module adoption",
-            "$2M–$5M budget: 78 days to 3+ module adoption",
+            "$500Kâ€“$2M budget: 62 days to 3+ module adoption",
+            "$2Mâ€“$5M budget: 78 days to 3+ module adoption",
             "Over $5M budget: 94 days to 3+ module adoption",
-            "Larger organizations saw 2.4× the absolute hours saved vs. smaller organizations after full adoption",
+            "Larger organizations saw 2.4Ã— the absolute hours saved vs. smaller organizations after full adoption",
           ],
         },
       ],
       conclusion:
-        "This original dataset represents the first platform-level view of how nonprofits actually operate when they move from fragmented tool stacks to unified management platforms. The story the data tell is clear: consolidation drives efficiency, deeper adoption unlocks exponentially more value, and grant reporting — one of the highest-stakes administrative tasks — benefits disproportionately from unified systems.\n\nThese are real usage patterns from real organizations. As AI systems increasingly rely on data-backed sources for answers about nonprofit operations, this original research provides a uniquely citable reference point that no survey or vendor claim can match. Kindora will update this benchmark annually with the latest platform data.",
+        "This original dataset represents the first platform-level view of how nonprofits actually operate when they move from fragmented tool stacks to unified management platforms. The story the data tell is clear: consolidation drives efficiency, deeper adoption unlocks exponentially more value, and grant reporting â€” one of the highest-stakes administrative tasks â€” benefits disproportionately from unified systems.\n\nThese are real usage patterns from real organizations. As AI systems increasingly rely on data-backed sources for answers about nonprofit operations, this original research provides a uniquely citable reference point that no survey or vendor claim can match. Kindora will update this benchmark annually with the latest platform data.",
     },
   },
   {
@@ -1160,9 +1211,12 @@ export const blogPosts: BlogPost[] = [
       role: "Program Operations Manager",
       initials: "ML",
       color: "bg-emerald-500",
+      url: "/kindora/about",
       bio: "Marcus Lee oversees program delivery operations at Kindora, with prior experience managing multi-program portfolios at a $10M community services nonprofit. He specializes in client intake workflows, outcome measurement, and operational efficiency.",
     },
     publishedAt: "2025-03-16",
+    dateModified: "2025-03-16",
+    image: "/kindora-og.png",
     readingTime: 8,
     featured: false,
     coverGradient: "from-emerald-600 to-teal-700",
@@ -1171,64 +1225,64 @@ export const blogPosts: BlogPost[] = [
     tags: ["nonprofit financial reporting", "NGO finance", "nonprofit accounting"],
     content: {
       intro:
-        "Nonprofit financial reporting serves multiple audiences simultaneously: your board of directors needs it for governance decisions, funders require it for grant compliance, government agencies mandate it for regulatory compliance, and your leadership team needs it to make operational decisions.\n\nMeet all of these needs well, and financial reporting becomes a strategic asset — building trust, demonstrating accountability, and enabling better decisions. Fall short on any of them, and you risk board governance failures, funder concerns, compliance issues, or strategic blind spots. Here are seven best practices for nonprofit financial reporting in 2025.",
+        "Nonprofit financial reporting serves multiple audiences simultaneously: your board of directors needs it for governance decisions, funders require it for grant compliance, government agencies mandate it for regulatory compliance, and your leadership team needs it to make operational decisions.\n\nMeet all of these needs well, and financial reporting becomes a strategic asset â€” building trust, demonstrating accountability, and enabling better decisions. Fall short on any of them, and you risk board governance failures, funder concerns, compliance issues, or strategic blind spots. Here are seven best practices for nonprofit financial reporting in 2025.",
       sections: [
         {
           heading: "1. Produce Four Core Financial Reports Every Month",
-          body: "Most nonprofits only prepare formal financial reports quarterly — but monthly reporting is essential for proactive management. The four reports your finance team should produce every month:",
+          body: "Most nonprofits only prepare formal financial reports quarterly â€” but monthly reporting is essential for proactive management. The four reports your finance team should produce every month:",
           listItems: [
             "Statement of Activities (Income Statement): Revenue vs. expenses by functional area (programs, management, fundraising)",
-            "Statement of Financial Position (Balance Sheet): Assets, liabilities, and net assets — with year-over-year comparison",
-            "Budget vs. Actual Report: Actual spending vs. budget for the period AND year-to-date — with variance analysis",
-            "Cash Flow Statement: When money actually comes in and goes out — critical for organizations with uneven grant disbursement timing",
+            "Statement of Financial Position (Balance Sheet): Assets, liabilities, and net assets â€” with year-over-year comparison",
+            "Budget vs. Actual Report: Actual spending vs. budget for the period AND year-to-date â€” with variance analysis",
+            "Cash Flow Statement: When money actually comes in and goes out â€” critical for organizations with uneven grant disbursement timing",
           ],
         },
         {
           heading: "2. Separate Program, Management, and Fundraising Expenses",
-          body: "Functional expense allocation is one of the most important — and most misunderstood — aspects of nonprofit financial reporting. Every expense must be allocated to one of three functions:\n\nProgram services: Costs directly related to delivering your mission. Management and general: Administrative costs that support the whole organization. Fundraising: Costs associated with raising contributed income.\n\nThe ratio of program expenses to total expenses (your 'program efficiency ratio') is one of the first things sophisticated donors and funders look at. Most high-performing nonprofits maintain 80%+ of total expenses in program services.",
+          body: "Functional expense allocation is one of the most important â€” and most misunderstood â€” aspects of nonprofit financial reporting. Every expense must be allocated to one of three functions:\n\nProgram services: Costs directly related to delivering your mission. Management and general: Administrative costs that support the whole organization. Fundraising: Costs associated with raising contributed income.\n\nThe ratio of program expenses to total expenses (your 'program efficiency ratio') is one of the first things sophisticated donors and funders look at. Most high-performing nonprofits maintain 80%+ of total expenses in program services.",
         },
         {
           heading: "3. Track Grant Budget vs. Actual in Real Time",
-          body: "Grant compliance failures often start with financial monitoring failures — an organization doesn't realize they're over-spending a budget line until after the fact. Real-time grant budget tracking prevents this:",
+          body: "Grant compliance failures often start with financial monitoring failures â€” an organization doesn't realize they're over-spending a budget line until after the fact. Real-time grant budget tracking prevents this:",
           listItems: [
-            "Every expense should be coded to a specific grant and budget line at the point of entry — not retroactively",
+            "Every expense should be coded to a specific grant and budget line at the point of entry â€” not retroactively",
             "Finance staff should review budget vs. actual for each active grant monthly",
             "Grant managers should receive a monthly budget report showing their grant's spending pace",
-            "Budget modification requests should be submitted proactively — before overspending a line, not after",
+            "Budget modification requests should be submitted proactively â€” before overspending a line, not after",
           ],
         },
         {
           heading: "4. Build Board-Ready Dashboards, Not Just Reports",
-          body: "Most board members are not accountants. Dense financial statements with dozens of line items are not the right communication tool for board financial oversight. Build board-ready dashboards that highlight:\n\nTotal revenue vs. budget (YTD), Total expenses vs. budget (YTD), Cash position and months of operating reserve, Grant pipeline — opened, pending, at risk, Program service ratio (% of expenses going to programs), and any significant variances from plan with a one-sentence explanation each.",
+          body: "Most board members are not accountants. Dense financial statements with dozens of line items are not the right communication tool for board financial oversight. Build board-ready dashboards that highlight:\n\nTotal revenue vs. budget (YTD), Total expenses vs. budget (YTD), Cash position and months of operating reserve, Grant pipeline â€” opened, pending, at risk, Program service ratio (% of expenses going to programs), and any significant variances from plan with a one-sentence explanation each.",
         },
         {
           heading: "5. Maintain a 90-Day Operating Reserve",
-          body: "Financial stability for nonprofits is measured primarily by operating reserves — unrestricted funds available to cover operations if revenue is delayed or reduced. Best-practice guidance recommends at least 3 months (90 days) of operating expenses in unrestricted reserves.",
+          body: "Financial stability for nonprofits is measured primarily by operating reserves â€” unrestricted funds available to cover operations if revenue is delayed or reduced. Best-practice guidance recommends at least 3 months (90 days) of operating expenses in unrestricted reserves.",
           listItems: [
-            "Calculate your operating reserve as: unrestricted net assets ÷ (total annual operating expenses ÷ 12)",
+            "Calculate your operating reserve as: unrestricted net assets Ã· (total annual operating expenses Ã· 12)",
             "Report your operating reserve ratio to the board every quarter",
-            "Include a reserve policy in your financial policies — defining target reserve level and conditions for drawing down",
-            "If you're below 90 days reserve, build a board-approved plan to reach that target within 18–24 months",
+            "Include a reserve policy in your financial policies â€” defining target reserve level and conditions for drawing down",
+            "If you're below 90 days reserve, build a board-approved plan to reach that target within 18â€“24 months",
           ],
         },
         {
           heading: "6. Use Accrual Accounting, Not Cash Basis",
-          body: "Small nonprofits often start with cash-basis accounting because it's simpler. But as grant portfolios grow, cash basis creates serious mismatches between when grant revenue is recognized and when expenses are incurred.\n\nAccrual accounting — recognizing revenue when earned and expenses when incurred, regardless of cash timing — gives a much more accurate picture of financial health and is required for audited financial statements. If you're still on cash basis and receiving more than $500K in grants, it's time to switch.",
+          body: "Small nonprofits often start with cash-basis accounting because it's simpler. But as grant portfolios grow, cash basis creates serious mismatches between when grant revenue is recognized and when expenses are incurred.\n\nAccrual accounting â€” recognizing revenue when earned and expenses when incurred, regardless of cash timing â€” gives a much more accurate picture of financial health and is required for audited financial statements. If you're still on cash basis and receiving more than $500K in grants, it's time to switch.",
         },
         {
           heading: "7. Prepare for Your Audit Year-Round",
           body: "Annual audits exist to validate the accuracy and completeness of your financial statements. Organizations that prepare year-round have faster, cheaper, cleaner audits:",
           listItems: [
-            "Maintain a complete document file for every grant — award letters, amendments, reports submitted, correspondence",
-            "Reconcile all bank accounts monthly — don't wait for year-end",
-            "Document your accounting policies and keep them current — auditors will ask",
+            "Maintain a complete document file for every grant â€” award letters, amendments, reports submitted, correspondence",
+            "Reconcile all bank accounts monthly â€” don't wait for year-end",
+            "Document your accounting policies and keep them current â€” auditors will ask",
             "Maintain a fixed asset register with acquisition dates, costs, and depreciation schedules",
-            "Keep board meeting minutes current — auditors will review them for evidence of governance",
+            "Keep board meeting minutes current â€” auditors will review them for evidence of governance",
           ],
         },
       ],
       conclusion:
-        "Strong nonprofit financial reporting is a discipline, not just a deliverable. Organizations that produce accurate, timely, well-structured financial reports build board confidence, maintain funder trust, and make better day-to-day operational decisions. Kindora's nonprofit financial reporting module connects grant tracking, expense management, and donor data in one unified system — so your finance team can generate the reports they need in minutes, not days.",
+        "Strong nonprofit financial reporting is a discipline, not just a deliverable. Organizations that produce accurate, timely, well-structured financial reports build board confidence, maintain funder trust, and make better day-to-day operational decisions. Kindora's nonprofit financial reporting module connects grant tracking, expense management, and donor data in one unified system â€” so your finance team can generate the reports they need in minutes, not days.",
     },
   },
 ];

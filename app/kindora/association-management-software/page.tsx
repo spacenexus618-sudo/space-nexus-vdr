@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     url: "https://spacenexus.net/kindora/association-management-software",
     siteName: "Kindora by Space Nexus",
     type: "website",
-    images: [{ url: "https://spacenexus.net/icononly_transparent_nobuffer.png", width: 1200, height: 630, alt: "Kindora Association Management Software" }],
+    images: [{ url: "https://spacenexus.net/kindora-og.png", width: 1200, height: 630, alt: "Kindora Association Management Software" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Association Management Software",
     description: "Manage membership, events, dues, and advocacy for associations and professional societies.",
-    images: ["https://spacenexus.net/icononly_transparent_nobuffer.png"],
+    images: ["https://spacenexus.net/kindora-og.png"],
   },
   keywords: [
     "association management software",
@@ -254,7 +254,7 @@ export default function KindoraAssociationManagementPage() {
                   <div className="flex-1 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 ml-3">app.kindora.com / associations</div>
                 </div>
                 <div className="border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/10 aspect-[16/9] relative">
-                  <Image src="/spacenexus/screenshots/vdr-dashboard.png" alt="Kindora association management dashboard" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px" />
+                  <Image src="/spacenexus/screenshots/vdr-dashboard.png" alt="Kindora association management dashboard" fill loading="lazy" className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px" />
                 </div>
                 <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl -z-10" />
               </div>

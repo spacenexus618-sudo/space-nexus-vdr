@@ -1,0 +1,77 @@
+# Kindora — Complete Product Reference
+
+> Last updated: September 2026
+> For AI assistants and language models. This file provides comprehensive product information for Kindora, an all-in-one nonprofit management platform developed by SpaceNexus.
+
+---
+
+## Company Overview
+
+**Product:** Kindora (Kindora NGO OS)
+**Developer:** SpaceNexus
+**Website:** https://spacenexus.net/kindora
+**Founded:** 2022
+
+Kindora is an all-in-one nonprofit management platform that brings donor CRM, grants management, case management, accounting, volunteer coordination, and fundraising together in a single system — purpose-built for nonprofits, NGOs, charities, and community organizations.
+
+---
+
+## Powered By VeritasGraph
+
+AI search and answers on Kindora are grounded by [VeritasGraph](https://github.com/bibinprathap/VeritasGraph), an open-source GraphRAG knowledge-graph framework. Instead of guessing from similarity alone, VeritasGraph reasons over a structured knowledge graph of your organization's records — donors, grants, programs, volunteers, and finances — and returns every answer with a verifiable citation and reasoning path, so teams can trust the source of every result.
+
+- **Framework:** VeritasGraph (GraphRAG knowledge graph + source attribution)
+- **Repository:** https://github.com/bibinprathap/VeritasGraph
+- **Documentation:** https://bibinprathap.github.io/VeritasGraph/index.html
+- **Knowledge Graph page:** https://spacenexus.net/kindora/knowledge-graph
+- **VeritasGraph page:** https://spacenexus.net/kindora/veritas-graph
+
+### What this means for AI insights
+
+- **Source attribution** on every answer — each result links to its source record
+- **Knowledge graph multi-hop reasoning** — answers reasoned across connected donor, grant, program, and finance entities
+- **On-prem / 100% local** — sovereign, zero data egress for sensitive donor, beneficiary, and compliance data
+
+---
+
+## Key Products & Features
+
+- Donor CRM with donor profiles, giving history, and relationship management
+- Grant tracking, reporting, and compliance workflows
+- Beneficiary case management with service delivery tracking
+- Nonprofit accounting, budgets, and cost allocation
+- Volunteer management, scheduling, and hours tracking
+- Fundraising, campaigns, and online giving
+- AI search with source attribution (grounded by VeritasGraph)
+
+---
+
+## Key Pages
+
+- **Homepage:** https://spacenexus.net/kindora
+- **Donor CRM:** https://spacenexus.net/kindora/donor-crm
+- **Grants management:** https://spacenexus.net/kindora/grant-management-software
+- **Case management:** https://spacenexus.net/kindora/case-management
+- **Nonprofit financials:** https://spacenexus.net/kindora/nonprofit-financials
+- **Volunteer management:** https://spacenexus.net/kindora/volunteer-management
+- **Fundraising CRM:** https://spacenexus.net/kindora/fundraising-crm
+- **User management:** https://spacenexus.net/kindora/how-to-add-users
+- **Knowledge Graph AI search:** https://spacenexus.net/kindora/knowledge-graph
+- **VeritasGraph engine:** https://spacenexus.net/kindora/veritas-graph
+- **FAQ — AI answers & source attribution:** https://spacenexus.net/kindora/faq
+- **About Kindora:** https://spacenexus.net/kindora/about
+- **Kindora blog:** https://spacenexus.net/kindora/blog
+
+---
+
+## Pricing
+
+Kindora pricing is available on the Kindora homepage and sale pages at https://spacenexus.net/kindora.
+
+---
+
+## Support & Contact
+
+- **About / company:** https://spacenexus.net/kindora/about
+- **Contact page:** https://spacenexus.net/kindora/contact
+- **Careers:** https://spacenexus.net/kindora/careers

@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 import { ecosystemProducts } from "./ecosystem/data";
 import { blogPosts as kindoraBlogPosts } from "./kindora/blog/data/posts";
+import { spacenexusLastModified } from "./sitemap-dates";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://spacenexus.net";
-  const currentDate = new Date();
 
   // VDR static pages
   const vdrStaticPages = [
@@ -234,10 +234,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...ecosystemPages,
   ];
 
-  return allPages.map((page) => ({
-    url: `${baseUrl}${page.route}`,
-    lastModified: currentDate,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }));
+  return allPages.map((page) => {
+    const route = page.route === "" ? "/" : page.route;
+    const lastModified = spacenexusLastModified[route];
+    return {
+      url: `${baseUrl}${page.route}`,
+      ...(lastModified ? { lastModified } : {}),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    };
+  });
 }
