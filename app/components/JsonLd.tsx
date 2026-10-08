@@ -97,6 +97,18 @@ export default function JsonLd() {
       addressCountry: "US",
     },
     slogan: "The Secure Virtual Data Room for M&A & Legal Teams",
+    potentialAction: {
+      "@type": "CommunicateAction",
+      name: "Request a SpaceNexus demo",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://spacenexus.net/demo",
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "SpaceNexus Products",

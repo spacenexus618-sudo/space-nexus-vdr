@@ -14,6 +14,7 @@ import KindoraCallout from "./components/KindoraCallout";
 import GlobalPresence from "./components/GlobalPresence";
 import LastUpdated from "./components/LastUpdated";
 import AnswerBlock from "./components/AnswerBlock";
+import RagDefinitions from "./components/RagDefinitions";
 
 export const metadata: Metadata = {
   title: "AI-Powered Virtual Data Room Software for M&A, Fundraising & Legal Deals | SpaceNexus",
@@ -81,7 +82,7 @@ const faqSchema = {
       name: "How much do virtual data rooms cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Virtual data rooms range from transparent, published monthly pricing (SpaceNexus) to quote-based per-deal pricing for legacy enterprise providers like Datasite and Intralinks. SpaceNexus includes AI redaction, buyer analytics, and structured Q&A as standard features — not add-ons. There are no per-page charges, no mandatory annual contracts, and setup takes under 24 hours.",
+        text: "Deal rooms range from transparent, published monthly pricing (SpaceNexus) to quote-based per-deal pricing for legacy enterprise providers like Datasite and Intralinks. SpaceNexus includes AI redaction, buyer analytics, and structured Q&A as standard features — not add-ons. There are no per-page charges, no mandatory annual contracts, and setup takes under 24 hours.",
       },
     },
     {
@@ -89,7 +90,7 @@ const faqSchema = {
       name: "How is SpaceNexus different from Dropbox or Google Drive?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dropbox and Google Drive are general-purpose file storage that lack the security controls, compliance certifications, and deal-specific features required for M&A transactions. SpaceNexus virtual data rooms provide 256-bit AES encryption, granular user permissions, full audit trails, Q&A workflows, NDA enforcement, and SOC 2 Type II certification — features that generic cloud storage simply does not offer.",
+        text: "Dropbox and Google Drive are general-purpose file storage that lack the security controls, compliance certifications, and deal-specific features required for M&A transactions. SpaceNexus deal rooms provide 256-bit AES encryption, granular user permissions, full audit trails, Q&A workflows, NDA enforcement, and SOC 2 Type II certification — features that generic cloud storage simply does not offer.",
       },
     },
     {
@@ -97,7 +98,7 @@ const faqSchema = {
       name: "Is SpaceNexus SOC 2 compliant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. SpaceNexus meets enterprise-grade security standards including SOC 2 Type II compliance, ISO 27001 alignment, GDPR readiness, and CCPA compliance. The platform supports SEC regulatory requirements for IPO data rooms and FINRA compliance for investment banking transactions. All data is encrypted in transit (TLS 1.3) and at rest (AES-256) with 99.9% uptime SLA.",
+        text: "Yes. SpaceNexus meets enterprise-grade security standards including SOC 2 Type II compliance, ISO 27001 alignment, GDPR readiness, and CCPA compliance. The platform supports SEC regulatory requirements for IPO deal rooms and FINRA compliance for investment banking transactions. All data is encrypted in transit (TLS 1.3) and at rest (AES-256) with 99.9% uptime SLA.",
       },
     },
     {
@@ -105,7 +106,7 @@ const faqSchema = {
       name: "How quickly can we set up a virtual data room?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SpaceNexus virtual data rooms are operational within 24 hours. The drag-and-drop bulk uploader and AI-powered auto-indexing dramatically reduces setup time compared to legacy VDR providers. Invite buyers and advisors with a single click — no software installation required, accessible from any browser.",
+        text: "SpaceNexus deal rooms are operational within 24 hours. The drag-and-drop bulk uploader and AI-powered auto-indexing dramatically reduces setup time compared to legacy VDR providers. Invite buyers and advisors with a single click — no software installation required, accessible from any browser.",
       },
     },
     {
@@ -136,7 +137,7 @@ const veritasGraphFaqSchema = {
       name: "How does source attribution work in SpaceNexus?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every search result and AI-generated answer in SpaceNexus includes a source citation linking back to the original document in your data room. VeritasGraph traces each answer through a reasoning path, so you can verify exactly where the information came from — no black-box AI responses.",
+        text: "Every search result and AI-generated answer in SpaceNexus includes a source citation linking back to the original document in your repository. VeritasGraph traces each answer through a reasoning path, so you can verify exactly where the information came from — no black-box AI responses.",
       },
     },
     {
@@ -152,7 +153,7 @@ const veritasGraphFaqSchema = {
       name: "How does SpaceNexus verify AI answers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SpaceNexus uses VeritasGraph's GraphRAG framework to verify AI answers. Every answer is grounded in the knowledge graph built from your data room documents. The system provides a citation and reasoning path for each response, allowing users to trace information back to its source document.",
+        text: "SpaceNexus uses VeritasGraph's GraphRAG framework to verify AI answers. Every answer is grounded in the knowledge graph built from your deal documents. The system provides a citation and reasoning path for each response, allowing users to trace information back to its source document.",
       },
     },
     {
@@ -201,6 +202,9 @@ export default function Home() {
 
       {/* Trust Bar - Security Features */}
       <TrustBar />
+
+      {/* Definition-first RAG chunks (one idea per H2, anchor sentences) */}
+      <RagDefinitions />
 
       {/* Core Product Ecosystem - 12 Modules */}
       <div className="content-auto">
@@ -311,10 +315,57 @@ export default function Home() {
               Intralinks Alternative →
             </a>
           </div>
+
+          {/* Security standards & references — authoritative outbound links */}
+          <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-5">
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">
+              Security standards &amp; references
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              SpaceNexus is built to align with the compliance frameworks and
+              standards that govern M&amp;A due diligence, fundraising, and legal
+              transactions:
+            </p>
+            <ul className="text-sm text-gray-600 space-y-1.5 list-disc pl-5">
+              <li>
+                <a href="https://www.aicpa.org/soc4so" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">
+                  AICPA SOC 2 — trust services criteria for security, availability, and confidentiality
+                </a>
+              </li>
+              <li>
+                <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">
+                  ISO/IEC 27001 — information security management systems
+                </a>
+              </li>
+              <li>
+                <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">
+                  NIST Cybersecurity Framework — managing cybersecurity risk
+                </a>
+              </li>
+              <li>
+                <a href="https://www.rfc-editor.org/rfc/rfc8446.html" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">
+                  RFC 8446 — TLS 1.3, encryption in transit
+                </a>
+              </li>
+              <li>
+                <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">
+                  Regulation (EU) 2016/679 — General Data Protection Regulation (full text)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.sec.gov/edgar" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">
+                  SEC EDGAR — disclosure and filing requirements for deal transactions
+                </a>
+              </li>
+            </ul>
+            <p className="text-xs text-gray-500 mt-3">
+              Platform statistics cited on this page (customer count, ratings) are SpaceNexus internal data as of October 2026.
+            </p>
+          </div>
         
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-10-07" />
             </div></div>
       </section>
     </>

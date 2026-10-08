@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+const demoCtaWebMcpAttrs = {
+  toolname: "go-to-demo-page",
+  tooldescription:
+    "Navigate to the SpaceNexus demo request page to talk to the founders and request a live demo.",
+};
+
 export default function HeroSection() {
   return (
     <section
@@ -41,6 +47,7 @@ export default function HeroSection() {
             >
               <Link
                 href="/demo"
+                {...demoCtaWebMcpAttrs}
                 className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
               >
                 Talk to Founders

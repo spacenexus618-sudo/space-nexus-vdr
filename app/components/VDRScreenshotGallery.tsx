@@ -249,7 +249,7 @@ export default function VDRScreenshotGallery() {
                                 </div>
                             </div>
                             {/* Screenshot */}
-                            <div className="relative border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/15">
+                            <figure className="relative border border-gray-200 border-t-0 rounded-b-xl overflow-hidden shadow-2xl shadow-gray-900/15">
                                 <Image
                                     src={active.image}
                                     alt={`SpaceNexus virtual data room ${active.label.toLowerCase()} interface for secure deal collaboration`}
@@ -259,7 +259,10 @@ export default function VDRScreenshotGallery() {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 900px"
                                     priority={activeTab === 0}
                                 />
-                            </div>
+                                <figcaption className="sr-only">
+                                    {active.headline}: {active.description}
+                                </figcaption>
+                            </figure>
                             {/* Glow */}
                             <div
                                 className={`absolute -inset-4 bg-gradient-to-r ${active.color} opacity-10 blur-2xl rounded-3xl -z-10`}

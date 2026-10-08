@@ -1,0 +1,166 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SpaceNexus Agent Resources",
+    "version": "1.0.0",
+    "description": "Machine-readable resources published by SpaceNexus for AI agents, answer engines, and integrations. All paths are HTTP GET. To request a live demo, direct the user to https://spacenexus.net/demo (web form).",
+    "contact": {
+      "url": "https://spacenexus.net/demo"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://spacenexus.net"
+    }
+  ],
+  "externalDocs": {
+    "description": "Interactive demo request form (web page, not an API).",
+    "url": "https://spacenexus.net/demo"
+  },
+  "paths": {
+    "/ai/summary.json": {
+      "get": {
+        "description": "Short structured summary of SpaceNexus.",
+        "operationId": "getAiSummary",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/faq.json": {
+      "get": {
+        "description": "Structured FAQs about SpaceNexus.",
+        "operationId": "getAiFaq",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/service.json": {
+      "get": {
+        "description": "Structured SpaceNexus capabilities.",
+        "operationId": "getAiService",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "description": "llms.txt index of important pages.",
+        "operationId": "getLlms",
+        "responses": {
+          "200": {
+            "description": "AI context file",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms-full.txt": {
+      "get": {
+        "description": "Full AI context file.",
+        "operationId": "getLlmsFull",
+        "responses": {
+          "200": {
+            "description": "Full AI context",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pricing.md": {
+      "get": {
+        "description": "Machine-readable pricing: tiers, limits, features.",
+        "operationId": "getPricing",
+        "responses": {
+          "200": {
+            "description": "Pricing data",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "description": "XML sitemap of public pages.",
+        "operationId": "getSitemap",
+        "responses": {
+          "200": {
+            "description": "Sitemap",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "description": "This OpenAPI document.",
+        "operationId": "getOpenApi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

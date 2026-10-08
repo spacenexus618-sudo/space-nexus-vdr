@@ -264,7 +264,7 @@ export default function DatasiteAlternativePage() {
                         ))}
                     </div>
                     <p className="text-xs text-gray-600 mt-4 text-center">
-                        Based on publicly available information. Last updated February 2026.
+                        Based on publicly available information. Last updated February 2026. Sources: <a href="https://www.datasite.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Datasite official site</a>.
                     </p>
                 </div>
             </section>
@@ -450,7 +450,7 @@ export default function DatasiteAlternativePage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-10-07" />
             </div></div>
             </section>
         </main>

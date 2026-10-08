@@ -138,6 +138,12 @@ const nextConfig: NextConfig = {
         destination: "/kindora/network-for-good-alternative",
         permanent: true,
       },
+      // Fix mistyped / reversed private-equity practice slug seen in GSC 404s
+      {
+        source: "/industries/private-equity/sell-side-exit",
+        destination: "/industries/private-equity/exit-sell-side",
+        permanent: true,
+      },
     ];
   },
 
@@ -219,6 +225,26 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=86400, stale-while-revalidate=3600",
+          },
+        ],
+      },
+      {
+        // Never index the XML sitemap itself, webmanifest, or font assets
+        // (fixes GSC "Crawled - currently not indexed" on favicon/manifest/woff2/sitemap)
+        source: "/:path*.webmanifest",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/sitemap.xml",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
           },
         ],
       },

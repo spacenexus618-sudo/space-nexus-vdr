@@ -1,0 +1,42 @@
+# SpaceNexus AI Crawler Permissions
+# Served at https://spacenexus.net/.well-known/ai.txt
+# Allows listed AI bots to crawl public pages for citation/answer-engine use.
+# Private areas (/api/, /admin/, /private/) remain disallowed via robots.txt.
+
+Site-Name: SpaceNexus
+Site-URL: https://spacenexus.net
+Contact: https://spacenexus.net/demo
+Llms-Txt: https://spacenexus.net/llms.txt
+Llms-Full-Txt: https://spacenexus.net/llms-full.txt
+AI-Summary: https://spacenexus.net/ai/summary.json
+AI-FAQ: https://spacenexus.net/ai/faq.json
+AI-Service: https://spacenexus.net/ai/service.json
+OpenAPI: https://spacenexus.net/openapi.json
+Sitemap: https://spacenexus.net/sitemap.xml
+Updated: 2026-10-07
+
+Allow: GPTBot
+Allow: OAI-SearchBot
+Allow: ChatGPT-User
+Allow: PerplexityBot
+Allow: Perplexity-User
+Allow: ClaudeBot
+Allow: Claude-SearchBot
+Allow: Claude-User
+Allow: Google-Extended
+Allow: Googlebot
+Allow: Bingbot
+Allow: Applebot-Extended
+Allow: CCBot
+Allow: YouBot
+Allow: Bytespider
+Allow: Amazonbot
+Allow: cohere-ai
+Allow: DuckAssistBot
+Allow: AI2Bot
+Allow: xAI-Bot
+Allow: meta-externalagent
+Allow: Applebot
+Allow: PetalBot
+
+Usage-Policy: Public pages may be crawled for search, answer-engine citation and summarisation with attribution to SpaceNexus (https://spacenexus.net). Do not crawl /api/, /admin/ or /private/.

@@ -352,7 +352,12 @@ export default function VdrAlternativesPage() {
                                 Choosing the right VDR can make or break your deal timeline. We compared pricing, security, AI features, and compliance across the six most-used virtual data room providers — so you don&apos;t have to request six demo calls to find out.
                             </p>
                             <p className="text-base text-gray-600 mb-10 leading-relaxed">
-                                Last updated: June 2026. This guide covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada.
+                                Last updated: June 2026. This guide covers SpaceNexus, Datasite, Intralinks, Firmex, iDeals, and Ansarada. Sources:{" "}
+                                <a href="https://www.datasite.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Datasite</a>,{" "}
+                                <a href="https://www.intralinks.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Intralinks</a>,{" "}
+                                <a href="https://www.firmex.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Firmex</a>,{" "}
+                                <a href="https://www.idealsvdr.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">iDeals</a>,{" "}
+                                <a href="https://www.ansarada.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Ansarada</a> official sites.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <a href="#comparison-table" className="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
@@ -631,7 +636,7 @@ export default function VdrAlternativesPage() {
                     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-10-07" />
             </div></div>
                 </section>
             </main>

@@ -32,6 +32,11 @@ interface FormData {
 }
 
 function DemoRequestForm() {
+  const webMcpAttrs = {
+    toolname: "request-demo",
+    tooldescription:
+      "Submit a demo request for the SpaceNexus virtual data room. Collects first name, last name, work email, company, company size, phone number, and project details, then notifies the sales team.",
+  };
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -95,7 +100,7 @@ function DemoRequestForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-8 text-center">
+      <div role="status" aria-live="polite" className="bg-white rounded-2xl border border-gray-200 shadow-xl p-8 text-center">
         <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
           <svg
             className="w-8 h-8 text-green-600"
@@ -140,6 +145,8 @@ function DemoRequestForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      aria-label="Request a demo"
+      {...webMcpAttrs}
       className="bg-white rounded-2xl border border-gray-200 shadow-xl p-8"
     >
       <div className="mb-6">
@@ -150,7 +157,7 @@ function DemoRequestForm() {
       </div>
 
       {error && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+        <div role="alert" className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
           {error}
         </div>
       )}
@@ -297,6 +304,7 @@ function DemoRequestForm() {
       <button
         type="submit"
         disabled={loading}
+        aria-busy={loading}
         className="w-full px-6 py-4 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto"
       >
         {loading ? (

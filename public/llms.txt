@@ -166,3 +166,11 @@ SpaceNexus search and AI answers are powered by [VeritasGraph](https://github.co
 - Free Trial: https://spacenexus.net/get-started
 - Phone numbers available on the website for USA, Canada, UAE, Saudi Arabia, Kuwait, Singapore, and Malaysia
 - Free Trial: https://spacenexus.net/get-started
+
+## Optional
+
+- Full site index for AI models: [llms-full.txt](https://spacenexus.net/llms-full.txt)
+- Machine-readable site summary: [AI summary JSON](https://spacenexus.net/ai/summary.json)
+- Structured FAQ for AI search: [AI FAQ JSON](https://spacenexus.net/ai/faq.json)
+- Service capabilities for AI agents: [AI service JSON](https://spacenexus.net/ai/service.json)
+- Companion markdown guides: [pricing guide](https://spacenexus.net/pricing.md), [buyers guide](https://spacenexus.net/nonprofit-software-buyers-guide.md)

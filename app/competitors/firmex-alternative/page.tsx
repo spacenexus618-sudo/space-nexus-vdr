@@ -265,7 +265,7 @@ export default function FirmexAlternativePage() {
                         ))}
                     </div>
                     <p className="text-xs text-gray-600 mt-4 text-center">
-                        Based on publicly available information. Last updated July 2026.
+                        Based on publicly available information. Last updated October 2026. Sources: <a href="https://www.firmex.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Firmex official site</a>.
                     </p>
                 </div>
             </section>

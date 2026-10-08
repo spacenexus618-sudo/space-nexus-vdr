@@ -255,7 +255,7 @@ export default function IdealsAlternativePage() {
                             </div>
                         ))}
                     </div>
-                    <p className="text-xs text-gray-600 mt-4 text-center">Based on publicly available information. Last updated July 2026.</p>
+                    <p className="text-xs text-gray-600 mt-4 text-center">Based on publicly available information. Last updated October 2026. Sources: <a href="https://www.idealsvdr.com" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">iDeals official site</a>.</p>
                 </div>
             </section>
 
@@ -394,7 +394,7 @@ export default function IdealsAlternativePage() {
                 
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-10-07" />
             </div></div>
             </section>
         </main>
