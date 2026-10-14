@@ -3,6 +3,7 @@ import Script from "next/script";
 import Image from "next/image";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "M&A Virtual Data Room Software | SpaceNexus",
@@ -191,6 +192,8 @@ export default function MAVDRPage() {
                     </div>
                 </div>
             </section>
+
+            <AnswerBlock text="SpaceNexus is an M&A virtual data room for sell-side and buy-side due diligence, with AI redaction, granular bidder permissions, structured Q&A, and tamper-evident audit logs. SOC 2 Type II certified with AES-256 encryption, flat-rate pricing, and 24-hour setup." />
 
             {/* Deal Stages */}
             <section className="py-16 lg:py-20 bg-[#f8f9fa]">

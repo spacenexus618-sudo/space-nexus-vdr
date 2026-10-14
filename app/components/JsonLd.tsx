@@ -46,7 +46,7 @@ export default function JsonLd() {
     image: "https://spacenexus.net/og-image.png",
     description:
       "SpaceNexus is the enterprise-grade Virtual Data Room for M&A due diligence, capital raising, and secure document sharing for legal teams.",
-    foundingDate: "2020",
+    foundingDate: "2022",
     numberOfEmployees: {
       "@type": "QuantitativeValue",
       minValue: 10,
@@ -73,7 +73,7 @@ export default function JsonLd() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+1-800-SPACENEXUS",
+        telephone: "+1-646-421-5740",
         contactType: "sales",
         areaServed: [
           { "@type": "Country", name: "United States" },
@@ -92,8 +92,10 @@ export default function JsonLd() {
     ],
     address: {
       "@type": "PostalAddress",
-      addressLocality: "New York",
-      addressRegion: "NY",
+      streetAddress: "2500 Marconi Ave, Ste 101",
+      addressLocality: "Sacramento",
+      addressRegion: "CA",
+      postalCode: "95821",
       addressCountry: "US",
     },
     slogan: "The Secure Virtual Data Room for M&A & Legal Teams",
@@ -161,6 +163,27 @@ export default function JsonLd() {
       ratingCount: "500",
       bestRating: "5",
       worstRating: "1",
+    },
+    author: {
+      "@type": "Organization",
+      name: "SpaceNexus",
+      url: "https://spacenexus.net",
+    },
+    review: {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Michael Chen",
+        jobTitle: "Managing Director",
+        worksFor: { "@type": "Organization", name: "Apex Capital Partners" },
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "SpaceNexus cut our due diligence timeline from 8 weeks to 3. The AI document processing alone is worth the investment.",
     },
     featureList: [
       "Zero Trust architecture",

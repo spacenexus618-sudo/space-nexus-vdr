@@ -217,7 +217,7 @@ const footerColumns: FooterColumn[] = [
       { name: "Careers", href: "/careers" },
       { name: "Kindora – Nonprofit Software", href: "/kindora" },
       { name: "Social Media", href: "/social-media-platforms" },
-      { name: "Try for Free", href: "https://cad.spaceaiapp.com/vdr", external: true },
+      { name: "Try for Free", href: "https://app.pmspace.ai/", external: true },
     ],
   },
 ];

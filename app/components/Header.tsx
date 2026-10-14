@@ -587,7 +587,7 @@ export default function Header() {
             <Link href={isKindora ? "/kindora/demo" : "/demo"} className="inline-flex items-center px-4 py-2 text-[13px] font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 whitespace-nowrap shrink-0">
               Request a Demo
             </Link>
-            <a href={isKindora ? "https://cad.spaceaiapp.com/kindora" : "https://cad.spaceaiapp.com/vdr"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 text-[13px] font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap shrink-0">
+            <a href={isKindora ? "https://cad.spaceaiapp.com/kindora" : "https://app.pmspace.ai/"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 text-[13px] font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap shrink-0">
               Try for Free
             </a>
 

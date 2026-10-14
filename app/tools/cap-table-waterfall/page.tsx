@@ -343,7 +343,7 @@ export default function CapTableWaterfallPage() {
                 Save and share this waterfall output securely via a password-protected SpaceNexus deal link.
               </p>
               <Link
-                href="https://cad.spaceaiapp.com/vdr"
+                href="https://app.pmspace.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-white text-[#2563eb] font-semibold rounded-xl hover:bg-blue-50 transition-all text-sm"
