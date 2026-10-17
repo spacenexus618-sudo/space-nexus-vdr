@@ -1,0 +1,5 @@
+[build]
+  # The Next.js app lives in the spacenexus/ subdirectory
+  base = "spacenexus"
+  command = "npm run build"
+  publish = ".next"
