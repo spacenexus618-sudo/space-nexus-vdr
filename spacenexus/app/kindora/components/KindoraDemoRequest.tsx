@@ -71,7 +71,7 @@ export default function KindoraDemoRequest() {
     try {
       setSubmitting(true);
       const res = await fetch(
-        process.env.NEXT_PUBLIC_GRAPHQL_URL || "https://spaceaiapp.com/backend/graphql",
+        process.env.NEXT_PUBLIC_GRAPHQL_URL || "https://app.pmspace.ai/backend/graphql",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

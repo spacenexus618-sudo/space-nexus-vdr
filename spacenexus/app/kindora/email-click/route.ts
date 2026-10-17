@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const DEFAULT_GRAPHQL_URL = "https://spaceaiapp.com/backend/graphql";
+const DEFAULT_GRAPHQL_URL = "https://app.pmspace.ai/backend/graphql";
 const EMAIL_PATH = "/email/spacekindora";
 const FALLBACK = "https://spacenexus.net/kindora";
 
