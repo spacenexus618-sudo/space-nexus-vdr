@@ -1,0 +1,34 @@
+/.claude
+/.windsurf
+#openspec
+/geo-output/*
+!/geo-output/.gitkeep
+!/geo-output/README.txt
+!/geo-output/report.md
+!/geo-output/optimized/
+/geo-output/optimized/*
+!/geo-output/optimized/aiflowork-com-optimized.md
+!/geo-output/schema/
+/geo-output/schema/*
+!/geo-output/schema/IMPLEMENTATION.md
+!/geo-output/schema/Organization.json
+!/geo-output/schema/Product.json
+!/geo-output/schema/Service.json
+!/geo-output/schema/Article.json
+!/geo-output/schema/FAQPage.json
+
+# Non-destructive optimize output (generated candidate prompt)
+/prompts/*.candidate.txt
+
+# Python / packaging artifacts (egeo CLI)
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/.abacus-runs/
+.wrangler/
+site/.abacus-runs/
+
+# Local worker run artifacts at the repo root (never commit)
+.abacus-runs/

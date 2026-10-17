@@ -1,0 +1,19 @@
+name: schema-gate
+
+on:
+  pull_request:
+  push:
+    branches: ["**"]
+
+jobs:
+  validate-jsonld:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run JSON-LD schema validator
+        run: python scripts/geo/schema_validator.py --root app --root public

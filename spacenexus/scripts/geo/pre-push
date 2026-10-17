@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Pre-push schema gate: runs scripts/geo/schema_validator.py and aborts the
+# push on any hard JSON-LD error (exit 1). Dynamic blocks are expected and
+# deliberately NOT fatal here - they are a manual-review queue, not a blocker.
+set -u
+
+REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+cd "$REPO_ROOT" || exit 1
+
+PYTHON_BIN="${PYTHON_BIN:-python}"
+
+if ! command -v "$PYTHON_BIN" >/dev/null 2>&1; then
+    echo "pre-push: python not found (set PYTHON_BIN). Skipping schema gate." >&2
+    exit 0
+fi
+
+echo "pre-push: running JSON-LD schema validation..."
+if "$PYTHON_BIN" scripts/geo/schema_validator.py --root app --root public; then
+    echo "pre-push: schema validation OK (no hard errors)."
+    exit 0
+else
+    code=$?
+    if [ "$code" -eq 2 ]; then
+        echo "pre-push: usage error from schema_validator.py" >&2
+    else
+        echo "pre-push: BLOCKED - schema validation found hard errors." >&2
+    fi
+    exit "$code"
+fi

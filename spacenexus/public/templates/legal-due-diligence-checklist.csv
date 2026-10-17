@@ -1,0 +1,99 @@
+Section,Category,Item,Required,Notes
+Corporate Records,Charter documents,Certificate of incorporation / formation,Y,Verify good standing
+Corporate Records,Charter documents,Bylaws or operating agreement (current),Y,All current versions
+Corporate Records,Charter documents,All amendments to charter documents,Y,Complete corporate history
+Corporate Records,Charter documents,Foreign qualifications,Y,For each state of operation
+Corporate Records,Governance,Board minutes and resolutions (3-5 years),Y,All formal board actions
+Corporate Records,Governance,Shareholder / member minutes and consents,Y,Equity holder actions
+Corporate Records,Governance,Board committee charters,N,"Audit, comp, nominating"
+Corporate Records,Governance,Code of conduct / ethics policy,Y,Current policy and acknowledgement
+Corporate Records,Governance,Related party transactions policy,N,For public / pre-IPO companies
+Corporate Records,Capitalization,Cap table — fully diluted,Y,Including all option pools and convertibles
+Corporate Records,Capitalization,Stock ledger / equity register,Y,Detail of all issuances
+Corporate Records,Capitalization,Form D filings,Y,Private placement exemption filings
+Corporate Records,Capitalization,Section 1202 (QSBS) documentation,N,For tax planning purposes
+Corporate Records,Equity Plans,Equity incentive plan documents,Y,Stock option / RSU / PSU plans
+Corporate Records,Equity Plans,Form S-8 (if applicable),N,Public company registration
+Corporate Records,Equity Plans,409A valuation reports,N,For option strike price support
+Corporate Records,Equity Plans,Individual option grant detail (full),Y,"All grants, vesting, exercise prices"
+Material Contracts,Customer,Standard customer contract / MSA,Y,Current template
+Material Contracts,Customer,Top 20 customer contracts,Y,Actual signed agreements
+Material Contracts,Customer,Change-of-control provisions,Y,Across all material contracts
+Material Contracts,Customer,Most-favored-customer clauses,Y,Identify exposure
+Material Contracts,Customer,Exclusivity arrangements,Y,Material exclusivity commitments
+Material Contracts,Customer,Auto-renewal terms summary,N,For revenue forecasting
+Material Contracts,Vendor / Supplier,Top supplier contracts,Y,Critical vendor agreements
+Material Contracts,Vendor / Supplier,Single-source supplier dependencies,Y,Concentration risk
+Material Contracts,Partner / Channel,Reseller agreements,N,Material channel partner contracts
+Material Contracts,Partner / Channel,OEM agreements,N,Original equipment manufacturer deals
+Material Contracts,Partner / Channel,Strategic alliance / JV agreements,N,Joint venture and alliance docs
+Material Contracts,License,In-bound technology licenses,Y,Third-party IP rights used in product
+Material Contracts,License,Out-bound technology licenses,N,IP rights granted to others
+Material Contracts,Other,Loan agreements and credit facilities,Y,All debt instruments
+Material Contracts,Other,Guarantees and letters of credit,Y,Material contingent obligations
+Material Contracts,Other,"Bonds (performance, surety)",N,Material bonds outstanding
+Litigation & Disputes,Active,Schedule of all pending litigation,Y,Including status and exposure estimate
+Litigation & Disputes,Active,Active complaint and answer documents,Y,Pleadings for material matters
+Litigation & Disputes,Active,Most recent status reports from litigation counsel,Y,For material matters
+Litigation & Disputes,Threatened,Pre-litigation demand letters,Y,For last 24 months
+Litigation & Disputes,Threatened,Inquiries and investigations (regulatory),Y,All open government inquiries
+Litigation & Disputes,Historical,Closed litigation summary (5 years),Y,Outcomes and settlements
+Litigation & Disputes,Insurance,Litigation insurance claims history,Y,Claims under any policy
+Litigation & Disputes,Insurance,Insurance carrier coverage letters,N,For active matters
+Intellectual Property,Patents,Patent schedule (granted and pending),Y,All jurisdictions
+Intellectual Property,Patents,Patent maintenance fee schedule,N,Upcoming renewals
+Intellectual Property,Patents,Patent litigation history,N,Any past assertion or defense
+Intellectual Property,Trademarks,Trademark registrations and applications,Y,All jurisdictions
+Intellectual Property,Trademarks,Trademark watch / monitoring service,N,Current watch reports
+Intellectual Property,Copyrights,Copyright registrations (material works),N,For significant creative works
+Intellectual Property,Copyrights,DMCA agent registration,N,For online platforms
+Intellectual Property,Trade Secrets,Trade secret protection policy,N,Internal policies and procedures
+Intellectual Property,Trade Secrets,NDA template,Y,Standard form used with third parties
+Intellectual Property,Ownership,IP assignment agreements (founders),Y,Founder IP assignments
+Intellectual Property,Ownership,IP assignment agreements (employees),Y,Standard employee IP assignment
+Intellectual Property,Ownership,IP assignment agreements (contractors),Y,All material contractor assignments
+Intellectual Property,Open Source,Open source license audit / SBOM,Y,Software bill of materials
+Intellectual Property,Open Source,Open source policy,N,Internal open source usage policy
+Intellectual Property,Open Source,Open source license obligations summary,N,"Copyleft, attribution requirements"
+Regulatory & Compliance,General,All material licenses and permits,Y,"Federal, state, local"
+Regulatory & Compliance,General,Regulatory correspondence (last 3 years),Y,For all material regulators
+Regulatory & Compliance,General,Government investigation files,Y,Any open or recent inquiries
+Regulatory & Compliance,General,Consent decrees or settlement orders,Y,Active consent decrees
+Regulatory & Compliance,Privacy,Privacy policy and terms (current),Y,Public-facing policies
+Regulatory & Compliance,Privacy,GDPR compliance documentation,Y,For any EU data subjects
+Regulatory & Compliance,Privacy,CCPA compliance documentation,Y,For California residents
+Regulatory & Compliance,Privacy,Data Processing Agreements (vendor),Y,All material data processors
+Regulatory & Compliance,Privacy,Records of processing activities (ROPA),N,GDPR Article 30 documentation
+Regulatory & Compliance,Privacy,Cross-border transfer mechanisms,N,"SCCs, adequacy decisions"
+Regulatory & Compliance,Industry-specific,HIPAA documentation (if applicable),N,For healthcare transactions
+Regulatory & Compliance,Industry-specific,PCI DSS AOC (if applicable),N,For payment card processing
+Regulatory & Compliance,Industry-specific,FedRAMP authorization (if applicable),N,For federal government customers
+Regulatory & Compliance,Industry-specific,FDA registrations (if applicable),N,For medical device / pharma
+Employment & Labor,Employment,Standard employment agreement template,Y,Current form used
+Employment & Labor,Employment,Executive employment agreements,Y,All C-suite and direct reports
+Employment & Labor,Employment,Non-compete and non-solicit agreements,Y,Enforceability analysis
+Employment & Labor,Employment,Independent contractor agreements,N,Material contractor arrangements
+Employment & Labor,Employment,Severance arrangements and history,Y,Past severance payments
+Employment & Labor,Equity,Equity award agreements (all),Y,Full grant detail
+Employment & Labor,Equity,Acceleration provisions summary,Y,Single vs. double trigger
+Employment & Labor,Equity,Change-of-control bonus arrangements,Y,Existing 280G analysis if any
+Employment & Labor,Benefits,Employee benefits plan documents,Y,"Health, dental, 401(k), etc."
+Employment & Labor,Benefits,Employee stock purchase plan,N,If applicable
+Employment & Labor,Benefits,Pension or retirement obligations,N,Frozen or active plans
+Employment & Labor,Labor,Union / collective bargaining agreements,N,If applicable
+Employment & Labor,Labor,Labor disputes or union activity,Y,Current or threatened
+Employment & Labor,Labor,EEOC complaints and investigations,Y,Last 5 years
+Employment & Labor,Labor,Wage and hour compliance audit,N,FLSA / state wage compliance
+Employment & Labor,Labor,Worker classification analysis,N,For contractor / employee compliance
+Real Estate,Leases,All facility leases and amendments,Y,Full text of all leases
+Real Estate,Leases,Lease assignment / consent requirements,Y,For change-of-control
+Real Estate,Leases,Lease sublease arrangements,N,Any sublease income / expense
+Real Estate,Owned Property,Property deeds and title insurance,N,For owned real estate
+Real Estate,Owned Property,Property condition assessments,N,Recent inspections
+Real Estate,Owned Property,Environmental assessments (Phase I/II),N,For owned real estate
+Insurance,Policies,Schedule of all insurance policies,Y,"Limits, premiums, carriers, expiration"
+Insurance,Policies,Cyber insurance policy,Y,For breach response coverage
+Insurance,Policies,D&O policy (current and historical),Y,Including run-off / tail
+Insurance,Policies,EPLI policy,N,Employment practices liability
+Insurance,Claims,Insurance claims history (5 years),Y,Filed and outcome
+Insurance,Claims,Open claims status,Y,Including reserves and expected recovery

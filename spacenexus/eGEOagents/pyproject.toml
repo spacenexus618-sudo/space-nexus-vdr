@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "egeo"
+version = "2.2.0"
+description = "E-GEO: runtime-agnostic Generative Engine Optimization toolkit and CLI."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Vera Badias" }]
+keywords = ["geo", "generative-engine-optimization", "ai-search", "llm", "cli"]
+dependencies = [
+  "pyyaml>=6.0",   # SKILL.md frontmatter parsing (scripts/validate_skills.py)
+  "jsonschema>=4.0", # JSON-LD envelope validation (scripts/validate_jsonld.py)
+]
+
+[project.scripts]
+# Exposes the standalone `egeo` command after `pip install -e .`.
+# `python -m egeo ...` also works without installation.
+egeo = "egeo.cli:main"
+
+[project.urls]
+Homepage = "https://egeoagents.com"
+Repository = "https://github.com/mverab/eGEOagents"
+Documentation = "https://egeoagents.com/docs/getting-started/"
+
+[tool.setuptools]
+# The CLI package plus the root-level harness modules it reuses. Declaring the
+# py-modules keeps `import geo_eval` / `import llm_client` working in an editable
+# install; `python -m egeo` additionally bootstraps sys.path (see egeo/__init__.py).
+packages = ["egeo"]
+py-modules = ["geo_eval", "llm_client"]
+
+# Runtime resources (prompts, collectors, SUBSTRATE.md, example project.yaml)
+# must ship inside the wheel: the CLI resolves them via egeo.resource_root()
+# when the repository tree is absent (see tests/test_resources.py).
+[tool.setuptools.package-data]
+egeo = [
+  "resources/prompts/*.txt",
+  "resources/collectors/*.py",
+  "resources/collectors/*.md",
+  "resources/collectors/fixtures/*.json",
+  "resources/examples/*.yaml",
+  "resources/geo-output/schema/*.json",
+  "resources/SUBSTRATE.md",
+]

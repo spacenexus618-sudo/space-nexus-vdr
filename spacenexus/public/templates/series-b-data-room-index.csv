@@ -1,0 +1,121 @@
+Section,Subfolder,Document,Required,Notes
+01. Executive Summary,Pitch Materials,Information Memorandum / investor deck,Y,Comprehensive growth-stage deck
+01. Executive Summary,Pitch Materials,Company snapshot one-pager,Y,Quick reference summary
+01. Executive Summary,Pitch Materials,Product demo (live or recorded),Y,Required for every investor meeting
+01. Executive Summary,Pitch Materials,Management presentation deck,Y,Detailed company overview
+01. Executive Summary,Pitch Materials,Detailed financial model (Excel),Y,Working model with assumptions
+02. Corporate & Legal,Corporate Records,Certificate of incorporation and amendments,Y,All charter documents
+02. Corporate & Legal,Corporate Records,Bylaws / Operating Agreement (current),Y,Current governance rules
+02. Corporate & Legal,Corporate Records,Cap table — fully diluted (all classes),Y,"Including options, warrants, converts"
+02. Corporate & Legal,Corporate Records,Stock ledger,Y,Complete issuance history
+02. Corporate & Legal,Corporate Records,Form D filings (all rounds),Y,All private placement filings
+02. Corporate & Legal,Corporate Records,Board minutes and resolutions (3+ years),Y,All formal board actions
+02. Corporate & Legal,Corporate Records,Shareholder minutes and consents,Y,All stockholder approvals
+02. Corporate & Legal,Equity Plans,Equity incentive plan documents (all),Y,Plan documents and amendments
+02. Corporate & Legal,Equity Plans,Option grant detail (all),Y,Full grant ledger
+02. Corporate & Legal,Equity Plans,Acceleration provisions summary,Y,Single vs. double trigger
+02. Corporate & Legal,Equity Plans,409A valuations (history),N,For option strike price support
+02. Corporate & Legal,Material Contracts,Top 20 customer contracts,Y,By revenue
+02. Corporate & Legal,Material Contracts,Top 10 vendor contracts (by spend),Y,Critical vendors
+02. Corporate & Legal,Material Contracts,Change-of-control provisions,Y,Across material contracts
+02. Corporate & Legal,Material Contracts,Most-favored-customer clauses,Y,Identify exposure
+02. Corporate & Legal,Litigation,Schedule of pending litigation,Y,All active matters
+02. Corporate & Legal,Litigation,Schedule of threatened claims,Y,Pre-litigation demands
+02. Corporate & Legal,Litigation,Historical litigation outcomes (5 years),Y,Closed matters and outcomes
+02. Corporate & Legal,Insurance,Insurance policy schedule,Y,"All policies, limits, premiums"
+02. Corporate & Legal,Insurance,Claims history (5 years),Y,Filed claims and outcomes
+02. Corporate & Legal,IP,Patent portfolio (granted and pending),Y,All jurisdictions
+02. Corporate & Legal,IP,Trademark portfolio,Y,Registrations and applications
+02. Corporate & Legal,IP,IP assignment agreements,Y,"Founders, employees, contractors"
+02. Corporate & Legal,IP,Open source license audit (SBOM),Y,Software bill of materials
+02. Corporate & Legal,IP,In-bound IP licenses,Y,Third-party technology rights
+02. Corporate & Legal,Regulatory,Material licenses and permits,Y,All government authorizations
+02. Corporate & Legal,Regulatory,Privacy policy and ToS (current),Y,Public-facing policies
+02. Corporate & Legal,Regulatory,Data Processing Agreements (vendor + customer),Y,All material processors
+03. Financial,Historicals,Audited financial statements (3 years),Y,Reviewed by independent auditor
+03. Financial,Historicals,Unaudited interim financials (YTD),Y,Current year-to-date
+03. Financial,Historicals,Monthly management accounts (24 months),Y,Detailed monthly P&L and BS
+03. Financial,Historicals,Trial balance (most recent period),Y,Detail-level GL trial balance
+03. Financial,Revenue,Revenue by customer detail (top 20),Y,Transaction-level revenue
+03. Financial,Revenue,Revenue by product / SKU detail,Y,For product-level analysis
+03. Financial,Revenue,Revenue by geography,Y,For geographic analysis
+03. Financial,Revenue,ARR / MRR detail (24 months),Y,For recurring revenue companies
+03. Financial,Revenue,Customer cohort retention analysis,Y,Logo and revenue by cohort
+03. Financial,Revenue,Net revenue retention (NRR),Y,Including expansion and churn
+03. Financial,Revenue,Customer acquisition cost (CAC),Y,By channel
+03. Financial,Revenue,Customer lifetime value (LTV),Y,And LTV/CAC ratio
+03. Financial,Costs,Cost of revenue detail,Y,Direct costs by category
+03. Financial,Costs,Operating expense detail by function,Y,"R&D, S&M, G&A detail"
+03. Financial,Costs,Payroll register (current),Y,"Salary, benefits, taxes by employee"
+03. Financial,Costs,Capital expenditure history (3 years),N,For capital-intensive businesses
+03. Financial,Working Capital,AR aging schedule,Y,Customer-level aging detail
+03. Financial,Working Capital,AP aging schedule,Y,Vendor-level aging detail
+03. Financial,Working Capital,Net working capital analysis,Y,13-month walk
+03. Financial,Tax,Federal and state tax returns (3 years),Y,All filed returns
+03. Financial,Tax,Sales and use tax filings,Y,Compliance documentation
+03. Financial,Tax,Open tax positions (FIN 48),Y,Uncertain tax positions
+03. Financial,Debt,Schedule of all debt instruments,Y,Detail of all outstanding debt
+03. Financial,Debt,Credit agreements and amendments,Y,Full debt documentation
+03. Financial,Debt,Debt covenant compliance certificates,Y,Most recent compliance
+03. Financial,Projections,3-year financial projections (monthly),Y,Detailed forward model
+03. Financial,Projections,Key assumptions and drivers,Y,Underlying model inputs
+03. Financial,Projections,Hiring plan (next 12-18 months),Y,"Roles, timing, comp"
+03. Financial,Projections,Use of funds breakdown,Y,How the round will be deployed
+03. Financial,Projections,Path to profitability analysis,Y,Cash flow breakeven timeline
+04. Commercial,Customers,Top 20 customers by revenue,Y,Concentration analysis
+03. Financial,Commercial,Customer reference list (10+ customers),Y,For investor reference calls
+04. Commercial,Customers,Customer case studies (5+),Y,Detailed success stories
+04. Commercial,Customers,NPS / customer satisfaction data,N,Customer health metrics
+04. Commercial,Sales,Sales pipeline and forecast,Y,Active opportunities by stage
+04. Commercial,Sales,Sales process documentation,N,GTM playbook and ICP
+04. Commercial,Sales,Win/loss analysis,N,Recent sales outcomes
+04. Commercial,Sales,Sales rep productivity,N,Per-rep bookings and attainment
+04. Commercial,Marketing,Marketing plan and budget,N,Current year plan and spend
+04. Commercial,Marketing,Brand and positioning materials,N,Messaging and competitive positioning
+04. Commercial,Market,"Market sizing (TAM, SAM, SOM)",Y,Bottom-up and top-down analysis
+04. Commercial,Market,Competitive landscape and positioning,Y,Detailed competitor profiles
+04. Commercial,Market,Industry trends and tailwinds,N,Macro market context
+04. Commercial,Market,Analyst coverage and reports,N,Third-party research
+05. Product & Technology,Architecture,Technical architecture overview,Y,High-level system design
+05. Product & Technology,Architecture,Infrastructure and hosting,Y,Cloud providers and regions
+05. Product & Technology,Architecture,Disaster recovery plan,Y,DR procedures and RTO/RPO
+05. Product & Technology,Product,Product roadmap (12-24 months),Y,Strategic direction
+05. Product & Technology,Product,Product analytics and usage data,Y,"MAU, DAU, engagement metrics"
+05. Product & Technology,Product,Customer feedback and NPS,N,Product satisfaction signals
+05. Product & Technology,Security,SOC 2 Type II report (most recent),Y,Full report with auditor opinion
+05. Product & Technology,Security,Penetration test results (12 months),Y,External pen test by third party
+05. Product & Technology,Security,Information security policy,Y,Master information security policy
+05. Product & Technology,Security,Data breach history (5 years),Y,Any incidents and outcomes
+05. Product & Technology,Security,Incident response plan,Y,Documented IR procedures
+05. Product & Technology,Security,Cyber insurance policy,Y,Coverage and limits
+05. Product & Technology,Privacy,GDPR / CCPA compliance documentation,Y,For international operations
+05. Product & Technology,Privacy,Data Processing Agreements,Y,All material processors
+05. Product & Technology,Privacy,Cross-border data transfer mechanisms,N,SCCs and adequacy decisions
+06. People & HR,Org & Headcount,Organizational chart (full company),Y,Current org structure
+06. People & HR,Org & Headcount,"Headcount by function, location, tenure",Y,Detailed headcount analytics
+06. People & HR,Org & Headcount,Attrition and retention reports (24 months),Y,Voluntary/involuntary breakdown
+06. People & HR,Compensation,Compensation philosophy and bands,N,Internal compensation framework
+06. People & HR,Compensation,Executive compensation,Y,C-suite arrangements
+06. People & HR,Compensation,Sales compensation plans,N,For sales teams
+06. People & HR,Compensation,Bonus and incentive plans,N,Current year plans
+06. People & HR,Equity,Equity plan and reserve status,Y,Plan document and availability
+06. People & HR,Equity,Individual equity grants (full detail),Y,"All grants, vesting, exercise prices"
+06. People & HR,Equity,Acceleration provisions summary,Y,Single vs. double trigger
+06. People & HR,Employment,Key executive employment agreements,Y,C-suite and direct reports
+06. People & HR,Employment,Non-compete and non-solicit agreements,Y,Material employees
+06. People & HR,Employment,EEOC complaints and investigations,Y,Last 5 years
+06. People & HR,Employment,Labor disputes or union activity,Y,Current or threatened
+06. People & HR,Benefits,Employee benefits plan documents,N,"Health, dental, 401(k)"
+06. People & HR,Benefits,Employee handbook,N,Current handbook
+07. Operations,Real Estate,Facility lease agreements (all),Y,Full text of all leases
+07. Operations,Real Estate,Lease consent requirements (change-of-control),Y,For assignment provisions
+07. Operations,Suppliers,Key supplier list and spend,Y,Top 25 by spend
+07. Operations,Suppliers,Critical supplier contracts and SLAs,Y,Single-source dependencies
+07. Operations,Suppliers,Vendor security assessments,N,For critical vendors
+07. Operations,ESG & Sustainability,ESG and sustainability reports,N,For ESG-focused investors
+07. Operations,ESG & Sustainability,DEI initiatives and metrics,N,For DEI-focused investors
+08. Management Presentation,Process Materials,Information Memorandum (full version),Y,Primary marketing document
+08. Management Presentation,Process Materials,Management presentation deck,Y,Detailed company overview
+08. Management Presentation,Process Materials,Process letter / timeline,Y,Round timeline and milestones
+08. Management Presentation,Process Materials,Q&A log (current),Y,Live log of investor questions
+08. Management Presentation,Process Materials,FAQ document (pre-prepared),Y,Anticipated questions with answers

@@ -1,0 +1,1624 @@
+---
+const title = 'E-GEO — Open-Source GEO & AEO Toolkit';
+const description =
+	'E-GEO — open-source Generative Engine Optimization (GEO) & Answer Engine Optimization (AEO) toolkit (Python CLI + Claude Code skills), based on published GEO research (arXiv:2511.20867).';
+
+const orgSchema = JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: 'E-GEO',
+	url: 'https://egeoagents.com',
+	sameAs: [
+		'https://github.com/mverab/eGEOagents',
+		'https://arxiv.org/abs/2511.20867',
+	],
+	founder: {
+		'@type': 'Person',
+		name: 'Miguel Vera',
+		sameAs: ['https://github.com/mverab'],
+	},
+});
+
+const softwareSchema = JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'SoftwareApplication',
+	name: 'E-GEO',
+	description,
+	applicationCategory: 'DeveloperApplication',
+	operatingSystem: 'Linux, macOS, Windows',
+	license: 'https://opensource.org/licenses/MIT',
+	codeRepository: 'https://github.com/mverab/eGEOagents',
+	citation: 'https://arxiv.org/abs/2511.20867',
+	url: 'https://egeoagents.com',
+	offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+	author: {
+		'@type': 'Person',
+		name: 'Miguel Vera',
+		sameAs: ['https://github.com/mverab'],
+	},
+});
+
+// Answer-engine brand marks, vendored from the Simple Icons package
+// (simple-icons@16.28.0; OpenAI mark from simple-icons@13.21.0). 24x24 viewBox paths.
+const engineMarks = [
+	{ label: 'ChatGPT', path: 'M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z' },
+	{ label: 'Perplexity', path: 'M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z' },
+	{ label: 'Gemini', path: 'M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81' },
+	{ label: 'Claude', path: 'm4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href="https://egeoagents.com/" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://egeoagents.com/" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script type="application/ld+json" set:html={orgSchema} />
+		<script type="application/ld+json" set:html={softwareSchema} />
+	</head>
+	<body>
+		<header class="row hd">
+			<div class="cells">
+				<a class="c brand" href="/">E-GEO®</a>
+				<nav class="c nav" aria-label="Primary">
+					<a href="/docs/getting-started/">Docs</a>
+					<a href="/concepts/what-is-geo/">What is GEO?</a>
+					<a href="/compare/geo-tools-2026/">Compare</a>
+					<a href="https://github.com/mverab/eGEOagents">GitHub</a>
+				</nav>
+				<span class="c meta">Open source / MIT</span>
+			</div>
+		</header>
+
+		<main>
+			<section class="row hero" aria-labelledby="hero-h">
+				<div class="cells">
+					<p class="c label">Generative Engine Optimization — for the answer economy</p>
+				</div>
+				<div class="cells hero-split">
+					<div class="c hero-left">
+						<h1 id="hero-h" data-reveal-words>
+							Your customers stopped searching. They started{' '}
+							<span class="asked">asking.</span>
+						</h1>
+						<p class="sub">
+							E-GEO analyzes, rewrites, and schema-marks your pages so answer engines
+							cite you. <b>ChatGPT. Perplexity. Gemini. Claude.</b> Be the source they
+							name.
+						</p>
+						<div class="cta-group">
+							<a class="primary" href="/docs/getting-started/"
+								>get started <span aria-hidden="true">→</span></a
+							>
+							<a class="ghost" href="https://github.com/mverab/eGEOagents"
+								>★ star on github</a
+							>
+							<a class="txt" href="https://arxiv.org/abs/2511.20867"
+								>read the research ↗</a
+							>
+						</div>
+						<div class="stats" aria-label="Project stats">
+							<span><b data-gh-stars>154★</b> github</span>
+							<span><b data-gh-forks>43</b> forks</span>
+							<span><b>MIT</b> license</span>
+							<span><b>arXiv</b> 2511.20867</span>
+						</div>
+					</div>
+					<figure
+						class="c field"
+						aria-label="Live diagram: questions flow into one generated answer, which cites a small set of sources — the highlighted node is the cited source"
+					>
+						<svg
+							id="citation-field"
+							data-motion-loop="raf"
+							viewBox="0 0 960 420"
+							role="img"
+							aria-hidden="false"
+						>
+							<title>The citation field</title>
+							<desc
+								>Questions enter from the left, resolve into one answer, and
+								the answer cites a marked source node.</desc
+							>
+							<text x="54" y="34">Questions in</text>
+							<text x="906" y="34" text-anchor="end">Sources cited</text>
+							<text x="480" y="286" text-anchor="middle">One answer</text>
+							<text x="906" y="250" text-anchor="end">[1] yoursite.com — cited</text>
+
+							<path class="flow" d="M 66 60 H 240 V 186 H 438" />
+							<path class="flow" d="M 66 150 H 280 V 202 H 438" />
+							<path class="flow" d="M 66 270 H 320 V 218 H 438" />
+							<path class="flow" d="M 66 330 H 360 V 234 H 438" />
+							<path class="flow" d="M 522 186 H 660 V 120 H 882" />
+							<path class="flow" d="M 522 234 H 660 V 300 H 882" />
+							<path class="wire" d="M 522 210 H 876" />
+							<path
+								id="cite-route"
+								d="M 66 150 H 280 V 202 H 480 V 210 H 876"
+							/>
+
+							<rect class="qn" x="54" y="54" width="12" height="12" />
+							<rect class="qn" x="54" y="144" width="12" height="12" />
+							<rect class="qn" x="54" y="264" width="12" height="12" />
+							<rect class="qn" x="54" y="324" width="12" height="12" />
+
+							<g id="tok-1" class="tok" transform="translate(240,120)" data-follow="0">
+								<rect x="-5" y="-5" width="10" height="10" />
+							</g>
+							<g id="tok-2" class="tok" transform="translate(200,270)" data-follow="2">
+								<rect x="-5" y="-5" width="10" height="10" />
+							</g>
+							<g id="tok-3" class="tok" transform="translate(660,240)" data-follow="5">
+								<rect x="-5" y="-5" width="10" height="10" />
+							</g>
+
+							<rect id="answer-node" x="438" y="168" width="84" height="84" />
+							<line id="scan" x1="446" y1="210" x2="514" y2="210" />
+
+							<rect class="qn" x="882" y="114" width="12" height="12" />
+							<rect class="qn" x="882" y="294" width="12" height="12" />
+							<rect id="pulse-ring" x="868" y="186" width="48" height="48" />
+							<rect id="cited-node" x="876" y="194" width="32" height="32" />
+						</svg>
+						<figcaption class="field-caption">
+							<span class="lbl">The citation field</span>
+							<p>
+								Millions of questions stream into an answer engine. It compresses
+								them into a single reply and names only a handful of sources. GEO
+								is the work of becoming the marked node — the source the answer
+								cites.
+							</p>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<aside class="row engine-rail" id="engine-rail" aria-labelledby="rail-lbl">
+				<div class="cells">
+					<p class="c rail-label" id="rail-lbl">
+						Answer engines / the surfaces where sources get named
+					</p>
+					<div class="c rail-clip">
+						<ul class="rail-track">
+							{
+								[0, 1, 2].map(() =>
+									engineMarks.map((m) => (
+										<li>
+											<svg
+												class="mark"
+												viewBox="0 0 24 24"
+												role="img"
+												aria-label={m.label}
+												focusable="false"
+											>
+												<title>{m.label}</title>
+												<path fill="currentColor" d={m.path} />
+											</svg>
+										</li>
+									))
+								)
+							}
+						</ul>
+						<ul class="rail-track" aria-hidden="true">
+							{
+								[0, 1, 2].map(() =>
+									engineMarks.map((m) => (
+										<li>
+											<svg class="mark" viewBox="0 0 24 24" focusable="false">
+												<title>{m.label}</title>
+												<path fill="currentColor" d={m.path} />
+											</svg>
+										</li>
+									))
+								)
+							}
+						</ul>
+					</div>
+				</div>
+			</aside>
+
+			<section class="row qa" aria-label="An AI answer citing your site" id="answer-card">
+				<div class="cells">
+					<div class="c q">
+						<span class="lbl">The question</span>
+						<p class="qtext">“Which product should I actually buy?”</p>
+					</div>
+					<div class="c a">
+						<span class="lbl">The answer — and its source</span>
+						<p>
+							Answer engines compress the whole web into one reply with a handful of
+							citations. Rank doesn't exist there. Either you are quoted, or you are
+							invisible.
+						</p>
+						<p class="cite"><span class="one">[1]</span> yoursite.com — cited</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="row shift" aria-labelledby="shift-h">
+				<div class="cells">
+					<h2 class="c" id="shift-h">The shift</h2>
+					<div class="c body">
+						<p class="big">
+							The front page of the web is no longer a list of ten blue links. It is
+							a single generated answer, and the only real estate left is the
+							citation inside it. Traffic now belongs to the sources answer engines
+							trust enough to quote.
+						</p>
+						<p class="entity">
+							E-GEO — open-source Generative Engine Optimization (GEO) &amp; Answer
+							Engine Optimization (AEO) toolkit (Python CLI + Claude Code skills),
+							based on published GEO research (arXiv:2511.20867).
+						</p>
+						<div class="answer-block" id="answer-block">
+							<span class="lbl">What E-GEO does, in one block</span>
+							<p>
+								E-GEO is an open-source toolkit that makes web content get cited by
+								AI answer engines such as ChatGPT, Perplexity, Gemini, and Claude.
+								It analyzes pages against ten research-derived GEO features,
+								rewrites content so every claim is quotable while preserving brand
+								voice and facts, and generates JSON-LD schema so engines attribute
+								the source. It ships as a Python CLI with Claude Code skills,
+								includes a reproducible evaluation harness you can run offline, and
+								a continuous monitoring loop that watches pages over time. It is
+								MIT-licensed and based on published GEO research
+								(arXiv:2511.20867), building on Princeton's KDD 2024 study.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="row how" aria-labelledby="how-h">
+				<div class="cells">
+					<h2 class="c" id="how-h">How it<br />works</h2>
+					<ol class="c steps">
+						<li>
+							<b>01 Analyze</b>
+							<span
+								>Point E-GEO at a page. It scores it against the ten features
+								answer engines reward — structure, statistics, quotable claims,
+								clarity.</span
+							>
+						</li>
+						<li>
+							<b>02 Rewrite</b>
+							<span
+								>It restructures the content for citation. Your voice stays. Your
+								facts stay. Every claim becomes liftable.</span
+							>
+						</li>
+						<li>
+							<b>03 Get cited</b>
+							<span
+								>Schema goes on, the loop keeps watching, and when an engine
+								answers your customer's question — you are the source it names.</span
+							>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="row caps" aria-labelledby="caps-h">
+				<div class="cells caps-head">
+					<h2 class="c" id="caps-h">What's in the box</h2>
+				</div>
+				<div class="cells caps-grid">
+					<div class="c cap">
+						<b>10-feature GEO scoring</b>
+						<p>Every page measured against the research-derived features engines reward.</p>
+					</div>
+					<div class="c cap">
+						<b>Content rewriting</b>
+						<p>Copy-paste-ready rewrites — brand voice preserved, facts untouched.</p>
+					</div>
+					<div class="c cap">
+						<b>JSON-LD schema generation</b>
+						<p>Structured markup for every page, so engines attribute, not just read.</p>
+					</div>
+					<div class="c cap">
+						<b>Reproducible evaluation harness</b>
+						<p>Verify the rewriter's effect yourself — offline, deterministic, CI-ready.</p>
+					</div>
+					<div class="c cap">
+						<b>Continuous monitoring loop</b>
+						<p>geo-loop watches your pages over time with bounded, scheduled runs.</p>
+					</div>
+					<div class="c cap">
+						<b>Claude Code skills</b>
+						<p>The whole pipeline, installable as skills into your Claude Code setup.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="row compare" aria-labelledby="cmp-h">
+				<div class="cells">
+					<div class="c cmp-intro">
+						<h2 id="cmp-h">The honest comparison</h2>
+						<p>
+							Last verified: 2026-08-05. A GEO tool caught inflating itself loses
+							the only thing that matters: being a source engines can trust. Full
+							roundup: <a href="/compare/geo-tools-2026/">open-source GEO tools in 2026</a> ·
+							head-to-head: <a href="/compare/e-geo-vs-geo-optimizer-skill/">E-GEO vs geo-optimizer-skill</a> ·
+							guides: <a href="/guides/rank-in-chatgpt-search/">rank in ChatGPT search</a> ·
+							<a href="/guides/rank-in-perplexity/">rank in Perplexity</a> ·
+							<a href="/concepts/what-is-aeo/">what is AEO</a>.
+						</p>
+					</div>
+				</div>
+				<div class="cells table-wrap">
+					<table class="c">
+						<thead>
+							<tr>
+								<th scope="col">Tool</th>
+								<th scope="col">Type</th>
+								<th scope="col">Best for</th>
+								<th scope="col">Stars</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>geo-optimizer-skill (Auriti-Labs)</td>
+								<td>CLI + Python lib + MCP + Astro integration</td>
+								<td>Broad site audits (0–100, 47 methods)</td>
+								<td>~644</td>
+							</tr>
+							<tr class="us">
+								<td>E-GEO</td>
+								<td>Python CLI + Claude Code skills + MCP-based validation</td>
+								<td>Full rewrite pipeline, reproducible evaluation, continuous loops</td>
+								<td data-gh-stars>154</td>
+							</tr>
+							<tr>
+								<td>GEO (original research repo)</td>
+								<td>Research code</td>
+								<td>Reproducing the Princeton KDD 2024 experiments</td>
+								<td>—</td>
+							</tr>
+							<tr>
+								<td>Awesome GEO</td>
+								<td>Curated list</td>
+								<td>Discovering the ecosystem</td>
+								<td>—</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section class="row install" aria-labelledby="inst-h">
+				<div class="cells">
+					<h2 class="c" id="inst-h">Install</h2>
+					<div class="c chips">
+						<div class="chip">
+							<code>pip install egeo</code>
+							<button type="button" data-copy="pip install egeo">copy</button>
+						</div>
+						<div class="chip">
+							<code>npx skills add https://github.com/mverab/eGEOagents</code>
+							<button
+								type="button"
+								data-copy="npx skills add https://github.com/mverab/eGEOagents"
+								>copy</button
+							>
+						</div>
+						<p class="chip-note">
+							Then read the <a href="/docs/getting-started/">getting started guide</a>
+							and the <a href="/docs/cli/">CLI reference</a>. Questions? The
+							<a href="/docs/faq/">FAQ</a> is short and honest.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="row service" aria-labelledby="svc-h">
+				<div class="cells">
+					<h2 class="c" id="svc-h">Rather have it done for you?</h2>
+					<div class="c svc-body">
+						<p class="svc-lede">
+							<strong>GEO Audit &amp; Implementation</strong> — $199, one time.
+						</p>
+						<ul class="svc-list">
+							<li>Full GEO/AEO audit report of your site</li>
+							<li>One priority page rewritten with the 10 research features</li>
+							<li>JSON-LD schema pack + llms.txt for your domain</li>
+						</ul>
+						<p class="svc-note">
+							Delivered within 5 business days. The toolkit stays free and open
+							source (MIT) — this is us running it for you.
+						</p>
+						<div class="cta-group svc-cta">
+							<a class="primary" href="https://buy.stripe.com/dRm5kD7CrcPs8ILaco3Ru0j?utm_source=egeoagents&utm_medium=landing&utm_campaign=geo_audit"
+								>book the audit <span aria-hidden="true">→</span></a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="row final" aria-labelledby="final-h">
+				<div class="cells">
+					<h2 class="c" id="final-h">Be the source<br />they <span class="asked">name.</span></h2>
+				</div>
+				<div class="cells cta">
+					<a class="c primary" href="/docs/getting-started/"
+						>get started <span aria-hidden="true">→</span></a
+					>
+					<a class="c ghost" href="https://github.com/mverab/eGEOagents"
+						>★ star on github</a
+					>
+					<a class="c txt" href="https://arxiv.org/abs/2511.20867"
+						>read the research ↗</a
+					>
+				</div>
+			</section>
+		</main>
+
+		<footer class="row ft">
+			<div class="cells">
+				<div class="c ft-col">
+					<b>E-GEO®</b>
+					<span><span data-gh-stars>154★</span> · <span data-gh-forks>43 forks</span> · mit · arxiv:2511.20867</span>
+				</div>
+				<nav class="c ft-col" aria-label="Documentation">
+					<b>Docs</b>
+					<a href="/docs/getting-started/">Getting started</a>
+					<a href="/docs/cli/">CLI reference</a>
+					<a href="/docs/faq/">FAQ</a>
+				</nav>
+				<nav class="c ft-col" aria-label="Concepts and comparisons">
+					<b>Learn</b>
+					<a href="/concepts/what-is-geo/">What is GEO?</a>
+					<a href="/concepts/what-is-aeo/">What is AEO?</a>
+					<a href="/guides/rank-in-chatgpt-search/">Rank in ChatGPT search</a>
+					<a href="/guides/rank-in-perplexity/">Rank in Perplexity</a>
+					<a href="/compare/geo-tools-2026/">GEO tools in 2026</a>
+					<a href="/compare/e-geo-vs-geo-optimizer-skill/">vs geo-optimizer-skill</a>
+				</nav>
+				<nav class="c ft-col" aria-label="External links">
+					<b>Elsewhere</b>
+					<a href="https://github.com/mverab/eGEOagents">GitHub</a>
+					<a href="https://arxiv.org/abs/2511.20867">arXiv:2511.20867</a>
+					<a href="https://github.com/mverab/eGEOagents/blob/main/LICENSE">MIT license</a>
+				</nav>
+			</div>
+		</footer>
+	</body>
+</html>
+
+
+<style>
+	:root {
+		--white: #ffffff;
+		--black: #000000;
+		--grey: #6b6b6b;
+		--flu: #d4ff00;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html {
+		background: var(--white);
+	}
+	body {
+		background: var(--white);
+		color: var(--black);
+		font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		line-height: 1.4;
+		border-top: 2px solid var(--black);
+	}
+	a {
+		color: inherit;
+	}
+	.row {
+		border-bottom: 2px solid var(--black);
+	}
+	.cells {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+	.cells + .cells {
+		border-top: 2px solid var(--black);
+	}
+	.c {
+		border-left: 2px solid var(--black);
+	}
+	.c:first-child {
+		border-left: none;
+	}
+
+	/* header */
+	.hd .c {
+		padding: 18px 24px;
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+	.hd .brand {
+		grid-column: span 3;
+		font-size: 1rem;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		text-decoration: none;
+	}
+	.hd .nav {
+		grid-column: span 6;
+		display: flex;
+		gap: 28px;
+		flex-wrap: wrap;
+	}
+	.hd .nav a {
+		text-decoration: none;
+	}
+	.hd .nav a:hover {
+		background: var(--black);
+		color: var(--white);
+	}
+	.hd .meta {
+		grid-column: span 3;
+		text-align: right;
+		color: var(--grey);
+		font-weight: 500;
+	}
+
+	/* hero */
+	.label {
+		grid-column: 1 / -1;
+		padding: 14px 24px;
+		font-size: 0.72rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+	}
+	.hero {
+		display: flex;
+		flex-direction: column;
+		min-height: clamp(720px, calc(100svh - 72px), 860px);
+	}
+	.hero .cells {
+		width: 100%;
+	}
+	.hero .hero-split {
+		flex: 1 1 auto;
+	}
+	h1 {
+		font-weight: 800;
+		font-size: clamp(3rem, 5.5vw, 7rem);
+		line-height: 0.95;
+		letter-spacing: -0.045em;
+		text-transform: uppercase;
+		max-width: 18ch;
+	}
+	.hero-split .hero-left {
+		grid-column: span 7;
+		padding: 48px 24px 56px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 32px;
+	}
+	.asked {
+		background: var(--flu);
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+		padding: 0 0.06em;
+	}
+	h1 .w {
+		display: inline-block;
+		will-change: transform, filter;
+	}
+	.js-reveal h1 .w {
+		opacity: 0;
+		transform: translateY(40px);
+		filter: blur(20px);
+	}
+	.js-reveal h1 .w.in {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
+		transition:
+			opacity 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+			transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+			filter 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+
+	.sub {
+		font-size: 1.1rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		max-width: 42ch;
+	}
+	.sub b {
+		font-weight: 800;
+	}
+	.stats {
+		font-size: 0.78rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 20px;
+		color: var(--grey);
+	}
+	.stats b {
+		color: var(--black);
+	}
+
+	/* hero cta group */
+	.cta-group {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 14px;
+	}
+	.cta-group a {
+		text-decoration: none;
+		font-weight: 800;
+		font-size: 0.88rem;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		padding: 14px 22px;
+	}
+	.cta-group .primary {
+		background: var(--black);
+		color: var(--white);
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.cta-group .primary:hover {
+		background: var(--flu);
+		color: var(--black);
+	}
+	.cta-group .ghost {
+		border: 2px solid var(--black);
+		padding: 12px 20px;
+	}
+	.cta-group .ghost:hover {
+		background: var(--black);
+		color: var(--white);
+	}
+	.cta-group .txt {
+		font-weight: 600;
+		color: var(--grey);
+		font-size: 0.85rem;
+		text-transform: none;
+		padding: 0;
+	}
+	.cta-group .txt:hover {
+		color: var(--black);
+	}
+
+	/* citation field */
+	.field-caption {
+		margin-top: 18px;
+		padding-top: 18px;
+		border-top: 2px solid var(--black);
+	}
+	.field-caption p {
+		font-size: 0.88rem;
+		font-weight: 500;
+		color: var(--grey);
+		line-height: 1.55;
+		max-width: 44ch;
+	}
+	.hero-split .field {
+		grid-column: span 5;
+		padding: 28px 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	#citation-field {
+		display: block;
+		width: 100%;
+		height: auto;
+		flex: 1 1 auto;
+		min-height: 340px;
+		max-height: 440px;
+	}
+	#citation-field text {
+		font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 16px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		fill: var(--black);
+	}
+	#citation-field .flow,
+	#citation-field .wire {
+		fill: none;
+		stroke: var(--black);
+		stroke-width: 2;
+	}
+	#citation-field .qn {
+		fill: var(--black);
+	}
+	#citation-field .tok rect {
+		fill: var(--white);
+		stroke: var(--black);
+		stroke-width: 2;
+	}
+	#cite-route {
+		fill: none;
+		stroke: var(--flu);
+		stroke-width: 4;
+	}
+	#answer-node {
+		fill: var(--white);
+		stroke: var(--black);
+		stroke-width: 2;
+	}
+	#scan {
+		stroke: var(--black);
+		stroke-width: 2;
+	}
+	#pulse-ring {
+		fill: none;
+		stroke: var(--black);
+		stroke-width: 2;
+		opacity: 0;
+		transform-origin: 892px 210px;
+	}
+	#cited-node {
+		fill: var(--flu);
+		stroke: var(--black);
+		stroke-width: 2;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		#cite-route {
+			stroke-dasharray: none !important;
+			stroke-dashoffset: 0 !important;
+		}
+		#pulse-ring {
+			opacity: 1 !important;
+		}
+	}
+
+	/* cta rows */
+	.cta a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		padding: 26px 24px;
+		text-decoration: none;
+		font-weight: 800;
+		font-size: 1.05rem;
+		text-transform: uppercase;
+		letter-spacing: -0.01em;
+	}
+	.cta .primary {
+		grid-column: span 5;
+		background: var(--black);
+		color: var(--white);
+	}
+	.cta .primary:hover {
+		background: var(--flu);
+		color: var(--black);
+	}
+	.cta .ghost {
+		grid-column: span 4;
+	}
+	.cta .ghost:hover {
+		background: var(--black);
+		color: var(--white);
+	}
+	.cta .txt {
+		grid-column: span 3;
+		font-weight: 600;
+		color: var(--grey);
+		font-size: 0.9rem;
+		text-transform: none;
+	}
+	.cta .txt:hover {
+		color: var(--black);
+	}
+
+	/* answer card */
+	.qa .c {
+		padding: 36px 24px;
+	}
+	.qa .q {
+		grid-column: span 6;
+	}
+	.qa .a {
+		grid-column: span 6;
+	}
+	.lbl {
+		font-size: 0.72rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 16px;
+		display: block;
+	}
+	.qtext {
+		font-size: 1.9rem;
+		font-weight: 500;
+		font-style: italic;
+		letter-spacing: -0.02em;
+		line-height: 1.15;
+		max-width: 20ch;
+	}
+	.qa .a p {
+		font-size: 1.1rem;
+		line-height: 1.55;
+		max-width: 44ch;
+	}
+	.cite {
+		margin-top: 24px;
+		display: inline-flex;
+		align-items: center;
+		gap: 14px;
+		border: 2px solid var(--black);
+		padding: 14px 18px;
+		font-weight: 800;
+		font-size: 0.95rem;
+	}
+	.cite .one {
+		background: var(--flu);
+		padding: 2px 10px;
+	}
+
+	/* section headings pattern */
+	h2 {
+		font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+		line-height: 1;
+	}
+
+	/* the shift */
+	.shift .c {
+		padding: 36px 24px 56px;
+	}
+	.shift h2 {
+		grid-column: span 4;
+	}
+	.shift .body {
+		grid-column: span 8;
+	}
+	.shift .big {
+		font-size: 1.35rem;
+		font-weight: 500;
+		letter-spacing: -0.015em;
+		line-height: 1.4;
+		max-width: 46ch;
+	}
+	.entity {
+		margin-top: 28px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--grey);
+		max-width: 70ch;
+	}
+	.answer-block {
+		margin-top: 28px;
+		border: 2px solid var(--black);
+		padding: 24px;
+		max-width: 62ch;
+	}
+	.answer-block p {
+		font-size: 0.98rem;
+		line-height: 1.6;
+	}
+
+	/* how it works */
+	.how .c {
+		padding: 36px 24px 56px;
+	}
+	.how h2 {
+		grid-column: span 4;
+	}
+	.steps {
+		grid-column: span 8;
+		list-style: none;
+	}
+	.steps li {
+		display: grid;
+		grid-template-columns: 160px 1fr;
+		gap: 20px;
+		padding: 18px 0;
+		border-bottom: 2px solid var(--black);
+		font-size: 1rem;
+	}
+	.steps li:first-child {
+		padding-top: 0;
+	}
+	.steps li:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.steps b {
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.steps span {
+		color: var(--grey);
+		font-weight: 500;
+		max-width: 52ch;
+	}
+
+	/* capabilities */
+	.caps-head .c {
+		grid-column: 1 / -1;
+		padding: 36px 24px;
+	}
+	.caps-grid .cap {
+		grid-column: span 4;
+		padding: 28px 24px 36px;
+	}
+	.caps-grid .cap:nth-child(n + 4) {
+		border-top: 2px solid var(--black);
+	}
+	.caps-grid .cap:nth-child(4) {
+		border-left: none;
+	}
+	.cap b {
+		font-weight: 800;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: -0.01em;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.cap p {
+		font-size: 0.9rem;
+		color: var(--grey);
+		font-weight: 500;
+		line-height: 1.55;
+		max-width: 34ch;
+	}
+
+	/* compare */
+	.cmp-intro {
+		grid-column: 1 / -1;
+		padding: 36px 24px;
+	}
+	.cmp-intro p {
+		margin-top: 14px;
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: var(--grey);
+		max-width: 74ch;
+	}
+	.cmp-intro a {
+		color: var(--black);
+		font-weight: 600;
+	}
+	.table-wrap {
+		overflow-x: auto;
+	}
+	.compare table {
+		grid-column: 1 / -1;
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.92rem;
+		min-width: 720px;
+	}
+	.compare th,
+	.compare td {
+		text-align: left;
+		padding: 16px 24px;
+		border-left: 2px solid var(--black);
+		vertical-align: top;
+	}
+	.compare th:first-child,
+	.compare td:first-child {
+		border-left: none;
+	}
+	.compare thead th {
+		font-size: 0.72rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-bottom: 2px solid var(--black);
+	}
+	.compare tbody tr + tr td {
+		border-top: 2px solid var(--black);
+	}
+	.compare .us td:first-child {
+		box-shadow: inset 6px 0 0 var(--flu);
+		font-weight: 800;
+	}
+
+	/* install */
+	.install .c {
+		padding: 36px 24px 56px;
+	}
+	.install h2 {
+		grid-column: span 4;
+	}
+	.chips {
+		grid-column: span 8;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		align-items: flex-start;
+	}
+	.chip {
+		display: inline-flex;
+		align-items: stretch;
+		border: 2px solid var(--black);
+		max-width: 100%;
+	}
+	.chip code {
+		font-family: inherit;
+		font-weight: 600;
+		font-size: 0.92rem;
+		padding: 12px 18px;
+		overflow-wrap: anywhere;
+	}
+	.chip button {
+		border: none;
+		border-left: 2px solid var(--black);
+		background: var(--white);
+		font: inherit;
+		font-weight: 800;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		padding: 0 16px;
+		cursor: pointer;
+	}
+	.chip button:hover {
+		background: var(--black);
+		color: var(--white);
+	}
+	.chip button.done {
+		background: var(--flu);
+		color: var(--black);
+	}
+	.chip-note {
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--grey);
+		max-width: 56ch;
+	}
+	.chip-note a {
+		color: var(--black);
+		font-weight: 600;
+	}
+
+	/* final cta */
+	.final h2 {
+		grid-column: 1 / -1;
+		font-size: clamp(2.4rem, 7vw, 6.4rem);
+		letter-spacing: -0.04em;
+		line-height: 0.94;
+		padding: 48px 24px 56px;
+	}
+
+	/* done-for-you service */
+	.service .c {
+		padding: 44px 24px 64px;
+	}
+	.service h2 {
+		grid-column: span 4;
+	}
+	.svc-body {
+		grid-column: span 8;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+		align-items: flex-start;
+	}
+	.svc-lede {
+		font-size: 1.15rem;
+		font-weight: 500;
+	}
+	.svc-lede strong {
+		font-weight: 800;
+		box-shadow: inset 0 -0.45em 0 var(--flu);
+	}
+	.svc-list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+	.svc-list li {
+		font-weight: 600;
+		padding-left: 18px;
+		border-left: 6px solid var(--flu);
+	}
+	.svc-note {
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--grey);
+		max-width: 56ch;
+	}
+	.svc-cta {
+		padding: 0;
+		margin-top: 16px;
+	}
+
+	/* footer */
+	.ft {
+		border-bottom: none;
+	}
+	.ft .ft-col {
+		grid-column: span 3;
+		padding: 32px 24px 56px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		font-size: 0.88rem;
+		font-weight: 500;
+	}
+	.ft b {
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 0.78rem;
+		letter-spacing: 0.08em;
+		margin-bottom: 6px;
+	}
+	.ft a {
+		text-decoration: none;
+		color: var(--grey);
+	}
+	.ft a:hover {
+		color: var(--black);
+	}
+	.ft span {
+		color: var(--grey);
+		font-size: 0.8rem;
+	}
+
+	/* scroll reveal — progressive enhancement, applied per-cell by JS.
+	   Content is visible by default; only elements JS tags with
+	   .scroll-reveal start translated/faded, and a fallback timer
+	   reveals anything the observer misses. */
+	.js-reveal .scroll-reveal {
+		opacity: 0;
+		transform: translateY(14px);
+		transition:
+			opacity 0.65s cubic-bezier(0.2, 0.7, 0.2, 1),
+			transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+		transition-delay: var(--sr-delay, 0s);
+	}
+	.js-reveal .scroll-reveal.sr-in {
+		opacity: 1;
+		transform: none;
+	}
+
+	/* answer-engine rail */
+	.engine-rail .rail-label {
+		grid-column: span 4;
+		padding: 15px 24px;
+		font-size: 0.68rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		align-self: center;
+	}
+	.engine-rail .rail-clip {
+		grid-column: span 8;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+	.rail-track {
+		display: flex;
+		flex: 0 0 auto;
+		list-style: none;
+		animation: rail-scroll 42s linear infinite;
+	}
+	.rail-track li {
+		display: flex;
+		align-items: center;
+		padding: 12px 0 12px 44px;
+		white-space: nowrap;
+	}
+	.rail-track li::after {
+		content: '·';
+		color: var(--grey);
+		margin-left: 44px;
+		font-size: 0.82rem;
+		font-weight: 800;
+	}
+	.rail-track .mark {
+		display: block;
+		width: 22px;
+		height: 22px;
+		padding: 3px;
+		box-sizing: content-box;
+		color: var(--black);
+		background: transparent;
+		transition: background 0.15s linear;
+	}
+	.engine-rail:hover .rail-track .mark,
+	.engine-rail:focus-within .rail-track .mark {
+		background: var(--flu);
+	}
+	@keyframes rail-scroll {
+		to {
+			transform: translateX(-100%);
+		}
+	}
+	.engine-rail:hover .rail-track,
+	.engine-rail:focus-within .rail-track,
+	.rail-paused .rail-track {
+		animation-play-state: paused;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.js-reveal h1 .w,
+		.js-reveal .scroll-reveal {
+			opacity: 1 !important;
+			transform: none !important;
+			filter: none !important;
+			transition: none !important;
+		}
+		.rail-track {
+			animation: none;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.hd .nav {
+			display: none;
+		}
+		.hd .brand {
+			grid-column: span 6;
+		}
+		.hd .meta {
+			grid-column: span 6;
+		}
+		.cta .primary,
+		.cta .ghost,
+		.cta .txt,
+		.qa .q,
+		.qa .a,
+		.shift h2,
+		.shift .body,
+		.how h2,
+		.steps,
+		.install h2,
+		.chips,
+		.service h2,
+		.svc-body,
+		.caps-grid .cap,
+		.hero-split .hero-left,
+		.hero-split .field,
+		.engine-rail .rail-label,
+		.engine-rail .rail-clip,
+		.ft .ft-col {
+			grid-column: 1 / -1;
+			border-left: none;
+		}
+		.engine-rail .rail-clip {
+			border-top: 2px solid var(--black);
+		}
+		.engine-rail .rail-label {
+			padding-bottom: 12px;
+		}
+		.hero {
+			min-height: 0;
+		}
+		.hero-split .hero-left {
+			padding: 36px 16px 40px;
+			gap: 26px;
+		}
+		h1 {
+			font-size: clamp(2.4rem, 10.5vw, 3.6rem);
+			max-width: none;
+		}
+		#citation-field {
+			min-height: 240px;
+			max-height: 320px;
+		}
+		.cta .ghost,
+		.cta .txt,
+		.qa .a,
+		.shift .body,
+		.steps,
+		.chips,
+		.hero-split .field {
+			border-top: 2px solid var(--black);
+		}
+		.caps-grid .cap + .cap {
+			border-top: 2px solid var(--black);
+		}
+		.shift h2,
+		.how h2,
+		.install h2,
+		.service h2 {
+			padding-bottom: 0;
+		}
+		.steps li {
+			grid-template-columns: 1fr;
+			gap: 6px;
+		}
+		.ft .ft-col + .ft-col {
+			border-top: 2px solid var(--black);
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
+	}
+	@media (max-width: 480px) {
+		.hd .c,
+		.qa .c,
+		.shift .c,
+		.how .c,
+		.install .c,
+		.service .c,
+		.caps-grid .cap,
+		.caps-head .c,
+		.cmp-intro,
+		.hero-split .field,
+		.ft .ft-col {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		.cta a {
+			padding: 20px 16px;
+		}
+		.compare th,
+		.compare td {
+			padding: 12px 16px;
+		}
+		.final h2 {
+			padding: 36px 16px 44px;
+		}
+	}
+</style>
+
+<script>
+	document.documentElement.classList.remove('js-reveal');
+	const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	if (!reduced) {
+		document.documentElement.classList.add('js-reveal');
+
+		const h1 = document.querySelector('[data-reveal-words]');
+		if (h1) {
+			const wrap = (node: Node) => {
+				if (node.nodeType === Node.TEXT_NODE) {
+					const frag = document.createDocumentFragment();
+					(node.textContent || '').split(/(\s+)/).forEach((part) => {
+						if (/^\s+$/.test(part) || part === '') {
+							frag.appendChild(document.createTextNode(part));
+						} else {
+							const s = document.createElement('span');
+							s.className = 'w';
+							s.textContent = part;
+							frag.appendChild(s);
+						}
+					});
+					node.parentNode?.replaceChild(frag, node);
+				}
+			};
+			Array.from(h1.childNodes).forEach((n) => {
+				if (n.nodeType === Node.ELEMENT_NODE) {
+					Array.from(n.childNodes).forEach(wrap);
+				} else {
+					wrap(n);
+				}
+			});
+			requestAnimationFrame(() => {
+				h1.querySelectorAll('.w').forEach((w, i) => {
+					(w as HTMLElement).style.transitionDelay = `${i * 0.06}s`;
+					requestAnimationFrame(() => w.classList.add('in'));
+				});
+			});
+		}
+
+		const revealRows = document.querySelectorAll('main .row:not(.hero)');
+		const targets: HTMLElement[] = [];
+		revealRows.forEach((row) => {
+			row.querySelectorAll(':scope > .cells').forEach((cells) => {
+				const cs = Array.from(cells.querySelectorAll(':scope > .c')) as HTMLElement[];
+				cs.forEach((c, i) => {
+					c.classList.add('scroll-reveal');
+					c.style.setProperty('--sr-delay', `${Math.min(i * 0.08, 0.24)}s`);
+					targets.push(c);
+				});
+			});
+		});
+		const io = new IntersectionObserver(
+			(entries) => {
+				for (const e of entries) {
+					if (e.isIntersecting) {
+						e.target.classList.add('sr-in');
+						io.unobserve(e.target);
+					}
+				}
+			},
+			{ threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+		);
+		if ('IntersectionObserver' in window) {
+			targets.forEach((c) => io.observe(c));
+			const revealStuck = () => {
+				if (document.hidden) return;
+				targets.forEach((c) => {
+					if (c.classList.contains('sr-in')) return;
+					const r = c.getBoundingClientRect();
+					if (r.top < window.innerHeight && r.bottom > 0) c.classList.add('sr-in');
+				});
+			};
+			setTimeout(revealStuck, 3000);
+			setInterval(revealStuck, 5000);
+		} else {
+			targets.forEach((c) => c.classList.add('sr-in'));
+		}
+	}
+
+	document.addEventListener('visibilitychange', () => {
+		document.documentElement.classList.toggle('rail-paused', document.hidden);
+	});
+
+	document.querySelectorAll('[data-copy]').forEach((btn) => {
+		btn.addEventListener('click', async () => {
+			const text = btn.getAttribute('data-copy') || '';
+			try {
+				await navigator.clipboard.writeText(text);
+				btn.classList.add('done');
+				btn.textContent = 'copied';
+				setTimeout(() => {
+					btn.classList.remove('done');
+					btn.textContent = 'copy';
+				}, 1400);
+			} catch {
+				/* clipboard unavailable */
+			}
+		});
+	});
+</script>
+
+<script is:inline>
+	(function () {
+		var svg = document.getElementById('citation-field');
+		if (!svg) return;
+		var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+		if (reduced.matches) return;
+
+		var flows = svg.querySelectorAll('.flow');
+		var route = svg.getElementById('cite-route');
+		var scan = svg.getElementById('scan');
+		var ring = svg.getElementById('pulse-ring');
+		var answer = svg.getElementById('answer-node');
+		var toks = svg.querySelectorAll('.tok');
+		var qns = svg.querySelectorAll('.qn');
+
+		var i;
+		for (i = 0; i < flows.length; i++) {
+			flows[i].style.strokeDasharray = '10 14';
+		}
+		var routeLen = route.getTotalLength();
+		var dash = 56;
+		var routePeriod = routeLen + 2 * dash;
+		route.style.strokeDasharray = dash + ' ' + routeLen;
+
+		var tokPaths = [];
+		var tokConf = [
+			{ dur: 9, phase: 0.0 },
+			{ dur: 11, phase: 0.45 },
+			{ dur: 8, phase: 0.7 },
+		];
+		for (i = 0; i < toks.length; i++) {
+			tokPaths.push(flows[parseInt(toks[i].getAttribute('data-follow'), 10)]);
+		}
+
+		var elapsed = 0;
+		var last = null;
+		var rafId = null;
+
+		function frame(now) {
+			if (last !== null) elapsed += Math.min(0.1, (now - last) / 1000);
+			last = now;
+			var t = elapsed;
+
+			for (var k = 0; k < flows.length; k++) {
+				flows[k].style.strokeDashoffset = String(-((t * 14 + k * 7) % 24));
+			}
+
+			var p = (t * 90) % routePeriod;
+			route.style.strokeDashoffset = String(dash - p);
+			var rp = p / routePeriod;
+			if (rp > 0.86) {
+				var q = (rp - 0.86) / 0.14;
+				ring.style.opacity = String(1 - q);
+				ring.style.transform = 'scale(' + (1 + q * 0.55) + ')';
+			} else {
+				ring.style.opacity = '0';
+				ring.style.transform = 'scale(1)';
+			}
+
+			var sy = 176 + Math.floor(((Math.sin(t * 0.7) + 1) / 2) * 17) * 4;
+			scan.setAttribute('y1', String(sy));
+			scan.setAttribute('y2', String(sy));
+			answer.style.strokeWidth = String(
+				2 + Math.round(((Math.sin(t * 0.9) + 1) / 2) * 2)
+			);
+
+			for (var m = 0; m < toks.length; m++) {
+				var path = tokPaths[m];
+				if (!path) continue;
+				var conf = tokConf[m % tokConf.length];
+				var prog = ((t / conf.dur + conf.phase) % 1 + 1) % 1;
+				var pt = path.getPointAtLength(prog * path.getTotalLength());
+				toks[m].setAttribute(
+					'transform',
+					'translate(' + Math.round(pt.x) + ',' + Math.round(pt.y) + ')'
+				);
+				toks[m].setAttribute(
+					'opacity',
+					String(Math.max(0, Math.min(1, prog * 6, (1 - prog) * 6)))
+				);
+			}
+
+			for (var n = 0; n < qns.length; n++) {
+				qns[n].setAttribute(
+					'opacity',
+					String(0.35 + 0.65 * ((Math.sin(t * 0.8 + n * 1.7) + 1) / 2))
+				);
+			}
+
+			rafId = requestAnimationFrame(frame);
+		}
+
+		function start() {
+			if (rafId === null) {
+				last = null;
+				rafId = requestAnimationFrame(frame);
+			}
+		}
+		function stop() {
+			if (rafId !== null) {
+				cancelAnimationFrame(rafId);
+				rafId = null;
+			}
+		}
+
+		document.addEventListener('visibilitychange', function () {
+			if (document.hidden) stop();
+			else start();
+		});
+		reduced.addEventListener('change', function (e) {
+			if (e.matches) stop();
+			else start();
+		});
+
+		start();
+	})();
+
+	// Live GitHub stats: replace the digit run inside each tagged element,
+	// preserving its surrounding format (★, " forks", bare table number).
+	fetch('https://api.github.com/repos/mverab/eGEOagents')
+		.then(function (r) {
+			return r.ok ? r.json() : null;
+		})
+		.then(function (d) {
+			if (!d) return;
+			document.querySelectorAll('[data-gh-stars]').forEach(function (el) {
+				el.textContent = el.textContent.replace(/\d+/, d.stargazers_count);
+			});
+			document.querySelectorAll('[data-gh-forks]').forEach(function (el) {
+				el.textContent = el.textContent.replace(/\d+/, d.forks_count);
+			});
+		})
+		.catch(function () {
+			/* static fallback numbers stay */
+		});
+</script>

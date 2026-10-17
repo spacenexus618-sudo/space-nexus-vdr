@@ -1,0 +1,165 @@
+# SpaceNexus GEO project configuration.
+# Contract: schema_version 1; validated by scripts/geo/citation_gaps.py and eGEOagents' egeo.workspace.
+schema_version: 1
+
+project:
+  id: spacenexus-site
+  name: SpaceNexus
+  repository: https://github.com/bibinprathap/spacenexus.git
+  canonical_domain: spacenexus.net
+  canonical_url: https://spacenexus.net/
+  language: en
+
+pages:
+  - id: what-is-a-virtual-data-room
+    url: https://spacenexus.net/
+    source: app/page.tsx
+  - id: m-a-data-room-providers
+    url: https://spacenexus.net/m-a-data-room-providers
+    source: app/m-a-data-room-providers/page.tsx
+  - id: data-room-pricing
+    url: https://spacenexus.net/data-room-pricing
+    source: app/data-room-pricing/page.tsx
+  - id: data-room-due-diligence
+    url: https://spacenexus.net/data-room-due-diligence
+    source: app/data-room-due-diligence/page.tsx
+  - id: data-room-security
+    url: https://spacenexus.net/data-room-security
+    source: app/data-room-security/page.tsx
+  - id: private-equity-data-room
+    url: https://spacenexus.net/private-equity-data-room
+    source: app/private-equity-data-room/page.tsx
+  - id: secure-document-sharing-for-legal
+    url: https://spacenexus.net/solutions/secure-document-sharing-for-legal
+    source: app/solutions/secure-document-sharing-for-legal/page.tsx
+  - id: due-diligence-checklist
+    url: https://spacenexus.net/checklists/due-diligence-checklist
+    source: app/checklists/due-diligence-checklist/page.tsx
+  - id: spacenexus-vs-datasite
+    url: https://spacenexus.net/compare/spacenexus-vs-datasite
+    source: app/compare/spacenexus-vs-datasite/page.tsx
+  - id: spacenexus-vs-intralinks
+    url: https://spacenexus.net/compare/spacenexus-vs-intralinks
+    source: app/compare/spacenexus-vs-intralinks/page.tsx
+  - id: spacenexus-vs-ideals
+    url: https://spacenexus.net/compare/spacenexus-vs-ideals
+    source: app/compare/spacenexus-vs-ideals/page.tsx
+  - id: top-data-room-providers
+    url: https://spacenexus.net/top-data-room-providers
+    source: app/top-data-room-providers/page.tsx
+  - id: virtual-data-room-providers
+    url: https://spacenexus.net/virtual-data-room-providers
+    source: app/virtual-data-room-providers/page.tsx
+  - id: healthcare
+    url: https://spacenexus.net/industries/healthcare
+    source: app/industries/healthcare/page.tsx
+  - id: law-firms
+    url: https://spacenexus.net/industries/law-firms
+    source: app/industries/law-firms/page.tsx
+  - id: investment-banking
+    url: https://spacenexus.net/industries/investment-banking
+    source: app/industries/investment-banking/page.tsx
+  - id: npl-portfolio
+    url: https://spacenexus.net/solutions/npl-portfolio
+    source: app/solutions/npl-portfolio/page.tsx
+  - id: syndicated-lending
+    url: https://spacenexus.net/solutions/syndicated-lending
+    source: app/solutions/syndicated-lending/page.tsx
+  - id: vdr-vs-physical-data-room
+    url: https://spacenexus.net/blog/vdr-vs-physical-data-room
+    source: app/blog/[slug]/page.tsx
+  - id: data-room-organization-best-practices
+    url: https://spacenexus.net/blog/data-room-organization-best-practices
+    source: app/blog/[slug]/page.tsx
+
+queries:
+  - id: q1
+    text: What is a virtual data room
+    class: informational
+    target_pages: [what-is-a-virtual-data-room]
+  - id: q2
+    text: Best virtual data room for M&A
+    class: commercial
+    target_pages: [m-a-data-room-providers]
+  - id: q3
+    text: Virtual data room pricing
+    class: commercial
+    target_pages: [data-room-pricing]
+  - id: q4
+    text: How to set up a data room for due diligence
+    class: informational
+    target_pages: [data-room-due-diligence]
+  - id: q5
+    text: VDR security features
+    class: informational
+    target_pages: [data-room-security]
+  - id: q6
+    text: Virtual data room vs physical data room
+    class: informational
+    target_pages: [vdr-vs-physical-data-room]
+  - id: q7
+    text: Best data room for private equity
+    class: commercial
+    target_pages: [private-equity-data-room]
+  - id: q8
+    text: Secure document sharing for lawyers
+    class: informational
+    target_pages: [secure-document-sharing-for-legal]
+  - id: q9
+    text: M&A due diligence checklist
+    class: informational
+    target_pages: [due-diligence-checklist]
+  - id: q10
+    text: Data room organization best practices
+    class: informational
+    target_pages: [data-room-organization-best-practices]
+  - id: q11
+    text: SpaceNexus vs Datasite
+    class: branded
+    target_pages: [spacenexus-vs-datasite]
+  - id: q12
+    text: SpaceNexus vs Intralinks
+    class: branded
+    target_pages: [spacenexus-vs-intralinks]
+  - id: q13
+    text: SpaceNexus vs iDeals
+    class: branded
+    target_pages: [spacenexus-vs-ideals]
+  - id: q14
+    text: Best VDR providers 2026
+    class: commercial
+    target_pages: [top-data-room-providers]
+  - id: q15
+    text: Top virtual data room companies
+    class: commercial
+    target_pages: [virtual-data-room-providers]
+  - id: q16
+    text: HIPAA compliant data room
+    class: informational
+    target_pages: [healthcare]
+  - id: q17
+    text: UK law firm data room
+    class: commercial
+    target_pages: [law-firms]
+  - id: q18
+    text: Investment banking VDR
+    class: informational
+    target_pages: [investment-banking]
+  - id: q19
+    text: NPL data room
+    class: informational
+    target_pages: [npl-portfolio]
+  - id: q20
+    text: Syndicated lending data room
+    class: informational
+    target_pages: [syndicated-lending]
+
+measurement:
+  engines: [chatgpt, perplexity, google-ai-overviews]
+  cadence: monthly
+
+guardrails:
+  no_duplicate_query_owners: true
+  no_auto_publish_visible_copy: true
+  no_fabricated_proof: true
+  require_fresh_crawl_before_verdict: true
