@@ -43,7 +43,7 @@ export default function JsonLd() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+1 646 421 5740",
+        telephone: "+1-646-421-5740",
         email: "contact@spacenexus.net",
         contactType: "sales",
         areaServed: [
@@ -118,6 +118,27 @@ export default function JsonLd() {
       ratingCount: "500",
       bestRating: "5",
       worstRating: "1",
+    },
+    author: {
+      "@type": "Organization",
+      name: "SpaceNexus",
+      url: "https://spacenexus.net",
+    },
+    review: {
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: "Michael Chen",
+        jobTitle: "Managing Director",
+        worksFor: { "@type": "Organization", name: "Apex Capital Partners" },
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "SpaceNexus cut our due diligence timeline from 8 weeks to 3. The AI document processing alone is worth the investment.",
     },
     featureList: [
       "Zero Trust architecture",

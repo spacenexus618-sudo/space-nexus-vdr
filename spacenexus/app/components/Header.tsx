@@ -750,7 +750,7 @@ export default function Header() {
             </Link>
 
             <a
-              href={isKindora ? "https://kindora.pmspace.ai/login?redirectTo=%2F" : "https://cad.spaceaiapp.com/vdr"}
+              href={isKindora ? "https://kindora.pmspace.ai/login?redirectTo=%2F" : "https://app.pmspace.ai/"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap"

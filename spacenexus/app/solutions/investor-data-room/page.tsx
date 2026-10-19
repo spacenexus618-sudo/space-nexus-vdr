@@ -2,6 +2,7 @@ import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Investor Data Room Software 2026 | SpaceNexus",
@@ -438,6 +439,8 @@ export default function InvestorDataRoomPage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is an investor data room for startup fundraising and capital raises, with pitch-deck sharing, granular investor permissions, structured Q&A, and real-time engagement analytics. SOC 2 Type II certified, flat-rate pricing with no per-page fees, and 24-hour setup." />
 
                 {/* What is an investor data room */}
                 <section className="py-14 bg-white">
