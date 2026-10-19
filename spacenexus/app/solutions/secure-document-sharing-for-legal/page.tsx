@@ -2,6 +2,7 @@ import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import AnswerBlock from "../../components/AnswerBlock";
 
 export const metadata: Metadata = {
     title: "Secure Document Sharing for Legal | SpaceNexus",
@@ -282,6 +283,8 @@ export default function SecureDocumentSharingLegalPage() {
                         </div>
                     </div>
                 </section>
+
+                <AnswerBlock text="SpaceNexus is secure document sharing for law firms and legal teams, with attorney-client privilege protection, ethical walls, structured Q&A, and tamper-evident audit logs. SOC 2 Type II and ISO 27001 certified with AES-256 encryption and 24-hour setup." />
 
                 {/* Compliance Badges */}
                 <section className="py-10 bg-white border-b border-gray-100">
