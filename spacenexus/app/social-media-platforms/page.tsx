@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 const officialProfiles = [
   {
     name: "X",
-    handle: "@space__nexus",
-    href: "https://x.com/space__nexus",
+    handle: "@spacenexus111",
+    href: "https://x.com/spacenexus111",
     description:
       "Quick updates on virtual data room technology, M&A insights, platform launches, and secure document collaboration.",
     iconPath:
@@ -25,8 +25,8 @@ const officialProfiles = [
   },
   {
     name: "Instagram",
-    handle: "@spacenexus7",
-    href: "https://www.instagram.com/spacenexus7/",
+    handle: "@spacenexus618",
+    href: "https://www.instagram.com/spacenexus618/",
     description:
       "Visual stories, product moments, data room intelligence, and SpaceNexus brand updates.",
     iconPath:
@@ -35,8 +35,8 @@ const officialProfiles = [
   },
   {
     name: "YouTube",
-    handle: "@spacenexus-v1g",
-    href: "https://www.youtube.com/@spacenexus-v1g",
+    handle: "@spacenexus-b5p",
+    href: "https://www.youtube.com/@spacenexus-b5p",
     description:
       "Watch demos, walkthroughs, product explainers, and videos about virtual data room workflows.",
     iconPath:
@@ -46,7 +46,7 @@ const officialProfiles = [
   {
     name: "LinkedIn",
     handle: "SpaceNexus",
-    href: "https://www.linkedin.com/in/space-nexus/",
+    href: "https://www.linkedin.com/company/space-nexus",
     description:
       "Company news, virtual data room thought leadership, hiring updates, and enterprise announcements.",
     iconPath:

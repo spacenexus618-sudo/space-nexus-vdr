@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const vdrNavLinks = [
   { name: "Features", href: "/features" },
   { name: "Solutions", href: "/solutions/mergers-and-acquisitions-vdr" },
+  { name: "Tools", href: "/tools" },
   { name: "Pricing", href: "/pricing" },
   { name: "Security", href: "/security" },
   { name: "Blog", href: "/blog" },
@@ -17,6 +18,7 @@ const vdrNavLinks = [
 const kindoraNavLinks = [
   { name: "Features", href: "/kindora/features" },
   { name: "Solutions", href: "/kindora/solutions" },
+  { name: "Free Tools", href: "/kindora/free-tools" },
   { name: "Pricing", href: "/kindora/pricing" },
 ];
 
