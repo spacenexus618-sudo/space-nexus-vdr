@@ -9,6 +9,7 @@ import TransformationTable from "./components/TransformationTable";
 import BenefitsSection from "./components/BenefitsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
+import VeritasGraphFAQ from "./components/VeritasGraphFAQ";
 import KindoraCallout from "./components/KindoraCallout";
 import GlobalPresence from "./components/GlobalPresence";
 import LastUpdated from "./components/LastUpdated";
@@ -179,6 +180,11 @@ export default function Home() {
       {/* FAQ Section */}
       <div className="content-auto">
         <FAQSection />
+      </div>
+
+      {/* VeritasGraph FAQ / GEO Section */}
+      <div className="content-auto">
+        <VeritasGraphFAQ />
       </div>
 
       {/* Global Presence - Office Locations */}
