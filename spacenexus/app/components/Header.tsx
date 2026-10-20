@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 const vdrNavLinks = [
   { name: "Features", href: "/features" },
   { name: "Solutions", href: "/solutions/mergers-and-acquisitions-vdr" },
-  { name: "Tools", href: "/tools" },
   { name: "Pricing", href: "/pricing" },
   { name: "Security", href: "/security" },
+  { name: "Tools", href: "/tools" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
@@ -463,14 +463,14 @@ export default function Header() {
           )}
 
           {/* Desktop Navigation - Context Aware */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-0.5">
             {/* Products Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => setProductsOpen(true)}
               onMouseLeave={() => setProductsOpen(false)}
             >
-              <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
+              <button className="relative flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto whitespace-nowrap">
                 Products
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${productsOpen ? "rotate-180" : ""}`}
@@ -564,7 +564,7 @@ export default function Header() {
                   onMouseEnter={() => setKindoraFeaturesOpen(true)}
                   onMouseLeave={() => setKindoraFeaturesOpen(false)}
                 >
-                  <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
+                  <button className="relative flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto whitespace-nowrap">
                     Features
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${kindoraFeaturesOpen ? "rotate-180" : ""}`}
@@ -641,10 +641,10 @@ export default function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="relative px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group"
+                      className="relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group whitespace-nowrap"
                     >
                       {link.name}
-                      <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#2563eb] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                      <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-[#2563eb] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
                     </Link>
                   ))}
               </>
@@ -655,10 +655,10 @@ export default function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="relative px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group"
+                    className="relative px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group whitespace-nowrap"
                   >
                     {link.name}
-                    <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#2563eb] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                    <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-[#2563eb] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
                   </Link>
                 ))}
 
@@ -668,7 +668,7 @@ export default function Header() {
                   onMouseEnter={() => setIndustriesOpen(true)}
                   onMouseLeave={() => setIndustriesOpen(false)}
                 >
-                  <button className="relative flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto">
+                  <button className="relative flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-all duration-300 hover:bg-gray-100 group min-h-[44px] min-w-[44px] sm:min-h-auto sm:min-w-auto whitespace-nowrap">
                     Industries
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${industriesOpen ? "rotate-180" : ""}`}
@@ -743,10 +743,10 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-2">
             <Link
               href={isKindora ? "/kindora/demo" : "/demo"}
-              className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 whitespace-nowrap"
+              className="inline-flex items-center px-4 py-2.5 text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 whitespace-nowrap"
             >
               Request a Demo
             </Link>
@@ -755,7 +755,7 @@ export default function Header() {
               href={isKindora ? "https://kindora.pmspace.ai/login?redirectTo=%2F" : "https://app.pmspace.ai/login?type=SpaceVDR&moduleId=add00f0c-0428-423e-bfa4-01032205ed46&invite=guest&orgName=SPACE+VDR"}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap"
+              className="inline-flex items-center px-4 py-2.5 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap"
             >
               Try for Free
             </a>

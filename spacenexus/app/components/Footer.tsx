@@ -209,10 +209,12 @@ const footerColumns: FooterColumn[] = [
     title: "Company",
     links: [
       { name: "About", href: "/about" },
+      { name: "Careers", href: "/careers" },
       { name: "Security", href: "/security" },
       { name: "Demo", href: "/demo" },
       { name: "Get Started", href: "/get-started" },
       { name: "Ecosystem", href: "/ecosystem" },
+      { name: "Tools", href: "/tools" },
       { name: "Kindora – Nonprofit Software", href: "/kindora" },
       { name: "Knowledge Graph", href: "/knowledge-graph" },
       { name: "Social Media", href: "/social-media-platforms" },
