@@ -448,7 +448,9 @@ export default function Footer() {
             from similarity, VeritasGraph reasons over a structured knowledge graph
             and returns every answer with a verifiable citation and reasoning path.{" "}
             <a
-              href="/knowledge-graph"
+              href="https://bibinprathap.github.io/VeritasGraph/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-medium text-[#2563eb] transition-colors hover:text-blue-700"
             >
               Learn how it works
