@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef } from "react";
 import Link from "next/link";
@@ -670,7 +670,7 @@ export default function PIRedactionScannerPage() {
                   </button>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <button onClick={() => setAuthStep("email")} className="text-gray-600 hover:text-[#2563eb] transition-colors">
-                      ΓåÉ Change email
+                      ← Change email
                     </button>
                     <span className="text-gray-300">|</span>
                     <button onClick={handleResendOtp} disabled={isLoading} className="text-gray-600 hover:text-[#2563eb] transition-colors disabled:opacity-50">

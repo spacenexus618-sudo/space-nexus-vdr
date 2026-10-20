@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-/* ΓöÇΓöÇΓöÇ Data ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ─── Data ──────────────────────────────────────────────────────────────── */
 
 const nodes = [
   { id: "center", label: "Knowledge Graph", x: 375, y: 238, w: 210, h: 65, rx: 14, fill: "#2563eb", textY: 278, fontSize: 18, fontWeight: "bold" as const },
@@ -47,7 +47,7 @@ const nodePhase: Record<string, number> = {
   financials: 2.8,
 };
 
-/* ΓöÇΓöÇΓöÇ Edge draw-in ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ─── Edge draw-in ──────────────────────────────────────────────────────── */
 
 function AnimatedEdge({ edge }: { edge: typeof edges[0] }) {
   const { x1, y1, x2, y2, dashed, id } = edge;
@@ -83,7 +83,7 @@ function AnimatedEdge({ edge }: { edge: typeof edges[0] }) {
   );
 }
 
-/* ΓöÇΓöÇΓöÇ Edge labels ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ─── Edge labels ───────────────────────────────────────────────────────── */
 
 function AnimatedEdgeLabel({ label }: { label: typeof edgeLabels[0] }) {
   return (
@@ -102,7 +102,7 @@ function AnimatedEdgeLabel({ label }: { label: typeof edgeLabels[0] }) {
   );
 }
 
-/* ΓöÇΓöÇΓöÇ Directional data-flow dot (SVG animateMotion) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ─── Directional data-flow dot (SVG animateMotion) ─────────────────────── */
 
 function DataFlowDot({
   x1,
@@ -142,7 +142,7 @@ function DataFlowDot({
   );
 }
 
-/* ΓöÇΓöÇΓöÇ Node ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ─── Node ──────────────────────────────────────────────────────────────── */
 
 function AnimatedNode({ node }: { node: typeof nodes[0] }) {
   const cx = node.x + node.w / 2;
@@ -211,7 +211,7 @@ function AnimatedNode({ node }: { node: typeof nodes[0] }) {
   );
 }
 
-/* ΓöÇΓöÇΓöÇ Main component ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ─── Main component ────────────────────────────────────────────────────── */
 
 export default function KnowledgeGraphDiagram() {
   const ref = useRef(null);

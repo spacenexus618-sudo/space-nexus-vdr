@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -137,7 +137,7 @@ export default function PythonDeveloperAiPage() {
 
           <h2 className="text-lg font-bold text-gray-900 mb-3">Overview</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-            We&apos;re seeking a Python Developer to join our AI engineering team. You&apos;ll build end-to-end RAG pipelines, fine-tune LLMs with vLLM, architect Neo4j graph databases, and develop Python microservices ΓÇö powering the intelligent features of our virtual data room platform.
+            We&apos;re seeking a Python Developer to join our AI engineering team. You&apos;ll build end-to-end RAG pipelines, fine-tune LLMs with vLLM, architect Neo4j graph databases, and develop Python microservices — powering the intelligent features of our virtual data room platform.
           </p>
 
         </div>

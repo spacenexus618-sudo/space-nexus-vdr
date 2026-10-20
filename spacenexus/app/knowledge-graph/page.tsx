@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../components/LastUpdated";
@@ -6,7 +6,7 @@ import AnswerBlock from "../components/AnswerBlock";
 import KnowledgeGraphDiagram from "./KnowledgeGraphDiagram";
 
 export const metadata: Metadata = {
-  title: "The Connected Knowledge Graph ΓÇö How VeritasGraph Links Deal Entities | SpaceNexus",
+  title: "The Connected Knowledge Graph — How VeritasGraph Links Deal Entities | SpaceNexus",
   description:
     "See how VeritasGraph builds a connected knowledge graph inside SpaceNexus, linking deal documents, participants, counterparties, assets, financials, and contracts through entity extraction and multi-hop reasoning.",
   alternates: {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "AI citability",
   ],
   openGraph: {
-    title: "The Connected Knowledge Graph ΓÇö How VeritasGraph Links Deal Entities | SpaceNexus",
+    title: "The Connected Knowledge Graph — How VeritasGraph Links Deal Entities | SpaceNexus",
     description:
-      "How VeritasGraph builds a connected knowledge graph inside SpaceNexus ΓÇö linking deal documents, participants, assets, and contracts for multi-hop reasoning and AI citability.",
+      "How VeritasGraph builds a connected knowledge graph inside SpaceNexus — linking deal documents, participants, assets, and contracts for multi-hop reasoning and AI citability.",
     url: "https://spacenexus.net/knowledge-graph",
     type: "article",
   },
@@ -39,12 +39,12 @@ const faqItems = [
   {
     question: "What is the SpaceNexus knowledge graph?",
     answer:
-      "The SpaceNexus knowledge graph is a structured representation of all entities and relationships across your deals. It connects deal documents, participants, counterparties, target assets, financial statements, and contracts into a single queryable graph ΓÇö so you can trace connections that span dozens of folders and hundreds of files.",
+      "The SpaceNexus knowledge graph is a structured representation of all entities and relationships across your deals. It connects deal documents, participants, counterparties, target assets, financial statements, and contracts into a single queryable graph — so you can trace connections that span dozens of folders and hundreds of files.",
   },
   {
     question: "How does VeritasGraph build the knowledge graph from my data room?",
     answer:
-      "When documents are uploaded to your SpaceNexus data room, VeritasGraph ingests them through the VDR Document Pipeline. It extracts entities ΓÇö deal participants, counterparties, monetary amounts, dates, legal clauses ΓÇö and maps typed relationships between them. Each edge in the graph carries a confidence score and a link back to the source document and page.",
+      "When documents are uploaded to your SpaceNexus data room, VeritasGraph ingests them through the VDR Document Pipeline. It extracts entities — deal participants, counterparties, monetary amounts, dates, legal clauses — and maps typed relationships between them. Each edge in the graph carries a confidence score and a link back to the source document and page.",
   },
   {
     question: "What types of entities does VeritasGraph extract from deal documents?",
@@ -72,7 +72,7 @@ const connectedKgCards = [
   {
     title: "Entity Extraction from Deal Documents",
     description:
-      "VeritasGraph parses your data room documents to extract deal-specific entities ΓÇö buyers, sellers, advisors, target companies, facilities, revenue figures, EBITDA, and contractual clauses. Each entity is typed, scored, and linked to its source passage.",
+      "VeritasGraph parses your data room documents to extract deal-specific entities — buyers, sellers, advisors, target companies, facilities, revenue figures, EBITDA, and contractual clauses. Each entity is typed, scored, and linked to its source passage.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -82,7 +82,7 @@ const connectedKgCards = [
   {
     title: "Relationship Mapping Across Deals",
     description:
-      "Entities are linked through typed deal relationships ΓÇö 'negotiated between', 'acquired by', 'guaranteed by', 'references', 'located at'. Each edge carries metadata about its source document, page number, and extraction confidence.",
+      "Entities are linked through typed deal relationships — 'negotiated between', 'acquired by', 'guaranteed by', 'references', 'located at'. Each edge carries metadata about its source document, page number, and extraction confidence.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
@@ -92,7 +92,7 @@ const connectedKgCards = [
   {
     title: "Multi-Hop Reasoning for Due Diligence",
     description:
-      "Queries traverse multiple edges to answer complex deal questions. For example: 'Which contracts reference this facility?' requires hopping from a Facility node to Contracts via 'references', then to the signing Counterparty via 'executed by' ΓÇö revealing connections keyword search misses.",
+      "Queries traverse multiple edges to answer complex deal questions. For example: 'Which contracts reference this facility?' requires hopping from a Facility node to Contracts via 'references', then to the signing Counterparty via 'executed by' — revealing connections keyword search misses.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
@@ -103,24 +103,24 @@ const connectedKgCards = [
 
 const spaceDataHubSteps = [
   { step: "1", title: "VDR Upload", description: "Documents are uploaded to your SpaceNexus data room via the web portal, API, or bulk import." },
-  { step: "2", title: "Auto-Categorization", description: "Documents are classified by type ΓÇö financials, legal, correspondence, exhibits ΓÇö using ML classifiers." },
-  { step: "3", title: "Entity Extraction", description: "VeritasGraph extracts deal entities ΓÇö participants, counterparties, amounts, dates, and clauses." },
+  { step: "2", title: "Auto-Categorization", description: "Documents are classified by type — financials, legal, correspondence, exhibits — using ML classifiers." },
+  { step: "3", title: "Entity Extraction", description: "VeritasGraph extracts deal entities — participants, counterparties, amounts, dates, and clauses." },
   { step: "4", title: "Graph Construction", description: "Extracted entities and relationships are merged into the knowledge graph via VeritasGraph." },
-  { step: "5", title: "Incremental Updates", description: "New documents trigger graph updates without full reprocessing ΓÇö the graph stays current." },
+  { step: "5", title: "Incremental Updates", description: "New documents trigger graph updates without full reprocessing — the graph stays current." },
 ];
 
 const geoCapabilities = [
   {
     title: "AI Citability Scoring",
-    description: "Every answer generated from your data room includes a citability score ΓÇö indicating how likely AI systems are to reference your content accurately.",
+    description: "Every answer generated from your data room includes a citability score — indicating how likely AI systems are to reference your content accurately.",
   },
   {
     title: "Source Attribution on Every Answer",
-    description: "Every fact traced back to its source document with page number, paragraph, and extraction confidence ΓÇö no black-box answers.",
+    description: "Every fact traced back to its source document with page number, paragraph, and extraction confidence — no black-box answers.",
   },
   {
     title: "Verifiable Reasoning Paths",
-    description: "AI systems can trace the reasoning path through the graph ΓÇö from question to answer ΓÇö so you can audit how conclusions were reached.",
+    description: "AI systems can trace the reasoning path through the graph — from question to answer — so you can audit how conclusions were reached.",
   },
   {
     title: "Structured Data for LLMs",
@@ -177,11 +177,11 @@ export default function KnowledgeGraphPage() {
     "@type": "WebPage",
     "@id": "https://spacenexus.net/knowledge-graph#webpage",
     url: "https://spacenexus.net/knowledge-graph",
-    name: "The Connected Knowledge Graph ΓÇö How VeritasGraph Links Deal Entities",
+    name: "The Connected Knowledge Graph — How VeritasGraph Links Deal Entities",
     isPartOf: { "@id": "https://spacenexus.net/#website" },
     about: { "@id": "https://spacenexus.net/#veritasgraph" },
     description:
-      "How VeritasGraph builds a connected knowledge graph inside SpaceNexus ΓÇö linking deal documents, participants, assets, and contracts for multi-hop reasoning and AI citability.",
+      "How VeritasGraph builds a connected knowledge graph inside SpaceNexus — linking deal documents, participants, assets, and contracts for multi-hop reasoning and AI citability.",
   };
 
   return (
@@ -196,7 +196,7 @@ export default function KnowledgeGraphPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link>
-            <span>ΓÇ║</span>
+            <span>›</span>
             <span className="text-gray-900">Knowledge Graph</span>
           </nav>
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-100 text-sm font-medium mb-4">
@@ -206,7 +206,7 @@ export default function KnowledgeGraphPage() {
             The Connected Knowledge Graph
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mb-8">
-            VeritasGraph links deal documents, participants, counterparties, assets, and contracts into a single queryable graph inside SpaceNexus ΓÇö enabling multi-hop reasoning that goes beyond keyword search.
+            VeritasGraph links deal documents, participants, counterparties, assets, and contracts into a single queryable graph inside SpaceNexus — enabling multi-hop reasoning that goes beyond keyword search.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#diagram" className="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-full transition-all duration-200 shadow-lg shadow-blue-500/25">
@@ -220,7 +220,7 @@ export default function KnowledgeGraphPage() {
       </section>
 
       {/* GEO-optimized AnswerBlock */}
-      <AnswerBlock text="VeritasGraph is the knowledge graph engine inside SpaceNexus that extracts entities from deal documents, maps typed relationships between them, and enables multi-hop reasoning queries across your data room. The VDR Document Pipeline feeds documents into the graph in real time, while entity extraction and relationship mapping power Generative Engine Optimization (GEO) ΓÇö providing AI citability scoring, source attribution, and verifiable reasoning paths for LLM consumption." />
+      <AnswerBlock text="VeritasGraph is the knowledge graph engine inside SpaceNexus that extracts entities from deal documents, maps typed relationships between them, and enables multi-hop reasoning queries across your data room. The VDR Document Pipeline feeds documents into the graph in real time, while entity extraction and relationship mapping power Generative Engine Optimization (GEO) — providing AI citability scoring, source attribution, and verifiable reasoning paths for LLM consumption." />
 
       {/* Section 2: SVG Diagram */}
       <section id="diagram" className="py-16 lg:py-24 bg-white" aria-labelledby="diagram-heading">
@@ -360,7 +360,7 @@ export default function KnowledgeGraphPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/demo" className="inline-flex items-center px-8 py-3.5 bg-white text-[#2563eb] font-semibold rounded-full hover:bg-blue-50 transition-colors">
-              Request a demo ΓåÆ
+              Request a demo →
             </Link>
             <Link href="/pricing" className="inline-flex items-center px-8 py-3.5 bg-white/10 backdrop-blur text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-colors">
               See pricing
@@ -377,17 +377,17 @@ export default function KnowledgeGraphPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/features/vdr-data-room" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
               <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Feature</p>
-              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR Data Room ΓåÆ</h3>
+              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">VDR Data Room →</h3>
               <p className="text-xs text-gray-600 mt-2">How VeritasGraph integrates with your data room for automated entity extraction.</p>
             </Link>
             <Link href="/features/activity-analytics" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
               <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Analytics</p>
-              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Activity Analytics ΓåÆ</h3>
+              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Activity Analytics →</h3>
               <p className="text-xs text-gray-600 mt-2">Track who accesses what across your data room with real-time engagement analytics.</p>
             </Link>
             <Link href="/security" className="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-[#2563eb]/40 hover:shadow-md transition-all">
               <p className="text-xs font-semibold text-[#2563eb] mb-2 uppercase tracking-wider">Security</p>
-              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & Compliance ΓåÆ</h3>
+              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#2563eb] transition-colors leading-snug">Security & Compliance →</h3>
               <p className="text-xs text-gray-600 mt-2">SOC 2, zero trust, encryption, and audit trails protecting your deal data.</p>
             </Link>
           </div>

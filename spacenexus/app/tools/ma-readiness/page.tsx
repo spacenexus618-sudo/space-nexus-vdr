@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -45,7 +45,7 @@ const maQuestions = [
   { id: 12, category: "Data & Security", question: "Do you have documented data security policies and compliance certifications?", options: [{ text: "SOC 2 / ISO 27001 certified with policies", score: 10 }, { text: "Security policies exist, no certification", score: 7 }, { text: "Basic security practices", score: 4 }, { text: "No formal security documentation", score: 1 }] },
 ];
 
-const categoryIcons: Record<string, string> = { "Financial Records": "≡ƒÆ░", "Legal Compliance": "ΓÜû∩╕Å", "IP & Contracts": "≡ƒôä", "Employee & HR": "≡ƒæÑ", Governance: "≡ƒÅ¢∩╕Å", "Tax & Financial": "≡ƒôè", "Data & Security": "≡ƒöÆ" };
+const categoryIcons: Record<string, string> = { "Financial Records": "💰", "Legal Compliance": "⚖️", "IP & Contracts": "📄", "Employee & HR": "👥", Governance: "🏛️", "Tax & Financial": "📊", "Data & Security": "🔒" };
 
 const improvementTips: Record<number, { title: string; tips: string[] }> = {
   1: {
@@ -253,12 +253,12 @@ export default function MAReadinessPage() {
     const activeToken = savedToken || stored.token;
     console.log("[MA] handleRequestOtp:", { activeEmail, activeToken, email });
     if (activeEmail && email.toLowerCase() === activeEmail.toLowerCase() && activeToken) {
-      console.log("[MA] Auto-login triggered ΓÇö skipping OTP");
+      console.log("[MA] Auto-login triggered — skipping OTP");
       setShowEmailModal(false);
       setShowResult(true);
       return;
     }
-    console.log("[MA] No auto-login ΓÇö sending OTP");
+    console.log("[MA] No auto-login — sending OTP");
     setEmailError("");
     setIsLoading(true);
     try {
@@ -413,11 +413,11 @@ export default function MAReadinessPage() {
               ))}
             </div>
             <div className="flex justify-between mt-8">
-              <button onClick={() => setCurrentQ(Math.max(0, currentQ - 1))} disabled={currentQ === 0} className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors">ΓåÉ Previous</button>
+              <button onClick={() => setCurrentQ(Math.max(0, currentQ - 1))} disabled={currentQ === 0} className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors">← Previous</button>
               {currentQ === maQuestions.length - 1 && answeredCount === maQuestions.length ? (
-                <button onClick={handleSeeScore} className="px-6 py-2.5 bg-[#2563eb] text-white font-semibold rounded-full hover:bg-[#1d4ed8] transition-all shadow-lg shadow-blue-500/20">See My Score ΓåÆ</button>
+                <button onClick={handleSeeScore} className="px-6 py-2.5 bg-[#2563eb] text-white font-semibold rounded-full hover:bg-[#1d4ed8] transition-all shadow-lg shadow-blue-500/20">See My Score →</button>
               ) : (
-                <button onClick={() => setCurrentQ(Math.min(maQuestions.length - 1, currentQ + 1))} className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Skip ΓåÆ</button>
+                <button onClick={() => setCurrentQ(Math.min(maQuestions.length - 1, currentQ + 1))} className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Skip →</button>
               )}
             </div>
           </div>
@@ -482,7 +482,7 @@ export default function MAReadinessPage() {
                   </button>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <button onClick={() => setAuthStep("email")} className="text-gray-600 hover:text-[#2563eb] transition-colors">
-                      ΓåÉ Change email
+                      ← Change email
                     </button>
                     <span className="text-gray-300">|</span>
                     <button onClick={handleResendOtp} disabled={isLoading} className="text-gray-600 hover:text-[#2563eb] transition-colors disabled:opacity-50">
@@ -551,7 +551,7 @@ export default function MAReadinessPage() {
                         return (
                           <div key={numId} className="mt-5 first:mt-6">
                             <div className="flex items-center gap-2 mb-3">
-                              <span className="text-lg">{categoryIcons[tip.title] || "≡ƒôî"}</span>
+                              <span className="text-lg">{categoryIcons[tip.title] || "📌"}</span>
                               <h4 className="font-bold text-gray-900">{tip.title}</h4>
                               <span className="ml-auto text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">
                                 Score: {answers[numId]}/10
@@ -581,7 +581,7 @@ export default function MAReadinessPage() {
               </div>
             </div>
             <div className="text-center">
-              <button onClick={() => { setCurrentQ(0); setAnswers({}); setShowResult(false); setEmail(""); setAuthToken(null); setAuthStep("email"); setShowImprovements(false); }} className="text-sm font-medium text-gray-600 hover:text-[#2563eb] transition-colors">ΓåÉ Retake Assessment</button>
+              <button onClick={() => { setCurrentQ(0); setAnswers({}); setShowResult(false); setEmail(""); setAuthToken(null); setAuthStep("email"); setShowImprovements(false); }} className="text-sm font-medium text-gray-600 hover:text-[#2563eb] transition-colors">← Retake Assessment</button>
             </div>
           </div>
         )}

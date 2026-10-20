@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -39,14 +39,14 @@ type FolderItem = {
 };
 
 const industries = [
-  { id: "saas", name: "SaaS / Technology", icon: "≡ƒÆ╗" },
-  { id: "lifesciences", name: "Life Sciences / Pharma", icon: "≡ƒº¼" },
-  { id: "realestate", name: "Real Estate", icon: "≡ƒÅó" },
-  { id: "fintech", name: "FinTech / Banking", icon: "≡ƒÅª" },
-  { id: "manufacturing", name: "Manufacturing", icon: "≡ƒÅ¡" },
-  { id: "energy", name: "Energy / Utilities", icon: "ΓÜí" },
-  { id: "healthcare", name: "Healthcare", icon: "≡ƒÅÑ" },
-  { id: "ecommerce", name: "E-Commerce / Retail", icon: "≡ƒ¢Æ" },
+  { id: "saas", name: "SaaS / Technology", icon: "💻" },
+  { id: "lifesciences", name: "Life Sciences / Pharma", icon: "🧬" },
+  { id: "realestate", name: "Real Estate", icon: "🏢" },
+  { id: "fintech", name: "FinTech / Banking", icon: "🏦" },
+  { id: "manufacturing", name: "Manufacturing", icon: "🏭" },
+  { id: "energy", name: "Energy / Utilities", icon: "⚡" },
+  { id: "healthcare", name: "Healthcare", icon: "🏥" },
+  { id: "ecommerce", name: "E-Commerce / Retail", icon: "🛒" },
 ];
 
 const transactionTypes = [
@@ -1351,7 +1351,7 @@ export default function DDChecklistGeneratorPage() {
                   </button>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <button onClick={() => setAuthStep("email")} className="text-gray-600 hover:text-[#2563eb] transition-colors">
-                      ΓåÉ Change email
+                      ← Change email
                     </button>
                     <span className="text-gray-300">|</span>
                     <button onClick={handleResendOtp} disabled={isLoading} className="text-gray-600 hover:text-[#2563eb] transition-colors disabled:opacity-50">

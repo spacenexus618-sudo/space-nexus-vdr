@@ -1,4 +1,4 @@
-﻿const SITE_URL = "https://spacenexus.net";
+const SITE_URL = "https://spacenexus.net";
 
 const ITEMS = [
   {
@@ -9,21 +9,21 @@ const ITEMS = [
     pubDate: "2026-10-06",
   },
   {
-    title: "SpaceNexus Features ΓÇö AI document processing, redaction, buyer analytics",
+    title: "SpaceNexus Features — AI document processing, redaction, buyer analytics",
     link: `${SITE_URL}/features`,
     description:
       "AI-powered document processing and auto-redaction, AES-256 encryption, granular permissions, dynamic watermarking, real-time buyer analytics and Q&A workflows.",
     pubDate: "2026-10-06",
   },
   {
-    title: "SpaceNexus Pricing ΓÇö transparent flat-rate VDR plans",
+    title: "SpaceNexus Pricing — transparent flat-rate VDR plans",
     link: `${SITE_URL}/pricing`,
     description:
-      "Transparent, published pricing for virtual data rooms. Enterprise plans available. Pricing as of October 2026 ΓÇö see the pricing page for current plans.",
+      "Transparent, published pricing for virtual data rooms. Enterprise plans available. Pricing as of October 2026 — see the pricing page for current plans.",
     pubDate: "2026-10-06",
   },
   {
-    title: "SpaceNexus Security ΓÇö SOC 2 Type II, ISO 27001, GDPR, HIPAA",
+    title: "SpaceNexus Security — SOC 2 Type II, ISO 27001, GDPR, HIPAA",
     link: `${SITE_URL}/security`,
     description:
       "Zero Trust architecture, AES-256 encryption at rest, TLS 1.3 in transit, SOC 2 Type II certified with ISO 27001, GDPR, HIPAA and SEC 17a-4 alignment.",
