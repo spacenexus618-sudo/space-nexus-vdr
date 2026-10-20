@@ -56,18 +56,21 @@ const officialProfiles = [
 ];
 
 const registeredPlatforms = [
-  { name: "SourceForge", href: "https://sourceforge.net/u/spacenexus/profile", description: "SpaceNexus user profile on SourceForge for software discovery and reviews.", status: "Registered" },
+  { name: "G2", href: "https://www.g2.com/products/spacenexus/", description: "SpaceNexus verified product listing and customer reviews on G2 under Virtual Data Room Software.", status: "Registered" },
+  { name: "Uneed", href: "https://www.uneed.best/profile/spacenexus", description: "SpaceNexus profile on Uneed for software discovery and directory listings.", status: "Registered" },
+  { name: "Crunchbase", href: "https://www.crunchbase.com/organization/space-nexus", description: "SpaceNexus company profile on Crunchbase for funding, investor, and company data.", status: "Registered" },
+  { name: "SaaSHub", href: "https://www.saashub.com/spacenexus", description: "SpaceNexus user profile on SaaSHub for software discovery and reviews.", status: "Registered" },
   { name: "ProvenExpert", href: "https://www.provenexpert.com/space-nexus/", description: "SpaceNexus verified business profile and customer reviews on ProvenExpert.", status: "Registered" },
-  { name: "AlternativeTo", href: "https://alternativeto.net/user/spacenexus/", description: "SpaceNexus user profile on AlternativeTo for software discovery and reviews.", status: "Registered" },
-  { name: "SaaSHub", href: "https://www.saashub.com/u/spacenexus", description: "SpaceNexus user profile on SaaSHub for software discovery and reviews.", status: "Registered" },
-
-  { name: "StartupXplore", href: "https://startupxplore.com/en/person/space-nexus", description: "SpaceNexus profile on StartupXplore for startup discovery, investment insights, and networking.", status: "Registered" },
+  { name: "SourceForge", href: "https://sourceforge.net/software/product/SpaceNexus/", description: "SpaceNexus product listing on SourceForge for software discovery and reviews.", status: "Registered" },
+  { name: "Medium", href: "https://medium.com/@spacenexus618", description: "SpaceNexus Medium profile for articles on virtual data rooms, M&A insights, and industry trends.", status: "Registered" },
+  { name: "Product Hunt", href: "https://www.producthunt.com/@space_nexus", description: "SpaceNexus Product Hunt profile for product launches, reviews, and community feedback.", status: "Registered" },
+  { name: "StartupXplore", href: "https://startupxplore.com/en/startups/space-nexus-2", description: "SpaceNexus startup profile on StartupXplore for company discovery, funding info, and investor insights.", status: "Registered" },
 ];
 
 const morePlatforms = [
   { name: "AlternativeTo", href: "https://alternativeto.net/software/spacenexus/", description: "Explore the SpaceNexus software listing and alternative discovery presence.", status: "Registered" },
-  { name: "Product Hunt", href: "https://www.producthunt.com/", description: "A product discovery platform for launches and technology community feedback.", status: "Registered" },
-  { name: "Medium", href: "https://medium.com/", description: "A publishing destination for long-form data room and digital transformation articles.", status: "Registered" },
+  { name: "Product Hunt", href: "https://www.producthunt.com/@space_nexus", description: "SpaceNexus Product Hunt profile for product launches, reviews, and community feedback.", status: "Registered" },
+  { name: "Medium", href: "https://medium.com/@spacenexus618", description: "SpaceNexus Medium profile for articles on virtual data rooms, M&A insights, and industry trends.", status: "Registered" },
   { name: "DEV Community", href: "https://dev.to/", description: "Published DEV Community articles on using AI to fix document management problems.", status: "Registered" },
   { name: "Hashnode", href: "https://hashnode.com/", description: "Published Hashnode articles on how AI is transforming virtual data rooms.", status: "Registered" },
   { name: "SlideShare", href: "https://www.slideshare.net/", description: "Registered presentation-sharing destination for product decks and VDR insights.", status: "Registered" },
@@ -242,7 +245,7 @@ export default function SocialMediaPlatformsPage() {
     
             {/* Last Updated */}
             <div className="py-6 text-center border-t border-gray-100 mt-8">
-                <LastUpdated date="2026-08-01" />
+                <LastUpdated date="2026-10-20" />
             </div></div>
   );
 }
