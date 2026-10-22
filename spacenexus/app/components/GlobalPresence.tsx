@@ -8,6 +8,8 @@ const locations = [
     id: "usa",
     country: "USA",
     flag: "us",
+    name: "SpaceNexus Headquarters",
+    tagline: "Corporate Office",
     address: "2500 Marconi Ave, Ste 101,\nSacramento, CA 95821, United States",
     phone: "+1 646 421 5740",
     mapQuery: "2500+Marconi+Ave+Ste+101+Sacramento+CA+95821",
@@ -17,15 +19,19 @@ const locations = [
     id: "singapore",
     country: "Singapore",
     flag: "sg",
-    address: "1 Raffles Place,\nOne Raffles Place, Singapore 048616",
+    name: "PMSPACE AI",
+    tagline: "Technology and R&D",
+    address: "PMSPACE AI,\nSingapore",
     phone: "+65 86 111 900",
-    mapQuery: "1+Raffles+Place+Singapore",
-    coords: { lat: 1.2838, lng: 103.8591 },
+    mapQuery: "PMSPACE+AI+Singapore",
+    coords: { lat: 1.3338, lng: 103.7000 },
   },
   {
     id: "dubai",
     country: "Dubai",
     flag: "ae",
+    name: "SpaceNexus Headquarters",
+    tagline: "Corporate Office",
     address: "Business Bay, Bay Square,\nBuilding 4, Office 304, Dubai, UAE",
     phone: "+971 56 256 7509",
     mapQuery: "Business+Bay+Bay+Square+Dubai",
@@ -35,15 +41,19 @@ const locations = [
     id: "india",
     country: "India",
     flag: "in",
-    address: "WeWork, Salarpuria Softzone,\nORR, Bengaluru, Karnataka 560103, India",
+    name: "PMSPACE AI",
+    tagline: "Technology and R&D",
+    address: "PMSPACE AI, Nedumpana, Pallimon,\nKollam, Kerala 691576, India",
     phone: "+91 80 4567 8900",
-    mapQuery: "Salarpuria+Softzone+Bengaluru+India",
-    coords: { lat: 12.9716, lng: 77.5946 },
+    mapQuery: "PMSPACE+AI+Nedumpana+Pallimon+Kollam+Kerala",
+    coords: { lat: 8.9086, lng: 76.6936 },
   },
   {
     id: "kuwait",
     country: "Kuwait",
     flag: "kw",
+    name: "SpaceNexus Headquarters",
+    tagline: "Corporate Office",
     address: "Al Hamra Tower, 44th Floor,\nSharq, Kuwait City, Kuwait",
     phone: "+965 9724 3755",
     mapQuery: "Al+Hamra+Tower+Kuwait+City",
@@ -53,6 +63,8 @@ const locations = [
     id: "canada",
     country: "Canada",
     flag: "ca",
+    name: "SpaceNexus Headquarters",
+    tagline: "Corporate Office",
     address: "100 King Street West,\nSuite 5600, Toronto, ON M5X 1C6, Canada",
     phone: "+1 (979) 326-9493",
     mapQuery: "100+King+Street+West+Toronto",
@@ -62,6 +74,8 @@ const locations = [
     id: "hongkong",
     country: "Hong Kong",
     flag: "hk",
+    name: "SpaceNexus Headquarters",
+    tagline: "Corporate Office",
     address: "Two Taikoo Place,\n979 King's Road, Quarry Bay, Hong Kong",
     phone: "+852 3700 1234",
     mapQuery: "Two+Taikoo+Place+Hong+Kong",
@@ -71,6 +85,8 @@ const locations = [
     id: "saudiarabia",
     country: "Saudi Arabia",
     flag: "sa",
+    name: "SpaceNexus Headquarters",
+    tagline: "Corporate Office",
     address: "King Fahd Road, Al Olaya District,\nRiyadh 12211, Saudi Arabia",
     phone: "+966 56 208 1999",
     mapQuery: "King+Fahd+Road+Riyadh+Saudi+Arabia",
@@ -83,7 +99,7 @@ export default function GlobalPresence() {
 
   const getMapUrl = () => {
     const { lat, lng } = selected.coords;
-    return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDM0JzUzLjgiTiAxMjHCsDI5JzM5LjgiVw!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin`;
+    return `https://www.google.com/maps?q=${lat},${lng}&z=14&output=embed`;
   };
 
   return (
@@ -139,13 +155,12 @@ export default function GlobalPresence() {
 
             {/* Location Info Card */}
             <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 p-6 z-10">
-              <p className="text-gray-600 text-xs uppercase tracking-wider mb-1">Office</p>
-              <h3 className="text-white font-bold text-lg mb-4">SpaceNexus Headquarters</h3>
+              <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Office</p>
 
               <div className="space-y-3 mb-5">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
@@ -155,7 +170,7 @@ export default function GlobalPresence() {
 
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
                   </div>
