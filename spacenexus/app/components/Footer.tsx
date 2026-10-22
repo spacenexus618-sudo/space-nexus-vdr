@@ -218,7 +218,6 @@ const footerColumns: FooterColumn[] = [
       { name: "Kindora – Nonprofit Software", href: "/kindora" },
       { name: "Knowledge Graph", href: "/knowledge-graph" },
       { name: "Social Media", href: "/social-media-platforms" },
-      { name: "Try for Free", href: "https://app.pmspace.ai/login?type=SpaceVDR&moduleId=add00f0c-0428-423e-bfa4-01032205ed46&invite=guest&orgName=SPACE+VDR", external: true },
     ],
   },
 ];
