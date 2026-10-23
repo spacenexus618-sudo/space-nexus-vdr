@@ -751,15 +751,6 @@ export default function Header() {
               Request a Demo
             </Link>
 
-            <a
-              href={isKindora ? "https://kindora.pmspace.ai/login?redirectTo=%2F" : "https://app.pmspace.ai/login?type=SpaceVDR&moduleId=add00f0c-0428-423e-bfa4-01032205ed46&invite=guest&orgName=SPACE+VDR"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2.5 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap"
-            >
-              Try for Free
-            </a>
-
             {/* Phone & Ecosystem Icons */}
             <div className="flex items-center gap-2">
               {/* Phone Dropdown */}
