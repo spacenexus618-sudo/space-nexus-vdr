@@ -51,18 +51,26 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is volunteer management software?",
+          name: "How does volunteer scheduling work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Volunteer management software helps nonprofits recruit, schedule, track, and engage volunteers. It centralizes volunteer profiles, hour tracking, availability management, and communication in one platform.",
+            text: "Kindora allows you to create shift schedules, post open opportunities, and let volunteers sign up for available slots. Automated reminders reduce no-shows, and the dashboard gives you a real-time view of scheduled vs. filled positions across all programs.",
           },
         },
         {
           "@type": "Question",
-          name: "How does volunteer hour tracking work?",
+          name: "Can volunteers log their own hours?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora tracks volunteer hours through multiple methods: self-check-in via volunteer portal, staff-entered hours, and bulk import. Hours are logged against specific programs, grants, or activities for impact reporting.",
+            text: "Yes. Through the volunteer portal, volunteers can clock in and out, log hours for completed shifts, and view their participation history. Staff can also enter or adjust hours on behalf of volunteers as needed.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does volunteer hour tracking support grant reporting?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Volunteer hours are tracked against specific programs and grants, so you can report the value of volunteer contributions to funders. Kindora can apply standard valuation rates to calculate the dollar equivalent of volunteer time for impact reports.",
           },
         },
       ],

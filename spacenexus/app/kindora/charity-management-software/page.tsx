@@ -116,6 +116,14 @@ const jsonLd = {
             text: "Yes. Kindora is purpose-built for charities with integrated modules for donor management, grant tracking, fundraising campaigns, volunteer coordination, and financial reporting. It replaces multiple disconnected tools with one unified platform at a charity-friendly price point.",
           },
         },
+        {
+          "@type": "Question",
+          name: "Can I try Kindora for free?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can start a free trial with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
+          },
+        },
       ],
     },
   ],

@@ -133,7 +133,7 @@ const faqSchema = {
       name: "How quickly can we implement church management software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Kindora church management software can be configured within 24 hours. Import your member database, set up groups and ministries, configure giving options, invite staff and volunteers, and start using the platform the same day. Pre-built church templates accelerate setup.",
+        text: "Kindora church management software can be configured within 24 hours. Import your member database, set up groups and ministries, configure giving options, invite staff and volunteers, and start using the platform the same day.",
       },
     },
   ],

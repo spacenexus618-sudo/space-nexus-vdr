@@ -182,9 +182,9 @@ export default function AboutPage() {
 
             <div className="grid lg:grid-cols-3 gap-6">
               {[
-                { src: "/kindora/meetups/ceo.jpeg", caption: "Co-Founders", tag: "Leadership", sub: "Leading the mission to empower nonprofits" },
-                { src: "/kindora/meetups/tm.jpeg", caption: "Team Collaboration", tag: "Culture", sub: "Building together, every single day" },
-                { src: "/kindora/meetups/colg.jpeg", caption: "Community Meetups", tag: "Events", sub: "Engaging with nonprofit leaders and changemakers" },
+                { src: "/kindora/meetups/ceo.jpeg", caption: "Kindora co-founders leading the nonprofit software mission", tag: "Leadership", sub: "Leading the mission to empower nonprofits" },
+                { src: "/kindora/meetups/tm.jpeg", caption: "Kindora team collaborating on nonprofit technology", tag: "Culture", sub: "Building together, every single day" },
+                { src: "/kindora/meetups/colg.jpeg", caption: "Kindora team engaging with nonprofit leaders at a community meetup", tag: "Events", sub: "Engaging with nonprofit leaders and changemakers" },
               ].map((shot) => (
                 <figure
                   key={shot.src}

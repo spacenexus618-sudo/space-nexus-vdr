@@ -62,7 +62,7 @@ const blogBreadcrumbSchema = {
   ],
 };
 
-const lastUpdated = "May 15, 2026";
+const lastUpdated = "October 28, 2026";
 export default function BlogPage() {
     const featured = blogPosts.find((p) => p.featured)!;
     const rest = blogPosts.filter((p) => !p.featured);
@@ -80,6 +80,8 @@ export default function BlogPage() {
 
     return (
         <>
+            <Script id="blog-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+            <Script id="blog-breadcrumb-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadcrumbSchema) }} />
             <Script id="blog-collectionpage-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
             <main className="pt-20 lg:pt-24">
             {/* ── Hero / Header ─────────────────────────────────────────────────── */}
@@ -97,8 +99,7 @@ export default function BlogPage() {
                             outcomes, and everything in between.
                         </p>
                         <p className="text-sm text-gray-400 mt-4 leading-relaxed italic">
-                            The Content Marketing Institute reports that nonprofit blogs drive 3× more website traffic than social media posts and generate 62% more qualified referral traffic.<sup className="text-[#2563eb]">[1]</sup>{" "}
-                            Nonprofit Tech for Good&apos;s 2024 Digital Engagement Report found that nonprofits with active educational blogs receive 78% more inbound website traffic than those without.<sup className="text-[#2563eb]">[2]</sup>
+                            Practical guides for nonprofit teams making decisions across donor stewardship, grant delivery, program outcomes, and financial accountability.
                         </p>
                         <p className="text-xs text-gray-400 mt-4">Last updated: {lastUpdated}</p>
                         <p className="text-sm text-gray-400 mt-4">
@@ -274,9 +275,9 @@ export default function BlogPage() {
                 {/* ── Newsletter CTA ────────────────────────────────────────────── */}
                 <div className="mt-20 rounded-3xl bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div className="text-center lg:text-left">
-                        <h3 className="text-2xl font-bold text-white mb-2">
+                        <h2 className="text-2xl font-bold text-white mb-2">
                             Get the latest nonprofit insights
-                        </h3>
+                        </h2>
                         <p className="text-blue-100 text-sm leading-relaxed max-w-md">
                             Join thousands of nonprofit professionals who get Kindora&apos;s best articles, guides, and
                             product updates delivered every two weeks.

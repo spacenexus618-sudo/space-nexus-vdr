@@ -115,7 +115,7 @@ const jsonLd = {
           name: "Can I compare campaign performance?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora lets you compare campaign performance side by side — view donations raised, donor counts, average gift size, and conversion rates across campaigns.",
+            text: "Yes. Kindora lets you compare campaigns side by side — view donations raised, donor counts, average gift size, and conversion rates across campaigns.",
           },
         },
         {

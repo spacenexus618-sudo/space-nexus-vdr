@@ -102,7 +102,7 @@ const jsonLd = {
           name: "How does Kindora compare to Bonterra on pricing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora is priced for small to mid-sized nonprofits and includes features that would require separate tools with Bonterra. You get case management, donor CRM, grant tracking, and accounting in one subscription — no need to budget for additional software.",
+            text: "Kindora is priced for small to mid-sized nonprofits and includes features that would require separate tools (and separate subscriptions) with Bonterra. You get more for less — no need to budget for additional donor, grant, or accounting software.",
           },
         },
         {

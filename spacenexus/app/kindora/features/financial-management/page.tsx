@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Finance — Chart of Accounts & Budget Management",
@@ -108,7 +109,7 @@ export default function FinancePage() {
                 Financial Management
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                Finance
+                Nonprofit Financial Management Software
               </h1>
               <p className="text-sm font-medium text-emerald-600 mb-4 italic">
                 Organize financial structure and plan budgets effectively.
@@ -243,6 +244,8 @@ export default function FinancePage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="financial-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

@@ -126,7 +126,7 @@ export default function KindoraNav() {
             <div className="relative w-10 h-10 flex-shrink-0 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
               <Image
                 src="/icononly_transparent_nobuffer.png"
-                alt="Kindora"
+                alt="Kindora nonprofit management platform logo"
                 fill
                 className="object-contain drop-shadow-md"
                 priority
@@ -404,7 +404,7 @@ export default function KindoraNav() {
                 <div className="relative w-8 h-8">
                   <Image
                     src="/icononly_transparent_nobuffer.png"
-                    alt="Kindora"
+                    alt="Kindora nonprofit management platform logo"
                     fill
                     className="object-contain"
                   />

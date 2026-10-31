@@ -51,18 +51,26 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is nonprofit financial management software?",
+          name: "How is nonprofit financial management different from regular accounting?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Nonprofit financial management software helps organizations track budgets, manage expenses, allocate costs across programs, generate financial reports, and maintain audit-ready records. It is designed for fund accounting requirements unique to nonprofits.",
+            text: "Nonprofits use fund accounting to track restricted vs. unrestricted funds, must allocate costs across programs for grant reporting, and need to demonstrate fiscal compliance to funders and board members. Kindora is built specifically for these requirements rather than adapting for-profit accounting software.",
           },
         },
         {
           "@type": "Question",
-          name: "How does cost allocation work for nonprofits?",
+          name: "Can Kindora generate audit-ready financial statements?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Cost allocation distributes shared expenses across multiple programs or grants based on predefined rules. Kindora automates this process, ensuring every dollar is properly attributed for grant reporting and compliance purposes.",
+            text: "Yes. Kindora generates statement of activities, statement of financial position, cash flow statements, and functional expense allocations that meet GAAP and audit requirements. All transactions maintain a complete audit trail with supporting documentation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does Kindora integrate with QuickBooks or other accounting tools?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora includes API access for integration with accounting platforms. The platform also serves as a complete financial management solution, reducing the need for separate accounting software by handling fund accounting, cost allocation, and financial reporting natively.",
           },
         },
       ],

@@ -113,8 +113,10 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "Can Kindora help with grant audits?",
-          answer:
-            "Yes. Kindora maintains a complete audit trail of all grant activities, financial transactions, and compliance documentation. When auditors request records, you can pull compliance reports and supporting documentation in minutes.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora maintains a complete audit trail of all grant activities, financial transactions, and compliance documentation. When auditors request records, you can pull compliance reports and supporting documentation in minutes.",
+          },
         },
       ],
     },

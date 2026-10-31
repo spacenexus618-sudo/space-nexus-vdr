@@ -105,14 +105,18 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "How does Kindora help with case management?",
-          answer:
-            "Kindora provides a complete case management platform that tracks clients from intake through program completion. Case notes, outcomes, and progress data are stored securely and connected to program reporting — giving you visibility into every client's journey.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora provides a complete case management platform that tracks clients from intake through program completion. Case notes, outcomes, and progress data are stored securely and connected to program reporting — giving you visibility into every client's journey.",
+          },
         },
         {
           "@type": "Question",
           name: "Is Kindora secure for client data?",
-          answer:
-            "Yes. Kindora provides role-based access controls, data encryption, and audit trails to protect sensitive client information. Only authorized staff can access client records based on their assigned roles.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora provides role-based access controls, data encryption, and audit trails to protect sensitive client information. Only authorized staff can access client records based on their assigned roles.",
+          },
         },
       ],
     },

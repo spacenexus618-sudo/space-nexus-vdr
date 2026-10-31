@@ -51,26 +51,26 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is donor management software?",
+          name: "What features should donor management software have?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Donor management software helps nonprofits track donations, manage donor relationships, automate communications, and analyze fundraising performance. It replaces spreadsheets with a centralized database that captures donor history, preferences, communication logs, and giving patterns.",
+            text: "Essential features include contact management with giving history, donation tracking (one-time and recurring), communication logs, reporting dashboards, and integration with your existing email and accounting tools. Kindora includes all of these plus volunteer coordination, grant tracking, and case management in a single platform.",
           },
         },
         {
           "@type": "Question",
-          name: "How much does donor management software cost for small nonprofits?",
+          name: "How does donor management software improve fundraising?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora offers a free trial with no credit card required. Paid plans start at an affordable flat rate per month with no per-contact fees, making it accessible for small to mid-sized nonprofits with limited budgets.",
+            text: "By centralizing donor data, you can segment your audience, personalize communications, identify major gift prospects, and track campaign effectiveness. Nonprofits using donor management software typically see higher donor retention and larger average gifts because they can build stronger relationships based on donor history and preferences.",
           },
         },
         {
           "@type": "Question",
-          name: "Can donor management software integrate with my existing tools?",
+          name: "Is Kindora suitable for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kindora integrates with email marketing platforms, accounting software, and payment processors. The platform also offers API access for custom integrations with your existing tech stack.",
+            text: "Yes. Kindora is built specifically for small to mid-sized nonprofits. Our free trial lets you explore all features with no commitment, and paid plans start at an affordable flat rate with no per-contact fees, so you can grow without unexpected cost increases.",
           },
         },
       ],

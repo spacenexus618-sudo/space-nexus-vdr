@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Users — Access Control & System User Management",
@@ -135,7 +136,7 @@ export default function UsersPage() {
                 Back to Features
               </Link>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-medium mb-4">
-                Administration
+                Nonprofit User Access & Role Management Software
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Users
@@ -315,6 +316,8 @@ export default function UsersPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="user-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">

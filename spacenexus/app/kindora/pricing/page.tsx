@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PricingContent from "./PricingContent";
+import { pricingFaqs, pricingPlanFaqs } from "./pricing-faqs";
 
 export const metadata: Metadata = {
   title: { absolute: "Kindora Pricing — Free & Nonprofit-Friendly Plans" },
@@ -41,12 +42,11 @@ const productSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Is there really a free plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Starter plan is completely free, forever. No credit card required. It covers the core modules for small nonprofits getting started — donor management, client tracking, and basic reporting." } },
-    { "@type": "Question", "name": "How is Kindora's Professional plan priced?", "acceptedAnswer": { "@type": "Answer", "text": "Professional pricing is based on your organization's size and needs. We offer nonprofit-friendly rates and do not charge per-module — all features are included. Contact us for a custom quote." } },
-    { "@type": "Question", "name": "Can I get a nonprofit discount?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kindora is purpose-built for nonprofits and our pricing reflects that. We offer additional discounts for organizations serving high-need communities. Reach out to discuss your situation." } },
-    { "@type": "Question", "name": "Is there a long-term contract required?", "acceptedAnswer": { "@type": "Answer", "text": "No. Kindora does not require annual contracts. You can start month-to-month and upgrade, downgrade, or cancel at any time." } },
-  ],
+  mainEntity: [...pricingFaqs, ...pricingPlanFaqs].map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
 };
 
 const breadcrumbSchema = {

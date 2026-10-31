@@ -2,20 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "./components/LastUpdated";
+import TrustSignals from "./components/TrustSignals";
 import {
   AnimatedStatsBar,
   AnimatedHowItWorks,
   AnimatedStrengthCards,
   AnimatedComparisonHeader,
-  AnimatedTrustBadges,
   AnimatedFeatureGrid,
   AnimatedSectionHeader,
   AnimatedValueProps,
-  AnimatedHeroBadge,
-  AnimatedHeroHeading,
-  AnimatedHeroSubtext,
-  AnimatedHeroCTA,
-  AnimatedHeroDashboard,
   AnimatedScreenshotGallery,
 } from "./components/AnimatedSections";
 const lastUpdated = "May 15, 2026";
@@ -24,7 +19,7 @@ export const metadata: Metadata = {
     absolute: "Kindora | All-in-One Nonprofit Management Software",
   },
   description:
-    "Kindora is the modern nonprofit management platform for donor tracking, grant management, client services, and financial reporting — all in one place. Built for small to mid-sized nonprofits.",
+    "Kindora is nonprofit management software combining donor management, grant tracking, client services, and financial reporting for small teams in one platform.",
   alternates: {
     canonical: "https://spacenexus.net/kindora",
   },
@@ -95,9 +90,32 @@ const jsonLd = {
     },
     {
       "@type": "Organization",
+      "@id": "https://spacenexus.net/kindora/#organization",
       name: "Kindora",
+      alternateName: "Kindora NGO OS",
       url: "https://spacenexus.net/kindora",
-      description: "Nonprofit management software platform",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://spacenexus.net/icononly_transparent_nobuffer.png",
+        width: 512,
+        height: 512,
+      },
+      description:
+        "Kindora is an all-in-one nonprofit management platform for donor tracking, grant management, program delivery, financial reporting, volunteers, and impact measurement.",
+      sameAs: [
+        "https://www.youtube.com/@KindoraNGOOS1",
+        "https://www.instagram.com/space_kindora_/",
+        "https://x.com/space_kindora",
+        "https://www.linkedin.com/company/space-kindora/",
+        "https://www.facebook.com/kindora.ngo.os",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "contact@spacenexus.net",
+        url: "https://spacenexus.net/kindora/contact",
+        availableLanguage: ["English"],
+      },
     },
     {
       "@type": "FAQPage",
@@ -123,7 +141,7 @@ const jsonLd = {
           name: "Who is Kindora for?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora is designed for small to mid-sized nonprofits including social service agencies, community development organizations, youth-serving nonprofits, housing assistance organizations, food banks, and educational nonprofits. Primary users include Executive Directors, Development Directors, Program Managers, and Finance Officers.",
+            text: "Kindora is designed for small to mid-sized nonprofits — social service agencies, community development organizations, youth-serving nonprofits, housing assistance organizations, food banks, and educational nonprofits. Primary users include Executive Directors, Development Directors, Program Managers, and Finance Officers.",
           },
         },
         {
@@ -155,7 +173,7 @@ const jsonLd = {
           name: "Can I try Kindora for free?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. You can start a free trial of Kindora at cad.spaceaiapp.com/kindora with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
+            text: "Yes! You can start a free trial with no credit card required. You can also request a personalized demo to see how Kindora fits your organization's specific needs.",
           },
         },
         {
@@ -417,21 +435,21 @@ export default function KindoraHomePage() {
               Software
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-              Kindora is the all-in-one nonprofit management software built for
-              small to mid-sized nonprofits — the best way to run donor CRM,
-              grant tracking, case management, nonprofit accounting, and
-              volunteer coordination from one platform instead of juggling
-              separate tools.
-            </p>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-              Manage donors, track grants, deliver programs, and report impact —
-              all from a single, intuitive platform designed specifically for
-              nonprofit organizations.
-            </p>
-            <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10">
-               According to the Nonprofit Finance Fund&apos;s 2024 State of the Nonprofit Sector Survey, 68% of nonprofits reported increased demand for services. Kindora helps organizations meet that demand by replacing disconnected spreadsheets with one unified platform — saving teams an average of 10 hours per week, per Kindora platform data.
-            </p>
+            <div className="max-w-3xl mx-auto mb-6 text-left sm:text-center">
+              {/* <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+                What is Kindora?
+              </h2> */}
+ <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+  Kindora is an all-in-one nonprofit management platform for small to
+  mid-sized organizations. It brings donor and grant management, client
+  programs, volunteers, and financial reporting together in one secure system.
+</p>
+
+<p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+  Manage your operations in one place, with clearer visibility into programs,
+  finances, and day-to-day work.
+</p>
+            </div>
             <p className="text-xs text-gray-400 mb-4">Last updated: {lastUpdated}</p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -581,11 +599,13 @@ export default function KindoraHomePage() {
             What is Kindora?
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-3">
-            Kindora is an all-in-one nonprofit management platform that unifies
-            donor management, grant tracking, client case management, finances,
-            and volunteer coordination in a single system. It replaces
-            disconnected spreadsheets and siloed tools, so teams run the whole
-            organization from one place.
+            Kindora is nonprofit management software that brings donor records,
+            grant tracking, client and program management, financial workflows,
+            and volunteer coordination together in one web-based platform.
+            Nonprofit teams use it to organize operational information, follow
+            donations and grant deadlines, manage services, and review activity
+            without maintaining separate spreadsheets for each function. It is
+            designed for small and mid-sized nonprofits.
           </p>
           <p className="text-base text-gray-500">
             Purpose-built for small to mid-sized nonprofits, Kindora removes the
@@ -1077,15 +1097,7 @@ export default function KindoraHomePage() {
       {/* Trusted & Secure Strip */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-              Trusted, secure, and built for nonprofits
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Kindora is an all-in-one nonprofit management platform built for nonprofits that need enterprise-grade security at a nonprofit-friendly price. Donor, grant, and client data is encrypted and protected, and role-based access control ensures every team member sees only what their role requires.
-            </p>
-          </div>
-          <AnimatedTrustBadges />
+          <TrustSignals variant="dark" compact />
           {/* Free trial callout */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 border-t border-white/10">
             {["Free trial — no credit card required", "Set up in under 30 minutes", "Cancel anytime"].map((text) => (

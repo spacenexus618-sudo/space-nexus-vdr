@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Communications Hub - Email & Stakeholder Outreach",
@@ -112,6 +114,15 @@ const serviceSchema = {
 export default function CommunicationsPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <BreadcrumbJsonLd
+        id="feature-communications"
+        items={[
+          { name: "Home", url: "https://spacenexus.net/" },
+          { name: "Kindora", url: "https://spacenexus.net/kindora" },
+          { name: "Features", url: "https://spacenexus.net/kindora/features" },
+          { name: "Communications Hub", url: "https://spacenexus.net/kindora/features/communications" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -146,7 +157,7 @@ export default function CommunicationsPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Communications Hub
+                Nonprofit Communication Management Software
               </h1>
 
               <p className="text-xl text-gray-600 mb-8">
@@ -346,6 +357,8 @@ export default function CommunicationsPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="communications" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

@@ -113,8 +113,6 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "Can donors manage recurring donations?",
-          answer:
-            "Yes. Donors can view, pause, update, or cancel their recurring donations directly from the portal — no need to call or email your team.",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Yes. Donors can view, pause, update, or cancel their recurring donations directly from the portal — no need to call or email your team.",
@@ -129,9 +127,8 @@ const jsonLd = {
           },
         },
         {
-          question: "Is Kindora affordable for small nonprofits?",
-          answer:
-            "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor portal features at a price nonprofits can afford. A free trial is available.",
+          "@type": "Question",
+          name: "Is Kindora affordable for small nonprofits?",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Yes. Kindora is priced specifically for small to mid-sized nonprofits, offering enterprise-grade donor portal features at a price nonprofits can afford. A free trial is available.",

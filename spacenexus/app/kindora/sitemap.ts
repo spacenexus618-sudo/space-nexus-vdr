@@ -162,6 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "grant-management-software",
     "grant-reporting-software",
     "grant-tracking-software",
+    "instrumentl-alternative",
     "kindora-vs-instrumentl",
     "little-green-light-alternative",
     "major-gift-management-software",

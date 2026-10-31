@@ -82,7 +82,7 @@ const jsonLd = {
           name: "What is the best alternative to Salesforce Nonprofit Cloud?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For most small and mid-sized nonprofits, the best Salesforce Nonprofit Cloud alternative is an all-in-one platform like Kindora, which covers donor CRM, grants, case management, accounting, and volunteers in one system. For donor-management-only needs, Bloomerang and DonorPerfect are popular choices.",
+            text: "For most small and mid-sized nonprofits, an all-in-one platform like Kindora that covers donor CRM, grants, case management, accounting, and volunteers is the best fit. For donor-management-only needs, Bloomerang and DonorPerfect are strong options.",
           },
         },
         {
@@ -90,7 +90,7 @@ const jsonLd = {
           name: "Why do nonprofits leave Salesforce Nonprofit Cloud?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The most common reasons are cost (Salesforce requires licenses, consulting, and often a System Administrator), complexity and admin time, and the need to assemble a stack of connected products to cover grants, programs, and finance. Simpler all-in-one tools avoid those three costs.",
+            text: "The most common reasons are cost (licenses plus consulting and admin), complexity, and having to assemble a stack of connected products to cover grants, programs, and finance.",
           },
         },
         {
@@ -98,7 +98,7 @@ const jsonLd = {
           name: "Is Salesforce Nonprofit Cloud free?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Salesforce offers the Power of Us program, which provides up to 10 free Nonprofit Cloud Enterprise licenses to eligible organizations. Beyond that, paid plans are commonly quoted around $60, $100, and $325 per user per month depending on edition. Pricing should be confirmed with Salesforce directly.",
+            text: "Salesforce's Power of Us program offers up to 10 free Nonprofit Cloud Enterprise licenses to eligible organizations. Paid plans are commonly quoted around $60, $100, and $325 per user per month depending on edition.",
           },
         },
         {
@@ -106,15 +106,15 @@ const jsonLd = {
           name: "What should I look for in a Salesforce alternative?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Look for an all-in-one feature set (donor management, grants, programs, accounting, communications), transparent per-organization pricing rather than per-user fees, quick setup without consultants, easy data import, and reporting that covers board, grant, and financial needs.",
+            text: "Look for all-in-one feature coverage, predictable pricing that isn't per-seat, quick setup without consultants, easy data import, and unified reporting for board, grant, and financial needs.",
           },
         },
         {
           "@type": "Question",
-          name: "Can I migrate my data out of Salesforce to Kindora?",
+          name: "Can I migrate my data from Salesforce to Kindora?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kindora supports importing donor records and historical giving data from common export formats. Migration support details should be confirmed with the Kindora team for your specific Salesforce configuration.",
+            text: "Kindora supports importing donor records and giving history from common export formats. Confirm migration details with the Kindora team for your specific setup.",
           },
         },
       ],

@@ -113,8 +113,10 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "Can Kindora manage multiple grants at different stages?",
-          answer:
-            "Yes. Kindora's pipeline view shows all your grants at every stage — prospecting, applied, pending, awarded, active, and closed. You can filter by stage, track deadlines across your entire portfolio, and manage each grant independently.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora's pipeline view shows all your grants at every stage — prospecting, applied, pending, awarded, active, and closed. You can filter by stage, track deadlines across your entire portfolio, and manage each grant independently.",
+          },
         },
       ],
     },

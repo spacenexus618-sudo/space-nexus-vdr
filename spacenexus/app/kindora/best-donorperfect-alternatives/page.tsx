@@ -81,7 +81,7 @@ const jsonLd = {
           name: "What is the best DonorPerfect alternative?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For nonprofits that also manage grants, programs, or need accounting, the best DonorPerfect alternative is an all-in-one platform like Kindora. For donor-management-only needs, Bloomerang and Little Green Light are popular alternatives.",
+            text: "For nonprofits that also manage grants, programs, or need accounting, the best alternative is an all-in-one platform like Kindora. For donor-management-only needs, Bloomerang and Little Green Light are strong options.",
           },
         },
         {
@@ -89,7 +89,7 @@ const jsonLd = {
           name: "Why do nonprofits switch from DonorPerfect?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Common reasons include tiered add-on pricing that pushes core features into higher plans, an interface some teams find dated, and the fact that DonorPerfect focuses on donor management rather than grants, case management, and accounting.",
+            text: "Common reasons include tiered add-on pricing, an interface some teams find dated, and the fact that DonorPerfect focuses on donor management rather than grants, case management, and accounting.",
           },
         },
         {
@@ -97,7 +97,7 @@ const jsonLd = {
           name: "How much does DonorPerfect cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "DonorPerfect uses tiered pricing commonly quoted around $99–$119/month for Core, $199/month for Plus, and $499–$649/month for Pro. It is priced per organization, not per user. Pricing should be confirmed with DonorPerfect directly.",
+            text: "DonorPerfect uses tiered pricing commonly quoted around $99–$119/month for Core, $199/month for Plus, and $499–$649/month for Pro. It is priced per organization, not per user.",
           },
         },
         {
@@ -105,7 +105,7 @@ const jsonLd = {
           name: "What should I look for in a DonorPerfect alternative?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Look for the donor management and reporting features DonorPerfect is known for, plus — if you need them — grants, case management, accounting, and volunteer features in the same platform, with pricing that doesn't gate basics behind high tiers.",
+            text: "Look for donor management and reporting on par with DonorPerfect, plus — if you need them — grants, case management, accounting, and volunteer features in the same platform, with pricing that doesn't gate basics behind high tiers.",
           },
         },
         {

@@ -50,18 +50,26 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is grant management software?",
+          name: "Can grant management software handle multiple funders?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Grant management software helps nonprofits track the full lifecycle of grants from application to closeout. It manages deadlines, compliance requirements, reporting schedules, and budget tracking in one centralized system.",
+            text: "Yes. Kindora supports multiple grantors with different reporting formats, deadlines, and compliance requirements. Each grant has its own budget, timeline, and reporting schedule while giving you a portfolio-wide view of all active grants.",
           },
         },
         {
           "@type": "Question",
-          name: "How does grant management software improve compliance?",
+          name: "How does grant reporting work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Grant management software automates compliance tracking by setting reminders for reporting deadlines, tracking allowable expenses, maintaining audit trails, and generating reports in grantor-required formats.",
+            text: "Kindora generates both narrative and financial reports from your live data. Budget vs. actual reports, outcome tracking, and compliance checklists are automatically populated from your grant activities, reducing the time spent on manual report preparation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does Kindora support federal grant compliance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora includes tools for tracking federal grant requirements including cost allocation, time and effort reporting, allowable cost documentation, and audit trail maintenance. The platform is designed to support 2 CFR Part 200 compliance requirements.",
           },
         },
       ],
