@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Expense Management - Track & Categorize Nonprofit Spending",
@@ -115,6 +117,15 @@ const serviceSchema = {
 export default function ExpenseManagementPage() {
   return (
     <main className="pt-20 lg:pt-24">
+      <BreadcrumbJsonLd
+        id="feature-expense-management"
+        items={[
+          { name: "Home", url: "https://spacenexus.net/" },
+          { name: "Kindora", url: "https://spacenexus.net/kindora" },
+          { name: "Features", url: "https://spacenexus.net/kindora/features" },
+          { name: "Expense Management", url: "https://spacenexus.net/kindora/features/expense-management" },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -149,7 +160,7 @@ export default function ExpenseManagementPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Expense Management
+                Nonprofit Expense Management Software
               </h1>
 
               <p className="text-xl text-gray-600 mb-8">
@@ -366,6 +377,8 @@ export default function ExpenseManagementPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="expense-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

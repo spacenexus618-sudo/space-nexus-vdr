@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Program Outcome Tracking Software | Measure Your Impact",
@@ -112,8 +113,10 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "Can Kindora track outcomes across multiple programs?",
-          answer:
-            "Yes. Kindora supports outcome tracking across unlimited programs. Define unique outcomes for each program while also viewing organization-wide impact metrics.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora supports outcome tracking across unlimited programs. Define unique outcomes for each program while also viewing organization-wide impact metrics.",
+          },
         },
       ],
     },
@@ -244,6 +247,15 @@ export default function ProgramOutcomeTrackingSolutionPage() {
         id="outcome-tracking-solution-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        id="solution-program-outcome-tracking"
+        items={[
+          { name: "Home", url: "https://spacenexus.net/" },
+          { name: "Kindora", url: "https://spacenexus.net/kindora" },
+          { name: "Solutions", url: "https://spacenexus.net/kindora/solutions" },
+          { name: "Program Outcome Tracking", url: "https://spacenexus.net/kindora/solutions/program-outcome-tracking" },
+        ]}
       />
 
       {/* Hero Section */}

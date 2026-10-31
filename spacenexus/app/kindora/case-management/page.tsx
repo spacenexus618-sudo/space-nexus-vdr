@@ -51,18 +51,26 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is case management software for nonprofits?",
+          name: "What types of nonprofits benefit from case management software?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Case management software helps nonprofits manage client intake, track service delivery, monitor program outcomes, and generate impact reports. It replaces paper files and spreadsheets with a centralized system for managing client relationships and program participation.",
+            text: "Social service organizations, community action agencies, youth programs, housing nonprofits, health and human services organizations, and any nonprofit that delivers direct services to clients can benefit from case management software to track intake, services, and outcomes.",
           },
         },
         {
           "@type": "Question",
-          name: "How does program management software improve outcomes?",
+          name: "Can I track multiple funding sources for a single program?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Program management software enables nonprofits to track participant progress, measure outcome achievement, identify service gaps, and generate data-driven impact reports. This helps organizations demonstrate effectiveness to funders and improve program design over time.",
+            text: "Yes. Kindora supports cost allocation and budget tracking across multiple funding sources within a single program. This is essential for organizations that blend funding from federal grants, state contracts, and private foundations to deliver services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does outcome tracking work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You define measurable outcomes for each program, then track participant progress against those outcomes. Kindora calculates completion rates, generates outcome-based reports, and helps you identify which program elements are most effective at achieving desired results.",
           },
         },
       ],

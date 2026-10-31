@@ -104,14 +104,18 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "How does Kindora help with outcome tracking?",
-          answer:
-            "Kindora provides tools to define outcome frameworks, collect outcome data through assessments and surveys, track participant progress over time, visualize results in real-time dashboards, and generate funder-ready outcome reports.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora provides tools to define outcome frameworks, collect outcome data through assessments and surveys, track participant progress over time, visualize results in real-time dashboards, and generate funder-ready outcome reports.",
+          },
         },
         {
           "@type": "Question",
           name: "Can Kindora track outcomes across multiple programs?",
-          answer:
-            "Yes. Kindora supports outcome tracking across unlimited programs. Define unique outcomes for each program while also viewing organization-wide impact metrics.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora supports outcome tracking across unlimited programs. Define unique outcomes for each program while also viewing organization-wide impact metrics.",
+          },
         },
       ],
     },

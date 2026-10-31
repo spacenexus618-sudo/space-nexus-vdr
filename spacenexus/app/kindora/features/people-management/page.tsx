@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "People — Team, Volunteer & Communications Management",
@@ -113,7 +114,7 @@ export default function PeoplePage() {
                 People Management
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                People
+                Nonprofit People &amp; Volunteer Management Software
               </h1>
               <p className="text-sm font-medium text-violet-600 mb-4 italic">
                 Manage your team, volunteers, and communications in one place.
@@ -253,6 +254,8 @@ export default function PeoplePage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="people-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#f8f9fa]">

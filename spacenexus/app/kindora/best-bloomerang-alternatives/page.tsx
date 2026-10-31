@@ -81,7 +81,7 @@ const jsonLd = {
           name: "What is the best Bloomerang alternative?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For nonprofits that also manage grants, programs, or need accounting, the best Bloomerang alternative is an all-in-one platform like Kindora. For donor-management-only needs, DonorPerfect and Little Green Light are popular alternatives.",
+            text: "For nonprofits that also manage grants, programs, or need accounting, the best alternative is an all-in-one platform like Kindora. For donor-management-only needs, DonorPerfect and Little Green Light are strong options.",
           },
         },
         {
@@ -89,7 +89,7 @@ const jsonLd = {
           name: "Why do nonprofits switch from Bloomerang?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Bloomerang only covers donor management and fundraising. Nonprofits that also handle grants, client case management, volunteer coordination, or nonprofit accounting often switch to a platform that covers the full operating stack in one system.",
+            text: "Bloomerang only covers donor management and fundraising. Nonprofits that also handle grants, case management, volunteer coordination, or nonprofit accounting often switch to a platform that covers the full stack in one system.",
           },
         },
         {
@@ -97,7 +97,7 @@ const jsonLd = {
           name: "How much does Bloomerang cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Bloomerang pricing is commonly quoted in the $79–$125 per month range depending on features and organization size. Pricing should be confirmed with Bloomerang directly.",
+            text: "Bloomerang pricing is commonly quoted in the $79–$125 per month range depending on features and organization size.",
           },
         },
         {
@@ -105,7 +105,7 @@ const jsonLd = {
           name: "What should I look for in a Bloomerang alternative?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Look for the donor retention and engagement tools Bloomerang is known for, plus — if you need them — grant tracking, case management, accounting, and volunteer features in the same platform, at a predictable price.",
+            text: "Look for donor retention and engagement tools on par with Bloomerang, plus — if you need them — grant tracking, case management, accounting, and volunteer features in the same platform at a predictable price.",
           },
         },
         {

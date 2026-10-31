@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Campaign Management Software for NGOs",
@@ -142,7 +143,7 @@ export default function CampaignManagementPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Campaign Management
+              Nonprofit Campaign Management Software
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
@@ -371,6 +372,8 @@ export default function CampaignManagementPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="campaign-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">

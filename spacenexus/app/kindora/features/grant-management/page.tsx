@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import FeatureIntentContent from "../FeatureIntentContent";
 
 export const metadata: Metadata = {
   title: "Grant Management Software & Tracking for Nonprofits",
@@ -156,7 +157,7 @@ export default function GrantManagementPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Grant Management
+              Nonprofit Grant Management Software
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
@@ -174,6 +175,23 @@ export default function GrantManagementPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            What is grant tracking?
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Grant tracking is the process of recording and monitoring funding
+            opportunities and awarded grants throughout their lifecycle.
+            Nonprofits use grant tracking software to organize funder details,
+            application and award status, deadlines, grant budgets, deliverables,
+            and reporting requirements in one place. This gives teams a shared
+            view of what is due, what has been submitted, and how each grant is
+            progressing.
+          </p>
         </div>
       </section>
 
@@ -433,6 +451,8 @@ export default function GrantManagementPage() {
           </div>
         </div>
       </section>
+
+      <FeatureIntentContent feature="grant-management" />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-white">

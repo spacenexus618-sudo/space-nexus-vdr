@@ -104,14 +104,18 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "How does Kindora help with program management?",
-          answer:
-            "Kindora provides a complete program management platform that tracks enrollment, attendance, activities, and outcomes in one place. Program managers get real-time dashboards showing enrollment trends, participation rates, and outcome metrics — plus automated reporting for funders.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Kindora provides a complete program management platform that tracks enrollment, attendance, activities, and outcomes in one place. Program managers get real-time dashboards showing enrollment trends, participation rates, and outcome metrics — plus automated reporting for funders.",
+          },
         },
         {
           "@type": "Question",
           name: "Can Kindora manage multiple programs?",
-          answer:
-            "Yes. Kindora supports unlimited programs — track enrollment, activities, and outcomes separately for each program while maintaining a unified view of your organization's overall impact.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora supports unlimited programs — track enrollment, activities, and outcomes separately for each program while maintaining a unified view of your organization's overall impact.",
+          },
         },
       ],
     },

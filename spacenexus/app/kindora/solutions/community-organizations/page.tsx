@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import LastUpdated from "../../components/LastUpdated";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
     title: "Community Organization Management Software",
@@ -122,6 +123,15 @@ const faqSchema = {
 export default function CommunityOrganizationsPage() {
     return (
         <main className="pt-20 lg:pt-24">
+            <BreadcrumbJsonLd
+                id="solution-community-organizations"
+                items={[
+                    { name: "Home", url: "https://spacenexus.net/" },
+                    { name: "Kindora", url: "https://spacenexus.net/kindora" },
+                    { name: "Solutions", url: "https://spacenexus.net/kindora/solutions" },
+                    { name: "Community Organizations", url: "https://spacenexus.net/kindora/solutions/community-organizations" },
+                ]}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

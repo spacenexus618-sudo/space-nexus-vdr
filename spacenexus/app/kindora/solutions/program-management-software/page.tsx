@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
 import LastUpdated from "../../components/LastUpdated";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Program Management Software for Nonprofits",
@@ -112,8 +113,10 @@ const jsonLd = {
         {
           "@type": "Question",
           name: "Can Kindora manage multiple programs?",
-          answer:
-            "Yes. Kindora supports unlimited programs — track enrollment, activities, and outcomes separately for each program while maintaining a unified view of your organization's overall impact.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Kindora supports unlimited programs — track enrollment, activities, and outcomes separately for each program while maintaining a unified view of your organization's overall impact.",
+          },
         },
       ],
     },
@@ -240,6 +243,15 @@ export default function ProgramManagementSoftwareSolutionPage() {
         id="program-management-solution-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        id="solution-program-management-software"
+        items={[
+          { name: "Home", url: "https://spacenexus.net/" },
+          { name: "Kindora", url: "https://spacenexus.net/kindora" },
+          { name: "Solutions", url: "https://spacenexus.net/kindora/solutions" },
+          { name: "Program Management Software", url: "https://spacenexus.net/kindora/solutions/program-management-software" },
+        ]}
       />
 
       {/* Hero Section */}

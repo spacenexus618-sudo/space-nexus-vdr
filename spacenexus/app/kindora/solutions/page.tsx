@@ -328,9 +328,9 @@ export default function SolutionsPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-sm">
+                    <h2 className="font-semibold text-gray-900 text-sm">
                       {solution.title}
-                    </h3>
+                    </h2>
                     <p className="text-xs text-gray-500">{solution.subtitle}</p>
                   </div>
                 </a>

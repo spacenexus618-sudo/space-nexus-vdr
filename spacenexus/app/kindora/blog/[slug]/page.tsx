@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { getPostBySlug, blogPosts } from "../data/posts";
 import BlogPostContent from "./BlogPostContent";
-import LastUpdated from "../../../components/LastUpdated";
+import BreadcrumbJsonLd from "../../components/BreadcrumbJsonLd";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -74,6 +74,12 @@ export default async function BlogPostPage({ params }: PageProps) {
           "@type": "Organization",
           "@id": "https://spacenexus.net/kindora/#organization",
           name: "Kindora",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://spacenexus.net/kindora/og-card.png",
+            width: 1200,
+            height: 630,
+          },
         },
         url: `https://spacenexus.net/kindora/blog/${slug}`,
         mainEntityOfPage: {
@@ -90,6 +96,17 @@ export default async function BlogPostPage({ params }: PageProps) {
           id={`blog-${slug}-jsonld`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        />
+      )}
+      {post && (
+        <BreadcrumbJsonLd
+          id={`blog-${slug}`}
+          items={[
+            { name: "Home", url: "https://spacenexus.net/" },
+            { name: "Kindora", url: "https://spacenexus.net/kindora" },
+            { name: "Blog", url: "https://spacenexus.net/kindora/blog" },
+            { name: post.title, url: `https://spacenexus.net/kindora/blog/${slug}` },
+          ]}
         />
       )}
       <BlogPostContent slug={slug} />
